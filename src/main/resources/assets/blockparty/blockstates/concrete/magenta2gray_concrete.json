@@ -1,0 +1,7 @@
+{ 
+"variants": {
+	"": {
+		"model": "blockparty:block/concrete/magenta2gray_concrete"
+		}
+	}
+}

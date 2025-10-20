@@ -32,7 +32,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BLACK2GREY_CONCRETE = registerBlock("black2grey_concrete",
+    public static final DeferredBlock<Block> BLACK2GRAY_CONCRETE = registerBlock("black2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -40,7 +40,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BLACK2LIGHTGREY_CONCRETE = registerBlock("black2lightgrey_concrete",
+    public static final DeferredBlock<Block> BLACK2LIGHTGRAY_CONCRETE = registerBlock("black2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -92,7 +92,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BLUE2GREY_CONCRETE = registerBlock("blue2grey_concrete",
+    public static final DeferredBlock<Block> BLUE2GRAY_CONCRETE = registerBlock("blue2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -100,7 +100,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BLUE2LIGHTGREY_CONCRETE = registerBlock("blue2lightgrey_concrete",
+    public static final DeferredBlock<Block> BLUE2LIGHTGRAY_CONCRETE = registerBlock("blue2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -152,7 +152,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BROWN2GREY_CONCRETE = registerBlock("brown2grey_concrete",
+    public static final DeferredBlock<Block> BROWN2GRAY_CONCRETE = registerBlock("brown2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -160,7 +160,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> BROWN2LIGHTGREY_CONCRETE = registerBlock("brown2lightgrey_concrete",
+    public static final DeferredBlock<Block> BROWN2LIGHTGRAY_CONCRETE = registerBlock("brown2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -212,7 +212,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> CYAN2GREY_CONCRETE = registerBlock("cyan2grey_concrete",
+    public static final DeferredBlock<Block> CYAN2GRAY_CONCRETE = registerBlock("cyan2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -220,7 +220,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> CYAN2LIGHTGREY_CONCRETE = registerBlock("cyan2lightgrey_concrete",
+    public static final DeferredBlock<Block> CYAN2LIGHTGRAY_CONCRETE = registerBlock("cyan2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -272,7 +272,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREEN2GREY_CONCRETE = registerBlock("green2grey_concrete",
+    public static final DeferredBlock<Block> GREEN2GRAY_CONCRETE = registerBlock("green2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -280,7 +280,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREEN2LIGHTGREY_CONCRETE = registerBlock("green2lightgrey_concrete",
+    public static final DeferredBlock<Block> GREEN2LIGHTGRAY_CONCRETE = registerBlock("green2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -316,63 +316,63 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2BLACK_CONCRETE = registerBlock("grey2black_concrete",
+    public static final DeferredBlock<Block> GRAY2BLACK_CONCRETE = registerBlock("gray2black_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2BLUE_CONCRETE = registerBlock("grey2blue_concrete",
+    public static final DeferredBlock<Block> GRAY2BLUE_CONCRETE = registerBlock("gray2blue_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2BROWN_CONCRETE = registerBlock("grey2brown_concrete",
+    public static final DeferredBlock<Block> GRAY2BROWN_CONCRETE = registerBlock("gray2brown_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2CYAN_CONCRETE = registerBlock("grey2cyan_concrete",
+    public static final DeferredBlock<Block> GRAY2CYAN_CONCRETE = registerBlock("gray2cyan_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2GREEN_CONCRETE = registerBlock("grey2green_concrete",
+    public static final DeferredBlock<Block> GRAY2GREEN_CONCRETE = registerBlock("gray2green_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2LIGHTBLUE_CONCRETE = registerBlock("grey2lightblue_concrete",
+    public static final DeferredBlock<Block> GRAY2LIGHTBLUE_CONCRETE = registerBlock("gray2lightblue_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2LIGHTGREY_CONCRETE = registerBlock("grey2lightgrey_concrete",
+    public static final DeferredBlock<Block> GRAY2LIGHTGRAY_CONCRETE = registerBlock("gray2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2LIME_CONCRETE = registerBlock("grey2lime_concrete",
+    public static final DeferredBlock<Block> GRAY2LIME_CONCRETE = registerBlock("gray2lime_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2MAGENTA_CONCRETE = registerBlock("grey2magenta_concrete",
+    public static final DeferredBlock<Block> GRAY2MAGENTA_CONCRETE = registerBlock("gray2magenta_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2ORANGE_CONCRETE = registerBlock("grey2orange_concrete",
+    public static final DeferredBlock<Block> GRAY2ORANGE_CONCRETE = registerBlock("gray2orange_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2PINK_CONCRETE = registerBlock("grey2pink_concrete",
+    public static final DeferredBlock<Block> GRAY2PINK_CONCRETE = registerBlock("gray2pink_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2PURPLE_CONCRETE = registerBlock("grey2purple_concrete",
+    public static final DeferredBlock<Block> GRAY2PURPLE_CONCRETE = registerBlock("gray2purple_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2RED_CONCRETE = registerBlock("grey2red_concrete",
+    public static final DeferredBlock<Block> GRAY2RED_CONCRETE = registerBlock("gray2red_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2WHITE_CONCRETE = registerBlock("grey2white_concrete",
+    public static final DeferredBlock<Block> GRAY2WHITE_CONCRETE = registerBlock("gray2white_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> GREY2YELLOW_CONCRETE = registerBlock("grey2yellow_concrete",
+    public static final DeferredBlock<Block> GRAY2YELLOW_CONCRETE = registerBlock("gray2yellow_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -396,11 +396,11 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTBLUE2GREY_CONCRETE = registerBlock("lightblue2grey_concrete",
+    public static final DeferredBlock<Block> LIGHTBLUE2GRAY_CONCRETE = registerBlock("lightblue2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTBLUE2LIGHTGREY_CONCRETE = registerBlock("lightblue2lightgrey_concrete",
+    public static final DeferredBlock<Block> LIGHTBLUE2LIGHTGRAY_CONCRETE = registerBlock("lightblue2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -436,63 +436,63 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2BLACK_CONCRETE = registerBlock("lightgrey2black_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2BLACK_CONCRETE = registerBlock("lightGRAY2black_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2BLUE_CONCRETE = registerBlock("lightgrey2blue_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2BLUE_CONCRETE = registerBlock("lightGRAY2blue_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2BROWN_CONCRETE = registerBlock("lightgrey2brown_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2BROWN_CONCRETE = registerBlock("lightGRAY2brown_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2CYAN_CONCRETE = registerBlock("lightgrey2cyan_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2CYAN_CONCRETE = registerBlock("lightGRAY2cyan_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2GREEN_CONCRETE = registerBlock("lightgrey2green_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2GREEN_CONCRETE = registerBlock("lightGRAY2green_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2GREY_CONCRETE = registerBlock("lightgrey2grey_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2GRAY_CONCRETE = registerBlock("lightGRAY2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2LIGHTBLUE_CONCRETE = registerBlock("lightgrey2lightblue_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2LIGHTBLUE_CONCRETE = registerBlock("lightGRAY2lightblue_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2LIME_CONCRETE = registerBlock("lightgrey2lime_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2LIME_CONCRETE = registerBlock("lightGRAY2lime_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2MAGENTA_CONCRETE = registerBlock("lightgrey2magenta_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2MAGENTA_CONCRETE = registerBlock("lightGRAY2magenta_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2ORANGE_CONCRETE = registerBlock("lightgrey2orange_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2ORANGE_CONCRETE = registerBlock("lightGRAY2orange_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2PINK_CONCRETE = registerBlock("lightgrey2pink_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2PINK_CONCRETE = registerBlock("lightGRAY2pink_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2PURPLE_CONCRETE = registerBlock("lightgrey2purple_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2PURPLE_CONCRETE = registerBlock("lightGRAY2purple_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2RED_CONCRETE = registerBlock("lightgrey2red_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2RED_CONCRETE = registerBlock("lightGRAY2red_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2WHITE_CONCRETE = registerBlock("lightgrey2white_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2WHITE_CONCRETE = registerBlock("lightGRAY2white_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIGHTGREY2YELLOW_CONCRETE = registerBlock("lightgrey2yellow_concrete",
+    public static final DeferredBlock<Block> LIGHTGRAY2YELLOW_CONCRETE = registerBlock("lightGRAY2yellow_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -516,7 +516,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIME2GREY_CONCRETE = registerBlock("lime2grey_concrete",
+    public static final DeferredBlock<Block> LIME2GRAY_CONCRETE = registerBlock("lime2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -524,7 +524,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> LIME2LIGHTGREY_CONCRETE = registerBlock("lime2lightgrey_concrete",
+    public static final DeferredBlock<Block> LIME2LIGHTGRAY_CONCRETE = registerBlock("lime2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -576,7 +576,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> MAGENTA2GREY_CONCRETE = registerBlock("magenta2grey_concrete",
+    public static final DeferredBlock<Block> MAGENTA2GRAY_CONCRETE = registerBlock("magenta2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -584,7 +584,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> MAGENTA2LIGHTGREY_CONCRETE = registerBlock("magenta2lightgrey_concrete",
+    public static final DeferredBlock<Block> MAGENTA2LIGHTGRAY_CONCRETE = registerBlock("magenta2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -636,7 +636,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> ORANGE2GREY_CONCRETE = registerBlock("orange2grey_concrete",
+    public static final DeferredBlock<Block> ORANGE2GRAY_CONCRETE = registerBlock("orange2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -644,7 +644,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> ORANGE2LIGHTGREY_CONCRETE = registerBlock("orange2lightgrey_concrete",
+    public static final DeferredBlock<Block> ORANGE2LIGHTGRAY_CONCRETE = registerBlock("orange2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -696,7 +696,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> PINK2GREY_CONCRETE = registerBlock("pink2grey_concrete",
+    public static final DeferredBlock<Block> PINK2GRAY_CONCRETE = registerBlock("pink2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -704,7 +704,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> PINK2LIGHTGREY_CONCRETE = registerBlock("pink2lightgrey_concrete",
+    public static final DeferredBlock<Block> PINK2LIGHTGRAY_CONCRETE = registerBlock("pink2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -756,7 +756,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> PURPLE2GREY_CONCRETE = registerBlock("purple2grey_concrete",
+    public static final DeferredBlock<Block> PURPLE2GRAY_CONCRETE = registerBlock("purple2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -764,7 +764,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> PURPLE2LIGHTGREY_CONCRETE = registerBlock("purple2lightgrey_concrete",
+    public static final DeferredBlock<Block> PURPLE2LIGHTGRAY_CONCRETE = registerBlock("purple2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -816,7 +816,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> RED2GREY_CONCRETE = registerBlock("red2grey_concrete",
+    public static final DeferredBlock<Block> RED2GRAY_CONCRETE = registerBlock("red2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -824,7 +824,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> RED2LIGHTGREY_CONCRETE = registerBlock("red2lightgrey_concrete",
+    public static final DeferredBlock<Block> RED2LIGHTGRAY_CONCRETE = registerBlock("red2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -876,7 +876,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> WHITE2GREY_CONCRETE = registerBlock("white2grey_concrete",
+    public static final DeferredBlock<Block> WHITE2GRAY_CONCRETE = registerBlock("white2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -884,7 +884,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> WHITE2LIGHTGREY_CONCRETE = registerBlock("white2lightgrey_concrete",
+    public static final DeferredBlock<Block> WHITE2LIGHTGRAY_CONCRETE = registerBlock("white2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -936,7 +936,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> YELLOW2GREY_CONCRETE = registerBlock("yellow2grey_concrete",
+    public static final DeferredBlock<Block> YELLOW2GRAY_CONCRETE = registerBlock("yellow2gray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
@@ -944,7 +944,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> YELLOW2LIGHTGREY_CONCRETE = registerBlock("yellow2lightgrey_concrete",
+    public static final DeferredBlock<Block> YELLOW2LIGHTGRAY_CONCRETE = registerBlock("yellow2lightgray_concrete",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "blockparty:block/orange2lime_concrete"
+    "all": "blockparty:block/concrete/orange2lime_concrete"
   }
 }
