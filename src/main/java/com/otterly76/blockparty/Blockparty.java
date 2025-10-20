@@ -14,6 +14,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+@Mod(Blockparty.MOD_ID)
 public class Blockparty {
     public static final String MOD_ID = "blockparty";
 
