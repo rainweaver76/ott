@@ -1,36 +1,36 @@
-modLoader="javafml" #mandatory
-loaderVersion="${fml_range}" #mandatory
+modLoader="javafml"
+loaderVersion="${fml_range}"
 license="GPL 3.0"
-issueTrackerURL="https://github.com/rainweaver76/blockparty/issues/new/choose" #optional
+issueTrackerURL="https://github.com/rainweaver76/blockparty/issues/new/choose"
 
-[[mods]] #mandatory
+[[mods]]
 
-modId="blockparty" #mandatory
-version="${version}" #mandatory
-displayName="Otterly's Blockparty" #mandatory
-logoFile="blockparty.png" #optional
-credits="A great deal of help from Thodor as well as unhealty amounts of caffiene." #optional
-authors="Otterly76" #optional
+modId="blockparty"
+version="${version}"
+displayName="Otterly's Blockparty"
+logoFile="blockparty.png"
+credits="A great deal of help from Thodor as well as unhealty amounts of caffiene."
+authors="Otterly76"
 description='''
 All the pretty blocks!'''
 
 [[dependencies.blockparty]]
-    modId="neoforge"
-    type="required"
-    versionRange="[${neo_version},)"
-    ordering="NONE"
-    side="BOTH"
+modId="neoforge"
+type="required"
+versionRange="[${neo_version},)"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies.blockparty]]
-    modId="minecraft"
-    type="required"
-    versionRange="[${minecraft_version_range}, 1.21)"
-    ordering="NONE"
-    side="BOTH"
+modId="minecraft"
+type="required"
+versionRange="[${minecraft_version_range}, 1.21)"
+ordering="NONE"
+side="BOTH"
 
 [[dependencies.blockparty]]
-    modId="jei"
-    type="recommended"
-    versionRange="[${jei_version},)"
-    ordering="NONE"
-    side="BOTH"
+modId="jei"
+type="recommended"
+versionRange="[${jei_version},)"
+ordering="NONE"
+side="BOTH"
