@@ -27,10 +27,3 @@ type="required"
 versionRange="[1.21.1,)"
 ordering="NONE"
 side="BOTH"
-
-[[dependencies.blockparty]]
-modId="jei"
-type="optional"
-versionRange="[19.25.0.322,)"
-ordering="NONE"
-side="BOTH"
