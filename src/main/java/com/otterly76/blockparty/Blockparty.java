@@ -36,9 +36,13 @@ public class Blockparty {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
-            event.accept(ModItems.BLACK2BLUE_CONCRETE);
-            event.accept(ModItems.BLACK2BROWN_CONCRETE);
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.OTTER);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.BLACK2BLUE_CONCRETE);
+            event.accept(ModBlocks.BLACK2BROWN_CONCRETE);
         }
     }
 
