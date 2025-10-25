@@ -1,40 +1,29 @@
 package com.otterly76.blockparty;
 
-import com.mojang.logging.LogUtils;
 import com.otterly76.blockparty.block.ModBlocks;
+import com.otterly76.blockparty.generation.DefaultBlockStateProvider;
 import com.otterly76.blockparty.item.ModItems;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import org.slf4j.Logger;
 
-@Mod(Blockparty.MOD_ID)
+@Mod(Constants.MOD_ID)
 public class Blockparty {
-    public static final String MOD_ID = "blockparty";
 
-    @SuppressWarnings("unused")
-    private static final Logger LOGGER = LogUtils.getLogger();
-
-    public Blockparty(IEventBus modEventBus, ModContainer modContainer) {
-        ModBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
-
-        modEventBus.addListener(this::commonSetup);
-
-        NeoForge.EVENT_BUS.register(this);
+    public Blockparty(IEventBus modEventBus) {
+        ModBlocks.BLOCKS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modEventBus.addListener(this::dataGeneratorSetup);
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
+    private void dataGeneratorSetup(final GatherDataEvent event) {
+        final DataGenerator generator = event.getGenerator();
+        generator.addProvider(event.includeClient(), new DefaultBlockStateProvider(generator.getPackOutput(), event.getExistingFileHelper()));
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
@@ -43,250 +32,7 @@ public class Blockparty {
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.BLACK2BLUE_CONCRETE);
-            event.accept(ModBlocks.BLACK2BROWN_CONCRETE);
-            event.accept(ModBlocks.BLACK2CYAN_CONCRETE);
-            event.accept(ModBlocks.BLACK2GREEN_CONCRETE);
-            event.accept(ModBlocks.BLACK2GRAY_CONCRETE);
-            event.accept(ModBlocks.BLACK2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.BLACK2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.BLACK2LIME_CONCRETE);
-            event.accept(ModBlocks.BLACK2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.BLACK2ORANGE_CONCRETE);
-            event.accept(ModBlocks.BLACK2PINK_CONCRETE);
-            event.accept(ModBlocks.BLACK2PURPLE_CONCRETE);
-            event.accept(ModBlocks.BLACK2RED_CONCRETE);
-            event.accept(ModBlocks.BLACK2WHITE_CONCRETE);
-            event.accept(ModBlocks.BLACK2YELLOW_CONCRETE);
-            event.accept(ModBlocks.BLUE2BLACK_CONCRETE);
-            event.accept(ModBlocks.BLUE2BROWN_CONCRETE);
-            event.accept(ModBlocks.BLUE2CYAN_CONCRETE);
-            event.accept(ModBlocks.BLUE2GREEN_CONCRETE);
-            event.accept(ModBlocks.BLUE2GRAY_CONCRETE);
-            event.accept(ModBlocks.BLUE2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.BLUE2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.BLUE2LIME_CONCRETE);
-            event.accept(ModBlocks.BLUE2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.BLUE2ORANGE_CONCRETE);
-            event.accept(ModBlocks.BLUE2PINK_CONCRETE);
-            event.accept(ModBlocks.BLUE2PURPLE_CONCRETE);
-            event.accept(ModBlocks.BLUE2RED_CONCRETE);
-            event.accept(ModBlocks.BLUE2WHITE_CONCRETE);
-            event.accept(ModBlocks.BLUE2YELLOW_CONCRETE);
-            event.accept(ModBlocks.BROWN2BLACK_CONCRETE);
-            event.accept(ModBlocks.BROWN2BLUE_CONCRETE);
-            event.accept(ModBlocks.BROWN2CYAN_CONCRETE);
-            event.accept(ModBlocks.BROWN2GREEN_CONCRETE);
-            event.accept(ModBlocks.BROWN2GRAY_CONCRETE);
-            event.accept(ModBlocks.BROWN2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.BROWN2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.BROWN2LIME_CONCRETE);
-            event.accept(ModBlocks.BROWN2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.BROWN2ORANGE_CONCRETE);
-            event.accept(ModBlocks.BROWN2PINK_CONCRETE);
-            event.accept(ModBlocks.BROWN2PURPLE_CONCRETE);
-            event.accept(ModBlocks.BROWN2RED_CONCRETE);
-            event.accept(ModBlocks.BROWN2WHITE_CONCRETE);
-            event.accept(ModBlocks.BROWN2YELLOW_CONCRETE);
-            event.accept(ModBlocks.CYAN2BLACK_CONCRETE);
-            event.accept(ModBlocks.CYAN2BLUE_CONCRETE);
-            event.accept(ModBlocks.CYAN2BROWN_CONCRETE);
-            event.accept(ModBlocks.CYAN2GREEN_CONCRETE);
-            event.accept(ModBlocks.CYAN2GRAY_CONCRETE);
-            event.accept(ModBlocks.CYAN2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.CYAN2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.CYAN2LIME_CONCRETE);
-            event.accept(ModBlocks.CYAN2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.CYAN2ORANGE_CONCRETE);
-            event.accept(ModBlocks.CYAN2PINK_CONCRETE);
-            event.accept(ModBlocks.CYAN2PURPLE_CONCRETE);
-            event.accept(ModBlocks.CYAN2RED_CONCRETE);
-            event.accept(ModBlocks.CYAN2WHITE_CONCRETE);
-            event.accept(ModBlocks.CYAN2YELLOW_CONCRETE);
-            event.accept(ModBlocks.GREEN2BLACK_CONCRETE);
-            event.accept(ModBlocks.GREEN2BLUE_CONCRETE);
-            event.accept(ModBlocks.GREEN2BROWN_CONCRETE);
-            event.accept(ModBlocks.GREEN2CYAN_CONCRETE);
-            event.accept(ModBlocks.GREEN2GRAY_CONCRETE);
-            event.accept(ModBlocks.GREEN2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.GREEN2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.GREEN2LIME_CONCRETE);
-            event.accept(ModBlocks.GREEN2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.GREEN2ORANGE_CONCRETE);
-            event.accept(ModBlocks.GREEN2PINK_CONCRETE);
-            event.accept(ModBlocks.GREEN2PURPLE_CONCRETE);
-            event.accept(ModBlocks.GREEN2RED_CONCRETE);
-            event.accept(ModBlocks.GREEN2WHITE_CONCRETE);
-            event.accept(ModBlocks.GREEN2YELLOW_CONCRETE);
-            event.accept(ModBlocks.GRAY2BLACK_CONCRETE);
-            event.accept(ModBlocks.GRAY2BLUE_CONCRETE);
-            event.accept(ModBlocks.GRAY2BROWN_CONCRETE);
-            event.accept(ModBlocks.GRAY2CYAN_CONCRETE);
-            event.accept(ModBlocks.GRAY2GREEN_CONCRETE);
-            event.accept(ModBlocks.GRAY2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.GRAY2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.GRAY2LIME_CONCRETE);
-            event.accept(ModBlocks.GRAY2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.GRAY2ORANGE_CONCRETE);
-            event.accept(ModBlocks.GRAY2PINK_CONCRETE);
-            event.accept(ModBlocks.GRAY2PURPLE_CONCRETE);
-            event.accept(ModBlocks.GRAY2RED_CONCRETE);
-            event.accept(ModBlocks.GRAY2WHITE_CONCRETE);
-            event.accept(ModBlocks.GRAY2YELLOW_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2BLACK_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2BLUE_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2BROWN_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2CYAN_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2GREEN_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2GRAY_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2LIME_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2ORANGE_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2PINK_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2PURPLE_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2RED_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2WHITE_CONCRETE);
-            event.accept(ModBlocks.LIGHTBLUE2YELLOW_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2BLACK_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2BLUE_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2BROWN_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2CYAN_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2GREEN_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2GRAY_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2LIME_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2ORANGE_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2PINK_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2PURPLE_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2RED_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2WHITE_CONCRETE);
-            event.accept(ModBlocks.LIGHTGRAY2YELLOW_CONCRETE);
-            event.accept(ModBlocks.LIME2BLACK_CONCRETE);
-            event.accept(ModBlocks.LIME2BLUE_CONCRETE);
-            event.accept(ModBlocks.LIME2BROWN_CONCRETE);
-            event.accept(ModBlocks.LIME2CYAN_CONCRETE);
-            event.accept(ModBlocks.LIME2GREEN_CONCRETE);
-            event.accept(ModBlocks.LIME2GRAY_CONCRETE);
-            event.accept(ModBlocks.LIME2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.LIME2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.LIME2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.LIME2ORANGE_CONCRETE);
-            event.accept(ModBlocks.LIME2PINK_CONCRETE);
-            event.accept(ModBlocks.LIME2PURPLE_CONCRETE);
-            event.accept(ModBlocks.LIME2RED_CONCRETE);
-            event.accept(ModBlocks.LIME2WHITE_CONCRETE);
-            event.accept(ModBlocks.LIME2YELLOW_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2BLACK_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2BLUE_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2BROWN_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2CYAN_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2GREEN_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2GRAY_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2LIME_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2ORANGE_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2PINK_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2PURPLE_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2RED_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2WHITE_CONCRETE);
-            event.accept(ModBlocks.MAGENTA2YELLOW_CONCRETE);
-            event.accept(ModBlocks.ORANGE2BLACK_CONCRETE);
-            event.accept(ModBlocks.ORANGE2BLUE_CONCRETE);
-            event.accept(ModBlocks.ORANGE2BROWN_CONCRETE);
-            event.accept(ModBlocks.ORANGE2CYAN_CONCRETE);
-            event.accept(ModBlocks.ORANGE2GREEN_CONCRETE);
-            event.accept(ModBlocks.ORANGE2GRAY_CONCRETE);
-            event.accept(ModBlocks.ORANGE2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.ORANGE2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.ORANGE2LIME_CONCRETE);
-            event.accept(ModBlocks.ORANGE2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.ORANGE2PINK_CONCRETE);
-            event.accept(ModBlocks.ORANGE2PURPLE_CONCRETE);
-            event.accept(ModBlocks.ORANGE2RED_CONCRETE);
-            event.accept(ModBlocks.ORANGE2WHITE_CONCRETE);
-            event.accept(ModBlocks.ORANGE2YELLOW_CONCRETE);
-            event.accept(ModBlocks.PINK2BLACK_CONCRETE);
-            event.accept(ModBlocks.PINK2BLUE_CONCRETE);
-            event.accept(ModBlocks.PINK2BROWN_CONCRETE);
-            event.accept(ModBlocks.PINK2CYAN_CONCRETE);
-            event.accept(ModBlocks.PINK2GREEN_CONCRETE);
-            event.accept(ModBlocks.PINK2GRAY_CONCRETE);
-            event.accept(ModBlocks.PINK2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.PINK2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.PINK2LIME_CONCRETE);
-            event.accept(ModBlocks.PINK2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.PINK2ORANGE_CONCRETE);
-            event.accept(ModBlocks.PINK2PURPLE_CONCRETE);
-            event.accept(ModBlocks.PINK2RED_CONCRETE);
-            event.accept(ModBlocks.PINK2WHITE_CONCRETE);
-            event.accept(ModBlocks.PINK2YELLOW_CONCRETE);
-            event.accept(ModBlocks.PURPLE2BLACK_CONCRETE);
-            event.accept(ModBlocks.PURPLE2BLUE_CONCRETE);
-            event.accept(ModBlocks.PURPLE2BROWN_CONCRETE);
-            event.accept(ModBlocks.PURPLE2CYAN_CONCRETE);
-            event.accept(ModBlocks.PURPLE2GREEN_CONCRETE);
-            event.accept(ModBlocks.PURPLE2GRAY_CONCRETE);
-            event.accept(ModBlocks.PURPLE2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.PURPLE2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.PURPLE2LIME_CONCRETE);
-            event.accept(ModBlocks.PURPLE2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.PURPLE2ORANGE_CONCRETE);
-            event.accept(ModBlocks.PURPLE2PINK_CONCRETE);
-            event.accept(ModBlocks.PURPLE2RED_CONCRETE);
-            event.accept(ModBlocks.PURPLE2WHITE_CONCRETE);
-            event.accept(ModBlocks.PURPLE2YELLOW_CONCRETE);
-            event.accept(ModBlocks.RED2BLACK_CONCRETE);
-            event.accept(ModBlocks.RED2BLUE_CONCRETE);
-            event.accept(ModBlocks.RED2BROWN_CONCRETE);
-            event.accept(ModBlocks.RED2CYAN_CONCRETE);
-            event.accept(ModBlocks.RED2GREEN_CONCRETE);
-            event.accept(ModBlocks.RED2GRAY_CONCRETE);
-            event.accept(ModBlocks.RED2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.RED2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.RED2LIME_CONCRETE);
-            event.accept(ModBlocks.RED2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.RED2ORANGE_CONCRETE);
-            event.accept(ModBlocks.RED2PINK_CONCRETE);
-            event.accept(ModBlocks.RED2PURPLE_CONCRETE);
-            event.accept(ModBlocks.RED2WHITE_CONCRETE);
-            event.accept(ModBlocks.RED2YELLOW_CONCRETE);
-            event.accept(ModBlocks.WHITE2BLACK_CONCRETE);
-            event.accept(ModBlocks.WHITE2BLUE_CONCRETE);
-            event.accept(ModBlocks.WHITE2BROWN_CONCRETE);
-            event.accept(ModBlocks.WHITE2CYAN_CONCRETE);
-            event.accept(ModBlocks.WHITE2GREEN_CONCRETE);
-            event.accept(ModBlocks.WHITE2GRAY_CONCRETE);
-            event.accept(ModBlocks.WHITE2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.WHITE2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.WHITE2LIME_CONCRETE);
-            event.accept(ModBlocks.WHITE2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.WHITE2ORANGE_CONCRETE);
-            event.accept(ModBlocks.WHITE2PINK_CONCRETE);
-            event.accept(ModBlocks.WHITE2PURPLE_CONCRETE);
-            event.accept(ModBlocks.WHITE2RED_CONCRETE);
-            event.accept(ModBlocks.WHITE2YELLOW_CONCRETE);
-            event.accept(ModBlocks.YELLOW2BLACK_CONCRETE);
-            event.accept(ModBlocks.YELLOW2BLUE_CONCRETE);
-            event.accept(ModBlocks.YELLOW2BROWN_CONCRETE);
-            event.accept(ModBlocks.YELLOW2CYAN_CONCRETE);
-            event.accept(ModBlocks.YELLOW2GREEN_CONCRETE);
-            event.accept(ModBlocks.YELLOW2GRAY_CONCRETE);
-            event.accept(ModBlocks.YELLOW2LIGHTBLUE_CONCRETE);
-            event.accept(ModBlocks.YELLOW2LIGHTGRAY_CONCRETE);
-            event.accept(ModBlocks.YELLOW2LIME_CONCRETE);
-            event.accept(ModBlocks.YELLOW2MAGENTA_CONCRETE);
-            event.accept(ModBlocks.YELLOW2ORANGE_CONCRETE);
-            event.accept(ModBlocks.YELLOW2PINK_CONCRETE);
-            event.accept(ModBlocks.YELLOW2PURPLE_CONCRETE);
-            event.accept(ModBlocks.YELLOW2RED_CONCRETE);
-            event.accept(ModBlocks.YELLOW2WHITE_CONCRETE);
+            ModBlocks.getAllConcreteBlocks().forEach(event::accept);
         }
-    }
-
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
     }
 }
