@@ -2,6 +2,8 @@ package com.otterly76.blockparty.block;
 
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -13,12 +15,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 
-public class GradientBlock extends Block implements IGradientBlock {
+public abstract class SimpleGradientBlock extends Block implements IGradientBlock {
     private final DyeColor firstColor;
     private final DyeColor secondColor;
     private final Function<DyeColor, String> textureNameMapper;
 
-    protected GradientBlock(Properties properties, DyeColor firstColor, DyeColor secondColor, Function<DyeColor, String> textureNameMapper) {
+    protected SimpleGradientBlock(Properties properties, DyeColor firstColor, DyeColor secondColor, Function<DyeColor, String> textureNameMapper) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(DirectionalBlock.FACING, Direction.UP));
         this.firstColor = firstColor;
@@ -55,4 +57,14 @@ public class GradientBlock extends Block implements IGradientBlock {
     protected void createBlockStateDefinition(@NotNull StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(DirectionalBlock.FACING);
     }
+
+    @Override
+    @NotNull
+    public MutableComponent getName() {
+        {
+            return Component.translatable("com.otterly76.blockparty.block.gradient.name", getBlockFromColor(firstColor).getName(), getBlockFromColor(secondColor).getName());
+        }
+    }
+
+    protected abstract Block getBlockFromColor ( final DyeColor color);
 }

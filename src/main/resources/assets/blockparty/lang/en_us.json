@@ -1,5 +1,8 @@
 {
   "itemGroup.blockparty": "Otterly's Blockparty",
 
-  "item.blockparty.otter": "Otter"
+  "item.blockparty.otter": "Otter",
+
+  "com.otterly76.blockparty.block.gradient.name": "%s and %s Gradient Block"
+
 }
