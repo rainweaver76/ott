@@ -1,11 +1,8 @@
 package com.otterly76.blockparty.block;
 
 import com.otterly76.blockparty.Constants;
-import com.otterly76.blockparty.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -17,7 +14,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Constants.MOD_ID);
@@ -36,34 +32,20 @@ public class ModBlocks {
         registerGradientBlocks(Blocks.WHITE_STAINED_GLASS, GradientStainedGlassBlock::new, ALL_STAINED_GLASS_BLOCKS::add);
     }
 
-    private static <T extends Block & IGradientBlock> void registerGradientBlocks(
-            Block block,
-            GradientBlockBuilder<T> builder,
-            Consumer<DeferredBlock<? extends IGradientBlock>> adder) {
+    private static <T extends Block & IGradientBlock> void registerGradientBlocks(Block block, GradientBlockBuilder<T> builder, Consumer<DeferredBlock<? extends IGradientBlock>> adder) {
         List<DyeColor> secondaryColors = new ArrayList<>(List.of(DyeColor.values()));
         for (final DyeColor color1 : DyeColor.values()) {
             for (final DyeColor color2 : secondaryColors) {
                 if (color1 != color2) {
                     final String blockName = BuiltInRegistries.BLOCK.getKey(block).getPath().replace("white_", "");
                     final String fullName = String.format("%s_%s_%s", color1.getName(), color2.getName(), blockName);
-                    DeferredBlock<? extends IGradientBlock> gradientBlock =
-                            registerBlock(fullName, () -> builder.create(block.properties(), color1, color2, color -> "%s_%s".formatted(color.getName(), blockName)));
+                    DeferredBlock<? extends IGradientBlock> gradientBlock = BLOCKS.register(fullName, () -> builder.create(block.properties(), color1, color2, color -> "%s_%s".formatted(color.getName(), blockName)));
                     adder.accept(gradientBlock);
                     ALL_GRADIENT_BLOCKS.add(gradientBlock);
                 }
             }
             secondaryColors.remove(color1);
         }
-    }
-
-    private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
-        DeferredBlock<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static Collection<DeferredBlock<? extends IGradientBlock>> getAllGradientBlocks() {

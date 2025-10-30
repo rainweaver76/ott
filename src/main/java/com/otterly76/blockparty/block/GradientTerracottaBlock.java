@@ -12,7 +12,7 @@ public class GradientTerracottaBlock extends SimpleGradientBlock {
     }
 
     @Override
-    protected Block getBlockFromColor(DyeColor color) {
+    public Block getBlockFromColor(DyeColor color) {
         return switch (color) {
             case BLACK -> Blocks.BLACK_TERRACOTTA;
             case WHITE -> Blocks.WHITE_TERRACOTTA;

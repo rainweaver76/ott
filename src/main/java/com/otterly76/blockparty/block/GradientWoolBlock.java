@@ -12,7 +12,7 @@ public class GradientWoolBlock extends SimpleGradientBlock {
     }
 
     @Override
-    protected Block getBlockFromColor(DyeColor color) {
+    public Block getBlockFromColor(DyeColor color) {
         return switch (color) {
             case BLACK -> Blocks.BLACK_WOOL;
             case WHITE -> Blocks.WHITE_WOOL;

@@ -61,10 +61,6 @@ public abstract class SimpleGradientBlock extends Block implements IGradientBloc
     @Override
     @NotNull
     public MutableComponent getName() {
-        {
-            return Component.translatable("com.otterly76.blockparty.block.gradient.name", getBlockFromColor(firstColor).getName(), getBlockFromColor(secondColor).getName());
-        }
+        return Component.translatable("com.otterly76.blockparty.block.gradient.name", getBlockFromColor(firstColor).getName(), getBlockFromColor(secondColor).getName());
     }
-
-    protected abstract Block getBlockFromColor ( final DyeColor color);
 }
