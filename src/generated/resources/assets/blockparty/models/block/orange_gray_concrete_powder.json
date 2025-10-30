@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "down": "minecraft:block/gray_concrete_powder",
+    "east": "blockparty:block/orange_gray_concrete_powder",
+    "north": "blockparty:block/orange_gray_concrete_powder",
+    "particle": "minecraft:block/orange_concrete_powder",
+    "south": "blockparty:block/orange_gray_concrete_powder",
+    "up": "minecraft:block/orange_concrete_powder",
+    "west": "blockparty:block/orange_gray_concrete_powder"
+  }
+}

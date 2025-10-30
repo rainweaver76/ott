@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "down": "minecraft:block/pink_concrete_powder",
+    "east": "blockparty:block/yellow_pink_concrete_powder",
+    "north": "blockparty:block/yellow_pink_concrete_powder",
+    "particle": "minecraft:block/yellow_concrete_powder",
+    "south": "blockparty:block/yellow_pink_concrete_powder",
+    "up": "minecraft:block/yellow_concrete_powder",
+    "west": "blockparty:block/yellow_pink_concrete_powder"
+  }
+}
