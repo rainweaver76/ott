@@ -71,7 +71,7 @@ public class GradientStainedGlassBlock extends StainedGlassBlock implements IGra
             case LIGHT_GRAY -> Blocks.LIGHT_GRAY_STAINED_GLASS;
             case CYAN -> Blocks.CYAN_STAINED_GLASS;
             case PURPLE -> Blocks.PURPLE_STAINED_GLASS;
-            case BLUE -> Blocks.BLUE_WOOL;
+            case BLUE -> Blocks.BLUE_STAINED_GLASS;
             case BROWN -> Blocks.BROWN_STAINED_GLASS;
             case GREEN -> Blocks.GREEN_STAINED_GLASS;
             case RED -> Blocks.RED_STAINED_GLASS;

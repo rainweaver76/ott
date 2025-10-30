@@ -26,7 +26,7 @@ public class GradientConcreteBlock extends SimpleGradientBlock {
             case LIGHT_GRAY -> Blocks.LIGHT_GRAY_CONCRETE;
             case CYAN -> Blocks.CYAN_CONCRETE;
             case PURPLE -> Blocks.PURPLE_CONCRETE;
-            case BLUE -> Blocks.BLUE_WOOL;
+            case BLUE -> Blocks.BLUE_CONCRETE;
             case BROWN -> Blocks.BROWN_CONCRETE;
             case GREEN -> Blocks.GREEN_CONCRETE;
             case RED -> Blocks.RED_CONCRETE;

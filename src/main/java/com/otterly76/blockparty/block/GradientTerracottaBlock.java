@@ -26,7 +26,7 @@ public class GradientTerracottaBlock extends SimpleGradientBlock {
             case LIGHT_GRAY -> Blocks.LIGHT_GRAY_TERRACOTTA;
             case CYAN -> Blocks.CYAN_TERRACOTTA;
             case PURPLE -> Blocks.PURPLE_TERRACOTTA;
-            case BLUE -> Blocks.BLUE_WOOL;
+            case BLUE -> Blocks.BLUE_TERRACOTTA;
             case BROWN -> Blocks.BROWN_TERRACOTTA;
             case GREEN -> Blocks.GREEN_TERRACOTTA;
             case RED -> Blocks.RED_TERRACOTTA;

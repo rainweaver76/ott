@@ -74,7 +74,7 @@ public class GradientConcretePowderBlock extends ConcretePowderBlock implements 
             case LIGHT_GRAY -> Blocks.LIGHT_GRAY_CONCRETE_POWDER;
             case CYAN -> Blocks.CYAN_CONCRETE_POWDER;
             case PURPLE -> Blocks.PURPLE_CONCRETE_POWDER;
-            case BLUE -> Blocks.BLUE_WOOL;
+            case BLUE -> Blocks.BLUE_CONCRETE_POWDER;
             case BROWN -> Blocks.BROWN_CONCRETE_POWDER;
             case GREEN -> Blocks.GREEN_CONCRETE_POWDER;
             case RED -> Blocks.RED_CONCRETE_POWDER;
