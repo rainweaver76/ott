@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#blockparty:concrete",
+    "#blockparty:concrete_powder",
+    "#blockparty:stained_glass",
+    "#blockparty:terracotta",
+    "#blockparty:wool"
+  ]
+}
