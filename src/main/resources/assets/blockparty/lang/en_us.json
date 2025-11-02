@@ -3,9 +3,5 @@
 
   "item.blockparty.otter": "Otter",
 
-  "com.otterly76.blockparty.block.gradient.name": "%s and %s Gradient Block",
-
-  "creativetab.blockparty.gradient_blocks_tab" : "Gradient Blocks",
-  "creativetab.blockparty.non_blocks" : "Non-Block Items"
-
+  "com.otterly76.blockparty.block.gradient.name": "%s and %s Gradient Block"
 }

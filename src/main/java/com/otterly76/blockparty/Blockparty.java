@@ -14,8 +14,6 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 public class Blockparty {
 
     public Blockparty(IEventBus modEventBus) {
-        ModCreativeModeTab.register(modEventBus);
-
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
 
