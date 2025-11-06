@@ -1,0 +1,6 @@
+{
+  "parent": "blockparty:block/testblock_22",
+  "textures": {
+    "layer0": "blockparty:item/otter"
+  }
+}
