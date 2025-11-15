@@ -32,6 +32,13 @@ public final class ModCreativeTabs {
             ModItems.TESTBLOCK_30, ModItems.TESTBLOCK_31, ModItems.TESTBLOCK_32, ModItems.TESTBLOCK_33
     );
 
+    private static final List<DeferredHolder<Item, BlockItem>> LIMESTONE_BLOCKS = List.of(
+            ModItems.LIMESTONE_00, ModItems.LIMESTONE_01, ModItems.LIMESTONE_02, ModItems.LIMESTONE_03,
+            ModItems.LIMESTONE_10, ModItems.LIMESTONE_11, ModItems.LIMESTONE_12, ModItems.LIMESTONE_13,
+            ModItems.LIMESTONE_20, ModItems.LIMESTONE_21, ModItems.LIMESTONE_22, ModItems.LIMESTONE_23,
+            ModItems.LIMESTONE_30, ModItems.LIMESTONE_31, ModItems.LIMESTONE_32, ModItems.LIMESTONE_33
+    );
+
     private static CreativeModeTab createGradientsTab() {
         return new CreativeModeTab.Builder(DEFAULT_ROW, DEFAULT_COLUMN)
                 .title(Component.translatable(createTranslationKey("gradients")))
@@ -47,6 +54,7 @@ public final class ModCreativeTabs {
                 .displayItems((config, output) -> {
                     output.accept(ModItems.OTTER);
                     addTestBlocks(output);
+                    addLimestoneBlocks(output);
                 })
                 .build();
     }
@@ -57,5 +65,8 @@ public final class ModCreativeTabs {
 
     private static void addTestBlocks(CreativeModeTab.Output output) {
         TEST_BLOCKS.forEach(holder -> output.accept(holder.get()));
+    }
+    private static void addLimestoneBlocks(CreativeModeTab.Output output) {
+        LIMESTONE_BLOCKS.forEach(holder -> output.accept(holder.get()));
     }
 }
