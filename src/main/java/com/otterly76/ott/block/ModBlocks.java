@@ -92,7 +92,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PURPLE_SEAGLASS = BLOCKS.register("purple_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> RED_PATTERNED_SEAGLASS = BLOCKS.register("red_patterned_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> RED_SEAGLASS = BLOCKS.register("red_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
-    public static final DeferredBlock<Block> SEAGLASS = BLOCKS.register("seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> WHITE_PATTERNED_SEAGLASS = BLOCKS.register("white_patterned_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> WHITE_SEAGLASS = BLOCKS.register("white_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> YELLOW_PATTERNED_SEAGLASS = BLOCKS.register("yellow_patterned_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE)));

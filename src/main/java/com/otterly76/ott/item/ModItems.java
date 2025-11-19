@@ -83,7 +83,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> PURPLE_SEAGLASS = registerBlockItem("purple_seaglass", ModBlocks.PURPLE_SEAGLASS);
     public static final DeferredHolder<Item, BlockItem> RED_PATTERNED_SEAGLASS = registerBlockItem("red_patterned_seaglass", ModBlocks.RED_PATTERNED_SEAGLASS);
     public static final DeferredHolder<Item, BlockItem> RED_SEAGLASS = registerBlockItem("red_seaglass", ModBlocks.RED_SEAGLASS);
-    public static final DeferredHolder<Item, BlockItem> SEAGLASS = registerBlockItem("seaglass", ModBlocks.SEAGLASS);
     public static final DeferredHolder<Item, BlockItem> WHITE_PATTERNED_SEAGLASS = registerBlockItem("white_patterned_seaglass", ModBlocks.WHITE_PATTERNED_SEAGLASS);
     public static final DeferredHolder<Item, BlockItem> WHITE_SEAGLASS = registerBlockItem("white_seaglass", ModBlocks.WHITE_SEAGLASS);
     public static final DeferredHolder<Item, BlockItem> YELLOW_PATTERNED_SEAGLASS = registerBlockItem("yellow_patterned_seaglass", ModBlocks.YELLOW_PATTERNED_SEAGLASS);
