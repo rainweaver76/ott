@@ -1,0 +1,45 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Throttled by Otterly76",
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"particle": "ott:block/green_thorns_side",
+		"side": "ott:block/green_thorns_side",
+		"end": "ott:block/green_thorns_top"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 8],
+			"to": [16, 16, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#side"}
+			}
+		},
+		{
+			"from": [8, 0, 0],
+			"to": [8, 16, 16],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#side"}
+			}
+		},
+		{
+			"from": [3, 0, 3],
+			"to": [13, 16, 13],
+			"faces": {
+				"north": {"uv": [3, 0, 13, 16], "texture": "#side", "tintindex": 0},
+				"east": {"uv": [13, 0, 3, 16], "texture": "#side", "tintindex": 0},
+				"south": {"uv": [3, 0, 13, 16], "texture": "#side", "tintindex": 0},
+				"west": {"uv": [13, 0, 3, 16], "texture": "#side", "tintindex": 0},
+				"up": {"uv": [3, 3, 13, 13], "texture": "#end", "cullface": "up", "tintindex": 0},
+				"down": {"uv": [3, 3, 13, 13], "texture": "#end", "cullface": "down", "tintindex": 0}
+			}
+		}
+	],
+	"particle": "minecraft:block/block"
+}

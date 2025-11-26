@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "multilogged=air": {
+      "model": "ott:block/keepsake_casket"
+    },
+    "multilogged=basalt": {
+      "model": "ott:block/casket_basalt"
+    },
+    "multilogged=lava": {
+      "model": "ott:block/keepsake_casket"
+    },
+    "multilogged=obsidian": {
+      "model": "ott:block/casket_obsidian"
+    },
+    "multilogged=stone": {
+      "model": "ott:block/casket_stone"
+    },
+    "multilogged=water": {
+      "model": "ott:block/keepsake_casket"
+    }
+  }
+}

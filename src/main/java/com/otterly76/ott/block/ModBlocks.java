@@ -145,6 +145,44 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GAPPER_PANEL_OAK = BLOCKS.register("gapper_panel_oak", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
 
+    public static final DeferredBlock<Block> BROWN_THORNS = BLOCKS.register("brown_thorns", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> BURNT_THORNS = BLOCKS.register("burnt_thorns", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> CANDELABRA = BLOCKS.register("candelabra", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CREEPER_SKULL_CANDLE = BLOCKS.register("creeper_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> GREEN_THORNS = BLOCKS.register("green_thorns", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> HEDGE = BLOCKS.register("hedge", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> HEDGE_ROSE = BLOCKS.register("hedge_rose", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> HUGE_LILY_PAD = BLOCKS.register("huge_lily_pad", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.LILY_PAD).noOcclusion()));
+    public static final DeferredBlock<Block> HUGE_WATER_LILY = BLOCKS.register("huge_water_lily", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.LILY_PAD).noOcclusion()));
+    public static final DeferredBlock<Block> KEEPSAKE_CASKET = BLOCKS.register("keepsake_casket", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_BLACK_CANDLE = BLOCKS.register("ominous_black_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_BLUE_CANDLE = BLOCKS.register("ominous_blue_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_BROWN_CANDLE = BLOCKS.register("ominous_brown_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_CANDLE = BLOCKS.register("ominous_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_CYAN_CANDLE = BLOCKS.register("ominous_cyan_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_GRAY_CANDLE = BLOCKS.register("ominous_gray_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_GREEN_CANDLE = BLOCKS.register("ominous_green_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_LIGHT_BLUE_CANDLE = BLOCKS.register("ominous_light_blue_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_LIGHT_GRAY_CANDLE = BLOCKS.register("ominous_light_gray_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_LIME_CANDLE = BLOCKS.register("ominous_lime_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_MAGENTA_CANDLE = BLOCKS.register("ominous_magenta_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_ORANGE_CANDLE = BLOCKS.register("ominous_orange_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_PINK_CANDLE = BLOCKS.register("ominous_pink_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_PURPLE_CANDLE = BLOCKS.register("ominous_purple_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_RED_CANDLE = BLOCKS.register("ominous_red_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_WHITE_CANDLE = BLOCKS.register("ominous_white_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> OMINOUS_YELLOW_CANDLE = BLOCKS.register("ominous_yellow_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CANDLE).noOcclusion()));
+    public static final DeferredBlock<Block> PIGLIN_SKULL_CANDLE = BLOCKS.register("piglin_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> PLAYER_SKULL_CANDLE = BLOCKS.register("player_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> SKELETON_SKULL_CANDLE = BLOCKS.register("skeleton_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> SKULL_CHEST = BLOCKS.register("skull_chest", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> THORN_LEAVES = BLOCKS.register("thorn_leaves", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CHERRY_LEAVES).noOcclusion()));
+    public static final DeferredBlock<Block> THORN_ROSE = BLOCKS.register("thorn_rose", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.CHERRY_LEAVES).noOcclusion()));
+    public static final DeferredBlock<Block> WITHER_SKELETON_SKULL_CANDLE = BLOCKS.register("wither_skeleton_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+    public static final DeferredBlock<Block> WROUGHT_IRON_BAR = BLOCKS.register("wrought_iron_bar", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WROUGHT_IRON_FENCE = BLOCKS.register("wrought_iron_fence", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ZOMBIE_SKULL_CANDLE = BLOCKS.register("zombie_skull_candle", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).noOcclusion()));
+
     static {
         registerGradientBlocks(Blocks.WHITE_CONCRETE, GradientConcreteBlock::new, ALL_CONCRETE_BLOCKS::add);
         registerGradientBlocks(Blocks.WHITE_TERRACOTTA, GradientTerracottaBlock::new, ALL_TERRACOTTA_BLOCKS::add);

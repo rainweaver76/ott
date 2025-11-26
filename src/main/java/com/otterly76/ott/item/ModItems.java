@@ -136,6 +136,44 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> GAPPER_PANEL_OAK = registerBlockItem("gapper_panel_oak", ModBlocks.GAPPER_PANEL_OAK);
 
+    public static final DeferredHolder<Item, BlockItem> BROWN_THORNS = registerBlockItem("brown_thorns", ModBlocks.BROWN_THORNS);
+    public static final DeferredHolder<Item, BlockItem> BURNT_THORNS = registerBlockItem("burnt_thorns", ModBlocks.BURNT_THORNS);
+    public static final DeferredHolder<Item, BlockItem> CANDELABRA = registerBlockItem("candelabra", ModBlocks.CANDELABRA);
+    public static final DeferredHolder<Item, BlockItem> CREEPER_SKULL_CANDLE = registerBlockItem("creeper_skull_candle", ModBlocks.CREEPER_SKULL_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> GREEN_THORNS = registerBlockItem("green_thorns", ModBlocks.GREEN_THORNS);
+    public static final DeferredHolder<Item, BlockItem> HEDGE = registerBlockItem("hedge", ModBlocks.HEDGE);
+    public static final DeferredHolder<Item, BlockItem> HEDGE_ROSE = registerBlockItem("hedge_rose", ModBlocks.HEDGE_ROSE);
+    public static final DeferredHolder<Item, BlockItem> HUGE_LILY_PAD = registerBlockItem("huge_lily_pad", ModBlocks.HUGE_LILY_PAD);
+    public static final DeferredHolder<Item, BlockItem> HUGE_WATER_LILY = registerBlockItem("huge_water_lily", ModBlocks.HUGE_WATER_LILY);
+    public static final DeferredHolder<Item, BlockItem> KEEPSAKE_CASKET = registerBlockItem("keepsake_casket", ModBlocks.KEEPSAKE_CASKET);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_BLACK_CANDLE = registerBlockItem("ominous_black_candle", ModBlocks.OMINOUS_BLACK_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_BLUE_CANDLE = registerBlockItem("ominous_blue_candle", ModBlocks.OMINOUS_BLUE_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_BROWN_CANDLE = registerBlockItem("ominous_brown_candle", ModBlocks.OMINOUS_BROWN_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_CANDLE = registerBlockItem("ominous_candle", ModBlocks.OMINOUS_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_CYAN_CANDLE = registerBlockItem("ominous_cyan_candle", ModBlocks.OMINOUS_CYAN_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_GRAY_CANDLE = registerBlockItem("ominous_gray_candle", ModBlocks.OMINOUS_GRAY_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_GREEN_CANDLE = registerBlockItem("ominous_green_candle", ModBlocks.OMINOUS_GREEN_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_LIGHT_BLUE_CANDLE = registerBlockItem("ominous_light_blue_candle", ModBlocks.OMINOUS_LIGHT_BLUE_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_LIGHT_GRAY_CANDLE = registerBlockItem("ominous_light_gray_candle", ModBlocks.OMINOUS_LIGHT_GRAY_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_LIME_CANDLE = registerBlockItem("ominous_lime_candle", ModBlocks.OMINOUS_LIME_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_MAGENTA_CANDLE = registerBlockItem("ominous_magenta_candle", ModBlocks.OMINOUS_MAGENTA_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_ORANGE_CANDLE = registerBlockItem("ominous_orange_candle", ModBlocks.OMINOUS_ORANGE_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_PINK_CANDLE = registerBlockItem("ominous_pink_candle", ModBlocks.OMINOUS_PINK_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_PURPLE_CANDLE = registerBlockItem("ominous_purple_candle", ModBlocks.OMINOUS_PURPLE_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_RED_CANDLE = registerBlockItem("ominous_red_candle", ModBlocks.OMINOUS_RED_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_WHITE_CANDLE = registerBlockItem("ominous_white_candle", ModBlocks.OMINOUS_WHITE_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> OMINOUS_YELLOW_CANDLE = registerBlockItem("ominous_yellow_candle", ModBlocks.OMINOUS_YELLOW_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> PIGLIN_SKULL_CANDLE = registerBlockItem("piglin_skull_candle", ModBlocks.PIGLIN_SKULL_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> PLAYER_SKULL_CANDLE = registerBlockItem("player_skull_candle", ModBlocks.PLAYER_SKULL_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> SKELETON_SKULL_CANDLE = registerBlockItem("skeleton_skull_candle", ModBlocks.SKELETON_SKULL_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> SKULL_CHEST = registerBlockItem("skull_chest", ModBlocks.SKULL_CHEST);
+    public static final DeferredHolder<Item, BlockItem> THORN_LEAVES = registerBlockItem("thorn_leaves", ModBlocks.THORN_LEAVES);
+    public static final DeferredHolder<Item, BlockItem> THORN_ROSE = registerBlockItem("thorn_rose", ModBlocks.THORN_ROSE);
+    public static final DeferredHolder<Item, BlockItem> WITHER_SKELETON_SKULL_CANDLE = registerBlockItem("wither_skeleton_skull_candle", ModBlocks.WITHER_SKELETON_SKULL_CANDLE);
+    public static final DeferredHolder<Item, BlockItem> WROUGHT_IRON_BAR = registerBlockItem("wrought_iron_bar", ModBlocks.WROUGHT_IRON_BAR);
+    public static final DeferredHolder<Item, BlockItem> WROUGHT_IRON_FENCE = registerBlockItem("wrought_iron_fence", ModBlocks.WROUGHT_IRON_FENCE);
+    public static final DeferredHolder<Item, BlockItem> ZOMBIE_SKULL_CANDLE = registerBlockItem("zombie_skull_candle", ModBlocks.ZOMBIE_SKULL_CANDLE);
+
     private static DeferredHolder<Item, BlockItem> registerBlockItem(String name, DeferredBlock<Block> block) {
         return ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }

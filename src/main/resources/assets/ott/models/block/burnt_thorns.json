@@ -1,0 +1,8 @@
+{
+  "parent": "ott:block/thorns_main",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "end": "ott:block/burnt_thorns_top",
+    "side": "ott:block/burnt_thorns_side"
+  }
+}
