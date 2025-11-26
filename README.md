@@ -16,3 +16,4 @@ Running List:
   - [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
     - Because it annoys me...
 - Lowered the shield when equipped so you can actually, ya know, see what you're doing
+- Lowered the totem of undying, see above
