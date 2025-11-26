@@ -1,7 +1,8 @@
 {
 	"format_version": "1.21.6",
-	"credit": "Made with Blockbench",
+	"credit": "Throttled by Otterly76",
 	"parent": "minecraft:block/tinted_cross",
+	"render_type": "minecraft:cutout",
 	"textures": {
 		"particle": "block/short_grass",
 		"cross": "block/short_grass"
