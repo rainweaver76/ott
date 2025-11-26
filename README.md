@@ -14,4 +14,4 @@ Running List:
 - Lowered the shield when equipped so you can actually, ya know, see what you're doing
 - Lowered the totem of undying, see above
 - Found and imported a slew of missing sound files
-- 
+- Identified and added missing recipes (ongoing)
