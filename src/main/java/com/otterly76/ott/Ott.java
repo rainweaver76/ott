@@ -8,8 +8,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-import java.util.Locale;
-
 @Mod(Constants.MOD_ID)
 public class Ott {
 
