@@ -1,0 +1,7 @@
+{
+    "parent": "item/sign_base",
+    "textures": {
+		"sign": "item/entity/signs/acacia",
+		"particle": "item/entity/signs/acacia"
+	}
+}

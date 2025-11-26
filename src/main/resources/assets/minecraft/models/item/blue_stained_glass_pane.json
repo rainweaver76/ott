@@ -1,0 +1,7 @@
+{
+    "parent": "item/glass_pane",
+    "textures": {
+        "front": "block/blue_stained_glass",
+        "side": "block/blue_stained_glass_pane_top"
+    }
+}

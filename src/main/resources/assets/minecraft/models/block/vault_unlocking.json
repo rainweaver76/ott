@@ -1,0 +1,7 @@
+{
+  "parent": "block/vault",
+  "textures": {
+    "front": "block/vault_front_ejecting",
+    "side": "block/vault_side_on"
+  }
+}

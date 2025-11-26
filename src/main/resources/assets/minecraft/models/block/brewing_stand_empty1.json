@@ -1,0 +1,61 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"particle": "block/brewing_stand",
+		"stand": "block/brewing_stand"
+	},
+	"elements": [
+		{
+			"from": [6.85, 2, 5.2],
+			"to": [7.35, 14, 7.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [6.85, 2, 7.2]},
+			"faces": {
+				"north": {"uv": [5, 2, 5.5, 14], "texture": "#stand"},
+				"east": {"uv": [7, 2, 5, 14], "texture": "#stand"},
+				"south": {"uv": [6, 2, 6.5, 14], "texture": "#stand"},
+				"west": {"uv": [5, 2, 7, 14], "texture": "#stand"},
+				"up": {"uv": [7, 2, 5, 2.5], "rotation": 270, "texture": "#stand"},
+				"down": {"uv": [7, 2, 5, 2.5], "rotation": 90, "texture": "#stand"}
+			}
+		},
+		{
+			"from": [6.85, 12, 4.2],
+			"to": [7.35, 15, 5.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [6.85, 2, 7.2]},
+			"faces": {
+				"north": {"uv": [4, 1, 4.5, 4], "texture": "#stand"},
+				"east": {"uv": [4, 1, 5, 4], "texture": "#stand"},
+				"south": {"uv": [4, 1, 4.5, 4], "texture": "#stand"},
+				"west": {"uv": [4, 1, 5, 4], "texture": "#stand"},
+				"up": {"uv": [4, 1, 5, 1.5], "rotation": 270, "texture": "#stand"},
+				"down": {"uv": [4, 1, 5, 1.5], "rotation": 90, "texture": "#stand"}
+			}
+		},
+		{
+			"from": [6.85, 6, 3.2],
+			"to": [7.35, 16, 4.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [6.85, 2, 7.2]},
+			"faces": {
+				"north": {"uv": [12, 0, 12.5, 10], "texture": "#stand"},
+				"east": {"uv": [12, 0, 13, 10], "texture": "#stand"},
+				"south": {"uv": [12, 0, 12.5, 10], "texture": "#stand"},
+				"west": {"uv": [12, 0, 13, 10], "texture": "#stand"},
+				"up": {"uv": [12, 0, 13, 0.5], "rotation": 270, "texture": "#stand"},
+				"down": {"uv": [12, 9, 13, 9.5], "rotation": 90, "texture": "#stand"}
+			}
+		},
+		{
+			"from": [6.85, 11, 2.2],
+			"to": [7.35, 13, 3.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [6.85, 2, 7.2]},
+			"faces": {
+				"north": {"uv": [2, 3, 2.5, 5], "texture": "#stand"},
+				"east": {"uv": [2, 3, 3, 5], "texture": "#stand"},
+				"south": {"uv": [2, 3, 2.5, 5], "texture": "#stand"},
+				"west": {"uv": [2, 3, 3, 5], "texture": "#stand"},
+				"up": {"uv": [2, 3, 3, 3.5], "rotation": 270, "texture": "#stand"},
+				"down": {"uv": [2, 3, 3, 3.5], "rotation": 90, "texture": "#stand"}
+			}
+		}
+	]
+}

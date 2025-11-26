@@ -1,0 +1,40 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/tinted_cross",
+	"textures": {
+		"cross": "block/short_grass"
+	},
+	"elements": [
+		{
+			"from": [11, 0, 0.8],
+			"to": [11, 16, 15.2],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 8, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [2.563, 0, 6.28],
+			"to": [14.947, 13.76, 6.28],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8.755, 6.88, 8.86], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [3.25, 0, -1.95],
+			"to": [3.25, 16, 12.45],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [10.25, 8, 5.25], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "item/sign_base",
+    "textures": {
+		"sign": "item/entity/signs/birch",
+		"particle": "item/entity/signs/birch"
+	}
+}

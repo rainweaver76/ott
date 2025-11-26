@@ -1,0 +1,91 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"bottom": "block/enchanting_table_bottom",
+		"top": "block/enchanting_table_top",
+		"side": "block/enchanting_table_side",
+		"book": "item/entity/enchanting_table_book"
+	},
+	"elements": [ 	 
+		{
+			"from": [ 0, 0, 0 ],
+			"to": [ 16, 12, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#bottom", "cullface": "down" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#top" },
+				"north": { "uv": [ 0, 4, 16, 16 ], "texture": "#side", "cullface": "north" },
+				"south": { "uv": [ 0, 4, 16, 16 ], "texture": "#side", "cullface": "south" },
+				"west": { "uv": [ 0, 4, 16, 16 ], "texture": "#side", "cullface": "west" },
+				"east": { "uv": [ 0, 4, 16, 16 ], "texture": "#side", "cullface": "east" }
+			}
+		},
+		{
+			"from": [ 7, 12, 2 ],
+			"to": [ 13, 12.001, 12 ],
+			"rotation": { "origin": [ 7, 12, 2 ], "axis": "y", "angle": -22.5 },
+			"faces": {
+				"down": { "uv": [ 1.5, 0, 3, 5 ], "texture": "#book" },
+				"up": { "uv": [ 0, 0, 1.5, 5 ], "texture": "#book", "rotation": 180 }
+			}
+		},
+		{
+			"from": [ 7, 12, 3 ],
+			"to": [ 12, 14, 11 ],
+			"rotation": { "origin": [ 7, 12, 2 ], "axis": "y", "angle": -22.5 },
+			"faces": {
+				"north": { "uv": [ 0.25, 5, 1.5, 5.5 ], "texture": "#book" },
+				"south": { "uv": [ 0.25, 5, 1.5, 5.5 ], "texture": "#book" },
+				"east": { "uv": [ 0.25, 5, 1.5, 5.5 ], "texture": "#book" }
+			}
+		},
+		{
+			"from": [ 7, 14, 2 ],
+			"to": [ 13, 14.001, 12 ],
+			"rotation": { "origin": [ 7, 12, 2 ], "axis": "y", "angle": -22.5 },
+			"faces": {
+				"down": { "uv": [ 0, 0, 1.5, 5 ], "texture": "#book", "rotation": 180 },
+				"up": { "uv": [ 1.5, 0, 3, 5 ], "texture": "#book" }
+			}
+		},
+		{
+			"from": [ 7, 12, 2 ],
+			"to": [ 7.001, 14, 12 ],
+			"rotation": { "origin": [ 7, 12, 2 ], "axis": "y", "angle": -22.5 },
+			"faces": {
+				"west": { "uv": [ 3, 0, 3.5, 5 ], "texture": "#book", "rotation": 90 },
+				"east": { "uv": [ 3.5, 0, 4, 5 ], "texture": "#book", "rotation": 90 }
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation":  [ 75, -135, 0 ],
+			"translation":  [ 0, 2.5, 0 ],
+			"scale":  [ 0.375, 0.375, 0.375 ]
+		},
+		"thirdperson_lefthand": {
+			"rotation":  [ 75, -45, 0 ],
+			"translation":  [ 0, 2.5, 0 ],
+			"scale":  [ 0.375, 0.375, 0.375 ]
+		},
+		"firstperson_righthand": {
+			"rotation":  [ 0, -135, 0 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"firstperson_lefthand": {
+			"rotation":  [ 0, -45, 0 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"gui": {
+			"rotation":  [ 30, 225, 0 ],
+			"scale":  [ 0.625, 0.625, 0.625 ]
+		},
+		"ground": {
+			"translation":  [ 0, 3, 0 ],
+			"scale":  [ 0.25, 0.25, 0.25 ]
+		},
+		"fixed": {
+			"scale":  [ 0.5, 0.5, 0.5 ]
+		}
+	}
+}

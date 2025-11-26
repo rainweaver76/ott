@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/rose_bush_bottom",
+  "textures": {
+    "2": "minecraft:block/rose_blue",
+        "particle": "block/blue_terracotta"
+  }
+}

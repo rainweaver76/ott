@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Throttled by Otterly76",
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"particle": "block/hanging_roots",
+		"cross": "block/hanging_roots"
+	},
+	"elements": [
+		{
+			"from": [1.016, 0.5, 8],
+			"to": [14.984, 16.02, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8.26, 8], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0.625, 1.088],
+			"to": [8, 15.985, 14.912],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8.305, 8], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		}
+	]
+}

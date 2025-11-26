@@ -1,0 +1,26 @@
+{
+	"parent": "block/orientable_with_bottom",
+	"textures": {
+		"back": "block/furnace_side",
+		"top": "block/furnace_top",
+		"side": "block/furnace_side",
+		"sideb": "block/furnace_side",
+		"front": "block/dropper_front",
+		"bottom": "block/furnace_top",
+		"particle": "block/furnace_side"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#front", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#side", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#back", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#sideb", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#top", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down"}
+			}
+		}
+	]
+}

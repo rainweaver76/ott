@@ -1,0 +1,37 @@
+{
+	"gui_light": "front",
+	"parent": "block/activator_rail",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation":  [ 90, 0, 90 ],
+			"translation":  [ -2.75, 1, 0 ],
+			"scale":  [ 0.375, 0.375, 0.375 ]
+		},
+		"thirdperson_lefthand": {
+			"rotation":  [ 90, 0, 90 ],
+			"translation":  [ -2.75, 1, 0 ],
+			"scale":  [ 0.375, 0.375, 0.375 ]
+		},
+		"firstperson_righthand": {
+			"rotation":  [ 90, 0, 35 ],
+			"translation":  [ -1.5, 2, 2 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"firstperson_lefthand": {
+			"rotation":  [ 90, 0, 35 ],
+			"translation":  [ -1.5, 2, 2 ],
+			"scale":  [ 0.4, 0.4, 0.4 ]
+		},
+		"gui": {
+			"rotation":  [ 90, 0, 0 ]
+		},
+		"ground": {
+			"translation":  [ 0, 3, 0 ],
+			"scale":  [ 0.25, 0.25, 0.25 ]
+		},
+		"fixed": {
+			"rotation":  [ 90, 0, 180 ],
+			"translation":  [ 0, 0, -6.5 ]
+		}
+	}
+}

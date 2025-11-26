@@ -1,0 +1,7 @@
+{
+    "parent": "item/hanging_sign_base",
+    "textures": {
+		"sign": "item/entity/signs/hanging/dark_oak",
+		"particle": "item/entity/signs/hanging/dark_oak"
+	}
+}

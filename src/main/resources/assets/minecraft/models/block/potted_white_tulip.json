@@ -1,0 +1,7 @@
+{
+	"parent": "block/potted_tulip_template",
+	"textures": {
+        "petal": "block/tulip_white",
+        "particle": "block/terracotta"
+    }
+}

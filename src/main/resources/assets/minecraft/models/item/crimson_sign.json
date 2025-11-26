@@ -1,0 +1,7 @@
+{
+    "parent": "item/sign_base",
+    "textures": {
+		"sign": "item/entity/signs/crimson",
+		"particle": "item/entity/signs/crimson"
+	}
+}

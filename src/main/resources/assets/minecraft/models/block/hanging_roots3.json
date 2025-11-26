@@ -1,0 +1,41 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Throttled by Otterly76",
+	"parent": "minecraft:block/cross",
+	"textures": {
+		"particle": "block/hanging_roots",
+		"cross": "block/hanging_roots"
+	},
+	"elements": [
+		{
+			"from": [11, 0, 0.55],
+			"to": [11, 16, 14.95],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 8, 7.75], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [3.01, 0.875, 7.15],
+			"to": [16.69, 16.075, 7.15],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [9.85, 8.475, 10], "rescale": true},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [3.86, 1.5, -0.052],
+			"to": [3.86, 16.06, 13.052],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [10.23, 8.78, 6.5], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		}
+	]
+}

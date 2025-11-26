@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_tulip",
+  "textures": {
+    "petal": "minecraft:block/tulip_white",
+    "particle": "item/white_tulip"
+  }
+}

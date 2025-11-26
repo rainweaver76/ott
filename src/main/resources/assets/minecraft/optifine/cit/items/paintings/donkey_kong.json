@@ -1,0 +1,6 @@
+{
+    "parent": "optifine/cit/items/paintings/models/painting4x3",
+    "textures": {
+        "front": "item/painting/donkey_kong"
+    }
+}

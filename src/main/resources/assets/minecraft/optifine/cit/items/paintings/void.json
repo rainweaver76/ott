@@ -1,0 +1,6 @@
+{
+    "parent": "optifine/cit/items/paintings/models/painting2x2",
+    "textures": {
+        "front": "item/painting/void"
+    }
+}

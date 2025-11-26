@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/rose_bush_top",
+  "textures": {
+    "petals": "minecraft:block/rose_white",
+    "particle": "minecraft:block/white_terracotta"
+  }
+}

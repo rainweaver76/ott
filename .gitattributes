@@ -3,3 +3,14 @@
 # are changed when only line endings change.
 src/generated/**/.cache/cache text eol=lf
 src/generated/**/*.json text eol=lf
+* text=auto
+
+# Keep gradlew as executable
+gradlew text eol=lf
+
+# Ensure graphic files are treated as binary (not text) so git doesn't corrupt them
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary

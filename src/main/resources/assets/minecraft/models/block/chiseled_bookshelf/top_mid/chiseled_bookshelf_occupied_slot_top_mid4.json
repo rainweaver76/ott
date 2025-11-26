@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/template_chiseled_bookshelf_slot_top_right",
+	"textures": {
+		"texture": "block/chiseled_bookshelf_occupied"
+	},
+	"elements": [
+		{
+			"from": [6, 9, 1],
+			"to": [10, 15, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 9, 1]},
+			"faces": {
+				"north": {"uv": [11, 1, 15, 7], "texture": "#texture"},
+				"east": {"uv": [11, 1, 12, 7], "texture": "#texture"},
+				"south": {"uv": [11, 1, 15, 7], "texture": "#texture"},
+				"west": {"uv": [14, 1, 15, 7], "texture": "#texture"},
+				"up": {"uv": [15, 1, 11, 2], "texture": "#texture"},
+				"down": {"uv": [15, 6, 11, 7], "texture": "#texture"}
+			}
+		}
+	]
+}

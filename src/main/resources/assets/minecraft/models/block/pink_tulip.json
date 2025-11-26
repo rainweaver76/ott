@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_tulip",
+  "textures": {
+    "petal": "block/tulip_pink",
+    "particle": "item/pink_tulip"
+  }
+}

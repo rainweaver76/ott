@@ -1,0 +1,73 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Throttled by Otterly76",
+	"parent": "minecraft:block/tinted_cross",
+	"ambientocclusion": false,
+	"render_type": "minecraft:cutout",
+	"textures": {
+		"1": "block/short_grass4",
+		"2": "block/short_grass8",
+		"particle": "block/short_grass3",
+		"cross": "block/short_grass3"
+	},
+	"elements": [
+		{
+			"from": [3.5, 0, -0.45],
+			"to": [3.5, 16, 13.95],
+			"shade": false,
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [3.5, 8, 6.75], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [3.205, 0, 4.244],
+			"to": [3.205, 12.48, 15.476],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [3.205, 6.24, 9.86], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#cross", "tintindex": 0},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#cross", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, 0.164],
+			"to": [8, 14.08, 12.836],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 7.04, 6.5], "rescale": true},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#1", "tintindex": 0}
+			}
+		},
+		{
+			"from": [8, 0, 6.38792],
+			"to": [8, 10.9824, 16.27208],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 5.4912, 11.33], "rescale": true},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 16], "texture": "#1", "tintindex": 0},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#1", "tintindex": 0}
+			}
+		},
+		{
+			"from": [4.74981, 0, 12.6138],
+			"to": [13.25019, 9.44486, 12.6138],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [9, 4.72243, 12.6138], "rescale": true},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#2", "tintindex": 0},
+				"south": {"uv": [16, 0, 0, 16], "texture": "#2", "tintindex": 0}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "tinted_cross",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		}
+	]
+}

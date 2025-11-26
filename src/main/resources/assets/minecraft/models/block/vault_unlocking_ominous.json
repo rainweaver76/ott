@@ -1,0 +1,7 @@
+{
+  "parent": "block/vault_ominous",
+  "textures": {
+    "front": "block/vault_front_ejecting_ominous",
+    "side": "block/vault_side_on_ominous"
+  }
+}

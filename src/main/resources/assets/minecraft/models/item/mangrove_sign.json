@@ -1,0 +1,7 @@
+{
+    "parent": "item/sign_base",
+    "textures": {
+		"sign": "item/entity/signs/mangrove",
+		"particle": "item/entity/signs/mangrove"
+	}
+}

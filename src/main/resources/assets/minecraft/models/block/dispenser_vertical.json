@@ -1,0 +1,6 @@
+{
+    "parent": "block/dispenser_vertical_base",
+    "textures": {
+        "side": "block/dispenser_arrow"
+    }
+}

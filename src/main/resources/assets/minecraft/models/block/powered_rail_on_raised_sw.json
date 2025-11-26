@@ -1,0 +1,7 @@
+{
+    "parent": "block/powered_rail_raised_sw",
+    "textures": {
+        "rail": "block/powered_rail_on",
+		"sticks": "block/powered_rail_on_sticks"
+    }
+}

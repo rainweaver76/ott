@@ -1,0 +1,85 @@
+{
+	"ambientocclusion": false,
+	"textures": {
+		"particle": "block/torches",
+		"torch": "block/torches"
+	},
+	"elements": [
+		{
+			"from": [1.15, 10, 6.75],
+			"to": [3.65, 11, 9.25],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [2.4, 9.25, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"east": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"south": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"west": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"up": {"uv": [0, 0, 2.5, 2.5], "texture": "#torch"},
+				"down": {"uv": [0, 0, 2.5, 2.5], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [1.15, 8.5, 6.75],
+			"to": [3.65, 9.5, 9.25],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [2.4, 9.25, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"east": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"south": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"west": {"uv": [0, 0, 2.5, 1], "texture": "#torch"},
+				"up": {"uv": [0, 0, 2.5, 2.5], "texture": "#torch"},
+				"down": {"uv": [0, 0, 2.5, 2.5], "texture": "#torch"}
+			}
+		},
+		{
+			"name": "Redstone off",
+			"from": [1.4, 3, 7],
+			"to": [3.4, 13, 9],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [2.4, 9.25, 8]},
+			"faces": {
+				"north": {"uv": [6, 6, 8, 16], "texture": "#torch"},
+				"east": {"uv": [6, 6, 8, 16], "texture": "#torch"},
+				"south": {"uv": [6, 6, 8, 16], "texture": "#torch"},
+				"west": {"uv": [6, 6, 8, 16], "texture": "#torch"},
+				"up": {"uv": [6, 6, 8, 8], "texture": "#torch"},
+				"down": {"uv": [6, 14, 8, 16], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [-0.6, 2.6, 6.75],
+			"to": [0.4, 7.1, 9.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-0.6, 2.6, 6.8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 5], "texture": "#torch"},
+				"east": {"uv": [3, 0, 6, 5], "texture": "#torch"},
+				"south": {"uv": [2, 0, 3, 5], "texture": "#torch"},
+				"west": {"uv": [3, 0, 6, 5], "texture": "#torch"},
+				"up": {"uv": [0, 0, 1, 3], "texture": "#torch"},
+				"down": {"uv": [1, 0, 2, 3], "texture": "#torch"}
+			}
+		},
+		{
+			"from": [0, 2.9, 6.85],
+			"to": [1.7, 4.7, 9.15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 2.9, 6.8]},
+			"faces": {
+				"north": {"uv": [1, 2, 3, 4], "texture": "#torch"},
+				"east": {"uv": [1, 0, 4, 2], "texture": "#torch"},
+				"south": {"uv": [1, 2, 3, 4], "texture": "#torch"},
+				"west": {"uv": [0, 0, 3, 2], "texture": "#torch"},
+				"up": {"uv": [0, 0, 2, 3], "texture": "#torch"},
+				"down": {"uv": [1, 0, 3, 3], "texture": "#torch"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "Torch",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		},
+		3,
+		4
+	]
+}

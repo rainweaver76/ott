@@ -1,0 +1,7 @@
+{
+    "parent": "block/detector_rail_raised_ne",
+    "textures": {
+        "rail": "block/detector_rail_on",
+		"sticks": "block/detector_rail_on_sticks"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "optifine/cit/items/paintings/models/painting2x1",
+    "textures": {
+        "front": "item/painting/creebet"
+    }
+}

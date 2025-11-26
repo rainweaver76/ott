@@ -1,0 +1,8 @@
+{
+    "parent": "block/activator_rail",
+    "textures": {
+        "rail": "block/activator_rail_on",
+		"extra": "block/rail_extra_on",
+		"sticks": "block/activator_rail_on_sticks"
+    }
+}

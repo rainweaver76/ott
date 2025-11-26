@@ -1,0 +1,7 @@
+{
+    "parent": "item/sign_base",
+    "textures": {
+		"sign": "item/entity/signs/jungle",
+		"particle": "item/entity/signs/jungle"
+	}
+}

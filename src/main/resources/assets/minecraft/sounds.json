@@ -1,0 +1,131 @@
+{
+  "entity.villager.ambient": {
+    "sounds": [
+      "mob/villager/idle4",
+      "mob/villager/idle5",
+      "mob/villager/idle6",
+      "mob/villager/idle7",
+      "mob/villager/idle8",
+      "mob/villager/idle9",
+      "mob/villager/idle10",
+      "mob/villager/idle11",
+      "mob/villager/idle12",
+      "mob/villager/idle13",
+      "mob/villager/idle14",
+      "mob/villager/idle15",
+      "mob/villager/idle16",
+      "mob/villager/idle17",
+      "mob/villager/idle18",
+      "mob/villager/idle19",
+      "mob/villager/idle20",
+      "mob/villager/idle21",
+      "mob/villager/idle22",
+      "mob/villager/idle23",
+      "mob/villager/idle24",
+      "mob/villager/idle25"
+    ],
+    "subtitle": "subtitles.entity.villager.ambient"
+  },
+  "entity.villager.celebrate": {
+    "replace": true,
+    "sounds": [
+      "mob/villager/celebrate1",
+      "mob/villager/celebrate2",
+      "mob/villager/celebrate3",
+      "mob/villager/celebrate4",
+      "mob/villager/celebrate5",
+      "mob/villager/celebrate6",
+      "mob/villager/celebrate7",
+      "mob/villager/celebrate8"
+    ],
+    "subtitle": "subtitles.entity.villager.celebrate"
+  },
+  "entity.villager.trade": {
+    "sounds": [
+      "mob/villager/haggle4",
+      "mob/villager/haggle5",
+      "mob/villager/haggle6"
+    ],
+    "subtitle": "subtitles.entity.villager.trade"
+  },
+  "entity.villager.yes": {
+    "sounds": [
+      "mob/villager/yes4",
+      "mob/villager/yes5",
+      "mob/villager/yes6",
+      "mob/villager/yes7",
+      "mob/villager/yes8",
+      "mob/villager/yes9",
+      "mob/villager/yes10",
+      "mob/villager/yes11",
+      "mob/villager/yes12",
+      "mob/villager/yes13"
+    ],
+    "subtitle": "subtitles.entity.villager.yes"
+  },
+  "entity.goat.screaming.horn_break": {
+    "sounds": [
+      "mob/goat/horn_break1",
+      "mob/goat/horn_break2",
+      "mob/goat/horn_break3",
+      "mob/goat/horn_break4"
+    ]
+  },
+  "item.goat_horn.play": {
+    "sounds": [
+      "item/goat_horn/play"
+    ]
+  },
+  "block.fungus.fall": {
+    "sounds": [
+      "block/fungus/fall"
+    ]
+  },
+  "block.fungus.hit": {
+    "sounds": [
+      "block/fungus/hit"
+    ]
+  },
+  "block.spawner.fall": {
+    "sounds": [
+      "block/spawner/fall1",
+      "block/spawner/fall2",
+      "block/spawner/fall3",
+      "block/spawner/fall4",
+      "block/spawner/fall5"
+    ]
+  },
+  "entity.cod.ambient": {
+    "sounds": [
+      "mob/cod/ambient"
+    ]
+  },
+  "entity.puffer_fish.ambient": {
+    "sounds": [
+      "mob/pufferfish/ambient"
+    ]
+  },
+  "entity.salmon.ambient": {
+    "sounds": [
+      "mob/salmon/ambient"
+    ]
+  },
+  "entity.snow_golem.ambient": {
+    "sounds": [
+      "mob/snow_golem/ambient"
+    ]
+  },
+  "entity.tropical_fish.ambient": {
+    "sounds": [
+      "mob/tropical_fish/ambient"
+    ]
+  },
+  "music.nether.warped_forest": {
+    "sounds": [
+      {
+        "name": "music/nether/warped_forest",
+        "stream": true
+      }
+    ]
+  }
+}
