@@ -4,7 +4,8 @@
 	"parent": "block/block",
 	"render_type": "minecraft:cutout_mipped",
 	"textures": {
-		"top": "ott:block/hedge"
+		"top": "ott:block/hedge",
+		"particle": "ott:block/hedge_rose"
 	},
 	"elements": [
 		{

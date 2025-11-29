@@ -19,6 +19,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -26,11 +30,11 @@ public class HedgeBlock extends Block implements BonemealableBlock {
     private static final VoxelShape HEDGE_BB = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);
     private static final float DAMAGE = 5.0F;
     private static final int MAX_HEIGHT = 5;
+    private static final TagKey<EntityType<?>> MINECOLONIES_RAIDER = TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("minecolonies", "raider"));
 
     public HedgeBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
-
     @Override
     public @NotNull VoxelShape getCollisionShape(@NotNull BlockState state, @NotNull BlockGetter getter, @NotNull BlockPos pos, @NotNull CollisionContext context) {
         return HEDGE_BB;
@@ -86,6 +90,9 @@ public class HedgeBlock extends Block implements BonemealableBlock {
     private boolean shouldDamage(Entity entity) {
         if (!(entity instanceof LivingEntity livingEntity)) {
             return false;
+        }
+        if (entity.getType().is(MINECOLONIES_RAIDER)) {
+            return true;
         }
         return !entity.isIgnoringBlockTriggers();
     }
