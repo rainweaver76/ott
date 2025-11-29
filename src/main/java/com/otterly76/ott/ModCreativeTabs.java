@@ -62,18 +62,6 @@ public final class ModCreativeTabs {
             ModItems.LIME_SEAGLASS, ModItems.MAGENTA_SEAGLASS, ModItems.ORANGE_SEAGLASS, ModItems.PINK_SEAGLASS,
             ModItems.PURPLE_SEAGLASS, ModItems.RED_SEAGLASS, ModItems.WHITE_SEAGLASS, ModItems.YELLOW_SEAGLASS);
 
-    private static final List<DeferredHolder<Item, BlockItem>> TF_BLOCKS = List.of(
-            ModItems.BROWN_THORNS, ModItems.BURNT_THORNS, ModItems.CANDELABRA, ModItems.CREEPER_SKULL_CANDLE,
-            ModItems.GREEN_THORNS, ModItems.HEDGE, ModItems.HEDGE_ROSE, ModItems.HUGE_LILY_PAD,
-            ModItems.HUGE_WATER_LILY, ModItems.KEEPSAKE_CASKET, ModItems.OMINOUS_BLACK_CANDLE, ModItems.OMINOUS_BLUE_CANDLE,
-            ModItems.OMINOUS_BROWN_CANDLE, ModItems.OMINOUS_CANDLE, ModItems.OMINOUS_CYAN_CANDLE, ModItems.OMINOUS_GRAY_CANDLE,
-            ModItems.OMINOUS_GREEN_CANDLE, ModItems.OMINOUS_LIGHT_BLUE_CANDLE, ModItems.OMINOUS_LIGHT_GRAY_CANDLE, ModItems.OMINOUS_LIME_CANDLE,
-            ModItems.OMINOUS_MAGENTA_CANDLE, ModItems.OMINOUS_ORANGE_CANDLE, ModItems.OMINOUS_PINK_CANDLE, ModItems.OMINOUS_PURPLE_CANDLE,
-            ModItems.OMINOUS_RED_CANDLE, ModItems.OMINOUS_WHITE_CANDLE, ModItems.OMINOUS_YELLOW_CANDLE, ModItems.PIGLIN_SKULL_CANDLE,
-            ModItems.PLAYER_SKULL_CANDLE, ModItems.SKELETON_SKULL_CANDLE, ModItems.SKULL_CHEST, ModItems.THORN_LEAVES,
-            ModItems.THORN_ROSE, ModItems.WITHER_SKELETON_SKULL_CANDLE, ModItems.WROUGHT_IRON_BAR, ModItems.WROUGHT_IRON_FENCE,
-            ModItems.ZOMBIE_SKULL_CANDLE);
-
     private static CreativeModeTab createGradientsTab() {
         return new CreativeModeTab.Builder(DEFAULT_ROW, DEFAULT_COLUMN).title(Component.translatable(createTranslationKey("gradients"))).icon(() -> new ItemStack(ALL_GRADIENT_BLOCKS.getFirst())).displayItems((params, output) -> ModBlocks.getAllGradientBlocks().forEach(output::accept)).build();
     }
@@ -84,8 +72,8 @@ public final class ModCreativeTabs {
             addTestBlocks(output);
             addLimestoneBlocks(output);
             addSeaGlassBlocks(output);
-            addTFBlocks(output);
             output.accept(ModBlocks.GAPPER_PANEL_OAK);
+            output.accept(ModBlocks.HEDGE);
         }).build();
     }
 
@@ -103,9 +91,5 @@ public final class ModCreativeTabs {
 
     private static void addSeaGlassBlocks(CreativeModeTab.Output output) {
         SEAGLASS_BLOCKS.forEach(holder -> output.accept(holder.get()));
-    }
-
-    private static void addTFBlocks(CreativeModeTab.Output output) {
-        TF_BLOCKS.forEach(holder -> output.accept(holder.get()));
     }
 }

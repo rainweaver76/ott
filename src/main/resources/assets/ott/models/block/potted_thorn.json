@@ -1,7 +1,0 @@
-{
-  "parent": "ott:block/potted_thorn_template",
-  "textures": {
-    "thorn_side": "ott:block/brown_thorns_side",
-    "thorn_top": "ott:block/brown_thorns_top"
-  }
-}

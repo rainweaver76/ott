@@ -1,3 +1,5 @@
+//file:noinspection GroovyAssignabilityCheck
+
 plugins {
     id 'java-library'
     id 'maven-publish'
@@ -19,8 +21,19 @@ group = mod_group_id
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
     maven {
-        name 'LDTTeam - Modding'
+        name 'JEI'
+        url 'https://maven.blamejared.com/'
+        content {
+            includeGroup 'mezz.jei'
+        }
+    }
+    maven {
+        name 'MineColonies'
         url 'https://ldtteam.jfrog.io/ldtteam/modding/'
+        content {
+            includeGroup 'com.minecolonies'
+            includeGroup 'com.ldtteam'
+        }
     }
 }
 
@@ -97,8 +110,12 @@ dependencies {
     // The group for userdev is net.neoforged, the module name is neoforge, and the version is the same as the neoforge version.
     // You can however also use the vanilla plugin (net.neoforged.gradle.vanilla) to use a version of Minecraft without the neoforge loader.
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
-    // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
+    // For all intents and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
+
+    implementation("com.ldtteam:minecolonies:${project.minecoloniesVersion}") {
+        transitive = false
+    }
 
     implementation("com.ldtteam:domum-ornamentum:${project.domumOrnamentumVersion}") {
         transitive = false
@@ -125,7 +142,7 @@ dependencies {
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
     // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
     // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+    runtimeOnly ("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
@@ -159,6 +176,7 @@ tasks.withType(ProcessResources).configureEach {
                              mod_authors            : mod_authors,
                              mod_description        : mod_description,
                              mod_issue_tracker_url  : mod_issue_tracker_url,
+                             minecoloniesVersion    : minecoloniesVersion,
                              domumOrnamentumVersion : domumOrnamentumVersion,
                              blockUI_version        : blockUI_version,
                              structurize_version    : structurize_version,

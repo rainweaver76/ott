@@ -15,3 +15,6 @@ Running List:
 - Lowered the totem of undying, see above
 - Found and imported a slew of missing sound files
 - Identified and added missing recipes (ongoing)
+- Added the evil Hedge
+    - Evil Cackling ensues
+    - Now I just need to make it pretty and add the seeds, crop rules, all that good stuff

@@ -3,7 +3,7 @@
     "": [
       {
         "model": "ott:block/hedge",
-        "weight": 10
+        "weight": 5
       },
       {
         "model": "ott:block/hedge_rose"

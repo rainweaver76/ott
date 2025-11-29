@@ -1,7 +1,0 @@
-{
-  "parent": "ott:block/thorns_no_section",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "side": "ott:block/brown_thorns_side"
-  }
-}
