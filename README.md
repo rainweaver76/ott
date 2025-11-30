@@ -10,11 +10,21 @@ Running List:
 - 32x textures for all blocks
   - yes, Ray, I know
   - 32x is a nice happy medium that gives a little more detail, a little more variation, without straying too far from the "Minecraft" feel
-- Improved 3D textures for nearly all blocks
+- Improved 3D textures for many blocks
+- FLOOFY LEAVES!
 - Lowered the shield when equipped so you can actually, ya know, see what you're doing
 - Lowered the totem of undying, see above
 - Found and imported a slew of missing sound files
 - Identified and added missing recipes (ongoing)
 - Added the evil Hedge
     - Evil Cackling ensues
-    - Now I just need to make it pretty and add the seeds, crop rules, all that good stuff
+    - Added custom damage for the murder plants: flora
+    - Now I just need to add the seeds, crop rules, all that good stuff
+    - Will be able to be grown like melon/pumpkin
+    - Will need either blessing for protection or appropriate tool to bypass damage
+- Added Create support, first pass (3D models and textures for ores)
+- Added Chipped support, first pass (fluffy leaves, fixed some lantern models, fixed ladders(3D))
+- Added more missing vanilla recipes
+- Added farmland protection for MineColonies crops (NO STOMPING DAMMIT!)
+- Added custom schematic dimensions, first pass (needs testing to make sure we're at 64)
+- Added native support for custom music
