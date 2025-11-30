@@ -17,7 +17,7 @@ Running List:
 - Found and imported a slew of missing sound files
 - Identified and added missing recipes (ongoing)
 - Added the evil Hedge
-    - Evil Cackling ensues
+    - Evil Cackling Ensues
     - Added custom damage for the murder plants: flora
     - Now I just need to add the seeds, crop rules, all that good stuff
     - Will be able to be grown like melon/pumpkin
