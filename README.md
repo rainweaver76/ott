@@ -26,5 +26,6 @@ Running List:
 - Added Chipped support, first pass (fluffy leaves, fixed some lantern models, fixed ladders(3D))
 - Added more missing vanilla recipes
 - Added farmland protection for MineColonies crops (NO STOMPING DAMMIT!)
-- Added custom schematic dimensions, first pass (needs testing to make sure we're at 64)
+- Added custom schematic dimensions, first pass
 - Added native support for custom music
+- Added copper blocks etc as pathblocks for MineColonies citizens
