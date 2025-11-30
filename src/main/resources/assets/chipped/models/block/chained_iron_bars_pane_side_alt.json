@@ -1,0 +1,1194 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "chipped:block/iron_bars/chained_iron_bars",
+		"particle": "chipped:block/iron_bars/chained_iron_bars"
+	},
+	"elements": [
+		{
+			"name": "chained_iron_bars_3",
+			"from": [7.5, 15, 8],
+			"to": [8.5, 16, 9],
+			"faces": {
+				"north": {"uv": [8, 0, 9, 1], "texture": "#0"},
+				"east": {"uv": [9, 0, 8, 1], "texture": "#0"},
+				"south": {"uv": [8, 0, 9, 1], "texture": "#0"},
+				"west": {"uv": [8, 0, 9, 1], "texture": "#0"},
+				"up": {"uv": [8, 0, 9, 1], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 0, 9, 1], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_4",
+			"from": [7.5, 15, 12],
+			"to": [8.5, 16, 13],
+			"faces": {
+				"north": {"uv": [12, 0, 13, 1], "texture": "#0"},
+				"east": {"uv": [13, 0, 12, 1], "texture": "#0"},
+				"south": {"uv": [12, 0, 13, 1], "texture": "#0"},
+				"west": {"uv": [12, 0, 13, 1], "texture": "#0"},
+				"up": {"uv": [12, 0, 13, 1], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 0, 13, 1], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_5",
+			"from": [7.5, 15, 13],
+			"to": [8.5, 16, 14],
+			"faces": {
+				"north": {"uv": [13, 0, 14, 1], "texture": "#0"},
+				"east": {"uv": [14, 0, 13, 1], "texture": "#0"},
+				"south": {"uv": [13, 0, 14, 1], "texture": "#0"},
+				"west": {"uv": [13, 0, 14, 1], "texture": "#0"},
+				"up": {"uv": [13, 0, 14, 1], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 0, 14, 1], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_14",
+			"from": [7.5, 14, 8],
+			"to": [8.5, 15, 9],
+			"faces": {
+				"north": {"uv": [8, 1, 9, 2], "texture": "#0"},
+				"east": {"uv": [9, 1, 8, 2], "texture": "#0"},
+				"south": {"uv": [8, 1, 9, 2], "texture": "#0"},
+				"west": {"uv": [8, 1, 9, 2], "texture": "#0"},
+				"up": {"uv": [8, 1, 9, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 1, 9, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_15",
+			"from": [7.5, 14, 9],
+			"to": [8.5, 15, 10],
+			"faces": {
+				"north": {"uv": [9, 1, 10, 2], "texture": "#0"},
+				"east": {"uv": [10, 1, 9, 2], "texture": "#0"},
+				"south": {"uv": [9, 1, 10, 2], "texture": "#0"},
+				"west": {"uv": [9, 1, 10, 2], "texture": "#0"},
+				"up": {"uv": [9, 1, 10, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 1, 10, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_16",
+			"from": [7.5, 14, 10],
+			"to": [8.5, 15, 11],
+			"faces": {
+				"north": {"uv": [10, 1, 11, 2], "texture": "#0"},
+				"east": {"uv": [11, 1, 10, 2], "texture": "#0"},
+				"south": {"uv": [10, 1, 11, 2], "texture": "#0"},
+				"west": {"uv": [10, 1, 11, 2], "texture": "#0"},
+				"up": {"uv": [10, 1, 11, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 1, 11, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_17",
+			"from": [7.5, 14, 11],
+			"to": [8.5, 15, 12],
+			"faces": {
+				"north": {"uv": [11, 1, 12, 2], "texture": "#0"},
+				"east": {"uv": [12, 1, 11, 2], "texture": "#0"},
+				"south": {"uv": [11, 1, 12, 2], "texture": "#0"},
+				"west": {"uv": [11, 1, 12, 2], "texture": "#0"},
+				"up": {"uv": [11, 1, 12, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 1, 12, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_18",
+			"from": [7.5, 14, 12],
+			"to": [8.5, 15, 13],
+			"faces": {
+				"north": {"uv": [12, 1, 13, 2], "texture": "#0"},
+				"east": {"uv": [13, 1, 12, 2], "texture": "#0"},
+				"south": {"uv": [12, 1, 13, 2], "texture": "#0"},
+				"west": {"uv": [12, 1, 13, 2], "texture": "#0"},
+				"up": {"uv": [12, 1, 13, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 1, 13, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_19",
+			"from": [7.5, 14, 13],
+			"to": [8.5, 15, 14],
+			"faces": {
+				"north": {"uv": [13, 1, 14, 2], "texture": "#0"},
+				"east": {"uv": [14, 1, 13, 2], "texture": "#0"},
+				"south": {"uv": [13, 1, 14, 2], "texture": "#0"},
+				"west": {"uv": [13, 1, 14, 2], "texture": "#0"},
+				"up": {"uv": [13, 1, 14, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 1, 14, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_20",
+			"from": [7.5, 14, 14],
+			"to": [8.5, 15, 15],
+			"faces": {
+				"north": {"uv": [14, 1, 15, 2], "texture": "#0"},
+				"east": {"uv": [15, 1, 14, 2], "texture": "#0"},
+				"south": {"uv": [14, 1, 15, 2], "texture": "#0"},
+				"west": {"uv": [14, 1, 15, 2], "texture": "#0"},
+				"up": {"uv": [14, 1, 15, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 1, 15, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_21",
+			"from": [7.5, 14, 15],
+			"to": [8.5, 15, 16],
+			"faces": {
+				"north": {"uv": [15, 1, 16, 2], "texture": "#0"},
+				"east": {"uv": [16, 1, 15, 2], "texture": "#0"},
+				"south": {"uv": [15, 1, 16, 2], "texture": "#0"},
+				"west": {"uv": [15, 1, 16, 2], "texture": "#0"},
+				"up": {"uv": [15, 1, 16, 2], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 1, 16, 2], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_30",
+			"from": [7.5, 13, 8],
+			"to": [8.5, 14, 9],
+			"faces": {
+				"north": {"uv": [8, 2, 9, 3], "texture": "#0"},
+				"east": {"uv": [9, 2, 8, 3], "texture": "#0"},
+				"south": {"uv": [8, 2, 9, 3], "texture": "#0"},
+				"west": {"uv": [8, 2, 9, 3], "texture": "#0"},
+				"up": {"uv": [8, 2, 9, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 2, 9, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_31",
+			"from": [7.5, 13, 9],
+			"to": [8.5, 14, 10],
+			"faces": {
+				"north": {"uv": [9, 2, 10, 3], "texture": "#0"},
+				"east": {"uv": [10, 2, 9, 3], "texture": "#0"},
+				"south": {"uv": [9, 2, 10, 3], "texture": "#0"},
+				"west": {"uv": [9, 2, 10, 3], "texture": "#0"},
+				"up": {"uv": [9, 2, 10, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 2, 10, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_32",
+			"from": [7.5, 13, 10],
+			"to": [8.5, 14, 11],
+			"faces": {
+				"north": {"uv": [10, 2, 11, 3], "texture": "#0"},
+				"east": {"uv": [11, 2, 10, 3], "texture": "#0"},
+				"south": {"uv": [10, 2, 11, 3], "texture": "#0"},
+				"west": {"uv": [10, 2, 11, 3], "texture": "#0"},
+				"up": {"uv": [10, 2, 11, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 2, 11, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_33",
+			"from": [7.5, 13, 11],
+			"to": [8.5, 14, 12],
+			"faces": {
+				"north": {"uv": [11, 2, 12, 3], "texture": "#0"},
+				"east": {"uv": [12, 2, 11, 3], "texture": "#0"},
+				"south": {"uv": [11, 2, 12, 3], "texture": "#0"},
+				"west": {"uv": [11, 2, 12, 3], "texture": "#0"},
+				"up": {"uv": [11, 2, 12, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 2, 12, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_34",
+			"from": [7.5, 13, 12],
+			"to": [8.5, 14, 13],
+			"faces": {
+				"north": {"uv": [12, 2, 13, 3], "texture": "#0"},
+				"east": {"uv": [13, 2, 12, 3], "texture": "#0"},
+				"south": {"uv": [12, 2, 13, 3], "texture": "#0"},
+				"west": {"uv": [12, 2, 13, 3], "texture": "#0"},
+				"up": {"uv": [12, 2, 13, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 2, 13, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_35",
+			"from": [7.5, 13, 13],
+			"to": [8.5, 14, 14],
+			"faces": {
+				"north": {"uv": [13, 2, 14, 3], "texture": "#0"},
+				"east": {"uv": [14, 2, 13, 3], "texture": "#0"},
+				"south": {"uv": [13, 2, 14, 3], "texture": "#0"},
+				"west": {"uv": [13, 2, 14, 3], "texture": "#0"},
+				"up": {"uv": [13, 2, 14, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 2, 14, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_36",
+			"from": [7.5, 13, 14],
+			"to": [8.5, 14, 15],
+			"faces": {
+				"north": {"uv": [14, 2, 15, 3], "texture": "#0"},
+				"east": {"uv": [15, 2, 14, 3], "texture": "#0"},
+				"south": {"uv": [14, 2, 15, 3], "texture": "#0"},
+				"west": {"uv": [14, 2, 15, 3], "texture": "#0"},
+				"up": {"uv": [14, 2, 15, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 2, 15, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_37",
+			"from": [7.5, 13, 15],
+			"to": [8.5, 14, 16],
+			"faces": {
+				"north": {"uv": [15, 2, 16, 3], "texture": "#0"},
+				"east": {"uv": [16, 2, 15, 3], "texture": "#0"},
+				"south": {"uv": [15, 2, 16, 3], "texture": "#0"},
+				"west": {"uv": [15, 2, 16, 3], "texture": "#0"},
+				"up": {"uv": [15, 2, 16, 3], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 2, 16, 3], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_41",
+			"from": [7.5, 12, 8],
+			"to": [8.5, 13, 9],
+			"faces": {
+				"north": {"uv": [8, 3, 9, 4], "texture": "#0"},
+				"east": {"uv": [9, 3, 8, 4], "texture": "#0"},
+				"south": {"uv": [8, 3, 9, 4], "texture": "#0"},
+				"west": {"uv": [8, 3, 9, 4], "texture": "#0"},
+				"up": {"uv": [8, 3, 9, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 3, 9, 4], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_42",
+			"from": [7.5, 12, 12],
+			"to": [8.5, 13, 13],
+			"faces": {
+				"north": {"uv": [12, 3, 13, 4], "texture": "#0"},
+				"east": {"uv": [13, 3, 12, 4], "texture": "#0"},
+				"south": {"uv": [12, 3, 13, 4], "texture": "#0"},
+				"west": {"uv": [12, 3, 13, 4], "texture": "#0"},
+				"up": {"uv": [12, 3, 13, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 3, 13, 4], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_43",
+			"from": [7.5, 12, 13],
+			"to": [8.5, 13, 14],
+			"faces": {
+				"north": {"uv": [13, 3, 14, 4], "texture": "#0"},
+				"east": {"uv": [14, 3, 13, 4], "texture": "#0"},
+				"south": {"uv": [13, 3, 14, 4], "texture": "#0"},
+				"west": {"uv": [13, 3, 14, 4], "texture": "#0"},
+				"up": {"uv": [13, 3, 14, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 3, 14, 4], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_52",
+			"from": [7, 11, 8],
+			"to": [9, 12, 9],
+			"faces": {
+				"north": {"uv": [8, 4, 9, 5], "texture": "#0"},
+				"east": {"uv": [9, 4, 8, 5], "texture": "#0"},
+				"south": {"uv": [8, 4, 9, 5], "texture": "#0"},
+				"west": {"uv": [8, 4, 9, 5], "texture": "#0"},
+				"up": {"uv": [8, 4, 9, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 4, 9, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_53",
+			"from": [7, 11, 9],
+			"to": [9, 12, 10],
+			"faces": {
+				"north": {"uv": [9, 4, 10, 5], "texture": "#0"},
+				"east": {"uv": [10, 4, 9, 5], "texture": "#0"},
+				"south": {"uv": [9, 4, 10, 5], "texture": "#0"},
+				"west": {"uv": [9, 4, 10, 5], "texture": "#0"},
+				"up": {"uv": [9, 4, 10, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 4, 10, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_54",
+			"from": [7, 11, 10],
+			"to": [9, 12, 11],
+			"faces": {
+				"north": {"uv": [10, 4, 11, 5], "texture": "#0"},
+				"east": {"uv": [11, 4, 10, 5], "texture": "#0"},
+				"south": {"uv": [10, 4, 11, 5], "texture": "#0"},
+				"west": {"uv": [10, 4, 11, 5], "texture": "#0"},
+				"up": {"uv": [10, 4, 11, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 4, 11, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_55",
+			"from": [7, 11, 11],
+			"to": [9, 12, 12],
+			"faces": {
+				"north": {"uv": [11, 4, 12, 5], "texture": "#0"},
+				"east": {"uv": [12, 4, 11, 5], "texture": "#0"},
+				"south": {"uv": [11, 4, 12, 5], "texture": "#0"},
+				"west": {"uv": [11, 4, 12, 5], "texture": "#0"},
+				"up": {"uv": [11, 4, 12, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 4, 12, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_56",
+			"from": [7, 11, 12],
+			"to": [9, 12, 13],
+			"faces": {
+				"north": {"uv": [12, 4, 13, 5], "texture": "#0"},
+				"east": {"uv": [13, 4, 12, 5], "texture": "#0"},
+				"south": {"uv": [12, 4, 13, 5], "texture": "#0"},
+				"west": {"uv": [12, 4, 13, 5], "texture": "#0"},
+				"up": {"uv": [12, 4, 13, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 4, 13, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_57",
+			"from": [7, 11, 13],
+			"to": [9, 12, 14],
+			"faces": {
+				"north": {"uv": [13, 4, 14, 5], "texture": "#0"},
+				"east": {"uv": [14, 4, 13, 5], "texture": "#0"},
+				"south": {"uv": [13, 4, 14, 5], "texture": "#0"},
+				"west": {"uv": [13, 4, 14, 5], "texture": "#0"},
+				"up": {"uv": [13, 4, 14, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 4, 14, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_58",
+			"from": [7, 11, 14],
+			"to": [9, 12, 15],
+			"faces": {
+				"north": {"uv": [14, 4, 15, 5], "texture": "#0"},
+				"east": {"uv": [15, 4, 14, 5], "texture": "#0"},
+				"south": {"uv": [14, 4, 15, 5], "texture": "#0"},
+				"west": {"uv": [14, 4, 15, 5], "texture": "#0"},
+				"up": {"uv": [14, 4, 15, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 4, 15, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_59",
+			"from": [7, 11, 15],
+			"to": [9, 12, 16],
+			"faces": {
+				"north": {"uv": [15, 4, 16, 5], "texture": "#0"},
+				"east": {"uv": [16, 4, 15, 5], "texture": "#0"},
+				"south": {"uv": [15, 4, 16, 5], "texture": "#0"},
+				"west": {"uv": [15, 4, 16, 5], "texture": "#0"},
+				"up": {"uv": [15, 4, 16, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 4, 16, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_63",
+			"from": [7.5, 10, 8],
+			"to": [8.5, 11, 9],
+			"faces": {
+				"north": {"uv": [8, 5, 9, 6], "texture": "#0"},
+				"east": {"uv": [9, 5, 8, 6], "texture": "#0"},
+				"south": {"uv": [8, 5, 9, 6], "texture": "#0"},
+				"west": {"uv": [8, 5, 9, 6], "texture": "#0"},
+				"up": {"uv": [8, 5, 9, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 5, 9, 6], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_64",
+			"from": [7.5, 10, 12],
+			"to": [8.5, 11, 13],
+			"faces": {
+				"north": {"uv": [12, 5, 13, 6], "texture": "#0"},
+				"east": {"uv": [13, 5, 12, 6], "texture": "#0"},
+				"south": {"uv": [12, 5, 13, 6], "texture": "#0"},
+				"west": {"uv": [12, 5, 13, 6], "texture": "#0"},
+				"up": {"uv": [12, 5, 13, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 5, 13, 6], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_65",
+			"from": [7.5, 10, 13],
+			"to": [8.5, 11, 14],
+			"faces": {
+				"north": {"uv": [13, 5, 14, 6], "texture": "#0"},
+				"east": {"uv": [14, 5, 13, 6], "texture": "#0"},
+				"south": {"uv": [13, 5, 14, 6], "texture": "#0"},
+				"west": {"uv": [13, 5, 14, 6], "texture": "#0"},
+				"up": {"uv": [13, 5, 14, 6], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 5, 14, 6], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_72",
+			"from": [6.5, 9, 8],
+			"to": [9.5, 10, 9],
+			"faces": {
+				"north": {"uv": [8, 6, 9, 7], "texture": "#0"},
+				"east": {"uv": [9, 6, 8, 7], "texture": "#0"},
+				"south": {"uv": [8, 6, 9, 7], "texture": "#0"},
+				"west": {"uv": [8, 6, 9, 7], "texture": "#0"},
+				"up": {"uv": [8, 6, 9, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 6, 9, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_73",
+			"from": [6.5, 9, 9],
+			"to": [9.5, 10, 10],
+			"faces": {
+				"north": {"uv": [9, 6, 10, 7], "texture": "#0"},
+				"east": {"uv": [10, 6, 9, 7], "texture": "#0"},
+				"south": {"uv": [9, 6, 10, 7], "texture": "#0"},
+				"west": {"uv": [9, 6, 10, 7], "texture": "#0"},
+				"up": {"uv": [9, 6, 10, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 6, 10, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_74",
+			"from": [6.5, 9, 11],
+			"to": [9.5, 10, 12],
+			"faces": {
+				"north": {"uv": [11, 6, 12, 7], "texture": "#0"},
+				"east": {"uv": [12, 6, 11, 7], "texture": "#0"},
+				"south": {"uv": [11, 6, 12, 7], "texture": "#0"},
+				"west": {"uv": [11, 6, 12, 7], "texture": "#0"},
+				"up": {"uv": [11, 6, 12, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 6, 12, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_75",
+			"from": [6.5, 9, 12],
+			"to": [9.5, 10, 13],
+			"faces": {
+				"north": {"uv": [12, 6, 13, 7], "texture": "#0"},
+				"east": {"uv": [13, 6, 12, 7], "texture": "#0"},
+				"south": {"uv": [12, 6, 13, 7], "texture": "#0"},
+				"west": {"uv": [12, 6, 13, 7], "texture": "#0"},
+				"up": {"uv": [12, 6, 13, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 6, 13, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_76",
+			"from": [6.5, 9, 13],
+			"to": [9.5, 10, 14],
+			"faces": {
+				"north": {"uv": [13, 6, 14, 7], "texture": "#0"},
+				"east": {"uv": [14, 6, 13, 7], "texture": "#0"},
+				"south": {"uv": [13, 6, 14, 7], "texture": "#0"},
+				"west": {"uv": [13, 6, 14, 7], "texture": "#0"},
+				"up": {"uv": [13, 6, 14, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 6, 14, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_77",
+			"from": [6.5, 9, 14],
+			"to": [9.5, 10, 15],
+			"faces": {
+				"north": {"uv": [14, 6, 15, 7], "texture": "#0"},
+				"east": {"uv": [15, 6, 14, 7], "texture": "#0"},
+				"south": {"uv": [14, 6, 15, 7], "texture": "#0"},
+				"west": {"uv": [14, 6, 15, 7], "texture": "#0"},
+				"up": {"uv": [14, 6, 15, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 6, 15, 7], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_81",
+			"from": [6.5, 8, 9],
+			"to": [9.5, 9, 10],
+			"faces": {
+				"north": {"uv": [9, 7, 10, 8], "texture": "#0"},
+				"east": {"uv": [10, 7, 9, 8], "texture": "#0"},
+				"south": {"uv": [9, 7, 10, 8], "texture": "#0"},
+				"west": {"uv": [9, 7, 10, 8], "texture": "#0"},
+				"up": {"uv": [9, 7, 10, 8], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 7, 10, 8], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_82",
+			"from": [6.5, 8, 11],
+			"to": [9.5, 9, 12],
+			"faces": {
+				"north": {"uv": [11, 7, 12, 8], "texture": "#0"},
+				"east": {"uv": [12, 7, 11, 8], "texture": "#0"},
+				"south": {"uv": [11, 7, 12, 8], "texture": "#0"},
+				"west": {"uv": [11, 7, 12, 8], "texture": "#0"},
+				"up": {"uv": [11, 7, 12, 8], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 7, 12, 8], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_83",
+			"from": [6.5, 8, 14],
+			"to": [9.5, 9, 15],
+			"faces": {
+				"north": {"uv": [14, 7, 15, 8], "texture": "#0"},
+				"east": {"uv": [15, 7, 14, 8], "texture": "#0"},
+				"south": {"uv": [14, 7, 15, 8], "texture": "#0"},
+				"west": {"uv": [14, 7, 15, 8], "texture": "#0"},
+				"up": {"uv": [14, 7, 15, 8], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 7, 15, 8], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_87",
+			"from": [6.5, 7, 9],
+			"to": [9.5, 8, 10],
+			"faces": {
+				"north": {"uv": [9, 8, 10, 9], "texture": "#0"},
+				"east": {"uv": [10, 8, 9, 9], "texture": "#0"},
+				"south": {"uv": [9, 8, 10, 9], "texture": "#0"},
+				"west": {"uv": [9, 8, 10, 9], "texture": "#0"},
+				"up": {"uv": [9, 8, 10, 9], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 8, 10, 9], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_88",
+			"from": [6.5, 7, 11],
+			"to": [9.5, 8, 12],
+			"faces": {
+				"north": {"uv": [11, 8, 12, 9], "texture": "#0"},
+				"east": {"uv": [12, 8, 11, 9], "texture": "#0"},
+				"south": {"uv": [11, 8, 12, 9], "texture": "#0"},
+				"west": {"uv": [11, 8, 12, 9], "texture": "#0"},
+				"up": {"uv": [11, 8, 12, 9], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 8, 12, 9], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_89",
+			"from": [6.5, 7, 14],
+			"to": [9.5, 8, 15],
+			"faces": {
+				"north": {"uv": [14, 8, 15, 9], "texture": "#0"},
+				"east": {"uv": [15, 8, 14, 9], "texture": "#0"},
+				"south": {"uv": [14, 8, 15, 9], "texture": "#0"},
+				"west": {"uv": [14, 8, 15, 9], "texture": "#0"},
+				"up": {"uv": [14, 8, 15, 9], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 8, 15, 9], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_96",
+			"from": [6.5, 6, 8],
+			"to": [9.5, 7, 9],
+			"faces": {
+				"north": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"east": {"uv": [9, 9, 8, 10], "texture": "#0"},
+				"south": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"west": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"up": {"uv": [8, 9, 9, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 9, 9, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_97",
+			"from": [6.5, 6, 9],
+			"to": [9.5, 7, 10],
+			"faces": {
+				"north": {"uv": [9, 9, 10, 10], "texture": "#0"},
+				"east": {"uv": [10, 9, 9, 10], "texture": "#0"},
+				"south": {"uv": [9, 9, 10, 10], "texture": "#0"},
+				"west": {"uv": [9, 9, 10, 10], "texture": "#0"},
+				"up": {"uv": [9, 9, 10, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 9, 10, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_98",
+			"from": [6.5, 6, 11],
+			"to": [9.5, 7, 12],
+			"faces": {
+				"north": {"uv": [11, 9, 12, 10], "texture": "#0"},
+				"east": {"uv": [12, 9, 11, 10], "texture": "#0"},
+				"south": {"uv": [11, 9, 12, 10], "texture": "#0"},
+				"west": {"uv": [11, 9, 12, 10], "texture": "#0"},
+				"up": {"uv": [11, 9, 12, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 9, 12, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_99",
+			"from": [6.5, 6, 12],
+			"to": [9.5, 7, 13],
+			"faces": {
+				"north": {"uv": [12, 9, 13, 10], "texture": "#0"},
+				"east": {"uv": [13, 9, 12, 10], "texture": "#0"},
+				"south": {"uv": [12, 9, 13, 10], "texture": "#0"},
+				"west": {"uv": [12, 9, 13, 10], "texture": "#0"},
+				"up": {"uv": [12, 9, 13, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 9, 13, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_100",
+			"from": [6.5, 6, 13],
+			"to": [9.5, 7, 14],
+			"faces": {
+				"north": {"uv": [13, 9, 14, 10], "texture": "#0"},
+				"east": {"uv": [14, 9, 13, 10], "texture": "#0"},
+				"south": {"uv": [13, 9, 14, 10], "texture": "#0"},
+				"west": {"uv": [13, 9, 14, 10], "texture": "#0"},
+				"up": {"uv": [13, 9, 14, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 9, 14, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_101",
+			"from": [6.5, 6, 14],
+			"to": [9.5, 7, 15],
+			"faces": {
+				"north": {"uv": [14, 9, 15, 10], "texture": "#0"},
+				"east": {"uv": [15, 9, 14, 10], "texture": "#0"},
+				"south": {"uv": [14, 9, 15, 10], "texture": "#0"},
+				"west": {"uv": [14, 9, 15, 10], "texture": "#0"},
+				"up": {"uv": [14, 9, 15, 10], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 9, 15, 10], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_105",
+			"from": [7.5, 5, 8],
+			"to": [8.5, 6, 9],
+			"faces": {
+				"north": {"uv": [8, 10, 9, 11], "texture": "#0"},
+				"east": {"uv": [9, 10, 8, 11], "texture": "#0"},
+				"south": {"uv": [8, 10, 9, 11], "texture": "#0"},
+				"west": {"uv": [8, 10, 9, 11], "texture": "#0"},
+				"up": {"uv": [8, 10, 9, 11], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 10, 9, 11], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_106",
+			"from": [7.5, 5, 12],
+			"to": [8.5, 6, 13],
+			"faces": {
+				"north": {"uv": [12, 10, 13, 11], "texture": "#0"},
+				"east": {"uv": [13, 10, 12, 11], "texture": "#0"},
+				"south": {"uv": [12, 10, 13, 11], "texture": "#0"},
+				"west": {"uv": [12, 10, 13, 11], "texture": "#0"},
+				"up": {"uv": [12, 10, 13, 11], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 10, 13, 11], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_107",
+			"from": [7.5, 5, 13],
+			"to": [8.5, 6, 14],
+			"faces": {
+				"north": {"uv": [13, 10, 14, 11], "texture": "#0"},
+				"east": {"uv": [14, 10, 13, 11], "texture": "#0"},
+				"south": {"uv": [13, 10, 14, 11], "texture": "#0"},
+				"west": {"uv": [13, 10, 14, 11], "texture": "#0"},
+				"up": {"uv": [13, 10, 14, 11], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 10, 14, 11], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_116",
+			"from": [7, 4, 8],
+			"to": [9, 5, 9],
+			"faces": {
+				"north": {"uv": [8, 11, 9, 12], "texture": "#0"},
+				"east": {"uv": [9, 11, 8, 12], "texture": "#0"},
+				"south": {"uv": [8, 11, 9, 12], "texture": "#0"},
+				"west": {"uv": [8, 11, 9, 12], "texture": "#0"},
+				"up": {"uv": [8, 11, 9, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 11, 9, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_117",
+			"from": [7, 4, 9],
+			"to": [9, 5, 10],
+			"faces": {
+				"north": {"uv": [9, 11, 10, 12], "texture": "#0"},
+				"east": {"uv": [10, 11, 9, 12], "texture": "#0"},
+				"south": {"uv": [9, 11, 10, 12], "texture": "#0"},
+				"west": {"uv": [9, 11, 10, 12], "texture": "#0"},
+				"up": {"uv": [9, 11, 10, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 11, 10, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_118",
+			"from": [7, 4, 10],
+			"to": [9, 5, 11],
+			"faces": {
+				"north": {"uv": [10, 11, 11, 12], "texture": "#0"},
+				"east": {"uv": [11, 11, 10, 12], "texture": "#0"},
+				"south": {"uv": [10, 11, 11, 12], "texture": "#0"},
+				"west": {"uv": [10, 11, 11, 12], "texture": "#0"},
+				"up": {"uv": [10, 11, 11, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 11, 11, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_119",
+			"from": [7, 4, 11],
+			"to": [9, 5, 12],
+			"faces": {
+				"north": {"uv": [11, 11, 12, 12], "texture": "#0"},
+				"east": {"uv": [12, 11, 11, 12], "texture": "#0"},
+				"south": {"uv": [11, 11, 12, 12], "texture": "#0"},
+				"west": {"uv": [11, 11, 12, 12], "texture": "#0"},
+				"up": {"uv": [11, 11, 12, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 11, 12, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_120",
+			"from": [7, 4, 12],
+			"to": [9, 5, 13],
+			"faces": {
+				"north": {"uv": [12, 11, 13, 12], "texture": "#0"},
+				"east": {"uv": [13, 11, 12, 12], "texture": "#0"},
+				"south": {"uv": [12, 11, 13, 12], "texture": "#0"},
+				"west": {"uv": [12, 11, 13, 12], "texture": "#0"},
+				"up": {"uv": [12, 11, 13, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 11, 13, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_121",
+			"from": [7, 4, 13],
+			"to": [9, 5, 14],
+			"faces": {
+				"north": {"uv": [13, 11, 14, 12], "texture": "#0"},
+				"east": {"uv": [14, 11, 13, 12], "texture": "#0"},
+				"south": {"uv": [13, 11, 14, 12], "texture": "#0"},
+				"west": {"uv": [13, 11, 14, 12], "texture": "#0"},
+				"up": {"uv": [13, 11, 14, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 11, 14, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_122",
+			"from": [7, 4, 14],
+			"to": [9, 5, 15],
+			"faces": {
+				"north": {"uv": [14, 11, 15, 12], "texture": "#0"},
+				"east": {"uv": [15, 11, 14, 12], "texture": "#0"},
+				"south": {"uv": [14, 11, 15, 12], "texture": "#0"},
+				"west": {"uv": [14, 11, 15, 12], "texture": "#0"},
+				"up": {"uv": [14, 11, 15, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 11, 15, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_123",
+			"from": [7, 4, 15],
+			"to": [9, 5, 16],
+			"faces": {
+				"north": {"uv": [15, 11, 16, 12], "texture": "#0"},
+				"east": {"uv": [16, 11, 15, 12], "texture": "#0"},
+				"south": {"uv": [15, 11, 16, 12], "texture": "#0"},
+				"west": {"uv": [15, 11, 16, 12], "texture": "#0"},
+				"up": {"uv": [15, 11, 16, 12], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 11, 16, 12], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_127",
+			"from": [7.5, 3, 8],
+			"to": [8.5, 4, 9],
+			"faces": {
+				"north": {"uv": [8, 12, 9, 13], "texture": "#0"},
+				"east": {"uv": [9, 12, 8, 13], "texture": "#0"},
+				"south": {"uv": [8, 12, 9, 13], "texture": "#0"},
+				"west": {"uv": [8, 12, 9, 13], "texture": "#0"},
+				"up": {"uv": [8, 12, 9, 13], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 12, 9, 13], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_128",
+			"from": [7.5, 3, 12],
+			"to": [8.5, 4, 13],
+			"faces": {
+				"north": {"uv": [12, 12, 13, 13], "texture": "#0"},
+				"east": {"uv": [13, 12, 12, 13], "texture": "#0"},
+				"south": {"uv": [12, 12, 13, 13], "texture": "#0"},
+				"west": {"uv": [12, 12, 13, 13], "texture": "#0"},
+				"up": {"uv": [12, 12, 13, 13], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 12, 13, 13], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_129",
+			"from": [7.5, 3, 13],
+			"to": [8.5, 4, 14],
+			"faces": {
+				"north": {"uv": [13, 12, 14, 13], "texture": "#0"},
+				"east": {"uv": [14, 12, 13, 13], "texture": "#0"},
+				"south": {"uv": [13, 12, 14, 13], "texture": "#0"},
+				"west": {"uv": [13, 12, 14, 13], "texture": "#0"},
+				"up": {"uv": [13, 12, 14, 13], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 12, 14, 13], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_138",
+			"from": [7.5, 2, 8],
+			"to": [8.5, 3, 9],
+			"faces": {
+				"north": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"east": {"uv": [9, 13, 8, 14], "texture": "#0"},
+				"south": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"west": {"uv": [8, 13, 9, 14], "texture": "#0"},
+				"up": {"uv": [8, 13, 9, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 13, 9, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_139",
+			"from": [7.5, 2, 9],
+			"to": [8.5, 3, 10],
+			"faces": {
+				"north": {"uv": [9, 13, 10, 14], "texture": "#0"},
+				"east": {"uv": [10, 13, 9, 14], "texture": "#0"},
+				"south": {"uv": [9, 13, 10, 14], "texture": "#0"},
+				"west": {"uv": [9, 13, 10, 14], "texture": "#0"},
+				"up": {"uv": [9, 13, 10, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 13, 10, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_140",
+			"from": [7.5, 2, 10],
+			"to": [8.5, 3, 11],
+			"faces": {
+				"north": {"uv": [10, 13, 11, 14], "texture": "#0"},
+				"east": {"uv": [11, 13, 10, 14], "texture": "#0"},
+				"south": {"uv": [10, 13, 11, 14], "texture": "#0"},
+				"west": {"uv": [10, 13, 11, 14], "texture": "#0"},
+				"up": {"uv": [10, 13, 11, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 13, 11, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_141",
+			"from": [7.5, 2, 11],
+			"to": [8.5, 3, 12],
+			"faces": {
+				"north": {"uv": [11, 13, 12, 14], "texture": "#0"},
+				"east": {"uv": [12, 13, 11, 14], "texture": "#0"},
+				"south": {"uv": [11, 13, 12, 14], "texture": "#0"},
+				"west": {"uv": [11, 13, 12, 14], "texture": "#0"},
+				"up": {"uv": [11, 13, 12, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 13, 12, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_142",
+			"from": [7.5, 2, 12],
+			"to": [8.5, 3, 13],
+			"faces": {
+				"north": {"uv": [12, 13, 13, 14], "texture": "#0"},
+				"east": {"uv": [13, 13, 12, 14], "texture": "#0"},
+				"south": {"uv": [12, 13, 13, 14], "texture": "#0"},
+				"west": {"uv": [12, 13, 13, 14], "texture": "#0"},
+				"up": {"uv": [12, 13, 13, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 13, 13, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_143",
+			"from": [7.5, 2, 13],
+			"to": [8.5, 3, 14],
+			"faces": {
+				"north": {"uv": [13, 13, 14, 14], "texture": "#0"},
+				"east": {"uv": [14, 13, 13, 14], "texture": "#0"},
+				"south": {"uv": [13, 13, 14, 14], "texture": "#0"},
+				"west": {"uv": [13, 13, 14, 14], "texture": "#0"},
+				"up": {"uv": [13, 13, 14, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 13, 14, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_144",
+			"from": [7.5, 2, 14],
+			"to": [8.5, 3, 15],
+			"faces": {
+				"north": {"uv": [14, 13, 15, 14], "texture": "#0"},
+				"east": {"uv": [15, 13, 14, 14], "texture": "#0"},
+				"south": {"uv": [14, 13, 15, 14], "texture": "#0"},
+				"west": {"uv": [14, 13, 15, 14], "texture": "#0"},
+				"up": {"uv": [14, 13, 15, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 13, 15, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_145",
+			"from": [7.5, 2, 15],
+			"to": [8.5, 3, 16],
+			"faces": {
+				"north": {"uv": [15, 13, 16, 14], "texture": "#0"},
+				"east": {"uv": [16, 13, 15, 14], "texture": "#0"},
+				"south": {"uv": [15, 13, 16, 14], "texture": "#0"},
+				"west": {"uv": [15, 13, 16, 14], "texture": "#0"},
+				"up": {"uv": [15, 13, 16, 14], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 13, 16, 14], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_154",
+			"from": [7.5, 1, 8],
+			"to": [8.5, 2, 9],
+			"faces": {
+				"north": {"uv": [8, 14, 9, 15], "texture": "#0"},
+				"east": {"uv": [9, 14, 8, 15], "texture": "#0"},
+				"south": {"uv": [8, 14, 9, 15], "texture": "#0"},
+				"west": {"uv": [8, 14, 9, 15], "texture": "#0"},
+				"up": {"uv": [8, 14, 9, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 14, 9, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_155",
+			"from": [7.5, 1, 9],
+			"to": [8.5, 2, 10],
+			"faces": {
+				"north": {"uv": [9, 14, 10, 15], "texture": "#0"},
+				"east": {"uv": [10, 14, 9, 15], "texture": "#0"},
+				"south": {"uv": [9, 14, 10, 15], "texture": "#0"},
+				"west": {"uv": [9, 14, 10, 15], "texture": "#0"},
+				"up": {"uv": [9, 14, 10, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [9, 14, 10, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_156",
+			"from": [7.5, 1, 10],
+			"to": [8.5, 2, 11],
+			"faces": {
+				"north": {"uv": [10, 14, 11, 15], "texture": "#0"},
+				"east": {"uv": [11, 14, 10, 15], "texture": "#0"},
+				"south": {"uv": [10, 14, 11, 15], "texture": "#0"},
+				"west": {"uv": [10, 14, 11, 15], "texture": "#0"},
+				"up": {"uv": [10, 14, 11, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10, 14, 11, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_157",
+			"from": [7.5, 1, 11],
+			"to": [8.5, 2, 12],
+			"faces": {
+				"north": {"uv": [11, 14, 12, 15], "texture": "#0"},
+				"east": {"uv": [12, 14, 11, 15], "texture": "#0"},
+				"south": {"uv": [11, 14, 12, 15], "texture": "#0"},
+				"west": {"uv": [11, 14, 12, 15], "texture": "#0"},
+				"up": {"uv": [11, 14, 12, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [11, 14, 12, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_158",
+			"from": [7.5, 1, 12],
+			"to": [8.5, 2, 13],
+			"faces": {
+				"north": {"uv": [12, 14, 13, 15], "texture": "#0"},
+				"east": {"uv": [13, 14, 12, 15], "texture": "#0"},
+				"south": {"uv": [12, 14, 13, 15], "texture": "#0"},
+				"west": {"uv": [12, 14, 13, 15], "texture": "#0"},
+				"up": {"uv": [12, 14, 13, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 14, 13, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_159",
+			"from": [7.5, 1, 13],
+			"to": [8.5, 2, 14],
+			"faces": {
+				"north": {"uv": [13, 14, 14, 15], "texture": "#0"},
+				"east": {"uv": [14, 14, 13, 15], "texture": "#0"},
+				"south": {"uv": [13, 14, 14, 15], "texture": "#0"},
+				"west": {"uv": [13, 14, 14, 15], "texture": "#0"},
+				"up": {"uv": [13, 14, 14, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 14, 14, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_160",
+			"from": [7.5, 1, 14],
+			"to": [8.5, 2, 15],
+			"faces": {
+				"north": {"uv": [14, 14, 15, 15], "texture": "#0"},
+				"east": {"uv": [15, 14, 14, 15], "texture": "#0"},
+				"south": {"uv": [14, 14, 15, 15], "texture": "#0"},
+				"west": {"uv": [14, 14, 15, 15], "texture": "#0"},
+				"up": {"uv": [14, 14, 15, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [14, 14, 15, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_161",
+			"from": [7.5, 1, 15],
+			"to": [8.5, 2, 16],
+			"faces": {
+				"north": {"uv": [15, 14, 16, 15], "texture": "#0"},
+				"east": {"uv": [16, 14, 15, 15], "texture": "#0"},
+				"south": {"uv": [15, 14, 16, 15], "texture": "#0"},
+				"west": {"uv": [15, 14, 16, 15], "texture": "#0"},
+				"up": {"uv": [15, 14, 16, 15], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [15, 14, 16, 15], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_165",
+			"from": [7.5, 0, 8],
+			"to": [8.5, 1, 9],
+			"faces": {
+				"north": {"uv": [8, 15, 9, 16], "texture": "#0"},
+				"east": {"uv": [9, 15, 8, 16], "texture": "#0"},
+				"south": {"uv": [8, 15, 9, 16], "texture": "#0"},
+				"west": {"uv": [8, 15, 9, 16], "texture": "#0"},
+				"up": {"uv": [8, 15, 9, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 15, 9, 16], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_166",
+			"from": [7.5, 0, 12],
+			"to": [8.5, 1, 13],
+			"faces": {
+				"north": {"uv": [12, 15, 13, 16], "texture": "#0"},
+				"east": {"uv": [13, 15, 12, 16], "texture": "#0"},
+				"south": {"uv": [12, 15, 13, 16], "texture": "#0"},
+				"west": {"uv": [12, 15, 13, 16], "texture": "#0"},
+				"up": {"uv": [12, 15, 13, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [12, 15, 13, 16], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "chained_iron_bars_167",
+			"from": [7.5, 0, 13],
+			"to": [8.5, 1, 14],
+			"faces": {
+				"north": {"uv": [13, 15, 14, 16], "texture": "#0"},
+				"east": {"uv": [14, 15, 13, 16], "texture": "#0"},
+				"south": {"uv": [13, 15, 14, 16], "texture": "#0"},
+				"west": {"uv": [13, 15, 14, 16], "texture": "#0"},
+				"up": {"uv": [13, 15, 14, 16], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [13, 15, 14, 16], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "chained_iron_bars",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24,
+				25,
+				26,
+				27,
+				28,
+				29,
+				30,
+				31,
+				32,
+				33,
+				34,
+				35,
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81,
+				82,
+				83
+			]
+		}
+	]
+}
