@@ -1,0 +1,41 @@
+{
+  "type": "ott:schematic",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "ott:flatness_water",
+      "lakes": false,
+      "features": false,
+      "layers": [
+        {
+          "height": 1,
+          "block": "minecraft:bedrock"
+        },
+        {
+          "height": 103,
+          "block": "minecraft:stone"
+        },
+        {
+          "height": 4,
+          "block": "minecraft:sandstone"
+        }, 
+        {
+          "height": 8,
+          "block": "minecraft:sand"
+        },   
+        {
+          "height": 16,
+          "block": "minecraft:water"
+        },       
+        {
+          "height": 1,
+          "block": "minecraft:air"
+        }
+      ],
+      "structure_overrides": [
+        "minecraft:strongholds",
+        "minecraft:villages"
+      ]
+    }
+  }
+}
