@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "item": "minecraft:verdant_froglight"
+    }
+  ],
+  "result": {
+    "id": "minecraft:ochre_froglight"
+  }
+}
