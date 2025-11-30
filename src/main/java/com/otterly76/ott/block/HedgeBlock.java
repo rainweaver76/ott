@@ -25,11 +25,13 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import com.otterly76.ott.OttDamageTypes;
 
 public class HedgeBlock extends Block implements BonemealableBlock {
     private static final VoxelShape HEDGE_BB = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 15.0D, 15.0D);
-    private static final float DAMAGE = 5.0F;
+    private static final float DAMAGE = 2.0F;
     private static final int MAX_HEIGHT = 5;
+
     private static final TagKey<EntityType<?>> MINECOLONIES_RAIDER = TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("minecolonies", "raider"));
 
     public HedgeBlock(BlockBehaviour.Properties properties) {
@@ -74,7 +76,8 @@ public class HedgeBlock extends Block implements BonemealableBlock {
         if (level.isClientSide() || (entity instanceof Player player && player.isCreative())) {
             return;
         }
-        entity.hurt(level.damageSources().cactus(), DAMAGE);
+        // This will damage players in Survival/Adventure and all other mobs
+        entity.hurt(OttDamageTypes.of(level, OttDamageTypes.FLORA_DAMAGE), DAMAGE);
     }
 
     private int calculateHedgeHeight(LevelReader level, BlockPos pos) {
@@ -88,13 +91,9 @@ public class HedgeBlock extends Block implements BonemealableBlock {
     }
 
     private boolean shouldDamage(Entity entity) {
-        if (!(entity instanceof LivingEntity livingEntity)) {
-            return false;
-        }
-        if (entity.getType().is(MINECOLONIES_RAIDER)) {
-            return true;
-        }
-        return !entity.isIgnoringBlockTriggers();
+        // Returns true for ALL living entities (Players, Mobs, Ravagers, etc.)
+        // This implicitly ignores the 'isIgnoringBlockTriggers' flag by not checking it.
+        return entity instanceof LivingEntity;
     }
 
     @Override

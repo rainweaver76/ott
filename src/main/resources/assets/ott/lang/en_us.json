@@ -123,6 +123,6 @@
   "block.ott.yellow_smooth_seaglass": "Yellow Smooth Seaglass",
   "block.ott.yellow_waves_seaglass": "Yellow Waves Seaglass",
 
-  "block.ott.hedge": "Hedge"
-
+  "block.ott.hedge": "Hedge",
+  "death.attack.flora_damage": "%1$s was obliterated by flowers"
 }
