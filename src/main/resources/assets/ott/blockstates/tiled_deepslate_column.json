@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/deepslate/tiled_deepslate_column"
+    }
+  }
+}

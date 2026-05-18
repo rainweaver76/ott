@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/obsidian/cut_obsidian_column"
+    }
+  }
+}

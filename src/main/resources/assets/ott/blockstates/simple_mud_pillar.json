@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/mud/simple_mud_pillar"
+    }
+  }
+}

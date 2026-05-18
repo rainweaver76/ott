@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/lapis_block/cut_lapis_block_column"
+    }
+  }
+}

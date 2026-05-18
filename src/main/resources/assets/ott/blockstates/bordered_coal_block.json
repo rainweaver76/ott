@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/bordered_coal_block"
+    }
+  }
+}

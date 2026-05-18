@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/granite/tiled_bordered_granite"
+    }
+  }
+}

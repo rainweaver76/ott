@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/blackstone/overlapping_blackstone_tiles"
+    }
+  }
+}

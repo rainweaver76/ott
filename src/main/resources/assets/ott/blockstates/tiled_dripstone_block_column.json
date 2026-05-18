@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dripstone/tiled_dripstone_block_column"
+    }
+  }
+}

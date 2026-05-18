@@ -344,13 +344,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent(color + "_edge", csEdge.getLocation());
 
         // Beam
-        ModelFile csBeamY   = models().withExistingParent(dir + color + "_beam_y",      modLoc("block/oak/oak_beam_y"))
+        ModelFile csBeamY   = models().withExistingParent(dir + color + "_beam_y",      modLoc("block/oak_planks/oak_beam_y"))
                 .renderType("minecraft:cutout").texture("1", woolTex).texture("particle", woolTex);
-        ModelFile csBeamX   = models().withExistingParent(dir + color + "_beam_x",      modLoc("block/oak/oak_beam_x"))
+        ModelFile csBeamX   = models().withExistingParent(dir + color + "_beam_x",      modLoc("block/oak_planks/oak_beam_x"))
                 .renderType("minecraft:cutout").texture("1", woolTex).texture("particle", woolTex);
-        ModelFile csBeamXZ  = models().withExistingParent(dir + color + "_beam_x_z",    modLoc("block/oak/oak_beam_x_z"))
+        ModelFile csBeamXZ  = models().withExistingParent(dir + color + "_beam_x_z",    modLoc("block/oak_planks/oak_beam_x_z"))
                 .renderType("minecraft:cutout").texture("1", woolTex).texture("particle", woolTex);
-        ModelFile csBeamBot = models().withExistingParent(dir + color + "_beam_bottom",  modLoc("block/oak/oak_beam_bottom"))
+        ModelFile csBeamBot = models().withExistingParent(dir + color + "_beam_bottom",  modLoc("block/oak_planks/oak_beam_bottom"))
                 .renderType("minecraft:cutout").texture("texture", woolTex).texture("particle", woolTex);
         getMultipartBuilder(set.beam().get())
                 .part().modelFile(csBeamY).addModel()                .condition(BeamBlock.AXIS_Y, true).end()
@@ -362,11 +362,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .texture("0", woolTex).texture("particle", woolTex);
 
         // Pergola
-        ModelFile csPergolaY  = models().withExistingParent(dir + color + "_pergola_y",   modLoc("block/oak/oak_pergola_y"))
+        ModelFile csPergolaY  = models().withExistingParent(dir + color + "_pergola_y",   modLoc("block/oak_planks/oak_pergola_y"))
                 .renderType("minecraft:cutout").texture("0", woolTex).texture("particle", woolTex);
-        ModelFile csPergolaX  = models().withExistingParent(dir + color + "_pergola_x",   modLoc("block/oak/oak_pergola_x"))
+        ModelFile csPergolaX  = models().withExistingParent(dir + color + "_pergola_x",   modLoc("block/oak_planks/oak_pergola_x"))
                 .renderType("minecraft:cutout").texture("0", woolTex).texture("particle", woolTex);
-        ModelFile csPergolaXZ = models().withExistingParent(dir + color + "_pergola_x_z", modLoc("block/oak/oak_pergola_x_z"))
+        ModelFile csPergolaXZ = models().withExistingParent(dir + color + "_pergola_x_z", modLoc("block/oak_planks/oak_pergola_x_z"))
                 .renderType("minecraft:cutout").texture("0", woolTex).texture("particle", woolTex);
         getMultipartBuilder(set.pergola().get())
                 .part().modelFile(csPergolaY).addModel()               .condition(PergolaBlock.AXIS_Y, true).end()
@@ -384,25 +384,25 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent(color + "_geometric_window", csWindow.getLocation());
 
         // Bannister
-        ModelFile csBannister      = models().withExistingParent(dir + color + "_bannister",       modLoc("block/oak/oak_bannister"))
+        ModelFile csBannister      = models().withExistingParent(dir + color + "_bannister",       modLoc("block/oak_planks/oak_bannister"))
                 .texture("0", woolTex).texture("particle", woolTex);
-        ModelFile csBannisterOuter = models().withExistingParent(dir + color + "_bannister_outer", modLoc("block/oak/oak_bannister_outer"))
+        ModelFile csBannisterOuter = models().withExistingParent(dir + color + "_bannister_outer", modLoc("block/oak_planks/oak_bannister_outer"))
                 .texture("0", woolTex).texture("particle", woolTex);
-        ModelFile csBannisterInner = models().withExistingParent(dir + color + "_bannister_inner", modLoc("block/oak/oak_bannister_inner"))
+        ModelFile csBannisterInner = models().withExistingParent(dir + color + "_bannister_inner", modLoc("block/oak_planks/oak_bannister_inner"))
                 .texture("0", woolTex).texture("particle", woolTex);
         registerFacingShapeBlock(set.bannister().get(), csBannister, csBannisterOuter, csBannisterInner);
         itemModels().withExistingParent(color + "_bannister", csBannister.getLocation());
 
         // Support shared models
-        ModelFile csSup4   = models().withExistingParent(dir + color + "_support_4_pixels",  modLoc("block/oak/oak_support_4_pixels"))
+        ModelFile csSup4   = models().withExistingParent(dir + color + "_support_4_pixels",  modLoc("block/oak_planks/oak_support_4_pixels"))
                 .texture("slab", woolTex).texture("particle", woolTex);
-        ModelFile csSup6   = models().withExistingParent(dir + color + "_support_6_pixels",  modLoc("block/oak/oak_support_6_pixels"))
+        ModelFile csSup6   = models().withExistingParent(dir + color + "_support_6_pixels",  modLoc("block/oak_planks/oak_support_6_pixels"))
                 .texture("slab", woolTex).texture("particle", woolTex);
-        ModelFile csSup8   = models().withExistingParent(dir + color + "_support_8_pixels",  modLoc("block/oak/oak_support_8_pixels"))
+        ModelFile csSup8   = models().withExistingParent(dir + color + "_support_8_pixels",  modLoc("block/oak_planks/oak_support_8_pixels"))
                 .texture("slab", woolTex).texture("particle", woolTex);
-        ModelFile csSup10  = models().withExistingParent(dir + color + "_support_10_pixels", modLoc("block/oak/oak_support_10_pixels"))
+        ModelFile csSup10  = models().withExistingParent(dir + color + "_support_10_pixels", modLoc("block/oak_planks/oak_support_10_pixels"))
                 .texture("slab", woolTex).texture("particle", woolTex);
-        ModelFile csSupSlab = models().withExistingParent(dir + color + "_support_slab",     modLoc("block/oak/oak_support_slab"))
+        ModelFile csSupSlab = models().withExistingParent(dir + color + "_support_slab",     modLoc("block/oak_planks/oak_support_slab"))
                 .texture("slab", woolTex).texture("particle", woolTex);
 
         // Support Slab
@@ -415,9 +415,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent(color + "_support_slab", csSupSlab.getLocation());
 
         // Support Beam
-        ModelFile csSupBeamX  = models().withExistingParent(dir + color + "_support_beam_x",   modLoc("block/oak/oak_beam_x"))
+        ModelFile csSupBeamX  = models().withExistingParent(dir + color + "_support_beam_x",   modLoc("block/oak_planks/oak_beam_x"))
                 .renderType("minecraft:cutout").texture("1", woolTex).texture("particle", woolTex);
-        ModelFile csSupBeamXZ = models().withExistingParent(dir + color + "_support_beam_x_z", modLoc("block/oak/oak_beam_x_z"))
+        ModelFile csSupBeamXZ = models().withExistingParent(dir + color + "_support_beam_x_z", modLoc("block/oak_planks/oak_beam_x_z"))
                 .renderType("minecraft:cutout").texture("1", woolTex).texture("particle", woolTex);
         getMultipartBuilder(set.supportBeam().get())
                 .part().modelFile(csSupSlab).addModel().end()
@@ -502,26 +502,26 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent(n + "_geometric_window", window.getLocation());
 
         // ── Bannister ──────────────────────────────────────────────────────────
-        var bannister      = models().withExistingParent(dir + n + "_bannister",       modLoc("block/oak/oak_bannister"))
+        var bannister      = models().withExistingParent(dir + n + "_bannister",       modLoc("block/oak_planks/oak_bannister"))
                 .texture("0", sideTex).texture("particle", sideTex);
-        var bannisterOuter = models().withExistingParent(dir + n + "_bannister_outer", modLoc("block/oak/oak_bannister_outer"))
+        var bannisterOuter = models().withExistingParent(dir + n + "_bannister_outer", modLoc("block/oak_planks/oak_bannister_outer"))
                 .texture("0", sideTex).texture("particle", sideTex);
-        var bannisterInner = models().withExistingParent(dir + n + "_bannister_inner", modLoc("block/oak/oak_bannister_inner"))
+        var bannisterInner = models().withExistingParent(dir + n + "_bannister_inner", modLoc("block/oak_planks/oak_bannister_inner"))
                 .texture("0", sideTex).texture("particle", sideTex);
         if (v.cutout()) { bannister.renderType("minecraft:cutout"); bannisterOuter.renderType("minecraft:cutout"); bannisterInner.renderType("minecraft:cutout"); }
         registerFacingShapeBlock(set.bannister().get(), bannister, bannisterOuter, bannisterInner);
         itemModels().withExistingParent(n + "_bannister", bannister.getLocation());
 
         // ── Support Slab ───────────────────────────────────────────────────────
-        var sup4    = models().withExistingParent(dir + n + "_support_4_pixels",  modLoc("block/oak/oak_support_4_pixels"))
+        var sup4    = models().withExistingParent(dir + n + "_support_4_pixels",  modLoc("block/oak_planks/oak_support_4_pixels"))
                 .texture("slab", sideTex).texture("particle", sideTex);
-        var sup6    = models().withExistingParent(dir + n + "_support_6_pixels",  modLoc("block/oak/oak_support_6_pixels"))
+        var sup6    = models().withExistingParent(dir + n + "_support_6_pixels",  modLoc("block/oak_planks/oak_support_6_pixels"))
                 .texture("slab", sideTex).texture("particle", sideTex);
-        var sup8    = models().withExistingParent(dir + n + "_support_8_pixels",  modLoc("block/oak/oak_support_8_pixels"))
+        var sup8    = models().withExistingParent(dir + n + "_support_8_pixels",  modLoc("block/oak_planks/oak_support_8_pixels"))
                 .texture("slab", sideTex).texture("particle", sideTex);
-        var sup10   = models().withExistingParent(dir + n + "_support_10_pixels", modLoc("block/oak/oak_support_10_pixels"))
+        var sup10   = models().withExistingParent(dir + n + "_support_10_pixels", modLoc("block/oak_planks/oak_support_10_pixels"))
                 .texture("slab", sideTex).texture("particle", sideTex);
-        var supSlab = models().withExistingParent(dir + n + "_support_slab",      modLoc("block/oak/oak_support_slab"))
+        var supSlab = models().withExistingParent(dir + n + "_support_slab",      modLoc("block/oak_planks/oak_support_slab"))
                 .texture("slab", sideTex).texture("particle", sideTex);
         if (v.cutout()) { sup4.renderType("minecraft:cutout"); sup6.renderType("minecraft:cutout"); sup8.renderType("minecraft:cutout"); sup10.renderType("minecraft:cutout"); supSlab.renderType("minecraft:cutout"); }
         getMultipartBuilder(set.supportSlab().get())
@@ -533,9 +533,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent(n + "_support_slab", supSlab.getLocation());
 
         // ── Support Beam ───────────────────────────────────────────────────────
-        var supBeamX  = models().withExistingParent(dir + n + "_support_beam_x",   modLoc("block/oak/oak_beam_x"))
+        var supBeamX  = models().withExistingParent(dir + n + "_support_beam_x",   modLoc("block/oak_planks/oak_beam_x"))
                 .renderType("minecraft:cutout").texture("1", sideTex).texture("particle", sideTex);
-        var supBeamXZ = models().withExistingParent(dir + n + "_support_beam_x_z", modLoc("block/oak/oak_beam_x_z"))
+        var supBeamXZ = models().withExistingParent(dir + n + "_support_beam_x_z", modLoc("block/oak_planks/oak_beam_x_z"))
                 .renderType("minecraft:cutout").texture("1", sideTex).texture("particle", sideTex);
         getMultipartBuilder(set.supportBeam().get())
                 .part().modelFile(supSlab).addModel().end()
@@ -808,13 +808,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         ResourceLocation pergolaTex = modLoc("block/pergola/" + setName + "_pergola");
 
         // ── Beam ─────────────────────────────────────────────────────────────
-        ModelFile beamY = models().withExistingParent(dir + setName + "_beam_y",      modLoc("block/oak/oak_beam_y"))
+        ModelFile beamY = models().withExistingParent(dir + setName + "_beam_y",      modLoc("block/oak_planks/oak_beam_y"))
                 .renderType("minecraft:cutout").texture("1", beamTex).texture("particle", beamTex);
-        ModelFile beamX = models().withExistingParent(dir + setName + "_beam_x",      modLoc("block/oak/oak_beam_x"))
+        ModelFile beamX = models().withExistingParent(dir + setName + "_beam_x",      modLoc("block/oak_planks/oak_beam_x"))
                 .renderType("minecraft:cutout").texture("1", beamTex).texture("particle", beamTex);
-        ModelFile beamXZ = models().withExistingParent(dir + setName + "_beam_x_z",   modLoc("block/oak/oak_beam_x_z"))
+        ModelFile beamXZ = models().withExistingParent(dir + setName + "_beam_x_z",   modLoc("block/oak_planks/oak_beam_x_z"))
                 .renderType("minecraft:cutout").texture("1", beamTex).texture("particle", beamTex);
-        ModelFile beamBot = models().withExistingParent(dir + setName + "_beam_bottom", modLoc("block/oak/oak_beam_bottom"))
+        ModelFile beamBot = models().withExistingParent(dir + setName + "_beam_bottom", modLoc("block/oak_planks/oak_beam_bottom"))
                 .renderType("minecraft:cutout").texture("texture", beamTex).texture("particle", beamTex);
 
         getMultipartBuilder(set.beam().get())
@@ -825,11 +825,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .part().modelFile(beamBot).addModel().condition(BeamBlock.BOTTOM, true).end();
 
         // ── Pergola ───────────────────────────────────────────────────────────
-        ModelFile pergolaY  = models().withExistingParent(dir + setName + "_pergola_y",   modLoc("block/oak/oak_pergola_y"))
+        ModelFile pergolaY  = models().withExistingParent(dir + setName + "_pergola_y",   modLoc("block/oak_planks/oak_pergola_y"))
                 .renderType("minecraft:cutout").texture("0", pergolaTex).texture("particle", pergolaTex);
-        ModelFile pergolaX  = models().withExistingParent(dir + setName + "_pergola_x",   modLoc("block/oak/oak_pergola_x"))
+        ModelFile pergolaX  = models().withExistingParent(dir + setName + "_pergola_x",   modLoc("block/oak_planks/oak_pergola_x"))
                 .renderType("minecraft:cutout").texture("0", pergolaTex).texture("particle", pergolaTex);
-        ModelFile pergolaXZ = models().withExistingParent(dir + setName + "_pergola_x_z", modLoc("block/oak/oak_pergola_x_z"))
+        ModelFile pergolaXZ = models().withExistingParent(dir + setName + "_pergola_x_z", modLoc("block/oak_planks/oak_pergola_x_z"))
                 .renderType("minecraft:cutout").texture("0", pergolaTex).texture("particle", pergolaTex);
 
         getMultipartBuilder(set.pergola().get())
@@ -843,15 +843,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .texture("0", pergolaTex).texture("particle", pergolaTex);
 
         // ── Support shared models ─────────────────────────────────────────────
-        ModelFile sup4   = models().withExistingParent(dir + setName + "_support_4_pixels",  modLoc("block/oak/oak_support_4_pixels"))
+        ModelFile sup4   = models().withExistingParent(dir + setName + "_support_4_pixels",  modLoc("block/oak_planks/oak_support_4_pixels"))
                 .texture("slab", planks).texture("particle", planks);
-        ModelFile sup6   = models().withExistingParent(dir + setName + "_support_6_pixels",  modLoc("block/oak/oak_support_6_pixels"))
+        ModelFile sup6   = models().withExistingParent(dir + setName + "_support_6_pixels",  modLoc("block/oak_planks/oak_support_6_pixels"))
                 .texture("slab", planks).texture("particle", planks);
-        ModelFile sup8   = models().withExistingParent(dir + setName + "_support_8_pixels",  modLoc("block/oak/oak_support_8_pixels"))
+        ModelFile sup8   = models().withExistingParent(dir + setName + "_support_8_pixels",  modLoc("block/oak_planks/oak_support_8_pixels"))
                 .texture("slab", beamTex).texture("particle", beamTex);
-        ModelFile sup10  = models().withExistingParent(dir + setName + "_support_10_pixels", modLoc("block/oak/oak_support_10_pixels"))
+        ModelFile sup10  = models().withExistingParent(dir + setName + "_support_10_pixels", modLoc("block/oak_planks/oak_support_10_pixels"))
                 .texture("slab", beamTex).texture("particle", beamTex);
-        ModelFile supSlab = models().withExistingParent(dir + setName + "_support_slab",     modLoc("block/oak/oak_support_slab"))
+        ModelFile supSlab = models().withExistingParent(dir + setName + "_support_slab",     modLoc("block/oak_planks/oak_support_slab"))
                 .texture("slab", planks).texture("particle", planks);
 
         // ── Support Slab ──────────────────────────────────────────────────────
@@ -893,11 +893,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         registerFacingShapeHalfBlock(set.planksEdge().get(), edge, edgeOuter, edgeInner);
 
         // ── Bannister ──────────────────────────────────────────────────────────
-        ModelFile bannister      = models().withExistingParent(dir + setName + "_bannister",       modLoc("block/oak/oak_bannister"))
+        ModelFile bannister      = models().withExistingParent(dir + setName + "_bannister",       modLoc("block/oak_planks/oak_bannister"))
                 .texture("0", planks).texture("particle", planks);
-        ModelFile bannisterOuter = models().withExistingParent(dir + setName + "_bannister_outer", modLoc("block/oak/oak_bannister_outer"))
+        ModelFile bannisterOuter = models().withExistingParent(dir + setName + "_bannister_outer", modLoc("block/oak_planks/oak_bannister_outer"))
                 .texture("0", planks).texture("particle", planks);
-        ModelFile bannisterInner = models().withExistingParent(dir + setName + "_bannister_inner", modLoc("block/oak/oak_bannister_inner"))
+        ModelFile bannisterInner = models().withExistingParent(dir + setName + "_bannister_inner", modLoc("block/oak_planks/oak_bannister_inner"))
                 .texture("0", planks).texture("particle", planks);
         registerFacingShapeBlock(set.bannister().get(), bannister, bannisterOuter, bannisterInner);
 
@@ -976,13 +976,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         ResourceLocation stripped = vanillaStripped(setName);
 
         // ── Beam ─────────────────────────────────────────────────────────────
-        ModelFile beamY = models().withExistingParent(dir + setName + "_beam_y",      modLoc("block/oak/oak_beam_y"))
+        ModelFile beamY = models().withExistingParent(dir + setName + "_beam_y",      modLoc("block/oak_planks/oak_beam_y"))
                 .renderType("minecraft:cutout").texture("1", stripped).texture("particle", stripped);
-        ModelFile beamX = models().withExistingParent(dir + setName + "_beam_x",      modLoc("block/oak/oak_beam_x"))
+        ModelFile beamX = models().withExistingParent(dir + setName + "_beam_x",      modLoc("block/oak_planks/oak_beam_x"))
                 .renderType("minecraft:cutout").texture("1", stripped).texture("particle", stripped);
-        ModelFile beamXZ = models().withExistingParent(dir + setName + "_beam_x_z",   modLoc("block/oak/oak_beam_x_z"))
+        ModelFile beamXZ = models().withExistingParent(dir + setName + "_beam_x_z",   modLoc("block/oak_planks/oak_beam_x_z"))
                 .renderType("minecraft:cutout").texture("1", stripped).texture("particle", stripped);
-        ModelFile beamBot = models().withExistingParent(dir + setName + "_beam_bottom", modLoc("block/oak/oak_beam_bottom"))
+        ModelFile beamBot = models().withExistingParent(dir + setName + "_beam_bottom", modLoc("block/oak_planks/oak_beam_bottom"))
                 .renderType("minecraft:cutout").texture("texture", stripped).texture("particle", stripped);
 
         getMultipartBuilder(set.beam().get())
@@ -993,11 +993,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .part().modelFile(beamBot).addModel().condition(BeamBlock.BOTTOM, true).end();
 
         // ── Pergola ───────────────────────────────────────────────────────────
-        ModelFile pergolaY  = models().withExistingParent(dir + setName + "_pergola_y",   modLoc("block/oak/oak_pergola_y"))
+        ModelFile pergolaY  = models().withExistingParent(dir + setName + "_pergola_y",   modLoc("block/oak_planks/oak_pergola_y"))
                 .renderType("minecraft:cutout").texture("0", planks).texture("particle", planks);
-        ModelFile pergolaX  = models().withExistingParent(dir + setName + "_pergola_x",   modLoc("block/oak/oak_pergola_x"))
+        ModelFile pergolaX  = models().withExistingParent(dir + setName + "_pergola_x",   modLoc("block/oak_planks/oak_pergola_x"))
                 .renderType("minecraft:cutout").texture("0", planks).texture("particle", planks);
-        ModelFile pergolaXZ = models().withExistingParent(dir + setName + "_pergola_x_z", modLoc("block/oak/oak_pergola_x_z"))
+        ModelFile pergolaXZ = models().withExistingParent(dir + setName + "_pergola_x_z", modLoc("block/oak_planks/oak_pergola_x_z"))
                 .renderType("minecraft:cutout").texture("0", planks).texture("particle", planks);
 
         getMultipartBuilder(set.pergola().get())
@@ -1011,15 +1011,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .texture("0", planks).texture("particle", planks);
 
         // ── Support shared models ─────────────────────────────────────────────
-        ModelFile sup4   = models().withExistingParent(dir + setName + "_support_4_pixels",  modLoc("block/oak/oak_support_4_pixels"))
+        ModelFile sup4   = models().withExistingParent(dir + setName + "_support_4_pixels",  modLoc("block/oak_planks/oak_support_4_pixels"))
                 .texture("slab", planks).texture("particle", planks);
-        ModelFile sup6   = models().withExistingParent(dir + setName + "_support_6_pixels",  modLoc("block/oak/oak_support_6_pixels"))
+        ModelFile sup6   = models().withExistingParent(dir + setName + "_support_6_pixels",  modLoc("block/oak_planks/oak_support_6_pixels"))
                 .texture("slab", planks).texture("particle", planks);
-        ModelFile sup8   = models().withExistingParent(dir + setName + "_support_8_pixels",  modLoc("block/oak/oak_support_8_pixels"))
+        ModelFile sup8   = models().withExistingParent(dir + setName + "_support_8_pixels",  modLoc("block/oak_planks/oak_support_8_pixels"))
                 .texture("slab", stripped).texture("particle", stripped);
-        ModelFile sup10  = models().withExistingParent(dir + setName + "_support_10_pixels", modLoc("block/oak/oak_support_10_pixels"))
+        ModelFile sup10  = models().withExistingParent(dir + setName + "_support_10_pixels", modLoc("block/oak_planks/oak_support_10_pixels"))
                 .texture("slab", stripped).texture("particle", stripped);
-        ModelFile supSlab = models().withExistingParent(dir + setName + "_support_slab",     modLoc("block/oak/oak_support_slab"))
+        ModelFile supSlab = models().withExistingParent(dir + setName + "_support_slab",     modLoc("block/oak_planks/oak_support_slab"))
                 .texture("slab", planks).texture("particle", planks);
 
         // ── Support Slab ──────────────────────────────────────────────────────
@@ -1061,11 +1061,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         registerFacingShapeHalfBlock(set.planksEdge().get(), edge, edgeOuter, edgeInner);
 
         // ── Bannister ──────────────────────────────────────────────────────────
-        ModelFile bannister      = models().withExistingParent(dir + setName + "_bannister",       modLoc("block/oak/oak_bannister"))
+        ModelFile bannister      = models().withExistingParent(dir + setName + "_bannister",       modLoc("block/oak_planks/oak_bannister"))
                 .texture("0", planks).texture("particle", planks);
-        ModelFile bannisterOuter = models().withExistingParent(dir + setName + "_bannister_outer", modLoc("block/oak/oak_bannister_outer"))
+        ModelFile bannisterOuter = models().withExistingParent(dir + setName + "_bannister_outer", modLoc("block/oak_planks/oak_bannister_outer"))
                 .texture("0", planks).texture("particle", planks);
-        ModelFile bannisterInner = models().withExistingParent(dir + setName + "_bannister_inner", modLoc("block/oak/oak_bannister_inner"))
+        ModelFile bannisterInner = models().withExistingParent(dir + setName + "_bannister_inner", modLoc("block/oak_planks/oak_bannister_inner"))
                 .texture("0", planks).texture("particle", planks);
         registerFacingShapeBlock(set.bannister().get(), bannister, bannisterOuter, bannisterInner);
 
@@ -1246,9 +1246,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlock(ModBlocks.WHEAT_THATCH_PLATE.get(),  "block/wheat_thatch/wheat_thatch_plate");
 
         // ── Bamboo thatch ─────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.BAMBOO_THATCH.get(),       models().getExistingFile(modLoc("block/bamboo/bamboo_thatch")));
-        existingEdgeBlock(ModBlocks.BAMBOO_THATCH_EDGE.get(),         "block/bamboo/bamboo_thatch_edge");
-        existingFacingShapeBlock(ModBlocks.BAMBOO_THATCH_PLATE.get(), "block/bamboo/bamboo_thatch_plate");
+        simpleBlockWithItem(ModBlocks.BAMBOO_THATCH.get(),       models().getExistingFile(modLoc("block/bamboo_planks/bamboo_thatch")));
+        existingEdgeBlock(ModBlocks.BAMBOO_THATCH_EDGE.get(),         "block/bamboo_planks/bamboo_thatch_edge");
+        existingFacingShapeBlock(ModBlocks.BAMBOO_THATCH_PLATE.get(), "block/bamboo_planks/bamboo_thatch_plate");
 
         // ── Sandstone shapes ──────────────────────────────────────────────────
         existingFacingShapeBlockNoUvLock(ModBlocks.SANDSTONE_CRENELATION.get(), "block/sandstone/sandstone_crenelation");
@@ -1393,13 +1393,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         // Purpur CTM blocks
         simpleBlockWithItem(ModBlocks.PURPUR_PILLAR_CTM.get(),
-                models().getExistingFile(modLoc("block/purpur/purpur_pillar")));
+                models().getExistingFile(modLoc("block/purpur_block/purpur_pillar")));
 
         // Sandstone CTM blocks
         simpleBlockWithItem(ModBlocks.SANDSTONE_CTM.get(),
                 models().getExistingFile(modLoc("block/sandstone/sandstone")));
         simpleBlockWithItem(ModBlocks.RED_SANDSTONE_CTM.get(),
                 models().getExistingFile(modLoc("block/red_sandstone/red_sandstone")));
+        simpleBlockWithItem(ModBlocks.BORDERED_ANDESITE_CTM.get(),
+                models().getExistingFile(modLoc("block/andesite/bordered_andesite")));
         simpleBlockWithItem(ModBlocks.POLISHED_ANDESITE_CTM.get(),
                 models().getExistingFile(modLoc("block/andesite/polished_andesite")));
         simpleBlockWithItem(ModBlocks.POLISHED_BLACKSTONE_CTM.get(),
@@ -1409,7 +1411,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(ModBlocks.POLISHED_GRANITE_CTM.get(),
                 models().getExistingFile(modLoc("block/granite/polished_granite")));
         simpleBlockWithItem(ModBlocks.NETHERITE_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/netherite/netherite_block")));
+                models().getExistingFile(modLoc("block/netherite_block/netherite_block")));
         simpleBlockWithItem(ModBlocks.SMOOTH_STONE_CTM.get(),
                 models().getExistingFile(modLoc("block/stone/smooth_stone")));
         simpleBlockWithItem(ModBlocks.EMERALD_BLOCK_CTM.get(),
@@ -1481,7 +1483,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(ModBlocks.LAPIS_BLOCK_PILLAR.get(),
                 models().getExistingFile(modLoc("block/lapis_block/lapis_block_pillar")));
         simpleBlockWithItem(ModBlocks.NETHERITE_BLOCK_PILLAR.get(),
-                models().getExistingFile(modLoc("block/netherite/netherite_block_pillar")));
+                models().getExistingFile(modLoc("block/netherite_block/netherite_block_pillar")));
         simpleBlockWithItem(ModBlocks.OBSIDIAN_PILLAR.get(),
                 models().getExistingFile(modLoc("block/obsidian/obsidian_pillar")));
 
@@ -1499,9 +1501,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         ModBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
             styleMap.forEach((style, block) -> {
-                ResourceLocation bottom = modLoc("block/" + wood + "/" + wood + "_door/" + style + "_" + wood + "_door_bottom");
-                ResourceLocation top    = modLoc("block/" + wood + "/" + wood + "_door/" + style + "_" + wood + "_door_top");
-                registerCutoutDoor(block.get(), bottom, top, "block/" + wood + "/");
+                ResourceLocation bottom = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_bottom");
+                ResourceLocation top    = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top");
+                registerCutoutDoor(block.get(), bottom, top, "block/" + wood + "_planks/");
             })
         );
     }

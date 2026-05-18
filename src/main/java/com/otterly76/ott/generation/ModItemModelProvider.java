@@ -104,9 +104,9 @@ public class ModItemModelProvider extends ItemModelProvider {
             styleMap.keySet().forEach(style -> {
                 String itemName = style + "_" + wood + "_door";
                 withExistingParent(itemName, mcLoc("item/door_base"))
-                        .texture("particle", modLoc("block/" + wood + "/" + wood + "_door/" + style + "_" + wood + "_door_top"))
-                        .texture("bottom",   modLoc("block/" + wood + "/" + wood + "_door/" + style + "_" + wood + "_door_bottom"))
-                        .texture("top",      modLoc("block/" + wood + "/" + wood + "_door/" + style + "_" + wood + "_door_top"));
+                        .texture("particle", modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top"))
+                        .texture("bottom",   modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_bottom"))
+                        .texture("top",      modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top"));
             })
         );
 

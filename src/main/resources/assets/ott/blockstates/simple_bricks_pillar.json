@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/bricks/simple_bricks_pillar"
+    }
+  }
+}

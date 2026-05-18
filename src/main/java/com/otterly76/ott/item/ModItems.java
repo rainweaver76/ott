@@ -412,10 +412,10 @@ public class ModItems {
     public static DeferredItem<PaleOakBoatItem> PALE_OAK_BOAT;
     public static DeferredItem<PaleOakBoatItem> PALE_OAK_CHEST_BOAT;
 
-    public static final DeferredHolder<Item, BlockItem> GLASS_JAR = ITEMS.register("glass_jar", () -> new FireflyJarItem(ModBlocks.GLASS_JAR.get(), new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> FIREFLY_IN_A_JAR = ITEMS.register("firefly_in_a_jar", () -> new FireflyJarItem(ModBlocks.FIREFLY_IN_A_JAR.get(), new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> FIREFLIES_IN_A_JAR = ITEMS.register("fireflies_in_a_jar", () -> new FireflyJarItem(ModBlocks.FIREFLIES_IN_A_JAR.get(), new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> FIREFLY_JAR = ITEMS.register("firefly_jar", () -> new FireflyJarItem(ModBlocks.FIREFLY_JAR.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> GLASS_JAR = ITEMS.register("glass_jar", () -> new FireflyJarItem(ModBlocks.GLASS_JAR.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> FIREFLY_IN_A_JAR = ITEMS.register("firefly_in_a_jar", () -> new FireflyJarItem(ModBlocks.FIREFLY_IN_A_JAR.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> FIREFLIES_IN_A_JAR = ITEMS.register("fireflies_in_a_jar", () -> new FireflyJarItem(ModBlocks.FIREFLIES_IN_A_JAR.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> FIREFLY_JAR = ITEMS.register("firefly_jar", () -> new FireflyJarItem(ModBlocks.FIREFLY_JAR.get(), new Item.Properties()));
 
     public static final Map<Butterfly.Variant, DeferredItem<Item>> BUTTERFLY_JAR_ITEMS = new HashMap<>();
     public static final DeferredHolder<Item, com.otterly76.ott.item.custom.CaterpillarJarItem> CATERPILLAR_JAR = ITEMS.register("caterpillar_jar", () -> new com.otterly76.ott.item.custom.CaterpillarJarItem(ModBlocks.CATERPILLAR_JAR.get(), new Item.Properties().stacksTo(1)));
@@ -479,6 +479,2776 @@ public class ModItems {
     public static final DeferredItem<Item> SAND_CRAB_SPAWN_EGG = ITEMS.register("sand_crab_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.SAND_CRAB, 0xD2B48C, 0xA0522D, new Item.Properties()));
     public static final DeferredItem<Item> CRAB_CLAW = ITEMS.register("crab_claw", () -> new Item(new Item.Properties()));
     public static final DeferredItem<BlockItem> CRAB_EGG = ITEMS.register("crab_egg", () -> new BlockItem(ModBlocks.CRAB_EGG.get(), new Item.Properties()));
+
+    // ── Batch CTM blocks ─────────────────────────────────────────────────────
+    // ── Acacia Planks ──
+    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_PANEL =
+        registerBlockItem("acacia_planks_panel", ModBlocks.ACACIA_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> CORNERED_ACACIA_PLANKS =
+        registerBlockItem("cornered_acacia_planks", ModBlocks.CORNERED_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_ACACIA_PLANKS =
+        registerBlockItem("crated_acacia_planks", ModBlocks.CRATED_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_ACACIA_PLANKS =
+        registerBlockItem("enclosed_acacia_planks", ModBlocks.ENCLOSED_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_ACACIA_PLANKS =
+        registerBlockItem("framed_acacia_planks", ModBlocks.FRAMED_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_ACACIA_PLANKS =
+        registerBlockItem("natural_acacia_planks", ModBlocks.NATURAL_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_ACACIA_PLANKS =
+        registerBlockItem("pegged_acacia_planks", ModBlocks.PEGGED_ACACIA_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_ACACIA_PLANKS =
+        registerBlockItem("whirlwind_acacia_planks", ModBlocks.WHIRLWIND_ACACIA_PLANKS);
+
+    // ── Amethyst Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_AMETHYST_BLOCK =
+        registerBlockItem("bordered_amethyst_block", ModBlocks.BORDERED_AMETHYST_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_AMETHYST_BLOCK =
+        registerBlockItem("brick_bordered_amethyst_block", ModBlocks.BRICK_BORDERED_AMETHYST_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_AMETHYST_BLOCK_PILLAR =
+        registerBlockItem("curly_amethyst_block_pillar", ModBlocks.CURLY_AMETHYST_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_AMETHYST_BLOCK_COLUMN =
+        registerBlockItem("cut_amethyst_block_column", ModBlocks.CUT_AMETHYST_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_AMETHYST_BLOCK_BRICKS =
+        registerBlockItem("edged_amethyst_block_bricks", ModBlocks.EDGED_AMETHYST_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_AMETHYST_BLOCK_PILLAR =
+        registerBlockItem("fine_amethyst_block_pillar", ModBlocks.FINE_AMETHYST_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_AMETHYST_BLOCK_BRICKS =
+        registerBlockItem("massive_amethyst_block_bricks", ModBlocks.MASSIVE_AMETHYST_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_AMETHYST_BLOCK_PILLAR =
+        registerBlockItem("ornate_amethyst_block_pillar", ModBlocks.ORNATE_AMETHYST_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_AMETHYST_BLOCK_TILES =
+        registerBlockItem("overlapping_amethyst_block_tiles", ModBlocks.OVERLAPPING_AMETHYST_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_AMETHYST_BLOCK =
+        registerBlockItem("polished_amethyst_block", ModBlocks.POLISHED_AMETHYST_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_AMETHYST_BLOCK_PILLAR =
+        registerBlockItem("simple_amethyst_block_pillar", ModBlocks.SIMPLE_AMETHYST_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_AMETHYST_BLOCK_COLUMN =
+        registerBlockItem("smooth_amethyst_block_column", ModBlocks.SMOOTH_AMETHYST_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_AMETHYST_BLOCK =
+        registerBlockItem("thick_inlayed_amethyst_block", ModBlocks.THICK_INLAYED_AMETHYST_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_AMETHYST_BLOCK_COLUMN =
+        registerBlockItem("tiled_amethyst_block_column", ModBlocks.TILED_AMETHYST_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_AMETHYST_BLOCK =
+        registerBlockItem("tiled_bordered_amethyst_block", ModBlocks.TILED_BORDERED_AMETHYST_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_AMETHYST_BLOCK =
+        registerBlockItem("tiny_brick_bordered_amethyst_block", ModBlocks.TINY_BRICK_BORDERED_AMETHYST_BLOCK);
+
+    // ── Ancient Debris ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_ANCIENT_DEBRIS =
+        registerBlockItem("bordered_ancient_debris", ModBlocks.BORDERED_ANCIENT_DEBRIS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_ANCIENT_DEBRIS =
+        registerBlockItem("brick_bordered_ancient_debris", ModBlocks.BRICK_BORDERED_ANCIENT_DEBRIS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_ANCIENT_DEBRIS_PILLAR =
+        registerBlockItem("curly_ancient_debris_pillar", ModBlocks.CURLY_ANCIENT_DEBRIS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_ANCIENT_DEBRIS_COLUMN =
+        registerBlockItem("cut_ancient_debris_column", ModBlocks.CUT_ANCIENT_DEBRIS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_ANCIENT_DEBRIS_BRICKS =
+        registerBlockItem("edged_ancient_debris_bricks", ModBlocks.EDGED_ANCIENT_DEBRIS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_ANCIENT_DEBRIS_PILLAR =
+        registerBlockItem("fine_ancient_debris_pillar", ModBlocks.FINE_ANCIENT_DEBRIS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_ANCIENT_DEBRIS_BRICKS =
+        registerBlockItem("massive_ancient_debris_bricks", ModBlocks.MASSIVE_ANCIENT_DEBRIS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_ANCIENT_DEBRIS_PILLAR =
+        registerBlockItem("ornate_ancient_debris_pillar", ModBlocks.ORNATE_ANCIENT_DEBRIS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_ANCIENT_DEBRIS_TILES =
+        registerBlockItem("overlapping_ancient_debris_tiles", ModBlocks.OVERLAPPING_ANCIENT_DEBRIS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_ANCIENT_DEBRIS =
+        registerBlockItem("polished_ancient_debris", ModBlocks.POLISHED_ANCIENT_DEBRIS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_ANCIENT_DEBRIS_PILLAR =
+        registerBlockItem("simple_ancient_debris_pillar", ModBlocks.SIMPLE_ANCIENT_DEBRIS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_ANCIENT_DEBRIS_COLUMN =
+        registerBlockItem("smooth_ancient_debris_column", ModBlocks.SMOOTH_ANCIENT_DEBRIS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_ANCIENT_DEBRIS =
+        registerBlockItem("thick_inlayed_ancient_debris", ModBlocks.THICK_INLAYED_ANCIENT_DEBRIS);
+    public static final DeferredHolder<Item, BlockItem> TILED_ANCIENT_DEBRIS_COLUMN =
+        registerBlockItem("tiled_ancient_debris_column", ModBlocks.TILED_ANCIENT_DEBRIS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_ANCIENT_DEBRIS =
+        registerBlockItem("tiled_bordered_ancient_debris", ModBlocks.TILED_BORDERED_ANCIENT_DEBRIS);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_ANCIENT_DEBRIS =
+        registerBlockItem("tiny_brick_bordered_ancient_debris", ModBlocks.TINY_BRICK_BORDERED_ANCIENT_DEBRIS);
+
+    // ── Andesite ──
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_ANDESITE =
+        registerBlockItem("brick_bordered_andesite", ModBlocks.BRICK_BORDERED_ANDESITE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_ANDESITE_PILLAR =
+        registerBlockItem("curly_andesite_pillar", ModBlocks.CURLY_ANDESITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_ANDESITE_COLUMN =
+        registerBlockItem("cut_andesite_column", ModBlocks.CUT_ANDESITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_ANDESITE_BRICKS =
+        registerBlockItem("edged_andesite_bricks", ModBlocks.EDGED_ANDESITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_ANDESITE_PILLAR =
+        registerBlockItem("fine_andesite_pillar", ModBlocks.FINE_ANDESITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_ANDESITE_BRICKS =
+        registerBlockItem("massive_andesite_bricks", ModBlocks.MASSIVE_ANDESITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_ANDESITE_PILLAR =
+        registerBlockItem("ornate_andesite_pillar", ModBlocks.ORNATE_ANDESITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_ANDESITE_TILES =
+        registerBlockItem("overlapping_andesite_tiles", ModBlocks.OVERLAPPING_ANDESITE_TILES);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_ANDESITE_PILLAR =
+        registerBlockItem("simple_andesite_pillar", ModBlocks.SIMPLE_ANDESITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_ANDESITE_COLUMN =
+        registerBlockItem("smooth_andesite_column", ModBlocks.SMOOTH_ANDESITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_ANDESITE =
+        registerBlockItem("thick_inlayed_andesite", ModBlocks.THICK_INLAYED_ANDESITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_ANDESITE_COLUMN =
+        registerBlockItem("tiled_andesite_column", ModBlocks.TILED_ANDESITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_ANDESITE =
+        registerBlockItem("tiled_bordered_andesite", ModBlocks.TILED_BORDERED_ANDESITE);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_ANDESITE =
+        registerBlockItem("tiny_brick_bordered_andesite", ModBlocks.TINY_BRICK_BORDERED_ANDESITE);
+
+    // ── Bamboo Planks ──
+    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_PANEL =
+        registerBlockItem("bamboo_planks_panel", ModBlocks.BAMBOO_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> CORNERED_BAMBOO_PLANKS =
+        registerBlockItem("cornered_bamboo_planks", ModBlocks.CORNERED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_BAMBOO_PLANKS =
+        registerBlockItem("crated_bamboo_planks", ModBlocks.CRATED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_BAMBOO_PLANKS =
+        registerBlockItem("enclosed_bamboo_planks", ModBlocks.ENCLOSED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_BAMBOO_PLANKS =
+        registerBlockItem("framed_bamboo_planks", ModBlocks.FRAMED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_BAMBOO_PLANKS =
+        registerBlockItem("natural_bamboo_planks", ModBlocks.NATURAL_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BAMBOO_PLANKS =
+        registerBlockItem("polished_bamboo_planks", ModBlocks.POLISHED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> TIED_BAMBOO_PLANKS =
+        registerBlockItem("tied_bamboo_planks", ModBlocks.TIED_BAMBOO_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_BAMBOO_PLANKS =
+        registerBlockItem("whirlwind_bamboo_planks", ModBlocks.WHIRLWIND_BAMBOO_PLANKS);
+
+    // ── Basalt ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_BASALT =
+        registerBlockItem("bordered_basalt", ModBlocks.BORDERED_BASALT);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_BASALT =
+        registerBlockItem("brick_bordered_basalt", ModBlocks.BRICK_BORDERED_BASALT);
+    public static final DeferredHolder<Item, BlockItem> CURLY_BASALT_PILLAR =
+        registerBlockItem("curly_basalt_pillar", ModBlocks.CURLY_BASALT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_BASALT_COLUMN =
+        registerBlockItem("cut_basalt_column", ModBlocks.CUT_BASALT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_BASALT_BRICKS =
+        registerBlockItem("edged_basalt_bricks", ModBlocks.EDGED_BASALT_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_BASALT_PILLAR =
+        registerBlockItem("fine_basalt_pillar", ModBlocks.FINE_BASALT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_BASALT_BRICKS =
+        registerBlockItem("massive_basalt_bricks", ModBlocks.MASSIVE_BASALT_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BASALT_PILLAR =
+        registerBlockItem("ornate_basalt_pillar", ModBlocks.ORNATE_BASALT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_BASALT_TILES =
+        registerBlockItem("overlapping_basalt_tiles", ModBlocks.OVERLAPPING_BASALT_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BASALT =
+        registerBlockItem("polished_basalt", ModBlocks.POLISHED_BASALT);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_BASALT_PILLAR =
+        registerBlockItem("simple_basalt_pillar", ModBlocks.SIMPLE_BASALT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BASALT_COLUMN =
+        registerBlockItem("smooth_basalt_column", ModBlocks.SMOOTH_BASALT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_BASALT =
+        registerBlockItem("thick_inlayed_basalt", ModBlocks.THICK_INLAYED_BASALT);
+    public static final DeferredHolder<Item, BlockItem> TILED_BASALT_COLUMN =
+        registerBlockItem("tiled_basalt_column", ModBlocks.TILED_BASALT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_BASALT =
+        registerBlockItem("tiled_bordered_basalt", ModBlocks.TILED_BORDERED_BASALT);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_BASALT =
+        registerBlockItem("tiny_brick_bordered_basalt", ModBlocks.TINY_BRICK_BORDERED_BASALT);
+
+    // ── Birch Planks ──
+    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_PANEL =
+        registerBlockItem("birch_planks_panel", ModBlocks.BIRCH_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> CORNERED_BIRCH_PLANKS =
+        registerBlockItem("cornered_birch_planks", ModBlocks.CORNERED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_BIRCH_PLANKS =
+        registerBlockItem("crated_birch_planks", ModBlocks.CRATED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_BIRCH_PLANKS =
+        registerBlockItem("enclosed_birch_planks", ModBlocks.ENCLOSED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_BIRCH_PLANKS =
+        registerBlockItem("framed_birch_planks", ModBlocks.FRAMED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_BIRCH_PLANKS =
+        registerBlockItem("natural_birch_planks", ModBlocks.NATURAL_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_BIRCH_PLANKS =
+        registerBlockItem("pegged_birch_planks", ModBlocks.PEGGED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BIRCH_PLANKS =
+        registerBlockItem("polished_birch_planks", ModBlocks.POLISHED_BIRCH_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_BIRCH_PLANKS =
+        registerBlockItem("whirlwind_birch_planks", ModBlocks.WHIRLWIND_BIRCH_PLANKS);
+
+    // ── Blackstone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_BLACKSTONE =
+        registerBlockItem("bordered_blackstone", ModBlocks.BORDERED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_BLACKSTONE =
+        registerBlockItem("brick_bordered_blackstone", ModBlocks.BRICK_BORDERED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_BLACKSTONE_PILLAR =
+        registerBlockItem("curly_blackstone_pillar", ModBlocks.CURLY_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_BLACKSTONE_COLUMN =
+        registerBlockItem("cut_blackstone_column", ModBlocks.CUT_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_BLACKSTONE_BRICKS =
+        registerBlockItem("edged_blackstone_bricks", ModBlocks.EDGED_BLACKSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_BLACKSTONE_PILLAR =
+        registerBlockItem("fine_blackstone_pillar", ModBlocks.FINE_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_BLACKSTONE_BRICKS =
+        registerBlockItem("massive_blackstone_bricks", ModBlocks.MASSIVE_BLACKSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BLACKSTONE_PILLAR =
+        registerBlockItem("ornate_blackstone_pillar", ModBlocks.ORNATE_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_BLACKSTONE_TILES =
+        registerBlockItem("overlapping_blackstone_tiles", ModBlocks.OVERLAPPING_BLACKSTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_BLACKSTONE_PILLAR =
+        registerBlockItem("simple_blackstone_pillar", ModBlocks.SIMPLE_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BLACKSTONE_COLUMN =
+        registerBlockItem("smooth_blackstone_column", ModBlocks.SMOOTH_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_BLACKSTONE =
+        registerBlockItem("thick_inlayed_blackstone", ModBlocks.THICK_INLAYED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BLACKSTONE_COLUMN =
+        registerBlockItem("tiled_blackstone_column", ModBlocks.TILED_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_BLACKSTONE =
+        registerBlockItem("tiled_bordered_blackstone", ModBlocks.TILED_BORDERED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_BLACKSTONE =
+        registerBlockItem("tiny_brick_bordered_blackstone", ModBlocks.TINY_BRICK_BORDERED_BLACKSTONE);
+
+    // ── Black Concrete ──
+    public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_PANEL =
+        registerBlockItem("black_concrete_panel", ModBlocks.BLACK_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_PILLAR =
+        registerBlockItem("black_concrete_pillar", ModBlocks.BLACK_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_BLACK_CONCRETE =
+        registerBlockItem("grill_black_concrete", ModBlocks.GRILL_BLACK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_BLACK_CONCRETE =
+        registerBlockItem("pegged_black_concrete", ModBlocks.PEGGED_BLACK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BLACK_CONCRETE =
+        registerBlockItem("smooth_black_concrete", ModBlocks.SMOOTH_BLACK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_BLACK_CONCRETE =
+        registerBlockItem("striped_black_concrete", ModBlocks.STRIPED_BLACK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_BLACK_CONCRETE =
+        registerBlockItem("wired_black_concrete", ModBlocks.WIRED_BLACK_CONCRETE);
+
+    // ── Black Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_BLACK_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_black_stained_glass_pillar", ModBlocks.ARCHED_BLACK_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_BLACK_STAINED_GLASS =
+        registerBlockItem("fancy_black_stained_glass", ModBlocks.FANCY_BLACK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BLACK_STAINED_GLASS =
+        registerBlockItem("ornate_black_stained_glass", ModBlocks.ORNATE_BLACK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_BLACK_STAINED_GLASS =
+        registerBlockItem("raster_black_stained_glass", ModBlocks.RASTER_BLACK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_STAINED_GLASS =
+        registerBlockItem("small_black_stained_glass", ModBlocks.SMALL_BLACK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BLACK_STAINED_GLASS =
+        registerBlockItem("tiled_black_stained_glass", ModBlocks.TILED_BLACK_STAINED_GLASS);
+
+    // ── Black Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> BLACK_TERRACOTTA_COLUMN =
+        registerBlockItem("black_terracotta_column", ModBlocks.BLACK_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> BLACK_TERRACOTTA_PILLAR =
+        registerBlockItem("black_terracotta_pillar", ModBlocks.BLACK_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_BLACK_TERRACOTTA =
+        registerBlockItem("circular_black_terracotta", ModBlocks.CIRCULAR_BLACK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_BLACK_TERRACOTTA =
+        registerBlockItem("curled_black_terracotta", ModBlocks.CURLED_BLACK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_BLACK_TERRACOTTA =
+        registerBlockItem("hexagonical_black_terracotta", ModBlocks.HEXAGONICAL_BLACK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_BLACK_TERRACOTTA =
+        registerBlockItem("inscribed_black_terracotta", ModBlocks.INSCRIBED_BLACK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_TERRACOTTA_TILES =
+        registerBlockItem("small_black_terracotta_tiles", ModBlocks.SMALL_BLACK_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_BLACK_TERRACOTTA =
+        registerBlockItem("starry_black_terracotta", ModBlocks.STARRY_BLACK_TERRACOTTA);
+
+    // ── Black Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_BLACK_WOOL =
+        registerBlockItem("cornered_black_wool", ModBlocks.CORNERED_BLACK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_BLACK_WOOL =
+        registerBlockItem("crafted_black_wool", ModBlocks.CRAFTED_BLACK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_BLACK_WOOL =
+        registerBlockItem("harsh_quilted_black_wool", ModBlocks.HARSH_QUILTED_BLACK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_BLACK_WOOL =
+        registerBlockItem("rectangle_black_wool", ModBlocks.RECTANGLE_BLACK_WOOL);
+
+    // ── Blue Concrete ──
+    public static final DeferredHolder<Item, BlockItem> BLUE_CONCRETE_PANEL =
+        registerBlockItem("blue_concrete_panel", ModBlocks.BLUE_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> BLUE_CONCRETE_PILLAR =
+        registerBlockItem("blue_concrete_pillar", ModBlocks.BLUE_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_BLUE_CONCRETE =
+        registerBlockItem("grill_blue_concrete", ModBlocks.GRILL_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_BLUE_CONCRETE =
+        registerBlockItem("pegged_blue_concrete", ModBlocks.PEGGED_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BLUE_CONCRETE =
+        registerBlockItem("smooth_blue_concrete", ModBlocks.SMOOTH_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_BLUE_CONCRETE =
+        registerBlockItem("striped_blue_concrete", ModBlocks.STRIPED_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_BLUE_CONCRETE =
+        registerBlockItem("wired_blue_concrete", ModBlocks.WIRED_BLUE_CONCRETE);
+
+    // ── Blue Ice ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_BLUE_ICE =
+        registerBlockItem("bordered_blue_ice", ModBlocks.BORDERED_BLUE_ICE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_BLUE_ICE =
+        registerBlockItem("brick_bordered_blue_ice", ModBlocks.BRICK_BORDERED_BLUE_ICE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_BLUE_ICE_PILLAR =
+        registerBlockItem("curly_blue_ice_pillar", ModBlocks.CURLY_BLUE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_BLUE_ICE_COLUMN =
+        registerBlockItem("cut_blue_ice_column", ModBlocks.CUT_BLUE_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_BLUE_ICE_BRICKS =
+        registerBlockItem("edged_blue_ice_bricks", ModBlocks.EDGED_BLUE_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_BLUE_ICE_PILLAR =
+        registerBlockItem("fine_blue_ice_pillar", ModBlocks.FINE_BLUE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_BLUE_ICE_BRICKS =
+        registerBlockItem("massive_blue_ice_bricks", ModBlocks.MASSIVE_BLUE_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BLUE_ICE_PILLAR =
+        registerBlockItem("ornate_blue_ice_pillar", ModBlocks.ORNATE_BLUE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_BLUE_ICE_TILES =
+        registerBlockItem("overlapping_blue_ice_tiles", ModBlocks.OVERLAPPING_BLUE_ICE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BLUE_ICE =
+        registerBlockItem("polished_blue_ice", ModBlocks.POLISHED_BLUE_ICE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_BLUE_ICE_PILLAR =
+        registerBlockItem("simple_blue_ice_pillar", ModBlocks.SIMPLE_BLUE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BLUE_ICE_COLUMN =
+        registerBlockItem("smooth_blue_ice_column", ModBlocks.SMOOTH_BLUE_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_BLUE_ICE =
+        registerBlockItem("thick_inlayed_blue_ice", ModBlocks.THICK_INLAYED_BLUE_ICE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BLUE_ICE_COLUMN =
+        registerBlockItem("tiled_blue_ice_column", ModBlocks.TILED_BLUE_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_BLUE_ICE =
+        registerBlockItem("tiled_bordered_blue_ice", ModBlocks.TILED_BORDERED_BLUE_ICE);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_BLUE_ICE =
+        registerBlockItem("tiny_brick_bordered_blue_ice", ModBlocks.TINY_BRICK_BORDERED_BLUE_ICE);
+
+    // ── Blue Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_BLUE_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_blue_stained_glass_pillar", ModBlocks.ARCHED_BLUE_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_BLUE_STAINED_GLASS =
+        registerBlockItem("fancy_blue_stained_glass", ModBlocks.FANCY_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BLUE_STAINED_GLASS =
+        registerBlockItem("ornate_blue_stained_glass", ModBlocks.ORNATE_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_BLUE_STAINED_GLASS =
+        registerBlockItem("raster_blue_stained_glass", ModBlocks.RASTER_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_STAINED_GLASS =
+        registerBlockItem("small_blue_stained_glass", ModBlocks.SMALL_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BLUE_STAINED_GLASS =
+        registerBlockItem("tiled_blue_stained_glass", ModBlocks.TILED_BLUE_STAINED_GLASS);
+
+    // ── Blue Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> BLUE_TERRACOTTA_COLUMN =
+        registerBlockItem("blue_terracotta_column", ModBlocks.BLUE_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> BLUE_TERRACOTTA_PILLAR =
+        registerBlockItem("blue_terracotta_pillar", ModBlocks.BLUE_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_BLUE_TERRACOTTA =
+        registerBlockItem("circular_blue_terracotta", ModBlocks.CIRCULAR_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_BLUE_TERRACOTTA =
+        registerBlockItem("curled_blue_terracotta", ModBlocks.CURLED_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_BLUE_TERRACOTTA =
+        registerBlockItem("hexagonical_blue_terracotta", ModBlocks.HEXAGONICAL_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_BLUE_TERRACOTTA =
+        registerBlockItem("inscribed_blue_terracotta", ModBlocks.INSCRIBED_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_TERRACOTTA_TILES =
+        registerBlockItem("small_blue_terracotta_tiles", ModBlocks.SMALL_BLUE_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_BLUE_TERRACOTTA =
+        registerBlockItem("starry_blue_terracotta", ModBlocks.STARRY_BLUE_TERRACOTTA);
+
+    // ── Blue Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_BLUE_WOOL =
+        registerBlockItem("cornered_blue_wool", ModBlocks.CORNERED_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_BLUE_WOOL =
+        registerBlockItem("crafted_blue_wool", ModBlocks.CRAFTED_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_BLUE_WOOL =
+        registerBlockItem("harsh_quilted_blue_wool", ModBlocks.HARSH_QUILTED_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_BLUE_WOOL =
+        registerBlockItem("rectangle_blue_wool", ModBlocks.RECTANGLE_BLUE_WOOL);
+
+    // ── Borderless Bricks ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_BORDERLESS_BRICKS =
+        registerBlockItem("bordered_borderless_bricks", ModBlocks.BORDERED_BORDERLESS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_BORDERLESS_BRICKS =
+        registerBlockItem("brick_bordered_borderless_bricks", ModBlocks.BRICK_BORDERED_BORDERLESS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_BORDERLESS_BRICKS_PILLAR =
+        registerBlockItem("curly_borderless_bricks_pillar", ModBlocks.CURLY_BORDERLESS_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_BORDERLESS_BRICKS_COLUMN =
+        registerBlockItem("cut_borderless_bricks_column", ModBlocks.CUT_BORDERLESS_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_BORDERLESS_BRICKS_BRICKS =
+        registerBlockItem("edged_borderless_bricks_bricks", ModBlocks.EDGED_BORDERLESS_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_BORDERLESS_BRICKS_PILLAR =
+        registerBlockItem("fine_borderless_bricks_pillar", ModBlocks.FINE_BORDERLESS_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_BORDERLESS_BRICKS_BRICKS =
+        registerBlockItem("massive_borderless_bricks_bricks", ModBlocks.MASSIVE_BORDERLESS_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BORDERLESS_BRICKS_PILLAR =
+        registerBlockItem("ornate_borderless_bricks_pillar", ModBlocks.ORNATE_BORDERLESS_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_BORDERLESS_BRICKS_TILES =
+        registerBlockItem("overlapping_borderless_bricks_tiles", ModBlocks.OVERLAPPING_BORDERLESS_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BORDERLESS_BRICKS =
+        registerBlockItem("polished_borderless_bricks", ModBlocks.POLISHED_BORDERLESS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_BORDERLESS_BRICKS_PILLAR =
+        registerBlockItem("simple_borderless_bricks_pillar", ModBlocks.SIMPLE_BORDERLESS_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BORDERLESS_BRICKS_COLUMN =
+        registerBlockItem("smooth_borderless_bricks_column", ModBlocks.SMOOTH_BORDERLESS_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_BORDERLESS_BRICKS =
+        registerBlockItem("thick_inlayed_borderless_bricks", ModBlocks.THICK_INLAYED_BORDERLESS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_BORDERLESS_BRICKS =
+        registerBlockItem("tiled_bordered_borderless_bricks", ModBlocks.TILED_BORDERED_BORDERLESS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERLESS_BRICKS_COLUMN =
+        registerBlockItem("tiled_borderless_bricks_column", ModBlocks.TILED_BORDERLESS_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_BORDERLESS_BRICKS =
+        registerBlockItem("tiny_brick_bordered_borderless_bricks", ModBlocks.TINY_BRICK_BORDERED_BORDERLESS_BRICKS);
+
+    // ── Bricks ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_BRICKS =
+        registerBlockItem("bordered_bricks", ModBlocks.BORDERED_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_BRICKS =
+        registerBlockItem("brick_bordered_bricks", ModBlocks.BRICK_BORDERED_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_BRICKS_PILLAR =
+        registerBlockItem("curly_bricks_pillar", ModBlocks.CURLY_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_BRICKS_COLUMN =
+        registerBlockItem("cut_bricks_column", ModBlocks.CUT_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_BRICKS_BRICKS =
+        registerBlockItem("edged_bricks_bricks", ModBlocks.EDGED_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_BRICKS_PILLAR =
+        registerBlockItem("fine_bricks_pillar", ModBlocks.FINE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_BRICKS_BRICKS =
+        registerBlockItem("massive_bricks_bricks", ModBlocks.MASSIVE_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BRICKS_PILLAR =
+        registerBlockItem("ornate_bricks_pillar", ModBlocks.ORNATE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_BRICKS_TILES =
+        registerBlockItem("overlapping_bricks_tiles", ModBlocks.OVERLAPPING_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_BRICKS =
+        registerBlockItem("polished_bricks", ModBlocks.POLISHED_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_BRICKS_PILLAR =
+        registerBlockItem("simple_bricks_pillar", ModBlocks.SIMPLE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BRICKS_COLUMN =
+        registerBlockItem("smooth_bricks_column", ModBlocks.SMOOTH_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_BRICKS =
+        registerBlockItem("thick_inlayed_bricks", ModBlocks.THICK_INLAYED_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_BRICKS =
+        registerBlockItem("tiled_bordered_bricks", ModBlocks.TILED_BORDERED_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BRICKS_COLUMN =
+        registerBlockItem("tiled_bricks_column", ModBlocks.TILED_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_BRICKS =
+        registerBlockItem("tiny_brick_bordered_bricks", ModBlocks.TINY_BRICK_BORDERED_BRICKS);
+
+    // ── Brown Concrete ──
+    public static final DeferredHolder<Item, BlockItem> BROWN_CONCRETE_PANEL =
+        registerBlockItem("brown_concrete_panel", ModBlocks.BROWN_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> BROWN_CONCRETE_PILLAR =
+        registerBlockItem("brown_concrete_pillar", ModBlocks.BROWN_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_BROWN_CONCRETE =
+        registerBlockItem("grill_brown_concrete", ModBlocks.GRILL_BROWN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_BROWN_CONCRETE =
+        registerBlockItem("pegged_brown_concrete", ModBlocks.PEGGED_BROWN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_BROWN_CONCRETE =
+        registerBlockItem("smooth_brown_concrete", ModBlocks.SMOOTH_BROWN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_BROWN_CONCRETE =
+        registerBlockItem("striped_brown_concrete", ModBlocks.STRIPED_BROWN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_BROWN_CONCRETE =
+        registerBlockItem("wired_brown_concrete", ModBlocks.WIRED_BROWN_CONCRETE);
+
+    // ── Brown Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_BROWN_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_brown_stained_glass_pillar", ModBlocks.ARCHED_BROWN_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_BROWN_STAINED_GLASS =
+        registerBlockItem("fancy_brown_stained_glass", ModBlocks.FANCY_BROWN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_BROWN_STAINED_GLASS =
+        registerBlockItem("ornate_brown_stained_glass", ModBlocks.ORNATE_BROWN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_BROWN_STAINED_GLASS =
+        registerBlockItem("raster_brown_stained_glass", ModBlocks.RASTER_BROWN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_STAINED_GLASS =
+        registerBlockItem("small_brown_stained_glass", ModBlocks.SMALL_BROWN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BROWN_STAINED_GLASS =
+        registerBlockItem("tiled_brown_stained_glass", ModBlocks.TILED_BROWN_STAINED_GLASS);
+
+    // ── Brown Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> BROWN_TERRACOTTA_COLUMN =
+        registerBlockItem("brown_terracotta_column", ModBlocks.BROWN_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> BROWN_TERRACOTTA_PILLAR =
+        registerBlockItem("brown_terracotta_pillar", ModBlocks.BROWN_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_BROWN_TERRACOTTA =
+        registerBlockItem("circular_brown_terracotta", ModBlocks.CIRCULAR_BROWN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_BROWN_TERRACOTTA =
+        registerBlockItem("curled_brown_terracotta", ModBlocks.CURLED_BROWN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_BROWN_TERRACOTTA =
+        registerBlockItem("hexagonical_brown_terracotta", ModBlocks.HEXAGONICAL_BROWN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_BROWN_TERRACOTTA =
+        registerBlockItem("inscribed_brown_terracotta", ModBlocks.INSCRIBED_BROWN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_TERRACOTTA_TILES =
+        registerBlockItem("small_brown_terracotta_tiles", ModBlocks.SMALL_BROWN_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_BROWN_TERRACOTTA =
+        registerBlockItem("starry_brown_terracotta", ModBlocks.STARRY_BROWN_TERRACOTTA);
+
+    // ── Brown Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_BROWN_WOOL =
+        registerBlockItem("cornered_brown_wool", ModBlocks.CORNERED_BROWN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_BROWN_WOOL =
+        registerBlockItem("crafted_brown_wool", ModBlocks.CRAFTED_BROWN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_BROWN_WOOL =
+        registerBlockItem("harsh_quilted_brown_wool", ModBlocks.HARSH_QUILTED_BROWN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_BROWN_WOOL =
+        registerBlockItem("rectangle_brown_wool", ModBlocks.RECTANGLE_BROWN_WOOL);
+
+    // ── Calcite ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_CALCITE =
+        registerBlockItem("bordered_calcite", ModBlocks.BORDERED_CALCITE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_CALCITE =
+        registerBlockItem("brick_bordered_calcite", ModBlocks.BRICK_BORDERED_CALCITE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_CALCITE_PILLAR =
+        registerBlockItem("curly_calcite_pillar", ModBlocks.CURLY_CALCITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_CALCITE_COLUMN =
+        registerBlockItem("cut_calcite_column", ModBlocks.CUT_CALCITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_CALCITE_BRICKS =
+        registerBlockItem("edged_calcite_bricks", ModBlocks.EDGED_CALCITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_CALCITE_PILLAR =
+        registerBlockItem("fine_calcite_pillar", ModBlocks.FINE_CALCITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_CALCITE_BRICKS =
+        registerBlockItem("massive_calcite_bricks", ModBlocks.MASSIVE_CALCITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_CALCITE_PILLAR =
+        registerBlockItem("ornate_calcite_pillar", ModBlocks.ORNATE_CALCITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_CALCITE_TILES =
+        registerBlockItem("overlapping_calcite_tiles", ModBlocks.OVERLAPPING_CALCITE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_CALCITE =
+        registerBlockItem("polished_calcite", ModBlocks.POLISHED_CALCITE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_CALCITE_PILLAR =
+        registerBlockItem("simple_calcite_pillar", ModBlocks.SIMPLE_CALCITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_CALCITE_COLUMN =
+        registerBlockItem("smooth_calcite_column", ModBlocks.SMOOTH_CALCITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_CALCITE =
+        registerBlockItem("thick_inlayed_calcite", ModBlocks.THICK_INLAYED_CALCITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_CALCITE =
+        registerBlockItem("tiled_bordered_calcite", ModBlocks.TILED_BORDERED_CALCITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_CALCITE_COLUMN =
+        registerBlockItem("tiled_calcite_column", ModBlocks.TILED_CALCITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_CALCITE =
+        registerBlockItem("tiny_brick_bordered_calcite", ModBlocks.TINY_BRICK_BORDERED_CALCITE);
+
+    // ── Cherry Planks ──
+    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_PANEL =
+        registerBlockItem("cherry_planks_panel", ModBlocks.CHERRY_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> CORNERED_CHERRY_PLANKS =
+        registerBlockItem("cornered_cherry_planks", ModBlocks.CORNERED_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_CHERRY_PLANKS =
+        registerBlockItem("crated_cherry_planks", ModBlocks.CRATED_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_CHERRY_PLANKS =
+        registerBlockItem("enclosed_cherry_planks", ModBlocks.ENCLOSED_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_CHERRY_PLANKS =
+        registerBlockItem("framed_cherry_planks", ModBlocks.FRAMED_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_CHERRY_PLANKS =
+        registerBlockItem("natural_cherry_planks", ModBlocks.NATURAL_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_CHERRY_PLANKS =
+        registerBlockItem("pegged_cherry_planks", ModBlocks.PEGGED_CHERRY_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_CHERRY_PLANKS =
+        registerBlockItem("whirlwind_cherry_planks", ModBlocks.WHIRLWIND_CHERRY_PLANKS);
+
+    // ── Clay ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_CLAY =
+        registerBlockItem("bordered_clay", ModBlocks.BORDERED_CLAY);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_CLAY =
+        registerBlockItem("brick_bordered_clay", ModBlocks.BRICK_BORDERED_CLAY);
+    public static final DeferredHolder<Item, BlockItem> CURLY_CLAY_PILLAR =
+        registerBlockItem("curly_clay_pillar", ModBlocks.CURLY_CLAY_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_CLAY_COLUMN =
+        registerBlockItem("cut_clay_column", ModBlocks.CUT_CLAY_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_CLAY_BRICKS =
+        registerBlockItem("edged_clay_bricks", ModBlocks.EDGED_CLAY_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_CLAY_PILLAR =
+        registerBlockItem("fine_clay_pillar", ModBlocks.FINE_CLAY_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_CLAY_BRICKS =
+        registerBlockItem("massive_clay_bricks", ModBlocks.MASSIVE_CLAY_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_CLAY_PILLAR =
+        registerBlockItem("ornate_clay_pillar", ModBlocks.ORNATE_CLAY_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_CLAY_TILES =
+        registerBlockItem("overlapping_clay_tiles", ModBlocks.OVERLAPPING_CLAY_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_CLAY =
+        registerBlockItem("polished_clay", ModBlocks.POLISHED_CLAY);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_CLAY_PILLAR =
+        registerBlockItem("simple_clay_pillar", ModBlocks.SIMPLE_CLAY_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_CLAY_COLUMN =
+        registerBlockItem("smooth_clay_column", ModBlocks.SMOOTH_CLAY_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_CLAY =
+        registerBlockItem("thick_inlayed_clay", ModBlocks.THICK_INLAYED_CLAY);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_CLAY =
+        registerBlockItem("tiled_bordered_clay", ModBlocks.TILED_BORDERED_CLAY);
+    public static final DeferredHolder<Item, BlockItem> TILED_CLAY_COLUMN =
+        registerBlockItem("tiled_clay_column", ModBlocks.TILED_CLAY_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_CLAY =
+        registerBlockItem("tiny_brick_bordered_clay", ModBlocks.TINY_BRICK_BORDERED_CLAY);
+
+    // ── Coal Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_COAL_BLOCK =
+        registerBlockItem("bordered_coal_block", ModBlocks.BORDERED_COAL_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_COAL_BLOCK =
+        registerBlockItem("brick_bordered_coal_block", ModBlocks.BRICK_BORDERED_COAL_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_COAL_BLOCK_PILLAR =
+        registerBlockItem("curly_coal_block_pillar", ModBlocks.CURLY_COAL_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_COAL_BLOCK_COLUMN =
+        registerBlockItem("cut_coal_block_column", ModBlocks.CUT_COAL_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_COAL_BLOCK_BRICKS =
+        registerBlockItem("edged_coal_block_bricks", ModBlocks.EDGED_COAL_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_COAL_BLOCK_PILLAR =
+        registerBlockItem("fine_coal_block_pillar", ModBlocks.FINE_COAL_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_COAL_BLOCK_BRICKS =
+        registerBlockItem("massive_coal_block_bricks", ModBlocks.MASSIVE_COAL_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_COAL_BLOCK_PILLAR =
+        registerBlockItem("ornate_coal_block_pillar", ModBlocks.ORNATE_COAL_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_COAL_BLOCK_TILES =
+        registerBlockItem("overlapping_coal_block_tiles", ModBlocks.OVERLAPPING_COAL_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_COAL_BLOCK =
+        registerBlockItem("polished_coal_block", ModBlocks.POLISHED_COAL_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_COAL_BLOCK_PILLAR =
+        registerBlockItem("simple_coal_block_pillar", ModBlocks.SIMPLE_COAL_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_COAL_BLOCK_COLUMN =
+        registerBlockItem("smooth_coal_block_column", ModBlocks.SMOOTH_COAL_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_COAL_BLOCK =
+        registerBlockItem("thick_inlayed_coal_block", ModBlocks.THICK_INLAYED_COAL_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_COAL_BLOCK =
+        registerBlockItem("tiled_bordered_coal_block", ModBlocks.TILED_BORDERED_COAL_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_COAL_BLOCK_COLUMN =
+        registerBlockItem("tiled_coal_block_column", ModBlocks.TILED_COAL_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_COAL_BLOCK =
+        registerBlockItem("tiny_brick_bordered_coal_block", ModBlocks.TINY_BRICK_BORDERED_COAL_BLOCK);
+
+    // ── Cobblestone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_COBBLESTONE =
+        registerBlockItem("bordered_cobblestone", ModBlocks.BORDERED_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_COBBLESTONE =
+        registerBlockItem("brick_bordered_cobblestone", ModBlocks.BRICK_BORDERED_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_COBBLESTONE_PILLAR =
+        registerBlockItem("curly_cobblestone_pillar", ModBlocks.CURLY_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_COBBLESTONE_COLUMN =
+        registerBlockItem("cut_cobblestone_column", ModBlocks.CUT_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_COBBLESTONE_BRICKS =
+        registerBlockItem("edged_cobblestone_bricks", ModBlocks.EDGED_COBBLESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_COBBLESTONE_PILLAR =
+        registerBlockItem("fine_cobblestone_pillar", ModBlocks.FINE_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_COBBLESTONE_BRICKS =
+        registerBlockItem("massive_cobblestone_bricks", ModBlocks.MASSIVE_COBBLESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_COBBLESTONE_PILLAR =
+        registerBlockItem("ornate_cobblestone_pillar", ModBlocks.ORNATE_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_COBBLESTONE_TILES =
+        registerBlockItem("overlapping_cobblestone_tiles", ModBlocks.OVERLAPPING_COBBLESTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_COBBLESTONE =
+        registerBlockItem("polished_cobblestone", ModBlocks.POLISHED_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_COBBLESTONE_PILLAR =
+        registerBlockItem("simple_cobblestone_pillar", ModBlocks.SIMPLE_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_COBBLESTONE_COLUMN =
+        registerBlockItem("smooth_cobblestone_column", ModBlocks.SMOOTH_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_COBBLESTONE =
+        registerBlockItem("thick_inlayed_cobblestone", ModBlocks.THICK_INLAYED_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_COBBLESTONE =
+        registerBlockItem("tiled_bordered_cobblestone", ModBlocks.TILED_BORDERED_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_COBBLESTONE_COLUMN =
+        registerBlockItem("tiled_cobblestone_column", ModBlocks.TILED_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_COBBLESTONE =
+        registerBlockItem("tiny_brick_bordered_cobblestone", ModBlocks.TINY_BRICK_BORDERED_COBBLESTONE);
+
+    // ── Crimson Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_CRIMSON_PLANKS =
+        registerBlockItem("cornered_crimson_planks", ModBlocks.CORNERED_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_CRIMSON_PLANKS =
+        registerBlockItem("crated_crimson_planks", ModBlocks.CRATED_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_PANEL =
+        registerBlockItem("crimson_planks_panel", ModBlocks.CRIMSON_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_CRIMSON_PLANKS =
+        registerBlockItem("enclosed_crimson_planks", ModBlocks.ENCLOSED_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_CRIMSON_PLANKS =
+        registerBlockItem("framed_crimson_planks", ModBlocks.FRAMED_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_CRIMSON_PLANKS =
+        registerBlockItem("natural_crimson_planks", ModBlocks.NATURAL_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_CRIMSON_PLANKS =
+        registerBlockItem("pegged_crimson_planks", ModBlocks.PEGGED_CRIMSON_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_CRIMSON_PLANKS =
+        registerBlockItem("whirlwind_crimson_planks", ModBlocks.WHIRLWIND_CRIMSON_PLANKS);
+
+    // ── Crying Obsidian ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_CRYING_OBSIDIAN =
+        registerBlockItem("bordered_crying_obsidian", ModBlocks.BORDERED_CRYING_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_CRYING_OBSIDIAN =
+        registerBlockItem("brick_bordered_crying_obsidian", ModBlocks.BRICK_BORDERED_CRYING_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> CURLY_CRYING_OBSIDIAN_PILLAR =
+        registerBlockItem("curly_crying_obsidian_pillar", ModBlocks.CURLY_CRYING_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_CRYING_OBSIDIAN_COLUMN =
+        registerBlockItem("cut_crying_obsidian_column", ModBlocks.CUT_CRYING_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_CRYING_OBSIDIAN_BRICKS =
+        registerBlockItem("edged_crying_obsidian_bricks", ModBlocks.EDGED_CRYING_OBSIDIAN_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_CRYING_OBSIDIAN_PILLAR =
+        registerBlockItem("fine_crying_obsidian_pillar", ModBlocks.FINE_CRYING_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_CRYING_OBSIDIAN_BRICKS =
+        registerBlockItem("massive_crying_obsidian_bricks", ModBlocks.MASSIVE_CRYING_OBSIDIAN_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_CRYING_OBSIDIAN_PILLAR =
+        registerBlockItem("ornate_crying_obsidian_pillar", ModBlocks.ORNATE_CRYING_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_CRYING_OBSIDIAN_TILES =
+        registerBlockItem("overlapping_crying_obsidian_tiles", ModBlocks.OVERLAPPING_CRYING_OBSIDIAN_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_CRYING_OBSIDIAN =
+        registerBlockItem("polished_crying_obsidian", ModBlocks.POLISHED_CRYING_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_CRYING_OBSIDIAN_PILLAR =
+        registerBlockItem("simple_crying_obsidian_pillar", ModBlocks.SIMPLE_CRYING_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_CRYING_OBSIDIAN_COLUMN =
+        registerBlockItem("smooth_crying_obsidian_column", ModBlocks.SMOOTH_CRYING_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_CRYING_OBSIDIAN =
+        registerBlockItem("thick_inlayed_crying_obsidian", ModBlocks.THICK_INLAYED_CRYING_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_CRYING_OBSIDIAN =
+        registerBlockItem("tiled_bordered_crying_obsidian", ModBlocks.TILED_BORDERED_CRYING_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> TILED_CRYING_OBSIDIAN_COLUMN =
+        registerBlockItem("tiled_crying_obsidian_column", ModBlocks.TILED_CRYING_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_CRYING_OBSIDIAN =
+        registerBlockItem("tiny_brick_bordered_crying_obsidian", ModBlocks.TINY_BRICK_BORDERED_CRYING_OBSIDIAN);
+
+    // ── Cyan Concrete ──
+    public static final DeferredHolder<Item, BlockItem> CYAN_CONCRETE_PANEL =
+        registerBlockItem("cyan_concrete_panel", ModBlocks.CYAN_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> CYAN_CONCRETE_PILLAR =
+        registerBlockItem("cyan_concrete_pillar", ModBlocks.CYAN_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_CYAN_CONCRETE =
+        registerBlockItem("grill_cyan_concrete", ModBlocks.GRILL_CYAN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_CYAN_CONCRETE =
+        registerBlockItem("pegged_cyan_concrete", ModBlocks.PEGGED_CYAN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_CYAN_CONCRETE =
+        registerBlockItem("smooth_cyan_concrete", ModBlocks.SMOOTH_CYAN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_CYAN_CONCRETE =
+        registerBlockItem("striped_cyan_concrete", ModBlocks.STRIPED_CYAN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_CYAN_CONCRETE =
+        registerBlockItem("wired_cyan_concrete", ModBlocks.WIRED_CYAN_CONCRETE);
+
+    // ── Cyan Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_CYAN_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_cyan_stained_glass_pillar", ModBlocks.ARCHED_CYAN_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_CYAN_STAINED_GLASS =
+        registerBlockItem("fancy_cyan_stained_glass", ModBlocks.FANCY_CYAN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_CYAN_STAINED_GLASS =
+        registerBlockItem("ornate_cyan_stained_glass", ModBlocks.ORNATE_CYAN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_CYAN_STAINED_GLASS =
+        registerBlockItem("raster_cyan_stained_glass", ModBlocks.RASTER_CYAN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_STAINED_GLASS =
+        registerBlockItem("small_cyan_stained_glass", ModBlocks.SMALL_CYAN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_CYAN_STAINED_GLASS =
+        registerBlockItem("tiled_cyan_stained_glass", ModBlocks.TILED_CYAN_STAINED_GLASS);
+
+    // ── Cyan Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_CYAN_TERRACOTTA =
+        registerBlockItem("circular_cyan_terracotta", ModBlocks.CIRCULAR_CYAN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_CYAN_TERRACOTTA =
+        registerBlockItem("curled_cyan_terracotta", ModBlocks.CURLED_CYAN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CYAN_TERRACOTTA_COLUMN =
+        registerBlockItem("cyan_terracotta_column", ModBlocks.CYAN_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> CYAN_TERRACOTTA_PILLAR =
+        registerBlockItem("cyan_terracotta_pillar", ModBlocks.CYAN_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_CYAN_TERRACOTTA =
+        registerBlockItem("hexagonical_cyan_terracotta", ModBlocks.HEXAGONICAL_CYAN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_CYAN_TERRACOTTA =
+        registerBlockItem("inscribed_cyan_terracotta", ModBlocks.INSCRIBED_CYAN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_TERRACOTTA_TILES =
+        registerBlockItem("small_cyan_terracotta_tiles", ModBlocks.SMALL_CYAN_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_CYAN_TERRACOTTA =
+        registerBlockItem("starry_cyan_terracotta", ModBlocks.STARRY_CYAN_TERRACOTTA);
+
+    // ── Cyan Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_CYAN_WOOL =
+        registerBlockItem("cornered_cyan_wool", ModBlocks.CORNERED_CYAN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_CYAN_WOOL =
+        registerBlockItem("crafted_cyan_wool", ModBlocks.CRAFTED_CYAN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_CYAN_WOOL =
+        registerBlockItem("harsh_quilted_cyan_wool", ModBlocks.HARSH_QUILTED_CYAN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_CYAN_WOOL =
+        registerBlockItem("rectangle_cyan_wool", ModBlocks.RECTANGLE_CYAN_WOOL);
+
+    // ── Dark Oak Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_DARK_OAK_PLANKS =
+        registerBlockItem("cornered_dark_oak_planks", ModBlocks.CORNERED_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_DARK_OAK_PLANKS =
+        registerBlockItem("crated_dark_oak_planks", ModBlocks.CRATED_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_PANEL =
+        registerBlockItem("dark_oak_planks_panel", ModBlocks.DARK_OAK_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_DARK_OAK_PLANKS =
+        registerBlockItem("enclosed_dark_oak_planks", ModBlocks.ENCLOSED_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_DARK_OAK_PLANKS =
+        registerBlockItem("framed_dark_oak_planks", ModBlocks.FRAMED_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_DARK_OAK_PLANKS =
+        registerBlockItem("natural_dark_oak_planks", ModBlocks.NATURAL_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_DARK_OAK_PLANKS =
+        registerBlockItem("pegged_dark_oak_planks", ModBlocks.PEGGED_DARK_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_DARK_OAK_PLANKS =
+        registerBlockItem("whirlwind_dark_oak_planks", ModBlocks.WHIRLWIND_DARK_OAK_PLANKS);
+
+    // ── Dark Prismarine ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_DARK_PRISMARINE =
+        registerBlockItem("bordered_dark_prismarine", ModBlocks.BORDERED_DARK_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_DARK_PRISMARINE =
+        registerBlockItem("brick_bordered_dark_prismarine", ModBlocks.BRICK_BORDERED_DARK_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_DARK_PRISMARINE_PILLAR =
+        registerBlockItem("curly_dark_prismarine_pillar", ModBlocks.CURLY_DARK_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_DARK_PRISMARINE_COLUMN =
+        registerBlockItem("cut_dark_prismarine_column", ModBlocks.CUT_DARK_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_DARK_PRISMARINE_BRICKS =
+        registerBlockItem("edged_dark_prismarine_bricks", ModBlocks.EDGED_DARK_PRISMARINE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_DARK_PRISMARINE_PILLAR =
+        registerBlockItem("fine_dark_prismarine_pillar", ModBlocks.FINE_DARK_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_DARK_PRISMARINE_BRICKS =
+        registerBlockItem("massive_dark_prismarine_bricks", ModBlocks.MASSIVE_DARK_PRISMARINE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_DARK_PRISMARINE_PILLAR =
+        registerBlockItem("ornate_dark_prismarine_pillar", ModBlocks.ORNATE_DARK_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_DARK_PRISMARINE_TILES =
+        registerBlockItem("overlapping_dark_prismarine_tiles", ModBlocks.OVERLAPPING_DARK_PRISMARINE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_DARK_PRISMARINE =
+        registerBlockItem("polished_dark_prismarine", ModBlocks.POLISHED_DARK_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_DARK_PRISMARINE_PILLAR =
+        registerBlockItem("simple_dark_prismarine_pillar", ModBlocks.SIMPLE_DARK_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_DARK_PRISMARINE_COLUMN =
+        registerBlockItem("smooth_dark_prismarine_column", ModBlocks.SMOOTH_DARK_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_DARK_PRISMARINE =
+        registerBlockItem("thick_inlayed_dark_prismarine", ModBlocks.THICK_INLAYED_DARK_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_DARK_PRISMARINE =
+        registerBlockItem("tiled_bordered_dark_prismarine", ModBlocks.TILED_BORDERED_DARK_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> TILED_DARK_PRISMARINE_COLUMN =
+        registerBlockItem("tiled_dark_prismarine_column", ModBlocks.TILED_DARK_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_DARK_PRISMARINE =
+        registerBlockItem("tiny_brick_bordered_dark_prismarine", ModBlocks.TINY_BRICK_BORDERED_DARK_PRISMARINE);
+
+    // ── Deepslate ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_DEEPSLATE =
+        registerBlockItem("bordered_deepslate", ModBlocks.BORDERED_DEEPSLATE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_DEEPSLATE =
+        registerBlockItem("brick_bordered_deepslate", ModBlocks.BRICK_BORDERED_DEEPSLATE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_DEEPSLATE_PILLAR =
+        registerBlockItem("curly_deepslate_pillar", ModBlocks.CURLY_DEEPSLATE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_DEEPSLATE_COLUMN =
+        registerBlockItem("cut_deepslate_column", ModBlocks.CUT_DEEPSLATE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_DEEPSLATE_BRICKS =
+        registerBlockItem("edged_deepslate_bricks", ModBlocks.EDGED_DEEPSLATE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_DEEPSLATE_PILLAR =
+        registerBlockItem("fine_deepslate_pillar", ModBlocks.FINE_DEEPSLATE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_DEEPSLATE_BRICKS =
+        registerBlockItem("massive_deepslate_bricks", ModBlocks.MASSIVE_DEEPSLATE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_DEEPSLATE_PILLAR =
+        registerBlockItem("ornate_deepslate_pillar", ModBlocks.ORNATE_DEEPSLATE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_DEEPSLATE_TILES =
+        registerBlockItem("overlapping_deepslate_tiles", ModBlocks.OVERLAPPING_DEEPSLATE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_DEEPSLATE =
+        registerBlockItem("polished_deepslate", ModBlocks.POLISHED_DEEPSLATE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_DEEPSLATE_PILLAR =
+        registerBlockItem("simple_deepslate_pillar", ModBlocks.SIMPLE_DEEPSLATE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_DEEPSLATE_COLUMN =
+        registerBlockItem("smooth_deepslate_column", ModBlocks.SMOOTH_DEEPSLATE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_DEEPSLATE =
+        registerBlockItem("thick_inlayed_deepslate", ModBlocks.THICK_INLAYED_DEEPSLATE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_DEEPSLATE =
+        registerBlockItem("tiled_bordered_deepslate", ModBlocks.TILED_BORDERED_DEEPSLATE);
+    public static final DeferredHolder<Item, BlockItem> TILED_DEEPSLATE_COLUMN =
+        registerBlockItem("tiled_deepslate_column", ModBlocks.TILED_DEEPSLATE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_DEEPSLATE =
+        registerBlockItem("tiny_brick_bordered_deepslate", ModBlocks.TINY_BRICK_BORDERED_DEEPSLATE);
+
+    // ── Diorite ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_DIORITE =
+        registerBlockItem("bordered_diorite", ModBlocks.BORDERED_DIORITE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_DIORITE =
+        registerBlockItem("brick_bordered_diorite", ModBlocks.BRICK_BORDERED_DIORITE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_DIORITE_PILLAR =
+        registerBlockItem("curly_diorite_pillar", ModBlocks.CURLY_DIORITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_DIORITE_COLUMN =
+        registerBlockItem("cut_diorite_column", ModBlocks.CUT_DIORITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_DIORITE_BRICKS =
+        registerBlockItem("edged_diorite_bricks", ModBlocks.EDGED_DIORITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_DIORITE_PILLAR =
+        registerBlockItem("fine_diorite_pillar", ModBlocks.FINE_DIORITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_DIORITE_BRICKS =
+        registerBlockItem("massive_diorite_bricks", ModBlocks.MASSIVE_DIORITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_DIORITE_PILLAR =
+        registerBlockItem("ornate_diorite_pillar", ModBlocks.ORNATE_DIORITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_DIORITE_TILES =
+        registerBlockItem("overlapping_diorite_tiles", ModBlocks.OVERLAPPING_DIORITE_TILES);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_DIORITE_PILLAR =
+        registerBlockItem("simple_diorite_pillar", ModBlocks.SIMPLE_DIORITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_DIORITE_COLUMN =
+        registerBlockItem("smooth_diorite_column", ModBlocks.SMOOTH_DIORITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_DIORITE =
+        registerBlockItem("thick_inlayed_diorite", ModBlocks.THICK_INLAYED_DIORITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_DIORITE =
+        registerBlockItem("tiled_bordered_diorite", ModBlocks.TILED_BORDERED_DIORITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_DIORITE_COLUMN =
+        registerBlockItem("tiled_diorite_column", ModBlocks.TILED_DIORITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_DIORITE =
+        registerBlockItem("tiny_brick_bordered_diorite", ModBlocks.TINY_BRICK_BORDERED_DIORITE);
+
+    // ── Dirt ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_DIRT =
+        registerBlockItem("bordered_dirt", ModBlocks.BORDERED_DIRT);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_DIRT =
+        registerBlockItem("brick_bordered_dirt", ModBlocks.BRICK_BORDERED_DIRT);
+    public static final DeferredHolder<Item, BlockItem> CURLY_DIRT_PILLAR =
+        registerBlockItem("curly_dirt_pillar", ModBlocks.CURLY_DIRT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_DIRT_COLUMN =
+        registerBlockItem("cut_dirt_column", ModBlocks.CUT_DIRT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_DIRT_BRICKS =
+        registerBlockItem("edged_dirt_bricks", ModBlocks.EDGED_DIRT_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_DIRT_PILLAR =
+        registerBlockItem("fine_dirt_pillar", ModBlocks.FINE_DIRT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_DIRT_BRICKS =
+        registerBlockItem("massive_dirt_bricks", ModBlocks.MASSIVE_DIRT_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_DIRT_PILLAR =
+        registerBlockItem("ornate_dirt_pillar", ModBlocks.ORNATE_DIRT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_DIRT_TILES =
+        registerBlockItem("overlapping_dirt_tiles", ModBlocks.OVERLAPPING_DIRT_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_DIRT =
+        registerBlockItem("polished_dirt", ModBlocks.POLISHED_DIRT);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_DIRT_PILLAR =
+        registerBlockItem("simple_dirt_pillar", ModBlocks.SIMPLE_DIRT_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_DIRT_COLUMN =
+        registerBlockItem("smooth_dirt_column", ModBlocks.SMOOTH_DIRT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_DIRT =
+        registerBlockItem("thick_inlayed_dirt", ModBlocks.THICK_INLAYED_DIRT);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_DIRT =
+        registerBlockItem("tiled_bordered_dirt", ModBlocks.TILED_BORDERED_DIRT);
+    public static final DeferredHolder<Item, BlockItem> TILED_DIRT_COLUMN =
+        registerBlockItem("tiled_dirt_column", ModBlocks.TILED_DIRT_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_DIRT =
+        registerBlockItem("tiny_brick_bordered_dirt", ModBlocks.TINY_BRICK_BORDERED_DIRT);
+
+    // ── Dripstone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_DRIPSTONE_BLOCK =
+        registerBlockItem("bordered_dripstone_block", ModBlocks.BORDERED_DRIPSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_DRIPSTONE_BLOCK =
+        registerBlockItem("brick_bordered_dripstone_block", ModBlocks.BRICK_BORDERED_DRIPSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_DRIPSTONE_BLOCK_PILLAR =
+        registerBlockItem("curly_dripstone_block_pillar", ModBlocks.CURLY_DRIPSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_DRIPSTONE_BLOCK_COLUMN =
+        registerBlockItem("cut_dripstone_block_column", ModBlocks.CUT_DRIPSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_DRIPSTONE_BLOCK_BRICKS =
+        registerBlockItem("edged_dripstone_block_bricks", ModBlocks.EDGED_DRIPSTONE_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_DRIPSTONE_BLOCK_PILLAR =
+        registerBlockItem("fine_dripstone_block_pillar", ModBlocks.FINE_DRIPSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_DRIPSTONE_BLOCK_BRICKS =
+        registerBlockItem("massive_dripstone_block_bricks", ModBlocks.MASSIVE_DRIPSTONE_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_DRIPSTONE_BLOCK_PILLAR =
+        registerBlockItem("ornate_dripstone_block_pillar", ModBlocks.ORNATE_DRIPSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_DRIPSTONE_BLOCK_TILES =
+        registerBlockItem("overlapping_dripstone_block_tiles", ModBlocks.OVERLAPPING_DRIPSTONE_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_DRIPSTONE_BLOCK =
+        registerBlockItem("polished_dripstone_block", ModBlocks.POLISHED_DRIPSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_DRIPSTONE_BLOCK_PILLAR =
+        registerBlockItem("simple_dripstone_block_pillar", ModBlocks.SIMPLE_DRIPSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_DRIPSTONE_BLOCK_COLUMN =
+        registerBlockItem("smooth_dripstone_block_column", ModBlocks.SMOOTH_DRIPSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_DRIPSTONE_BLOCK =
+        registerBlockItem("thick_inlayed_dripstone_block", ModBlocks.THICK_INLAYED_DRIPSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_DRIPSTONE_BLOCK =
+        registerBlockItem("tiled_bordered_dripstone_block", ModBlocks.TILED_BORDERED_DRIPSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_DRIPSTONE_BLOCK_COLUMN =
+        registerBlockItem("tiled_dripstone_block_column", ModBlocks.TILED_DRIPSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_DRIPSTONE_BLOCK =
+        registerBlockItem("tiny_brick_bordered_dripstone_block", ModBlocks.TINY_BRICK_BORDERED_DRIPSTONE_BLOCK);
+
+    // ── End Stone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_END_STONE =
+        registerBlockItem("bordered_end_stone", ModBlocks.BORDERED_END_STONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_END_STONE =
+        registerBlockItem("brick_bordered_end_stone", ModBlocks.BRICK_BORDERED_END_STONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_END_STONE_PILLAR =
+        registerBlockItem("curly_end_stone_pillar", ModBlocks.CURLY_END_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_END_STONE_COLUMN =
+        registerBlockItem("cut_end_stone_column", ModBlocks.CUT_END_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_END_STONE_BRICKS =
+        registerBlockItem("edged_end_stone_bricks", ModBlocks.EDGED_END_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_END_STONE_PILLAR =
+        registerBlockItem("fine_end_stone_pillar", ModBlocks.FINE_END_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_END_STONE_BRICKS =
+        registerBlockItem("massive_end_stone_bricks", ModBlocks.MASSIVE_END_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_END_STONE_PILLAR =
+        registerBlockItem("ornate_end_stone_pillar", ModBlocks.ORNATE_END_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_END_STONE_TILES =
+        registerBlockItem("overlapping_end_stone_tiles", ModBlocks.OVERLAPPING_END_STONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_END_STONE =
+        registerBlockItem("polished_end_stone", ModBlocks.POLISHED_END_STONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_END_STONE_PILLAR =
+        registerBlockItem("simple_end_stone_pillar", ModBlocks.SIMPLE_END_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_END_STONE_COLUMN =
+        registerBlockItem("smooth_end_stone_column", ModBlocks.SMOOTH_END_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_END_STONE =
+        registerBlockItem("thick_inlayed_end_stone", ModBlocks.THICK_INLAYED_END_STONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_END_STONE =
+        registerBlockItem("tiled_bordered_end_stone", ModBlocks.TILED_BORDERED_END_STONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_END_STONE_COLUMN =
+        registerBlockItem("tiled_end_stone_column", ModBlocks.TILED_END_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_END_STONE =
+        registerBlockItem("tiny_brick_bordered_end_stone", ModBlocks.TINY_BRICK_BORDERED_END_STONE);
+
+    // ── Gilded Blackston ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_GILDED_BLACKSTONE =
+        registerBlockItem("bordered_gilded_blackstone", ModBlocks.BORDERED_GILDED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_GILDED_BLACKSTONE =
+        registerBlockItem("brick_bordered_gilded_blackstone", ModBlocks.BRICK_BORDERED_GILDED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_GILDED_BLACKSTONE_PILLAR =
+        registerBlockItem("curly_gilded_blackstone_pillar", ModBlocks.CURLY_GILDED_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_GILDED_BLACKSTONE_COLUMN =
+        registerBlockItem("cut_gilded_blackstone_column", ModBlocks.CUT_GILDED_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_GILDED_BLACKSTONE_BRICKS =
+        registerBlockItem("edged_gilded_blackstone_bricks", ModBlocks.EDGED_GILDED_BLACKSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_GILDED_BLACKSTONE_PILLAR =
+        registerBlockItem("fine_gilded_blackstone_pillar", ModBlocks.FINE_GILDED_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_GILDED_BLACKSTONE_BRICKS =
+        registerBlockItem("massive_gilded_blackstone_bricks", ModBlocks.MASSIVE_GILDED_BLACKSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_GILDED_BLACKSTONE_PILLAR =
+        registerBlockItem("ornate_gilded_blackstone_pillar", ModBlocks.ORNATE_GILDED_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_GILDED_BLACKSTONE_TILES =
+        registerBlockItem("overlapping_gilded_blackstone_tiles", ModBlocks.OVERLAPPING_GILDED_BLACKSTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_GILDED_BLACKSTONE =
+        registerBlockItem("polished_gilded_blackstone", ModBlocks.POLISHED_GILDED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_GILDED_BLACKSTONE_PILLAR =
+        registerBlockItem("simple_gilded_blackstone_pillar", ModBlocks.SIMPLE_GILDED_BLACKSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_GILDED_BLACKSTONE_COLUMN =
+        registerBlockItem("smooth_gilded_blackstone_column", ModBlocks.SMOOTH_GILDED_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_GILDED_BLACKSTONE =
+        registerBlockItem("thick_inlayed_gilded_blackstone", ModBlocks.THICK_INLAYED_GILDED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_GILDED_BLACKSTONE =
+        registerBlockItem("tiled_bordered_gilded_blackstone", ModBlocks.TILED_BORDERED_GILDED_BLACKSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_GILDED_BLACKSTONE_COLUMN =
+        registerBlockItem("tiled_gilded_blackstone_column", ModBlocks.TILED_GILDED_BLACKSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_GILDED_BLACKSTONE =
+        registerBlockItem("tiny_brick_bordered_gilded_blackstone", ModBlocks.TINY_BRICK_BORDERED_GILDED_BLACKSTONE);
+
+    // ── Granite ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_GRANITE =
+        registerBlockItem("bordered_granite", ModBlocks.BORDERED_GRANITE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_GRANITE =
+        registerBlockItem("brick_bordered_granite", ModBlocks.BRICK_BORDERED_GRANITE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_GRANITE_PILLAR =
+        registerBlockItem("curly_granite_pillar", ModBlocks.CURLY_GRANITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_GRANITE_COLUMN =
+        registerBlockItem("cut_granite_column", ModBlocks.CUT_GRANITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_GRANITE_BRICKS =
+        registerBlockItem("edged_granite_bricks", ModBlocks.EDGED_GRANITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_GRANITE_PILLAR =
+        registerBlockItem("fine_granite_pillar", ModBlocks.FINE_GRANITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRANITE_PRISMARINE =
+        registerBlockItem("granite_prismarine", ModBlocks.GRANITE_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_GRANITE_BRICKS =
+        registerBlockItem("massive_granite_bricks", ModBlocks.MASSIVE_GRANITE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_GRANITE_PILLAR =
+        registerBlockItem("ornate_granite_pillar", ModBlocks.ORNATE_GRANITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_GRANITE_TILES =
+        registerBlockItem("overlapping_granite_tiles", ModBlocks.OVERLAPPING_GRANITE_TILES);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_GRANITE_PILLAR =
+        registerBlockItem("simple_granite_pillar", ModBlocks.SIMPLE_GRANITE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_GRANITE_COLUMN =
+        registerBlockItem("smooth_granite_column", ModBlocks.SMOOTH_GRANITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_GRANITE =
+        registerBlockItem("thick_inlayed_granite", ModBlocks.THICK_INLAYED_GRANITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_GRANITE =
+        registerBlockItem("tiled_bordered_granite", ModBlocks.TILED_BORDERED_GRANITE);
+    public static final DeferredHolder<Item, BlockItem> TILED_GRANITE_COLUMN =
+        registerBlockItem("tiled_granite_column", ModBlocks.TILED_GRANITE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_GRANITE =
+        registerBlockItem("tiny_brick_bordered_granite", ModBlocks.TINY_BRICK_BORDERED_GRANITE);
+
+    // ── Gray Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRAY_CONCRETE_PANEL =
+        registerBlockItem("gray_concrete_panel", ModBlocks.GRAY_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> GRAY_CONCRETE_PILLAR =
+        registerBlockItem("gray_concrete_pillar", ModBlocks.GRAY_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_GRAY_CONCRETE =
+        registerBlockItem("grill_gray_concrete", ModBlocks.GRILL_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_GRAY_CONCRETE =
+        registerBlockItem("pegged_gray_concrete", ModBlocks.PEGGED_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_GRAY_CONCRETE =
+        registerBlockItem("smooth_gray_concrete", ModBlocks.SMOOTH_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_GRAY_CONCRETE =
+        registerBlockItem("striped_gray_concrete", ModBlocks.STRIPED_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_GRAY_CONCRETE =
+        registerBlockItem("wired_gray_concrete", ModBlocks.WIRED_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_LIGHT_GRAY_CONCRETE =
+        registerBlockItem("wired_light_gray_concrete", ModBlocks.WIRED_LIGHT_GRAY_CONCRETE);
+
+    // ── Gray Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_GRAY_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_gray_stained_glass_pillar", ModBlocks.ARCHED_GRAY_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_GRAY_STAINED_GLASS =
+        registerBlockItem("fancy_gray_stained_glass", ModBlocks.FANCY_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_GRAY_STAINED_GLASS =
+        registerBlockItem("ornate_gray_stained_glass", ModBlocks.ORNATE_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_GRAY_STAINED_GLASS =
+        registerBlockItem("raster_gray_stained_glass", ModBlocks.RASTER_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_STAINED_GLASS =
+        registerBlockItem("small_gray_stained_glass", ModBlocks.SMALL_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_GRAY_STAINED_GLASS =
+        registerBlockItem("tiled_gray_stained_glass", ModBlocks.TILED_GRAY_STAINED_GLASS);
+
+    // ── Gray Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_GRAY_TERRACOTTA =
+        registerBlockItem("circular_gray_terracotta", ModBlocks.CIRCULAR_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_GRAY_TERRACOTTA =
+        registerBlockItem("curled_gray_terracotta", ModBlocks.CURLED_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> GRAY_TERRACOTTA_COLUMN =
+        registerBlockItem("gray_terracotta_column", ModBlocks.GRAY_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> GRAY_TERRACOTTA_PILLAR =
+        registerBlockItem("gray_terracotta_pillar", ModBlocks.GRAY_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_GRAY_TERRACOTTA =
+        registerBlockItem("hexagonical_gray_terracotta", ModBlocks.HEXAGONICAL_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_GRAY_TERRACOTTA =
+        registerBlockItem("inscribed_gray_terracotta", ModBlocks.INSCRIBED_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_TERRACOTTA_TILES =
+        registerBlockItem("small_gray_terracotta_tiles", ModBlocks.SMALL_GRAY_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_GRAY_TERRACOTTA =
+        registerBlockItem("starry_gray_terracotta", ModBlocks.STARRY_GRAY_TERRACOTTA);
+
+    // ── Gray Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_GRAY_WOOL =
+        registerBlockItem("cornered_gray_wool", ModBlocks.CORNERED_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_GRAY_WOOL =
+        registerBlockItem("crafted_gray_wool", ModBlocks.CRAFTED_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_GRAY_WOOL =
+        registerBlockItem("harsh_quilted_gray_wool", ModBlocks.HARSH_QUILTED_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_GRAY_WOOL =
+        registerBlockItem("rectangle_gray_wool", ModBlocks.RECTANGLE_GRAY_WOOL);
+
+    // ── Green Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GREEN_CONCRETE_PANEL =
+        registerBlockItem("green_concrete_panel", ModBlocks.GREEN_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> GREEN_CONCRETE_PILLAR =
+        registerBlockItem("green_concrete_pillar", ModBlocks.GREEN_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> GRILL_GREEN_CONCRETE =
+        registerBlockItem("grill_green_concrete", ModBlocks.GRILL_GREEN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_GREEN_CONCRETE =
+        registerBlockItem("pegged_green_concrete", ModBlocks.PEGGED_GREEN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_GREEN_CONCRETE =
+        registerBlockItem("smooth_green_concrete", ModBlocks.SMOOTH_GREEN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_GREEN_CONCRETE =
+        registerBlockItem("striped_green_concrete", ModBlocks.STRIPED_GREEN_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_GREEN_CONCRETE =
+        registerBlockItem("wired_green_concrete", ModBlocks.WIRED_GREEN_CONCRETE);
+
+    // ── Green Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_GREEN_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_green_stained_glass_pillar", ModBlocks.ARCHED_GREEN_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_GREEN_STAINED_GLASS =
+        registerBlockItem("fancy_green_stained_glass", ModBlocks.FANCY_GREEN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_GREEN_STAINED_GLASS =
+        registerBlockItem("ornate_green_stained_glass", ModBlocks.ORNATE_GREEN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_GREEN_STAINED_GLASS =
+        registerBlockItem("raster_green_stained_glass", ModBlocks.RASTER_GREEN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_STAINED_GLASS =
+        registerBlockItem("small_green_stained_glass", ModBlocks.SMALL_GREEN_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_GREEN_STAINED_GLASS =
+        registerBlockItem("tiled_green_stained_glass", ModBlocks.TILED_GREEN_STAINED_GLASS);
+
+    // ── Green Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_GREEN_TERRACOTTA =
+        registerBlockItem("circular_green_terracotta", ModBlocks.CIRCULAR_GREEN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_GREEN_TERRACOTTA =
+        registerBlockItem("curled_green_terracotta", ModBlocks.CURLED_GREEN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> GREEN_TERRACOTTA_COLUMN =
+        registerBlockItem("green_terracotta_column", ModBlocks.GREEN_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> GREEN_TERRACOTTA_PILLAR =
+        registerBlockItem("green_terracotta_pillar", ModBlocks.GREEN_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_GREEN_TERRACOTTA =
+        registerBlockItem("hexagonical_green_terracotta", ModBlocks.HEXAGONICAL_GREEN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_GREEN_TERRACOTTA =
+        registerBlockItem("inscribed_green_terracotta", ModBlocks.INSCRIBED_GREEN_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_TERRACOTTA_TILES =
+        registerBlockItem("small_green_terracotta_tiles", ModBlocks.SMALL_GREEN_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_GREEN_TERRACOTTA =
+        registerBlockItem("starry_green_terracotta", ModBlocks.STARRY_GREEN_TERRACOTTA);
+
+    // ── Green Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_GREEN_WOOL =
+        registerBlockItem("cornered_green_wool", ModBlocks.CORNERED_GREEN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_GREEN_WOOL =
+        registerBlockItem("crafted_green_wool", ModBlocks.CRAFTED_GREEN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_GREEN_WOOL =
+        registerBlockItem("harsh_quilted_green_wool", ModBlocks.HARSH_QUILTED_GREEN_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_GREEN_WOOL =
+        registerBlockItem("rectangle_green_wool", ModBlocks.RECTANGLE_GREEN_WOOL);
+
+    // ── Ice ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_ICE =
+        registerBlockItem("bordered_ice", ModBlocks.BORDERED_ICE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_ICE =
+        registerBlockItem("brick_bordered_ice", ModBlocks.BRICK_BORDERED_ICE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_ICE_PILLAR =
+        registerBlockItem("curly_ice_pillar", ModBlocks.CURLY_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_ICE_COLUMN =
+        registerBlockItem("cut_ice_column", ModBlocks.CUT_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_ICE_BRICKS =
+        registerBlockItem("edged_ice_bricks", ModBlocks.EDGED_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_ICE_PILLAR =
+        registerBlockItem("fine_ice_pillar", ModBlocks.FINE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_ICE_BRICKS =
+        registerBlockItem("massive_ice_bricks", ModBlocks.MASSIVE_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_ICE_PILLAR =
+        registerBlockItem("ornate_ice_pillar", ModBlocks.ORNATE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_ICE_TILES =
+        registerBlockItem("overlapping_ice_tiles", ModBlocks.OVERLAPPING_ICE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_ICE =
+        registerBlockItem("polished_ice", ModBlocks.POLISHED_ICE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_ICE_PILLAR =
+        registerBlockItem("simple_ice_pillar", ModBlocks.SIMPLE_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_ICE_COLUMN =
+        registerBlockItem("smooth_ice_column", ModBlocks.SMOOTH_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_ICE =
+        registerBlockItem("thick_inlayed_ice", ModBlocks.THICK_INLAYED_ICE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_ICE =
+        registerBlockItem("tiled_bordered_ice", ModBlocks.TILED_BORDERED_ICE);
+    public static final DeferredHolder<Item, BlockItem> TILED_ICE_COLUMN =
+        registerBlockItem("tiled_ice_column", ModBlocks.TILED_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_ICE =
+        registerBlockItem("tiny_brick_bordered_ice", ModBlocks.TINY_BRICK_BORDERED_ICE);
+
+    // ── Jungle Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_JUNGLE_PLANKS =
+        registerBlockItem("cornered_jungle_planks", ModBlocks.CORNERED_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_JUNGLE_PLANKS =
+        registerBlockItem("crated_jungle_planks", ModBlocks.CRATED_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_JUNGLE_PLANKS =
+        registerBlockItem("enclosed_jungle_planks", ModBlocks.ENCLOSED_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_JUNGLE_PLANKS =
+        registerBlockItem("framed_jungle_planks", ModBlocks.FRAMED_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_JUNGLE_PLANKS =
+        registerBlockItem("natural_jungle_planks", ModBlocks.NATURAL_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_JUNGLE_PLANKS =
+        registerBlockItem("pegged_jungle_planks", ModBlocks.PEGGED_JUNGLE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_JUNGLE_PLANKS =
+        registerBlockItem("whirlwind_jungle_planks", ModBlocks.WHIRLWIND_JUNGLE_PLANKS);
+
+    // ── Lapis Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_LAPIS_BLOCK =
+        registerBlockItem("bordered_lapis_block", ModBlocks.BORDERED_LAPIS_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_LAPIS_BLOCK =
+        registerBlockItem("brick_bordered_lapis_block", ModBlocks.BRICK_BORDERED_LAPIS_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_LAPIS_BLOCK_PILLAR =
+        registerBlockItem("curly_lapis_block_pillar", ModBlocks.CURLY_LAPIS_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_LAPIS_BLOCK_COLUMN =
+        registerBlockItem("cut_lapis_block_column", ModBlocks.CUT_LAPIS_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_LAPIS_BLOCK_BRICKS =
+        registerBlockItem("edged_lapis_block_bricks", ModBlocks.EDGED_LAPIS_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_LAPIS_BLOCK_PILLAR =
+        registerBlockItem("fine_lapis_block_pillar", ModBlocks.FINE_LAPIS_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_LAPIS_BLOCK_BRICKS =
+        registerBlockItem("massive_lapis_block_bricks", ModBlocks.MASSIVE_LAPIS_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LAPIS_BLOCK_PILLAR =
+        registerBlockItem("ornate_lapis_block_pillar", ModBlocks.ORNATE_LAPIS_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_LAPIS_BLOCK_TILES =
+        registerBlockItem("overlapping_lapis_block_tiles", ModBlocks.OVERLAPPING_LAPIS_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_LAPIS_BLOCK =
+        registerBlockItem("polished_lapis_block", ModBlocks.POLISHED_LAPIS_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_LAPIS_BLOCK_PILLAR =
+        registerBlockItem("simple_lapis_block_pillar", ModBlocks.SIMPLE_LAPIS_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_LAPIS_BLOCK_COLUMN =
+        registerBlockItem("smooth_lapis_block_column", ModBlocks.SMOOTH_LAPIS_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_LAPIS_BLOCK =
+        registerBlockItem("thick_inlayed_lapis_block", ModBlocks.THICK_INLAYED_LAPIS_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_LAPIS_BLOCK =
+        registerBlockItem("tiled_bordered_lapis_block", ModBlocks.TILED_BORDERED_LAPIS_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_LAPIS_BLOCK_COLUMN =
+        registerBlockItem("tiled_lapis_block_column", ModBlocks.TILED_LAPIS_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_LAPIS_BLOCK =
+        registerBlockItem("tiny_brick_bordered_lapis_block", ModBlocks.TINY_BRICK_BORDERED_LAPIS_BLOCK);
+
+    // ── Leaded Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_LEADED_GLASS_PILLAR =
+        registerBlockItem("arched_leaded_glass_pillar", ModBlocks.ARCHED_LEADED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LEADED_GLASS =
+        registerBlockItem("ornate_leaded_glass", ModBlocks.ORNATE_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS =
+        registerBlockItem("raster_leaded_glass", ModBlocks.RASTER_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS =
+        registerBlockItem("small_diamond_leaded_glass", ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
+
+    // ── Light Blue Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_LIGHT_BLUE_CONCRETE =
+        registerBlockItem("grill_light_blue_concrete", ModBlocks.GRILL_LIGHT_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_CONCRETE_PANEL =
+        registerBlockItem("light_blue_concrete_panel", ModBlocks.LIGHT_BLUE_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_CONCRETE_PILLAR =
+        registerBlockItem("light_blue_concrete_pillar", ModBlocks.LIGHT_BLUE_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_LIGHT_BLUE_CONCRETE =
+        registerBlockItem("pegged_light_blue_concrete", ModBlocks.PEGGED_LIGHT_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_LIGHT_BLUE_CONCRETE =
+        registerBlockItem("smooth_light_blue_concrete", ModBlocks.SMOOTH_LIGHT_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_LIGHT_BLUE_CONCRETE =
+        registerBlockItem("striped_light_blue_concrete", ModBlocks.STRIPED_LIGHT_BLUE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_LIGHT_BLUE_CONCRETE =
+        registerBlockItem("wired_light_blue_concrete", ModBlocks.WIRED_LIGHT_BLUE_CONCRETE);
+
+    // ── Light Blue Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_light_blue_stained_glass_pillar", ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_LIGHT_BLUE_STAINED_GLASS =
+        registerBlockItem("fancy_light_blue_stained_glass", ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LIGHT_BLUE_STAINED_GLASS =
+        registerBlockItem("ornate_light_blue_stained_glass", ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_LIGHT_BLUE_STAINED_GLASS =
+        registerBlockItem("raster_light_blue_stained_glass", ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_BLUE_STAINED_GLASS =
+        registerBlockItem("small_light_blue_stained_glass", ModBlocks.SMALL_LIGHT_BLUE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_LIGHT_BLUE_STAINED_GLASS =
+        registerBlockItem("tiled_light_blue_stained_glass", ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS);
+
+    // ── Light Blue Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_LIGHT_BLUE_TERRACOTTA =
+        registerBlockItem("circular_light_blue_terracotta", ModBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_LIGHT_BLUE_TERRACOTTA =
+        registerBlockItem("curled_light_blue_terracotta", ModBlocks.CURLED_LIGHT_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_LIGHT_BLUE_TERRACOTTA =
+        registerBlockItem("hexagonical_light_blue_terracotta", ModBlocks.HEXAGONICAL_LIGHT_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_LIGHT_BLUE_TERRACOTTA =
+        registerBlockItem("inscribed_light_blue_terracotta", ModBlocks.INSCRIBED_LIGHT_BLUE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_TERRACOTTA_COLUMN =
+        registerBlockItem("light_blue_terracotta_column", ModBlocks.LIGHT_BLUE_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_TERRACOTTA_PILLAR =
+        registerBlockItem("light_blue_terracotta_pillar", ModBlocks.LIGHT_BLUE_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_BLUE_TERRACOTTA_TILES =
+        registerBlockItem("small_light_blue_terracotta_tiles", ModBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_LIGHT_BLUE_TERRACOTTA =
+        registerBlockItem("starry_light_blue_terracotta", ModBlocks.STARRY_LIGHT_BLUE_TERRACOTTA);
+
+    // ── Light Blue Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_LIGHT_BLUE_WOOL =
+        registerBlockItem("cornered_light_blue_wool", ModBlocks.CORNERED_LIGHT_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_LIGHT_BLUE_WOOL =
+        registerBlockItem("crafted_light_blue_wool", ModBlocks.CRAFTED_LIGHT_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_LIGHT_BLUE_WOOL =
+        registerBlockItem("harsh_quilted_light_blue_wool", ModBlocks.HARSH_QUILTED_LIGHT_BLUE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_LIGHT_BLUE_WOOL =
+        registerBlockItem("rectangle_light_blue_wool", ModBlocks.RECTANGLE_LIGHT_BLUE_WOOL);
+
+    // ── Light Gray Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_LIGHT_GRAY_CONCRETE =
+        registerBlockItem("grill_light_gray_concrete", ModBlocks.GRILL_LIGHT_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_CONCRETE_PANEL =
+        registerBlockItem("light_gray_concrete_panel", ModBlocks.LIGHT_GRAY_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_CONCRETE_PILLAR =
+        registerBlockItem("light_gray_concrete_pillar", ModBlocks.LIGHT_GRAY_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_LIGHT_GRAY_CONCRETE =
+        registerBlockItem("pegged_light_gray_concrete", ModBlocks.PEGGED_LIGHT_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_LIGHT_GRAY_CONCRETE =
+        registerBlockItem("smooth_light_gray_concrete", ModBlocks.SMOOTH_LIGHT_GRAY_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_LIGHT_GRAY_CONCRETE =
+        registerBlockItem("striped_light_gray_concrete", ModBlocks.STRIPED_LIGHT_GRAY_CONCRETE);
+
+    // ── Light Gray Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_light_gray_stained_glass_pillar", ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_LIGHT_GRAY_STAINED_GLASS =
+        registerBlockItem("fancy_light_gray_stained_glass", ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LIGHT_GRAY_STAINED_GLASS =
+        registerBlockItem("ornate_light_gray_stained_glass", ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_LIGHT_GRAY_STAINED_GLASS =
+        registerBlockItem("raster_light_gray_stained_glass", ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_GRAY_STAINED_GLASS =
+        registerBlockItem("small_light_gray_stained_glass", ModBlocks.SMALL_LIGHT_GRAY_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_LIGHT_GRAY_STAINED_GLASS =
+        registerBlockItem("tiled_light_gray_stained_glass", ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS);
+
+    // ── Light Gray Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_LIGHT_GRAY_TERRACOTTA =
+        registerBlockItem("circular_light_gray_terracotta", ModBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_LIGHT_GRAY_TERRACOTTA =
+        registerBlockItem("curled_light_gray_terracotta", ModBlocks.CURLED_LIGHT_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_LIGHT_GRAY_TERRACOTTA =
+        registerBlockItem("hexagonical_light_gray_terracotta", ModBlocks.HEXAGONICAL_LIGHT_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_LIGHT_GRAY_TERRACOTTA =
+        registerBlockItem("inscribed_light_gray_terracotta", ModBlocks.INSCRIBED_LIGHT_GRAY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_TERRACOTTA_COLUMN =
+        registerBlockItem("light_gray_terracotta_column", ModBlocks.LIGHT_GRAY_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_TERRACOTTA_PILLAR =
+        registerBlockItem("light_gray_terracotta_pillar", ModBlocks.LIGHT_GRAY_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_GRAY_TERRACOTTA_TILES =
+        registerBlockItem("small_light_gray_terracotta_tiles", ModBlocks.SMALL_LIGHT_GRAY_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_LIGHT_GRAY_TERRACOTTA =
+        registerBlockItem("starry_light_gray_terracotta", ModBlocks.STARRY_LIGHT_GRAY_TERRACOTTA);
+
+    // ── Light Gray Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_LIGHT_GRAY_WOOL =
+        registerBlockItem("cornered_light_gray_wool", ModBlocks.CORNERED_LIGHT_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_LIGHT_GRAY_WOOL =
+        registerBlockItem("crafted_light_gray_wool", ModBlocks.CRAFTED_LIGHT_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_LIGHT_GRAY_WOOL =
+        registerBlockItem("harsh_quilted_light_gray_wool", ModBlocks.HARSH_QUILTED_LIGHT_GRAY_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_LIGHT_GRAY_WOOL =
+        registerBlockItem("rectangle_light_gray_wool", ModBlocks.RECTANGLE_LIGHT_GRAY_WOOL);
+
+    // ── Lime Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_LIME_CONCRETE =
+        registerBlockItem("grill_lime_concrete", ModBlocks.GRILL_LIME_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> LIME_CONCRETE_PANEL =
+        registerBlockItem("lime_concrete_panel", ModBlocks.LIME_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> LIME_CONCRETE_PILLAR =
+        registerBlockItem("lime_concrete_pillar", ModBlocks.LIME_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_LIME_CONCRETE =
+        registerBlockItem("pegged_lime_concrete", ModBlocks.PEGGED_LIME_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_LIME_CONCRETE =
+        registerBlockItem("smooth_lime_concrete", ModBlocks.SMOOTH_LIME_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_LIME_CONCRETE =
+        registerBlockItem("striped_lime_concrete", ModBlocks.STRIPED_LIME_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_LIME_CONCRETE =
+        registerBlockItem("wired_lime_concrete", ModBlocks.WIRED_LIME_CONCRETE);
+
+    // ── Lime Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_LIME_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_lime_stained_glass_pillar", ModBlocks.ARCHED_LIME_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_LIME_STAINED_GLASS =
+        registerBlockItem("fancy_lime_stained_glass", ModBlocks.FANCY_LIME_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LIME_STAINED_GLASS =
+        registerBlockItem("ornate_lime_stained_glass", ModBlocks.ORNATE_LIME_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_LIME_STAINED_GLASS =
+        registerBlockItem("raster_lime_stained_glass", ModBlocks.RASTER_LIME_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIME_STAINED_GLASS =
+        registerBlockItem("small_lime_stained_glass", ModBlocks.SMALL_LIME_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_LIME_STAINED_GLASS =
+        registerBlockItem("tiled_lime_stained_glass", ModBlocks.TILED_LIME_STAINED_GLASS);
+
+    // ── Lime Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_LIME_TERRACOTTA =
+        registerBlockItem("circular_lime_terracotta", ModBlocks.CIRCULAR_LIME_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_LIME_TERRACOTTA =
+        registerBlockItem("curled_lime_terracotta", ModBlocks.CURLED_LIME_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_LIME_TERRACOTTA =
+        registerBlockItem("hexagonical_lime_terracotta", ModBlocks.HEXAGONICAL_LIME_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_LIME_TERRACOTTA =
+        registerBlockItem("inscribed_lime_terracotta", ModBlocks.INSCRIBED_LIME_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> LIME_TERRACOTTA_COLUMN =
+        registerBlockItem("lime_terracotta_column", ModBlocks.LIME_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> LIME_TERRACOTTA_PILLAR =
+        registerBlockItem("lime_terracotta_pillar", ModBlocks.LIME_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_LIME_TERRACOTTA_TILES =
+        registerBlockItem("small_lime_terracotta_tiles", ModBlocks.SMALL_LIME_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_LIME_TERRACOTTA =
+        registerBlockItem("starry_lime_terracotta", ModBlocks.STARRY_LIME_TERRACOTTA);
+
+    // ── Lime Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_LIME_WOOL =
+        registerBlockItem("cornered_lime_wool", ModBlocks.CORNERED_LIME_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_LIME_WOOL =
+        registerBlockItem("crafted_lime_wool", ModBlocks.CRAFTED_LIME_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_LIME_WOOL =
+        registerBlockItem("harsh_quilted_lime_wool", ModBlocks.HARSH_QUILTED_LIME_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_LIME_WOOL =
+        registerBlockItem("rectangle_lime_wool", ModBlocks.RECTANGLE_LIME_WOOL);
+
+    // ── Lodestone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_LODESTONE =
+        registerBlockItem("bordered_lodestone", ModBlocks.BORDERED_LODESTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_LODESTONE =
+        registerBlockItem("brick_bordered_lodestone", ModBlocks.BRICK_BORDERED_LODESTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_LODESTONE_PILLAR =
+        registerBlockItem("curly_lodestone_pillar", ModBlocks.CURLY_LODESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_LODESTONE_COLUMN =
+        registerBlockItem("cut_lodestone_column", ModBlocks.CUT_LODESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_LODESTONE_BRICKS =
+        registerBlockItem("edged_lodestone_bricks", ModBlocks.EDGED_LODESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_LODESTONE_PILLAR =
+        registerBlockItem("fine_lodestone_pillar", ModBlocks.FINE_LODESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_LODESTONE_BRICKS =
+        registerBlockItem("massive_lodestone_bricks", ModBlocks.MASSIVE_LODESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LODESTONE_PILLAR =
+        registerBlockItem("ornate_lodestone_pillar", ModBlocks.ORNATE_LODESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_LODESTONE_TILES =
+        registerBlockItem("overlapping_lodestone_tiles", ModBlocks.OVERLAPPING_LODESTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_LODESTONE =
+        registerBlockItem("polished_lodestone", ModBlocks.POLISHED_LODESTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_LODESTONE_PILLAR =
+        registerBlockItem("simple_lodestone_pillar", ModBlocks.SIMPLE_LODESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_LODESTONE_COLUMN =
+        registerBlockItem("smooth_lodestone_column", ModBlocks.SMOOTH_LODESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_LODESTONE =
+        registerBlockItem("thick_inlayed_lodestone", ModBlocks.THICK_INLAYED_LODESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_LODESTONE =
+        registerBlockItem("tiled_bordered_lodestone", ModBlocks.TILED_BORDERED_LODESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_LODESTONE_COLUMN =
+        registerBlockItem("tiled_lodestone_column", ModBlocks.TILED_LODESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_LODESTONE =
+        registerBlockItem("tiny_brick_bordered_lodestone", ModBlocks.TINY_BRICK_BORDERED_LODESTONE);
+
+    // ── Magenta Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_MAGENTA_CONCRETE =
+        registerBlockItem("grill_magenta_concrete", ModBlocks.GRILL_MAGENTA_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_CONCRETE_PANEL =
+        registerBlockItem("magenta_concrete_panel", ModBlocks.MAGENTA_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_CONCRETE_PILLAR =
+        registerBlockItem("magenta_concrete_pillar", ModBlocks.MAGENTA_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_MAGENTA_CONCRETE =
+        registerBlockItem("pegged_magenta_concrete", ModBlocks.PEGGED_MAGENTA_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_MAGENTA_CONCRETE =
+        registerBlockItem("smooth_magenta_concrete", ModBlocks.SMOOTH_MAGENTA_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_MAGENTA_CONCRETE =
+        registerBlockItem("striped_magenta_concrete", ModBlocks.STRIPED_MAGENTA_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_MAGENTA_CONCRETE =
+        registerBlockItem("wired_magenta_concrete", ModBlocks.WIRED_MAGENTA_CONCRETE);
+
+    // ── Magenta Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_MAGENTA_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_magenta_stained_glass_pillar", ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_MAGENTA_STAINED_GLASS =
+        registerBlockItem("fancy_magenta_stained_glass", ModBlocks.FANCY_MAGENTA_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MAGENTA_STAINED_GLASS =
+        registerBlockItem("ornate_magenta_stained_glass", ModBlocks.ORNATE_MAGENTA_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_MAGENTA_STAINED_GLASS =
+        registerBlockItem("raster_magenta_stained_glass", ModBlocks.RASTER_MAGENTA_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_MAGENTA_STAINED_GLASS =
+        registerBlockItem("small_magenta_stained_glass", ModBlocks.SMALL_MAGENTA_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_MAGENTA_STAINED_GLASS =
+        registerBlockItem("tiled_magenta_stained_glass", ModBlocks.TILED_MAGENTA_STAINED_GLASS);
+
+    // ── Magenta Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_MAGENTA_TERRACOTTA =
+        registerBlockItem("circular_magenta_terracotta", ModBlocks.CIRCULAR_MAGENTA_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_MAGENTA_TERRACOTTA =
+        registerBlockItem("curled_magenta_terracotta", ModBlocks.CURLED_MAGENTA_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_MAGENTA_TERRACOTTA =
+        registerBlockItem("hexagonical_magenta_terracotta", ModBlocks.HEXAGONICAL_MAGENTA_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_MAGENTA_TERRACOTTA =
+        registerBlockItem("inscribed_magenta_terracotta", ModBlocks.INSCRIBED_MAGENTA_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_TERRACOTTA_COLUMN =
+        registerBlockItem("magenta_terracotta_column", ModBlocks.MAGENTA_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_TERRACOTTA_PILLAR =
+        registerBlockItem("magenta_terracotta_pillar", ModBlocks.MAGENTA_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_MAGENTA_TERRACOTTA_TILES =
+        registerBlockItem("small_magenta_terracotta_tiles", ModBlocks.SMALL_MAGENTA_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_MAGENTA_TERRACOTTA =
+        registerBlockItem("starry_magenta_terracotta", ModBlocks.STARRY_MAGENTA_TERRACOTTA);
+
+    // ── Magenta Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_MAGENTA_WOOL =
+        registerBlockItem("cornered_magenta_wool", ModBlocks.CORNERED_MAGENTA_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_MAGENTA_WOOL =
+        registerBlockItem("crafted_magenta_wool", ModBlocks.CRAFTED_MAGENTA_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_MAGENTA_WOOL =
+        registerBlockItem("harsh_quilted_magenta_wool", ModBlocks.HARSH_QUILTED_MAGENTA_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_MAGENTA_WOOL =
+        registerBlockItem("rectangle_magenta_wool", ModBlocks.RECTANGLE_MAGENTA_WOOL);
+
+    // ── Magma Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_MAGMA_BLOCK =
+        registerBlockItem("bordered_magma_block", ModBlocks.BORDERED_MAGMA_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_MAGMA_BLOCK =
+        registerBlockItem("brick_bordered_magma_block", ModBlocks.BRICK_BORDERED_MAGMA_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_MAGMA_BLOCK_PILLAR =
+        registerBlockItem("curly_magma_block_pillar", ModBlocks.CURLY_MAGMA_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_MAGMA_BLOCK_COLUMN =
+        registerBlockItem("cut_magma_block_column", ModBlocks.CUT_MAGMA_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_MAGMA_BLOCK_BRICKS =
+        registerBlockItem("edged_magma_block_bricks", ModBlocks.EDGED_MAGMA_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_MAGMA_BLOCK_PILLAR =
+        registerBlockItem("fine_magma_block_pillar", ModBlocks.FINE_MAGMA_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_MAGMA_BLOCK_BRICKS =
+        registerBlockItem("massive_magma_block_bricks", ModBlocks.MASSIVE_MAGMA_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MAGMA_BLOCK_PILLAR =
+        registerBlockItem("ornate_magma_block_pillar", ModBlocks.ORNATE_MAGMA_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_MAGMA_BLOCK_TILES =
+        registerBlockItem("overlapping_magma_block_tiles", ModBlocks.OVERLAPPING_MAGMA_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_MAGMA_BLOCK =
+        registerBlockItem("polished_magma_block", ModBlocks.POLISHED_MAGMA_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_MAGMA_BLOCK_PILLAR =
+        registerBlockItem("simple_magma_block_pillar", ModBlocks.SIMPLE_MAGMA_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_MAGMA_BLOCK_COLUMN =
+        registerBlockItem("smooth_magma_block_column", ModBlocks.SMOOTH_MAGMA_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_MAGMA_BLOCK =
+        registerBlockItem("thick_inlayed_magma_block", ModBlocks.THICK_INLAYED_MAGMA_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_MAGMA_BLOCK =
+        registerBlockItem("tiled_bordered_magma_block", ModBlocks.TILED_BORDERED_MAGMA_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_MAGMA_BLOCK_COLUMN =
+        registerBlockItem("tiled_magma_block_column", ModBlocks.TILED_MAGMA_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_MAGMA_BLOCK =
+        registerBlockItem("tiny_brick_bordered_magma_block", ModBlocks.TINY_BRICK_BORDERED_MAGMA_BLOCK);
+
+    // ── Mangrove Planks ──
+    public static final DeferredHolder<Item, BlockItem> BRICKED_MANGROVE_PLANKS =
+        registerBlockItem("bricked_mangrove_planks", ModBlocks.BRICKED_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CORNERED_MANGROVE_PLANKS =
+        registerBlockItem("cornered_mangrove_planks", ModBlocks.CORNERED_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_MANGROVE_PLANKS =
+        registerBlockItem("crated_mangrove_planks", ModBlocks.CRATED_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_MANGROVE_PLANKS =
+        registerBlockItem("enclosed_mangrove_planks", ModBlocks.ENCLOSED_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_MANGROVE_PLANKS =
+        registerBlockItem("framed_mangrove_planks", ModBlocks.FRAMED_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_PANEL =
+        registerBlockItem("mangrove_planks_panel", ModBlocks.MANGROVE_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_MANGROVE_PLANKS =
+        registerBlockItem("natural_mangrove_planks", ModBlocks.NATURAL_MANGROVE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_MANGROVE_PLANKS =
+        registerBlockItem("pegged_mangrove_planks", ModBlocks.PEGGED_MANGROVE_PLANKS);
+
+    // ── Mossy Cobblestone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_MOSSY_COBBLESTONE =
+        registerBlockItem("bordered_mossy_cobblestone", ModBlocks.BORDERED_MOSSY_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_MOSSY_COBBLESTONE =
+        registerBlockItem("brick_bordered_mossy_cobblestone", ModBlocks.BRICK_BORDERED_MOSSY_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_MOSSY_COBBLESTONE_PILLAR =
+        registerBlockItem("curly_mossy_cobblestone_pillar", ModBlocks.CURLY_MOSSY_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_MOSSY_COBBLESTONE_COLUMN =
+        registerBlockItem("cut_mossy_cobblestone_column", ModBlocks.CUT_MOSSY_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_MOSSY_COBBLESTONE_BRICKS =
+        registerBlockItem("edged_mossy_cobblestone_bricks", ModBlocks.EDGED_MOSSY_COBBLESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_MOSSY_COBBLESTONE_PILLAR =
+        registerBlockItem("fine_mossy_cobblestone_pillar", ModBlocks.FINE_MOSSY_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_MOSSY_COBBLESTONE_BRICKS =
+        registerBlockItem("massive_mossy_cobblestone_bricks", ModBlocks.MASSIVE_MOSSY_COBBLESTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MOSSY_COBBLESTONE_PILLAR =
+        registerBlockItem("ornate_mossy_cobblestone_pillar", ModBlocks.ORNATE_MOSSY_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_MOSSY_COBBLESTONE_TILES =
+        registerBlockItem("overlapping_mossy_cobblestone_tiles", ModBlocks.OVERLAPPING_MOSSY_COBBLESTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_MOSSY_COBBLESTONE =
+        registerBlockItem("polished_mossy_cobblestone", ModBlocks.POLISHED_MOSSY_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_MOSSY_COBBLESTONE_PILLAR =
+        registerBlockItem("simple_mossy_cobblestone_pillar", ModBlocks.SIMPLE_MOSSY_COBBLESTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_MOSSY_COBBLESTONE_COLUMN =
+        registerBlockItem("smooth_mossy_cobblestone_column", ModBlocks.SMOOTH_MOSSY_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_MOSSY_COBBLESTONE =
+        registerBlockItem("thick_inlayed_mossy_cobblestone", ModBlocks.THICK_INLAYED_MOSSY_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_MOSSY_COBBLESTONE =
+        registerBlockItem("tiled_bordered_mossy_cobblestone", ModBlocks.TILED_BORDERED_MOSSY_COBBLESTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_MOSSY_COBBLESTONE_COLUMN =
+        registerBlockItem("tiled_mossy_cobblestone_column", ModBlocks.TILED_MOSSY_COBBLESTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_MOSSY_COBBLESTONE =
+        registerBlockItem("tiny_brick_bordered_mossy_cobblestone", ModBlocks.TINY_BRICK_BORDERED_MOSSY_COBBLESTONE);
+
+    // ── Mossy Stone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_MOSSY_STONE_BRICKS =
+        registerBlockItem("bordered_mossy_stone_bricks", ModBlocks.BORDERED_MOSSY_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_MOSSY_STONE_BRICKS =
+        registerBlockItem("brick_bordered_mossy_stone_bricks", ModBlocks.BRICK_BORDERED_MOSSY_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_MOSSY_STONE_BRICKS_PILLAR =
+        registerBlockItem("curly_mossy_stone_bricks_pillar", ModBlocks.CURLY_MOSSY_STONE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_MOSSY_STONE_BRICKS_COLUMN =
+        registerBlockItem("cut_mossy_stone_bricks_column", ModBlocks.CUT_MOSSY_STONE_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_MOSSY_STONE_BRICKS_BRICKS =
+        registerBlockItem("edged_mossy_stone_bricks_bricks", ModBlocks.EDGED_MOSSY_STONE_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_MOSSY_STONE_BRICKS_PILLAR =
+        registerBlockItem("fine_mossy_stone_bricks_pillar", ModBlocks.FINE_MOSSY_STONE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_MOSSY_STONE_BRICKS_BRICKS =
+        registerBlockItem("massive_mossy_stone_bricks_bricks", ModBlocks.MASSIVE_MOSSY_STONE_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MOSSY_STONE_BRICKS_PILLAR =
+        registerBlockItem("ornate_mossy_stone_bricks_pillar", ModBlocks.ORNATE_MOSSY_STONE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_MOSSY_STONE_BRICKS_TILES =
+        registerBlockItem("overlapping_mossy_stone_bricks_tiles", ModBlocks.OVERLAPPING_MOSSY_STONE_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_MOSSY_STONE_BRICKS =
+        registerBlockItem("polished_mossy_stone_bricks", ModBlocks.POLISHED_MOSSY_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_MOSSY_STONE_BRICKS_PILLAR =
+        registerBlockItem("simple_mossy_stone_bricks_pillar", ModBlocks.SIMPLE_MOSSY_STONE_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_MOSSY_STONE_BRICKS_COLUMN =
+        registerBlockItem("smooth_mossy_stone_bricks_column", ModBlocks.SMOOTH_MOSSY_STONE_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_MOSSY_STONE_BRICKS =
+        registerBlockItem("thick_inlayed_mossy_stone_bricks", ModBlocks.THICK_INLAYED_MOSSY_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_MOSSY_STONE_BRICKS =
+        registerBlockItem("tiled_bordered_mossy_stone_bricks", ModBlocks.TILED_BORDERED_MOSSY_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_MOSSY_STONE_BRICKS_COLUMN =
+        registerBlockItem("tiled_mossy_stone_bricks_column", ModBlocks.TILED_MOSSY_STONE_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_MOSSY_STONE_BRICKS =
+        registerBlockItem("tiny_brick_bordered_mossy_stone_bricks", ModBlocks.TINY_BRICK_BORDERED_MOSSY_STONE_BRICKS);
+
+    // ── Mud ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_MUD =
+        registerBlockItem("bordered_mud", ModBlocks.BORDERED_MUD);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_MUD =
+        registerBlockItem("brick_bordered_mud", ModBlocks.BRICK_BORDERED_MUD);
+    public static final DeferredHolder<Item, BlockItem> CARVED_MUD_PILLAR =
+        registerBlockItem("carved_mud_pillar", ModBlocks.CARVED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CURLY_MUD_PILLAR =
+        registerBlockItem("curly_mud_pillar", ModBlocks.CURLY_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> EDGED_MUD =
+        registerBlockItem("edged_mud", ModBlocks.EDGED_MUD);
+    public static final DeferredHolder<Item, BlockItem> FANCY_MUD_PILLAR =
+        registerBlockItem("fancy_mud_pillar", ModBlocks.FANCY_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FINE_MUD_PILLAR =
+        registerBlockItem("fine_mud_pillar", ModBlocks.FINE_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HARD_MUD =
+        registerBlockItem("hard_mud", ModBlocks.HARD_MUD);
+    public static final DeferredHolder<Item, BlockItem> LARGE_MUD_SIGIL =
+        registerBlockItem("large_mud_sigil", ModBlocks.LARGE_MUD_SIGIL);
+    public static final DeferredHolder<Item, BlockItem> LOREFUL_MUD =
+        registerBlockItem("loreful_mud", ModBlocks.LOREFUL_MUD);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_MUD_BRICKS =
+        registerBlockItem("massive_mud_bricks", ModBlocks.MASSIVE_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MUD_PILLAR =
+        registerBlockItem("ornate_mud_pillar", ModBlocks.ORNATE_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_MUD_TILES =
+        registerBlockItem("overlapping_mud_tiles", ModBlocks.OVERLAPPING_MUD_TILES);
+    public static final DeferredHolder<Item, BlockItem> SCALY_MUD =
+        registerBlockItem("scaly_mud", ModBlocks.SCALY_MUD);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_MUD_PILLAR =
+        registerBlockItem("simple_mud_pillar", ModBlocks.SIMPLE_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_MUD =
+        registerBlockItem("tiled_bordered_mud", ModBlocks.TILED_BORDERED_MUD);
+    public static final DeferredHolder<Item, BlockItem> TILED_MUD_COLUMN =
+        registerBlockItem("tiled_mud_column", ModBlocks.TILED_MUD_COLUMN);
+
+    // ── Mud Bricks ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_MUD_BRICKS =
+        registerBlockItem("bordered_mud_bricks", ModBlocks.BORDERED_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_MUD_BRICKS =
+        registerBlockItem("brick_bordered_mud_bricks", ModBlocks.BRICK_BORDERED_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CARVED_MUD_BRICKS_PILLAR =
+        registerBlockItem("carved_mud_bricks_pillar", ModBlocks.CARVED_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CURLY_MUD_BRICKS_PILLAR =
+        registerBlockItem("curly_mud_bricks_pillar", ModBlocks.CURLY_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> EDGED_MUD_BRICKS_BRICKS =
+        registerBlockItem("edged_mud_bricks_bricks", ModBlocks.EDGED_MUD_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FANCY_MUD_BRICKS_PILLAR =
+        registerBlockItem("fancy_mud_bricks_pillar", ModBlocks.FANCY_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FINE_MUD_BRICKS_PILLAR =
+        registerBlockItem("fine_mud_bricks_pillar", ModBlocks.FINE_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HARD_MUD_BRICKS =
+        registerBlockItem("hard_mud_bricks", ModBlocks.HARD_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> LARGE_MUD_BRICKS_SIGIL =
+        registerBlockItem("large_mud_bricks_sigil", ModBlocks.LARGE_MUD_BRICKS_SIGIL);
+    public static final DeferredHolder<Item, BlockItem> LOREFUL_MUD_BRICKS =
+        registerBlockItem("loreful_mud_bricks", ModBlocks.LOREFUL_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_MUD_BRICKS_BRICKS =
+        registerBlockItem("massive_mud_bricks_bricks", ModBlocks.MASSIVE_MUD_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_MUD_BRICKS_PILLAR =
+        registerBlockItem("ornate_mud_bricks_pillar", ModBlocks.ORNATE_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_MUD_BRICKS_TILES =
+        registerBlockItem("overlapping_mud_bricks_tiles", ModBlocks.OVERLAPPING_MUD_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_MUD_BRICKS_PILLAR =
+        registerBlockItem("simple_mud_bricks_pillar", ModBlocks.SIMPLE_MUD_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_MUD_BRICKS =
+        registerBlockItem("tiled_bordered_mud_bricks", ModBlocks.TILED_BORDERED_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_MUD_BRICKS_COLUMN =
+        registerBlockItem("tiled_mud_bricks_column", ModBlocks.TILED_MUD_BRICKS_COLUMN);
+
+    // ── Netherrack ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_NETHERRACK =
+        registerBlockItem("bordered_netherrack", ModBlocks.BORDERED_NETHERRACK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_NETHERRACK =
+        registerBlockItem("brick_bordered_netherrack", ModBlocks.BRICK_BORDERED_NETHERRACK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_NETHERRACK_PILLAR =
+        registerBlockItem("curly_netherrack_pillar", ModBlocks.CURLY_NETHERRACK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_NETHERRACK_COLUMN =
+        registerBlockItem("cut_netherrack_column", ModBlocks.CUT_NETHERRACK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_NETHERRACK_BRICKS =
+        registerBlockItem("edged_netherrack_bricks", ModBlocks.EDGED_NETHERRACK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_NETHERRACK_PILLAR =
+        registerBlockItem("fine_netherrack_pillar", ModBlocks.FINE_NETHERRACK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_NETHERRACK_BRICKS =
+        registerBlockItem("massive_netherrack_bricks", ModBlocks.MASSIVE_NETHERRACK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_NETHERRACK_PILLAR =
+        registerBlockItem("ornate_netherrack_pillar", ModBlocks.ORNATE_NETHERRACK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_NETHERRACK_TILES =
+        registerBlockItem("overlapping_netherrack_tiles", ModBlocks.OVERLAPPING_NETHERRACK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_NETHERRACK =
+        registerBlockItem("polished_netherrack", ModBlocks.POLISHED_NETHERRACK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_NETHERRACK_PILLAR =
+        registerBlockItem("simple_netherrack_pillar", ModBlocks.SIMPLE_NETHERRACK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_NETHERRACK_COLUMN =
+        registerBlockItem("smooth_netherrack_column", ModBlocks.SMOOTH_NETHERRACK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_NETHERRACK =
+        registerBlockItem("thick_inlayed_netherrack", ModBlocks.THICK_INLAYED_NETHERRACK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_NETHERRACK =
+        registerBlockItem("tiled_bordered_netherrack", ModBlocks.TILED_BORDERED_NETHERRACK);
+    public static final DeferredHolder<Item, BlockItem> TILED_NETHERRACK_COLUMN =
+        registerBlockItem("tiled_netherrack_column", ModBlocks.TILED_NETHERRACK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_NETHERRACK =
+        registerBlockItem("tiny_brick_bordered_netherrack", ModBlocks.TINY_BRICK_BORDERED_NETHERRACK);
+
+    // ── Nether Bricks ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_NETHER_BRICKS =
+        registerBlockItem("bordered_nether_bricks", ModBlocks.BORDERED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_NETHER_BRICKS =
+        registerBlockItem("brick_bordered_nether_bricks", ModBlocks.BRICK_BORDERED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_NETHER_BRICKS_PILLAR =
+        registerBlockItem("curly_nether_bricks_pillar", ModBlocks.CURLY_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_NETHER_BRICKS_COLUMN =
+        registerBlockItem("cut_nether_bricks_column", ModBlocks.CUT_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_NETHER_BRICKS_BRICKS =
+        registerBlockItem("edged_nether_bricks_bricks", ModBlocks.EDGED_NETHER_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_NETHER_BRICKS_PILLAR =
+        registerBlockItem("fine_nether_bricks_pillar", ModBlocks.FINE_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_NETHER_BRICKS_BRICKS =
+        registerBlockItem("massive_nether_bricks_bricks", ModBlocks.MASSIVE_NETHER_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_NETHER_BRICKS_PILLAR =
+        registerBlockItem("ornate_nether_bricks_pillar", ModBlocks.ORNATE_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_NETHER_BRICKS_TILES =
+        registerBlockItem("overlapping_nether_bricks_tiles", ModBlocks.OVERLAPPING_NETHER_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_NETHER_BRICKS =
+        registerBlockItem("polished_nether_bricks", ModBlocks.POLISHED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_NETHER_BRICKS_PILLAR =
+        registerBlockItem("simple_nether_bricks_pillar", ModBlocks.SIMPLE_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_NETHER_BRICKS_COLUMN =
+        registerBlockItem("smooth_nether_bricks_column", ModBlocks.SMOOTH_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_NETHER_BRICKS =
+        registerBlockItem("thick_inlayed_nether_bricks", ModBlocks.THICK_INLAYED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_NETHER_BRICKS =
+        registerBlockItem("tiled_bordered_nether_bricks", ModBlocks.TILED_BORDERED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_NETHER_BRICKS_COLUMN =
+        registerBlockItem("tiled_nether_bricks_column", ModBlocks.TILED_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_NETHER_BRICKS =
+        registerBlockItem("tiny_brick_bordered_nether_bricks", ModBlocks.TINY_BRICK_BORDERED_NETHER_BRICKS);
+
+    // ── Oak Glass ──
+    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS =
+        registerBlockItem("oak_bordered_glass", ModBlocks.OAK_BORDERED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS =
+        registerBlockItem("oak_diamond_bordered_glass", ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS =
+        registerBlockItem("oak_horizontal_lined_glass", ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS =
+        registerBlockItem("oak_large_diamond_glass", ModBlocks.OAK_LARGE_DIAMOND_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS =
+        registerBlockItem("oak_line_bared_glass", ModBlocks.OAK_LINE_BARED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS =
+        registerBlockItem("oak_ornate_bared_glass", ModBlocks.OAK_ORNATE_BARED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS =
+        registerBlockItem("oak_woven_glass", ModBlocks.OAK_WOVEN_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS =
+        registerBlockItem("square_oak_glass", ModBlocks.SQUARE_OAK_GLASS);
+
+    // ── Oak Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_OAK_PLANKS =
+        registerBlockItem("cornered_oak_planks", ModBlocks.CORNERED_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_OAK_PLANKS =
+        registerBlockItem("crated_oak_planks", ModBlocks.CRATED_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_OAK_PLANKS =
+        registerBlockItem("enclosed_oak_planks", ModBlocks.ENCLOSED_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_OAK_PLANKS =
+        registerBlockItem("framed_oak_planks", ModBlocks.FRAMED_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_OAK_PLANKS =
+        registerBlockItem("natural_oak_planks", ModBlocks.NATURAL_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_PANEL =
+        registerBlockItem("oak_planks_panel", ModBlocks.OAK_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_OAK_PLANKS =
+        registerBlockItem("pegged_oak_planks", ModBlocks.PEGGED_OAK_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_OAK_PLANKS =
+        registerBlockItem("whirlwind_oak_planks", ModBlocks.WHIRLWIND_OAK_PLANKS);
+
+    // ── Obsidian ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_OBSIDIAN =
+        registerBlockItem("bordered_obsidian", ModBlocks.BORDERED_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_OBSIDIAN =
+        registerBlockItem("brick_bordered_obsidian", ModBlocks.BRICK_BORDERED_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> CURLY_OBSIDIAN_PILLAR =
+        registerBlockItem("curly_obsidian_pillar", ModBlocks.CURLY_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_OBSIDIAN_COLUMN =
+        registerBlockItem("cut_obsidian_column", ModBlocks.CUT_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_OBSIDIAN_BRICKS =
+        registerBlockItem("edged_obsidian_bricks", ModBlocks.EDGED_OBSIDIAN_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_OBSIDIAN_PILLAR =
+        registerBlockItem("fine_obsidian_pillar", ModBlocks.FINE_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_OBSIDIAN_BRICKS =
+        registerBlockItem("massive_obsidian_bricks", ModBlocks.MASSIVE_OBSIDIAN_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_OBSIDIAN_PILLAR =
+        registerBlockItem("ornate_obsidian_pillar", ModBlocks.ORNATE_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_OBSIDIAN_TILES =
+        registerBlockItem("overlapping_obsidian_tiles", ModBlocks.OVERLAPPING_OBSIDIAN_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_OBSIDIAN =
+        registerBlockItem("polished_obsidian", ModBlocks.POLISHED_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_OBSIDIAN_PILLAR =
+        registerBlockItem("simple_obsidian_pillar", ModBlocks.SIMPLE_OBSIDIAN_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_OBSIDIAN_COLUMN =
+        registerBlockItem("smooth_obsidian_column", ModBlocks.SMOOTH_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_OBSIDIAN =
+        registerBlockItem("thick_inlayed_obsidian", ModBlocks.THICK_INLAYED_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_OBSIDIAN =
+        registerBlockItem("tiled_bordered_obsidian", ModBlocks.TILED_BORDERED_OBSIDIAN);
+    public static final DeferredHolder<Item, BlockItem> TILED_OBSIDIAN_COLUMN =
+        registerBlockItem("tiled_obsidian_column", ModBlocks.TILED_OBSIDIAN_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_OBSIDIAN =
+        registerBlockItem("tiny_brick_bordered_obsidian", ModBlocks.TINY_BRICK_BORDERED_OBSIDIAN);
+
+    // ── Orange Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_ORANGE_CONCRETE =
+        registerBlockItem("grill_orange_concrete", ModBlocks.GRILL_ORANGE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> ORANGE_CONCRETE_PANEL =
+        registerBlockItem("orange_concrete_panel", ModBlocks.ORANGE_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> ORANGE_CONCRETE_PILLAR =
+        registerBlockItem("orange_concrete_pillar", ModBlocks.ORANGE_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_ORANGE_CONCRETE =
+        registerBlockItem("pegged_orange_concrete", ModBlocks.PEGGED_ORANGE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_ORANGE_CONCRETE =
+        registerBlockItem("smooth_orange_concrete", ModBlocks.SMOOTH_ORANGE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_ORANGE_CONCRETE =
+        registerBlockItem("striped_orange_concrete", ModBlocks.STRIPED_ORANGE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_ORANGE_CONCRETE =
+        registerBlockItem("wired_orange_concrete", ModBlocks.WIRED_ORANGE_CONCRETE);
+
+    // ── Orange Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_ORANGE_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_orange_stained_glass_pillar", ModBlocks.ARCHED_ORANGE_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_ORANGE_STAINED_GLASS =
+        registerBlockItem("fancy_orange_stained_glass", ModBlocks.FANCY_ORANGE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_ORANGE_STAINED_GLASS =
+        registerBlockItem("ornate_orange_stained_glass", ModBlocks.ORNATE_ORANGE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_ORANGE_STAINED_GLASS =
+        registerBlockItem("raster_orange_stained_glass", ModBlocks.RASTER_ORANGE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_ORANGE_STAINED_GLASS =
+        registerBlockItem("small_orange_stained_glass", ModBlocks.SMALL_ORANGE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_ORANGE_STAINED_GLASS =
+        registerBlockItem("tiled_orange_stained_glass", ModBlocks.TILED_ORANGE_STAINED_GLASS);
+
+    // ── Orange Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_ORANGE_TERRACOTTA =
+        registerBlockItem("circular_orange_terracotta", ModBlocks.CIRCULAR_ORANGE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_ORANGE_TERRACOTTA =
+        registerBlockItem("curled_orange_terracotta", ModBlocks.CURLED_ORANGE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_ORANGE_TERRACOTTA =
+        registerBlockItem("hexagonical_orange_terracotta", ModBlocks.HEXAGONICAL_ORANGE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_ORANGE_TERRACOTTA =
+        registerBlockItem("inscribed_orange_terracotta", ModBlocks.INSCRIBED_ORANGE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> ORANGE_TERRACOTTA_COLUMN =
+        registerBlockItem("orange_terracotta_column", ModBlocks.ORANGE_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> ORANGE_TERRACOTTA_PILLAR =
+        registerBlockItem("orange_terracotta_pillar", ModBlocks.ORANGE_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_ORANGE_TERRACOTTA_TILES =
+        registerBlockItem("small_orange_terracotta_tiles", ModBlocks.SMALL_ORANGE_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_ORANGE_TERRACOTTA =
+        registerBlockItem("starry_orange_terracotta", ModBlocks.STARRY_ORANGE_TERRACOTTA);
+
+    // ── Orange Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_ORANGE_WOOL =
+        registerBlockItem("cornered_orange_wool", ModBlocks.CORNERED_ORANGE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_ORANGE_WOOL =
+        registerBlockItem("crafted_orange_wool", ModBlocks.CRAFTED_ORANGE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_ORANGE_WOOL =
+        registerBlockItem("harsh_quilted_orange_wool", ModBlocks.HARSH_QUILTED_ORANGE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_ORANGE_WOOL =
+        registerBlockItem("rectangle_orange_wool", ModBlocks.RECTANGLE_ORANGE_WOOL);
+
+    // ── Packed Ice ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_PACKED_ICE =
+        registerBlockItem("bordered_packed_ice", ModBlocks.BORDERED_PACKED_ICE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_PACKED_ICE =
+        registerBlockItem("brick_bordered_packed_ice", ModBlocks.BRICK_BORDERED_PACKED_ICE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_PACKED_ICE_PILLAR =
+        registerBlockItem("curly_packed_ice_pillar", ModBlocks.CURLY_PACKED_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_PACKED_ICE_COLUMN =
+        registerBlockItem("cut_packed_ice_column", ModBlocks.CUT_PACKED_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_PACKED_ICE_BRICKS =
+        registerBlockItem("edged_packed_ice_bricks", ModBlocks.EDGED_PACKED_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_PACKED_ICE_PILLAR =
+        registerBlockItem("fine_packed_ice_pillar", ModBlocks.FINE_PACKED_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_PACKED_ICE_BRICKS =
+        registerBlockItem("massive_packed_ice_bricks", ModBlocks.MASSIVE_PACKED_ICE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PACKED_ICE_PILLAR =
+        registerBlockItem("ornate_packed_ice_pillar", ModBlocks.ORNATE_PACKED_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_PACKED_ICE_TILES =
+        registerBlockItem("overlapping_packed_ice_tiles", ModBlocks.OVERLAPPING_PACKED_ICE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_PACKED_ICE =
+        registerBlockItem("polished_packed_ice", ModBlocks.POLISHED_PACKED_ICE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_PACKED_ICE_PILLAR =
+        registerBlockItem("simple_packed_ice_pillar", ModBlocks.SIMPLE_PACKED_ICE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_PACKED_ICE_COLUMN =
+        registerBlockItem("smooth_packed_ice_column", ModBlocks.SMOOTH_PACKED_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_PACKED_ICE =
+        registerBlockItem("thick_inlayed_packed_ice", ModBlocks.THICK_INLAYED_PACKED_ICE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_PACKED_ICE =
+        registerBlockItem("tiled_bordered_packed_ice", ModBlocks.TILED_BORDERED_PACKED_ICE);
+    public static final DeferredHolder<Item, BlockItem> TILED_PACKED_ICE_COLUMN =
+        registerBlockItem("tiled_packed_ice_column", ModBlocks.TILED_PACKED_ICE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_PACKED_ICE =
+        registerBlockItem("tiny_brick_bordered_packed_ice", ModBlocks.TINY_BRICK_BORDERED_PACKED_ICE);
+
+    // ── Packed Mud ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_PACKED_MUD =
+        registerBlockItem("bordered_packed_mud", ModBlocks.BORDERED_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_PACKED_MUD =
+        registerBlockItem("brick_bordered_packed_mud", ModBlocks.BRICK_BORDERED_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> CARVED_PACKED_MUD_PILLAR =
+        registerBlockItem("carved_packed_mud_pillar", ModBlocks.CARVED_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CURLY_PACKED_MUD_PILLAR =
+        registerBlockItem("curly_packed_mud_pillar", ModBlocks.CURLY_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> EDGED_PACKED_MUD_BRICKS =
+        registerBlockItem("edged_packed_mud_bricks", ModBlocks.EDGED_PACKED_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FANCY_PACKED_MUD_PILLAR =
+        registerBlockItem("fancy_packed_mud_pillar", ModBlocks.FANCY_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FINE_PACKED_MUD_PILLAR =
+        registerBlockItem("fine_packed_mud_pillar", ModBlocks.FINE_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> HARD_PACKED_MUD =
+        registerBlockItem("hard_packed_mud", ModBlocks.HARD_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> LARGE_PACKED_MUD_SIGIL =
+        registerBlockItem("large_packed_mud_sigil", ModBlocks.LARGE_PACKED_MUD_SIGIL);
+    public static final DeferredHolder<Item, BlockItem> LOREFUL_PACKED_MUD =
+        registerBlockItem("loreful_packed_mud", ModBlocks.LOREFUL_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_PACKED_MUD_BRICKS =
+        registerBlockItem("massive_packed_mud_bricks", ModBlocks.MASSIVE_PACKED_MUD_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PACKED_MUD_PILLAR =
+        registerBlockItem("ornate_packed_mud_pillar", ModBlocks.ORNATE_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_PACKED_MUD_TILES =
+        registerBlockItem("overlapping_packed_mud_tiles", ModBlocks.OVERLAPPING_PACKED_MUD_TILES);
+    public static final DeferredHolder<Item, BlockItem> SCALY_PACKED_MUD =
+        registerBlockItem("scaly_packed_mud", ModBlocks.SCALY_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_PACKED_MUD_PILLAR =
+        registerBlockItem("simple_packed_mud_pillar", ModBlocks.SIMPLE_PACKED_MUD_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_PACKED_MUD =
+        registerBlockItem("tiled_bordered_packed_mud", ModBlocks.TILED_BORDERED_PACKED_MUD);
+    public static final DeferredHolder<Item, BlockItem> TILED_PACKED_MUD_COLUMN =
+        registerBlockItem("tiled_packed_mud_column", ModBlocks.TILED_PACKED_MUD_COLUMN);
+
+    // ── Pink Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_PINK_CONCRETE =
+        registerBlockItem("grill_pink_concrete", ModBlocks.GRILL_PINK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_PINK_CONCRETE =
+        registerBlockItem("pegged_pink_concrete", ModBlocks.PEGGED_PINK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PINK_CONCRETE_PANEL =
+        registerBlockItem("pink_concrete_panel", ModBlocks.PINK_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> PINK_CONCRETE_PILLAR =
+        registerBlockItem("pink_concrete_pillar", ModBlocks.PINK_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_PINK_CONCRETE =
+        registerBlockItem("smooth_pink_concrete", ModBlocks.SMOOTH_PINK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_PINK_CONCRETE =
+        registerBlockItem("striped_pink_concrete", ModBlocks.STRIPED_PINK_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_PINK_CONCRETE =
+        registerBlockItem("wired_pink_concrete", ModBlocks.WIRED_PINK_CONCRETE);
+
+    // ── Pink Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_PINK_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_pink_stained_glass_pillar", ModBlocks.ARCHED_PINK_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_PINK_STAINED_GLASS =
+        registerBlockItem("fancy_pink_stained_glass", ModBlocks.FANCY_PINK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PINK_STAINED_GLASS =
+        registerBlockItem("ornate_pink_stained_glass", ModBlocks.ORNATE_PINK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_PINK_STAINED_GLASS =
+        registerBlockItem("raster_pink_stained_glass", ModBlocks.RASTER_PINK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_PINK_STAINED_GLASS =
+        registerBlockItem("small_pink_stained_glass", ModBlocks.SMALL_PINK_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_PINK_STAINED_GLASS =
+        registerBlockItem("tiled_pink_stained_glass", ModBlocks.TILED_PINK_STAINED_GLASS);
+
+    // ── Pink Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_PINK_TERRACOTTA =
+        registerBlockItem("circular_pink_terracotta", ModBlocks.CIRCULAR_PINK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_PINK_TERRACOTTA =
+        registerBlockItem("curled_pink_terracotta", ModBlocks.CURLED_PINK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_PINK_TERRACOTTA =
+        registerBlockItem("hexagonical_pink_terracotta", ModBlocks.HEXAGONICAL_PINK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_PINK_TERRACOTTA =
+        registerBlockItem("inscribed_pink_terracotta", ModBlocks.INSCRIBED_PINK_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> PINK_TERRACOTTA_COLUMN =
+        registerBlockItem("pink_terracotta_column", ModBlocks.PINK_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> PINK_TERRACOTTA_PILLAR =
+        registerBlockItem("pink_terracotta_pillar", ModBlocks.PINK_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_PINK_TERRACOTTA_TILES =
+        registerBlockItem("small_pink_terracotta_tiles", ModBlocks.SMALL_PINK_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_PINK_TERRACOTTA =
+        registerBlockItem("starry_pink_terracotta", ModBlocks.STARRY_PINK_TERRACOTTA);
+
+    // ── Pink Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_PINK_WOOL =
+        registerBlockItem("cornered_pink_wool", ModBlocks.CORNERED_PINK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_PINK_WOOL =
+        registerBlockItem("crafted_pink_wool", ModBlocks.CRAFTED_PINK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_PINK_WOOL =
+        registerBlockItem("harsh_quilted_pink_wool", ModBlocks.HARSH_QUILTED_PINK_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_PINK_WOOL =
+        registerBlockItem("rectangle_pink_wool", ModBlocks.RECTANGLE_PINK_WOOL);
+
+    // ── Prismarine ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_PRISMARINE =
+        registerBlockItem("bordered_prismarine", ModBlocks.BORDERED_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_PRISMARINE =
+        registerBlockItem("brick_bordered_prismarine", ModBlocks.BRICK_BORDERED_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_PRISMARINE_PILLAR =
+        registerBlockItem("curly_prismarine_pillar", ModBlocks.CURLY_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_PRISMARINE_COLUMN =
+        registerBlockItem("cut_prismarine_column", ModBlocks.CUT_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_PRISMARINE_BRICKS =
+        registerBlockItem("edged_prismarine_bricks", ModBlocks.EDGED_PRISMARINE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_PRISMARINE_PILLAR =
+        registerBlockItem("fine_prismarine_pillar", ModBlocks.FINE_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_PRISMARINE_BRICKS =
+        registerBlockItem("massive_prismarine_bricks", ModBlocks.MASSIVE_PRISMARINE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PRISMARINE_PILLAR =
+        registerBlockItem("ornate_prismarine_pillar", ModBlocks.ORNATE_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_PRISMARINE_TILES =
+        registerBlockItem("overlapping_prismarine_tiles", ModBlocks.OVERLAPPING_PRISMARINE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_PRISMARINE =
+        registerBlockItem("polished_prismarine", ModBlocks.POLISHED_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_PRISMARINE_PILLAR =
+        registerBlockItem("simple_prismarine_pillar", ModBlocks.SIMPLE_PRISMARINE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_PRISMARINE_COLUMN =
+        registerBlockItem("smooth_prismarine_column", ModBlocks.SMOOTH_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_PRISMARINE =
+        registerBlockItem("thick_inlayed_prismarine", ModBlocks.THICK_INLAYED_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_PRISMARINE =
+        registerBlockItem("tiled_bordered_prismarine", ModBlocks.TILED_BORDERED_PRISMARINE);
+    public static final DeferredHolder<Item, BlockItem> TILED_PRISMARINE_COLUMN =
+        registerBlockItem("tiled_prismarine_column", ModBlocks.TILED_PRISMARINE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_PRISMARINE =
+        registerBlockItem("tiny_brick_bordered_prismarine", ModBlocks.TINY_BRICK_BORDERED_PRISMARINE);
+
+    // ── Purple Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_PURPLE_CONCRETE =
+        registerBlockItem("grill_purple_concrete", ModBlocks.GRILL_PURPLE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_PURPLE_CONCRETE =
+        registerBlockItem("pegged_purple_concrete", ModBlocks.PEGGED_PURPLE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PURPLE_CONCRETE_PANEL =
+        registerBlockItem("purple_concrete_panel", ModBlocks.PURPLE_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> PURPLE_CONCRETE_PILLAR =
+        registerBlockItem("purple_concrete_pillar", ModBlocks.PURPLE_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_PURPLE_CONCRETE =
+        registerBlockItem("smooth_purple_concrete", ModBlocks.SMOOTH_PURPLE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_PURPLE_CONCRETE =
+        registerBlockItem("striped_purple_concrete", ModBlocks.STRIPED_PURPLE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_PURPLE_CONCRETE =
+        registerBlockItem("wired_purple_concrete", ModBlocks.WIRED_PURPLE_CONCRETE);
+
+    // ── Purple Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_PURPLE_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_purple_stained_glass_pillar", ModBlocks.ARCHED_PURPLE_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_PURPLE_STAINED_GLASS =
+        registerBlockItem("fancy_purple_stained_glass", ModBlocks.FANCY_PURPLE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PURPLE_STAINED_GLASS =
+        registerBlockItem("ornate_purple_stained_glass", ModBlocks.ORNATE_PURPLE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_PURPLE_STAINED_GLASS =
+        registerBlockItem("raster_purple_stained_glass", ModBlocks.RASTER_PURPLE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_PURPLE_STAINED_GLASS =
+        registerBlockItem("small_purple_stained_glass", ModBlocks.SMALL_PURPLE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_PURPLE_STAINED_GLASS =
+        registerBlockItem("tiled_purple_stained_glass", ModBlocks.TILED_PURPLE_STAINED_GLASS);
+
+    // ── Purple Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_PURPLE_TERRACOTTA =
+        registerBlockItem("circular_purple_terracotta", ModBlocks.CIRCULAR_PURPLE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_PURPLE_TERRACOTTA =
+        registerBlockItem("curled_purple_terracotta", ModBlocks.CURLED_PURPLE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_PURPLE_TERRACOTTA =
+        registerBlockItem("hexagonical_purple_terracotta", ModBlocks.HEXAGONICAL_PURPLE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_PURPLE_TERRACOTTA =
+        registerBlockItem("inscribed_purple_terracotta", ModBlocks.INSCRIBED_PURPLE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> PURPLE_TERRACOTTA_COLUMN =
+        registerBlockItem("purple_terracotta_column", ModBlocks.PURPLE_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> PURPLE_TERRACOTTA_PILLAR =
+        registerBlockItem("purple_terracotta_pillar", ModBlocks.PURPLE_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_PURPLE_TERRACOTTA_TILES =
+        registerBlockItem("small_purple_terracotta_tiles", ModBlocks.SMALL_PURPLE_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_PURPLE_TERRACOTTA =
+        registerBlockItem("starry_purple_terracotta", ModBlocks.STARRY_PURPLE_TERRACOTTA);
+
+    // ── Purple Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_PURPLE_WOOL =
+        registerBlockItem("cornered_purple_wool", ModBlocks.CORNERED_PURPLE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_PURPLE_WOOL =
+        registerBlockItem("crafted_purple_wool", ModBlocks.CRAFTED_PURPLE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_PURPLE_WOOL =
+        registerBlockItem("harsh_quilted_purple_wool", ModBlocks.HARSH_QUILTED_PURPLE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_PURPLE_WOOL =
+        registerBlockItem("rectangle_purple_wool", ModBlocks.RECTANGLE_PURPLE_WOOL);
+
+    // ── Purpur Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_PURPUR_BLOCK =
+        registerBlockItem("bordered_purpur_block", ModBlocks.BORDERED_PURPUR_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_PURPUR_BLOCK =
+        registerBlockItem("brick_bordered_purpur_block", ModBlocks.BRICK_BORDERED_PURPUR_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_PURPUR_BLOCK_PILLAR =
+        registerBlockItem("curly_purpur_block_pillar", ModBlocks.CURLY_PURPUR_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_PURPUR_BLOCK_COLUMN =
+        registerBlockItem("cut_purpur_block_column", ModBlocks.CUT_PURPUR_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_PURPUR_BLOCK_BRICKS =
+        registerBlockItem("edged_purpur_block_bricks", ModBlocks.EDGED_PURPUR_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_PURPUR_BLOCK_PILLAR =
+        registerBlockItem("fine_purpur_block_pillar", ModBlocks.FINE_PURPUR_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_PURPUR_BLOCK_BRICKS =
+        registerBlockItem("massive_purpur_block_bricks", ModBlocks.MASSIVE_PURPUR_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_PURPUR_BLOCK_PILLAR =
+        registerBlockItem("ornate_purpur_block_pillar", ModBlocks.ORNATE_PURPUR_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_PURPUR_BLOCK_TILES =
+        registerBlockItem("overlapping_purpur_block_tiles", ModBlocks.OVERLAPPING_PURPUR_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_PURPUR_BLOCK =
+        registerBlockItem("polished_purpur_block", ModBlocks.POLISHED_PURPUR_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_PURPUR_BLOCK_PILLAR =
+        registerBlockItem("simple_purpur_block_pillar", ModBlocks.SIMPLE_PURPUR_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_PURPUR_BLOCK_COLUMN =
+        registerBlockItem("smooth_purpur_block_column", ModBlocks.SMOOTH_PURPUR_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_PURPUR_BLOCK =
+        registerBlockItem("thick_inlayed_purpur_block", ModBlocks.THICK_INLAYED_PURPUR_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_PURPUR_BLOCK =
+        registerBlockItem("tiled_bordered_purpur_block", ModBlocks.TILED_BORDERED_PURPUR_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_PURPUR_BLOCK_COLUMN =
+        registerBlockItem("tiled_purpur_block_column", ModBlocks.TILED_PURPUR_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_PURPUR_BLOCK =
+        registerBlockItem("tiny_brick_bordered_purpur_block", ModBlocks.TINY_BRICK_BORDERED_PURPUR_BLOCK);
+
+    // ── Quartz Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_QUARTZ_BLOCK =
+        registerBlockItem("bordered_quartz_block", ModBlocks.BORDERED_QUARTZ_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_QUARTZ_BLOCK =
+        registerBlockItem("brick_bordered_quartz_block", ModBlocks.BRICK_BORDERED_QUARTZ_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_QUARTZ_BLOCK_PILLAR =
+        registerBlockItem("curly_quartz_block_pillar", ModBlocks.CURLY_QUARTZ_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_QUARTZ_BLOCK_COLUMN =
+        registerBlockItem("cut_quartz_block_column", ModBlocks.CUT_QUARTZ_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_QUARTZ_BLOCK_BRICKS =
+        registerBlockItem("edged_quartz_block_bricks", ModBlocks.EDGED_QUARTZ_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_QUARTZ_BLOCK_PILLAR =
+        registerBlockItem("fine_quartz_block_pillar", ModBlocks.FINE_QUARTZ_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_QUARTZ_BLOCK_BRICKS =
+        registerBlockItem("massive_quartz_block_bricks", ModBlocks.MASSIVE_QUARTZ_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_QUARTZ_BLOCK_PILLAR =
+        registerBlockItem("ornate_quartz_block_pillar", ModBlocks.ORNATE_QUARTZ_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_QUARTZ_BLOCK_TILES =
+        registerBlockItem("overlapping_quartz_block_tiles", ModBlocks.OVERLAPPING_QUARTZ_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_QUARTZ_BLOCK =
+        registerBlockItem("polished_quartz_block", ModBlocks.POLISHED_QUARTZ_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_QUARTZ_BLOCK_PILLAR =
+        registerBlockItem("simple_quartz_block_pillar", ModBlocks.SIMPLE_QUARTZ_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_QUARTZ_BLOCK_COLUMN =
+        registerBlockItem("smooth_quartz_block_column", ModBlocks.SMOOTH_QUARTZ_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_QUARTZ_BLOCK =
+        registerBlockItem("thick_inlayed_quartz_block", ModBlocks.THICK_INLAYED_QUARTZ_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_QUARTZ_BLOCK =
+        registerBlockItem("tiled_bordered_quartz_block", ModBlocks.TILED_BORDERED_QUARTZ_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_QUARTZ_BLOCK_COLUMN =
+        registerBlockItem("tiled_quartz_block_column", ModBlocks.TILED_QUARTZ_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_QUARTZ_BLOCK =
+        registerBlockItem("tiny_brick_bordered_quartz_block", ModBlocks.TINY_BRICK_BORDERED_QUARTZ_BLOCK);
+
+    // ── Raw Copper Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_RAW_COPPER_BLOCK =
+        registerBlockItem("bordered_raw_copper_block", ModBlocks.BORDERED_RAW_COPPER_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_RAW_COPPER_BLOCK =
+        registerBlockItem("brick_bordered_raw_copper_block", ModBlocks.BRICK_BORDERED_RAW_COPPER_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_RAW_COPPER_BLOCK_PILLAR =
+        registerBlockItem("curly_raw_copper_block_pillar", ModBlocks.CURLY_RAW_COPPER_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_RAW_COPPER_BLOCK_COLUMN =
+        registerBlockItem("cut_raw_copper_block_column", ModBlocks.CUT_RAW_COPPER_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_RAW_COPPER_BLOCK_BRICKS =
+        registerBlockItem("edged_raw_copper_block_bricks", ModBlocks.EDGED_RAW_COPPER_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_RAW_COPPER_BLOCK_PILLAR =
+        registerBlockItem("fine_raw_copper_block_pillar", ModBlocks.FINE_RAW_COPPER_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_RAW_COPPER_BLOCK_BRICKS =
+        registerBlockItem("massive_raw_copper_block_bricks", ModBlocks.MASSIVE_RAW_COPPER_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RAW_COPPER_BLOCK_PILLAR =
+        registerBlockItem("ornate_raw_copper_block_pillar", ModBlocks.ORNATE_RAW_COPPER_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_RAW_COPPER_BLOCK_TILES =
+        registerBlockItem("overlapping_raw_copper_block_tiles", ModBlocks.OVERLAPPING_RAW_COPPER_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_RAW_COPPER_BLOCK =
+        registerBlockItem("polished_raw_copper_block", ModBlocks.POLISHED_RAW_COPPER_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_RAW_COPPER_BLOCK_PILLAR =
+        registerBlockItem("simple_raw_copper_block_pillar", ModBlocks.SIMPLE_RAW_COPPER_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RAW_COPPER_BLOCK_COLUMN =
+        registerBlockItem("smooth_raw_copper_block_column", ModBlocks.SMOOTH_RAW_COPPER_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_RAW_COPPER_BLOCK =
+        registerBlockItem("thick_inlayed_raw_copper_block", ModBlocks.THICK_INLAYED_RAW_COPPER_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_RAW_COPPER_BLOCK =
+        registerBlockItem("tiled_bordered_raw_copper_block", ModBlocks.TILED_BORDERED_RAW_COPPER_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_RAW_COPPER_BLOCK_COLUMN =
+        registerBlockItem("tiled_raw_copper_block_column", ModBlocks.TILED_RAW_COPPER_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_RAW_COPPER_BLOCK =
+        registerBlockItem("tiny_brick_bordered_raw_copper_block", ModBlocks.TINY_BRICK_BORDERED_RAW_COPPER_BLOCK);
+
+    // ── Raw Gold Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_RAW_GOLD_BLOCK =
+        registerBlockItem("bordered_raw_gold_block", ModBlocks.BORDERED_RAW_GOLD_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_RAW_GOLD_BLOCK =
+        registerBlockItem("brick_bordered_raw_gold_block", ModBlocks.BRICK_BORDERED_RAW_GOLD_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_RAW_GOLD_BLOCK_PILLAR =
+        registerBlockItem("curly_raw_gold_block_pillar", ModBlocks.CURLY_RAW_GOLD_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_RAW_GOLD_BLOCK_COLUMN =
+        registerBlockItem("cut_raw_gold_block_column", ModBlocks.CUT_RAW_GOLD_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_RAW_GOLD_BLOCK_BRICKS =
+        registerBlockItem("edged_raw_gold_block_bricks", ModBlocks.EDGED_RAW_GOLD_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_RAW_GOLD_BLOCK_PILLAR =
+        registerBlockItem("fine_raw_gold_block_pillar", ModBlocks.FINE_RAW_GOLD_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_RAW_GOLD_BLOCK_BRICKS =
+        registerBlockItem("massive_raw_gold_block_bricks", ModBlocks.MASSIVE_RAW_GOLD_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RAW_GOLD_BLOCK_PILLAR =
+        registerBlockItem("ornate_raw_gold_block_pillar", ModBlocks.ORNATE_RAW_GOLD_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_RAW_GOLD_BLOCK_TILES =
+        registerBlockItem("overlapping_raw_gold_block_tiles", ModBlocks.OVERLAPPING_RAW_GOLD_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_RAW_GOLD_BLOCK =
+        registerBlockItem("polished_raw_gold_block", ModBlocks.POLISHED_RAW_GOLD_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_RAW_GOLD_BLOCK_PILLAR =
+        registerBlockItem("simple_raw_gold_block_pillar", ModBlocks.SIMPLE_RAW_GOLD_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RAW_GOLD_BLOCK_COLUMN =
+        registerBlockItem("smooth_raw_gold_block_column", ModBlocks.SMOOTH_RAW_GOLD_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_RAW_GOLD_BLOCK =
+        registerBlockItem("thick_inlayed_raw_gold_block", ModBlocks.THICK_INLAYED_RAW_GOLD_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_RAW_GOLD_BLOCK =
+        registerBlockItem("tiled_bordered_raw_gold_block", ModBlocks.TILED_BORDERED_RAW_GOLD_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_RAW_GOLD_BLOCK_COLUMN =
+        registerBlockItem("tiled_raw_gold_block_column", ModBlocks.TILED_RAW_GOLD_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_RAW_GOLD_BLOCK =
+        registerBlockItem("tiny_brick_bordered_raw_gold_block", ModBlocks.TINY_BRICK_BORDERED_RAW_GOLD_BLOCK);
+
+    // ── Raw Iron Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_RAW_IRON_BLOCK =
+        registerBlockItem("bordered_raw_iron_block", ModBlocks.BORDERED_RAW_IRON_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_RAW_IRON_BLOCK =
+        registerBlockItem("brick_bordered_raw_iron_block", ModBlocks.BRICK_BORDERED_RAW_IRON_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_RAW_IRON_BLOCK_PILLAR =
+        registerBlockItem("curly_raw_iron_block_pillar", ModBlocks.CURLY_RAW_IRON_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_RAW_IRON_BLOCK_COLUMN =
+        registerBlockItem("cut_raw_iron_block_column", ModBlocks.CUT_RAW_IRON_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_RAW_IRON_BLOCK_BRICKS =
+        registerBlockItem("edged_raw_iron_block_bricks", ModBlocks.EDGED_RAW_IRON_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_RAW_IRON_BLOCK_PILLAR =
+        registerBlockItem("fine_raw_iron_block_pillar", ModBlocks.FINE_RAW_IRON_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_RAW_IRON_BLOCK_BRICKS =
+        registerBlockItem("massive_raw_iron_block_bricks", ModBlocks.MASSIVE_RAW_IRON_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RAW_IRON_BLOCK_PILLAR =
+        registerBlockItem("ornate_raw_iron_block_pillar", ModBlocks.ORNATE_RAW_IRON_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_RAW_IRON_BLOCK_TILES =
+        registerBlockItem("overlapping_raw_iron_block_tiles", ModBlocks.OVERLAPPING_RAW_IRON_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_RAW_IRON_BLOCK =
+        registerBlockItem("polished_raw_iron_block", ModBlocks.POLISHED_RAW_IRON_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_RAW_IRON_BLOCK_PILLAR =
+        registerBlockItem("simple_raw_iron_block_pillar", ModBlocks.SIMPLE_RAW_IRON_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RAW_IRON_BLOCK_COLUMN =
+        registerBlockItem("smooth_raw_iron_block_column", ModBlocks.SMOOTH_RAW_IRON_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_RAW_IRON_BLOCK =
+        registerBlockItem("thick_inlayed_raw_iron_block", ModBlocks.THICK_INLAYED_RAW_IRON_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_RAW_IRON_BLOCK =
+        registerBlockItem("tiled_bordered_raw_iron_block", ModBlocks.TILED_BORDERED_RAW_IRON_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_RAW_IRON_BLOCK_COLUMN =
+        registerBlockItem("tiled_raw_iron_block_column", ModBlocks.TILED_RAW_IRON_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_RAW_IRON_BLOCK =
+        registerBlockItem("tiny_brick_bordered_raw_iron_block", ModBlocks.TINY_BRICK_BORDERED_RAW_IRON_BLOCK);
+
+    // ── Redstone Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_REDSTONE_BLOCK =
+        registerBlockItem("bordered_redstone_block", ModBlocks.BORDERED_REDSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_REDSTONE_BLOCK =
+        registerBlockItem("brick_bordered_redstone_block", ModBlocks.BRICK_BORDERED_REDSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_REDSTONE_BLOCK_PILLAR =
+        registerBlockItem("curly_redstone_block_pillar", ModBlocks.CURLY_REDSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_REDSTONE_BLOCK_COLUMN =
+        registerBlockItem("cut_redstone_block_column", ModBlocks.CUT_REDSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_REDSTONE_BLOCK_BRICKS =
+        registerBlockItem("edged_redstone_block_bricks", ModBlocks.EDGED_REDSTONE_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_REDSTONE_BLOCK_PILLAR =
+        registerBlockItem("fine_redstone_block_pillar", ModBlocks.FINE_REDSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_REDSTONE_BLOCK_BRICKS =
+        registerBlockItem("massive_redstone_block_bricks", ModBlocks.MASSIVE_REDSTONE_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_REDSTONE_BLOCK_PILLAR =
+        registerBlockItem("ornate_redstone_block_pillar", ModBlocks.ORNATE_REDSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_REDSTONE_BLOCK_TILES =
+        registerBlockItem("overlapping_redstone_block_tiles", ModBlocks.OVERLAPPING_REDSTONE_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_REDSTONE_BLOCK =
+        registerBlockItem("polished_redstone_block", ModBlocks.POLISHED_REDSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_REDSTONE_BLOCK_PILLAR =
+        registerBlockItem("simple_redstone_block_pillar", ModBlocks.SIMPLE_REDSTONE_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_REDSTONE_BLOCK_COLUMN =
+        registerBlockItem("smooth_redstone_block_column", ModBlocks.SMOOTH_REDSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_REDSTONE_BLOCK =
+        registerBlockItem("thick_inlayed_redstone_block", ModBlocks.THICK_INLAYED_REDSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_REDSTONE_BLOCK =
+        registerBlockItem("tiled_bordered_redstone_block", ModBlocks.TILED_BORDERED_REDSTONE_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_REDSTONE_BLOCK_COLUMN =
+        registerBlockItem("tiled_redstone_block_column", ModBlocks.TILED_REDSTONE_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_REDSTONE_BLOCK =
+        registerBlockItem("tiny_brick_bordered_redstone_block", ModBlocks.TINY_BRICK_BORDERED_REDSTONE_BLOCK);
+
+    // ── Red Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_RED_CONCRETE =
+        registerBlockItem("grill_red_concrete", ModBlocks.GRILL_RED_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_RED_CONCRETE =
+        registerBlockItem("pegged_red_concrete", ModBlocks.PEGGED_RED_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> RED_CONCRETE_PANEL =
+        registerBlockItem("red_concrete_panel", ModBlocks.RED_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> RED_CONCRETE_PILLAR =
+        registerBlockItem("red_concrete_pillar", ModBlocks.RED_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RED_CONCRETE =
+        registerBlockItem("smooth_red_concrete", ModBlocks.SMOOTH_RED_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_RED_CONCRETE =
+        registerBlockItem("striped_red_concrete", ModBlocks.STRIPED_RED_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_RED_CONCRETE =
+        registerBlockItem("wired_red_concrete", ModBlocks.WIRED_RED_CONCRETE);
+
+    // ── Red Nether Bricks ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_RED_NETHER_BRICKS =
+        registerBlockItem("bordered_red_nether_bricks", ModBlocks.BORDERED_RED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_RED_NETHER_BRICKS =
+        registerBlockItem("brick_bordered_red_nether_bricks", ModBlocks.BRICK_BORDERED_RED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> CURLY_RED_NETHER_BRICKS_PILLAR =
+        registerBlockItem("curly_red_nether_bricks_pillar", ModBlocks.CURLY_RED_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_RED_NETHER_BRICKS_COLUMN =
+        registerBlockItem("cut_red_nether_bricks_column", ModBlocks.CUT_RED_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_RED_NETHER_BRICKS_BRICKS =
+        registerBlockItem("edged_red_nether_bricks_bricks", ModBlocks.EDGED_RED_NETHER_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_RED_NETHER_BRICKS_PILLAR =
+        registerBlockItem("fine_red_nether_bricks_pillar", ModBlocks.FINE_RED_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_RED_NETHER_BRICKS_BRICKS =
+        registerBlockItem("massive_red_nether_bricks_bricks", ModBlocks.MASSIVE_RED_NETHER_BRICKS_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RED_NETHER_BRICKS_PILLAR =
+        registerBlockItem("ornate_red_nether_bricks_pillar", ModBlocks.ORNATE_RED_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_RED_NETHER_BRICKS_TILES =
+        registerBlockItem("overlapping_red_nether_bricks_tiles", ModBlocks.OVERLAPPING_RED_NETHER_BRICKS_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_RED_NETHER_BRICKS =
+        registerBlockItem("polished_red_nether_bricks", ModBlocks.POLISHED_RED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_RED_NETHER_BRICKS_PILLAR =
+        registerBlockItem("simple_red_nether_bricks_pillar", ModBlocks.SIMPLE_RED_NETHER_BRICKS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RED_NETHER_BRICKS_COLUMN =
+        registerBlockItem("smooth_red_nether_bricks_column", ModBlocks.SMOOTH_RED_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_RED_NETHER_BRICKS =
+        registerBlockItem("thick_inlayed_red_nether_bricks", ModBlocks.THICK_INLAYED_RED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_RED_NETHER_BRICKS =
+        registerBlockItem("tiled_bordered_red_nether_bricks", ModBlocks.TILED_BORDERED_RED_NETHER_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> TILED_RED_NETHER_BRICKS_COLUMN =
+        registerBlockItem("tiled_red_nether_bricks_column", ModBlocks.TILED_RED_NETHER_BRICKS_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_RED_NETHER_BRICKS =
+        registerBlockItem("tiny_brick_bordered_red_nether_bricks", ModBlocks.TINY_BRICK_BORDERED_RED_NETHER_BRICKS);
+
+    // ── Red Sandstone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_RED_SANDSTONE =
+        registerBlockItem("bordered_red_sandstone", ModBlocks.BORDERED_RED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_RED_SANDSTONE =
+        registerBlockItem("brick_bordered_red_sandstone", ModBlocks.BRICK_BORDERED_RED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_RED_SANDSTONE_PILLAR =
+        registerBlockItem("curly_red_sandstone_pillar", ModBlocks.CURLY_RED_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_RED_SANDSTONE_COLUMN =
+        registerBlockItem("cut_red_sandstone_column", ModBlocks.CUT_RED_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_RED_SANDSTONE_BRICKS =
+        registerBlockItem("edged_red_sandstone_bricks", ModBlocks.EDGED_RED_SANDSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_RED_SANDSTONE_PILLAR =
+        registerBlockItem("fine_red_sandstone_pillar", ModBlocks.FINE_RED_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_RED_SANDSTONE_BRICKS =
+        registerBlockItem("massive_red_sandstone_bricks", ModBlocks.MASSIVE_RED_SANDSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RED_SANDSTONE_PILLAR =
+        registerBlockItem("ornate_red_sandstone_pillar", ModBlocks.ORNATE_RED_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_RED_SANDSTONE_TILES =
+        registerBlockItem("overlapping_red_sandstone_tiles", ModBlocks.OVERLAPPING_RED_SANDSTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_RED_SANDSTONE =
+        registerBlockItem("polished_red_sandstone", ModBlocks.POLISHED_RED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_RED_SANDSTONE_PILLAR =
+        registerBlockItem("simple_red_sandstone_pillar", ModBlocks.SIMPLE_RED_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_RED_SANDSTONE_COLUMN =
+        registerBlockItem("smooth_red_sandstone_column", ModBlocks.SMOOTH_RED_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_RED_SANDSTONE =
+        registerBlockItem("thick_inlayed_red_sandstone", ModBlocks.THICK_INLAYED_RED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_RED_SANDSTONE =
+        registerBlockItem("tiled_bordered_red_sandstone", ModBlocks.TILED_BORDERED_RED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_RED_SANDSTONE_COLUMN =
+        registerBlockItem("tiled_red_sandstone_column", ModBlocks.TILED_RED_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_RED_SANDSTONE =
+        registerBlockItem("tiny_brick_bordered_red_sandstone", ModBlocks.TINY_BRICK_BORDERED_RED_SANDSTONE);
+
+    // ── Red Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_RED_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_red_stained_glass_pillar", ModBlocks.ARCHED_RED_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_RED_STAINED_GLASS =
+        registerBlockItem("fancy_red_stained_glass", ModBlocks.FANCY_RED_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_RED_STAINED_GLASS =
+        registerBlockItem("ornate_red_stained_glass", ModBlocks.ORNATE_RED_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_RED_STAINED_GLASS =
+        registerBlockItem("raster_red_stained_glass", ModBlocks.RASTER_RED_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_RED_STAINED_GLASS =
+        registerBlockItem("small_red_stained_glass", ModBlocks.SMALL_RED_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_RED_STAINED_GLASS =
+        registerBlockItem("tiled_red_stained_glass", ModBlocks.TILED_RED_STAINED_GLASS);
+
+    // ── Red Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_RED_TERRACOTTA =
+        registerBlockItem("circular_red_terracotta", ModBlocks.CIRCULAR_RED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_RED_TERRACOTTA =
+        registerBlockItem("curled_red_terracotta", ModBlocks.CURLED_RED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_RED_TERRACOTTA =
+        registerBlockItem("hexagonical_red_terracotta", ModBlocks.HEXAGONICAL_RED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_RED_TERRACOTTA =
+        registerBlockItem("inscribed_red_terracotta", ModBlocks.INSCRIBED_RED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> RED_TERRACOTTA_COLUMN =
+        registerBlockItem("red_terracotta_column", ModBlocks.RED_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> RED_TERRACOTTA_PILLAR =
+        registerBlockItem("red_terracotta_pillar", ModBlocks.RED_TERRACOTTA_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_RED_TERRACOTTA_TILES =
+        registerBlockItem("small_red_terracotta_tiles", ModBlocks.SMALL_RED_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_RED_TERRACOTTA =
+        registerBlockItem("starry_red_terracotta", ModBlocks.STARRY_RED_TERRACOTTA);
+
+    // ── Red Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_RED_WOOL =
+        registerBlockItem("cornered_red_wool", ModBlocks.CORNERED_RED_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_RED_WOOL =
+        registerBlockItem("crafted_red_wool", ModBlocks.CRAFTED_RED_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_RED_WOOL =
+        registerBlockItem("harsh_quilted_red_wool", ModBlocks.HARSH_QUILTED_RED_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_RED_WOOL =
+        registerBlockItem("rectangle_red_wool", ModBlocks.RECTANGLE_RED_WOOL);
+
+    // ── Sandstone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_SANDSTONE =
+        registerBlockItem("bordered_sandstone", ModBlocks.BORDERED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_SANDSTONE =
+        registerBlockItem("brick_bordered_sandstone", ModBlocks.BRICK_BORDERED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_SANDSTONE_PILLAR =
+        registerBlockItem("curly_sandstone_pillar", ModBlocks.CURLY_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_SANDSTONE_COLUMN =
+        registerBlockItem("cut_sandstone_column", ModBlocks.CUT_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_SANDSTONE_BRICKS =
+        registerBlockItem("edged_sandstone_bricks", ModBlocks.EDGED_SANDSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_SANDSTONE_PILLAR =
+        registerBlockItem("fine_sandstone_pillar", ModBlocks.FINE_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_SANDSTONE_BRICKS =
+        registerBlockItem("massive_sandstone_bricks", ModBlocks.MASSIVE_SANDSTONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_SANDSTONE_PILLAR =
+        registerBlockItem("ornate_sandstone_pillar", ModBlocks.ORNATE_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_SANDSTONE_TILES =
+        registerBlockItem("overlapping_sandstone_tiles", ModBlocks.OVERLAPPING_SANDSTONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_SANDSTONE =
+        registerBlockItem("polished_sandstone", ModBlocks.POLISHED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_SANDSTONE_PILLAR =
+        registerBlockItem("simple_sandstone_pillar", ModBlocks.SIMPLE_SANDSTONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_SANDSTONE_COLUMN =
+        registerBlockItem("smooth_sandstone_column", ModBlocks.SMOOTH_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_SANDSTONE =
+        registerBlockItem("thick_inlayed_sandstone", ModBlocks.THICK_INLAYED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_SANDSTONE =
+        registerBlockItem("tiled_bordered_sandstone", ModBlocks.TILED_BORDERED_SANDSTONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_SANDSTONE_COLUMN =
+        registerBlockItem("tiled_sandstone_column", ModBlocks.TILED_SANDSTONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_SANDSTONE =
+        registerBlockItem("tiny_brick_bordered_sandstone", ModBlocks.TINY_BRICK_BORDERED_SANDSTONE);
+
+    // ── Smooth Stone ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_SMOOTH_STONE =
+        registerBlockItem("bordered_smooth_stone", ModBlocks.BORDERED_SMOOTH_STONE);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_SMOOTH_STONE =
+        registerBlockItem("brick_bordered_smooth_stone", ModBlocks.BRICK_BORDERED_SMOOTH_STONE);
+    public static final DeferredHolder<Item, BlockItem> CURLY_SMOOTH_STONE_PILLAR =
+        registerBlockItem("curly_smooth_stone_pillar", ModBlocks.CURLY_SMOOTH_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_SMOOTH_STONE_COLUMN =
+        registerBlockItem("cut_smooth_stone_column", ModBlocks.CUT_SMOOTH_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_SMOOTH_STONE_BRICKS =
+        registerBlockItem("edged_smooth_stone_bricks", ModBlocks.EDGED_SMOOTH_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_SMOOTH_STONE_PILLAR =
+        registerBlockItem("fine_smooth_stone_pillar", ModBlocks.FINE_SMOOTH_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_SMOOTH_STONE_BRICKS =
+        registerBlockItem("massive_smooth_stone_bricks", ModBlocks.MASSIVE_SMOOTH_STONE_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_SMOOTH_STONE_PILLAR =
+        registerBlockItem("ornate_smooth_stone_pillar", ModBlocks.ORNATE_SMOOTH_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_SMOOTH_STONE_TILES =
+        registerBlockItem("overlapping_smooth_stone_tiles", ModBlocks.OVERLAPPING_SMOOTH_STONE_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_SMOOTH_STONE =
+        registerBlockItem("polished_smooth_stone", ModBlocks.POLISHED_SMOOTH_STONE);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_SMOOTH_STONE_PILLAR =
+        registerBlockItem("simple_smooth_stone_pillar", ModBlocks.SIMPLE_SMOOTH_STONE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_SMOOTH_STONE_COLUMN =
+        registerBlockItem("smooth_smooth_stone_column", ModBlocks.SMOOTH_SMOOTH_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_SMOOTH_STONE =
+        registerBlockItem("thick_inlayed_smooth_stone", ModBlocks.THICK_INLAYED_SMOOTH_STONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_SMOOTH_STONE =
+        registerBlockItem("tiled_bordered_smooth_stone", ModBlocks.TILED_BORDERED_SMOOTH_STONE);
+    public static final DeferredHolder<Item, BlockItem> TILED_SMOOTH_STONE_COLUMN =
+        registerBlockItem("tiled_smooth_stone_column", ModBlocks.TILED_SMOOTH_STONE_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_SMOOTH_STONE =
+        registerBlockItem("tiny_brick_bordered_smooth_stone", ModBlocks.TINY_BRICK_BORDERED_SMOOTH_STONE);
+
+    // ── Snow Block ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_SNOW_BLOCK =
+        registerBlockItem("bordered_snow_block", ModBlocks.BORDERED_SNOW_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_SNOW_BLOCK =
+        registerBlockItem("brick_bordered_snow_block", ModBlocks.BRICK_BORDERED_SNOW_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> CURLY_SNOW_BLOCK_PILLAR =
+        registerBlockItem("curly_snow_block_pillar", ModBlocks.CURLY_SNOW_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_SNOW_BLOCK_COLUMN =
+        registerBlockItem("cut_snow_block_column", ModBlocks.CUT_SNOW_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_SNOW_BLOCK_BRICKS =
+        registerBlockItem("edged_snow_block_bricks", ModBlocks.EDGED_SNOW_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_SNOW_BLOCK_PILLAR =
+        registerBlockItem("fine_snow_block_pillar", ModBlocks.FINE_SNOW_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_SNOW_BLOCK_BRICKS =
+        registerBlockItem("massive_snow_block_bricks", ModBlocks.MASSIVE_SNOW_BLOCK_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_SNOW_BLOCK_PILLAR =
+        registerBlockItem("ornate_snow_block_pillar", ModBlocks.ORNATE_SNOW_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_SNOW_BLOCK_TILES =
+        registerBlockItem("overlapping_snow_block_tiles", ModBlocks.OVERLAPPING_SNOW_BLOCK_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_SNOW_BLOCK =
+        registerBlockItem("polished_snow_block", ModBlocks.POLISHED_SNOW_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_SNOW_BLOCK_PILLAR =
+        registerBlockItem("simple_snow_block_pillar", ModBlocks.SIMPLE_SNOW_BLOCK_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_SNOW_BLOCK_COLUMN =
+        registerBlockItem("smooth_snow_block_column", ModBlocks.SMOOTH_SNOW_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_SNOW_BLOCK =
+        registerBlockItem("thick_inlayed_snow_block", ModBlocks.THICK_INLAYED_SNOW_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_SNOW_BLOCK =
+        registerBlockItem("tiled_bordered_snow_block", ModBlocks.TILED_BORDERED_SNOW_BLOCK);
+    public static final DeferredHolder<Item, BlockItem> TILED_SNOW_BLOCK_COLUMN =
+        registerBlockItem("tiled_snow_block_column", ModBlocks.TILED_SNOW_BLOCK_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_SNOW_BLOCK =
+        registerBlockItem("tiny_brick_bordered_snow_block", ModBlocks.TINY_BRICK_BORDERED_SNOW_BLOCK);
+
+    // ── Spruce Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_SPRUCE_PLANKS =
+        registerBlockItem("cornered_spruce_planks", ModBlocks.CORNERED_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_SPRUCE_PLANKS =
+        registerBlockItem("crated_spruce_planks", ModBlocks.CRATED_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_SPRUCE_PLANKS =
+        registerBlockItem("enclosed_spruce_planks", ModBlocks.ENCLOSED_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_SPRUCE_PLANKS =
+        registerBlockItem("framed_spruce_planks", ModBlocks.FRAMED_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_SPRUCE_PLANKS =
+        registerBlockItem("natural_spruce_planks", ModBlocks.NATURAL_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_SPRUCE_PLANKS =
+        registerBlockItem("pegged_spruce_planks", ModBlocks.PEGGED_SPRUCE_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_PANEL =
+        registerBlockItem("spruce_planks_panel", ModBlocks.SPRUCE_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_SPRUCE_PLANKS =
+        registerBlockItem("whirlwind_spruce_planks", ModBlocks.WHIRLWIND_SPRUCE_PLANKS);
+
+    // ── Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_TERRACOTTA =
+        registerBlockItem("circular_terracotta", ModBlocks.CIRCULAR_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_TERRACOTTA =
+        registerBlockItem("curled_terracotta", ModBlocks.CURLED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_TERRACOTTA =
+        registerBlockItem("hexagonical_terracotta", ModBlocks.HEXAGONICAL_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_TERRACOTTA =
+        registerBlockItem("inscribed_terracotta", ModBlocks.INSCRIBED_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_TERRACOTTA_TILES =
+        registerBlockItem("small_terracotta_tiles", ModBlocks.SMALL_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_TERRACOTTA =
+        registerBlockItem("starry_terracotta", ModBlocks.STARRY_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> TERRACOTTA_COLUMN =
+        registerBlockItem("terracotta_column", ModBlocks.TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TERRACOTTA_PILLAR =
+        registerBlockItem("terracotta_pillar", ModBlocks.TERRACOTTA_PILLAR);
+
+    // ── Tuff ──
+    public static final DeferredHolder<Item, BlockItem> BORDERED_TUFF =
+        registerBlockItem("bordered_tuff", ModBlocks.BORDERED_TUFF);
+    public static final DeferredHolder<Item, BlockItem> BRICK_BORDERED_TUFF =
+        registerBlockItem("brick_bordered_tuff", ModBlocks.BRICK_BORDERED_TUFF);
+    public static final DeferredHolder<Item, BlockItem> CURLY_TUFF_PILLAR =
+        registerBlockItem("curly_tuff_pillar", ModBlocks.CURLY_TUFF_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CUT_TUFF_COLUMN =
+        registerBlockItem("cut_tuff_column", ModBlocks.CUT_TUFF_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> EDGED_TUFF_BRICKS =
+        registerBlockItem("edged_tuff_bricks", ModBlocks.EDGED_TUFF_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> FINE_TUFF_PILLAR =
+        registerBlockItem("fine_tuff_pillar", ModBlocks.FINE_TUFF_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> MASSIVE_TUFF_BRICKS =
+        registerBlockItem("massive_tuff_bricks", ModBlocks.MASSIVE_TUFF_BRICKS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_TUFF_PILLAR =
+        registerBlockItem("ornate_tuff_pillar", ModBlocks.ORNATE_TUFF_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> OVERLAPPING_TUFF_TILES =
+        registerBlockItem("overlapping_tuff_tiles", ModBlocks.OVERLAPPING_TUFF_TILES);
+    public static final DeferredHolder<Item, BlockItem> POLISHED_TUFF =
+        registerBlockItem("polished_tuff", ModBlocks.POLISHED_TUFF);
+    public static final DeferredHolder<Item, BlockItem> SIMPLE_TUFF_PILLAR =
+        registerBlockItem("simple_tuff_pillar", ModBlocks.SIMPLE_TUFF_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_TUFF_COLUMN =
+        registerBlockItem("smooth_tuff_column", ModBlocks.SMOOTH_TUFF_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> THICK_INLAYED_TUFF =
+        registerBlockItem("thick_inlayed_tuff", ModBlocks.THICK_INLAYED_TUFF);
+    public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_TUFF =
+        registerBlockItem("tiled_bordered_tuff", ModBlocks.TILED_BORDERED_TUFF);
+    public static final DeferredHolder<Item, BlockItem> TILED_TUFF_COLUMN =
+        registerBlockItem("tiled_tuff_column", ModBlocks.TILED_TUFF_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_TUFF =
+        registerBlockItem("tiny_brick_bordered_tuff", ModBlocks.TINY_BRICK_BORDERED_TUFF);
+
+    // ── Warped Planks ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_WARPED_PLANKS =
+        registerBlockItem("cornered_warped_planks", ModBlocks.CORNERED_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> CRATED_WARPED_PLANKS =
+        registerBlockItem("crated_warped_planks", ModBlocks.CRATED_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> ENCLOSED_WARPED_PLANKS =
+        registerBlockItem("enclosed_warped_planks", ModBlocks.ENCLOSED_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> FRAMED_WARPED_PLANKS =
+        registerBlockItem("framed_warped_planks", ModBlocks.FRAMED_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> NATURAL_WARPED_PLANKS =
+        registerBlockItem("natural_warped_planks", ModBlocks.NATURAL_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_WARPED_PLANKS =
+        registerBlockItem("pegged_warped_planks", ModBlocks.PEGGED_WARPED_PLANKS);
+    public static final DeferredHolder<Item, BlockItem> STACKED_STRIPPED_WARPED_STEM =
+        registerBlockItem("stacked_stripped_warped_stem", ModBlocks.STACKED_STRIPPED_WARPED_STEM);
+    public static final DeferredHolder<Item, BlockItem> STACKED_STRIPPED_WARPED_STEM_TOP =
+        registerBlockItem("stacked_stripped_warped_stem_top", ModBlocks.STACKED_STRIPPED_WARPED_STEM_TOP);
+    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
+        registerBlockItem("warped_planks_panel", ModBlocks.WARPED_PLANKS_PANEL);
+    public static final DeferredHolder<Item, BlockItem> WHIRLWIND_WARPED_PLANKS =
+        registerBlockItem("whirlwind_warped_planks", ModBlocks.WHIRLWIND_WARPED_PLANKS);
+
+    // ── White Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_WHITE_CONCRETE =
+        registerBlockItem("grill_white_concrete", ModBlocks.GRILL_WHITE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_WHITE_CONCRETE =
+        registerBlockItem("pegged_white_concrete", ModBlocks.PEGGED_WHITE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_WHITE_CONCRETE =
+        registerBlockItem("smooth_white_concrete", ModBlocks.SMOOTH_WHITE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_WHITE_CONCRETE =
+        registerBlockItem("striped_white_concrete", ModBlocks.STRIPED_WHITE_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WHITE_CONCRETE_PANEL =
+        registerBlockItem("white_concrete_panel", ModBlocks.WHITE_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> WHITE_CONCRETE_PILLAR =
+        registerBlockItem("white_concrete_pillar", ModBlocks.WHITE_CONCRETE_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> WIRED_WHITE_CONCRETE =
+        registerBlockItem("wired_white_concrete", ModBlocks.WIRED_WHITE_CONCRETE);
+
+    // ── White Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_WHITE_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_white_stained_glass_pillar", ModBlocks.ARCHED_WHITE_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_WHITE_STAINED_GLASS =
+        registerBlockItem("fancy_white_stained_glass", ModBlocks.FANCY_WHITE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_WHITE_STAINED_GLASS =
+        registerBlockItem("ornate_white_stained_glass", ModBlocks.ORNATE_WHITE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_WHITE_STAINED_GLASS =
+        registerBlockItem("raster_white_stained_glass", ModBlocks.RASTER_WHITE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_WHITE_STAINED_GLASS =
+        registerBlockItem("small_white_stained_glass", ModBlocks.SMALL_WHITE_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_WHITE_STAINED_GLASS =
+        registerBlockItem("tiled_white_stained_glass", ModBlocks.TILED_WHITE_STAINED_GLASS);
+
+    // ── White Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_WHITE_TERRACOTTA =
+        registerBlockItem("circular_white_terracotta", ModBlocks.CIRCULAR_WHITE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_WHITE_TERRACOTTA =
+        registerBlockItem("curled_white_terracotta", ModBlocks.CURLED_WHITE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_WHITE_TERRACOTTA =
+        registerBlockItem("hexagonical_white_terracotta", ModBlocks.HEXAGONICAL_WHITE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_WHITE_TERRACOTTA =
+        registerBlockItem("inscribed_white_terracotta", ModBlocks.INSCRIBED_WHITE_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_WHITE_TERRACOTTA_TILES =
+        registerBlockItem("small_white_terracotta_tiles", ModBlocks.SMALL_WHITE_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_WHITE_TERRACOTTA =
+        registerBlockItem("starry_white_terracotta", ModBlocks.STARRY_WHITE_TERRACOTTA);
+
+    // ── White Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_WHITE_WOOL =
+        registerBlockItem("cornered_white_wool", ModBlocks.CORNERED_WHITE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_WHITE_WOOL =
+        registerBlockItem("crafted_white_wool", ModBlocks.CRAFTED_WHITE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_WHITE_WOOL =
+        registerBlockItem("harsh_quilted_white_wool", ModBlocks.HARSH_QUILTED_WHITE_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_WHITE_WOOL =
+        registerBlockItem("rectangle_white_wool", ModBlocks.RECTANGLE_WHITE_WOOL);
+
+    // ── Yellow Concrete ──
+    public static final DeferredHolder<Item, BlockItem> GRILL_YELLOW_CONCRETE =
+        registerBlockItem("grill_yellow_concrete", ModBlocks.GRILL_YELLOW_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> PEGGED_YELLOW_CONCRETE =
+        registerBlockItem("pegged_yellow_concrete", ModBlocks.PEGGED_YELLOW_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_YELLOW_CONCRETE =
+        registerBlockItem("smooth_yellow_concrete", ModBlocks.SMOOTH_YELLOW_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> STRIPED_YELLOW_CONCRETE =
+        registerBlockItem("striped_yellow_concrete", ModBlocks.STRIPED_YELLOW_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> WIRED_YELLOW_CONCRETE =
+        registerBlockItem("wired_yellow_concrete", ModBlocks.WIRED_YELLOW_CONCRETE);
+    public static final DeferredHolder<Item, BlockItem> YELLOW_CONCRETE_PANEL =
+        registerBlockItem("yellow_concrete_panel", ModBlocks.YELLOW_CONCRETE_PANEL);
+    public static final DeferredHolder<Item, BlockItem> YELLOW_CONCRETE_PILLAR =
+        registerBlockItem("yellow_concrete_pillar", ModBlocks.YELLOW_CONCRETE_PILLAR);
+
+    // ── Yellow Stained Glass ──
+    public static final DeferredHolder<Item, BlockItem> ARCHED_YELLOW_STAINED_GLASS_PILLAR =
+        registerBlockItem("arched_yellow_stained_glass_pillar", ModBlocks.ARCHED_YELLOW_STAINED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> FANCY_YELLOW_STAINED_GLASS =
+        registerBlockItem("fancy_yellow_stained_glass", ModBlocks.FANCY_YELLOW_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_YELLOW_STAINED_GLASS =
+        registerBlockItem("ornate_yellow_stained_glass", ModBlocks.ORNATE_YELLOW_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> RASTER_YELLOW_STAINED_GLASS =
+        registerBlockItem("raster_yellow_stained_glass", ModBlocks.RASTER_YELLOW_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SMALL_YELLOW_STAINED_GLASS =
+        registerBlockItem("small_yellow_stained_glass", ModBlocks.SMALL_YELLOW_STAINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> TILED_YELLOW_STAINED_GLASS =
+        registerBlockItem("tiled_yellow_stained_glass", ModBlocks.TILED_YELLOW_STAINED_GLASS);
+
+    // ── Yellow Terracotta ──
+    public static final DeferredHolder<Item, BlockItem> CIRCULAR_YELLOW_TERRACOTTA =
+        registerBlockItem("circular_yellow_terracotta", ModBlocks.CIRCULAR_YELLOW_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> CURLED_YELLOW_TERRACOTTA =
+        registerBlockItem("curled_yellow_terracotta", ModBlocks.CURLED_YELLOW_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> HEXAGONICAL_YELLOW_TERRACOTTA =
+        registerBlockItem("hexagonical_yellow_terracotta", ModBlocks.HEXAGONICAL_YELLOW_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> INSCRIBED_YELLOW_TERRACOTTA =
+        registerBlockItem("inscribed_yellow_terracotta", ModBlocks.INSCRIBED_YELLOW_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> SMALL_YELLOW_TERRACOTTA_TILES =
+        registerBlockItem("small_yellow_terracotta_tiles", ModBlocks.SMALL_YELLOW_TERRACOTTA_TILES);
+    public static final DeferredHolder<Item, BlockItem> STARRY_YELLOW_TERRACOTTA =
+        registerBlockItem("starry_yellow_terracotta", ModBlocks.STARRY_YELLOW_TERRACOTTA);
+    public static final DeferredHolder<Item, BlockItem> YELLOW_TERRACOTTA_COLUMN =
+        registerBlockItem("yellow_terracotta_column", ModBlocks.YELLOW_TERRACOTTA_COLUMN);
+    public static final DeferredHolder<Item, BlockItem> YELLOW_TERRACOTTA_PILLAR =
+        registerBlockItem("yellow_terracotta_pillar", ModBlocks.YELLOW_TERRACOTTA_PILLAR);
+
+    // ── Yellow Wool ──
+    public static final DeferredHolder<Item, BlockItem> CORNERED_YELLOW_WOOL =
+        registerBlockItem("cornered_yellow_wool", ModBlocks.CORNERED_YELLOW_WOOL);
+    public static final DeferredHolder<Item, BlockItem> CRAFTED_YELLOW_WOOL =
+        registerBlockItem("crafted_yellow_wool", ModBlocks.CRAFTED_YELLOW_WOOL);
+    public static final DeferredHolder<Item, BlockItem> HARSH_QUILTED_YELLOW_WOOL =
+        registerBlockItem("harsh_quilted_yellow_wool", ModBlocks.HARSH_QUILTED_YELLOW_WOOL);
+    public static final DeferredHolder<Item, BlockItem> RECTANGLE_YELLOW_WOOL =
+        registerBlockItem("rectangle_yellow_wool", ModBlocks.RECTANGLE_YELLOW_WOOL);
+
 
     public static final DeferredItem<Item> UNFIRED_CLAY_ROOF_TILE = ITEMS.register("unfired_clay_roof_tile",
             () -> new Item(new Item.Properties()));
@@ -623,6 +3393,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> PURPUR_PILLAR_CTM                  = registerBlockItem("purpur_pillar",          ModBlocks.PURPUR_PILLAR_CTM);
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_CTM                      = registerBlockItem("sandstone",              ModBlocks.SANDSTONE_CTM);
     public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_CTM                  = registerBlockItem("red_sandstone",          ModBlocks.RED_SANDSTONE_CTM);
+    public static final DeferredHolder<Item, BlockItem> BORDERED_ANDESITE_CTM              = registerBlockItem("bordered_andesite",       ModBlocks.BORDERED_ANDESITE_CTM);
     public static final DeferredHolder<Item, BlockItem> POLISHED_ANDESITE_CTM              = registerBlockItem("polished_andesite",       ModBlocks.POLISHED_ANDESITE_CTM);
     public static final DeferredHolder<Item, BlockItem> POLISHED_BLACKSTONE_CTM            = registerBlockItem("polished_blackstone",     ModBlocks.POLISHED_BLACKSTONE_CTM);
     public static final DeferredHolder<Item, BlockItem> POLISHED_DIORITE_CTM               = registerBlockItem("polished_diorite",        ModBlocks.POLISHED_DIORITE_CTM);
