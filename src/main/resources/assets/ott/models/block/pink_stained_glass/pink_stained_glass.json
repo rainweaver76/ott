@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_cube_all_compact",
+  "textures": {
+    "all": "ott:block/pink_stained_glass/ctm/pink_stained_glass"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

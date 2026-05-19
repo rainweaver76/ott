@@ -1,0 +1,14 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/lapis_block/ctm/delicate_lapis_block"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

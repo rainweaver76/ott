@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "simple",
+  "parent": "ott:block/ctm/ctm_cube_all_simple",
+  "textures": {
+    "all": "ott:block/amethyst_block/ctm/amethyst_block_pillar_end"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

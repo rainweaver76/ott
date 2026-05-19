@@ -1,0 +1,14 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/nether_bricks/ctm/nether_bricks_brick_pattern"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

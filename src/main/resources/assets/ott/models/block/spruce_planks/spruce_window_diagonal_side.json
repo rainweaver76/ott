@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "simple",
+  "parent": "ott:block/ctm/ctm_cube_all_simple",
+  "textures": {
+    "all": "ott:block/spruce_planks/ctm/spruce_window_diagonal_side"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

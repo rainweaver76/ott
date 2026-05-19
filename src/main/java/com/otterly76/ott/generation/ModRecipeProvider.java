@@ -1900,6 +1900,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  ModBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_PILLAR_CAP.get(),   "black_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  ModBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_FANCY_FENCE.get(),  "black_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, ModBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_FLOOR_TILE.get(), "black_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), "black_marble_diamond_pavers_stonecutting");
         // --- White marble stonecutting ---
         stonecutOne(exporter,  ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_BRICKS.get(),       "white_marble_bricks_stonecutting");
         stonecutOne(exporter,  ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_SMALL_BRICKS.get(), "white_marble_small_bricks_stonecutting");
@@ -1908,6 +1909,97 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_PILLAR_CAP.get(),   "white_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FANCY_FENCE.get(),  "white_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FLOOR_TILE.get(), "white_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), "white_marble_diamond_pavers_stonecutting");
+        // ── Amethyst Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_BRICKS.get(),       "amethyst_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_SMALL_BRICKS.get(), "amethyst_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_TILES.get(),        "amethyst_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_PILLAR.get(),       "amethyst_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_PILLAR_CAP.get(),   "amethyst_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FANCY_FENCE.get(),  "amethyst_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FLOOR_TILE.get(),   "amethyst_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(),  "amethyst_marble_diamond_pavers_stonecutting");
+        // ── Blue Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_BRICKS.get(),       "blue_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_SMALL_BRICKS.get(), "blue_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_TILES.get(),        "blue_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_PILLAR.get(),       "blue_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_PILLAR_CAP.get(),   "blue_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_FANCY_FENCE.get(),  "blue_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_FLOOR_TILE.get(),   "blue_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),  "blue_marble_diamond_pavers_stonecutting");
+        // ── Cyan Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_BRICKS.get(),       "cyan_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_SMALL_BRICKS.get(), "cyan_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_TILES.get(),        "cyan_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_PILLAR.get(),       "cyan_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_PILLAR_CAP.get(),   "cyan_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_FANCY_FENCE.get(),  "cyan_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_FLOOR_TILE.get(),   "cyan_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),  "cyan_marble_diamond_pavers_stonecutting");
+        // ── Green Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_BRICKS.get(),       "green_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_SMALL_BRICKS.get(), "green_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_TILES.get(),        "green_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_PILLAR.get(),       "green_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_PILLAR_CAP.get(),   "green_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_FANCY_FENCE.get(),  "green_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_FLOOR_TILE.get(),   "green_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),  "green_marble_diamond_pavers_stonecutting");
+        // ── Lime Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_BRICKS.get(),       "lime_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_SMALL_BRICKS.get(), "lime_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_TILES.get(),        "lime_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_PILLAR.get(),       "lime_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_PILLAR_CAP.get(),   "lime_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_FANCY_FENCE.get(),  "lime_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_FLOOR_TILE.get(),   "lime_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),  "lime_marble_diamond_pavers_stonecutting");
+        // ── Orange Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_BRICKS.get(),       "orange_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_SMALL_BRICKS.get(), "orange_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_TILES.get(),        "orange_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_PILLAR.get(),       "orange_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_PILLAR_CAP.get(),   "orange_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_FANCY_FENCE.get(),  "orange_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_FLOOR_TILE.get(),   "orange_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),  "orange_marble_diamond_pavers_stonecutting");
+        // ── Pink Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_BRICKS.get(),       "pink_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_SMALL_BRICKS.get(), "pink_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_TILES.get(),        "pink_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_PILLAR.get(),       "pink_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_PILLAR_CAP.get(),   "pink_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_FANCY_FENCE.get(),  "pink_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_FLOOR_TILE.get(),   "pink_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),  "pink_marble_diamond_pavers_stonecutting");
+        // ── Purple Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_BRICKS.get(),       "purple_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_SMALL_BRICKS.get(), "purple_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_TILES.get(),        "purple_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_PILLAR.get(),       "purple_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_PILLAR_CAP.get(),   "purple_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_FANCY_FENCE.get(),  "purple_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_FLOOR_TILE.get(),   "purple_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),  "purple_marble_diamond_pavers_stonecutting");
+        // ── Red Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_BRICKS.get(),       "red_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_SMALL_BRICKS.get(), "red_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_TILES.get(),        "red_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_PILLAR.get(),       "red_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_PILLAR_CAP.get(),   "red_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_FANCY_FENCE.get(),  "red_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_FLOOR_TILE.get(),   "red_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),  "red_marble_diamond_pavers_stonecutting");
+        // ── Yellow Marble stonecutting ──
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_BRICKS.get(),       "yellow_marble_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_SMALL_BRICKS.get(), "yellow_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_TILES.get(),        "yellow_marble_tiles_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_PILLAR.get(),       "yellow_marble_pillar_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_PILLAR_CAP.get(),   "yellow_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(),  "yellow_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FLOOR_TILE.get(),   "yellow_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  ModBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),  "yellow_marble_diamond_pavers_stonecutting");
         woodcutOne(exporter, Items.SPRUCE_PLANKS, ModBlocks.SPRUCE_LOG_FENCE.get(), "spruce_log_fence_woodcutting");
         stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MIXED_LIMESTONE_BRICKS.get(), "mixed_limestone_bricks_from_limestone_stonecutting");
         // --- Chiseled plastered stone from matching plastered stone ---
@@ -2189,6 +2281,138 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, ModBlocks.WHITE_MARBLE, ModBlocks.WHITE_POLISHED_MARBLE,     "white_polished_marble_engraving");
         engraveOne(exporter, ModBlocks.WHITE_MARBLE, ModBlocks.WHITE_MARBLE_PILLAR,       "white_marble_pillar_engraving");
         engraveOne(exporter, ModBlocks.WHITE_MARBLE, ModBlocks.WHITE_MARBLE_PILLAR_CAP,   "white_marble_pillar_cap_engraving");
+        // ── Amethyst Marble engraving ──
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_MARBLE_BRICKS,       "amethyst_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_MARBLE_SMALL_BRICKS, "amethyst_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_MARBLE_TILES,        "amethyst_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_POLISHED_MARBLE,     "amethyst_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_MARBLE_PILLAR,       "amethyst_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.AMETHYST_MARBLE, ModBlocks.AMETHYST_MARBLE_PILLAR_CAP,   "amethyst_marble_pillar_cap_engraving");
+        // ── Blue Marble engraving ──
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_MARBLE_BRICKS,       "blue_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_MARBLE_SMALL_BRICKS, "blue_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_MARBLE_TILES,        "blue_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_POLISHED_MARBLE,     "blue_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_MARBLE_PILLAR,       "blue_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.BLUE_MARBLE, ModBlocks.BLUE_MARBLE_PILLAR_CAP,   "blue_marble_pillar_cap_engraving");
+        // ── Cyan Marble engraving ──
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_MARBLE_BRICKS,       "cyan_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_MARBLE_SMALL_BRICKS, "cyan_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_MARBLE_TILES,        "cyan_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_POLISHED_MARBLE,     "cyan_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_MARBLE_PILLAR,       "cyan_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.CYAN_MARBLE, ModBlocks.CYAN_MARBLE_PILLAR_CAP,   "cyan_marble_pillar_cap_engraving");
+        // ── Green Marble engraving ──
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_MARBLE_BRICKS,       "green_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_MARBLE_SMALL_BRICKS, "green_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_MARBLE_TILES,        "green_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_POLISHED_MARBLE,     "green_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_MARBLE_PILLAR,       "green_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.GREEN_MARBLE, ModBlocks.GREEN_MARBLE_PILLAR_CAP,   "green_marble_pillar_cap_engraving");
+        // ── Lime Marble engraving ──
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_MARBLE_BRICKS,       "lime_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_MARBLE_SMALL_BRICKS, "lime_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_MARBLE_TILES,        "lime_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_POLISHED_MARBLE,     "lime_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_MARBLE_PILLAR,       "lime_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.LIME_MARBLE, ModBlocks.LIME_MARBLE_PILLAR_CAP,   "lime_marble_pillar_cap_engraving");
+        // ── Orange Marble engraving ──
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_MARBLE_BRICKS,       "orange_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_MARBLE_SMALL_BRICKS, "orange_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_MARBLE_TILES,        "orange_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_POLISHED_MARBLE,     "orange_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_MARBLE_PILLAR,       "orange_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.ORANGE_MARBLE, ModBlocks.ORANGE_MARBLE_PILLAR_CAP,   "orange_marble_pillar_cap_engraving");
+        // ── Pink Marble engraving ──
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_MARBLE_BRICKS,       "pink_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_MARBLE_SMALL_BRICKS, "pink_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_MARBLE_TILES,        "pink_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_POLISHED_MARBLE,     "pink_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_MARBLE_PILLAR,       "pink_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.PINK_MARBLE, ModBlocks.PINK_MARBLE_PILLAR_CAP,   "pink_marble_pillar_cap_engraving");
+        // ── Purple Marble engraving ──
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_MARBLE_BRICKS,       "purple_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_MARBLE_SMALL_BRICKS, "purple_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_MARBLE_TILES,        "purple_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_POLISHED_MARBLE,     "purple_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_MARBLE_PILLAR,       "purple_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.PURPLE_MARBLE, ModBlocks.PURPLE_MARBLE_PILLAR_CAP,   "purple_marble_pillar_cap_engraving");
+        // ── Red Marble engraving ──
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_MARBLE_BRICKS,       "red_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_MARBLE_SMALL_BRICKS, "red_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_MARBLE_TILES,        "red_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_POLISHED_MARBLE,     "red_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_MARBLE_PILLAR,       "red_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.RED_MARBLE, ModBlocks.RED_MARBLE_PILLAR_CAP,   "red_marble_pillar_cap_engraving");
+        // ── Yellow Marble engraving ──
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_MARBLE_BRICKS,       "yellow_marble_bricks_engraving");
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_MARBLE_SMALL_BRICKS, "yellow_marble_small_bricks_engraving");
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_MARBLE_TILES,        "yellow_marble_tiles_engraving");
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_POLISHED_MARBLE,     "yellow_polished_marble_engraving");
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_MARBLE_PILLAR,       "yellow_marble_pillar_engraving");
+        engraveOne(exporter, ModBlocks.YELLOW_MARBLE, ModBlocks.YELLOW_MARBLE_PILLAR_CAP,   "yellow_marble_pillar_cap_engraving");
+
+        // ── Colored marble dye recipes (8 white marble + 1 dye → 8 colored marble) ──
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AMETHYST_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.AMETHYST_SHARD)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "amethyst_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.BLUE_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "blue_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.CYAN_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "cyan_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.GREEN_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "green_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.LIME_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "lime_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.ORANGE_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "orange_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.PINK_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "pink_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.PURPLE_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "purple_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.RED_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "red_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', ModBlocks.WHITE_MARBLE.get())
+                .define('D', Items.YELLOW_DYE)
+                .unlockedBy("has_white_marble", has(ModBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "yellow_marble_from_dye"));
 
         // ── Black marble → variants ───────────────────────────────────────────────
         engraveOne(exporter, ModBlocks.BLACK_MARBLE, ModBlocks.BLACK_MARBLE_BRICKS,       "black_marble_bricks_engraving");

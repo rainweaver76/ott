@@ -1,0 +1,14 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/gold_block/ctm/gold_block_lines"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

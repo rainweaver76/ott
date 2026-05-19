@@ -1,0 +1,20 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_column",
+  "textures": {
+    "end": "ott:block/oak_planks/ctm/oak_window_tiles",
+    "side": "ott:block/oak_planks/ctm/oak_window_tiles_side"
+  },
+  "connections": {
+    "end": [
+      {
+        "type": "is_same_block"
+      }
+    ],
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

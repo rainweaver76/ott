@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ott:block/purple_marble/purple_marble_diamond_pavers"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"end": "ott:block/pink_marble/pink_marble_pillar_top",
+		"side": "ott:block/pink_marble/pink_marble_pillar_cap"
+	}
+}

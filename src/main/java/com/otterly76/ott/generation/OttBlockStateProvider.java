@@ -1223,6 +1223,128 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlockNoUvLock(ModBlocks.WHITE_MARBLE_FANCY_FENCE.get(), "block/white_marble/white_marble_fancy_fence");
         existingAxisBlock(ModBlocks.WHITE_MARBLE_PILLAR.get(),     "block/white_marble/white_marble_pillar");
         existingAxisBlock(ModBlocks.WHITE_MARBLE_PILLAR_CAP.get(), "block/white_marble/white_marble_pillar_cap");
+        simpleBlockWithItem(ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/white_marble/white_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/black_marble/black_marble_diamond_pavers")));
+
+        // ── Amethyst Marble ──
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE.get(),              models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/amethyst_marble/amethyst_polished_marble")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.AMETHYST_MARBLE_FANCY_FENCE.get(), "block/amethyst_marble/amethyst_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.AMETHYST_MARBLE_PILLAR.get(),     "block/amethyst_marble/amethyst_marble_pillar");
+        existingAxisBlock(ModBlocks.AMETHYST_MARBLE_PILLAR_CAP.get(), "block/amethyst_marble/amethyst_marble_pillar_cap");
+
+        // ── Blue Marble ──
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE.get(),              models().getExistingFile(modLoc("block/blue_marble/blue_marble")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/blue_marble/blue_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/blue_marble/blue_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/blue_marble/blue_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.BLUE_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/blue_marble/blue_polished_marble")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/blue_marble/blue_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.BLUE_MARBLE_FANCY_FENCE.get(), "block/blue_marble/blue_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.BLUE_MARBLE_PILLAR.get(),     "block/blue_marble/blue_marble_pillar");
+        existingAxisBlock(ModBlocks.BLUE_MARBLE_PILLAR_CAP.get(), "block/blue_marble/blue_marble_pillar_cap");
+
+        // ── Cyan Marble ──
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE.get(),              models().getExistingFile(modLoc("block/cyan_marble/cyan_marble")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.CYAN_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/cyan_marble/cyan_polished_marble")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.CYAN_MARBLE_FANCY_FENCE.get(), "block/cyan_marble/cyan_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.CYAN_MARBLE_PILLAR.get(),     "block/cyan_marble/cyan_marble_pillar");
+        existingAxisBlock(ModBlocks.CYAN_MARBLE_PILLAR_CAP.get(), "block/cyan_marble/cyan_marble_pillar_cap");
+
+        // ── Green Marble ──
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE.get(),              models().getExistingFile(modLoc("block/green_marble/green_marble")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/green_marble/green_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/green_marble/green_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/green_marble/green_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.GREEN_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/green_marble/green_polished_marble")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/green_marble/green_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.GREEN_MARBLE_FANCY_FENCE.get(), "block/green_marble/green_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.GREEN_MARBLE_PILLAR.get(),     "block/green_marble/green_marble_pillar");
+        existingAxisBlock(ModBlocks.GREEN_MARBLE_PILLAR_CAP.get(), "block/green_marble/green_marble_pillar_cap");
+
+        // ── Lime Marble ──
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE.get(),              models().getExistingFile(modLoc("block/lime_marble/lime_marble")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/lime_marble/lime_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/lime_marble/lime_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/lime_marble/lime_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.LIME_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/lime_marble/lime_polished_marble")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/lime_marble/lime_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.LIME_MARBLE_FANCY_FENCE.get(), "block/lime_marble/lime_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.LIME_MARBLE_PILLAR.get(),     "block/lime_marble/lime_marble_pillar");
+        existingAxisBlock(ModBlocks.LIME_MARBLE_PILLAR_CAP.get(), "block/lime_marble/lime_marble_pillar_cap");
+
+        // ── Orange Marble ──
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE.get(),              models().getExistingFile(modLoc("block/orange_marble/orange_marble")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/orange_marble/orange_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/orange_marble/orange_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/orange_marble/orange_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.ORANGE_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/orange_marble/orange_polished_marble")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/orange_marble/orange_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.ORANGE_MARBLE_FANCY_FENCE.get(), "block/orange_marble/orange_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.ORANGE_MARBLE_PILLAR.get(),     "block/orange_marble/orange_marble_pillar");
+        existingAxisBlock(ModBlocks.ORANGE_MARBLE_PILLAR_CAP.get(), "block/orange_marble/orange_marble_pillar_cap");
+
+        // ── Pink Marble ──
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE.get(),              models().getExistingFile(modLoc("block/pink_marble/pink_marble")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/pink_marble/pink_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/pink_marble/pink_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/pink_marble/pink_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.PINK_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/pink_marble/pink_polished_marble")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/pink_marble/pink_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.PINK_MARBLE_FANCY_FENCE.get(), "block/pink_marble/pink_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.PINK_MARBLE_PILLAR.get(),     "block/pink_marble/pink_marble_pillar");
+        existingAxisBlock(ModBlocks.PINK_MARBLE_PILLAR_CAP.get(), "block/pink_marble/pink_marble_pillar_cap");
+
+        // ── Purple Marble ──
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE.get(),              models().getExistingFile(modLoc("block/purple_marble/purple_marble")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/purple_marble/purple_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/purple_marble/purple_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/purple_marble/purple_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.PURPLE_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/purple_marble/purple_polished_marble")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/purple_marble/purple_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.PURPLE_MARBLE_FANCY_FENCE.get(), "block/purple_marble/purple_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.PURPLE_MARBLE_PILLAR.get(),     "block/purple_marble/purple_marble_pillar");
+        existingAxisBlock(ModBlocks.PURPLE_MARBLE_PILLAR_CAP.get(), "block/purple_marble/purple_marble_pillar_cap");
+
+        // ── Red Marble ──
+        simpleBlockWithItem(ModBlocks.RED_MARBLE.get(),              models().getExistingFile(modLoc("block/red_marble/red_marble")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/red_marble/red_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/red_marble/red_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/red_marble/red_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.RED_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/red_marble/red_polished_marble")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/red_marble/red_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.RED_MARBLE_FANCY_FENCE.get(), "block/red_marble/red_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.RED_MARBLE_PILLAR.get(),     "block/red_marble/red_marble_pillar");
+        existingAxisBlock(ModBlocks.RED_MARBLE_PILLAR_CAP.get(), "block/red_marble/red_marble_pillar_cap");
+
+        // ── Yellow Marble ──
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE.get(),              models().getExistingFile(modLoc("block/yellow_marble/yellow_marble")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_BRICKS.get(),       models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_bricks")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_SMALL_BRICKS.get(), models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_small_bricks")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_TILES.get(),        models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_tiles")));
+        simpleBlockWithItem(ModBlocks.YELLOW_POLISHED_MARBLE.get(),     models().getExistingFile(modLoc("block/yellow_marble/yellow_polished_marble")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_FLOOR_TILE.get(),   models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_floor_tile")));
+        existingFacingShapeBlockNoUvLock(ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(), "block/yellow_marble/yellow_marble_fancy_fence");
+        existingAxisBlock(ModBlocks.YELLOW_MARBLE_PILLAR.get(),     "block/yellow_marble/yellow_marble_pillar");
+        existingAxisBlock(ModBlocks.YELLOW_MARBLE_PILLAR_CAP.get(), "block/yellow_marble/yellow_marble_pillar_cap");
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/blue_marble/blue_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),    models().getExistingFile(modLoc("block/green_marble/green_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/lime_marble/lime_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/orange_marble/orange_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/pink_marble/pink_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/purple_marble/purple_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),      models().getExistingFile(modLoc("block/red_marble/red_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_diamond_pavers")));
 
         // ── Limestone ─────────────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.LIMESTONE_MASONRY.get(),  models().getExistingFile(modLoc("block/limestone/limestone_masonry")));

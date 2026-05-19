@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "horizontal",
+  "parent": "ott:block/ctm/ctm_cube_column_horizontal",
+  "textures": {
+    "side": "ott:block/amethyst_block/ctm/amethyst_block_pillar_side",
+    "top": "minecraft:block/amethyst_block"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

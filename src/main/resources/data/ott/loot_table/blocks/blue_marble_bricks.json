@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:block",
+	"pools": [
+		{
+			"bonus_rolls": 0,
+			"conditions": [
+				{
+					"condition": "minecraft:survives_explosion"
+				}
+			],
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "ott:blue_marble_bricks"
+				}
+			],
+			"rolls": 1
+		}
+	],
+	"random_sequence": "ott:blocks/blue_marble_bricks"
+}

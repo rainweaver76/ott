@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/redstone_block/redstone_block_circles"
+    }
+  }
+}
