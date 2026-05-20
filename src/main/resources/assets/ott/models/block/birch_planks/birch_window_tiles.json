@@ -16,5 +16,6 @@
         "type": "is_same_block"
       }
     ]
-  }
+  },
+  "render_type": "minecraft:cutout_mipped"
 }

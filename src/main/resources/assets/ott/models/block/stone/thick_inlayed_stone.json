@@ -1,9 +1,9 @@
 {
   "loader": "ott:mosaic",
-  "layout": "compact",
-  "parent": "ott:block/ctm/ctm_cube_all_compact",
+  "layout": "full",
+  "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/copper_block/ctm/copper_block_pillar_end"
+    "all": "ott:block/stone/ctm/thick_inlayed_stone"
   },
   "connections": {
     "all": [

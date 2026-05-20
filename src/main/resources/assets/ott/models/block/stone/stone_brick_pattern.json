@@ -1,5 +1,6 @@
 {
   "loader": "ott:mosaic",
+  "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
     "all": "ott:block/stone/ctm/stone_brick_pattern"

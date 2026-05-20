@@ -893,7 +893,6 @@ public enum OttCreativeCategories {
                 // Chisel pillar blocks
                 ModBlocks.CHISEL_PILLARS.values().forEach(output::accept);
                 // Legend blocks
-                output.accept(ModBlocks.CHISELED_STONE_BRICKS_LEGEND);
                 ModBlocks.CHISEL_LEGEND.values().forEach(output::accept);
 
                 // CTM blocks
@@ -2508,7 +2507,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE);
+        output.accept(ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_LIME_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_MAGENTA_STAINED_GLASS);
@@ -3264,7 +3263,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.ACACIA_WINDOW_ROUNDED_SIDE);
         output.accept(ModBlocks.ACACIA_WINDOW_SLIM_SIDE);
         output.accept(ModBlocks.ACACIA_WINDOW_SWIRLING_SIDE);
-        output.accept(ModBlocks.AMETHYST_BLOCK_PILLAR_END);
         output.accept(ModBlocks.BIRCH_WINDOW_BARS_SIDE);
         output.accept(ModBlocks.BIRCH_WINDOW_COVERED_SIDE);
         output.accept(ModBlocks.BIRCH_WINDOW_DIAGONAL_SIDE);
@@ -3290,7 +3288,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED_SIDE);
         output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM_SIDE);
         output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING_SIDE);
-        output.accept(ModBlocks.EMERALD_BLOCK_PILLAR_END);
         output.accept(ModBlocks.INDUSTRIAL_IRON_WINDOW_CONNECTED);
         output.accept(ModBlocks.JUNGLE_WINDOW_BARS_SIDE);
         output.accept(ModBlocks.JUNGLE_WINDOW_COVERED_SIDE);
@@ -3316,7 +3313,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.OAK_WINDOW_ROUNDED_SIDE);
         output.accept(ModBlocks.OAK_WINDOW_SLIM_SIDE);
         output.accept(ModBlocks.OAK_WINDOW_SWIRLING_SIDE);
-        output.accept(ModBlocks.REDSTONE_BLOCK_PILLAR_END);
         output.accept(ModBlocks.ROSE_QUARTZ_BRICKS);
         output.accept(ModBlocks.SPRUCE_WINDOW_BARS_SIDE);
         output.accept(ModBlocks.SPRUCE_WINDOW_COVERED_SIDE);

@@ -1,15 +1,17 @@
 {
   "loader": "ott:mosaic",
   "layout": "simple",
-  "parent": "ott:block/ctm/ctm_cube_all_simple",
+  "parent": "ott:block/ctm/ctm_cube_column_simple",
   "textures": {
-    "all": "ott:block/warped_planks/ctm/warped_window_panes_side"
+    "side": "ott:block/warped_planks/ctm/warped_window_panes_side",
+    "top": "minecraft:block/warped_planks"
   },
   "connections": {
-    "all": [
+    "side": [
       {
         "type": "is_same_block"
       }
     ]
-  }
+  },
+  "render_type": "minecraft:cutout_mipped"
 }

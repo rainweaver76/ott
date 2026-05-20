@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/golden_framed_glass/ctm/golden_framed_light_blue"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}

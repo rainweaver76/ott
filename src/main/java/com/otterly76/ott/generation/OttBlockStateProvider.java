@@ -1450,7 +1450,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // Plain cube_all
         stoneBlock(ModBlocks.ANGRY_STONE);
         stoneBlock(ModBlocks.BLANK_STONE_CARVING);
-        stoneBlock(ModBlocks.BRICK_BORDERED_STONE);
+        stoneCTMBlock(ModBlocks.BRICK_BORDERED_STONE);
         stoneBlock(ModBlocks.CARVED_STONE);
         stoneBlock(ModBlocks.CHECKERED_STONE_TILES);
         stoneBlock(ModBlocks.COBBLED_STONE);
@@ -1458,12 +1458,12 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         stoneBlock(ModBlocks.CRACKED_FLAT_STONE_TILES);
         stoneBlock(ModBlocks.CREEPER_STONE_CARVING);
         stoneBlock(ModBlocks.CRYING_STONE);
-        stoneBlock(ModBlocks.CURLY_STONE_PILLAR);
+        stoneCTMBlock(ModBlocks.CURLY_STONE_PILLAR);
         stoneBlock(ModBlocks.CUT_BLANK_STONE);
         stoneBlock(ModBlocks.DUH_STONE);
         stoneBlock(ModBlocks.ENGRAVED_STONE);
         stoneBlock(ModBlocks.ETCHED_STONE_BRICKS);
-        stoneBlock(ModBlocks.FINE_STONE_PILLAR);
+        stoneCTMBlock(ModBlocks.FINE_STONE_PILLAR);
         stoneBlock(ModBlocks.FLAT_STONE_TILES);
         stoneBlock(ModBlocks.GLAD_STONE);
         stoneBlock(ModBlocks.INLAYED_STONE);
@@ -1471,17 +1471,17 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         stoneBlock(ModBlocks.LAYED_STONE_BRICKS);
         stoneBlock(ModBlocks.LODED_STONE);
         stoneBlock(ModBlocks.OFFSET_STONE_BRICKS);
-        stoneBlock(ModBlocks.ORNATE_STONE_PILLAR);
-        stoneBlock(ModBlocks.OVERLAPPING_STONE_TILES);
+        stoneCTMBlock(ModBlocks.ORNATE_STONE_PILLAR);
+        stoneCTMBlock(ModBlocks.OVERLAPPING_STONE_TILES);
         stoneBlock(ModBlocks.PILLAR_STONE_BRICKS);
-        stoneBlock(ModBlocks.POLISHED_STONE);
+        stoneCTMBlock(ModBlocks.POLISHED_STONE);
         stoneBlock(ModBlocks.PRISMAL_STONE_REMNANTS);
         stoneBlock(ModBlocks.ROUGH_STONE);
         stoneBlock(ModBlocks.ROUNDED_STONE_BRICKS);
         stoneBlock(ModBlocks.RUNIC_CARVED_STONE);
         stoneBlock(ModBlocks.SAD_STONE);
         stoneBlock(ModBlocks.SANDED_STONE);
-        stoneBlock(ModBlocks.SIMPLE_STONE_PILLAR);
+        stoneCTMBlock(ModBlocks.SIMPLE_STONE_PILLAR);
         stoneBlock(ModBlocks.SMALL_STONE_BRICKS);
         stoneBlock(ModBlocks.SMOOTH_INLAYED_STONE);
         stoneBlock(ModBlocks.SMOOTHED_DOUBLE_INLAYED_STONE);
@@ -1490,10 +1490,10 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         stoneBlock(ModBlocks.STACKED_STONE_BRICKS);
         stoneBlock(ModBlocks.STONE_MINI_TILES);
         stoneBlock(ModBlocks.STONE_SCALES);
-        stoneBlock(ModBlocks.THICK_INLAYED_STONE);
-        stoneBlock(ModBlocks.TILED_BORDERED_STONE);
+        stoneCTMBlock(ModBlocks.THICK_INLAYED_STONE);
+        stoneCTMBlock(ModBlocks.TILED_BORDERED_STONE);
         stoneBlock(ModBlocks.TILED_STONE);
-        stoneBlock(ModBlocks.TINY_BRICK_BORDERED_STONE);
+        stoneCTMBlock(ModBlocks.TINY_BRICK_BORDERED_STONE);
         stoneBlock(ModBlocks.TINY_LAYERED_STONE_BRICKS);
         stoneBlock(ModBlocks.TINY_LAYERED_STONE_SLABS);
         stoneBlock(ModBlocks.TINY_STONE_BRICKS);
@@ -1505,13 +1505,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // Column (RotatedPillarBlock)
         existingAxisBlock(ModBlocks.STONE_PILLAR.get(), "block/stone/stone_pillar");
         // Static decorative (plain cube_all)
-        stoneBlock(ModBlocks.BORDERED_STONE);
-        stoneBlock(ModBlocks.EDGED_STONE_BRICKS);
+        stoneCTMBlock(ModBlocks.BORDERED_STONE);
+        stoneCTMBlock(ModBlocks.EDGED_STONE_BRICKS);
         stoneBlock(ModBlocks.MASSIVE_STONE_BRICKS);
-        // Column (RotatedPillarBlock)
-        existingAxisBlock(ModBlocks.CUT_STONE_COLUMN.get(),    "block/stone/cut_stone_column");
-        existingAxisBlock(ModBlocks.SMOOTH_STONE_COLUMN.get(), "block/stone/smooth_stone_column");
-        existingAxisBlock(ModBlocks.TILED_STONE_COLUMN.get(),  "block/stone/tiled_stone_column");
+        // CTM connecting column blocks (plain Block, not RotatedPillar — rotation breaks CTM UV mapping)
+        stoneCTMBlock(ModBlocks.CUT_STONE_COLUMN);
+        stoneCTMBlock(ModBlocks.SMOOTH_STONE_COLUMN);
+        stoneCTMBlock(ModBlocks.TILED_STONE_COLUMN);
 
         // Purpur CTM blocks
         simpleBlockWithItem(ModBlocks.PURPUR_PILLAR_CTM.get(),
@@ -1587,7 +1587,6 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // --- Chisel pillar blocks ---
         ModBlocks.CHISEL_PILLARS.values().forEach(this::stoneChiselPillar);
         // --- Legend blocks ---
-        stoneLegendBlock(ModBlocks.CHISELED_STONE_BRICKS_LEGEND, "block/stone/stone_chisels/legend/chiseled_stone_bricks_legend");
         ModBlocks.CHISEL_LEGEND.forEach((name, block) ->
                 stoneLegendBlock(block, "block/stone/stone_chisels/legend/" + name));
 

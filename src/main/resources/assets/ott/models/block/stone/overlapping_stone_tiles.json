@@ -1,8 +1,9 @@
 {
   "loader": "ott:mosaic",
+  "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/golden_framed_glass/ctm/golden_framed_light_blue"
+    "all": "ott:block/stone/ctm/overlapping_stone_tiles"
   },
   "connections": {
     "all": [

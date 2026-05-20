@@ -1,8 +1,9 @@
 {
   "loader": "ott:mosaic",
+  "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/lapis_block/ctm/lapis_block_chiseled"
+    "all": "ott:block/stone/ctm/brick_bordered_stone"
   },
   "connections": {
     "all": [

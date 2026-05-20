@@ -1,1 +1,15 @@
-{ "parent": "block/cube_column", "textures": { "end": "ott:block/stone/smooth_stone_column", "side": "ott:block/stone/smooth_stone_column" } }
+{
+  "loader": "ott:mosaic",
+  "layout": "full",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/stone/ctm/smooth_stone"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

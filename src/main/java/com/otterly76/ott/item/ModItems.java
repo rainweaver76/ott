@@ -3311,7 +3311,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_CYAN_STAINED_GLASS = registerBlockItem("golden_framed_cyan_stained_glass", ModBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GRAY_STAINED_GLASS = registerBlockItem("golden_framed_gray_stained_glass", ModBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GREEN_STAINED_GLASS = registerBlockItem("golden_framed_green_stained_glass", ModBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_BLUE = registerBlockItem("golden_framed_light_blue", ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE);
+    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS = registerBlockItem("golden_framed_light_blue_stained_glass", ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS = registerBlockItem("golden_framed_light_gray_stained_glass", ModBlocks.GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIME_STAINED_GLASS = registerBlockItem("golden_framed_lime_stained_glass", ModBlocks.GOLDEN_FRAMED_LIME_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_MAGENTA_STAINED_GLASS = registerBlockItem("golden_framed_magenta_stained_glass", ModBlocks.GOLDEN_FRAMED_MAGENTA_STAINED_GLASS);
@@ -4068,7 +4068,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_ROUNDED_SIDE = registerBlockItem("acacia_window_rounded_side", ModBlocks.ACACIA_WINDOW_ROUNDED_SIDE);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SLIM_SIDE = registerBlockItem("acacia_window_slim_side", ModBlocks.ACACIA_WINDOW_SLIM_SIDE);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SWIRLING_SIDE = registerBlockItem("acacia_window_swirling_side", ModBlocks.ACACIA_WINDOW_SWIRLING_SIDE);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_PILLAR_END = registerBlockItem("amethyst_block_pillar_end", ModBlocks.AMETHYST_BLOCK_PILLAR_END);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS_SIDE = registerBlockItem("birch_window_bars_side", ModBlocks.BIRCH_WINDOW_BARS_SIDE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED_SIDE = registerBlockItem("birch_window_covered_side", ModBlocks.BIRCH_WINDOW_COVERED_SIDE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL_SIDE = registerBlockItem("birch_window_diagonal_side", ModBlocks.BIRCH_WINDOW_DIAGONAL_SIDE);
@@ -4094,7 +4093,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_ROUNDED_SIDE = registerBlockItem("dark_oak_window_rounded_side", ModBlocks.DARK_OAK_WINDOW_ROUNDED_SIDE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SLIM_SIDE = registerBlockItem("dark_oak_window_slim_side", ModBlocks.DARK_OAK_WINDOW_SLIM_SIDE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SWIRLING_SIDE = registerBlockItem("dark_oak_window_swirling_side", ModBlocks.DARK_OAK_WINDOW_SWIRLING_SIDE);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_PILLAR_END = registerBlockItem("emerald_block_pillar_end", ModBlocks.EMERALD_BLOCK_PILLAR_END);
     public static final DeferredHolder<Item, BlockItem> INDUSTRIAL_IRON_WINDOW_CONNECTED = registerBlockItem("industrial_iron_window_connected", ModBlocks.INDUSTRIAL_IRON_WINDOW_CONNECTED);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_BARS_SIDE = registerBlockItem("jungle_window_bars_side", ModBlocks.JUNGLE_WINDOW_BARS_SIDE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_COVERED_SIDE = registerBlockItem("jungle_window_covered_side", ModBlocks.JUNGLE_WINDOW_COVERED_SIDE);
@@ -4120,7 +4118,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED_SIDE = registerBlockItem("oak_window_rounded_side", ModBlocks.OAK_WINDOW_ROUNDED_SIDE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SLIM_SIDE = registerBlockItem("oak_window_slim_side", ModBlocks.OAK_WINDOW_SLIM_SIDE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SWIRLING_SIDE = registerBlockItem("oak_window_swirling_side", ModBlocks.OAK_WINDOW_SWIRLING_SIDE);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_PILLAR_END = registerBlockItem("redstone_block_pillar_end", ModBlocks.REDSTONE_BLOCK_PILLAR_END);
     public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_BRICKS = registerBlockItem("rose_quartz_bricks", ModBlocks.ROSE_QUARTZ_BRICKS);
     public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_BARS_SIDE = registerBlockItem("spruce_window_bars_side", ModBlocks.SPRUCE_WINDOW_BARS_SIDE);
     public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_COVERED_SIDE = registerBlockItem("spruce_window_covered_side", ModBlocks.SPRUCE_WINDOW_COVERED_SIDE);
@@ -4802,7 +4799,6 @@ public class ModItems {
         registerBlockItem(ModBlocks.STONE_COLUMN);
         registerBlockItem(ModBlocks.STONE_TWISTING_COLUMN);
         // Chisel pillar blocks and legend blocks
-        registerBlockItem(ModBlocks.CHISELED_STONE_BRICKS_LEGEND);
         ModBlocks.CHISEL_PILLARS.values().forEach(ModItems::registerBlockItem);
         ModBlocks.CHISEL_LEGEND.values().forEach(ModItems::registerBlockItem);
 

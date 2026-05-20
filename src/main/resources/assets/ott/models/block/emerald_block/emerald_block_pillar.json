@@ -4,7 +4,7 @@
   "parent": "ott:block/ctm/ctm_cube_column_horizontal",
   "textures": {
     "side": "ott:block/emerald_block/ctm/emerald_block_pillar_side",
-    "top": "minecraft:block/emerald_block"
+    "top": "ott:block/emerald_block/ctm/emerald_block_pillar_end"
   },
   "connections": {
     "side": [

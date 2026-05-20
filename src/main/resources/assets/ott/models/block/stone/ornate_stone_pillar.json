@@ -1,9 +1,9 @@
 {
   "loader": "ott:mosaic",
-  "layout": "simple",
-  "parent": "ott:block/ctm/ctm_cube_all_simple",
+  "layout": "full",
+  "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/emerald_block/ctm/emerald_block_pillar_end"
+    "all": "ott:block/stone/ctm/ornate_stone_pillar"
   },
   "connections": {
     "all": [

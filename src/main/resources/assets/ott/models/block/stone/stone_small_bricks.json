@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "horizontal",
-  "parent": "ott:block/ctm/ctm_cube_all_horizontal",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_cube_all_compact",
   "textures": {
     "all": "ott:block/stone/ctm/stone_small_bricks"
   },
