@@ -32,15 +32,25 @@ public class OverlayUnbakedGeometry implements IUnbakedGeometry<OverlayUnbakedGe
     private final Map<String, OverlayConnectionRule> rulesByTexVar;
     private final int tintIndex;
     private final boolean emissive;
+    /**
+     * When non-negative, this ARGB color is baked directly into quad vertex data at model-bake
+     * time and {@code tintIndex} is forced to -1.  This prevents the chunk renderer from querying
+     * the target block's {@link net.minecraft.client.color.block.BlockColors} handler — which
+     * would otherwise tint the overlay with the wrong block's color (e.g. biome grass color).
+     * Set via {@code "tint_color": "0xRRGGBB"} in the overlay model JSON.
+     */
+    private final int fixedTintColor;
 
     public OverlayUnbakedGeometry(BlockModel baseModel,
                                    Map<String, OverlayConnectionRule> rulesByTexVar,
                                    int tintIndex,
-                                   boolean emissive) {
+                                   boolean emissive,
+                                   int fixedTintColor) {
         this.baseModel = baseModel;
         this.rulesByTexVar = rulesByTexVar;
         this.tintIndex = tintIndex;
         this.emissive = emissive;
+        this.fixedTintColor = fixedTintColor;
     }
 
     @Override
@@ -74,6 +84,6 @@ public class OverlayUnbakedGeometry implements IUnbakedGeometry<OverlayUnbakedGe
             }
         }
 
-        return new OverlayBakedModel(base, spriteRules, tintIndex, emissive);
+        return new OverlayBakedModel(base, spriteRules, tintIndex, emissive, fixedTintColor);
     }
 }

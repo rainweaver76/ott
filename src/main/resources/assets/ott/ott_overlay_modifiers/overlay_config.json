@@ -330,6 +330,9 @@
     "minecraft:suspicious_sand": [
       "ott:block/overlays/suspicious_sand_overlay"
     ],
+    "minecraft:terracotta": [
+      "ott:block/overlays/terracotta_overlay"
+    ],
     "minecraft:tuff": [
       "ott:block/overlays/tuff_overlay"
     ],

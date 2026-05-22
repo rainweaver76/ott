@@ -53,6 +53,26 @@ public class OverlayModelLoader implements IGeometryLoader<OverlayUnbakedGeometr
             tintIndex = OverlayBakedModel.GRASS_OVERLAY_TINT;
         }
 
+        // "tint_color": "0xRRGGBB" or "0xAARRGGBB" — bakes a fixed ARGB color into vertex data
+        // at model-bake time.  Prevents the chunk renderer from querying the target block's
+        // BlockColors handler, which would tint the overlay with the wrong block's color.
+        int fixedTintColor = -1;
+        if (json.has("tint_color")) {
+            String colorStr = json.get("tint_color").getAsString().trim();
+            if (colorStr.startsWith("0x") || colorStr.startsWith("0X")) {
+                colorStr = colorStr.substring(2);
+            }
+            long val = Long.parseLong(colorStr, 16);
+            if (colorStr.length() <= 6) val |= 0xFF000000L; // add opaque alpha if not provided
+            // Vertex color data is stored in ABGR format; JSON colors are specified as ARGB.
+            // Swap R and B to convert: ABGR = (A, B, G, R)
+            int a = (int)((val >> 24) & 0xFF);
+            int r = (int)((val >> 16) & 0xFF);
+            int g = (int)((val >>  8) & 0xFF);
+            int b = (int)( val        & 0xFF);
+            fixedTintColor = (a << 24) | (b << 16) | (g << 8) | r; // → ABGR
+        }
+
         boolean emissive = json.has("emissive") && json.get("emissive").getAsBoolean();
 
         // Strip custom keys so the remainder is a valid vanilla BlockModel JSON
@@ -61,10 +81,11 @@ public class OverlayModelLoader implements IGeometryLoader<OverlayUnbakedGeometr
         cleaned.remove("connections");
         cleaned.remove("tint_type");
         cleaned.remove("tint_index");
+        cleaned.remove("tint_color");
         cleaned.remove("emissive");
 
         BlockModel baseModel = ctx.deserialize(cleaned, BlockModel.class);
-        return new OverlayUnbakedGeometry(baseModel, rulesByTexVar, tintIndex, emissive);
+        return new OverlayUnbakedGeometry(baseModel, rulesByTexVar, tintIndex, emissive, fixedTintColor);
     }
 
     // ---- connection parsing -------------------------------------------------
