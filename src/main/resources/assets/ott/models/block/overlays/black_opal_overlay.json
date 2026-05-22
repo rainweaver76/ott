@@ -1,6 +1,6 @@
 {
   "loader": "ott:overlay",
-  "tint_color": "0xFF1A1A2E",
+  "tint_index": 102,
   "textures": {
     "all": "ott:block/overlays/opal_block_overflow",
     "particle": "#all"

@@ -411,6 +411,9 @@
     "ott:black_opal": [
       "ott:block/overlays/black_opal_overlay"
     ],
+    "ott:black_opal_crystal_block": [
+      "ott:block/overlays/black_opal_overlay"
+    ],
     "ott:black_orange_concrete_powder": [
       "ott:block/overlays/black_orange_concrete_powder_overlay"
     ],
@@ -640,6 +643,9 @@
       "ott:block/overlays/cyan_yellow_concrete_powder_overlay"
     ],
     "ott:fire_opal": [
+      "ott:block/overlays/fire_opal_overlay"
+    ],
+    "ott:fire_opal_crystal_block": [
       "ott:block/overlays/fire_opal_overlay"
     ],
     "ott:forest_concrete_powder": [
@@ -1297,6 +1303,9 @@
       "ott:block/overlays/white_marble_overlay"
     ],
     "ott:white_opal": [
+      "ott:block/overlays/white_opal_overlay"
+    ],
+    "ott:white_opal_crystal_block": [
       "ott:block/overlays/white_opal_overlay"
     ],
     "ott:white_orange_concrete_powder": [

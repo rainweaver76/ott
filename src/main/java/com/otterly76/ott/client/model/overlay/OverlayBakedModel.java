@@ -120,11 +120,13 @@ public class OverlayBakedModel implements net.minecraft.client.resources.model.B
     /** When true, overlay quads are stamped with FULL_BRIGHT lightmap so they glow. */
     private final boolean emissive;
     /**
-     * When non-negative, this ARGB color is multiplied into the vertex data of every emitted
+     * When non-negative, this ABGR color is written directly into the vertex data of every emitted
      * overlay quad and {@link #tintIndex} is forced to -1.  This prevents the chunk renderer
      * from querying the target block's BlockColors handler (which would apply the wrong color).
      * Used by opal crystal overlays to carry their own crystal color independently of whatever
      * block they are overlaying.
+     * <p>Stored in ABGR format (vertex buffer format) after conversion from JSON ARGB in
+     * {@link OverlayModelLoader}.
      */
     private final int fixedTintColor;
 
@@ -291,8 +293,8 @@ public class OverlayBakedModel implements net.minecraft.client.resources.model.B
      * Creates a copy of {@code base} with UV remapped to tile (tileX, tileY) in the 6x3 atlas.
      * {@code tintIndex} is forwarded to the new BakedQuad so the chunk renderer applies
      * the registered BlockColors handler (e.g. biome grass color) at render time.
-     * When {@code preBakedColor} is non-negative, it is multiplied into the vertex ARGB data
-     * instead, and {@code tintIndex} must be -1.
+     * When {@code preBakedColor} is non-negative, it is written directly into each vertex's
+     * color field (ABGR format), and {@code tintIndex} must be -1.
      */
     private static BakedQuad remapToTile(BakedQuad base, TextureAtlasSprite sprite,
                                           int tileX, int tileY, int tintIndex, boolean emissive,
@@ -316,8 +318,7 @@ public class OverlayBakedModel implements net.minecraft.client.resources.model.B
                 verts[v * stride + IQuadTransformer.UV2] = LightTexture.FULL_BRIGHT;
             }
             if (preBakedColor != -1) {
-                int colorOff = v * stride + IQuadTransformer.COLOR;
-                verts[colorOff] = multiplyARGB(verts[colorOff], preBakedColor);
+                verts[v * stride + IQuadTransformer.COLOR] = preBakedColor;
             }
         }
 
@@ -347,8 +348,8 @@ public class OverlayBakedModel implements net.minecraft.client.resources.model.B
     /**
      * Returns a copy of {@code base} with only tint index and emissive lightmap applied,
      * without remapping UVs.  Used for uniform rules whose texture is a plain 16×16 overlay.
-     * When {@code preBakedColor} is non-negative, it is multiplied into the vertex ARGB data
-     * instead of using a runtime tint index.
+     * When {@code preBakedColor} is non-negative, it is written directly into each vertex's
+     * color field (ABGR format) instead of using a runtime tint index.
      */
     private static BakedQuad tintQuad(BakedQuad base, int tintIndex, boolean emissive,
                                        int preBakedColor) {
@@ -362,24 +363,11 @@ public class OverlayBakedModel implements net.minecraft.client.resources.model.B
         }
         if (preBakedColor != -1) {
             for (int v = 0; v < 4; v++) {
-                int colorOff = v * stride + IQuadTransformer.COLOR;
-                verts[colorOff] = multiplyARGB(verts[colorOff], preBakedColor);
+                verts[v * stride + IQuadTransformer.COLOR] = preBakedColor;
             }
         }
         return new BakedQuad(verts, tintIndex, base.getDirection(), base.getSprite(),
                 base.isShade(), base.hasAmbientOcclusion());
-    }
-
-    /**
-     * Multiplies two ARGB colors channel-by-channel (each channel: base * factor / 255).
-     * Alpha is taken from {@code base} only, so transparency is preserved.
-     */
-    private static int multiplyARGB(int base, int factor) {
-        int a = (base >> 24) & 0xFF;
-        int r = ((base >> 16) & 0xFF) * ((factor >> 16) & 0xFF) / 255;
-        int g = ((base >>  8) & 0xFF) * ((factor >>  8) & 0xFF) / 255;
-        int b = (base         & 0xFF) * (factor         & 0xFF) / 255;
-        return (a << 24) | (r << 16) | (g << 8) | b;
     }
 
     // ---- BakedModel boilerplate ---------------------------------------------
