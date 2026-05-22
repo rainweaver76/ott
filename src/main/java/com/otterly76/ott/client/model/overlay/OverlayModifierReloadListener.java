@@ -31,28 +31,35 @@ import java.util.Set;
 import java.util.TreeMap;
 
 /**
- * Loads terrain overlay modifier descriptors from two config files:
+ * Loads terrain overlay modifier descriptors from config files in
+ * {@code assets/ott/ott_overlay_modifiers/}.
+ *
  * <ul>
- *   <li>{@code assets/ott/ott_overlay_modifiers/tier_config.json} —
- *       maps every block ID to an integer tier.  Higher tier = renders on top.</li>
- *   <li>{@code assets/ott/ott_overlay_modifiers/overlay_config.json} —
- *       maps block IDs that <em>have</em> an overlay to their overlay model location(s).</li>
+ *   <li>Any file whose name ends with {@code _tier_config.json} defines one
+ *       <em>independent domain</em>.  Tier comparisons are scoped entirely
+ *       within that domain — blocks in different domains never overlay each
+ *       other.  Add as many domain files as needed (e.g.
+ *       {@code stone_tier_config.json}, {@code wood_tier_config.json}).</li>
+ *   <li>{@code overlay_config.json} is shared across all domains and maps
+ *       block IDs to their overlay model path(s).</li>
  * </ul>
  *
- * <p>A block at tier T has its overlay applied to every block whose tier is
- * strictly less than T.  Blocks at the same tier never overlay each other.
- * Rendering order at shared corners is determined by ascending tier (lower tier
- * renders first = bottom layer; higher tier renders last = top layer).
+ * <p>Within a domain, a block at tier T has its overlay applied to every block
+ * in the same domain whose tier is strictly less than T.  Blocks at the same
+ * tier never overlay each other.  Rendering order at shared corners is
+ * determined by ascending tier (lower tier renders first = bottom layer).
  */
 public class OverlayModifierReloadListener {
 
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Gson   GSON   = new GsonBuilder().setLenient().create();
 
-    private static final ResourceLocation TIER_CONFIG    =
-            ResourceLocation.fromNamespaceAndPath("ott", "ott_overlay_modifiers/tier_config.json");
     private static final ResourceLocation OVERLAY_CONFIG =
             ResourceLocation.fromNamespaceAndPath("ott", "ott_overlay_modifiers/overlay_config.json");
+
+    /** Folder scanned for {@code *_tier_config.json} domain files. */
+    private static final String TIER_CONFIG_FOLDER = "ott_overlay_modifiers";
+    private static final String TIER_CONFIG_SUFFIX  = "_tier_config.json";
 
     public static final OverlayModifierReloadListener INSTANCE = new OverlayModifierReloadListener();
 
@@ -67,51 +74,44 @@ public class OverlayModifierReloadListener {
     // ── Model events ──────────────────────────────────────────────────────────
 
     /**
-     * Loads the two config files, derives target lists from tier comparisons,
-     * then registers all referenced overlay models as standalone models.
+     * Scans for all {@code *_tier_config.json} domain files, processes each
+     * independently against the shared overlay_config, then registers all
+     * referenced overlay models.
      * Call from ModelEvent.RegisterAdditional.
      */
     public void registerModels(@NotNull ModelEvent.RegisterAdditional event) {
         ResourceManager rm = Minecraft.getInstance().getResourceManager();
 
-        // 1. Load tier_config.json  →  blockId → tier
-        Map<ResourceLocation, Integer> blockTiers = loadTierConfig(rm);
-        if (blockTiers.isEmpty()) return;
-
-        // 2. Group blocks by tier (sorted ascending)
-        Map<Integer, List<ResourceLocation>> tierToBlocks = new TreeMap<>();
-        for (Map.Entry<ResourceLocation, Integer> e : blockTiers.entrySet()) {
-            tierToBlocks.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
-        }
-
-        // 3. Load overlay_config.json  →  blockId → overlay model locations
+        // Load the shared overlay config once
         Map<ResourceLocation, List<ResourceLocation>> overlayConfig = loadOverlayConfig(rm);
         if (overlayConfig.isEmpty()) return;
 
-        // 4. Sort overlay entries by ascending tier so lower-tier overlays render first (bottom layer)
-        List<Map.Entry<ResourceLocation, List<ResourceLocation>>> sortedOverlays =
-                new ArrayList<>(overlayConfig.entrySet());
-        sortedOverlays.sort(Comparator.comparingInt(e -> blockTiers.getOrDefault(e.getKey(), 0)));
+        // Scan for all *_tier_config.json files (one per domain)
+        Map<ResourceLocation, Resource> domainFiles = rm.listResources(
+                TIER_CONFIG_FOLDER,
+                loc -> loc.getNamespace().equals("ott") && loc.getPath().endsWith(TIER_CONFIG_SUFFIX)
+        );
 
-        // 5. Build modifiers map
-        modifiers.clear();
-        for (Map.Entry<ResourceLocation, List<ResourceLocation>> entry : sortedOverlays) {
-            ResourceLocation blockId     = entry.getKey();
-            List<ResourceLocation> models = entry.getValue();
-            int tier = blockTiers.getOrDefault(blockId, 0);
-
-            // Targets = all blocks with tier strictly less than this block's tier
-            for (Map.Entry<Integer, List<ResourceLocation>> tierEntry : tierToBlocks.entrySet()) {
-                if (tierEntry.getKey() < tier) {
-                    for (ResourceLocation targetId : tierEntry.getValue()) {
-                        expandBlock(targetId, models, tier);
-                    }
-                }
-            }
+        if (domainFiles.isEmpty()) {
+            LOGGER.warn("[OTT] No *_tier_config.json files found in {}", TIER_CONFIG_FOLDER);
+            return;
         }
-        LOGGER.debug("[OTT] Overlay modifiers loaded for {} block-state entries", modifiers.size());
 
-        // 6. Register every distinct overlay model so the baking system picks it up
+        modifiers.clear();
+
+        for (Map.Entry<ResourceLocation, Resource> entry : domainFiles.entrySet()) {
+            ResourceLocation configLoc = entry.getKey();
+            Map<ResourceLocation, Integer> blockTiers = loadTierConfigFromResource(entry.getValue(), configLoc);
+            if (blockTiers.isEmpty()) continue;
+
+            LOGGER.debug("[OTT] Processing domain '{}' ({} blocks)", configLoc, blockTiers.size());
+            processDomain(blockTiers, overlayConfig);
+        }
+
+        LOGGER.debug("[OTT] Overlay modifiers loaded for {} block-state entries across {} domain(s)",
+                modifiers.size(), domainFiles.size());
+
+        // Register every distinct overlay model so the baking system picks it up
         Set<ResourceLocation> allModels = new HashSet<>();
         for (List<ResourceLocation> overlays : modifiers.values()) {
             allModels.addAll(overlays);
@@ -148,14 +148,52 @@ public class OverlayModifierReloadListener {
         }
     }
 
+    // ── Domain processing ─────────────────────────────────────────────────────
+
+    /**
+     * Processes one tier domain independently.  Only overlay-config entries
+     * whose block IDs appear in this domain's tier map are considered; tier
+     * comparisons are scoped entirely to this domain.
+     */
+    private void processDomain(Map<ResourceLocation, Integer> blockTiers,
+                                Map<ResourceLocation, List<ResourceLocation>> overlayConfig) {
+        // Group blocks in this domain by tier (sorted ascending)
+        Map<Integer, List<ResourceLocation>> tierToBlocks = new TreeMap<>();
+        for (Map.Entry<ResourceLocation, Integer> e : blockTiers.entrySet()) {
+            tierToBlocks.computeIfAbsent(e.getValue(), k -> new ArrayList<>()).add(e.getKey());
+        }
+
+        // Collect overlay entries that belong to this domain, sorted by ascending tier
+        List<Map.Entry<ResourceLocation, List<ResourceLocation>>> sortedOverlays = new ArrayList<>();
+        for (Map.Entry<ResourceLocation, List<ResourceLocation>> e : overlayConfig.entrySet()) {
+            if (blockTiers.containsKey(e.getKey())) {
+                sortedOverlays.add(e);
+            }
+        }
+        sortedOverlays.sort(Comparator.comparingInt(e -> blockTiers.getOrDefault(e.getKey(), 0)));
+
+        for (Map.Entry<ResourceLocation, List<ResourceLocation>> entry : sortedOverlays) {
+            ResourceLocation blockId      = entry.getKey();
+            List<ResourceLocation> models = entry.getValue();
+            int tier = blockTiers.get(blockId);
+
+            // Targets = all blocks in this domain with tier strictly less than this block's tier
+            for (Map.Entry<Integer, List<ResourceLocation>> tierEntry : tierToBlocks.entrySet()) {
+                if (tierEntry.getKey() < tier) {
+                    for (ResourceLocation targetId : tierEntry.getValue()) {
+                        expandBlock(targetId, models);
+                    }
+                }
+            }
+        }
+    }
+
     // ── Helpers ───────────────────────────────────────────────────────────────
 
     /** Expands all block states for {@code blockId} and appends the overlay models. */
-    private void expandBlock(ResourceLocation blockId,
-                             List<ResourceLocation> overlayModels,
-                             int zOrder) {
+    private void expandBlock(ResourceLocation blockId, List<ResourceLocation> overlayModels) {
         if (!BuiltInRegistries.BLOCK.containsKey(blockId)) {
-            LOGGER.warn("[OTT] Overlay target '{}' is not a registered block — add it to tier_config.json?", blockId);
+            LOGGER.warn("[OTT] Overlay target '{}' is not a registered block — add it to the correct tier config?", blockId);
             return;
         }
         Block block = BuiltInRegistries.BLOCK.get(blockId);
@@ -169,23 +207,18 @@ public class OverlayModifierReloadListener {
 
     // ── Config file loaders ───────────────────────────────────────────────────
 
-    private Map<ResourceLocation, Integer> loadTierConfig(ResourceManager rm) {
-        Optional<Resource> opt = rm.getResource(TIER_CONFIG);
-        if (opt.isEmpty()) {
-            LOGGER.error("[OTT] tier_config.json not found at {}", TIER_CONFIG);
-            return Map.of();
-        }
-        try (Reader reader = opt.get().openAsReader()) {
-            JsonObject json   = GSON.fromJson(reader, JsonObject.class);
-            JsonObject tiers  = json.getAsJsonObject("tiers");
+    private Map<ResourceLocation, Integer> loadTierConfigFromResource(Resource resource,
+                                                                       ResourceLocation sourceLoc) {
+        try (Reader reader = resource.openAsReader()) {
+            JsonObject json  = GSON.fromJson(reader, JsonObject.class);
+            JsonObject tiers = json.getAsJsonObject("tiers");
             Map<ResourceLocation, Integer> result = new HashMap<>();
             for (Map.Entry<String, JsonElement> e : tiers.entrySet()) {
                 result.put(ResourceLocation.parse(e.getKey()), e.getValue().getAsInt());
             }
-            LOGGER.debug("[OTT] tier_config.json loaded: {} blocks", result.size());
             return result;
         } catch (Exception e) {
-            LOGGER.error("[OTT] Failed to load tier_config.json: {}", e.getMessage());
+            LOGGER.error("[OTT] Failed to load tier config '{}': {}", sourceLoc, e.getMessage());
             return Map.of();
         }
     }

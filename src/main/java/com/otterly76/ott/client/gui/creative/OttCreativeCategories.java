@@ -1,7 +1,6 @@
 package com.otterly76.ott.client.gui.creative;
 
 import com.otterly76.ott.block.ModBlocks;
-import com.otterly76.ott.color.ModPatterns;
 import com.otterly76.ott.entity.custom.Butterfly;
 import com.otterly76.ott.item.ModItems;
 import net.minecraft.network.chat.Component;
@@ -223,6 +222,7 @@ public enum OttCreativeCategories {
     COLORS("colors",
             () -> ModBlocks.COLOR_SETS.get("amethyst").wool().get().asItem(),
             (params, output) -> {
+                // ── OTT custom color groups (palette order) ──────────────────
                 ModBlocks.COLOR_SETS.forEach((name, set) -> {
                     output.accept(set.wool());
                     output.accept(set.carpet());
@@ -244,17 +244,45 @@ public enum OttCreativeCategories {
                     output.accept(set.bannister());
                     output.accept(set.supportSlab());
                     output.accept(set.supportBeam());
+                    var sg = ModBlocks.SEAGLASS_SETS.get(name);
+                    if (sg != null) {
+                        output.accept(sg.seaglass());
+                        output.accept(sg.bubblesSeaglass());
+                        output.accept(sg.smoothSeaglass());
+                        output.accept(sg.wavesSeaglass());
+                    }
+                    ModBlocks.PATTERN_BLOCKS.values().forEach(colorMap -> {
+                        var pb = colorMap.get(name);
+                        if (pb != null) output.accept(pb);
+                    });
+                    var elev = ModBlocks.ELEVATORS.get(name);
+                    if (elev != null) output.accept(elev);
+                    var ct = ModItems.CLAY_TILES.get(name);
+                    if (ct != null) output.accept(ct.get());
+                    var futon = ModBlocks.FUTONS.get(name);
+                    if (futon != null) output.accept(futon);
                 });
-                ModBlocks.SEAGLASS_SETS.values().forEach(set -> {
-                    output.accept(set.seaglass());
-                    output.accept(set.bubblesSeaglass());
-                    output.accept(set.smoothSeaglass());
-                    output.accept(set.wavesSeaglass());
-                });
-                ModBlocks.PATTERN_BLOCKS.values().forEach(colorMap -> colorMap.values().forEach(output::accept));
-                ModBlocks.ELEVATORS.values().forEach(output::accept);
-                ModPatterns.ALL_COLORS.forEach(color -> output.accept(ModItems.CLAY_TILES.get(color.name()).get()));
-                ModBlocks.FUTONS.values().forEach(output::accept);
+                // ── Vanilla dye color groups (white → black) ─────────────────
+                for (net.minecraft.world.item.DyeColor dye : net.minecraft.world.item.DyeColor.values()) {
+                    String name = dye.getName();
+                    var sg = ModBlocks.SEAGLASS_SETS.get(name);
+                    if (sg != null) {
+                        output.accept(sg.seaglass());
+                        output.accept(sg.bubblesSeaglass());
+                        output.accept(sg.smoothSeaglass());
+                        output.accept(sg.wavesSeaglass());
+                    }
+                    ModBlocks.PATTERN_BLOCKS.values().forEach(colorMap -> {
+                        var pb = colorMap.get(name);
+                        if (pb != null) output.accept(pb);
+                    });
+                    var elev = ModBlocks.ELEVATORS.get(name);
+                    if (elev != null) output.accept(elev);
+                    var ct = ModItems.CLAY_TILES.get(name);
+                    if (ct != null) output.accept(ct.get());
+                    var futon = ModBlocks.FUTONS.get(name);
+                    if (futon != null) output.accept(futon);
+                }
             }),
 
     WOOD_SETS("wood_sets",
@@ -2376,8 +2404,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.FRAMED_WARPED_PLANKS);
         output.accept(ModBlocks.NATURAL_WARPED_PLANKS);
         output.accept(ModBlocks.PEGGED_WARPED_PLANKS);
-        output.accept(ModBlocks.STACKED_STRIPPED_WARPED_STEM);
-        output.accept(ModBlocks.STACKED_STRIPPED_WARPED_STEM_TOP);
         output.accept(ModBlocks.WARPED_PLANKS_PANEL);
         output.accept(ModBlocks.WHIRLWIND_WARPED_PLANKS);
 
@@ -2530,7 +2556,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.IRON_BLOCK_LINES);
         output.accept(ModBlocks.IRON_BLOCK_PIPES);
         output.accept(ModBlocks.JUNGLE_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.LAPIS_BLOCK_CHISELED);
         output.accept(ModBlocks.LAPIS_BLOCK_DECORATED);
         output.accept(ModBlocks.LIGHT_BLUE_FRAMED_GLASS);
         output.accept(ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS);
@@ -2680,10 +2705,10 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.BLUE_STAINED_GLASS);
         output.accept(ModBlocks.BONE_BLOCK_BORDERED);
         output.accept(ModBlocks.BONE_BLOCK_CHISELED);
-        output.accept(ModBlocks.BONE_BLOCK_CONNECTING_END);
+
         output.accept(ModBlocks.BONE_BLOCK_DECORATED_BORDERED);
         output.accept(ModBlocks.BONE_BLOCK_INVERTED_TILES);
-        output.accept(ModBlocks.BONE_BLOCK_PILLAR_END);
+
         output.accept(ModBlocks.BORDERLESS_GLASS);
         output.accept(ModBlocks.BORDERLESS_GLASS_BLACK);
         output.accept(ModBlocks.BORDERLESS_GLASS_BLUE);
@@ -2739,7 +2764,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.COAL_BLOCK_COMPACTED);
         output.accept(ModBlocks.COAL_BLOCK_OVALS);
         output.accept(ModBlocks.COAL_BLOCK_PATTERN);
-        output.accept(ModBlocks.COAL_BLOCK_PILLAR_END);
+
         output.accept(ModBlocks.COAL_BLOCK_ROTATED_BRICKS);
         output.accept(ModBlocks.COAL_BLOCK_SMALL_TILES);
         output.accept(ModBlocks.COAL_BLOCK_STRIPES);
@@ -2747,7 +2772,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.COBBLED_DEEPSLATE_BRICK_PAVING);
         output.accept(ModBlocks.COBBLED_DEEPSLATE_LARGE_TILES);
         output.accept(ModBlocks.COBBLED_DEEPSLATE_PAVING);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_PILLAR_END);
+
         output.accept(ModBlocks.COBBLED_DEEPSLATE_PULVERIZED);
         output.accept(ModBlocks.COBBLED_DEEPSLATE_ROTATED_BRICKS);
         output.accept(ModBlocks.COBBLED_DEEPSLATE_SMALL_TILES);
@@ -2762,7 +2787,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.COBBLESTONE_DENTED);
         output.accept(ModBlocks.COBBLESTONE_INVERTED_DENTED);
         output.accept(ModBlocks.COBBLESTONE_PAVING);
-        output.accept(ModBlocks.COBBLESTONE_PILLAR_END);
+
         output.accept(ModBlocks.COBBLESTONE_PULVERIZED);
         output.accept(ModBlocks.COBBLESTONE_ROTATED_BRICKS);
         output.accept(ModBlocks.COBBLESTONE_SMALL_TILES);
@@ -2775,7 +2800,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.COPPER_BLOCK_GEARS);
         output.accept(ModBlocks.COPPER_BLOCK_LINES);
         output.accept(ModBlocks.COPPER_BLOCK_PATTERN);
-        output.accept(ModBlocks.COPPER_BLOCK_PILLAR_END);
         output.accept(ModBlocks.COPPER_BLOCK_POLISHED);
         output.accept(ModBlocks.COPPER_BLOCK_SHAFTS);
         output.accept(ModBlocks.COPPER_GRATE);
@@ -2945,7 +2969,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.LAPIS_BLOCK_INVERTED_TILES);
         output.accept(ModBlocks.LAPIS_BLOCK_MOSAIC);
         output.accept(ModBlocks.LAPIS_BLOCK_PATTERN);
-        output.accept(ModBlocks.LAPIS_BLOCK_PILLAR_END);
+
         output.accept(ModBlocks.LAPIS_BLOCK_POLISHED);
         output.accept(ModBlocks.LAPIS_BLOCK_SCALES);
         output.accept(ModBlocks.LAPIS_BLOCK_SMALL_TILES);
@@ -2983,7 +3007,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.NETHERITE_BLOCK_COMPACTED);
         output.accept(ModBlocks.NETHERITE_BLOCK_DIAGONAL_TILES);
         output.accept(ModBlocks.NETHERITE_BLOCK_INDENTED);
-        output.accept(ModBlocks.NETHERITE_BLOCK_PILLAR_END);
+
         output.accept(ModBlocks.NETHERITE_BLOCK_SMALL_TILES);
         output.accept(ModBlocks.NETHERRACK_BEAMS);
         output.accept(ModBlocks.NETHERRACK_BRICK_PAVING);
@@ -3288,7 +3312,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED_SIDE);
         output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM_SIDE);
         output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING_SIDE);
-        output.accept(ModBlocks.INDUSTRIAL_IRON_WINDOW_CONNECTED);
         output.accept(ModBlocks.JUNGLE_WINDOW_BARS_SIDE);
         output.accept(ModBlocks.JUNGLE_WINDOW_COVERED_SIDE);
         output.accept(ModBlocks.JUNGLE_WINDOW_DIAGONAL_SIDE);

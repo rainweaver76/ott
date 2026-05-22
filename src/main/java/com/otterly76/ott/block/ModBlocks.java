@@ -3962,11 +3962,7 @@ public class ModBlocks {
         register("natural_warped_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
     public static final DeferredBlock<Block> PEGGED_WARPED_PLANKS =
         register("pegged_warped_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
-    public static final DeferredBlock<Block> STACKED_STRIPPED_WARPED_STEM =
-        register("stacked_stripped_warped_stem", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
-    public static final DeferredBlock<Block> STACKED_STRIPPED_WARPED_STEM_TOP =
-        register("stacked_stripped_warped_stem_top", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
-    public static final DeferredBlock<Block> WARPED_PLANKS_PANEL =
+public static final DeferredBlock<Block> WARPED_PLANKS_PANEL =
         register("warped_planks_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
     public static final DeferredBlock<Block> WHIRLWIND_WARPED_PLANKS =
         register("whirlwind_warped_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)));
@@ -4168,7 +4164,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> IRON_BLOCK_LINES = register("iron_block_lines", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> IRON_BLOCK_PIPES = register("iron_block_pipes", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> JUNGLE_PLANKS_BRICK_PATTERN = register("jungle_planks_brick_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> LAPIS_BLOCK_CHISELED = register("lapis_block_chiseled", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_DECORATED = register("lapis_block_decorated", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LIGHT_BLUE_FRAMED_GLASS = register("light_blue_framed_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> LIGHT_BLUE_STAINED_CLEAR_GLASS = register("light_blue_stained_clear_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
@@ -4318,10 +4313,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BLUE_STAINED_GLASS = register("blue_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> BONE_BLOCK_BORDERED = register("bone_block_bordered", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> BONE_BLOCK_CHISELED = register("bone_block_chiseled", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> BONE_BLOCK_CONNECTING_END = register("bone_block_connecting_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> BONE_BLOCK_DECORATED_BORDERED = register("bone_block_decorated_bordered", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> BONE_BLOCK_INVERTED_TILES = register("bone_block_inverted_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> BONE_BLOCK_PILLAR_END = register("bone_block_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> BORDERLESS_GLASS = register("borderless_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> BORDERLESS_GLASS_BLACK = register("borderless_glass_black", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> BORDERLESS_GLASS_BLUE = register("borderless_glass_blue", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
@@ -4377,7 +4372,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COAL_BLOCK_COMPACTED = register("coal_block_compacted", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_OVALS = register("coal_block_ovals", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_PATTERN = register("coal_block_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> COAL_BLOCK_PILLAR_END = register("coal_block_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> COAL_BLOCK_ROTATED_BRICKS = register("coal_block_rotated_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_SMALL_TILES = register("coal_block_small_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_STRIPES = register("coal_block_stripes", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4385,7 +4380,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_BRICK_PAVING = register("cobbled_deepslate_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_LARGE_TILES = register("cobbled_deepslate_large_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_PAVING = register("cobbled_deepslate_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> COBBLED_DEEPSLATE_PILLAR_END = register("cobbled_deepslate_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_PULVERIZED = register("cobbled_deepslate_pulverized", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_ROTATED_BRICKS = register("cobbled_deepslate_rotated_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLED_DEEPSLATE_SMALL_TILES = register("cobbled_deepslate_small_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4400,7 +4395,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COBBLESTONE_DENTED = register("cobblestone_dented", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLESTONE_INVERTED_DENTED = register("cobblestone_inverted_dented", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLESTONE_PAVING = register("cobblestone_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> COBBLESTONE_PILLAR_END = register("cobblestone_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> COBBLESTONE_PULVERIZED = register("cobblestone_pulverized", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLESTONE_ROTATED_BRICKS = register("cobblestone_rotated_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COBBLESTONE_SMALL_TILES = register("cobblestone_small_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4413,10 +4408,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COPPER_BLOCK_GEARS = register("copper_block_gears", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COPPER_BLOCK_LINES = register("copper_block_lines", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COPPER_BLOCK_PATTERN = register("copper_block_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> COPPER_BLOCK_PILLAR_END = register("copper_block_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COPPER_BLOCK_POLISHED = register("copper_block_polished", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COPPER_BLOCK_SHAFTS = register("copper_block_shafts", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> COPPER_GRATE = register("copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> COPPER_GRATE = register("copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CRIMSON_PLANKS_BEAMS = register("crimson_planks_beams", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> CRIMSON_PLANKS_BRICK_PAVING = register("crimson_planks_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> CRIMSON_PLANKS_CRATE = register("crimson_planks_crate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4523,7 +4517,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> END_STONE_SQUARES = register("end_stone_squares", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> END_STONE_TILES = register("end_stone_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EXPOSED_COPPER_BLOCK = register("exposed_copper_block", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> EXPOSED_COPPER_GRATE = register("exposed_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> EXPOSED_COPPER_GRATE = register("exposed_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> GLOWSTONE_BRICK_PAVING = register("glowstone_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GLOWSTONE_CRUSHED = register("glowstone_crushed", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GLOWSTONE_LARGE_TILES = register("glowstone_large_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4583,7 +4577,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LAPIS_BLOCK_INVERTED_TILES = register("lapis_block_inverted_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_MOSAIC = register("lapis_block_mosaic", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_PATTERN = register("lapis_block_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> LAPIS_BLOCK_PILLAR_END = register("lapis_block_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> LAPIS_BLOCK_POLISHED = register("lapis_block_polished", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_SCALES = register("lapis_block_scales", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_SMALL_TILES = register("lapis_block_small_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4621,7 +4615,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NETHERITE_BLOCK_COMPACTED = register("netherite_block_compacted", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERITE_BLOCK_DIAGONAL_TILES = register("netherite_block_diagonal_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERITE_BLOCK_INDENTED = register("netherite_block_indented", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> NETHERITE_BLOCK_PILLAR_END = register("netherite_block_pillar_end", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+
     public static final DeferredBlock<Block> NETHERITE_BLOCK_SMALL_TILES = register("netherite_block_small_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERRACK_BEAMS = register("netherrack_beams", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERRACK_BRICK_PAVING = register("netherrack_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4668,7 +4662,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OBSIDIAN_TILES = register("obsidian_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ORANGE_STAINED_GLASS = register("orange_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> OXIDIZED_COPPER_BLOCK = register("oxidized_copper_block", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> OXIDIZED_COPPER_GRATE = register("oxidized_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> OXIDIZED_COPPER_GRATE = register("oxidized_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_BEAMS = register("pale_oak_planks_beams", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_BRICK_PAVING = register("pale_oak_planks_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_CRATE = register("pale_oak_planks_crate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4853,7 +4847,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WARPED_PLANKS_WAVY = register("warped_planks_wavy", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WARPED_PLANKS_WOVEN = register("warped_planks_woven", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WEATHERED_COPPER_BLOCK = register("weathered_copper_block", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> WEATHERED_COPPER_GRATE = register("weathered_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> WEATHERED_COPPER_GRATE = register("weathered_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> WHITE_STAINED_GLASS = register("white_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> YELLOW_STAINED_GLASS = register("yellow_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> AMETHYST_BLOCK_PILLAR = register("amethyst_block_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4926,7 +4920,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DARK_OAK_WINDOW_ROUNDED_SIDE = register("dark_oak_window_rounded_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> DARK_OAK_WINDOW_SLIM_SIDE = register("dark_oak_window_slim_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> DARK_OAK_WINDOW_SWIRLING_SIDE = register("dark_oak_window_swirling_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> INDUSTRIAL_IRON_WINDOW_CONNECTED = register("industrial_iron_window_connected", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> JUNGLE_WINDOW_BARS_SIDE = register("jungle_window_bars_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> JUNGLE_WINDOW_COVERED_SIDE = register("jungle_window_covered_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> JUNGLE_WINDOW_DIAGONAL_SIDE = register("jungle_window_diagonal_side", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));

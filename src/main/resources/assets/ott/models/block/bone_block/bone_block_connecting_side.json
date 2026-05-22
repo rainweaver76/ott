@@ -1,15 +1,13 @@
 {
   "loader": "ott:mosaic",
   "layout": "simple",
-  "parent": "ott:block/ctm/ctm_cube_all_simple",
+  "parent": "ott:block/ctm/ctm_cube_column_simple_compact",
   "textures": {
-    "all": "ott:block/bone_block/ctm/bone_block_connecting_side"
+    "side": "ott:block/bone_block/ctm/bone_block_connecting_side",
+    "top":  "ott:block/bone_block/ctm/bone_block_connecting_end"
   },
   "connections": {
-    "all": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": [{"type": "is_same_block"}],
+    "top":  {"layout": "compact", "rules": [{"type": "is_same_block"}]}
   }
 }

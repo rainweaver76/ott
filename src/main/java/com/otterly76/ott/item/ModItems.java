@@ -3128,11 +3128,7 @@ public class ModItems {
         registerBlockItem("natural_warped_planks", ModBlocks.NATURAL_WARPED_PLANKS);
     public static final DeferredHolder<Item, BlockItem> PEGGED_WARPED_PLANKS =
         registerBlockItem("pegged_warped_planks", ModBlocks.PEGGED_WARPED_PLANKS);
-    public static final DeferredHolder<Item, BlockItem> STACKED_STRIPPED_WARPED_STEM =
-        registerBlockItem("stacked_stripped_warped_stem", ModBlocks.STACKED_STRIPPED_WARPED_STEM);
-    public static final DeferredHolder<Item, BlockItem> STACKED_STRIPPED_WARPED_STEM_TOP =
-        registerBlockItem("stacked_stripped_warped_stem_top", ModBlocks.STACKED_STRIPPED_WARPED_STEM_TOP);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
+public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
         registerBlockItem("warped_planks_panel", ModBlocks.WARPED_PLANKS_PANEL);
     public static final DeferredHolder<Item, BlockItem> WHIRLWIND_WARPED_PLANKS =
         registerBlockItem("whirlwind_warped_planks", ModBlocks.WHIRLWIND_WARPED_PLANKS);
@@ -3334,7 +3330,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_LINES = registerBlockItem("iron_block_lines", ModBlocks.IRON_BLOCK_LINES);
     public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_PIPES = registerBlockItem("iron_block_pipes", ModBlocks.IRON_BLOCK_PIPES);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_BRICK_PATTERN = registerBlockItem("jungle_planks_brick_pattern", ModBlocks.JUNGLE_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_CHISELED = registerBlockItem("lapis_block_chiseled", ModBlocks.LAPIS_BLOCK_CHISELED);
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_DECORATED = registerBlockItem("lapis_block_decorated", ModBlocks.LAPIS_BLOCK_DECORATED);
     public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_FRAMED_GLASS = registerBlockItem("light_blue_framed_glass", ModBlocks.LIGHT_BLUE_FRAMED_GLASS);
     public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_STAINED_CLEAR_GLASS = registerBlockItem("light_blue_stained_clear_glass", ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS);
@@ -3485,10 +3480,10 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> BLUE_STAINED_GLASS = registerBlockItem("blue_stained_glass", ModBlocks.BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_BORDERED = registerBlockItem("bone_block_bordered", ModBlocks.BONE_BLOCK_BORDERED);
     public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_CHISELED = registerBlockItem("bone_block_chiseled", ModBlocks.BONE_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_CONNECTING_END = registerBlockItem("bone_block_connecting_end", ModBlocks.BONE_BLOCK_CONNECTING_END);
+
     public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_DECORATED_BORDERED = registerBlockItem("bone_block_decorated_bordered", ModBlocks.BONE_BLOCK_DECORATED_BORDERED);
     public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_INVERTED_TILES = registerBlockItem("bone_block_inverted_tiles", ModBlocks.BONE_BLOCK_INVERTED_TILES);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_PILLAR_END = registerBlockItem("bone_block_pillar_end", ModBlocks.BONE_BLOCK_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS = registerBlockItem("borderless_glass", ModBlocks.BORDERLESS_GLASS);
     public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLACK = registerBlockItem("borderless_glass_black", ModBlocks.BORDERLESS_GLASS_BLACK);
     public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLUE = registerBlockItem("borderless_glass_blue", ModBlocks.BORDERLESS_GLASS_BLUE);
@@ -3544,7 +3539,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_COMPACTED = registerBlockItem("coal_block_compacted", ModBlocks.COAL_BLOCK_COMPACTED);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_OVALS = registerBlockItem("coal_block_ovals", ModBlocks.COAL_BLOCK_OVALS);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_PATTERN = registerBlockItem("coal_block_pattern", ModBlocks.COAL_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_PILLAR_END = registerBlockItem("coal_block_pillar_end", ModBlocks.COAL_BLOCK_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_ROTATED_BRICKS = registerBlockItem("coal_block_rotated_bricks", ModBlocks.COAL_BLOCK_ROTATED_BRICKS);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_SMALL_TILES = registerBlockItem("coal_block_small_tiles", ModBlocks.COAL_BLOCK_SMALL_TILES);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_STRIPES = registerBlockItem("coal_block_stripes", ModBlocks.COAL_BLOCK_STRIPES);
@@ -3552,7 +3547,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_BRICK_PAVING = registerBlockItem("cobbled_deepslate_brick_paving", ModBlocks.COBBLED_DEEPSLATE_BRICK_PAVING);
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_LARGE_TILES = registerBlockItem("cobbled_deepslate_large_tiles", ModBlocks.COBBLED_DEEPSLATE_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_PAVING = registerBlockItem("cobbled_deepslate_paving", ModBlocks.COBBLED_DEEPSLATE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_PILLAR_END = registerBlockItem("cobbled_deepslate_pillar_end", ModBlocks.COBBLED_DEEPSLATE_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_PULVERIZED = registerBlockItem("cobbled_deepslate_pulverized", ModBlocks.COBBLED_DEEPSLATE_PULVERIZED);
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_ROTATED_BRICKS = registerBlockItem("cobbled_deepslate_rotated_bricks", ModBlocks.COBBLED_DEEPSLATE_ROTATED_BRICKS);
     public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_SMALL_TILES = registerBlockItem("cobbled_deepslate_small_tiles", ModBlocks.COBBLED_DEEPSLATE_SMALL_TILES);
@@ -3567,7 +3562,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_DENTED = registerBlockItem("cobblestone_dented", ModBlocks.COBBLESTONE_DENTED);
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_INVERTED_DENTED = registerBlockItem("cobblestone_inverted_dented", ModBlocks.COBBLESTONE_INVERTED_DENTED);
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_PAVING = registerBlockItem("cobblestone_paving", ModBlocks.COBBLESTONE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_PILLAR_END = registerBlockItem("cobblestone_pillar_end", ModBlocks.COBBLESTONE_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_PULVERIZED = registerBlockItem("cobblestone_pulverized", ModBlocks.COBBLESTONE_PULVERIZED);
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_ROTATED_BRICKS = registerBlockItem("cobblestone_rotated_bricks", ModBlocks.COBBLESTONE_ROTATED_BRICKS);
     public static final DeferredHolder<Item, BlockItem> COBBLESTONE_SMALL_TILES = registerBlockItem("cobblestone_small_tiles", ModBlocks.COBBLESTONE_SMALL_TILES);
@@ -3580,7 +3575,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_GEARS = registerBlockItem("copper_block_gears", ModBlocks.COPPER_BLOCK_GEARS);
     public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_LINES = registerBlockItem("copper_block_lines", ModBlocks.COPPER_BLOCK_LINES);
     public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_PATTERN = registerBlockItem("copper_block_pattern", ModBlocks.COPPER_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_PILLAR_END = registerBlockItem("copper_block_pillar_end", ModBlocks.COPPER_BLOCK_PILLAR_END);
     public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_POLISHED = registerBlockItem("copper_block_polished", ModBlocks.COPPER_BLOCK_POLISHED);
     public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_SHAFTS = registerBlockItem("copper_block_shafts", ModBlocks.COPPER_BLOCK_SHAFTS);
     public static final DeferredHolder<Item, BlockItem> COPPER_GRATE = registerBlockItem("copper_grate", ModBlocks.COPPER_GRATE);
@@ -3750,7 +3744,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_INVERTED_TILES = registerBlockItem("lapis_block_inverted_tiles", ModBlocks.LAPIS_BLOCK_INVERTED_TILES);
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_MOSAIC = registerBlockItem("lapis_block_mosaic", ModBlocks.LAPIS_BLOCK_MOSAIC);
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_PATTERN = registerBlockItem("lapis_block_pattern", ModBlocks.LAPIS_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_PILLAR_END = registerBlockItem("lapis_block_pillar_end", ModBlocks.LAPIS_BLOCK_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_POLISHED = registerBlockItem("lapis_block_polished", ModBlocks.LAPIS_BLOCK_POLISHED);
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_SCALES = registerBlockItem("lapis_block_scales", ModBlocks.LAPIS_BLOCK_SCALES);
     public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_SMALL_TILES = registerBlockItem("lapis_block_small_tiles", ModBlocks.LAPIS_BLOCK_SMALL_TILES);
@@ -3788,7 +3782,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_COMPACTED = registerBlockItem("netherite_block_compacted", ModBlocks.NETHERITE_BLOCK_COMPACTED);
     public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_DIAGONAL_TILES = registerBlockItem("netherite_block_diagonal_tiles", ModBlocks.NETHERITE_BLOCK_DIAGONAL_TILES);
     public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_INDENTED = registerBlockItem("netherite_block_indented", ModBlocks.NETHERITE_BLOCK_INDENTED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_PILLAR_END = registerBlockItem("netherite_block_pillar_end", ModBlocks.NETHERITE_BLOCK_PILLAR_END);
+
     public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_SMALL_TILES = registerBlockItem("netherite_block_small_tiles", ModBlocks.NETHERITE_BLOCK_SMALL_TILES);
     public static final DeferredHolder<Item, BlockItem> NETHERRACK_BEAMS = registerBlockItem("netherrack_beams", ModBlocks.NETHERRACK_BEAMS);
     public static final DeferredHolder<Item, BlockItem> NETHERRACK_BRICK_PAVING = registerBlockItem("netherrack_brick_paving", ModBlocks.NETHERRACK_BRICK_PAVING);
@@ -4093,7 +4087,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_ROUNDED_SIDE = registerBlockItem("dark_oak_window_rounded_side", ModBlocks.DARK_OAK_WINDOW_ROUNDED_SIDE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SLIM_SIDE = registerBlockItem("dark_oak_window_slim_side", ModBlocks.DARK_OAK_WINDOW_SLIM_SIDE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SWIRLING_SIDE = registerBlockItem("dark_oak_window_swirling_side", ModBlocks.DARK_OAK_WINDOW_SWIRLING_SIDE);
-    public static final DeferredHolder<Item, BlockItem> INDUSTRIAL_IRON_WINDOW_CONNECTED = registerBlockItem("industrial_iron_window_connected", ModBlocks.INDUSTRIAL_IRON_WINDOW_CONNECTED);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_BARS_SIDE = registerBlockItem("jungle_window_bars_side", ModBlocks.JUNGLE_WINDOW_BARS_SIDE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_COVERED_SIDE = registerBlockItem("jungle_window_covered_side", ModBlocks.JUNGLE_WINDOW_COVERED_SIDE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_DIAGONAL_SIDE = registerBlockItem("jungle_window_diagonal_side", ModBlocks.JUNGLE_WINDOW_DIAGONAL_SIDE);

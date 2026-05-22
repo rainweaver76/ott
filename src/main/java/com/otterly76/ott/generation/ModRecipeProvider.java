@@ -3892,8 +3892,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.FRAMED_WARPED_PLANKS, "framed_warped_planks_engraving");
         engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.NATURAL_WARPED_PLANKS, "natural_warped_planks_engraving");
         engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.PEGGED_WARPED_PLANKS, "pegged_warped_planks_engraving");
-        engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.STACKED_STRIPPED_WARPED_STEM, "stacked_stripped_warped_stem_engraving");
-        engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.STACKED_STRIPPED_WARPED_STEM_TOP, "stacked_stripped_warped_stem_top_engraving");
         engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.WARPED_PLANKS_PANEL, "warped_planks_panel_engraving");
         engraveOne(exporter, Blocks.WARPED_PLANKS, ModBlocks.WHIRLWIND_WARPED_PLANKS, "whirlwind_warped_planks_engraving");
 
@@ -4079,12 +4077,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Blocks.BONE_BLOCK
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_BORDERED.get(), "bone_block_bordered_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CHISELED.get(), "bone_block_chiseled_engraving");
-        engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CONNECTING_END.get(), "bone_block_connecting_end_engraving");
+
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CONNECTING_SIDE.get(), "bone_block_connecting_side_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_DECORATED_BORDERED.get(), "bone_block_decorated_bordered_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_INVERTED_TILES.get(), "bone_block_inverted_tiles_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_PATTERNED.get(), "bone_block_patterned_engraving");
-        engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_PILLAR_END.get(), "bone_block_pillar_end_engraving");
+
 
         // Blocks.CALCITE
         engraveOne(exporter, Blocks.CALCITE, ModBlocks.CALCITE_CUT_POLISHED.get(), "calcite_cut_polished_engraving");
@@ -4117,7 +4115,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_COMPACTED.get(), "coal_block_compacted_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_OVALS.get(), "coal_block_ovals_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_PATTERN.get(), "coal_block_pattern_engraving");
-        engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_PILLAR_END.get(), "coal_block_pillar_end_engraving");
+
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_ROTATED_BRICKS.get(), "coal_block_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_SMALL_TILES.get(), "coal_block_small_tiles_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, ModBlocks.COAL_BLOCK_STRIPES.get(), "coal_block_stripes_engraving");
@@ -4129,7 +4127,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_BRICK_PAVING.get(), "cobbled_deepslate_brick_paving_engraving");
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_LARGE_TILES.get(), "cobbled_deepslate_large_tiles_engraving");
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_PAVING.get(), "cobbled_deepslate_paving_engraving");
-        engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_PILLAR_END.get(), "cobbled_deepslate_pillar_end_engraving");
+
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_PULVERIZED.get(), "cobbled_deepslate_pulverized_engraving");
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_ROTATED_BRICKS.get(), "cobbled_deepslate_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.COBBLED_DEEPSLATE, ModBlocks.COBBLED_DEEPSLATE_SMALL_TILES.get(), "cobbled_deepslate_small_tiles_engraving");
@@ -4147,7 +4145,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_DENTED.get(), "cobblestone_dented_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_INVERTED_DENTED.get(), "cobblestone_inverted_dented_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_PAVING.get(), "cobblestone_paving_engraving");
-        engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_PILLAR_END.get(), "cobblestone_pillar_end_engraving");
+
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_PULVERIZED.get(), "cobblestone_pulverized_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_ROTATED_BRICKS.get(), "cobblestone_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, ModBlocks.COBBLESTONE_SMALL_TILES.get(), "cobblestone_small_tiles_engraving");
@@ -4336,7 +4334,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_INVERTED_TILES.get(), "lapis_block_inverted_tiles_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_MOSAIC.get(), "lapis_block_mosaic_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_PATTERN.get(), "lapis_block_pattern_engraving");
-        engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_PILLAR_END.get(), "lapis_block_pillar_end_engraving");
+
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_POLISHED.get(), "lapis_block_polished_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_SCALES.get(), "lapis_block_scales_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, ModBlocks.LAPIS_BLOCK_SMALL_TILES.get(), "lapis_block_small_tiles_engraving");
@@ -4386,7 +4384,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_BLOCK_DIAGONAL_TILES.get(), "netherite_block_diagonal_tiles_engraving");
         engraveOne(exporter, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_BLOCK_INDENTED.get(), "netherite_block_indented_engraving");
         engraveOne(exporter, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_BLOCK_PATTERNED.get(), "netherite_block_patterned_engraving");
-        engraveOne(exporter, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_BLOCK_PILLAR_END.get(), "netherite_block_pillar_end_engraving");
+
         engraveOne(exporter, Blocks.NETHERITE_BLOCK, ModBlocks.NETHERITE_BLOCK_SMALL_TILES.get(), "netherite_block_small_tiles_engraving");
 
         // Blocks.NETHERRACK

@@ -15,6 +15,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -36,24 +37,36 @@ public class ConnectingUnbakedGeometry implements IUnbakedGeometry<ConnectingUnb
      * only the single tile rather than the full CTM atlas.
      */
     private final Map<String, ResourceLocation> isolatedTexturePaths;
-    /** Atlas layout controlling tile dimensions and mask→tile mapping. */
+    /** Default atlas layout (from the top-level "layout" key). */
     private final CtmLayout layout;
+    /**
+     * Per-texture-variable layout overrides (from per-texture {"layout":…,"rules":[…]} syntax).
+     * Sprites not listed here use {@link #layout} as the default.
+     */
+    private final Map<String, CtmLayout> layoutsByTexVar;
 
     public ConnectingUnbakedGeometry(BlockModel baseModel, Map<String, ConnectionRule> rulesByTexVar) {
-        this(baseModel, rulesByTexVar, Collections.emptyMap(), CtmLayout.FULL);
+        this(baseModel, rulesByTexVar, Collections.emptyMap(), CtmLayout.FULL, Collections.emptyMap());
     }
 
     public ConnectingUnbakedGeometry(BlockModel baseModel, Map<String, ConnectionRule> rulesByTexVar,
                                      Map<String, ResourceLocation> isolatedTexturePaths) {
-        this(baseModel, rulesByTexVar, isolatedTexturePaths, CtmLayout.FULL);
+        this(baseModel, rulesByTexVar, isolatedTexturePaths, CtmLayout.FULL, Collections.emptyMap());
     }
 
     public ConnectingUnbakedGeometry(BlockModel baseModel, Map<String, ConnectionRule> rulesByTexVar,
                                      Map<String, ResourceLocation> isolatedTexturePaths, CtmLayout layout) {
+        this(baseModel, rulesByTexVar, isolatedTexturePaths, layout, Collections.emptyMap());
+    }
+
+    public ConnectingUnbakedGeometry(BlockModel baseModel, Map<String, ConnectionRule> rulesByTexVar,
+                                     Map<String, ResourceLocation> isolatedTexturePaths, CtmLayout layout,
+                                     Map<String, CtmLayout> layoutsByTexVar) {
         this.baseModel = baseModel;
         this.rulesByTexVar = rulesByTexVar;
         this.isolatedTexturePaths = isolatedTexturePaths;
         this.layout = layout;
+        this.layoutsByTexVar = layoutsByTexVar;
     }
 
     @Override
@@ -105,6 +118,17 @@ public class ConnectingUnbakedGeometry implements IUnbakedGeometry<ConnectingUnb
             }
         }
 
-        return new ConnectingBakedModel(base, spriteRules, ctmToIsolated, layout);
+        // Resolve per-texture layout overrides: texture variable name → sprite → layout
+        Map<TextureAtlasSprite, CtmLayout> spriteLayouts = new IdentityHashMap<>();
+        for (Map.Entry<String, CtmLayout> entry : layoutsByTexVar.entrySet()) {
+            String texVar = entry.getKey();
+            if (context.hasMaterial(texVar)) {
+                Material mat = context.getMaterial(texVar);
+                TextureAtlasSprite sprite = spriteGetter.apply(mat);
+                spriteLayouts.put(sprite, entry.getValue());
+            }
+        }
+
+        return new ConnectingBakedModel(base, spriteRules, ctmToIsolated, layout, spriteLayouts);
     }
 }

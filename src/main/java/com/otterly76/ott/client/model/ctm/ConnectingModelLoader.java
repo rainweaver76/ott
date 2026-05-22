@@ -43,8 +43,9 @@ public class ConnectingModelLoader implements IGeometryLoader<ConnectingUnbakedG
                 : CtmLayout.FULL;
 
         // Parse connections: either array (all textures share one rule)
-        // or object (per-texture-variable rules)
+        // or object (per-texture-variable rules, optionally with per-texture layout overrides)
         Map<String, ConnectionRule> rulesByTexVar = new HashMap<>();
+        Map<String, CtmLayout> layoutsByTexVar = new HashMap<>();
 
         if (json.has("connections")) {
             JsonElement connections = json.get("connections");
@@ -53,10 +54,20 @@ public class ConnectingModelLoader implements IGeometryLoader<ConnectingUnbakedG
                 ConnectionRule rule = parseRuleList(connections.getAsJsonArray());
                 rulesByTexVar.put("*", rule);
             } else if (connections.isJsonObject()) {
-                // Per-texture-variable rules
+                // Per-texture-variable rules; each value is either:
+                //   - array:  [...rules...]                    → use global layout
+                //   - object: {"layout":"compact","rules":[...]} → layout override for this texture
                 for (Map.Entry<String, JsonElement> entry : connections.getAsJsonObject().entrySet()) {
-                    if (entry.getValue().isJsonArray()) {
-                        rulesByTexVar.put(entry.getKey(), parseRuleList(entry.getValue().getAsJsonArray()));
+                    JsonElement val = entry.getValue();
+                    if (val.isJsonArray()) {
+                        rulesByTexVar.put(entry.getKey(), parseRuleList(val.getAsJsonArray()));
+                    } else if (val.isJsonObject()) {
+                        JsonObject texObj = val.getAsJsonObject();
+                        rulesByTexVar.put(entry.getKey(), parseRuleList(texObj.getAsJsonArray("rules")));
+                        if (texObj.has("layout")) {
+                            layoutsByTexVar.put(entry.getKey(),
+                                    CtmLayout.fromId(texObj.get("layout").getAsString()));
+                        }
                     }
                 }
             }
@@ -77,7 +88,7 @@ public class ConnectingModelLoader implements IGeometryLoader<ConnectingUnbakedG
         // Deserialize the cleaned JSON as a standard BlockModel
         BlockModel baseModel = ctx.deserialize(cleaned, BlockModel.class);
 
-        return new ConnectingUnbakedGeometry(baseModel, rulesByTexVar, isolatedTextures, layout);
+        return new ConnectingUnbakedGeometry(baseModel, rulesByTexVar, isolatedTextures, layout, layoutsByTexVar);
     }
 
     private static ConnectionRule parseRuleList(JsonArray array) {

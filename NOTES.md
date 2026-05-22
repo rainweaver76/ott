@@ -2,14 +2,20 @@ Notes:
 =====
 §
 
+add missing framed * concrete ctm
+
+add Create stone to overlay system
+find/make better marble textures
+
 add buttons to starting menu for git, discord, reddit, server host
 
-create prismarine bricks textures and modifiers
-create dark prismarine textures and modifiers
-create coral/dead coral textures and modifiers
-create planks (all) textures and modifiers
+create prismarine bricks overlay textures and modifiers
+create dark prismarine overlay textures and modifiers
+create coral/dead coral overlay textures and modifiers
+create planks (all) overlay textures and modifiers
+create Create stone overlay textures and modifiers
 
-create textures and modifiers for DO bricks
+create overlay textures and modifiers for DO bricks
 
 add transition textures for custom blocks
 
