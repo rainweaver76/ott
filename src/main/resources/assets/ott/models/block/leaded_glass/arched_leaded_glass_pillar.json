@@ -1,12 +1,13 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "all": "ott:block/leaded_glass/ctm/arched_leaded_glass_pillar"
+    "side": "ott:block/leaded_glass/ctm/arched_leaded_glass_pillar",
+    "top": "ott:block/leaded_glass/arched_leaded_glass_pillar"
   },
   "connections": {
-    "all": [
+    "side": [
       {
         "type": "is_same_block"
       }

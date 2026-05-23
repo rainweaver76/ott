@@ -1,16 +1,11 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column",
+  "parent": "ott:block/ctm/ctm_cube_column_planks_top",
   "textures": {
-    "end": "ott:block/spruce_planks/ctm/spruce_window_tiles",
-    "side": "ott:block/spruce_planks/ctm/spruce_window_tiles_side"
+    "side": "ott:block/spruce_planks/ctm/spruce_window_tiles",
+    "up": "minecraft:block/spruce_planks"
   },
   "connections": {
-    "end": [
-      {
-        "type": "is_same_block"
-      }
-    ],
     "side": [
       {
         "type": "is_same_block"

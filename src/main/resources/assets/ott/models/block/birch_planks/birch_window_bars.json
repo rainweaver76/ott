@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "simple",
+  "parent": "ott:block/ctm/ctm_cube_column_simple",
+  "textures": {
+    "side": "ott:block/birch_planks/ctm/birch_window_bars",
+    "top": "minecraft:block/birch_planks"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

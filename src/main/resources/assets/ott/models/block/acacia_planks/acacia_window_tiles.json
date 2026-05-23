@@ -1,16 +1,11 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column",
+  "parent": "ott:block/ctm/ctm_cube_column_planks_top",
   "textures": {
-    "end": "ott:block/acacia_planks/ctm/acacia_window_tiles",
-    "side": "ott:block/acacia_planks/ctm/acacia_window_tiles_side"
+    "side": "ott:block/acacia_planks/ctm/acacia_window_tiles",
+    "up": "minecraft:block/acacia_planks"
   },
   "connections": {
-    "end": [
-      {
-        "type": "is_same_block"
-      }
-    ],
     "side": [
       {
         "type": "is_same_block"

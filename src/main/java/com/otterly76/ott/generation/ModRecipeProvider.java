@@ -4078,7 +4078,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_BORDERED.get(), "bone_block_bordered_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CHISELED.get(), "bone_block_chiseled_engraving");
 
-        engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CONNECTING_SIDE.get(), "bone_block_connecting_side_engraving");
+        engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_CONNECTING.get(), "bone_block_connecting_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_DECORATED_BORDERED.get(), "bone_block_decorated_bordered_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_INVERTED_TILES.get(), "bone_block_inverted_tiles_engraving");
         engraveOne(exporter, Blocks.BONE_BLOCK, ModBlocks.BONE_BLOCK_PATTERNED.get(), "bone_block_patterned_engraving");
