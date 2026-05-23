@@ -1,18 +1,27 @@
 {
   "loader": "ott:overlay",
   "textures": {
-    "all": "ott:block/overlays/packed_ice_overflow",
+    "all": "ott:block/overlays/terracotta_overflow",
     "particle": "#all"
   },
   "connections": {
-    "type": "and",
+    "type": "or",
     "predicates": [
       {
-        "type": "match_block",
-        "block": "minecraft:packed_ice"
+        "type": "match_block_in_front",
+        "block": "terracotta"
       },
       {
-        "type": "is_face_visible"
+        "type": "and",
+        "predicates": [
+          {
+            "type": "match_block",
+            "block": "terracotta"
+          },
+          {
+            "type": "is_face_visible"
+          }
+        ]
       }
     ]
   },

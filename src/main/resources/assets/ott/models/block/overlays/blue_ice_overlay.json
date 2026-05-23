@@ -1,7 +1,7 @@
 {
   "loader": "ott:overlay",
   "textures": {
-    "all": "ott:block/overlays/ice_overflow",
+    "all": "ott:block/overlays/blue_ice_overflow",
     "particle": "#all"
   },
   "connections": {

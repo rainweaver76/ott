@@ -1555,17 +1555,17 @@ public class ModBlocks {
 
     // ── Black Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_BLACK_STAINED_GLASS_PILLAR =
-        register("arched_black_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("arched_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BLACK_STAINED_GLASS =
-        register("fancy_black_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("fancy_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_BLACK_STAINED_GLASS =
-        register("ornate_black_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("ornate_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_BLACK_STAINED_GLASS =
-        register("raster_black_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("raster_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BLACK_STAINED_GLASS =
-        register("small_black_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("small_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_BLACK_STAINED_GLASS =
-        register("tiled_black_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+        register("tiled_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
 
     // ── Black Terracotta ──
     public static final DeferredBlock<Block> BLACK_TERRACOTTA_COLUMN =
@@ -1647,17 +1647,17 @@ public class ModBlocks {
 
     // ── Blue Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_BLUE_STAINED_GLASS_PILLAR =
-        register("arched_blue_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("arched_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BLUE_STAINED_GLASS =
-        register("fancy_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("fancy_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_BLUE_STAINED_GLASS =
-        register("ornate_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("ornate_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_BLUE_STAINED_GLASS =
-        register("raster_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("raster_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BLUE_STAINED_GLASS =
-        register("small_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("small_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_BLUE_STAINED_GLASS =
-        register("tiled_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+        register("tiled_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
 
     // ── Blue Terracotta ──
     public static final DeferredBlock<Block> BLUE_TERRACOTTA_COLUMN =
@@ -1773,17 +1773,17 @@ public class ModBlocks {
 
     // ── Brown Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_BROWN_STAINED_GLASS_PILLAR =
-        register("arched_brown_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("arched_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BROWN_STAINED_GLASS =
-        register("fancy_brown_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("fancy_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_BROWN_STAINED_GLASS =
-        register("ornate_brown_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("ornate_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_BROWN_STAINED_GLASS =
-        register("raster_brown_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("raster_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BROWN_STAINED_GLASS =
-        register("small_brown_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("small_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_BROWN_STAINED_GLASS =
-        register("tiled_brown_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+        register("tiled_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
 
     // ── Brown Terracotta ──
     public static final DeferredBlock<Block> BROWN_TERRACOTTA_COLUMN =
@@ -2037,17 +2037,17 @@ public class ModBlocks {
 
     // ── Cyan Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_CYAN_STAINED_GLASS_PILLAR =
-        register("arched_cyan_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("arched_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_CYAN_STAINED_GLASS =
-        register("fancy_cyan_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("fancy_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_CYAN_STAINED_GLASS =
-        register("ornate_cyan_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("ornate_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_CYAN_STAINED_GLASS =
-        register("raster_cyan_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("raster_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_CYAN_STAINED_GLASS =
-        register("small_cyan_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("small_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_CYAN_STAINED_GLASS =
-        register("tiled_cyan_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+        register("tiled_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
 
     // ── Cyan Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_CYAN_TERRACOTTA =
@@ -2385,17 +2385,17 @@ public class ModBlocks {
 
     // ── Gray Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_GRAY_STAINED_GLASS_PILLAR =
-        register("arched_gray_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("arched_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_GRAY_STAINED_GLASS =
-        register("fancy_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("fancy_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_GRAY_STAINED_GLASS =
-        register("ornate_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("ornate_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_GRAY_STAINED_GLASS =
-        register("raster_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("raster_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_GRAY_STAINED_GLASS =
-        register("small_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("small_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_GRAY_STAINED_GLASS =
-        register("tiled_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+        register("tiled_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
 
     // ── Gray Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_GRAY_TERRACOTTA =
@@ -2443,17 +2443,17 @@ public class ModBlocks {
 
     // ── Green Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_GREEN_STAINED_GLASS_PILLAR =
-        register("arched_green_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("arched_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_GREEN_STAINED_GLASS =
-        register("fancy_green_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("fancy_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_GREEN_STAINED_GLASS =
-        register("ornate_green_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("ornate_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_GREEN_STAINED_GLASS =
-        register("raster_green_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("raster_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_GREEN_STAINED_GLASS =
-        register("small_green_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("small_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_GREEN_STAINED_GLASS =
-        register("tiled_green_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+        register("tiled_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
 
     // ── Green Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_GREEN_TERRACOTTA =
@@ -2595,17 +2595,17 @@ public class ModBlocks {
 
     // ── Light Blue Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-        register("arched_light_blue_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("arched_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIGHT_BLUE_STAINED_GLASS =
-        register("fancy_light_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("fancy_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_LIGHT_BLUE_STAINED_GLASS =
-        register("ornate_light_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("ornate_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_LIGHT_BLUE_STAINED_GLASS =
-        register("raster_light_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("raster_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIGHT_BLUE_STAINED_GLASS =
-        register("small_light_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("small_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_LIGHT_BLUE_STAINED_GLASS =
-        register("tiled_light_blue_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+        register("tiled_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
 
     // ── Light Blue Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_LIGHT_BLUE_TERRACOTTA =
@@ -2651,17 +2651,17 @@ public class ModBlocks {
 
     // ── Light Gray Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-        register("arched_light_gray_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("arched_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIGHT_GRAY_STAINED_GLASS =
-        register("fancy_light_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("fancy_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_LIGHT_GRAY_STAINED_GLASS =
-        register("ornate_light_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("ornate_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_LIGHT_GRAY_STAINED_GLASS =
-        register("raster_light_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("raster_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIGHT_GRAY_STAINED_GLASS =
-        register("small_light_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("small_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_LIGHT_GRAY_STAINED_GLASS =
-        register("tiled_light_gray_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+        register("tiled_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
 
     // ── Light Gray Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_LIGHT_GRAY_TERRACOTTA =
@@ -2709,17 +2709,17 @@ public class ModBlocks {
 
     // ── Lime Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_LIME_STAINED_GLASS_PILLAR =
-        register("arched_lime_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("arched_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIME_STAINED_GLASS =
-        register("fancy_lime_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("fancy_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_LIME_STAINED_GLASS =
-        register("ornate_lime_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("ornate_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_LIME_STAINED_GLASS =
-        register("raster_lime_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("raster_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIME_STAINED_GLASS =
-        register("small_lime_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("small_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_LIME_STAINED_GLASS =
-        register("tiled_lime_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+        register("tiled_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
 
     // ── Lime Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_LIME_TERRACOTTA =
@@ -2801,17 +2801,17 @@ public class ModBlocks {
 
     // ── Magenta Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_MAGENTA_STAINED_GLASS_PILLAR =
-        register("arched_magenta_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("arched_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_MAGENTA_STAINED_GLASS =
-        register("fancy_magenta_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("fancy_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_MAGENTA_STAINED_GLASS =
-        register("ornate_magenta_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("ornate_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_MAGENTA_STAINED_GLASS =
-        register("raster_magenta_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("raster_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_MAGENTA_STAINED_GLASS =
-        register("small_magenta_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("small_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_MAGENTA_STAINED_GLASS =
-        register("tiled_magenta_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+        register("tiled_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
 
     // ── Magenta Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_MAGENTA_TERRACOTTA =
@@ -3187,17 +3187,17 @@ public class ModBlocks {
 
     // ── Orange Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_ORANGE_STAINED_GLASS_PILLAR =
-        register("arched_orange_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("arched_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_ORANGE_STAINED_GLASS =
-        register("fancy_orange_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("fancy_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_ORANGE_STAINED_GLASS =
-        register("ornate_orange_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("ornate_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_ORANGE_STAINED_GLASS =
-        register("raster_orange_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("raster_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_ORANGE_STAINED_GLASS =
-        register("small_orange_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("small_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_ORANGE_STAINED_GLASS =
-        register("tiled_orange_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+        register("tiled_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
 
     // ── Orange Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_ORANGE_TERRACOTTA =
@@ -3315,17 +3315,17 @@ public class ModBlocks {
 
     // ── Pink Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_PINK_STAINED_GLASS_PILLAR =
-        register("arched_pink_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("arched_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_PINK_STAINED_GLASS =
-        register("fancy_pink_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("fancy_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_PINK_STAINED_GLASS =
-        register("ornate_pink_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("ornate_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_PINK_STAINED_GLASS =
-        register("raster_pink_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("raster_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_PINK_STAINED_GLASS =
-        register("small_pink_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("small_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_PINK_STAINED_GLASS =
-        register("tiled_pink_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+        register("tiled_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
 
     // ── Pink Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_PINK_TERRACOTTA =
@@ -3407,17 +3407,17 @@ public class ModBlocks {
 
     // ── Purple Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_PURPLE_STAINED_GLASS_PILLAR =
-        register("arched_purple_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("arched_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_PURPLE_STAINED_GLASS =
-        register("fancy_purple_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("fancy_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_PURPLE_STAINED_GLASS =
-        register("ornate_purple_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("ornate_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_PURPLE_STAINED_GLASS =
-        register("raster_purple_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("raster_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_PURPLE_STAINED_GLASS =
-        register("small_purple_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("small_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_PURPLE_STAINED_GLASS =
-        register("tiled_purple_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+        register("tiled_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
 
     // ── Purple Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_PURPLE_TERRACOTTA =
@@ -3737,17 +3737,17 @@ public class ModBlocks {
 
     // ── Red Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_RED_STAINED_GLASS_PILLAR =
-        register("arched_red_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("arched_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_RED_STAINED_GLASS =
-        register("fancy_red_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("fancy_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_RED_STAINED_GLASS =
-        register("ornate_red_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("ornate_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_RED_STAINED_GLASS =
-        register("raster_red_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("raster_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_RED_STAINED_GLASS =
-        register("small_red_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("small_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_RED_STAINED_GLASS =
-        register("tiled_red_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+        register("tiled_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
 
     // ── Red Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_RED_TERRACOTTA =
@@ -3985,17 +3985,17 @@ public static final DeferredBlock<Block> WARPED_PLANKS_PANEL =
 
     // ── White Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_WHITE_STAINED_GLASS_PILLAR =
-        register("arched_white_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("arched_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_WHITE_STAINED_GLASS =
-        register("fancy_white_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("fancy_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_WHITE_STAINED_GLASS =
-        register("ornate_white_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("ornate_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_WHITE_STAINED_GLASS =
-        register("raster_white_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("raster_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_WHITE_STAINED_GLASS =
-        register("small_white_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("small_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_WHITE_STAINED_GLASS =
-        register("tiled_white_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+        register("tiled_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
 
     // ── White Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_WHITE_TERRACOTTA =
@@ -4039,17 +4039,17 @@ public static final DeferredBlock<Block> WARPED_PLANKS_PANEL =
 
     // ── Yellow Stained Glass ──
     public static final DeferredBlock<Block> ARCHED_YELLOW_STAINED_GLASS_PILLAR =
-        register("arched_yellow_stained_glass_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("arched_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_YELLOW_STAINED_GLASS =
-        register("fancy_yellow_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("fancy_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORNATE_YELLOW_STAINED_GLASS =
-        register("ornate_yellow_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("ornate_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> RASTER_YELLOW_STAINED_GLASS =
-        register("raster_yellow_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("raster_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_YELLOW_STAINED_GLASS =
-        register("small_yellow_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("small_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> TILED_YELLOW_STAINED_GLASS =
-        register("tiled_yellow_stained_glass", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+        register("tiled_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
 
     // ── Yellow Terracotta ──
     public static final DeferredBlock<Block> CIRCULAR_YELLOW_TERRACOTTA =
