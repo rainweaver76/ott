@@ -1,16 +1,7 @@
 {
-  "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/green_stained_glass/ctm/raster_green_stained_glass"
-  },
-  "connections": {
-    "all": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "all": "ott:block/green_stained_glass/raster_green_stained_glass"
   },
   "render_type": "minecraft:translucent"
 }

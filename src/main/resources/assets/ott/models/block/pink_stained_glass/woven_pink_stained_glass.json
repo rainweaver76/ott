@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/pink_stained_glass/woven_pink_stained_glass"
+  },
+  "render_type": "minecraft:translucent"
+}

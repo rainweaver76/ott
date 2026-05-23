@@ -2582,11 +2582,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Black Stained Glass
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.ARCHED_BLACK_STAINED_GLASS_PILLAR, "arched_black_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.CIRCULAR_BLACK_STAINED_GLASS, "circular_black_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.FANCY_BLACK_STAINED_GLASS_PILLAR, "fancy_black_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.ORNATE_BLACK_STAINED_GLASS_PILLAR, "ornate_black_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.RASTER_BLACK_STAINED_GLASS_PILLAR, "raster_black_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS, "small_black_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.TILED_BLACK_STAINED_GLASS_PILLAR, "tiled_black_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.BLACK_LEADED_STAINED_GLASS, "black_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.FANCY_BLACK_STAINED_GLASS, "fancy_black_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS, "large_diamond_black_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.ORNATE_BLACK_STAINED_GLASS, "ornate_black_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.RASTER_BLACK_STAINED_GLASS, "raster_black_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.SMALL_BLACK_STAINED_GLASS, "small_black_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.SQUARE_BLACK_STAINED_GLASS, "square_black_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.TILED_BLACK_STAINED_GLASS, "tiled_black_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_BLACK_STAINED_GLASS, "vertical_striped_black_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLACK_STAINED_GLASS, ModBlocks.WOVEN_BLACK_STAINED_GLASS, "woven_black_stained_glass_engraving");
 
         // Black Terracotta
         engraveOne(exporter, Blocks.BLACK_TERRACOTTA, ModBlocks.BLACK_TERRACOTTA_COLUMN, "black_terracotta_column_engraving");
@@ -2633,11 +2644,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Blue Stained Glass
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.ARCHED_BLUE_STAINED_GLASS_PILLAR, "arched_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.CIRCULAR_BLUE_STAINED_GLASS, "circular_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.FANCY_BLUE_STAINED_GLASS_PILLAR, "fancy_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.ORNATE_BLUE_STAINED_GLASS_PILLAR, "ornate_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.RASTER_BLUE_STAINED_GLASS_PILLAR, "raster_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS, "small_blue_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.TILED_BLUE_STAINED_GLASS_PILLAR, "tiled_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.BLUE_LEADED_STAINED_GLASS, "blue_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.FANCY_BLUE_STAINED_GLASS, "fancy_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_BLUE_STAINED_GLASS, "large_diamond_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.ORNATE_BLUE_STAINED_GLASS, "ornate_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.RASTER_BLUE_STAINED_GLASS, "raster_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.SMALL_BLUE_STAINED_GLASS, "small_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.SQUARE_BLUE_STAINED_GLASS, "square_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.TILED_BLUE_STAINED_GLASS, "tiled_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_BLUE_STAINED_GLASS, "vertical_striped_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BLUE_STAINED_GLASS, ModBlocks.WOVEN_BLUE_STAINED_GLASS, "woven_blue_stained_glass_engraving");
 
         // Blue Terracotta
         engraveOne(exporter, Blocks.BLUE_TERRACOTTA, ModBlocks.BLUE_TERRACOTTA_COLUMN, "blue_terracotta_column_engraving");
@@ -2702,11 +2724,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Brown Stained Glass
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.ARCHED_BROWN_STAINED_GLASS_PILLAR, "arched_brown_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.CIRCULAR_BROWN_STAINED_GLASS, "circular_brown_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.FANCY_BROWN_STAINED_GLASS_PILLAR, "fancy_brown_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.ORNATE_BROWN_STAINED_GLASS_PILLAR, "ornate_brown_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.RASTER_BROWN_STAINED_GLASS_PILLAR, "raster_brown_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS, "small_brown_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.TILED_BROWN_STAINED_GLASS_PILLAR, "tiled_brown_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.BROWN_LEADED_STAINED_GLASS, "brown_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.FANCY_BROWN_STAINED_GLASS, "fancy_brown_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_BROWN_STAINED_GLASS, "large_diamond_brown_stained_glass_engraving");
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.ORNATE_BROWN_STAINED_GLASS, "ornate_brown_stained_glass_engraving");
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.RASTER_BROWN_STAINED_GLASS, "raster_brown_stained_glass_engraving");
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.SMALL_BROWN_STAINED_GLASS, "small_brown_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.SQUARE_BROWN_STAINED_GLASS, "square_brown_stained_glass_engraving");
         engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.TILED_BROWN_STAINED_GLASS, "tiled_brown_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_BROWN_STAINED_GLASS, "vertical_striped_brown_stained_glass_engraving");
+        engraveOne(exporter, Blocks.BROWN_STAINED_GLASS, ModBlocks.WOVEN_BROWN_STAINED_GLASS, "woven_brown_stained_glass_engraving");
 
         // Brown Terracotta
         engraveOne(exporter, Blocks.BROWN_TERRACOTTA, ModBlocks.BROWN_TERRACOTTA_COLUMN, "brown_terracotta_column_engraving");
@@ -2845,11 +2878,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Cyan Stained Glass
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.ARCHED_CYAN_STAINED_GLASS_PILLAR, "arched_cyan_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.CIRCULAR_CYAN_STAINED_GLASS, "circular_cyan_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.FANCY_CYAN_STAINED_GLASS_PILLAR, "fancy_cyan_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.ORNATE_CYAN_STAINED_GLASS_PILLAR, "ornate_cyan_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.RASTER_CYAN_STAINED_GLASS_PILLAR, "raster_cyan_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS, "small_cyan_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.TILED_CYAN_STAINED_GLASS_PILLAR, "tiled_cyan_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.CYAN_LEADED_STAINED_GLASS, "cyan_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.FANCY_CYAN_STAINED_GLASS, "fancy_cyan_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_CYAN_STAINED_GLASS, "large_diamond_cyan_stained_glass_engraving");
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.ORNATE_CYAN_STAINED_GLASS, "ornate_cyan_stained_glass_engraving");
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.RASTER_CYAN_STAINED_GLASS, "raster_cyan_stained_glass_engraving");
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.SMALL_CYAN_STAINED_GLASS, "small_cyan_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.SQUARE_CYAN_STAINED_GLASS, "square_cyan_stained_glass_engraving");
         engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.TILED_CYAN_STAINED_GLASS, "tiled_cyan_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_CYAN_STAINED_GLASS, "vertical_striped_cyan_stained_glass_engraving");
+        engraveOne(exporter, Blocks.CYAN_STAINED_GLASS, ModBlocks.WOVEN_CYAN_STAINED_GLASS, "woven_cyan_stained_glass_engraving");
 
         // Cyan Terracotta
         engraveOne(exporter, Blocks.CYAN_TERRACOTTA, ModBlocks.CIRCULAR_CYAN_TERRACOTTA, "circular_cyan_terracotta_engraving");
@@ -3032,11 +3076,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Gray Stained Glass
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.ARCHED_GRAY_STAINED_GLASS_PILLAR, "arched_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.CIRCULAR_GRAY_STAINED_GLASS, "circular_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.FANCY_GRAY_STAINED_GLASS_PILLAR, "fancy_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.ORNATE_GRAY_STAINED_GLASS_PILLAR, "ornate_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.RASTER_GRAY_STAINED_GLASS_PILLAR, "raster_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS, "small_gray_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.TILED_GRAY_STAINED_GLASS_PILLAR, "tiled_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.GRAY_LEADED_STAINED_GLASS, "gray_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.FANCY_GRAY_STAINED_GLASS, "fancy_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_GRAY_STAINED_GLASS, "large_diamond_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.ORNATE_GRAY_STAINED_GLASS, "ornate_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.RASTER_GRAY_STAINED_GLASS, "raster_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.SMALL_GRAY_STAINED_GLASS, "small_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.SQUARE_GRAY_STAINED_GLASS, "square_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.TILED_GRAY_STAINED_GLASS, "tiled_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_GRAY_STAINED_GLASS, "vertical_striped_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GRAY_STAINED_GLASS, ModBlocks.WOVEN_GRAY_STAINED_GLASS, "woven_gray_stained_glass_engraving");
 
         // Gray Terracotta
         engraveOne(exporter, Blocks.GRAY_TERRACOTTA, ModBlocks.CIRCULAR_GRAY_TERRACOTTA, "circular_gray_terracotta_engraving");
@@ -3065,11 +3120,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Green Stained Glass
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.ARCHED_GREEN_STAINED_GLASS_PILLAR, "arched_green_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.CIRCULAR_GREEN_STAINED_GLASS, "circular_green_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.FANCY_GREEN_STAINED_GLASS_PILLAR, "fancy_green_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.ORNATE_GREEN_STAINED_GLASS_PILLAR, "ornate_green_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.RASTER_GREEN_STAINED_GLASS_PILLAR, "raster_green_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS, "small_green_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.TILED_GREEN_STAINED_GLASS_PILLAR, "tiled_green_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.GREEN_LEADED_STAINED_GLASS, "green_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.FANCY_GREEN_STAINED_GLASS, "fancy_green_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_GREEN_STAINED_GLASS, "large_diamond_green_stained_glass_engraving");
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.ORNATE_GREEN_STAINED_GLASS, "ornate_green_stained_glass_engraving");
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.RASTER_GREEN_STAINED_GLASS, "raster_green_stained_glass_engraving");
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.SMALL_GREEN_STAINED_GLASS, "small_green_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.SQUARE_GREEN_STAINED_GLASS, "square_green_stained_glass_engraving");
         engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.TILED_GREEN_STAINED_GLASS, "tiled_green_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS, "vertical_striped_green_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GREEN_STAINED_GLASS, ModBlocks.WOVEN_GREEN_STAINED_GLASS, "woven_green_stained_glass_engraving");
 
         // Green Terracotta
         engraveOne(exporter, Blocks.GREEN_TERRACOTTA, ModBlocks.CIRCULAR_GREEN_TERRACOTTA, "circular_green_terracotta_engraving");
@@ -3134,7 +3200,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Leaded Glass
         engraveOne(exporter, Blocks.GLASS, ModBlocks.ARCHED_LEADED_GLASS_PILLAR, "arched_leaded_glass_pillar_engraving");
-        engraveOne(exporter, Blocks.GLASS, ModBlocks.ORNATE_LEADED_GLASS, "ornate_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.CIRCULAR_LEADED_STAINED_GLASS, "circular_leaded_stained_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS, "fancy_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS_PILLAR, "fancy_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS, "small_diamond_leaded_glass_engraving");
 
@@ -3149,11 +3218,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Light Blue Stained Glass
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR, "arched_light_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.CIRCULAR_LIGHT_BLUE_STAINED_GLASS, "circular_light_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_PILLAR, "fancy_light_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS_PILLAR, "ornate_light_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS_PILLAR, "raster_light_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS, "small_light_blue_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS_PILLAR, "tiled_light_blue_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.LIGHT_BLUE_LEADED_STAINED_GLASS, "light_blue_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS, "fancy_light_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_LIGHT_BLUE_STAINED_GLASS, "large_diamond_light_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS, "ornate_light_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS, "raster_light_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.SMALL_LIGHT_BLUE_STAINED_GLASS, "small_light_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.SQUARE_LIGHT_BLUE_STAINED_GLASS, "square_light_blue_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS, "tiled_light_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_LIGHT_BLUE_STAINED_GLASS, "vertical_striped_light_blue_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_BLUE_STAINED_GLASS, ModBlocks.WOVEN_LIGHT_BLUE_STAINED_GLASS, "woven_light_blue_stained_glass_engraving");
 
         // Light Blue Terracotta
         engraveOne(exporter, Blocks.LIGHT_BLUE_TERRACOTTA, ModBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA, "circular_light_blue_terracotta_engraving");
@@ -3181,11 +3261,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Light Gray Stained Glass
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR, "arched_light_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.CIRCULAR_LIGHT_GRAY_STAINED_GLASS, "circular_light_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_PILLAR, "fancy_light_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS_PILLAR, "ornate_light_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS_PILLAR, "raster_light_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS, "small_light_gray_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS_PILLAR, "tiled_light_gray_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.LIGHT_GRAY_LEADED_STAINED_GLASS, "light_gray_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS, "fancy_light_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_LIGHT_GRAY_STAINED_GLASS, "large_diamond_light_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS, "ornate_light_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS, "raster_light_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.SMALL_LIGHT_GRAY_STAINED_GLASS, "small_light_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.SQUARE_LIGHT_GRAY_STAINED_GLASS, "square_light_gray_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS, "tiled_light_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_LIGHT_GRAY_STAINED_GLASS, "vertical_striped_light_gray_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_STAINED_GLASS, ModBlocks.WOVEN_LIGHT_GRAY_STAINED_GLASS, "woven_light_gray_stained_glass_engraving");
 
         // Light Gray Terracotta
         engraveOne(exporter, Blocks.LIGHT_GRAY_TERRACOTTA, ModBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA, "circular_light_gray_terracotta_engraving");
@@ -3214,11 +3305,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Lime Stained Glass
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.ARCHED_LIME_STAINED_GLASS_PILLAR, "arched_lime_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.CIRCULAR_LIME_STAINED_GLASS, "circular_lime_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.FANCY_LIME_STAINED_GLASS_PILLAR, "fancy_lime_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.ORNATE_LIME_STAINED_GLASS_PILLAR, "ornate_lime_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.RASTER_LIME_STAINED_GLASS_PILLAR, "raster_lime_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.SMALL_LIME_DIAMOND_STAINED_GLASS, "small_lime_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.TILED_LIME_STAINED_GLASS_PILLAR, "tiled_lime_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.LIME_LEADED_STAINED_GLASS, "lime_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.FANCY_LIME_STAINED_GLASS, "fancy_lime_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_LIME_STAINED_GLASS, "large_diamond_lime_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.ORNATE_LIME_STAINED_GLASS, "ornate_lime_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.RASTER_LIME_STAINED_GLASS, "raster_lime_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.SMALL_LIME_STAINED_GLASS, "small_lime_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.SQUARE_LIME_STAINED_GLASS, "square_lime_stained_glass_engraving");
         engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.TILED_LIME_STAINED_GLASS, "tiled_lime_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_LIME_STAINED_GLASS, "vertical_striped_lime_stained_glass_engraving");
+        engraveOne(exporter, Blocks.LIME_STAINED_GLASS, ModBlocks.WOVEN_LIME_STAINED_GLASS, "woven_lime_stained_glass_engraving");
 
         // Lime Terracotta
         engraveOne(exporter, Blocks.LIME_TERRACOTTA, ModBlocks.CIRCULAR_LIME_TERRACOTTA, "circular_lime_terracotta_engraving");
@@ -3265,11 +3367,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Magenta Stained Glass
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_PILLAR, "arched_magenta_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.CIRCULAR_MAGENTA_STAINED_GLASS, "circular_magenta_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.FANCY_MAGENTA_STAINED_GLASS_PILLAR, "fancy_magenta_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.ORNATE_MAGENTA_STAINED_GLASS_PILLAR, "ornate_magenta_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.RASTER_MAGENTA_STAINED_GLASS_PILLAR, "raster_magenta_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.SMALL_MAGENTA_DIAMOND_STAINED_GLASS, "small_magenta_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.TILED_MAGENTA_STAINED_GLASS_PILLAR, "tiled_magenta_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.MAGENTA_LEADED_STAINED_GLASS, "magenta_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.FANCY_MAGENTA_STAINED_GLASS, "fancy_magenta_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_MAGENTA_STAINED_GLASS, "large_diamond_magenta_stained_glass_engraving");
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.ORNATE_MAGENTA_STAINED_GLASS, "ornate_magenta_stained_glass_engraving");
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.RASTER_MAGENTA_STAINED_GLASS, "raster_magenta_stained_glass_engraving");
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.SMALL_MAGENTA_STAINED_GLASS, "small_magenta_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.SQUARE_MAGENTA_STAINED_GLASS, "square_magenta_stained_glass_engraving");
         engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.TILED_MAGENTA_STAINED_GLASS, "tiled_magenta_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_MAGENTA_STAINED_GLASS, "vertical_striped_magenta_stained_glass_engraving");
+        engraveOne(exporter, Blocks.MAGENTA_STAINED_GLASS, ModBlocks.WOVEN_MAGENTA_STAINED_GLASS, "woven_magenta_stained_glass_engraving");
 
         // Magenta Terracotta
         engraveOne(exporter, Blocks.MAGENTA_TERRACOTTA, ModBlocks.CIRCULAR_MAGENTA_TERRACOTTA, "circular_magenta_terracotta_engraving");
@@ -3473,11 +3586,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Orange Stained Glass
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.ARCHED_ORANGE_STAINED_GLASS_PILLAR, "arched_orange_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.CIRCULAR_ORANGE_STAINED_GLASS, "circular_orange_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.FANCY_ORANGE_STAINED_GLASS_PILLAR, "fancy_orange_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.ORNATE_ORANGE_STAINED_GLASS_PILLAR, "ornate_orange_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.RASTER_ORANGE_STAINED_GLASS_PILLAR, "raster_orange_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.SMALL_ORANGE_DIAMOND_STAINED_GLASS, "small_orange_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.TILED_ORANGE_STAINED_GLASS_PILLAR, "tiled_orange_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.ORANGE_LEADED_STAINED_GLASS, "orange_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.FANCY_ORANGE_STAINED_GLASS, "fancy_orange_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_ORANGE_STAINED_GLASS, "large_diamond_orange_stained_glass_engraving");
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.ORNATE_ORANGE_STAINED_GLASS, "ornate_orange_stained_glass_engraving");
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.RASTER_ORANGE_STAINED_GLASS, "raster_orange_stained_glass_engraving");
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.SMALL_ORANGE_STAINED_GLASS, "small_orange_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.SQUARE_ORANGE_STAINED_GLASS, "square_orange_stained_glass_engraving");
         engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.TILED_ORANGE_STAINED_GLASS, "tiled_orange_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_ORANGE_STAINED_GLASS, "vertical_striped_orange_stained_glass_engraving");
+        engraveOne(exporter, Blocks.ORANGE_STAINED_GLASS, ModBlocks.WOVEN_ORANGE_STAINED_GLASS, "woven_orange_stained_glass_engraving");
 
         // Orange Terracotta
         engraveOne(exporter, Blocks.ORANGE_TERRACOTTA, ModBlocks.CIRCULAR_ORANGE_TERRACOTTA, "circular_orange_terracotta_engraving");
@@ -3543,11 +3667,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Pink Stained Glass
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.ARCHED_PINK_STAINED_GLASS_PILLAR, "arched_pink_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.CIRCULAR_PINK_STAINED_GLASS, "circular_pink_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.FANCY_PINK_STAINED_GLASS_PILLAR, "fancy_pink_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.ORNATE_PINK_STAINED_GLASS_PILLAR, "ornate_pink_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.RASTER_PINK_STAINED_GLASS_PILLAR, "raster_pink_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.SMALL_PINK_DIAMOND_STAINED_GLASS, "small_pink_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.TILED_PINK_STAINED_GLASS_PILLAR, "tiled_pink_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.PINK_LEADED_STAINED_GLASS, "pink_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.FANCY_PINK_STAINED_GLASS, "fancy_pink_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_PINK_STAINED_GLASS, "large_diamond_pink_stained_glass_engraving");
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.ORNATE_PINK_STAINED_GLASS, "ornate_pink_stained_glass_engraving");
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.RASTER_PINK_STAINED_GLASS, "raster_pink_stained_glass_engraving");
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.SMALL_PINK_STAINED_GLASS, "small_pink_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.SQUARE_PINK_STAINED_GLASS, "square_pink_stained_glass_engraving");
         engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.TILED_PINK_STAINED_GLASS, "tiled_pink_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_PINK_STAINED_GLASS, "vertical_striped_pink_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PINK_STAINED_GLASS, ModBlocks.WOVEN_PINK_STAINED_GLASS, "woven_pink_stained_glass_engraving");
 
         // Pink Terracotta
         engraveOne(exporter, Blocks.PINK_TERRACOTTA, ModBlocks.CIRCULAR_PINK_TERRACOTTA, "circular_pink_terracotta_engraving");
@@ -3594,11 +3729,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Purple Stained Glass
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.ARCHED_PURPLE_STAINED_GLASS_PILLAR, "arched_purple_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.CIRCULAR_PURPLE_STAINED_GLASS, "circular_purple_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.FANCY_PURPLE_STAINED_GLASS_PILLAR, "fancy_purple_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.ORNATE_PURPLE_STAINED_GLASS_PILLAR, "ornate_purple_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.RASTER_PURPLE_STAINED_GLASS_PILLAR, "raster_purple_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.SMALL_PURPLE_DIAMOND_STAINED_GLASS, "small_purple_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.TILED_PURPLE_STAINED_GLASS_PILLAR, "tiled_purple_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.PURPLE_LEADED_STAINED_GLASS, "purple_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.FANCY_PURPLE_STAINED_GLASS, "fancy_purple_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_PURPLE_STAINED_GLASS, "large_diamond_purple_stained_glass_engraving");
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.ORNATE_PURPLE_STAINED_GLASS, "ornate_purple_stained_glass_engraving");
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.RASTER_PURPLE_STAINED_GLASS, "raster_purple_stained_glass_engraving");
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.SMALL_PURPLE_STAINED_GLASS, "small_purple_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.SQUARE_PURPLE_STAINED_GLASS, "square_purple_stained_glass_engraving");
         engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.TILED_PURPLE_STAINED_GLASS, "tiled_purple_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_PURPLE_STAINED_GLASS, "vertical_striped_purple_stained_glass_engraving");
+        engraveOne(exporter, Blocks.PURPLE_STAINED_GLASS, ModBlocks.WOVEN_PURPLE_STAINED_GLASS, "woven_purple_stained_glass_engraving");
 
         // Purple Terracotta
         engraveOne(exporter, Blocks.PURPLE_TERRACOTTA, ModBlocks.CIRCULAR_PURPLE_TERRACOTTA, "circular_purple_terracotta_engraving");
@@ -3771,11 +3917,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Red Stained Glass
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.ARCHED_RED_STAINED_GLASS_PILLAR, "arched_red_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.CIRCULAR_RED_STAINED_GLASS, "circular_red_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.FANCY_RED_STAINED_GLASS_PILLAR, "fancy_red_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.ORNATE_RED_STAINED_GLASS_PILLAR, "ornate_red_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.RASTER_RED_STAINED_GLASS_PILLAR, "raster_red_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.SMALL_RED_DIAMOND_STAINED_GLASS, "small_red_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.TILED_RED_STAINED_GLASS_PILLAR, "tiled_red_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.RED_LEADED_STAINED_GLASS, "red_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.FANCY_RED_STAINED_GLASS, "fancy_red_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_RED_STAINED_GLASS, "large_diamond_red_stained_glass_engraving");
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.ORNATE_RED_STAINED_GLASS, "ornate_red_stained_glass_engraving");
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.RASTER_RED_STAINED_GLASS, "raster_red_stained_glass_engraving");
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.SMALL_RED_STAINED_GLASS, "small_red_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.SQUARE_RED_STAINED_GLASS, "square_red_stained_glass_engraving");
         engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.TILED_RED_STAINED_GLASS, "tiled_red_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_RED_STAINED_GLASS, "vertical_striped_red_stained_glass_engraving");
+        engraveOne(exporter, Blocks.RED_STAINED_GLASS, ModBlocks.WOVEN_RED_STAINED_GLASS, "woven_red_stained_glass_engraving");
 
         // Red Terracotta
         engraveOne(exporter, Blocks.RED_TERRACOTTA, ModBlocks.CIRCULAR_RED_TERRACOTTA, "circular_red_terracotta_engraving");
@@ -3906,11 +4063,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // White Stained Glass
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.ARCHED_WHITE_STAINED_GLASS_PILLAR, "arched_white_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.CIRCULAR_WHITE_STAINED_GLASS, "circular_white_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.FANCY_WHITE_STAINED_GLASS_PILLAR, "fancy_white_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.ORNATE_WHITE_STAINED_GLASS_PILLAR, "ornate_white_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.RASTER_WHITE_STAINED_GLASS_PILLAR, "raster_white_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.SMALL_WHITE_DIAMOND_STAINED_GLASS, "small_white_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.TILED_WHITE_STAINED_GLASS_PILLAR, "tiled_white_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.WHITE_LEADED_STAINED_GLASS, "white_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.FANCY_WHITE_STAINED_GLASS, "fancy_white_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_WHITE_STAINED_GLASS, "large_diamond_white_stained_glass_engraving");
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.ORNATE_WHITE_STAINED_GLASS, "ornate_white_stained_glass_engraving");
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.RASTER_WHITE_STAINED_GLASS, "raster_white_stained_glass_engraving");
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.SMALL_WHITE_STAINED_GLASS, "small_white_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.SQUARE_WHITE_STAINED_GLASS, "square_white_stained_glass_engraving");
         engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.TILED_WHITE_STAINED_GLASS, "tiled_white_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_WHITE_STAINED_GLASS, "vertical_striped_white_stained_glass_engraving");
+        engraveOne(exporter, Blocks.WHITE_STAINED_GLASS, ModBlocks.WOVEN_WHITE_STAINED_GLASS, "woven_white_stained_glass_engraving");
 
         // White Terracotta
         engraveOne(exporter, Blocks.WHITE_TERRACOTTA, ModBlocks.CIRCULAR_WHITE_TERRACOTTA, "circular_white_terracotta_engraving");
@@ -3937,11 +4105,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Yellow Stained Glass
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.ARCHED_YELLOW_STAINED_GLASS_PILLAR, "arched_yellow_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.CIRCULAR_YELLOW_STAINED_GLASS, "circular_yellow_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.FANCY_YELLOW_STAINED_GLASS_PILLAR, "fancy_yellow_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.ORNATE_YELLOW_STAINED_GLASS_PILLAR, "ornate_yellow_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.RASTER_YELLOW_STAINED_GLASS_PILLAR, "raster_yellow_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.SMALL_YELLOW_DIAMOND_STAINED_GLASS, "small_yellow_diamond_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.TILED_YELLOW_STAINED_GLASS_PILLAR, "tiled_yellow_stained_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.YELLOW_LEADED_STAINED_GLASS, "yellow_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.FANCY_YELLOW_STAINED_GLASS, "fancy_yellow_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.LARGE_DIAMOND_YELLOW_STAINED_GLASS, "large_diamond_yellow_stained_glass_engraving");
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.ORNATE_YELLOW_STAINED_GLASS, "ornate_yellow_stained_glass_engraving");
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.RASTER_YELLOW_STAINED_GLASS, "raster_yellow_stained_glass_engraving");
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.SMALL_YELLOW_STAINED_GLASS, "small_yellow_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.SQUARE_YELLOW_STAINED_GLASS, "square_yellow_stained_glass_engraving");
         engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.TILED_YELLOW_STAINED_GLASS, "tiled_yellow_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.VERTICAL_STRIPED_YELLOW_STAINED_GLASS, "vertical_striped_yellow_stained_glass_engraving");
+        engraveOne(exporter, Blocks.YELLOW_STAINED_GLASS, ModBlocks.WOVEN_YELLOW_STAINED_GLASS, "woven_yellow_stained_glass_engraving");
 
         // Yellow Terracotta
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, ModBlocks.CIRCULAR_YELLOW_TERRACOTTA, "circular_yellow_terracotta_engraving");

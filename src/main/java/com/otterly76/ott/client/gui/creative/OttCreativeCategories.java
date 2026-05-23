@@ -1094,11 +1094,22 @@ public enum OttCreativeCategories {
 
         // Black Stained Glass
         output.accept(ModBlocks.ARCHED_BLACK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_BLACK_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.BLACK_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_BLACK_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_BLACK_STAINED_GLASS);
         output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_BLACK_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_BLACK_STAINED_GLASS);
 
         // Black Terracotta
         output.accept(ModBlocks.BLACK_TERRACOTTA_COLUMN);
@@ -1145,11 +1156,22 @@ public enum OttCreativeCategories {
 
         // Blue Stained Glass
         output.accept(ModBlocks.ARCHED_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.BLUE_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_BLUE_STAINED_GLASS);
 
         // Blue Terracotta
         output.accept(ModBlocks.BLUE_TERRACOTTA_COLUMN);
@@ -1214,11 +1236,22 @@ public enum OttCreativeCategories {
 
         // Brown Stained Glass
         output.accept(ModBlocks.ARCHED_BROWN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_BROWN_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.BROWN_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_BROWN_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_BROWN_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_BROWN_STAINED_GLASS);
         output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_BROWN_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_BROWN_STAINED_GLASS);
 
         // Brown Terracotta
         output.accept(ModBlocks.BROWN_TERRACOTTA_COLUMN);
@@ -1357,11 +1390,22 @@ public enum OttCreativeCategories {
 
         // Cyan Stained Glass
         output.accept(ModBlocks.ARCHED_CYAN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_CYAN_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CYAN_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_CYAN_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_CYAN_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_CYAN_STAINED_GLASS);
         output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_CYAN_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_CYAN_STAINED_GLASS);
 
         // Cyan Terracotta
         output.accept(ModBlocks.CIRCULAR_CYAN_TERRACOTTA);
@@ -1544,11 +1588,22 @@ public enum OttCreativeCategories {
 
         // Gray Stained Glass
         output.accept(ModBlocks.ARCHED_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.GRAY_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_GRAY_STAINED_GLASS);
 
         // Gray Terracotta
         output.accept(ModBlocks.CIRCULAR_GRAY_TERRACOTTA);
@@ -1577,11 +1632,22 @@ public enum OttCreativeCategories {
 
         // Green Stained Glass
         output.accept(ModBlocks.ARCHED_GREEN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_GREEN_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.GREEN_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_GREEN_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_GREEN_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_GREEN_STAINED_GLASS);
         output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_GREEN_STAINED_GLASS);
 
         // Green Terracotta
         output.accept(ModBlocks.CIRCULAR_GREEN_TERRACOTTA);
@@ -1646,7 +1712,10 @@ public enum OttCreativeCategories {
 
         // Leaded Glass
         output.accept(ModBlocks.ARCHED_LEADED_GLASS_PILLAR);
-        output.accept(ModBlocks.ORNATE_LEADED_GLASS);
+        output.accept(ModBlocks.CIRCULAR_LEADED_STAINED_GLASS);
+        output.accept(ModBlocks.CLEAR_LEADED_GLASS);
+        output.accept(ModBlocks.FANCY_LEADED_GLASS);
+        output.accept(ModBlocks.FANCY_LEADED_GLASS_PILLAR);
         output.accept(ModBlocks.RASTER_LEADED_GLASS);
         output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
 
@@ -1661,11 +1730,22 @@ public enum OttCreativeCategories {
 
         // Light Blue Stained Glass
         output.accept(ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_LIGHT_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.LIGHT_BLUE_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_LIGHT_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_LIGHT_BLUE_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_LIGHT_BLUE_STAINED_GLASS);
 
         // Light Blue Terracotta
         output.accept(ModBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA);
@@ -1693,11 +1773,22 @@ public enum OttCreativeCategories {
 
         // Light Gray Stained Glass
         output.accept(ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_LIGHT_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.LIGHT_GRAY_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_LIGHT_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_LIGHT_GRAY_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_LIGHT_GRAY_STAINED_GLASS);
 
         // Light Gray Terracotta
         output.accept(ModBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA);
@@ -1726,11 +1817,22 @@ public enum OttCreativeCategories {
 
         // Lime Stained Glass
         output.accept(ModBlocks.ARCHED_LIME_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_LIME_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_LIME_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_LIME_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_LIME_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_LIME_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_LIME_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.LIME_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIME_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_LIME_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_LIME_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_LIME_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_LIME_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_LIME_STAINED_GLASS);
         output.accept(ModBlocks.TILED_LIME_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_LIME_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_LIME_STAINED_GLASS);
 
         // Lime Terracotta
         output.accept(ModBlocks.CIRCULAR_LIME_TERRACOTTA);
@@ -1777,11 +1879,22 @@ public enum OttCreativeCategories {
 
         // Magenta Stained Glass
         output.accept(ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_MAGENTA_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_MAGENTA_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_MAGENTA_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_MAGENTA_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_MAGENTA_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_MAGENTA_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.MAGENTA_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_MAGENTA_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_MAGENTA_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_MAGENTA_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_MAGENTA_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_MAGENTA_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_MAGENTA_STAINED_GLASS);
         output.accept(ModBlocks.TILED_MAGENTA_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_MAGENTA_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_MAGENTA_STAINED_GLASS);
 
         // Magenta Terracotta
         output.accept(ModBlocks.CIRCULAR_MAGENTA_TERRACOTTA);
@@ -1985,11 +2098,22 @@ public enum OttCreativeCategories {
 
         // Orange Stained Glass
         output.accept(ModBlocks.ARCHED_ORANGE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_ORANGE_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_ORANGE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_ORANGE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_ORANGE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_ORANGE_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_ORANGE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORANGE_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_ORANGE_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_ORANGE_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.TILED_ORANGE_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_ORANGE_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_ORANGE_STAINED_GLASS);
 
         // Orange Terracotta
         output.accept(ModBlocks.CIRCULAR_ORANGE_TERRACOTTA);
@@ -2055,11 +2179,22 @@ public enum OttCreativeCategories {
 
         // Pink Stained Glass
         output.accept(ModBlocks.ARCHED_PINK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_PINK_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_PINK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_PINK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_PINK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_PINK_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_PINK_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.PINK_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_PINK_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_PINK_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_PINK_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_PINK_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_PINK_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_PINK_STAINED_GLASS);
         output.accept(ModBlocks.TILED_PINK_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_PINK_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_PINK_STAINED_GLASS);
 
         // Pink Terracotta
         output.accept(ModBlocks.CIRCULAR_PINK_TERRACOTTA);
@@ -2106,11 +2241,22 @@ public enum OttCreativeCategories {
 
         // Purple Stained Glass
         output.accept(ModBlocks.ARCHED_PURPLE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_PURPLE_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_PURPLE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_PURPLE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_PURPLE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_PURPLE_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_PURPLE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.PURPLE_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_PURPLE_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_PURPLE_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_PURPLE_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_PURPLE_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_PURPLE_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_PURPLE_STAINED_GLASS);
         output.accept(ModBlocks.TILED_PURPLE_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_PURPLE_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_PURPLE_STAINED_GLASS);
 
         // Purple Terracotta
         output.accept(ModBlocks.CIRCULAR_PURPLE_TERRACOTTA);
@@ -2283,11 +2429,22 @@ public enum OttCreativeCategories {
 
         // Red Stained Glass
         output.accept(ModBlocks.ARCHED_RED_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_RED_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_RED_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_RED_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_RED_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_RED_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_RED_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RED_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_RED_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_RED_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_RED_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_RED_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_RED_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_RED_STAINED_GLASS);
         output.accept(ModBlocks.TILED_RED_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_RED_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_RED_STAINED_GLASS);
 
         // Red Terracotta
         output.accept(ModBlocks.CIRCULAR_RED_TERRACOTTA);
@@ -2418,11 +2575,22 @@ public enum OttCreativeCategories {
 
         // White Stained Glass
         output.accept(ModBlocks.ARCHED_WHITE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_WHITE_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_WHITE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_WHITE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_WHITE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_WHITE_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_WHITE_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.WHITE_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_WHITE_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_WHITE_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.TILED_WHITE_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_WHITE_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_WHITE_STAINED_GLASS);
 
         // White Terracotta
         output.accept(ModBlocks.CIRCULAR_WHITE_TERRACOTTA);
@@ -2449,11 +2617,22 @@ public enum OttCreativeCategories {
 
         // Yellow Stained Glass
         output.accept(ModBlocks.ARCHED_YELLOW_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.CIRCULAR_YELLOW_STAINED_GLASS);
+        output.accept(ModBlocks.FANCY_YELLOW_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.ORNATE_YELLOW_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_YELLOW_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_YELLOW_DIAMOND_STAINED_GLASS);
+        output.accept(ModBlocks.TILED_YELLOW_STAINED_GLASS_PILLAR);
+        output.accept(ModBlocks.YELLOW_LEADED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_YELLOW_STAINED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.ORNATE_YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.RASTER_YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.SMALL_YELLOW_STAINED_GLASS);
+        output.accept(ModBlocks.SQUARE_YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.TILED_YELLOW_STAINED_GLASS);
+        output.accept(ModBlocks.VERTICAL_STRIPED_YELLOW_STAINED_GLASS);
+        output.accept(ModBlocks.WOVEN_YELLOW_STAINED_GLASS);
 
         // Yellow Terracotta
         output.accept(ModBlocks.CIRCULAR_YELLOW_TERRACOTTA);
