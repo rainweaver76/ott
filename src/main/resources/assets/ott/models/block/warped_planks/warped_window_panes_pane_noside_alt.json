@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
     "pane": "ott:block/warped_planks/warped_window_panes",
-    "edge": "minecraft:block/warped_planks"
+    "edge": "ott:block/warped_planks/warped_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

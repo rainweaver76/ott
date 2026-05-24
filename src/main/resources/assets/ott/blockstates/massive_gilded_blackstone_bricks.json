@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/gilded_blackstonemassive_gilded_blackstone_bricks"
+      "model": "ott:block/gilded_blackstone/massive_gilded_blackstone_bricks"
     }
   }
 }

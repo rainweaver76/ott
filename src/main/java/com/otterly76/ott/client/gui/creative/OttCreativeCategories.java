@@ -2058,14 +2058,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TINY_BRICK_BORDERED_NETHER_BRICKS);
 
         // Oak Glass
-        output.accept(ModBlocks.OAK_BORDERED_GLASS);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS);
-        output.accept(ModBlocks.SQUARE_OAK_GLASS);
+        output.accept(ModBlocks.OAK_BORDERED_GLASS_CTM);
+        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
+        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
+        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
+        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_CTM);
+        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
+        output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM);
+        output.accept(ModBlocks.SQUARE_OAK_GLASS_CTM);
 
         // Oak Planks
         output.accept(ModBlocks.CORNERED_OAK_PLANKS);
@@ -3068,9 +3068,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.DIRT_TILES);
         output.accept(ModBlocks.DIRT_TILLED);
         output.accept(ModBlocks.ECHO_GLASS);
-        output.accept(ModBlocks.ECHO_GLASS_1);
-        output.accept(ModBlocks.ECHO_GLASS_2);
-        output.accept(ModBlocks.ECHO_GLASS_3);
         output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_CROSSES);
         output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_PLATING);
         output.accept(ModBlocks.EMERALD_BLOCK_CHISELED);
@@ -3625,16 +3622,24 @@ public enum OttCreativeCategories {
         // Glass/ plain blocks
         output.accept(ModBlocks.CIRCLE_OAK_GLASS);
         output.accept(ModBlocks.LEADED_GLASS);
-        output.accept(ModBlocks.OAK_BARED_GLASS);
+        output.accept(ModBlocks.OAK_BARRED_GLASS);
         output.accept(ModBlocks.OAK_BORDERED_GLASS);
+        output.accept(ModBlocks.OAK_BORDERED_GLASS_CTM);
         output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
+        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
         output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
+        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
         output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS);
+        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
         output.accept(ModBlocks.OAK_LINE_BARED_GLASS);
+        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_CTM);
         output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS);
+        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
         output.accept(ModBlocks.OAK_SNOWFLAKE_GLASS);
         output.accept(ModBlocks.OAK_WOVEN_GLASS);
+        output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM);
         output.accept(ModBlocks.SQUARE_OAK_GLASS);
+        output.accept(ModBlocks.SQUARE_OAK_GLASS_CTM);
         output.accept(ModBlocks.GLASS_OCHRE_FROGLIGHT);
         output.accept(ModBlocks.GLASS_PEARLESCENT_FROGLIGHT);
         output.accept(ModBlocks.GLASS_VERDANT_FROGLIGHT);
@@ -3920,7 +3925,7 @@ public enum OttCreativeCategories {
         // glass/ panes
         output.accept(ModBlocks.CIRCLE_OAK_GLASS_PANE);
         output.accept(ModBlocks.LEADED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_BARED_GLASS_PANE);
+        output.accept(ModBlocks.OAK_BARRED_GLASS_PANE);
         output.accept(ModBlocks.OAK_SNOWFLAKE_GLASS_PANE);
         output.accept(ModBlocks.GLASS_OCHRE_FROGLIGHT_PANE);
         output.accept(ModBlocks.GLASS_PEARLESCENT_FROGLIGHT_PANE);

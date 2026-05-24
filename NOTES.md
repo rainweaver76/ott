@@ -6,7 +6,6 @@ Notes:
 
 add missing framed * concrete ctm
 
-add Create stone to overlay system
 find/make better marble textures
 
 add buttons to starting menu for git, discord, reddit, server host
@@ -15,7 +14,6 @@ create prismarine bricks overlay textures and modifiers
 create dark prismarine overlay textures and modifiers
 create coral/dead coral overlay textures and modifiers
 create planks (all) overlay textures and modifiers
-create Create stone overlay textures and modifiers
 
 create overlay textures and modifiers for DO bricks
 
@@ -45,8 +43,6 @@ starlight lamp recipe
 
 chipped ladder models
 chipped lantern models
-
-make better mossy stone textures (quark colors were wrong)
 
 add blocks from Chipped
 - adapt existing textures to CTM
@@ -91,6 +87,7 @@ Redstone Pen
 Skin Layer 3D
 
 Crate Delight
+- make a pallet version 8 crates = 1 pallet
 Storage Delight
 
 Double Slabs
@@ -447,6 +444,9 @@ Torn Ancient Tome
 Structures Nonsense:
 =====
 REMAKE the various structures in DO style!
+
+Manannán's Mansion
+- underwater fae themed dungeon
 
 make underground villages
 

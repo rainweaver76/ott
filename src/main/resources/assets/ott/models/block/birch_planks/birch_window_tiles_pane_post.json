@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_post",
   "textures": {
     "pane": "ott:block/birch_planks/birch_window_tiles",
-    "edge": "minecraft:block/birch_planks"
+    "edge": "ott:block/birch_planks/birch_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

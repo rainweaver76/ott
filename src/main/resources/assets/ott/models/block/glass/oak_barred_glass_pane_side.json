@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": { "pane": "ott:block/oak_glass/oak_barred_glass", "edge": "ott:block/oak_glass/oak_glass_pane_edge" },
+  "render_type": "minecraft:cutout"
+}

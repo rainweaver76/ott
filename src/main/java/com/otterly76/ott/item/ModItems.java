@@ -2508,22 +2508,22 @@ public class ModItems {
         registerBlockItem("tiny_brick_bordered_nether_bricks", ModBlocks.TINY_BRICK_BORDERED_NETHER_BRICKS);
 
     // ── Oak Glass ──
-    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS =
-        registerBlockItem("oak_bordered_glass", ModBlocks.OAK_BORDERED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS =
-        registerBlockItem("oak_diamond_bordered_glass", ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS =
-        registerBlockItem("oak_horizontal_lined_glass", ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS =
-        registerBlockItem("oak_large_diamond_glass", ModBlocks.OAK_LARGE_DIAMOND_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS =
-        registerBlockItem("oak_line_bared_glass", ModBlocks.OAK_LINE_BARED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS =
-        registerBlockItem("oak_ornate_bared_glass", ModBlocks.OAK_ORNATE_BARED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS =
-        registerBlockItem("oak_woven_glass", ModBlocks.OAK_WOVEN_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS =
-        registerBlockItem("square_oak_glass", ModBlocks.SQUARE_OAK_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS_CTM =
+        registerBlockItem("oak_bordered_glass_ctm", ModBlocks.OAK_BORDERED_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_CTM =
+        registerBlockItem("oak_diamond_bordered_glass_ctm", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_CTM =
+        registerBlockItem("oak_horizontal_lined_glass_ctm", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_CTM =
+        registerBlockItem("oak_large_diamond_glass_ctm", ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_CTM =
+        registerBlockItem("oak_line_bared_glass_ctm", ModBlocks.OAK_LINE_BARED_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_CTM =
+        registerBlockItem("oak_ornate_bared_glass_ctm", ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_CTM =
+        registerBlockItem("oak_woven_glass_ctm", ModBlocks.OAK_WOVEN_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS_CTM =
+        registerBlockItem("square_oak_glass_ctm", ModBlocks.SQUARE_OAK_GLASS_CTM);
 
     // ── Oak Planks ──
     public static final DeferredHolder<Item, BlockItem> CORNERED_OAK_PLANKS =
@@ -4030,9 +4030,6 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> DIRT_TILES = registerBlockItem("dirt_tiles", ModBlocks.DIRT_TILES);
     public static final DeferredHolder<Item, BlockItem> DIRT_TILLED = registerBlockItem("dirt_tilled", ModBlocks.DIRT_TILLED);
     public static final DeferredHolder<Item, BlockItem> ECHO_GLASS = registerBlockItem("echo_glass", ModBlocks.ECHO_GLASS);
-    public static final DeferredHolder<Item, BlockItem> ECHO_GLASS_1 = registerBlockItem("echo_glass_1", ModBlocks.ECHO_GLASS_1);
-    public static final DeferredHolder<Item, BlockItem> ECHO_GLASS_2 = registerBlockItem("echo_glass_2", ModBlocks.ECHO_GLASS_2);
-    public static final DeferredHolder<Item, BlockItem> ECHO_GLASS_3 = registerBlockItem("echo_glass_3", ModBlocks.ECHO_GLASS_3);
     public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_BORDERED_CROSSES = registerBlockItem("emerald_block_bordered_crosses", ModBlocks.EMERALD_BLOCK_BORDERED_CROSSES);
     public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_BORDERED_PLATING = registerBlockItem("emerald_block_bordered_plating", ModBlocks.EMERALD_BLOCK_BORDERED_PLATING);
     public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_CHISELED = registerBlockItem("emerald_block_chiseled", ModBlocks.EMERALD_BLOCK_CHISELED);
@@ -4587,8 +4584,16 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     // ── Glass/ plain block items ──────────────────────────────────────────────────
     public static final DeferredHolder<Item, BlockItem> CIRCLE_OAK_GLASS = registerBlockItem("circle_oak_glass", ModBlocks.CIRCLE_OAK_GLASS);
     public static final DeferredHolder<Item, BlockItem> LEADED_GLASS = registerBlockItem("leaded_glass", ModBlocks.LEADED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OAK_BARED_GLASS = registerBlockItem("oak_bared_glass", ModBlocks.OAK_BARED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS = registerBlockItem("oak_barred_glass", ModBlocks.OAK_BARRED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_SNOWFLAKE_GLASS = registerBlockItem("oak_snowflake_glass", ModBlocks.OAK_SNOWFLAKE_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS = registerBlockItem("oak_bordered_glass", ModBlocks.OAK_BORDERED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS = registerBlockItem("oak_diamond_bordered_glass", ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS = registerBlockItem("oak_horizontal_lined_glass", ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS = registerBlockItem("oak_large_diamond_glass", ModBlocks.OAK_LARGE_DIAMOND_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS = registerBlockItem("oak_line_bared_glass", ModBlocks.OAK_LINE_BARED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS = registerBlockItem("oak_ornate_bared_glass", ModBlocks.OAK_ORNATE_BARED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS = registerBlockItem("oak_woven_glass", ModBlocks.OAK_WOVEN_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS = registerBlockItem("square_oak_glass", ModBlocks.SQUARE_OAK_GLASS);
     public static final DeferredHolder<Item, BlockItem> GLASS_OCHRE_FROGLIGHT = registerBlockItem("glass_ochre_froglight", ModBlocks.GLASS_OCHRE_FROGLIGHT);
     public static final DeferredHolder<Item, BlockItem> GLASS_PEARLESCENT_FROGLIGHT = registerBlockItem("glass_pearlescent_froglight", ModBlocks.GLASS_PEARLESCENT_FROGLIGHT);
     public static final DeferredHolder<Item, BlockItem> GLASS_VERDANT_FROGLIGHT = registerBlockItem("glass_verdant_froglight", ModBlocks.GLASS_VERDANT_FROGLIGHT);
@@ -4872,7 +4877,7 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> WOVEN_YELLOW_STAINED_GLASS_PANE = registerBlockItem("woven_yellow_stained_glass_pane", ModBlocks.WOVEN_YELLOW_STAINED_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> CIRCLE_OAK_GLASS_PANE = registerBlockItem("circle_oak_glass_pane", ModBlocks.CIRCLE_OAK_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> LEADED_GLASS_PANE = registerBlockItem("leaded_glass_pane", ModBlocks.LEADED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_BARED_GLASS_PANE = registerBlockItem("oak_bared_glass_pane", ModBlocks.OAK_BARED_GLASS_PANE);
+    public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_PANE = registerBlockItem("oak_barred_glass_pane", ModBlocks.OAK_BARRED_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_SNOWFLAKE_GLASS_PANE = registerBlockItem("oak_snowflake_glass_pane", ModBlocks.OAK_SNOWFLAKE_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> GLASS_OCHRE_FROGLIGHT_PANE = registerBlockItem("glass_ochre_froglight_pane", ModBlocks.GLASS_OCHRE_FROGLIGHT_PANE);
     public static final DeferredHolder<Item, BlockItem> GLASS_PEARLESCENT_FROGLIGHT_PANE = registerBlockItem("glass_pearlescent_froglight_pane", ModBlocks.GLASS_PEARLESCENT_FROGLIGHT_PANE);

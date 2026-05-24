@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "ott:block/oak_glass/oak_woven_glass"
-    }
+    "": { "model": "ott:block/glass/oak_woven_glass" }
   }
 }

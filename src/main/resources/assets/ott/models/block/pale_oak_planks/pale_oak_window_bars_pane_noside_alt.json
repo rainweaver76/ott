@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
     "pane": "ott:block/pale_oak_planks/pale_oak_window_bars",
-    "edge": "minecraft:block/pale_oak_planks"
+    "edge": "ott:block/pale_oak_planks/pale_oak_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

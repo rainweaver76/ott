@@ -3547,13 +3547,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Oak Glass
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_BORDERED_GLASS, "oak_bordered_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_BORDERED_GLASS_CTM, "oak_bordered_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_DIAMOND_BORDERED_GLASS, "oak_diamond_bordered_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM, "oak_diamond_bordered_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_HORIZONTAL_LINED_GLASS, "oak_horizontal_lined_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM, "oak_horizontal_lined_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LARGE_DIAMOND_GLASS, "oak_large_diamond_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM, "oak_large_diamond_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LINE_BARED_GLASS, "oak_line_bared_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LINE_BARED_GLASS_CTM, "oak_line_bared_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_ORNATE_BARED_GLASS, "oak_ornate_bared_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_ORNATE_BARED_GLASS_CTM, "oak_ornate_bared_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_WOVEN_GLASS, "oak_woven_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_WOVEN_GLASS_CTM, "oak_woven_glass_ctm_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SQUARE_OAK_GLASS, "square_oak_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.SQUARE_OAK_GLASS_CTM, "square_oak_glass_ctm_engraving");
 
         // Oak Planks
         engraveOne(exporter, Blocks.OAK_PLANKS, ModBlocks.CORNERED_OAK_PLANKS, "cornered_oak_planks_engraving");

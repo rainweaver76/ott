@@ -116,6 +116,14 @@
     "ott:white_marble": 140,
     "ott:black_marble": 141,
 
+    "create:scorchia": 142,
+    "create:scoria": 143,
+    "create:crimsite": 143,
+    "create:ochrum": 144,
+    "create:asurine": 145,
+    "create:veridium": 146,
+    "create:limestone": 147,
+
     "minecraft:calcite": 150,
 
     "minecraft:nether_gold_ore": 170,

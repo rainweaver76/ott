@@ -6,6 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.neoforged.fml.ModList;
 import net.minecraft.client.renderer.block.BlockModelShaper;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
@@ -207,6 +208,24 @@ public class OverlayModifierReloadListener {
 
     // ── Config file loaders ───────────────────────────────────────────────────
 
+    private void parseOverlaySection(@NotNull JsonObject section,
+                                     @NotNull Map<ResourceLocation, List<ResourceLocation>> result) {
+        for (Map.Entry<String, JsonElement> e : section.entrySet()) {
+            List<ResourceLocation> models = new ArrayList<>();
+            if (e.getValue().isJsonArray()) {
+                for (JsonElement el : e.getValue().getAsJsonArray()) {
+                    if (el.isJsonPrimitive()) {
+                        models.add(ResourceLocation.parse(el.getAsString()));
+                    }
+                }
+            }
+            if (!models.isEmpty()) {
+                result.put(ResourceLocation.parse(e.getKey()), models);
+            }
+        }
+    }
+
+
     private Map<ResourceLocation, Integer> loadTierConfigFromResource(Resource resource,
                                                                        ResourceLocation sourceLoc) {
         try (Reader reader = resource.openAsReader()) {
@@ -231,21 +250,21 @@ public class OverlayModifierReloadListener {
         }
         try (Reader reader = opt.get().openAsReader()) {
             JsonObject json     = GSON.fromJson(reader, JsonObject.class);
-            JsonObject overlays = json.getAsJsonObject("overlays");
             Map<ResourceLocation, List<ResourceLocation>> result = new HashMap<>();
-            for (Map.Entry<String, JsonElement> e : overlays.entrySet()) {
-                List<ResourceLocation> models = new ArrayList<>();
-                if (e.getValue().isJsonArray()) {
-                    for (JsonElement el : e.getValue().getAsJsonArray()) {
-                        if (el.isJsonPrimitive()) {
-                            models.add(ResourceLocation.parse(el.getAsString()));
-                        }
+
+            // Load unconditional overlays
+            parseOverlaySection(json.getAsJsonObject("overlays"), result);
+
+            // Load mod-conditional overlays
+            if (json.has("mod_conditional_overlays")) {
+                for (Map.Entry<String, JsonElement> mod : json.getAsJsonObject("mod_conditional_overlays").entrySet()) {
+                    if (ModList.get().isLoaded(mod.getKey())) {
+                        LOGGER.debug("[OTT] Loading conditional overlays for mod '{}'", mod.getKey());
+                        parseOverlaySection(mod.getValue().getAsJsonObject(), result);
                     }
                 }
-                if (!models.isEmpty()) {
-                    result.put(ResourceLocation.parse(e.getKey()), models);
-                }
             }
+
             LOGGER.debug("[OTT] overlay_config.json loaded: {} overlay entries", result.size());
             return result;
         } catch (Exception e) {

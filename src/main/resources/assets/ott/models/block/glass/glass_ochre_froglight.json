@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/glass/glass_ochre_froglight"
+    "all": "ott:block/ochre_froglight/glass_ochre_froglight"
   },
   "render_type": "minecraft:cutout"
 }

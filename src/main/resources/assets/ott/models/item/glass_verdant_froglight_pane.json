@@ -1,5 +1,7 @@
 {
-  "parent": "minecraft:block/template_glass_pane_inventory",
-  "textures": { "pane": "ott:block/glass/glass_verdant_froglight", "edge": "ott:block/glass/glass_verdant_froglight" },
-  "render_type": "minecraft:cutout"
+  "parent": "minecraft:item/glass_pane",
+  "textures": {
+    "front": "ott:block/verdant_froglight/glass_verdant_froglight",
+    "side": "ott:block/leaded_glass/leaded_glass_pane_edge"
+  }
 }

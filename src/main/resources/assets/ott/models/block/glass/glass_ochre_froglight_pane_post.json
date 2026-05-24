@@ -1,5 +1,8 @@
 {
   "parent": "minecraft:block/template_glass_pane_post",
-  "textures": { "pane": "ott:block/glass/glass_ochre_froglight", "edge": "ott:block/glass/glass_ochre_froglight" },
+  "textures": {
+    "pane": "ott:block/ochre_froglight/glass_ochre_froglight",
+    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+  },
   "render_type": "minecraft:cutout"
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
     "pane": "ott:block/jungle_planks/jungle_window_slim",
-    "edge": "minecraft:block/jungle_planks"
+    "edge": "ott:block/jungle_planks/jungle_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

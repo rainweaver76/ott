@@ -6,8 +6,8 @@
     { "when": { "south": "true" }, "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_side_alt" } },
     { "when": { "west": "true" },  "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_side_alt", "y": 90 } },
     { "when": { "north": "false" }, "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside" } },
-    { "when": { "east": "false" },  "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside", "y": 90 } },
-    { "when": { "south": "false" }, "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside_alt" } },
-    { "when": { "west": "false" },  "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside_alt", "y": 90 } }
+    { "when": { "east": "false" },  "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside_alt" } },
+    { "when": { "south": "false" }, "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside_alt", "y": 90 } },
+    { "when": { "west": "false" },  "apply": { "model": "ott:block/dark_oak_planks/dark_oak_window_diagonal_pane_noside", "y": 270 } }
   ]
 }
