@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "textures": { "pane": "ott:block/light_blue_stained_glass/small_light_blue_stained_glass", "edge": "ott:block/light_blue_stained_glass/small_light_blue_stained_glass" },
+  "render_type": "minecraft:translucent"
+}

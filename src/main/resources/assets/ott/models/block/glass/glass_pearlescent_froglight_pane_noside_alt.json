@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
+  "textures": { "pane": "ott:block/glass/glass_pearlescent_froglight", "edge": "ott:block/glass/glass_pearlescent_froglight" },
+  "render_type": "minecraft:cutout"
+}

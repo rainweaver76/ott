@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/gilded_blackston/curly_gilded_blackstone_pillar"
+      "model": "ott:block/gilded_blackstonecurly_gilded_blackstone_pillar"
     }
   }
 }

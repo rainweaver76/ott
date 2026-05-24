@@ -4,7 +4,7 @@
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
     "side": "ott:block/leaded_glass/ctm/arched_leaded_glass_pillar",
-    "top": "ott:block/leaded_glass/fancy_leaded_glass"
+    "top": "ott:block/leaded_glass/circular_leaded_stained_glass"
   },
   "connections": {
     "side": [

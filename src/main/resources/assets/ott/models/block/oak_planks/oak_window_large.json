@@ -1,17 +1,8 @@
 {
-  "loader": "ott:mosaic",
-  "layout": "vertical",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/oak_planks/ctm/oak_window_large",
-    "top": "minecraft:block/oak_planks"
-  },
-  "connections": {
-    "side": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": "ott:block/oak_planks/oak_window_large",
+    "end": "minecraft:block/oak_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }

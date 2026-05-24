@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side",
+  "textures": { "pane": "ott:block/purple_stained_glass/fancy_purple_stained_glass", "edge": "ott:block/purple_stained_glass/fancy_purple_stained_glass" },
+  "render_type": "minecraft:translucent"
+}

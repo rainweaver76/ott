@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "pane": "ott:block/oak_planks/oak_window_slim",
+    "edge": "minecraft:block/oak_planks"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "full",
+  "parent": "ott:block/ctm/ctm_cube_all",
+  "textures": {
+    "all": "ott:block/gilded_blackstone/ctm/overlapping_gilded_blackstone_tiles"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

@@ -1,17 +1,8 @@
 {
-  "loader": "ott:mosaic",
-  "layout": "vertical",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/acacia_planks/ctm/acacia_window_large",
-    "top": "minecraft:block/acacia_planks"
-  },
-  "connections": {
-    "side": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": "ott:block/acacia_planks/acacia_window_large",
+    "end": "minecraft:block/acacia_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }

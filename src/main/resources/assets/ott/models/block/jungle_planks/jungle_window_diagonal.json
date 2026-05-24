@@ -1,17 +1,8 @@
 {
-  "loader": "ott:mosaic",
-  "layout": "vertical",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/jungle_planks/ctm/jungle_window_diagonal",
-    "top": "minecraft:block/jungle_planks"
-  },
-  "connections": {
-    "side": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": "ott:block/jungle_planks/jungle_window_diagonal",
+    "end": "minecraft:block/jungle_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }

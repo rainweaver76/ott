@@ -1,16 +1,8 @@
 {
-  "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column_planks_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/mangrove_planks/ctm/mangrove_window_tiles",
-    "up": "minecraft:block/mangrove_planks"
-  },
-  "connections": {
-    "side": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": "ott:block/mangrove_planks/mangrove_window_tiles",
+    "end": "minecraft:block/mangrove_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }

@@ -1,6 +1,8 @@
 Notes:
 =====
 §
+☺
+♥
 
 add missing framed * concrete ctm
 
