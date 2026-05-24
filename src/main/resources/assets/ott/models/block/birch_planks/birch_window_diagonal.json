@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "simple",
-  "parent": "ott:block/ctm/ctm_cube_column_simple",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
     "side": "ott:block/birch_planks/ctm/birch_window_diagonal",
     "top": "minecraft:block/birch_planks"
