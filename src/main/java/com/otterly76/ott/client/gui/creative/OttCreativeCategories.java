@@ -1713,11 +1713,19 @@ public enum OttCreativeCategories {
         // Leaded Glass
         output.accept(ModBlocks.ARCHED_LEADED_GLASS_PILLAR);
         output.accept(ModBlocks.CIRCULAR_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.CLEAR_LEADED_GLASS);
+        output.accept(ModBlocks.CLEAR_LEADED_GLASS_PILLAR);
         output.accept(ModBlocks.FANCY_LEADED_GLASS);
         output.accept(ModBlocks.FANCY_LEADED_GLASS_PILLAR);
+        output.accept(ModBlocks.RASTER_LEADED_GLASS_PILLAR);
+        output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS_PILLAR);
+        output.accept(ModBlocks.CLEAR_LEADED_GLASS);
+        output.accept(ModBlocks.LARGE_DIAMOND_LEADED_GLASS);
+        output.accept(ModBlocks.LEAD_WOVEN_GLASS);
+        output.accept(ModBlocks.ORNATE_LEADED_GLASS);
         output.accept(ModBlocks.RASTER_LEADED_GLASS);
         output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
+        output.accept(ModBlocks.SQUARE_LEADED_GLASS);
+        output.accept(ModBlocks.VERTICAL_LEADED_GLASS);
 
         // Light Blue Concrete
         output.accept(ModBlocks.GRILL_LIGHT_BLUE_CONCRETE);

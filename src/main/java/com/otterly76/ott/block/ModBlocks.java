@@ -2704,16 +2704,32 @@ public class ModBlocks {
         register("arched_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> CIRCULAR_LEADED_STAINED_GLASS =
         register("circular_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> CLEAR_LEADED_GLASS =
-        register("clear_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> CLEAR_LEADED_GLASS_PILLAR =
+        register("clear_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> FANCY_LEADED_GLASS =
         register("fancy_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> FANCY_LEADED_GLASS_PILLAR =
         register("fancy_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> RASTER_LEADED_GLASS_PILLAR =
+        register("raster_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> SMALL_DIAMOND_LEADED_GLASS_PILLAR =
+        register("small_diamond_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> CLEAR_LEADED_GLASS =
+        register("clear_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> LARGE_DIAMOND_LEADED_GLASS =
+        register("large_diamond_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> LEAD_WOVEN_GLASS =
+        register("lead_woven_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> ORNATE_LEADED_GLASS =
+        register("ornate_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> RASTER_LEADED_GLASS =
         register("raster_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> SMALL_DIAMOND_LEADED_GLASS =
         register("small_diamond_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> SQUARE_LEADED_GLASS =
+        register("square_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> VERTICAL_LEADED_GLASS =
+        register("vertical_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
 
     // ── Light Blue Concrete ──
     public static final DeferredBlock<Block> GRILL_LIGHT_BLUE_CONCRETE =

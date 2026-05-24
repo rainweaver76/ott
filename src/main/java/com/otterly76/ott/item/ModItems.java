@@ -1870,16 +1870,32 @@ public class ModItems {
         registerBlockItem("arched_leaded_glass_pillar", ModBlocks.ARCHED_LEADED_GLASS_PILLAR);
     public static final DeferredHolder<Item, BlockItem> CIRCULAR_LEADED_STAINED_GLASS =
         registerBlockItem("circular_leaded_stained_glass", ModBlocks.CIRCULAR_LEADED_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS =
-        registerBlockItem("clear_leaded_glass", ModBlocks.CLEAR_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS_PILLAR =
+        registerBlockItem("clear_leaded_glass_pillar", ModBlocks.CLEAR_LEADED_GLASS_PILLAR);
     public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS =
         registerBlockItem("fancy_leaded_glass", ModBlocks.FANCY_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS_PILLAR =
         registerBlockItem("fancy_leaded_glass_pillar", ModBlocks.FANCY_LEADED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS_PILLAR =
+        registerBlockItem("raster_leaded_glass_pillar", ModBlocks.RASTER_LEADED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS_PILLAR =
+        registerBlockItem("small_diamond_leaded_glass_pillar", ModBlocks.SMALL_DIAMOND_LEADED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS =
+        registerBlockItem("clear_leaded_glass", ModBlocks.CLEAR_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> LARGE_DIAMOND_LEADED_GLASS =
+        registerBlockItem("large_diamond_leaded_glass", ModBlocks.LARGE_DIAMOND_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> LEAD_WOVEN_GLASS =
+        registerBlockItem("lead_woven_glass", ModBlocks.LEAD_WOVEN_GLASS);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LEADED_GLASS =
+        registerBlockItem("ornate_leaded_glass", ModBlocks.ORNATE_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS =
         registerBlockItem("raster_leaded_glass", ModBlocks.RASTER_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS =
         registerBlockItem("small_diamond_leaded_glass", ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> SQUARE_LEADED_GLASS =
+        registerBlockItem("square_leaded_glass", ModBlocks.SQUARE_LEADED_GLASS);
+    public static final DeferredHolder<Item, BlockItem> VERTICAL_LEADED_GLASS =
+        registerBlockItem("vertical_leaded_glass", ModBlocks.VERTICAL_LEADED_GLASS);
 
     // ── Light Blue Concrete ──
     public static final DeferredHolder<Item, BlockItem> GRILL_LIGHT_BLUE_CONCRETE =

@@ -3201,11 +3201,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Leaded Glass
         engraveOne(exporter, Blocks.GLASS, ModBlocks.ARCHED_LEADED_GLASS_PILLAR, "arched_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CIRCULAR_LEADED_STAINED_GLASS, "circular_leaded_stained_glass_engraving");
-        engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS_PILLAR, "clear_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS, "fancy_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS_PILLAR, "fancy_leaded_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS_PILLAR, "raster_leaded_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS_PILLAR, "small_diamond_leaded_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.LARGE_DIAMOND_LEADED_GLASS, "large_diamond_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.LEAD_WOVEN_GLASS, "lead_woven_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.ORNATE_LEADED_GLASS, "ornate_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS, "small_diamond_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.SQUARE_LEADED_GLASS, "square_leaded_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.VERTICAL_LEADED_GLASS, "vertical_leaded_glass_engraving");
 
         // Light Blue Concrete
         engraveOne(exporter, Blocks.LIGHT_BLUE_CONCRETE, ModBlocks.GRILL_LIGHT_BLUE_CONCRETE, "grill_light_blue_concrete_engraving");
