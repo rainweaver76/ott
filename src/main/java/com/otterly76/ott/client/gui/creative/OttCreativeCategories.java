@@ -3532,6 +3532,15 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WARPED_WINDOW_ROUNDED);
         output.accept(ModBlocks.WARPED_WINDOW_SLIM);
         output.accept(ModBlocks.WARPED_WINDOW_SWIRLING);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_BARS);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_COVERED);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_DIAGONAL);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_LARGE);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_PANES);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_ROUNDED);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_SLIM);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_SWIRLING);
+        output.accept(ModBlocks.PALE_OAK_WINDOW_TILES);
 
 
             }),

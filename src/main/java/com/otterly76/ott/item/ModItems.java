@@ -4486,6 +4486,15 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_ROUNDED = registerBlockItem("warped_window_rounded", ModBlocks.WARPED_WINDOW_ROUNDED);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM = registerBlockItem("warped_window_slim", ModBlocks.WARPED_WINDOW_SLIM);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING = registerBlockItem("warped_window_swirling", ModBlocks.WARPED_WINDOW_SWIRLING);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_BARS = registerBlockItem("pale_oak_window_bars", ModBlocks.PALE_OAK_WINDOW_BARS);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_COVERED = registerBlockItem("pale_oak_window_covered", ModBlocks.PALE_OAK_WINDOW_COVERED);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_DIAGONAL = registerBlockItem("pale_oak_window_diagonal", ModBlocks.PALE_OAK_WINDOW_DIAGONAL);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_LARGE = registerBlockItem("pale_oak_window_large", ModBlocks.PALE_OAK_WINDOW_LARGE);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_PANES = registerBlockItem("pale_oak_window_panes", ModBlocks.PALE_OAK_WINDOW_PANES);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_ROUNDED = registerBlockItem("pale_oak_window_rounded", ModBlocks.PALE_OAK_WINDOW_ROUNDED);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SLIM = registerBlockItem("pale_oak_window_slim", ModBlocks.PALE_OAK_WINDOW_SLIM);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SWIRLING = registerBlockItem("pale_oak_window_swirling", ModBlocks.PALE_OAK_WINDOW_SWIRLING);
+    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_TILES = registerBlockItem("pale_oak_window_tiles", ModBlocks.PALE_OAK_WINDOW_TILES);
 
 
 
