@@ -913,7 +913,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.TINY_BRICK_BORDERED_LAPIS_BLOCK.get(),
                 ModBlocks.ARCHED_LEADED_GLASS_PILLAR.get(),
                 ModBlocks.CLEAR_LEADED_GLASS.get(),
-                ModBlocks.FANCY_LEADED_GLASS_PILLAR.get(),
+                ModBlocks.ORNATE_LEADED_GLASS_PILLAR.get(),
                 ModBlocks.RASTER_LEADED_GLASS.get(),
                 ModBlocks.SMALL_DIAMOND_LEADED_GLASS.get(),
                 ModBlocks.GRILL_LIGHT_BLUE_CONCRETE.get(),
@@ -1906,22 +1906,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.CHERRY_PLANKS_WOVEN.get(),
         ModBlocks.CHISELED_GLASS.get(),
         ModBlocks.CLEAR_GLASS.get(),
-        ModBlocks.CLEAR_GLASS_BLACK.get(),
-        ModBlocks.CLEAR_GLASS_BLUE.get(),
-        ModBlocks.CLEAR_GLASS_BROWN.get(),
-        ModBlocks.CLEAR_GLASS_CYAN.get(),
-        ModBlocks.CLEAR_GLASS_GRAY.get(),
-        ModBlocks.CLEAR_GLASS_GREEN.get(),
-        ModBlocks.CLEAR_GLASS_LIGHT_BLUE.get(),
-        ModBlocks.CLEAR_GLASS_LIGHT_GRAY.get(),
-        ModBlocks.CLEAR_GLASS_LIME.get(),
-        ModBlocks.CLEAR_GLASS_MAGENTA.get(),
-        ModBlocks.CLEAR_GLASS_ORANGE.get(),
-        ModBlocks.CLEAR_GLASS_PINK.get(),
-        ModBlocks.CLEAR_GLASS_PURPLE.get(),
-        ModBlocks.CLEAR_GLASS_RED.get(),
-        ModBlocks.CLEAR_GLASS_WHITE.get(),
-        ModBlocks.CLEAR_GLASS_YELLOW.get(),
         ModBlocks.COAL_BLOCK_CARVED.get(),
         ModBlocks.COAL_BLOCK_CHISELED.get(),
         ModBlocks.COAL_BLOCK_CIRCLES.get(),
@@ -2626,6 +2610,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(ModBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
         pickaxeTag.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get());
+        this.tag(ModTags.Blocks.CTM_BLOCKS).add(ModBlocks.SOUL_GLASS.get());
         mcStainedGlass.add(ModBlocks.SOUL_GLASS.get());
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(ModBlocks.SOUL_GLASS_PANE.get());
         this.tag(BlockTags.IMPERMEABLE).add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get());

@@ -18,6 +18,7 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -30,11 +31,13 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(AbstractHorse.class)
 public abstract class AbstractHorseMixin {
 
+    @Unique
     private static final TagKey<Item> OTT$ZOMBIE_HORSE_FOOD =
             TagKey.create(Registries.ITEM, ResourceLocation.parse("minecraft:zombie_horse_food"));
 
     // ── isFood: zombie_horse_food tag ─────────────────────────────────────────
 
+    @SuppressWarnings("ConstantValue")
     @Inject(method = "isFood(Lnet/minecraft/world/item/ItemStack;)Z",
             at = @At("HEAD"), cancellable = true)
     private void ott$isFood(ItemStack itemStack, CallbackInfoReturnable<Boolean> cir) {
@@ -45,6 +48,7 @@ public abstract class AbstractHorseMixin {
 
     // ── finalizeSpawn: zombie jockey for ZombieHorse natural spawns ───────────
 
+    @SuppressWarnings("ConstantValue")
     @Inject(
         method = "finalizeSpawn(Lnet/minecraft/world/level/ServerLevelAccessor;Lnet/minecraft/world/DifficultyInstance;Lnet/minecraft/world/entity/MobSpawnType;Lnet/minecraft/world/entity/SpawnGroupData;)Lnet/minecraft/world/entity/SpawnGroupData;",
         at = @At("RETURN")

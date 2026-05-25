@@ -1874,8 +1874,8 @@ public class ModItems {
         registerBlockItem("clear_leaded_glass_pillar", ModBlocks.CLEAR_LEADED_GLASS_PILLAR);
     public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS =
         registerBlockItem("fancy_leaded_glass", ModBlocks.FANCY_LEADED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS_PILLAR =
-        registerBlockItem("fancy_leaded_glass_pillar", ModBlocks.FANCY_LEADED_GLASS_PILLAR);
+    public static final DeferredHolder<Item, BlockItem> ORNATE_LEADED_GLASS_PILLAR =
+        registerBlockItem("ornate_leaded_glass_pillar", ModBlocks.ORNATE_LEADED_GLASS_PILLAR);
     public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS_PILLAR =
         registerBlockItem("raster_leaded_glass_pillar", ModBlocks.RASTER_LEADED_GLASS_PILLAR);
     public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS_PILLAR =
@@ -3892,22 +3892,6 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_TILES = registerBlockItem("cherry_planks_tiles", ModBlocks.CHERRY_PLANKS_TILES);
     public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_WAVY = registerBlockItem("cherry_planks_wavy", ModBlocks.CHERRY_PLANKS_WAVY);
     public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_WOVEN = registerBlockItem("cherry_planks_woven", ModBlocks.CHERRY_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_BLACK = registerBlockItem("clear_glass_black", ModBlocks.CLEAR_GLASS_BLACK);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_BLUE = registerBlockItem("clear_glass_blue", ModBlocks.CLEAR_GLASS_BLUE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_BROWN = registerBlockItem("clear_glass_brown", ModBlocks.CLEAR_GLASS_BROWN);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_CYAN = registerBlockItem("clear_glass_cyan", ModBlocks.CLEAR_GLASS_CYAN);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_GRAY = registerBlockItem("clear_glass_gray", ModBlocks.CLEAR_GLASS_GRAY);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_GREEN = registerBlockItem("clear_glass_green", ModBlocks.CLEAR_GLASS_GREEN);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_LIGHT_BLUE = registerBlockItem("clear_glass_light_blue", ModBlocks.CLEAR_GLASS_LIGHT_BLUE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_LIGHT_GRAY = registerBlockItem("clear_glass_light_gray", ModBlocks.CLEAR_GLASS_LIGHT_GRAY);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_LIME = registerBlockItem("clear_glass_lime", ModBlocks.CLEAR_GLASS_LIME);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_MAGENTA = registerBlockItem("clear_glass_magenta", ModBlocks.CLEAR_GLASS_MAGENTA);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_ORANGE = registerBlockItem("clear_glass_orange", ModBlocks.CLEAR_GLASS_ORANGE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_PINK = registerBlockItem("clear_glass_pink", ModBlocks.CLEAR_GLASS_PINK);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_PURPLE = registerBlockItem("clear_glass_purple", ModBlocks.CLEAR_GLASS_PURPLE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_RED = registerBlockItem("clear_glass_red", ModBlocks.CLEAR_GLASS_RED);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_WHITE = registerBlockItem("clear_glass_white", ModBlocks.CLEAR_GLASS_WHITE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_YELLOW = registerBlockItem("clear_glass_yellow", ModBlocks.CLEAR_GLASS_YELLOW);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_CARVED = registerBlockItem("coal_block_carved", ModBlocks.COAL_BLOCK_CARVED);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_CIRCLES = registerBlockItem("coal_block_circles", ModBlocks.COAL_BLOCK_CIRCLES);
     public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_COMPACTED = registerBlockItem("coal_block_compacted", ModBlocks.COAL_BLOCK_COMPACTED);

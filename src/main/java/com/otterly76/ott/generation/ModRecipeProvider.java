@@ -3203,7 +3203,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CIRCULAR_LEADED_STAINED_GLASS, "circular_leaded_stained_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS_PILLAR, "clear_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS, "fancy_leaded_glass_engraving");
-        engraveOne(exporter, Blocks.GLASS, ModBlocks.FANCY_LEADED_GLASS_PILLAR, "fancy_leaded_glass_pillar_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.ORNATE_LEADED_GLASS_PILLAR, "ornate_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS_PILLAR, "raster_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS_PILLAR, "small_diamond_leaded_glass_pillar_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_engraving");

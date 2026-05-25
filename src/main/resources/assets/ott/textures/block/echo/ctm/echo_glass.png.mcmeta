@@ -3,7 +3,7 @@
     "width": 160,
     "height": 32,
     "frametime": 8,
-    "interpolate": false,
+    "interpolate": true,
     "frames": [0, 1, 2, 3]
   }
 }

@@ -2718,8 +2718,8 @@ public class ModBlocks {
             register("clear_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> FANCY_LEADED_GLASS =
             register("fancy_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> FANCY_LEADED_GLASS_PILLAR =
-            register("fancy_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> ORNATE_LEADED_GLASS_PILLAR =
+            register("ornate_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> RASTER_LEADED_GLASS_PILLAR =
             register("raster_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> SMALL_DIAMOND_LEADED_GLASS_PILLAR =
@@ -4733,22 +4733,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CHERRY_PLANKS_TILES = register("cherry_planks_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> CHERRY_PLANKS_WAVY = register("cherry_planks_wavy", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> CHERRY_PLANKS_WOVEN = register("cherry_planks_woven", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_BLACK = register("clear_glass_black", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_BLUE = register("clear_glass_blue", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_BROWN = register("clear_glass_brown", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_CYAN = register("clear_glass_cyan", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_GRAY = register("clear_glass_gray", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_GREEN = register("clear_glass_green", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_LIGHT_BLUE = register("clear_glass_light_blue", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_LIGHT_GRAY = register("clear_glass_light_gray", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_LIME = register("clear_glass_lime", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_MAGENTA = register("clear_glass_magenta", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_ORANGE = register("clear_glass_orange", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_PINK = register("clear_glass_pink", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_PURPLE = register("clear_glass_purple", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_RED = register("clear_glass_red", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_WHITE = register("clear_glass_white", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> CLEAR_GLASS_YELLOW = register("clear_glass_yellow", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> COAL_BLOCK_CARVED = register("coal_block_carved", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_CIRCLES = register("coal_block_circles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> COAL_BLOCK_COMPACTED = register("coal_block_compacted", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
