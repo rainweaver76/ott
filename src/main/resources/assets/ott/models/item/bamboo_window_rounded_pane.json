@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/glass_pane",
+  "textures": {
+    "front": "ott:block/bamboo_planks/bamboo_window_rounded",
+    "side": "ott:block/oak_glass/oak_glass_pane_edge"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

@@ -2658,6 +2658,8 @@ public class ModBlocks {
             register("clear_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> FANCY_LEADED_GLASS =
             register("fancy_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> FANCY_LEADED_GLASS_CTM =
+            register("fancy_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> ORNATE_LEADED_GLASS_CTM =
             register("ornate_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> RASTER_LEADED_GLASS_CTM =
@@ -5243,6 +5245,26 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OAK_WINDOW_ROUNDED_CTM = register("oak_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> OAK_WINDOW_SLIM_CTM = register("oak_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> OAK_WINDOW_SWIRLING_CTM = register("oak_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    // ── Bamboo Windows CTM ──
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_BARS_CTM = register("bamboo_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_COVERED_CTM = register("bamboo_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_DIAGONAL_CTM = register("bamboo_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_LARGE_CTM = register("bamboo_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_PANES_CTM = register("bamboo_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_ROUNDED_CTM = register("bamboo_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_SLIM_CTM = register("bamboo_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_SWIRLING_CTM = register("bamboo_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_TILES_CTM = register("bamboo_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    // ── Cherry Windows CTM ──
+    public static final DeferredBlock<Block> CHERRY_WINDOW_BARS_CTM = register("cherry_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_COVERED_CTM = register("cherry_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_DIAGONAL_CTM = register("cherry_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_LARGE_CTM = register("cherry_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_PANES_CTM = register("cherry_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_ROUNDED_CTM = register("cherry_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_SLIM_CTM = register("cherry_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_SWIRLING_CTM = register("cherry_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_TILES_CTM = register("cherry_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> ROSE_QUARTZ_BRICKS = register("rose_quartz_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> SPRUCE_WINDOW_BARS_CTM = register("spruce_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> SPRUCE_WINDOW_COVERED_CTM = register("spruce_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
@@ -5334,6 +5356,24 @@ public class ModBlocks {
     public static final DeferredBlock<Block> OAK_WINDOW_SLIM = register("oak_window_slim", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> OAK_WINDOW_SWIRLING = register("oak_window_swirling", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> OAK_WINDOW_TILES = register("oak_window_tiles", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    // ── Bamboo Windows ──
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_BARS = register("bamboo_window_bars", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_COVERED = register("bamboo_window_covered", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_DIAGONAL = register("bamboo_window_diagonal", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_LARGE = register("bamboo_window_large", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_PANES = register("bamboo_window_panes", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_ROUNDED = register("bamboo_window_rounded", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_SLIM = register("bamboo_window_slim", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_SWIRLING = register("bamboo_window_swirling", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    // ── Cherry Windows ──
+    public static final DeferredBlock<Block> CHERRY_WINDOW_BARS = register("cherry_window_bars", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_COVERED = register("cherry_window_covered", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_DIAGONAL = register("cherry_window_diagonal", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_LARGE = register("cherry_window_large", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_PANES = register("cherry_window_panes", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_ROUNDED = register("cherry_window_rounded", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_SLIM = register("cherry_window_slim", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_SWIRLING = register("cherry_window_swirling", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_BARS = register("pale_oak_window_bars", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_COVERED = register("pale_oak_window_covered", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_DIAGONAL = register("pale_oak_window_diagonal", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
@@ -5443,6 +5483,26 @@ public class ModBlocks {
     public static final DeferredBlock<IronBarsBlock> OAK_WINDOW_SLIM_PANE = register("oak_window_slim_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> OAK_WINDOW_SWIRLING_PANE = register("oak_window_swirling_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> OAK_WINDOW_TILES_PANE = register("oak_window_tiles_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    // ── Bamboo Window Panes ──
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_BARS_PANE = register("bamboo_window_bars_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_COVERED_PANE = register("bamboo_window_covered_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_DIAGONAL_PANE = register("bamboo_window_diagonal_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_LARGE_PANE = register("bamboo_window_large_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_PANES_PANE = register("bamboo_window_panes_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_ROUNDED_PANE = register("bamboo_window_rounded_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_SLIM_PANE = register("bamboo_window_slim_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_SWIRLING_PANE = register("bamboo_window_swirling_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> BAMBOO_WINDOW_TILES_PANE = register("bamboo_window_tiles_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    // ── Cherry Window Panes ──
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_BARS_PANE = register("cherry_window_bars_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_COVERED_PANE = register("cherry_window_covered_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_DIAGONAL_PANE = register("cherry_window_diagonal_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_LARGE_PANE = register("cherry_window_large_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_PANES_PANE = register("cherry_window_panes_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_ROUNDED_PANE = register("cherry_window_rounded_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_SLIM_PANE = register("cherry_window_slim_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_SWIRLING_PANE = register("cherry_window_swirling_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHERRY_WINDOW_TILES_PANE = register("cherry_window_tiles_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> PALE_OAK_WINDOW_BARS_PANE = register("pale_oak_window_bars_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> PALE_OAK_WINDOW_COVERED_PANE = register("pale_oak_window_covered_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> PALE_OAK_WINDOW_DIAGONAL_PANE = register("pale_oak_window_diagonal_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
@@ -5473,6 +5533,7 @@ public class ModBlocks {
     public static final DeferredBlock<IronBarsBlock> CIRCULAR_LEADED_STAINED_GLASS_PANE = register("circular_leaded_stained_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> CLEAR_LEADED_GLASS_PANE = register("clear_leaded_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> FANCY_LEADED_GLASS_PANE = register("fancy_leaded_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> FANCY_LEADED_GLASS_CTM_PANE = register("fancy_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> LARGE_DIAMOND_LEADED_GLASS_PANE = register("large_diamond_leaded_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> LEAD_WOVEN_GLASS_PANE = register("lead_woven_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> ORNATE_LEADED_GLASS_PANE = register("ornate_leaded_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
@@ -5660,6 +5721,39 @@ public class ModBlocks {
     public static final DeferredBlock<IronBarsBlock> LEADED_GLASS_PANE = register("leaded_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> OAK_BARRED_GLASS_PANE = register("oak_barred_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> OAK_SNOWFLAKE_GLASS_PANE = register("oak_snowflake_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_DIAMOND_BORDERED_GLASS_PANE = register("oak_diamond_bordered_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_HORIZONTAL_LINED_GLASS_PANE = register("oak_horizontal_lined_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_LARGE_DIAMOND_GLASS_PANE = register("oak_large_diamond_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_LINE_BARED_GLASS_PANE = register("oak_line_bared_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_ORNATE_BARED_GLASS_PANE = register("oak_ornate_bared_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_WOVEN_GLASS_PANE = register("oak_woven_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> ARCHED_LEADED_GLASS_CTM_PANE = register("arched_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CHISELED_GLASS_CTM_PANE = register("chiseled_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CLEAR_GLASS_CTM_PANE = register("clear_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> CLEAR_LEADED_GLASS_CTM_PANE = register("clear_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> DIRTY_GLASS_CTM_PANE = register("dirty_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> ECHO_GLASS_CTM_PANE = register("echo_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> FROSTED_GLASS_CTM_PANE = register("frosted_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> ICE_GLASS_CTM_PANE = register("ice_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_BARRED_GLASS_CTM_PANE = register("oak_barred_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_BORDERED_GLASS_CTM_PANE = register("oak_bordered_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_DIAMOND_BORDERED_GLASS_CTM_PANE = register("oak_diamond_bordered_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_HORIZONTAL_LINED_GLASS_CTM_PANE = register("oak_horizontal_lined_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_LARGE_DIAMOND_GLASS_CTM_PANE = register("oak_large_diamond_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_LINE_BARED_GLASS_CTM_PANE = register("oak_line_bared_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_ORNATE_BARED_GLASS_CTM_PANE = register("oak_ornate_bared_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OAK_WOVEN_GLASS_CTM_PANE = register("oak_woven_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> OBSIDIAN_FRAMED_GLASS_CTM_PANE = register("obsidian_framed_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> ORNATE_LEADED_GLASS_CTM_PANE = register("ornate_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> QUICKSOIL_GLASS_CTM_PANE = register("quicksoil_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> RASTER_LEADED_GLASS_CTM_PANE = register("raster_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> REINFORCED_GLASS_CTM_PANE = register("reinforced_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> SANDSTONE_FRAMED_GLASS_CTM_PANE = register("sandstone_framed_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> SMALL_DIAMOND_LEADED_GLASS_CTM_PANE = register("small_diamond_leaded_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> SQUARE_OAK_GLASS_CTM_PANE = register("square_oak_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> STONE_FRAMED_GLASS_CTM_PANE = register("stone_framed_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> TINTED_CLEAR_GLASS_CTM_PANE = register("tinted_clear_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+    public static final DeferredBlock<IronBarsBlock> TINTED_GLASS_CTM_PANE = register("tinted_glass_ctm_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<IronBarsBlock> GLASS_OCHRE_FROGLIGHT_PANE = register("glass_ochre_froglight_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion().lightLevel(s -> 15)));
     public static final DeferredBlock<IronBarsBlock> GLASS_PEARLESCENT_FROGLIGHT_PANE = register("glass_pearlescent_froglight_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion().lightLevel(s -> 15)));
     public static final DeferredBlock<IronBarsBlock> GLASS_VERDANT_FROGLIGHT_PANE = register("glass_verdant_froglight_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion().lightLevel(s -> 15)));

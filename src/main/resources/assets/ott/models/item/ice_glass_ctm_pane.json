@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_compact",
+  "textures": {
+    "front": "ott:block/ice/ctm/ice_glass",
+    "side": "minecraft:block/glass_pane_top"
+  },
+  "render_type": "minecraft:cutout"
+}

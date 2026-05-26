@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_full",
+  "textures": {
+    "front": "ott:block/reinforced/ctm/reinforced_glass",
+    "side": "minecraft:block/glass_pane_top"
+  },
+  "render_type": "minecraft:cutout"
+}

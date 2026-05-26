@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_pane_side_compact",
+  "textures": {
+    "pane": "ott:block/echo/ctm/echo_glass",
+    "edge": "ott:block/echo/ctm/echo_glass"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout"
+}

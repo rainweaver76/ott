@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "ott:block/bamboo_planks/bamboo_window_covered",
+    "end": "minecraft:block/bamboo_planks"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

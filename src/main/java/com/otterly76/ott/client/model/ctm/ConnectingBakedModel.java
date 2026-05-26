@@ -161,6 +161,14 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
 
     // ---- ModelData (called per chunk rebuild, before getQuads) -----------------
 
+    /**
+     * Fallback for multipart models: NeoForge's MultipartModelData per-sub-model
+     * resolution may not correctly pass CTM_MASKS back through getQuads.
+     * Storing masks in a ThreadLocal ensures getQuads always finds them, since
+     * getModelData and getQuads for the same block run sequentially on one thread.
+     */
+    private static final ThreadLocal<int[][]> MASKS_FALLBACK = new ThreadLocal<>();
+
     @Override
     public @NotNull ModelData getModelData(@NotNull BlockAndTintGetter level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull ModelData existing) {
         int numRules = ruleList.size();
@@ -172,6 +180,7 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
                 masks[ri][face.ordinal()] = computeMask(level, pos, state, face, ruleList.get(ri));
             }
         }
+        MASKS_FALLBACK.set(masks);
         return existing.derive().with(CTM_MASKS, masks).build();
     }
 
@@ -216,12 +225,16 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         List<BakedQuad> base = originalModel.getQuads(state, side, rand, data, renderType);
 
         int[][] masks = data.get(CTM_MASKS);
-        if (masks == null || side == null || base.isEmpty()) return base;
+        if (masks == null) masks = MASKS_FALLBACK.get(); // fallback for multipart models
+        if (masks == null || base.isEmpty()) return base;
 
-        int faceOrdinal = side.ordinal();
         List<BakedQuad> result = new ArrayList<>(base.size());
         for (BakedQuad quad : base) {
-            result.add(remapQuad(quad, masks, faceOrdinal));
+            // Culled quads: side gives the face direction.
+            // Unculled quads (e.g. glass pane faces that lack cullface): fall back to
+            // the quad's own facing direction so CTM still fires for thin blocks.
+            Direction quadFace = (side != null) ? side : quad.getDirection();
+            result.add(remapQuad(quad, masks, quadFace.ordinal()));
         }
         return result;
     }

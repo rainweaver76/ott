@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_compact",
+  "textures": {
+    "pane": "ott:block/ice/ctm/ice_glass",
+    "edge": "ott:block/ice/ctm/ice_glass"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout"
+}
