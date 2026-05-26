@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ott:emerald_block_pillar"
+          "name": "ott:emerald_block_ctm"
         }
       ],
       "conditions": [

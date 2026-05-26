@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/prismarine_bricks/ctm/prismarine_bricks_pillars"
+    "all": "ott:block/prismarine_bricks/ctm/prismarine_bricks_ctms"
   },
   "connections": {
     "all": [

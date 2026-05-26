@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ott:redstone_block_pillar"
+          "name": "ott:redstone_block_ctm"
         }
       ],
       "conditions": [

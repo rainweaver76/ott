@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "ott:quartz_block_chiseled_pillar"
+          "name": "ott:quartz_block_chiseled_ctm"
         }
       ],
       "conditions": [

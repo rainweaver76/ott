@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ice/fine_ice_ctm"
+    }
+  }
+}

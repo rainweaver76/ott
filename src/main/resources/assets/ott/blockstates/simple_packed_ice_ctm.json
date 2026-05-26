@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/packed_ice/simple_packed_ice_ctm"
+    }
+  }
+}

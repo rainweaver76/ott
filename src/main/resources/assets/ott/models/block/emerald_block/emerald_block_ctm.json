@@ -1,0 +1,13 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "horizontal",
+  "parent": "ott:block/ctm/ctm_cube_column_horizontal_compact",
+  "textures": {
+    "side": "ott:block/emerald_block/ctm/emerald_block_ctm_side",
+    "top":  "ott:block/emerald_block/ctm/emerald_block_ctm_end"
+  },
+  "connections": {
+    "side": [{"type": "is_same_block"}],
+    "top":  {"layout": "compact", "rules": [{"type": "is_same_block"}]}
+  }
+}

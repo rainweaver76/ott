@@ -432,9 +432,6 @@ public class ModBlocks {
             COPPER_RAILS.put(stateName, registerBackportedBlock(stateName + "copper_rail", () -> new com.otterly76.ott.block.custom.WeatheringCopperRailBlock(state, BlockBehaviour.Properties.of().noCollission().strength(0.7F).sound(SoundType.COPPER))));
             COPPER_RAILS.put("waxed_" + stateName, registerBackportedBlock("waxed_" + stateName + "copper_rail", () -> new com.otterly76.ott.block.custom.WeatheringCopperRailBlock(state, BlockBehaviour.Properties.of().noCollission().strength(0.7F).sound(SoundType.COPPER))));
 
-            // In 1.21.1, all 8 variants of lightning rods and copper grates are vanilla?
-            // Wait, only lightning_rod is vanilla. Weathered variants of lightning rods are backported.
-            // All 8 variants of copper grates ARE vanilla in 1.21.1.
             if (stateName.isEmpty()) {
                 LIGHTNING_RODS.put("", () -> Blocks.LIGHTNING_ROD);
             } else {
@@ -1057,23 +1054,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> RED_MARBLE_DIAMOND_PAVERS = register("red_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> YELLOW_MARBLE_DIAMOND_PAVERS = register("yellow_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
 
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Sandstone decorative (Roman) ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<PlateBlock> SANDSTONE_CRENELATION = register("sandstone_crenelation",
             () -> new PlateBlock(Properties.ofFullCopy(Blocks.CUT_SANDSTONE)));
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Flat/Gray Roof Tiles + Roofing Slates (General) ---
-    // -------------------------------------------------------------------------
+
     public static final DeferredBlock<Block> ROOFING_SLATES = register("roofing_slates",
             () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
 
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Rammed Dirt, Stepping Stones (General) ---
-    // -------------------------------------------------------------------------
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Thatch (General) ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<Block> WHEAT_THATCH = register("wheat_thatch",
             () -> new Block(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
     public static final DeferredBlock<EdgeBlock> WHEAT_THATCH_EDGE = register("wheat_thatch_edge",
@@ -1087,26 +1073,15 @@ public class ModBlocks {
     public static final DeferredBlock<PlateBlock> BAMBOO_THATCH_PLATE = register("bamboo_thatch_plate",
             () -> new PlateBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
 
-
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 3: Stone Bricks Masonry + German misc (German) ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<Block> STONE_BRICKS_MASONRY = register("stone_bricks_masonry", () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
     public static final DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> STONE_BRICKS_MASONRY_EDGE = register("stone_bricks_masonry_edge", () -> new com.otterly76.ott.block.custom.EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
     public static final DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> STONE_BRICKS_MASONRY_PLATE = register("stone_bricks_masonry_plate", () -> new com.otterly76.ott.block.custom.PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
     public static final DeferredBlock<RakedGravelBlock> CURVED_RAKED_GRAVEL = register("curved_raked_gravel", () -> new RakedGravelBlock(true, Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<RakedGravelBlock> STRAIGHT_RAKED_GRAVEL = register("straight_raked_gravel", () -> new RakedGravelBlock(false, Properties.ofFullCopy(Blocks.GRAVEL)));
 
-
-    // -------------------------------------------------------------------------
-    // --- Sandstone Slender ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<Block> SANDSTONE_SLENDER_BRICKS = register("sandstone_slender_bricks", () -> new Block(Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> SANDSTONE_SLENDER_TURQUOISE_PATTERN = register("sandstone_slender_turquoise_pattern", () -> new Block(Properties.ofFullCopy(Blocks.SANDSTONE)));
 
-    // -------------------------------------------------------------------------
-    // --- Ornamented Carpets + Wool ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<Block> ORNAMENTED_RED_WOOL = register("ornamented_red_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
     public static final DeferredBlock<Block> DELICATE_RED_WOOL = register("delicate_red_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
     public static final DeferredBlock<CarpetBlock> ORNAMENTED_RED_CARPET = register("ornamented_red_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
@@ -1124,10 +1099,6 @@ public class ModBlocks {
     public static final DeferredBlock<CarpetBlock> ORNAMENTED_PURPLE_CARPET = register("ornamented_purple_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
     public static final DeferredBlock<CarpetBlock> DELICATE_PURPLE_CARPET = register("delicate_purple_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
 
-
-    // -------------------------------------------------------------------------
-    // --- Oak structural blocks ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> OAK_PERGOLA = register("oak_pergola",
             () -> new com.otterly76.ott.block.custom.PergolaBlock(
                     Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
@@ -1151,42 +1122,10 @@ public class ModBlocks {
                     Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
     public static final DeferredBlock<Block> OAK_GEOMETRIC_WINDOW = register("oak_geometric_window",
             () -> new com.otterly76.ott.block.custom.GeometricWindowBlock(Properties.of().strength(1.5f).sound(SoundType.WOOD).noOcclusion()));
-    // =========================================================================
-    // === DoTB Phase 5: General Decorative & Functional ===
-    // =========================================================================
     public static final DeferredBlock<PlacedLanternBlock> STONE_LANTERN = register("stone_lantern", () -> new PlacedLanternBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().lightLevel(s -> 15)));
     public static final DeferredBlock<LitPlacedLanternBlock> IRON_FANCY_LANTERN = register("iron_fancy_lantern", () -> new LitPlacedLanternBlock(Properties.of().strength(3.5f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion().lightLevel(s -> s.getValue(LitPlacedLanternBlock.LIT) ? 15 : 0)));
     public static final DeferredBlock<StarlightLampBlock> STARLIGHT_LAMP = register("starlight_lamp", () -> new StarlightLampBlock(Properties.of().strength(0.5F).sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 15)));
 
-    // =========================================================================
-    // === DoTB Phase 2: Roman Marble extras ===
-    // =========================================================================
-
-    // =========================================================================
-    // === DoTB Phase 2: Roman Birch Furniture ===
-    // =========================================================================
-
-    // =========================================================================
-    // === DoTB Phase 3: German Waxed Oak extras ===
-    // =========================================================================
-
-    // =========================================================================
-    // === DoTB Phase 3: Japanese Spruce extras ===
-    // =========================================================================
-    public static final DeferredBlock<FenceBlock> SPRUCE_LOG_FENCE = register("spruce_log_fence", () -> new FenceBlock(Properties.ofFullCopy(Blocks.SPRUCE_PLANKS)));
-
-    // =========================================================================
-    // === DoTB Phase 3: Japanese Bamboo extras ===
-    // =========================================================================
-
-    // =========================================================================
-    // === DoTB Phase 3: Japanese Furniture & Decor ===
-    // =========================================================================
-
-
-    // =========================================================================
-    // === Stone Variant Blocks (simple CTM — Chipped style) ===
-    // =========================================================================
     private static final Properties ST = Properties.ofFullCopy(Blocks.STONE);
 
     // --- Plain cube_all ---
@@ -1200,12 +1139,12 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CRACKED_FLAT_STONE_TILES = register("cracked_flat_stone_tiles", () -> new Block(ST));
     public static final DeferredBlock<Block> CREEPER_STONE_CARVING = register("creeper_stone_carving", () -> new Block(ST));
     public static final DeferredBlock<Block> CRYING_STONE = register("crying_stone", () -> new Block(ST));
-    public static final DeferredBlock<Block> CURLY_STONE_PILLAR = register("curly_stone_pillar", () -> new Block(ST));
+    public static final DeferredBlock<Block> CURLY_STONE_CTM = register("curly_stone_ctm", () -> new Block(ST));
     public static final DeferredBlock<Block> CUT_BLANK_STONE = register("cut_blank_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> DUH_STONE = register("duh_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> ENGRAVED_STONE = register("engraved_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> ETCHED_STONE_BRICKS = register("etched_stone_bricks", () -> new Block(ST));
-    public static final DeferredBlock<Block> FINE_STONE_PILLAR = register("fine_stone_pillar", () -> new Block(ST));
+    public static final DeferredBlock<Block> FINE_STONE_CTM = register("fine_stone_ctm", () -> new Block(ST));
     public static final DeferredBlock<Block> FLAT_STONE_TILES = register("flat_stone_tiles", () -> new Block(ST));
     public static final DeferredBlock<Block> GLAD_STONE = register("glad_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> INLAYED_STONE = register("inlayed_stone", () -> new Block(ST));
@@ -1213,7 +1152,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LAYED_STONE_BRICKS = register("layed_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> LODED_STONE = register("loded_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> OFFSET_STONE_BRICKS = register("offset_stone_bricks", () -> new Block(ST));
-    public static final DeferredBlock<Block> ORNATE_STONE_PILLAR = register("ornate_stone_pillar", () -> new Block(ST));
+    public static final DeferredBlock<Block> ORNATE_STONE_CTM = register("ornate_stone_ctm", () -> new Block(ST));
     public static final DeferredBlock<Block> OVERLAPPING_STONE_TILES = register("overlapping_stone_tiles", () -> new Block(ST));
     public static final DeferredBlock<Block> PILLAR_STONE_BRICKS = register("pillar_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> POLISHED_STONE = register("polished_stone", () -> new Block(ST));
@@ -1223,7 +1162,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> RUNIC_CARVED_STONE = register("runic_carved_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> SAD_STONE = register("sad_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> SANDED_STONE = register("sanded_stone", () -> new Block(ST));
-    public static final DeferredBlock<Block> SIMPLE_STONE_PILLAR = register("simple_stone_pillar", () -> new Block(ST));
+    public static final DeferredBlock<Block> SIMPLE_STONE_CTM = register("simple_stone_ctm", () -> new Block(ST));
     public static final DeferredBlock<Block> SMALL_STONE_BRICKS = register("small_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> SMOOTH_INLAYED_STONE = register("smooth_inlayed_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> SMOOTHED_DOUBLE_INLAYED_STONE = register("smoothed_double_inlayed_stone", () -> new Block(ST));
@@ -1255,27 +1194,28 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CUT_STONE_COLUMN = register("cut_stone_column", () -> new Block(ST));
     public static final DeferredBlock<Block> SMOOTH_STONE_COLUMN = register("smooth_stone_column", () -> new Block(ST));
     public static final DeferredBlock<Block> TILED_STONE_COLUMN = register("tiled_stone_column", () -> new Block(ST));
-    public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> SANDSTONE_CTM = register("sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> RED_SANDSTONE_CTM = register("red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> BORDERED_ANDESITE_CTM = register("bordered_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> POLISHED_ANDESITE_CTM = register("polished_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE)));
-    public static final DeferredBlock<Block> POLISHED_BLACKSTONE_CTM = register("polished_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE)));
-    public static final DeferredBlock<Block> POLISHED_DIORITE_CTM = register("polished_diorite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE)));
-    public static final DeferredBlock<Block> POLISHED_GRANITE_CTM = register("polished_granite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE)));
-    public static final DeferredBlock<Block> NETHERITE_BLOCK_CTM = register("netherite_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)));
-    public static final DeferredBlock<Block> SMOOTH_STONE_CTM = register("smooth_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> EMERALD_BLOCK_CTM = register("emerald_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK)));
+    public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> ORIG_SANDSTONE_CTM = register("sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> ORIG_RED_SANDSTONE_CTM = register("red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> ORIG_BORDERED_ANDESITE_CTM = register("bordered_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> ORIG_POLISHED_ANDESITE_CTM = register("polished_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE)));
+    public static final DeferredBlock<Block> ORIG_POLISHED_BLACKSTONE_CTM = register("polished_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_BLACKSTONE)));
+    public static final DeferredBlock<Block> ORIG_POLISHED_DIORITE_CTM = register("polished_diorite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_DIORITE)));
+    public static final DeferredBlock<Block> ORIG_POLISHED_GRANITE_CTM = register("polished_granite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_GRANITE)));
+    public static final DeferredBlock<Block> ORIG_NETHERITE_BLOCK_CTM = register("netherite_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)));
+    public static final DeferredBlock<Block> ORIG_SMOOTH_STONE_CTM = register("smooth_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> ORIG_EMERALD_BLOCK_CTM = register("emerald_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.EMERALD_BLOCK)));
     public static final DeferredBlock<RotatedPillarBlock> CHISELED_PLASTERED_STONE_PILLAR = register("chiseled_plastered_stone_pillar", () -> new RotatedPillarBlock(ST));
+
     // CTM vertical pillars
-    public static final DeferredBlock<Block> BONE_BLOCK_PILLAR = register("bone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK)));
-    public static final DeferredBlock<Block> COAL_BLOCK_PILLAR = register("coal_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> COBBLED_DEEPSLATE_PILLAR = register("cobbled_deepslate_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE)));
-    public static final DeferredBlock<Block> COBBLESTONE_PILLAR = register("cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> COPPER_BLOCK_PILLAR = register("copper_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> LAPIS_BLOCK_PILLAR = register("lapis_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
-    public static final DeferredBlock<Block> NETHERITE_BLOCK_PILLAR = register("netherite_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)));
-    public static final DeferredBlock<Block> OBSIDIAN_PILLAR = register("obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> BONE_BLOCK_CTM = register("bone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BONE_BLOCK)));
+    public static final DeferredBlock<Block> COAL_BLOCK_CTM = register("coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> COBBLED_DEEPSLATE_CTM = register("cobbled_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLED_DEEPSLATE)));
+    public static final DeferredBlock<Block> COBBLESTONE_CTM = register("cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> COPPER_BLOCK_CTM = register("copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WAXED_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> LAPIS_BLOCK_CTM = register("lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> NETHERITE_BLOCK_CTM = register("netherite_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERITE_BLOCK)));
+    public static final DeferredBlock<Block> OBSIDIAN_CTM = register("obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
 
     // --- New plain cube_all stone blocks ---
     public static final DeferredBlock<Block> CHAOTIC_STONE_BRICKS = register("chaotic_stone_bricks", () -> new Block(ST));
@@ -1348,24 +1288,24 @@ public class ModBlocks {
             register("bordered_amethyst_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_AMETHYST_BLOCK =
             register("brick_bordered_amethyst_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_AMETHYST_BLOCK_PILLAR =
-            register("curly_amethyst_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_AMETHYST_BLOCK_CTM =
+            register("curly_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> CUT_AMETHYST_BLOCK_COLUMN =
             register("cut_amethyst_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> EDGED_AMETHYST_BLOCK_BRICKS =
             register("edged_amethyst_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-    public static final DeferredBlock<Block> FINE_AMETHYST_BLOCK_PILLAR =
-            register("fine_amethyst_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+    public static final DeferredBlock<Block> FINE_AMETHYST_BLOCK_CTM =
+            register("fine_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_AMETHYST_BLOCK_BRICKS =
             register("massive_amethyst_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_AMETHYST_BLOCK_PILLAR =
-            register("ornate_amethyst_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_AMETHYST_BLOCK_CTM =
+            register("ornate_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_AMETHYST_BLOCK_TILES =
             register("overlapping_amethyst_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_AMETHYST_BLOCK =
             register("polished_amethyst_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_AMETHYST_BLOCK_PILLAR =
-            register("simple_amethyst_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_AMETHYST_BLOCK_CTM =
+            register("simple_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_AMETHYST_BLOCK_COLUMN =
             register("smooth_amethyst_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_AMETHYST_BLOCK =
@@ -1382,24 +1322,24 @@ public class ModBlocks {
             register("bordered_ancient_debris", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_ANCIENT_DEBRIS =
             register("brick_bordered_ancient_debris", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
-    public static final DeferredBlock<Block> CURLY_ANCIENT_DEBRIS_PILLAR =
-            register("curly_ancient_debris_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> CURLY_ANCIENT_DEBRIS_CTM =
+            register("curly_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> CUT_ANCIENT_DEBRIS_COLUMN =
             register("cut_ancient_debris_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> EDGED_ANCIENT_DEBRIS_BRICKS =
             register("edged_ancient_debris_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
-    public static final DeferredBlock<Block> FINE_ANCIENT_DEBRIS_PILLAR =
-            register("fine_ancient_debris_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> FINE_ANCIENT_DEBRIS_CTM =
+            register("fine_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> MASSIVE_ANCIENT_DEBRIS_BRICKS =
             register("massive_ancient_debris_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
-    public static final DeferredBlock<Block> ORNATE_ANCIENT_DEBRIS_PILLAR =
-            register("ornate_ancient_debris_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> ORNATE_ANCIENT_DEBRIS_CTM =
+            register("ornate_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> OVERLAPPING_ANCIENT_DEBRIS_TILES =
             register("overlapping_ancient_debris_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> POLISHED_ANCIENT_DEBRIS =
             register("polished_ancient_debris", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
-    public static final DeferredBlock<Block> SIMPLE_ANCIENT_DEBRIS_PILLAR =
-            register("simple_ancient_debris_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> SIMPLE_ANCIENT_DEBRIS_CTM =
+            register("simple_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> SMOOTH_ANCIENT_DEBRIS_COLUMN =
             register("smooth_ancient_debris_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> THICK_INLAYED_ANCIENT_DEBRIS =
@@ -1414,22 +1354,22 @@ public class ModBlocks {
     // ── Andesite ──
     public static final DeferredBlock<Block> BRICK_BORDERED_ANDESITE =
             register("brick_bordered_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> CURLY_ANDESITE_PILLAR =
-            register("curly_andesite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> CURLY_ANDESITE_CTM =
+            register("curly_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> CUT_ANDESITE_COLUMN =
             register("cut_andesite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> EDGED_ANDESITE_BRICKS =
             register("edged_andesite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> FINE_ANDESITE_PILLAR =
-            register("fine_andesite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> FINE_ANDESITE_CTM =
+            register("fine_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> MASSIVE_ANDESITE_BRICKS =
             register("massive_andesite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> ORNATE_ANDESITE_PILLAR =
-            register("ornate_andesite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> ORNATE_ANDESITE_CTM =
+            register("ornate_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> OVERLAPPING_ANDESITE_TILES =
             register("overlapping_andesite_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> SIMPLE_ANDESITE_PILLAR =
-            register("simple_andesite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> SIMPLE_ANDESITE_CTM =
+            register("simple_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> SMOOTH_ANDESITE_COLUMN =
             register("smooth_andesite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> THICK_INLAYED_ANDESITE =
@@ -1466,24 +1406,24 @@ public class ModBlocks {
             register("bordered_basalt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> BRICK_BORDERED_BASALT =
             register("brick_bordered_basalt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
-    public static final DeferredBlock<Block> CURLY_BASALT_PILLAR =
-            register("curly_basalt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+    public static final DeferredBlock<Block> CURLY_BASALT_CTM =
+            register("curly_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> CUT_BASALT_COLUMN =
             register("cut_basalt_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> EDGED_BASALT_BRICKS =
             register("edged_basalt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
-    public static final DeferredBlock<Block> FINE_BASALT_PILLAR =
-            register("fine_basalt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+    public static final DeferredBlock<Block> FINE_BASALT_CTM =
+            register("fine_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> MASSIVE_BASALT_BRICKS =
             register("massive_basalt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
-    public static final DeferredBlock<Block> ORNATE_BASALT_PILLAR =
-            register("ornate_basalt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+    public static final DeferredBlock<Block> ORNATE_BASALT_CTM =
+            register("ornate_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> OVERLAPPING_BASALT_TILES =
             register("overlapping_basalt_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> POLISHED_BASALT =
             register("polished_basalt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
-    public static final DeferredBlock<Block> SIMPLE_BASALT_PILLAR =
-            register("simple_basalt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+    public static final DeferredBlock<Block> SIMPLE_BASALT_CTM =
+            register("simple_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> SMOOTH_BASALT_COLUMN =
             register("smooth_basalt_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> THICK_INLAYED_BASALT =
@@ -1520,22 +1460,22 @@ public class ModBlocks {
             register("bordered_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_BLACKSTONE =
             register("brick_bordered_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
-    public static final DeferredBlock<Block> CURLY_BLACKSTONE_PILLAR =
-            register("curly_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
+    public static final DeferredBlock<Block> CURLY_BLACKSTONE_CTM =
+            register("curly_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> CUT_BLACKSTONE_COLUMN =
             register("cut_blackstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> EDGED_BLACKSTONE_BRICKS =
             register("edged_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
-    public static final DeferredBlock<Block> FINE_BLACKSTONE_PILLAR =
-            register("fine_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
+    public static final DeferredBlock<Block> FINE_BLACKSTONE_CTM =
+            register("fine_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> MASSIVE_BLACKSTONE_BRICKS =
             register("massive_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
-    public static final DeferredBlock<Block> ORNATE_BLACKSTONE_PILLAR =
-            register("ornate_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
+    public static final DeferredBlock<Block> ORNATE_BLACKSTONE_CTM =
+            register("ornate_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_BLACKSTONE_TILES =
             register("overlapping_blackstone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
-    public static final DeferredBlock<Block> SIMPLE_BLACKSTONE_PILLAR =
-            register("simple_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
+    public static final DeferredBlock<Block> SIMPLE_BLACKSTONE_CTM =
+            register("simple_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> SMOOTH_BLACKSTONE_COLUMN =
             register("smooth_blackstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_BLACKSTONE =
@@ -1550,8 +1490,8 @@ public class ModBlocks {
     // ── Black Concrete ──
     public static final DeferredBlock<Block> BLACK_CONCRETE_PANEL =
             register("black_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
-    public static final DeferredBlock<Block> BLACK_CONCRETE_PILLAR =
-            register("black_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
+    public static final DeferredBlock<Block> BLACK_CONCRETE_CTM =
+            register("black_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_BLACK_CONCRETE =
             register("grill_black_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_BLACK_CONCRETE =
@@ -1564,20 +1504,20 @@ public class ModBlocks {
             register("wired_black_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
 
     // ── Black Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_BLACK_STAINED_GLASS_PILLAR =
-            register("arched_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_BLACK_STAINED_GLASS_CTM =
+            register("arched_black_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_BLACK_STAINED_GLASS =
             register("circular_black_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_BLACK_STAINED_GLASS_PILLAR =
-            register("fancy_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_BLACK_STAINED_GLASS_PILLAR =
-            register("ornate_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_BLACK_STAINED_GLASS_PILLAR =
-            register("raster_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_BLACK_STAINED_GLASS_CTM =
+            register("fancy_black_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_BLACK_STAINED_GLASS_CTM =
+            register("ornate_black_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_BLACK_STAINED_GLASS_CTM =
+            register("raster_black_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BLACK_DIAMOND_STAINED_GLASS =
             register("small_black_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_BLACK_STAINED_GLASS_PILLAR =
-            register("tiled_black_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_BLACK_STAINED_GLASS_CTM =
+            register("tiled_black_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> BLACK_LEADED_STAINED_GLASS =
             register("black_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BLACK_STAINED_GLASS =
@@ -1602,8 +1542,8 @@ public class ModBlocks {
     // ── Black Terracotta ──
     public static final DeferredBlock<Block> BLACK_TERRACOTTA_COLUMN =
             register("black_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_TERRACOTTA)));
-    public static final DeferredBlock<Block> BLACK_TERRACOTTA_PILLAR =
-            register("black_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_TERRACOTTA)));
+    public static final DeferredBlock<Block> BLACK_TERRACOTTA_CTM =
+            register("black_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_TERRACOTTA)));
     public static final DeferredBlock<Block> CIRCULAR_BLACK_TERRACOTTA =
             register("circular_black_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_TERRACOTTA)));
     public static final DeferredBlock<Block> CURLED_BLACK_TERRACOTTA =
@@ -1630,8 +1570,8 @@ public class ModBlocks {
     // ── Blue Concrete ──
     public static final DeferredBlock<Block> BLUE_CONCRETE_PANEL =
             register("blue_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_CONCRETE)));
-    public static final DeferredBlock<Block> BLUE_CONCRETE_PILLAR =
-            register("blue_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_CONCRETE)));
+    public static final DeferredBlock<Block> BLUE_CONCRETE_CTM =
+            register("blue_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_BLUE_CONCRETE =
             register("grill_blue_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_BLUE_CONCRETE =
@@ -1648,24 +1588,24 @@ public class ModBlocks {
             register("bordered_blue_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_BLUE_ICE =
             register("brick_bordered_blue_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
-    public static final DeferredBlock<Block> CURLY_BLUE_ICE_PILLAR =
-            register("curly_blue_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
+    public static final DeferredBlock<Block> CURLY_BLUE_ICE_CTM =
+            register("curly_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> CUT_BLUE_ICE_COLUMN =
             register("cut_blue_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> EDGED_BLUE_ICE_BRICKS =
             register("edged_blue_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
-    public static final DeferredBlock<Block> FINE_BLUE_ICE_PILLAR =
-            register("fine_blue_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
+    public static final DeferredBlock<Block> FINE_BLUE_ICE_CTM =
+            register("fine_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> MASSIVE_BLUE_ICE_BRICKS =
             register("massive_blue_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
-    public static final DeferredBlock<Block> ORNATE_BLUE_ICE_PILLAR =
-            register("ornate_blue_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
+    public static final DeferredBlock<Block> ORNATE_BLUE_ICE_CTM =
+            register("ornate_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> OVERLAPPING_BLUE_ICE_TILES =
             register("overlapping_blue_ice_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> POLISHED_BLUE_ICE =
             register("polished_blue_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
-    public static final DeferredBlock<Block> SIMPLE_BLUE_ICE_PILLAR =
-            register("simple_blue_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
+    public static final DeferredBlock<Block> SIMPLE_BLUE_ICE_CTM =
+            register("simple_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> SMOOTH_BLUE_ICE_COLUMN =
             register("smooth_blue_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> THICK_INLAYED_BLUE_ICE =
@@ -1678,20 +1618,20 @@ public class ModBlocks {
             register("tiny_brick_bordered_blue_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
 
     // ── Blue Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_BLUE_STAINED_GLASS_PILLAR =
-            register("arched_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_BLUE_STAINED_GLASS_CTM =
+            register("arched_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_BLUE_STAINED_GLASS =
             register("circular_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_BLUE_STAINED_GLASS_PILLAR =
-            register("fancy_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_BLUE_STAINED_GLASS_PILLAR =
-            register("ornate_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_BLUE_STAINED_GLASS_PILLAR =
-            register("raster_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_BLUE_STAINED_GLASS_CTM =
+            register("fancy_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_BLUE_STAINED_GLASS_CTM =
+            register("ornate_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_BLUE_STAINED_GLASS_CTM =
+            register("raster_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BLUE_DIAMOND_STAINED_GLASS =
             register("small_blue_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_BLUE_STAINED_GLASS_PILLAR =
-            register("tiled_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_BLUE_STAINED_GLASS_CTM =
+            register("tiled_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> BLUE_LEADED_STAINED_GLASS =
             register("blue_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BLUE_STAINED_GLASS =
@@ -1716,8 +1656,8 @@ public class ModBlocks {
     // ── Blue Terracotta ──
     public static final DeferredBlock<Block> BLUE_TERRACOTTA_COLUMN =
             register("blue_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_TERRACOTTA)));
-    public static final DeferredBlock<Block> BLUE_TERRACOTTA_PILLAR =
-            register("blue_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_TERRACOTTA)));
+    public static final DeferredBlock<Block> BLUE_TERRACOTTA_CTM =
+            register("blue_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_TERRACOTTA)));
     public static final DeferredBlock<Block> CIRCULAR_BLUE_TERRACOTTA =
             register("circular_blue_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_TERRACOTTA)));
     public static final DeferredBlock<Block> CURLED_BLUE_TERRACOTTA =
@@ -1746,24 +1686,24 @@ public class ModBlocks {
             register("bordered_borderless_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_BORDERLESS_BRICKS =
             register("brick_bordered_borderless_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> CURLY_BORDERLESS_BRICKS_PILLAR =
-            register("curly_borderless_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> CURLY_BORDERLESS_BRICKS_CTM =
+            register("curly_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> CUT_BORDERLESS_BRICKS_COLUMN =
             register("cut_borderless_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> EDGED_BORDERLESS_BRICKS_BRICKS =
             register("edged_borderless_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> FINE_BORDERLESS_BRICKS_PILLAR =
-            register("fine_borderless_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> FINE_BORDERLESS_BRICKS_CTM =
+            register("fine_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_BORDERLESS_BRICKS_BRICKS =
             register("massive_borderless_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_BORDERLESS_BRICKS_PILLAR =
-            register("ornate_borderless_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_BORDERLESS_BRICKS_CTM =
+            register("ornate_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_BORDERLESS_BRICKS_TILES =
             register("overlapping_borderless_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> POLISHED_BORDERLESS_BRICKS =
             register("polished_borderless_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_BORDERLESS_BRICKS_PILLAR =
-            register("simple_borderless_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_BORDERLESS_BRICKS_CTM =
+            register("simple_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> SMOOTH_BORDERLESS_BRICKS_COLUMN =
             register("smooth_borderless_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> THICK_INLAYED_BORDERLESS_BRICKS =
@@ -1780,24 +1720,24 @@ public class ModBlocks {
             register("bordered_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_BRICKS =
             register("brick_bordered_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> CURLY_BRICKS_PILLAR =
-            register("curly_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> CURLY_BRICKS_CTM =
+            register("curly_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> CUT_BRICKS_COLUMN =
             register("cut_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> EDGED_BRICKS_BRICKS =
             register("edged_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> FINE_BRICKS_PILLAR =
-            register("fine_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> FINE_BRICKS_CTM =
+            register("fine_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_BRICKS_BRICKS =
             register("massive_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_BRICKS_PILLAR =
-            register("ornate_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_BRICKS_CTM =
+            register("ornate_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_BRICKS_TILES =
             register("overlapping_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> POLISHED_BRICKS =
             register("polished_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_BRICKS_PILLAR =
-            register("simple_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_BRICKS_CTM =
+            register("simple_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> SMOOTH_BRICKS_COLUMN =
             register("smooth_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> THICK_INLAYED_BRICKS =
@@ -1812,8 +1752,8 @@ public class ModBlocks {
     // ── Brown Concrete ──
     public static final DeferredBlock<Block> BROWN_CONCRETE_PANEL =
             register("brown_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
-    public static final DeferredBlock<Block> BROWN_CONCRETE_PILLAR =
-            register("brown_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
+    public static final DeferredBlock<Block> BROWN_CONCRETE_CTM =
+            register("brown_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_BROWN_CONCRETE =
             register("grill_brown_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_BROWN_CONCRETE =
@@ -1826,20 +1766,20 @@ public class ModBlocks {
             register("wired_brown_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_CONCRETE)));
 
     // ── Brown Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_BROWN_STAINED_GLASS_PILLAR =
-            register("arched_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_BROWN_STAINED_GLASS_CTM =
+            register("arched_brown_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_BROWN_STAINED_GLASS =
             register("circular_brown_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_BROWN_STAINED_GLASS_PILLAR =
-            register("fancy_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_BROWN_STAINED_GLASS_PILLAR =
-            register("ornate_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_BROWN_STAINED_GLASS_PILLAR =
-            register("raster_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_BROWN_STAINED_GLASS_CTM =
+            register("fancy_brown_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_BROWN_STAINED_GLASS_CTM =
+            register("ornate_brown_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_BROWN_STAINED_GLASS_CTM =
+            register("raster_brown_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_BROWN_DIAMOND_STAINED_GLASS =
             register("small_brown_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_BROWN_STAINED_GLASS_PILLAR =
-            register("tiled_brown_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_BROWN_STAINED_GLASS_CTM =
+            register("tiled_brown_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> BROWN_LEADED_STAINED_GLASS =
             register("brown_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_BROWN_STAINED_GLASS =
@@ -1864,8 +1804,8 @@ public class ModBlocks {
     // ── Brown Terracotta ──
     public static final DeferredBlock<Block> BROWN_TERRACOTTA_COLUMN =
             register("brown_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_TERRACOTTA)));
-    public static final DeferredBlock<Block> BROWN_TERRACOTTA_PILLAR =
-            register("brown_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_TERRACOTTA)));
+    public static final DeferredBlock<Block> BROWN_TERRACOTTA_CTM =
+            register("brown_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_TERRACOTTA)));
     public static final DeferredBlock<Block> CIRCULAR_BROWN_TERRACOTTA =
             register("circular_brown_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_TERRACOTTA)));
     public static final DeferredBlock<Block> CURLED_BROWN_TERRACOTTA =
@@ -1894,24 +1834,24 @@ public class ModBlocks {
             register("bordered_calcite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_CALCITE =
             register("brick_bordered_calcite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
-    public static final DeferredBlock<Block> CURLY_CALCITE_PILLAR =
-            register("curly_calcite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> CURLY_CALCITE_CTM =
+            register("curly_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> CUT_CALCITE_COLUMN =
             register("cut_calcite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> EDGED_CALCITE_BRICKS =
             register("edged_calcite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
-    public static final DeferredBlock<Block> FINE_CALCITE_PILLAR =
-            register("fine_calcite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> FINE_CALCITE_CTM =
+            register("fine_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> MASSIVE_CALCITE_BRICKS =
             register("massive_calcite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
-    public static final DeferredBlock<Block> ORNATE_CALCITE_PILLAR =
-            register("ornate_calcite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> ORNATE_CALCITE_CTM =
+            register("ornate_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> OVERLAPPING_CALCITE_TILES =
             register("overlapping_calcite_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> POLISHED_CALCITE =
             register("polished_calcite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
-    public static final DeferredBlock<Block> SIMPLE_CALCITE_PILLAR =
-            register("simple_calcite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> SIMPLE_CALCITE_CTM =
+            register("simple_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> SMOOTH_CALCITE_COLUMN =
             register("smooth_calcite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> THICK_INLAYED_CALCITE =
@@ -1946,24 +1886,24 @@ public class ModBlocks {
             register("bordered_clay", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> BRICK_BORDERED_CLAY =
             register("brick_bordered_clay", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
-    public static final DeferredBlock<Block> CURLY_CLAY_PILLAR =
-            register("curly_clay_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final DeferredBlock<Block> CURLY_CLAY_CTM =
+            register("curly_clay_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> CUT_CLAY_COLUMN =
             register("cut_clay_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> EDGED_CLAY_BRICKS =
             register("edged_clay_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
-    public static final DeferredBlock<Block> FINE_CLAY_PILLAR =
-            register("fine_clay_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final DeferredBlock<Block> FINE_CLAY_CTM =
+            register("fine_clay_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> MASSIVE_CLAY_BRICKS =
             register("massive_clay_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
-    public static final DeferredBlock<Block> ORNATE_CLAY_PILLAR =
-            register("ornate_clay_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final DeferredBlock<Block> ORNATE_CLAY_CTM =
+            register("ornate_clay_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> OVERLAPPING_CLAY_TILES =
             register("overlapping_clay_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> POLISHED_CLAY =
             register("polished_clay", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
-    public static final DeferredBlock<Block> SIMPLE_CLAY_PILLAR =
-            register("simple_clay_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final DeferredBlock<Block> SIMPLE_CLAY_CTM =
+            register("simple_clay_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> SMOOTH_CLAY_COLUMN =
             register("smooth_clay_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
     public static final DeferredBlock<Block> THICK_INLAYED_CLAY =
@@ -1980,24 +1920,24 @@ public class ModBlocks {
             register("bordered_coal_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_COAL_BLOCK =
             register("brick_bordered_coal_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_COAL_BLOCK_PILLAR =
-            register("curly_coal_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_COAL_BLOCK_CTM =
+            register("curly_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> CUT_COAL_BLOCK_COLUMN =
             register("cut_coal_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> EDGED_COAL_BLOCK_BRICKS =
             register("edged_coal_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> FINE_COAL_BLOCK_PILLAR =
-            register("fine_coal_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> FINE_COAL_BLOCK_CTM =
+            register("fine_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_COAL_BLOCK_BRICKS =
             register("massive_coal_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_COAL_BLOCK_PILLAR =
-            register("ornate_coal_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_COAL_BLOCK_CTM =
+            register("ornate_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_COAL_BLOCK_TILES =
             register("overlapping_coal_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_COAL_BLOCK =
             register("polished_coal_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_COAL_BLOCK_PILLAR =
-            register("simple_coal_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_COAL_BLOCK_CTM =
+            register("simple_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_COAL_BLOCK_COLUMN =
             register("smooth_coal_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_COAL_BLOCK =
@@ -2014,24 +1954,24 @@ public class ModBlocks {
             register("bordered_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_COBBLESTONE =
             register("brick_bordered_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> CURLY_COBBLESTONE_PILLAR =
-            register("curly_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> CURLY_COBBLESTONE_CTM =
+            register("curly_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> CUT_COBBLESTONE_COLUMN =
             register("cut_cobblestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> EDGED_COBBLESTONE_BRICKS =
             register("edged_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> FINE_COBBLESTONE_PILLAR =
-            register("fine_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> FINE_COBBLESTONE_CTM =
+            register("fine_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> MASSIVE_COBBLESTONE_BRICKS =
             register("massive_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> ORNATE_COBBLESTONE_PILLAR =
-            register("ornate_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> ORNATE_COBBLESTONE_CTM =
+            register("ornate_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_COBBLESTONE_TILES =
             register("overlapping_cobblestone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> POLISHED_COBBLESTONE =
             register("polished_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> SIMPLE_COBBLESTONE_PILLAR =
-            register("simple_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> SIMPLE_COBBLESTONE_CTM =
+            register("simple_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> SMOOTH_COBBLESTONE_COLUMN =
             register("smooth_cobblestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_COBBLESTONE =
@@ -2066,24 +2006,24 @@ public class ModBlocks {
             register("bordered_crying_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> BRICK_BORDERED_CRYING_OBSIDIAN =
             register("brick_bordered_crying_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
-    public static final DeferredBlock<Block> CURLY_CRYING_OBSIDIAN_PILLAR =
-            register("curly_crying_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
+    public static final DeferredBlock<Block> CURLY_CRYING_OBSIDIAN_CTM =
+            register("curly_crying_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> CUT_CRYING_OBSIDIAN_COLUMN =
             register("cut_crying_obsidian_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> EDGED_CRYING_OBSIDIAN_BRICKS =
             register("edged_crying_obsidian_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
-    public static final DeferredBlock<Block> FINE_CRYING_OBSIDIAN_PILLAR =
-            register("fine_crying_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
+    public static final DeferredBlock<Block> FINE_CRYING_OBSIDIAN_CTM =
+            register("fine_crying_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> MASSIVE_CRYING_OBSIDIAN_BRICKS =
             register("massive_crying_obsidian_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
-    public static final DeferredBlock<Block> ORNATE_CRYING_OBSIDIAN_PILLAR =
-            register("ornate_crying_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
+    public static final DeferredBlock<Block> ORNATE_CRYING_OBSIDIAN_CTM =
+            register("ornate_crying_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> OVERLAPPING_CRYING_OBSIDIAN_TILES =
             register("overlapping_crying_obsidian_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> POLISHED_CRYING_OBSIDIAN =
             register("polished_crying_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
-    public static final DeferredBlock<Block> SIMPLE_CRYING_OBSIDIAN_PILLAR =
-            register("simple_crying_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
+    public static final DeferredBlock<Block> SIMPLE_CRYING_OBSIDIAN_CTM =
+            register("simple_crying_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> SMOOTH_CRYING_OBSIDIAN_COLUMN =
             register("smooth_crying_obsidian_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> THICK_INLAYED_CRYING_OBSIDIAN =
@@ -2098,8 +2038,8 @@ public class ModBlocks {
     // ── Cyan Concrete ──
     public static final DeferredBlock<Block> CYAN_CONCRETE_PANEL =
             register("cyan_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
-    public static final DeferredBlock<Block> CYAN_CONCRETE_PILLAR =
-            register("cyan_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
+    public static final DeferredBlock<Block> CYAN_CONCRETE_CTM =
+            register("cyan_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_CYAN_CONCRETE =
             register("grill_cyan_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_CYAN_CONCRETE =
@@ -2112,20 +2052,20 @@ public class ModBlocks {
             register("wired_cyan_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_CONCRETE)));
 
     // ── Cyan Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_CYAN_STAINED_GLASS_PILLAR =
-            register("arched_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_CYAN_STAINED_GLASS_CTM =
+            register("arched_cyan_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_CYAN_STAINED_GLASS =
             register("circular_cyan_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_CYAN_STAINED_GLASS_PILLAR =
-            register("fancy_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_CYAN_STAINED_GLASS_PILLAR =
-            register("ornate_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_CYAN_STAINED_GLASS_PILLAR =
-            register("raster_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_CYAN_STAINED_GLASS_CTM =
+            register("fancy_cyan_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_CYAN_STAINED_GLASS_CTM =
+            register("ornate_cyan_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_CYAN_STAINED_GLASS_CTM =
+            register("raster_cyan_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_CYAN_DIAMOND_STAINED_GLASS =
             register("small_cyan_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_CYAN_STAINED_GLASS_PILLAR =
-            register("tiled_cyan_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_CYAN_STAINED_GLASS_CTM =
+            register("tiled_cyan_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> CYAN_LEADED_STAINED_GLASS =
             register("cyan_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_CYAN_STAINED_GLASS =
@@ -2154,8 +2094,8 @@ public class ModBlocks {
             register("curled_cyan_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_TERRACOTTA)));
     public static final DeferredBlock<Block> CYAN_TERRACOTTA_COLUMN =
             register("cyan_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_TERRACOTTA)));
-    public static final DeferredBlock<Block> CYAN_TERRACOTTA_PILLAR =
-            register("cyan_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_TERRACOTTA)));
+    public static final DeferredBlock<Block> CYAN_TERRACOTTA_CTM =
+            register("cyan_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_TERRACOTTA)));
     public static final DeferredBlock<Block> HEXAGONICAL_CYAN_TERRACOTTA =
             register("hexagonical_cyan_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_TERRACOTTA)));
     public static final DeferredBlock<Block> INSCRIBED_CYAN_TERRACOTTA =
@@ -2198,24 +2138,24 @@ public class ModBlocks {
             register("bordered_dark_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_DARK_PRISMARINE =
             register("brick_bordered_dark_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
-    public static final DeferredBlock<Block> CURLY_DARK_PRISMARINE_PILLAR =
-            register("curly_dark_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
+    public static final DeferredBlock<Block> CURLY_DARK_PRISMARINE_CTM =
+            register("curly_dark_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> CUT_DARK_PRISMARINE_COLUMN =
             register("cut_dark_prismarine_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> EDGED_DARK_PRISMARINE_BRICKS =
             register("edged_dark_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
-    public static final DeferredBlock<Block> FINE_DARK_PRISMARINE_PILLAR =
-            register("fine_dark_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
+    public static final DeferredBlock<Block> FINE_DARK_PRISMARINE_CTM =
+            register("fine_dark_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> MASSIVE_DARK_PRISMARINE_BRICKS =
             register("massive_dark_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
-    public static final DeferredBlock<Block> ORNATE_DARK_PRISMARINE_PILLAR =
-            register("ornate_dark_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
+    public static final DeferredBlock<Block> ORNATE_DARK_PRISMARINE_CTM =
+            register("ornate_dark_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> OVERLAPPING_DARK_PRISMARINE_TILES =
             register("overlapping_dark_prismarine_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> POLISHED_DARK_PRISMARINE =
             register("polished_dark_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
-    public static final DeferredBlock<Block> SIMPLE_DARK_PRISMARINE_PILLAR =
-            register("simple_dark_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
+    public static final DeferredBlock<Block> SIMPLE_DARK_PRISMARINE_CTM =
+            register("simple_dark_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> SMOOTH_DARK_PRISMARINE_COLUMN =
             register("smooth_dark_prismarine_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> THICK_INLAYED_DARK_PRISMARINE =
@@ -2232,24 +2172,24 @@ public class ModBlocks {
             register("bordered_deepslate", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_DEEPSLATE =
             register("brick_bordered_deepslate", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> CURLY_DEEPSLATE_PILLAR =
-            register("curly_deepslate_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> CURLY_DEEPSLATE_CTM =
+            register("curly_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> CUT_DEEPSLATE_COLUMN =
             register("cut_deepslate_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> EDGED_DEEPSLATE_BRICKS =
             register("edged_deepslate_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> FINE_DEEPSLATE_PILLAR =
-            register("fine_deepslate_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> FINE_DEEPSLATE_CTM =
+            register("fine_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> MASSIVE_DEEPSLATE_BRICKS =
             register("massive_deepslate_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> ORNATE_DEEPSLATE_PILLAR =
-            register("ornate_deepslate_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> ORNATE_DEEPSLATE_CTM =
+            register("ornate_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> OVERLAPPING_DEEPSLATE_TILES =
             register("overlapping_deepslate_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> POLISHED_DEEPSLATE =
             register("polished_deepslate", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> SIMPLE_DEEPSLATE_PILLAR =
-            register("simple_deepslate_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> SIMPLE_DEEPSLATE_CTM =
+            register("simple_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> SMOOTH_DEEPSLATE_COLUMN =
             register("smooth_deepslate_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> THICK_INLAYED_DEEPSLATE =
@@ -2266,22 +2206,22 @@ public class ModBlocks {
             register("bordered_diorite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_DIORITE =
             register("brick_bordered_diorite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
-    public static final DeferredBlock<Block> CURLY_DIORITE_PILLAR =
-            register("curly_diorite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+    public static final DeferredBlock<Block> CURLY_DIORITE_CTM =
+            register("curly_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> CUT_DIORITE_COLUMN =
             register("cut_diorite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> EDGED_DIORITE_BRICKS =
             register("edged_diorite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
-    public static final DeferredBlock<Block> FINE_DIORITE_PILLAR =
-            register("fine_diorite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+    public static final DeferredBlock<Block> FINE_DIORITE_CTM =
+            register("fine_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> MASSIVE_DIORITE_BRICKS =
             register("massive_diorite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
-    public static final DeferredBlock<Block> ORNATE_DIORITE_PILLAR =
-            register("ornate_diorite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+    public static final DeferredBlock<Block> ORNATE_DIORITE_CTM =
+            register("ornate_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> OVERLAPPING_DIORITE_TILES =
             register("overlapping_diorite_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
-    public static final DeferredBlock<Block> SIMPLE_DIORITE_PILLAR =
-            register("simple_diorite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+    public static final DeferredBlock<Block> SIMPLE_DIORITE_CTM =
+            register("simple_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> SMOOTH_DIORITE_COLUMN =
             register("smooth_diorite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> THICK_INLAYED_DIORITE =
@@ -2298,24 +2238,24 @@ public class ModBlocks {
             register("bordered_dirt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> BRICK_BORDERED_DIRT =
             register("brick_bordered_dirt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> CURLY_DIRT_PILLAR =
-            register("curly_dirt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    public static final DeferredBlock<Block> CURLY_DIRT_CTM =
+            register("curly_dirt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> CUT_DIRT_COLUMN =
             register("cut_dirt_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> EDGED_DIRT_BRICKS =
             register("edged_dirt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> FINE_DIRT_PILLAR =
-            register("fine_dirt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    public static final DeferredBlock<Block> FINE_DIRT_CTM =
+            register("fine_dirt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> MASSIVE_DIRT_BRICKS =
             register("massive_dirt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> ORNATE_DIRT_PILLAR =
-            register("ornate_dirt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    public static final DeferredBlock<Block> ORNATE_DIRT_CTM =
+            register("ornate_dirt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> OVERLAPPING_DIRT_TILES =
             register("overlapping_dirt_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> POLISHED_DIRT =
             register("polished_dirt", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> SIMPLE_DIRT_PILLAR =
-            register("simple_dirt_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    public static final DeferredBlock<Block> SIMPLE_DIRT_CTM =
+            register("simple_dirt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> SMOOTH_DIRT_COLUMN =
             register("smooth_dirt_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
     public static final DeferredBlock<Block> THICK_INLAYED_DIRT =
@@ -2332,24 +2272,24 @@ public class ModBlocks {
             register("bordered_dripstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_DRIPSTONE_BLOCK =
             register("brick_bordered_dripstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_DRIPSTONE_BLOCK_PILLAR =
-            register("curly_dripstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_DRIPSTONE_BLOCK_CTM =
+            register("curly_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> CUT_DRIPSTONE_BLOCK_COLUMN =
             register("cut_dripstone_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> EDGED_DRIPSTONE_BLOCK_BRICKS =
             register("edged_dripstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
-    public static final DeferredBlock<Block> FINE_DRIPSTONE_BLOCK_PILLAR =
-            register("fine_dripstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
+    public static final DeferredBlock<Block> FINE_DRIPSTONE_BLOCK_CTM =
+            register("fine_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_DRIPSTONE_BLOCK_BRICKS =
             register("massive_dripstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_DRIPSTONE_BLOCK_PILLAR =
-            register("ornate_dripstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_DRIPSTONE_BLOCK_CTM =
+            register("ornate_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_DRIPSTONE_BLOCK_TILES =
             register("overlapping_dripstone_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_DRIPSTONE_BLOCK =
             register("polished_dripstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_DRIPSTONE_BLOCK_PILLAR =
-            register("simple_dripstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_DRIPSTONE_BLOCK_CTM =
+            register("simple_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_DRIPSTONE_BLOCK_COLUMN =
             register("smooth_dripstone_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_DRIPSTONE_BLOCK =
@@ -2366,24 +2306,24 @@ public class ModBlocks {
             register("bordered_end_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_END_STONE =
             register("brick_bordered_end_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
-    public static final DeferredBlock<Block> CURLY_END_STONE_PILLAR =
-            register("curly_end_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    public static final DeferredBlock<Block> CURLY_END_STONE_CTM =
+            register("curly_end_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> CUT_END_STONE_COLUMN =
             register("cut_end_stone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> EDGED_END_STONE_BRICKS =
             register("edged_end_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
-    public static final DeferredBlock<Block> FINE_END_STONE_PILLAR =
-            register("fine_end_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    public static final DeferredBlock<Block> FINE_END_STONE_CTM =
+            register("fine_end_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> MASSIVE_END_STONE_BRICKS =
             register("massive_end_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
-    public static final DeferredBlock<Block> ORNATE_END_STONE_PILLAR =
-            register("ornate_end_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    public static final DeferredBlock<Block> ORNATE_END_STONE_CTM =
+            register("ornate_end_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> OVERLAPPING_END_STONE_TILES =
             register("overlapping_end_stone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> POLISHED_END_STONE =
             register("polished_end_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
-    public static final DeferredBlock<Block> SIMPLE_END_STONE_PILLAR =
-            register("simple_end_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    public static final DeferredBlock<Block> SIMPLE_END_STONE_CTM =
+            register("simple_end_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> SMOOTH_END_STONE_COLUMN =
             register("smooth_end_stone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_END_STONE =
@@ -2400,24 +2340,24 @@ public class ModBlocks {
             register("bordered_gilded_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_GILDED_BLACKSTONE =
             register("brick_bordered_gilded_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
-    public static final DeferredBlock<Block> CURLY_GILDED_BLACKSTONE_PILLAR =
-            register("curly_gilded_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
+    public static final DeferredBlock<Block> CURLY_GILDED_BLACKSTONE_CTM =
+            register("curly_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> CUT_GILDED_BLACKSTONE_COLUMN =
             register("cut_gilded_blackstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> EDGED_GILDED_BLACKSTONE_BRICKS =
             register("edged_gilded_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
-    public static final DeferredBlock<Block> FINE_GILDED_BLACKSTONE_PILLAR =
-            register("fine_gilded_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
+    public static final DeferredBlock<Block> FINE_GILDED_BLACKSTONE_CTM =
+            register("fine_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> MASSIVE_GILDED_BLACKSTONE_BRICKS =
             register("massive_gilded_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
-    public static final DeferredBlock<Block> ORNATE_GILDED_BLACKSTONE_PILLAR =
-            register("ornate_gilded_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
+    public static final DeferredBlock<Block> ORNATE_GILDED_BLACKSTONE_CTM =
+            register("ornate_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_GILDED_BLACKSTONE_TILES =
             register("overlapping_gilded_blackstone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> POLISHED_GILDED_BLACKSTONE =
             register("polished_gilded_blackstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
-    public static final DeferredBlock<Block> SIMPLE_GILDED_BLACKSTONE_PILLAR =
-            register("simple_gilded_blackstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
+    public static final DeferredBlock<Block> SIMPLE_GILDED_BLACKSTONE_CTM =
+            register("simple_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> SMOOTH_GILDED_BLACKSTONE_COLUMN =
             register("smooth_gilded_blackstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_GILDED_BLACKSTONE =
@@ -2434,24 +2374,24 @@ public class ModBlocks {
             register("bordered_granite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_GRANITE =
             register("brick_bordered_granite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
-    public static final DeferredBlock<Block> CURLY_GRANITE_PILLAR =
-            register("curly_granite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+    public static final DeferredBlock<Block> CURLY_GRANITE_CTM =
+            register("curly_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> CUT_GRANITE_COLUMN =
             register("cut_granite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> EDGED_GRANITE_BRICKS =
             register("edged_granite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
-    public static final DeferredBlock<Block> FINE_GRANITE_PILLAR =
-            register("fine_granite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+    public static final DeferredBlock<Block> FINE_GRANITE_CTM =
+            register("fine_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> GRANITE_PRISMARINE =
             register("granite_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> MASSIVE_GRANITE_BRICKS =
             register("massive_granite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
-    public static final DeferredBlock<Block> ORNATE_GRANITE_PILLAR =
-            register("ornate_granite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+    public static final DeferredBlock<Block> ORNATE_GRANITE_CTM =
+            register("ornate_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> OVERLAPPING_GRANITE_TILES =
             register("overlapping_granite_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
-    public static final DeferredBlock<Block> SIMPLE_GRANITE_PILLAR =
-            register("simple_granite_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+    public static final DeferredBlock<Block> SIMPLE_GRANITE_CTM =
+            register("simple_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> SMOOTH_GRANITE_COLUMN =
             register("smooth_granite_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> THICK_INLAYED_GRANITE =
@@ -2466,8 +2406,8 @@ public class ModBlocks {
     // ── Gray Concrete ──
     public static final DeferredBlock<Block> GRAY_CONCRETE_PANEL =
             register("gray_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
-    public static final DeferredBlock<Block> GRAY_CONCRETE_PILLAR =
-            register("gray_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
+    public static final DeferredBlock<Block> GRAY_CONCRETE_CTM =
+            register("gray_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_GRAY_CONCRETE =
             register("grill_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_GRAY_CONCRETE =
@@ -2482,20 +2422,20 @@ public class ModBlocks {
             register("wired_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
 
     // ── Gray Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_GRAY_STAINED_GLASS_PILLAR =
-            register("arched_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_GRAY_STAINED_GLASS_CTM =
+            register("arched_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_GRAY_STAINED_GLASS =
             register("circular_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_GRAY_STAINED_GLASS_PILLAR =
-            register("fancy_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_GRAY_STAINED_GLASS_PILLAR =
-            register("ornate_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_GRAY_STAINED_GLASS_PILLAR =
-            register("raster_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_GRAY_STAINED_GLASS_CTM =
+            register("fancy_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_GRAY_STAINED_GLASS_CTM =
+            register("ornate_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_GRAY_STAINED_GLASS_CTM =
+            register("raster_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_GRAY_DIAMOND_STAINED_GLASS =
             register("small_gray_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_GRAY_STAINED_GLASS_PILLAR =
-            register("tiled_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_GRAY_STAINED_GLASS_CTM =
+            register("tiled_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> GRAY_LEADED_STAINED_GLASS =
             register("gray_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_GRAY_STAINED_GLASS =
@@ -2524,8 +2464,8 @@ public class ModBlocks {
             register("curled_gray_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> GRAY_TERRACOTTA_COLUMN =
             register("gray_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_TERRACOTTA)));
-    public static final DeferredBlock<Block> GRAY_TERRACOTTA_PILLAR =
-            register("gray_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_TERRACOTTA)));
+    public static final DeferredBlock<Block> GRAY_TERRACOTTA_CTM =
+            register("gray_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> HEXAGONICAL_GRAY_TERRACOTTA =
             register("hexagonical_gray_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> INSCRIBED_GRAY_TERRACOTTA =
@@ -2548,8 +2488,8 @@ public class ModBlocks {
     // ── Green Concrete ──
     public static final DeferredBlock<Block> GREEN_CONCRETE_PANEL =
             register("green_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
-    public static final DeferredBlock<Block> GREEN_CONCRETE_PILLAR =
-            register("green_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
+    public static final DeferredBlock<Block> GREEN_CONCRETE_CTM =
+            register("green_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
     public static final DeferredBlock<Block> GRILL_GREEN_CONCRETE =
             register("grill_green_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_GREEN_CONCRETE =
@@ -2562,20 +2502,20 @@ public class ModBlocks {
             register("wired_green_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_CONCRETE)));
 
     // ── Green Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_GREEN_STAINED_GLASS_PILLAR =
-            register("arched_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_GREEN_STAINED_GLASS_CTM =
+            register("arched_green_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_GREEN_STAINED_GLASS =
             register("circular_green_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_GREEN_STAINED_GLASS_PILLAR =
-            register("fancy_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_GREEN_STAINED_GLASS_PILLAR =
-            register("ornate_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_GREEN_STAINED_GLASS_PILLAR =
-            register("raster_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_GREEN_STAINED_GLASS_CTM =
+            register("fancy_green_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_GREEN_STAINED_GLASS_CTM =
+            register("ornate_green_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_GREEN_STAINED_GLASS_CTM =
+            register("raster_green_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_GREEN_DIAMOND_STAINED_GLASS =
             register("small_green_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_GREEN_STAINED_GLASS_PILLAR =
-            register("tiled_green_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_GREEN_STAINED_GLASS_CTM =
+            register("tiled_green_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> GREEN_LEADED_STAINED_GLASS =
             register("green_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_GREEN_STAINED_GLASS =
@@ -2604,8 +2544,8 @@ public class ModBlocks {
             register("curled_green_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
     public static final DeferredBlock<Block> GREEN_TERRACOTTA_COLUMN =
             register("green_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
-    public static final DeferredBlock<Block> GREEN_TERRACOTTA_PILLAR =
-            register("green_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
+    public static final DeferredBlock<Block> GREEN_TERRACOTTA_CTM =
+            register("green_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
     public static final DeferredBlock<Block> HEXAGONICAL_GREEN_TERRACOTTA =
             register("hexagonical_green_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_TERRACOTTA)));
     public static final DeferredBlock<Block> INSCRIBED_GREEN_TERRACOTTA =
@@ -2630,24 +2570,24 @@ public class ModBlocks {
             register("bordered_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_ICE =
             register("brick_bordered_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
-    public static final DeferredBlock<Block> CURLY_ICE_PILLAR =
-            register("curly_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
+    public static final DeferredBlock<Block> CURLY_ICE_CTM =
+            register("curly_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> CUT_ICE_COLUMN =
             register("cut_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> EDGED_ICE_BRICKS =
             register("edged_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
-    public static final DeferredBlock<Block> FINE_ICE_PILLAR =
-            register("fine_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
+    public static final DeferredBlock<Block> FINE_ICE_CTM =
+            register("fine_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> MASSIVE_ICE_BRICKS =
             register("massive_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
-    public static final DeferredBlock<Block> ORNATE_ICE_PILLAR =
-            register("ornate_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
+    public static final DeferredBlock<Block> ORNATE_ICE_CTM =
+            register("ornate_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> OVERLAPPING_ICE_TILES =
             register("overlapping_ice_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> POLISHED_ICE =
             register("polished_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
-    public static final DeferredBlock<Block> SIMPLE_ICE_PILLAR =
-            register("simple_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
+    public static final DeferredBlock<Block> SIMPLE_ICE_CTM =
+            register("simple_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> SMOOTH_ICE_COLUMN =
             register("smooth_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> THICK_INLAYED_ICE =
@@ -2680,24 +2620,24 @@ public class ModBlocks {
             register("bordered_lapis_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_LAPIS_BLOCK =
             register("brick_bordered_lapis_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_LAPIS_BLOCK_PILLAR =
-            register("curly_lapis_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_LAPIS_BLOCK_CTM =
+            register("curly_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> CUT_LAPIS_BLOCK_COLUMN =
             register("cut_lapis_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> EDGED_LAPIS_BLOCK_BRICKS =
             register("edged_lapis_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
-    public static final DeferredBlock<Block> FINE_LAPIS_BLOCK_PILLAR =
-            register("fine_lapis_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> FINE_LAPIS_BLOCK_CTM =
+            register("fine_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_LAPIS_BLOCK_BRICKS =
             register("massive_lapis_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_LAPIS_BLOCK_PILLAR =
-            register("ornate_lapis_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_LAPIS_BLOCK_CTM =
+            register("ornate_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_LAPIS_BLOCK_TILES =
             register("overlapping_lapis_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_LAPIS_BLOCK =
             register("polished_lapis_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_LAPIS_BLOCK_PILLAR =
-            register("simple_lapis_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_LAPIS_BLOCK_CTM =
+            register("simple_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_LAPIS_BLOCK_COLUMN =
             register("smooth_lapis_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_LAPIS_BLOCK =
@@ -2710,20 +2650,20 @@ public class ModBlocks {
             register("tiny_brick_bordered_lapis_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
 
     // ── Leaded Glass ──
-    public static final DeferredBlock<Block> ARCHED_LEADED_GLASS_PILLAR =
-            register("arched_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> ARCHED_LEADED_GLASS_CTM =
+            register("arched_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> CIRCULAR_LEADED_STAINED_GLASS =
             register("circular_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> CLEAR_LEADED_GLASS_PILLAR =
-            register("clear_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> CLEAR_LEADED_GLASS_CTM =
+            register("clear_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> FANCY_LEADED_GLASS =
             register("fancy_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> ORNATE_LEADED_GLASS_PILLAR =
-            register("ornate_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> RASTER_LEADED_GLASS_PILLAR =
-            register("raster_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-    public static final DeferredBlock<Block> SMALL_DIAMOND_LEADED_GLASS_PILLAR =
-            register("small_diamond_leaded_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> ORNATE_LEADED_GLASS_CTM =
+            register("ornate_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> RASTER_LEADED_GLASS_CTM =
+            register("raster_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> SMALL_DIAMOND_LEADED_GLASS_CTM =
+            register("small_diamond_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> CLEAR_LEADED_GLASS =
             register("clear_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> LARGE_DIAMOND_LEADED_GLASS =
@@ -2746,8 +2686,8 @@ public class ModBlocks {
             register("grill_light_blue_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
     public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_PANEL =
             register("light_blue_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
-    public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_PILLAR =
-            register("light_blue_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
+    public static final DeferredBlock<Block> LIGHT_BLUE_CONCRETE_CTM =
+            register("light_blue_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_LIGHT_BLUE_CONCRETE =
             register("pegged_light_blue_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_LIGHT_BLUE_CONCRETE =
@@ -2758,20 +2698,20 @@ public class ModBlocks {
             register("wired_light_blue_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
 
     // ── Light Blue Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-            register("arched_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM =
+            register("arched_light_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_LIGHT_BLUE_STAINED_GLASS =
             register("circular_light_blue_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-            register("fancy_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-            register("ornate_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-            register("raster_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_LIGHT_BLUE_STAINED_GLASS_CTM =
+            register("fancy_light_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_LIGHT_BLUE_STAINED_GLASS_CTM =
+            register("ornate_light_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_LIGHT_BLUE_STAINED_GLASS_CTM =
+            register("raster_light_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS =
             register("small_light_blue_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_LIGHT_BLUE_STAINED_GLASS_PILLAR =
-            register("tiled_light_blue_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_LIGHT_BLUE_STAINED_GLASS_CTM =
+            register("tiled_light_blue_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> LIGHT_BLUE_LEADED_STAINED_GLASS =
             register("light_blue_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIGHT_BLUE_STAINED_GLASS =
@@ -2804,8 +2744,8 @@ public class ModBlocks {
             register("inscribed_light_blue_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)));
     public static final DeferredBlock<Block> LIGHT_BLUE_TERRACOTTA_COLUMN =
             register("light_blue_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)));
-    public static final DeferredBlock<Block> LIGHT_BLUE_TERRACOTTA_PILLAR =
-            register("light_blue_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)));
+    public static final DeferredBlock<Block> LIGHT_BLUE_TERRACOTTA_CTM =
+            register("light_blue_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_LIGHT_BLUE_TERRACOTTA_TILES =
             register("small_light_blue_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_LIGHT_BLUE_TERRACOTTA =
@@ -2826,8 +2766,8 @@ public class ModBlocks {
             register("grill_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
     public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_PANEL =
             register("light_gray_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
-    public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_PILLAR =
-            register("light_gray_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
+    public static final DeferredBlock<Block> LIGHT_GRAY_CONCRETE_CTM =
+            register("light_gray_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_LIGHT_GRAY_CONCRETE =
             register("pegged_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_LIGHT_GRAY_CONCRETE =
@@ -2836,20 +2776,20 @@ public class ModBlocks {
             register("striped_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
 
     // ── Light Gray Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-            register("arched_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM =
+            register("arched_light_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_LIGHT_GRAY_STAINED_GLASS =
             register("circular_light_gray_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-            register("fancy_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-            register("ornate_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-            register("raster_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_LIGHT_GRAY_STAINED_GLASS_CTM =
+            register("fancy_light_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_LIGHT_GRAY_STAINED_GLASS_CTM =
+            register("ornate_light_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_LIGHT_GRAY_STAINED_GLASS_CTM =
+            register("raster_light_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS =
             register("small_light_gray_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_LIGHT_GRAY_STAINED_GLASS_PILLAR =
-            register("tiled_light_gray_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_LIGHT_GRAY_STAINED_GLASS_CTM =
+            register("tiled_light_gray_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> LIGHT_GRAY_LEADED_STAINED_GLASS =
             register("light_gray_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIGHT_GRAY_STAINED_GLASS =
@@ -2882,8 +2822,8 @@ public class ModBlocks {
             register("inscribed_light_gray_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> LIGHT_GRAY_TERRACOTTA_COLUMN =
             register("light_gray_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_TERRACOTTA)));
-    public static final DeferredBlock<Block> LIGHT_GRAY_TERRACOTTA_PILLAR =
-            register("light_gray_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_TERRACOTTA)));
+    public static final DeferredBlock<Block> LIGHT_GRAY_TERRACOTTA_CTM =
+            register("light_gray_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_LIGHT_GRAY_TERRACOTTA_TILES =
             register("small_light_gray_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_LIGHT_GRAY_TERRACOTTA =
@@ -2904,8 +2844,8 @@ public class ModBlocks {
             register("grill_lime_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
     public static final DeferredBlock<Block> LIME_CONCRETE_PANEL =
             register("lime_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
-    public static final DeferredBlock<Block> LIME_CONCRETE_PILLAR =
-            register("lime_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
+    public static final DeferredBlock<Block> LIME_CONCRETE_CTM =
+            register("lime_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_LIME_CONCRETE =
             register("pegged_lime_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_LIME_CONCRETE =
@@ -2916,20 +2856,20 @@ public class ModBlocks {
             register("wired_lime_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
 
     // ── Lime Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_LIME_STAINED_GLASS_PILLAR =
-            register("arched_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_LIME_STAINED_GLASS_CTM =
+            register("arched_lime_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_LIME_STAINED_GLASS =
             register("circular_lime_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_LIME_STAINED_GLASS_PILLAR =
-            register("fancy_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_LIME_STAINED_GLASS_PILLAR =
-            register("ornate_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_LIME_STAINED_GLASS_PILLAR =
-            register("raster_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_LIME_STAINED_GLASS_CTM =
+            register("fancy_lime_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_LIME_STAINED_GLASS_CTM =
+            register("ornate_lime_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_LIME_STAINED_GLASS_CTM =
+            register("raster_lime_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_LIME_DIAMOND_STAINED_GLASS =
             register("small_lime_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_LIME_STAINED_GLASS_PILLAR =
-            register("tiled_lime_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_LIME_STAINED_GLASS_CTM =
+            register("tiled_lime_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> LIME_LEADED_STAINED_GLASS =
             register("lime_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_LIME_STAINED_GLASS =
@@ -2962,8 +2902,8 @@ public class ModBlocks {
             register("inscribed_lime_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)));
     public static final DeferredBlock<Block> LIME_TERRACOTTA_COLUMN =
             register("lime_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)));
-    public static final DeferredBlock<Block> LIME_TERRACOTTA_PILLAR =
-            register("lime_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)));
+    public static final DeferredBlock<Block> LIME_TERRACOTTA_CTM =
+            register("lime_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_LIME_TERRACOTTA_TILES =
             register("small_lime_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_LIME_TERRACOTTA =
@@ -2984,24 +2924,24 @@ public class ModBlocks {
             register("bordered_lodestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_LODESTONE =
             register("brick_bordered_lodestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
-    public static final DeferredBlock<Block> CURLY_LODESTONE_PILLAR =
-            register("curly_lodestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
+    public static final DeferredBlock<Block> CURLY_LODESTONE_CTM =
+            register("curly_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> CUT_LODESTONE_COLUMN =
             register("cut_lodestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> EDGED_LODESTONE_BRICKS =
             register("edged_lodestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
-    public static final DeferredBlock<Block> FINE_LODESTONE_PILLAR =
-            register("fine_lodestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
+    public static final DeferredBlock<Block> FINE_LODESTONE_CTM =
+            register("fine_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> MASSIVE_LODESTONE_BRICKS =
             register("massive_lodestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
-    public static final DeferredBlock<Block> ORNATE_LODESTONE_PILLAR =
-            register("ornate_lodestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
+    public static final DeferredBlock<Block> ORNATE_LODESTONE_CTM =
+            register("ornate_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_LODESTONE_TILES =
             register("overlapping_lodestone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> POLISHED_LODESTONE =
             register("polished_lodestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
-    public static final DeferredBlock<Block> SIMPLE_LODESTONE_PILLAR =
-            register("simple_lodestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
+    public static final DeferredBlock<Block> SIMPLE_LODESTONE_CTM =
+            register("simple_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> SMOOTH_LODESTONE_COLUMN =
             register("smooth_lodestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_LODESTONE =
@@ -3018,8 +2958,8 @@ public class ModBlocks {
             register("grill_magenta_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
     public static final DeferredBlock<Block> MAGENTA_CONCRETE_PANEL =
             register("magenta_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
-    public static final DeferredBlock<Block> MAGENTA_CONCRETE_PILLAR =
-            register("magenta_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
+    public static final DeferredBlock<Block> MAGENTA_CONCRETE_CTM =
+            register("magenta_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_MAGENTA_CONCRETE =
             register("pegged_magenta_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_MAGENTA_CONCRETE =
@@ -3030,20 +2970,20 @@ public class ModBlocks {
             register("wired_magenta_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_CONCRETE)));
 
     // ── Magenta Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_MAGENTA_STAINED_GLASS_PILLAR =
-            register("arched_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_MAGENTA_STAINED_GLASS_CTM =
+            register("arched_magenta_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_MAGENTA_STAINED_GLASS =
             register("circular_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_MAGENTA_STAINED_GLASS_PILLAR =
-            register("fancy_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_MAGENTA_STAINED_GLASS_PILLAR =
-            register("ornate_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_MAGENTA_STAINED_GLASS_PILLAR =
-            register("raster_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_MAGENTA_STAINED_GLASS_CTM =
+            register("fancy_magenta_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_MAGENTA_STAINED_GLASS_CTM =
+            register("ornate_magenta_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_MAGENTA_STAINED_GLASS_CTM =
+            register("raster_magenta_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_MAGENTA_DIAMOND_STAINED_GLASS =
             register("small_magenta_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_MAGENTA_STAINED_GLASS_PILLAR =
-            register("tiled_magenta_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_MAGENTA_STAINED_GLASS_CTM =
+            register("tiled_magenta_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> MAGENTA_LEADED_STAINED_GLASS =
             register("magenta_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_MAGENTA_STAINED_GLASS =
@@ -3076,8 +3016,8 @@ public class ModBlocks {
             register("inscribed_magenta_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)));
     public static final DeferredBlock<Block> MAGENTA_TERRACOTTA_COLUMN =
             register("magenta_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)));
-    public static final DeferredBlock<Block> MAGENTA_TERRACOTTA_PILLAR =
-            register("magenta_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)));
+    public static final DeferredBlock<Block> MAGENTA_TERRACOTTA_CTM =
+            register("magenta_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_MAGENTA_TERRACOTTA_TILES =
             register("small_magenta_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_MAGENTA_TERRACOTTA =
@@ -3098,24 +3038,24 @@ public class ModBlocks {
             register("bordered_magma_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_MAGMA_BLOCK =
             register("brick_bordered_magma_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_MAGMA_BLOCK_PILLAR =
-            register("curly_magma_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_MAGMA_BLOCK_CTM =
+            register("curly_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> CUT_MAGMA_BLOCK_COLUMN =
             register("cut_magma_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> EDGED_MAGMA_BLOCK_BRICKS =
             register("edged_magma_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
-    public static final DeferredBlock<Block> FINE_MAGMA_BLOCK_PILLAR =
-            register("fine_magma_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
+    public static final DeferredBlock<Block> FINE_MAGMA_BLOCK_CTM =
+            register("fine_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_MAGMA_BLOCK_BRICKS =
             register("massive_magma_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_MAGMA_BLOCK_PILLAR =
-            register("ornate_magma_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_MAGMA_BLOCK_CTM =
+            register("ornate_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_MAGMA_BLOCK_TILES =
             register("overlapping_magma_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_MAGMA_BLOCK =
             register("polished_magma_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_MAGMA_BLOCK_PILLAR =
-            register("simple_magma_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_MAGMA_BLOCK_CTM =
+            register("simple_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_MAGMA_BLOCK_COLUMN =
             register("smooth_magma_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_MAGMA_BLOCK =
@@ -3150,24 +3090,24 @@ public class ModBlocks {
             register("bordered_mossy_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_MOSSY_COBBLESTONE =
             register("brick_bordered_mossy_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
-    public static final DeferredBlock<Block> CURLY_MOSSY_COBBLESTONE_PILLAR =
-            register("curly_mossy_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+    public static final DeferredBlock<Block> CURLY_MOSSY_COBBLESTONE_CTM =
+            register("curly_mossy_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> CUT_MOSSY_COBBLESTONE_COLUMN =
             register("cut_mossy_cobblestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> EDGED_MOSSY_COBBLESTONE_BRICKS =
             register("edged_mossy_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
-    public static final DeferredBlock<Block> FINE_MOSSY_COBBLESTONE_PILLAR =
-            register("fine_mossy_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+    public static final DeferredBlock<Block> FINE_MOSSY_COBBLESTONE_CTM =
+            register("fine_mossy_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> MASSIVE_MOSSY_COBBLESTONE_BRICKS =
             register("massive_mossy_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
-    public static final DeferredBlock<Block> ORNATE_MOSSY_COBBLESTONE_PILLAR =
-            register("ornate_mossy_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+    public static final DeferredBlock<Block> ORNATE_MOSSY_COBBLESTONE_CTM =
+            register("ornate_mossy_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_MOSSY_COBBLESTONE_TILES =
             register("overlapping_mossy_cobblestone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> POLISHED_MOSSY_COBBLESTONE =
             register("polished_mossy_cobblestone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
-    public static final DeferredBlock<Block> SIMPLE_MOSSY_COBBLESTONE_PILLAR =
-            register("simple_mossy_cobblestone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+    public static final DeferredBlock<Block> SIMPLE_MOSSY_COBBLESTONE_CTM =
+            register("simple_mossy_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> SMOOTH_MOSSY_COBBLESTONE_COLUMN =
             register("smooth_mossy_cobblestone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_MOSSY_COBBLESTONE =
@@ -3184,24 +3124,24 @@ public class ModBlocks {
             register("bordered_mossy_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_MOSSY_STONE_BRICKS =
             register("brick_bordered_mossy_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
-    public static final DeferredBlock<Block> CURLY_MOSSY_STONE_BRICKS_PILLAR =
-            register("curly_mossy_stone_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> CURLY_MOSSY_STONE_BRICKS_CTM =
+            register("curly_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> CUT_MOSSY_STONE_BRICKS_COLUMN =
             register("cut_mossy_stone_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> EDGED_MOSSY_STONE_BRICKS_BRICKS =
             register("edged_mossy_stone_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
-    public static final DeferredBlock<Block> FINE_MOSSY_STONE_BRICKS_PILLAR =
-            register("fine_mossy_stone_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> FINE_MOSSY_STONE_BRICKS_CTM =
+            register("fine_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_MOSSY_STONE_BRICKS_BRICKS =
             register("massive_mossy_stone_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_MOSSY_STONE_BRICKS_PILLAR =
-            register("ornate_mossy_stone_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_MOSSY_STONE_BRICKS_CTM =
+            register("ornate_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_MOSSY_STONE_BRICKS_TILES =
             register("overlapping_mossy_stone_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> POLISHED_MOSSY_STONE_BRICKS =
             register("polished_mossy_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_MOSSY_STONE_BRICKS_PILLAR =
-            register("simple_mossy_stone_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_MOSSY_STONE_BRICKS_CTM =
+            register("simple_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> SMOOTH_MOSSY_STONE_BRICKS_COLUMN =
             register("smooth_mossy_stone_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> THICK_INLAYED_MOSSY_STONE_BRICKS =
@@ -3218,16 +3158,16 @@ public class ModBlocks {
             register("bordered_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> BRICK_BORDERED_MUD =
             register("brick_bordered_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> CARVED_MUD_PILLAR =
-            register("carved_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> CURLY_MUD_PILLAR =
-            register("curly_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> CARVED_MUD_CTM =
+            register("carved_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> CURLY_MUD_CTM =
+            register("curly_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> EDGED_MUD =
             register("edged_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> FANCY_MUD_PILLAR =
-            register("fancy_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> FINE_MUD_PILLAR =
-            register("fine_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> FANCY_MUD_CTM =
+            register("fancy_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> FINE_MUD_CTM =
+            register("fine_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> HARD_MUD =
             register("hard_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> LARGE_MUD_SIGIL =
@@ -3236,14 +3176,14 @@ public class ModBlocks {
             register("loreful_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS =
             register("massive_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> ORNATE_MUD_PILLAR =
-            register("ornate_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> ORNATE_MUD_CTM =
+            register("ornate_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> OVERLAPPING_MUD_TILES =
             register("overlapping_mud_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> SCALY_MUD =
             register("scaly_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> SIMPLE_MUD_PILLAR =
-            register("simple_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> SIMPLE_MUD_CTM =
+            register("simple_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> TILED_BORDERED_MUD =
             register("tiled_bordered_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
     public static final DeferredBlock<Block> TILED_MUD_COLUMN =
@@ -3254,16 +3194,16 @@ public class ModBlocks {
             register("bordered_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_MUD_BRICKS =
             register("brick_bordered_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> CARVED_MUD_BRICKS_PILLAR =
-            register("carved_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> CURLY_MUD_BRICKS_PILLAR =
-            register("curly_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> CARVED_MUD_BRICKS_CTM =
+            register("carved_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> CURLY_MUD_BRICKS_CTM =
+            register("curly_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> EDGED_MUD_BRICKS_BRICKS =
             register("edged_mud_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> FANCY_MUD_BRICKS_PILLAR =
-            register("fancy_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> FINE_MUD_BRICKS_PILLAR =
-            register("fine_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> FANCY_MUD_BRICKS_CTM =
+            register("fancy_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> FINE_MUD_BRICKS_CTM =
+            register("fine_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> HARD_MUD_BRICKS =
             register("hard_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> LARGE_MUD_BRICKS_SIGIL =
@@ -3272,12 +3212,12 @@ public class ModBlocks {
             register("loreful_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS_BRICKS =
             register("massive_mud_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_MUD_BRICKS_PILLAR =
-            register("ornate_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_MUD_BRICKS_CTM =
+            register("ornate_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_MUD_BRICKS_TILES =
             register("overlapping_mud_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_MUD_BRICKS_PILLAR =
-            register("simple_mud_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_MUD_BRICKS_CTM =
+            register("simple_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> TILED_BORDERED_MUD_BRICKS =
             register("tiled_bordered_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> TILED_MUD_BRICKS_COLUMN =
@@ -3288,24 +3228,24 @@ public class ModBlocks {
             register("bordered_netherrack", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_NETHERRACK =
             register("brick_bordered_netherrack", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
-    public static final DeferredBlock<Block> CURLY_NETHERRACK_PILLAR =
-            register("curly_netherrack_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
+    public static final DeferredBlock<Block> CURLY_NETHERRACK_CTM =
+            register("curly_netherrack_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> CUT_NETHERRACK_COLUMN =
             register("cut_netherrack_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> EDGED_NETHERRACK_BRICKS =
             register("edged_netherrack_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
-    public static final DeferredBlock<Block> FINE_NETHERRACK_PILLAR =
-            register("fine_netherrack_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
+    public static final DeferredBlock<Block> FINE_NETHERRACK_CTM =
+            register("fine_netherrack_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> MASSIVE_NETHERRACK_BRICKS =
             register("massive_netherrack_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
-    public static final DeferredBlock<Block> ORNATE_NETHERRACK_PILLAR =
-            register("ornate_netherrack_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
+    public static final DeferredBlock<Block> ORNATE_NETHERRACK_CTM =
+            register("ornate_netherrack_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> OVERLAPPING_NETHERRACK_TILES =
             register("overlapping_netherrack_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> POLISHED_NETHERRACK =
             register("polished_netherrack", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
-    public static final DeferredBlock<Block> SIMPLE_NETHERRACK_PILLAR =
-            register("simple_netherrack_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
+    public static final DeferredBlock<Block> SIMPLE_NETHERRACK_CTM =
+            register("simple_netherrack_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> SMOOTH_NETHERRACK_COLUMN =
             register("smooth_netherrack_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> THICK_INLAYED_NETHERRACK =
@@ -3322,24 +3262,24 @@ public class ModBlocks {
             register("bordered_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_NETHER_BRICKS =
             register("brick_bordered_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
-    public static final DeferredBlock<Block> CURLY_NETHER_BRICKS_PILLAR =
-            register("curly_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
+    public static final DeferredBlock<Block> CURLY_NETHER_BRICKS_CTM =
+            register("curly_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> CUT_NETHER_BRICKS_COLUMN =
             register("cut_nether_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> EDGED_NETHER_BRICKS_BRICKS =
             register("edged_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
-    public static final DeferredBlock<Block> FINE_NETHER_BRICKS_PILLAR =
-            register("fine_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
+    public static final DeferredBlock<Block> FINE_NETHER_BRICKS_CTM =
+            register("fine_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_NETHER_BRICKS_BRICKS =
             register("massive_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_NETHER_BRICKS_PILLAR =
-            register("ornate_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_NETHER_BRICKS_CTM =
+            register("ornate_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_NETHER_BRICKS_TILES =
             register("overlapping_nether_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> POLISHED_NETHER_BRICKS =
             register("polished_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_NETHER_BRICKS_PILLAR =
-            register("simple_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_NETHER_BRICKS_CTM =
+            register("simple_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> SMOOTH_NETHER_BRICKS_COLUMN =
             register("smooth_nether_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> THICK_INLAYED_NETHER_BRICKS =
@@ -3352,6 +3292,8 @@ public class ModBlocks {
             register("tiny_brick_bordered_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
 
     // ── Oak Glass ──
+    public static final DeferredBlock<Block> OAK_BARRED_GLASS_CTM =
+            register("oak_barred_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> OAK_BORDERED_GLASS_CTM =
             register("oak_bordered_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
     public static final DeferredBlock<Block> OAK_DIAMOND_BORDERED_GLASS_CTM =
@@ -3392,24 +3334,24 @@ public class ModBlocks {
             register("bordered_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> BRICK_BORDERED_OBSIDIAN =
             register("brick_bordered_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
-    public static final DeferredBlock<Block> CURLY_OBSIDIAN_PILLAR =
-            register("curly_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> CURLY_OBSIDIAN_CTM =
+            register("curly_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> CUT_OBSIDIAN_COLUMN =
             register("cut_obsidian_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> EDGED_OBSIDIAN_BRICKS =
             register("edged_obsidian_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
-    public static final DeferredBlock<Block> FINE_OBSIDIAN_PILLAR =
-            register("fine_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> FINE_OBSIDIAN_CTM =
+            register("fine_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> MASSIVE_OBSIDIAN_BRICKS =
             register("massive_obsidian_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
-    public static final DeferredBlock<Block> ORNATE_OBSIDIAN_PILLAR =
-            register("ornate_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> ORNATE_OBSIDIAN_CTM =
+            register("ornate_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> OVERLAPPING_OBSIDIAN_TILES =
             register("overlapping_obsidian_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> POLISHED_OBSIDIAN =
             register("polished_obsidian", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
-    public static final DeferredBlock<Block> SIMPLE_OBSIDIAN_PILLAR =
-            register("simple_obsidian_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> SIMPLE_OBSIDIAN_CTM =
+            register("simple_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> SMOOTH_OBSIDIAN_COLUMN =
             register("smooth_obsidian_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> THICK_INLAYED_OBSIDIAN =
@@ -3426,8 +3368,8 @@ public class ModBlocks {
             register("grill_orange_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
     public static final DeferredBlock<Block> ORANGE_CONCRETE_PANEL =
             register("orange_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
-    public static final DeferredBlock<Block> ORANGE_CONCRETE_PILLAR =
-            register("orange_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
+    public static final DeferredBlock<Block> ORANGE_CONCRETE_CTM =
+            register("orange_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
     public static final DeferredBlock<Block> PEGGED_ORANGE_CONCRETE =
             register("pegged_orange_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_ORANGE_CONCRETE =
@@ -3438,20 +3380,20 @@ public class ModBlocks {
             register("wired_orange_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_CONCRETE)));
 
     // ── Orange Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_ORANGE_STAINED_GLASS_PILLAR =
-            register("arched_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_ORANGE_STAINED_GLASS_CTM =
+            register("arched_orange_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_ORANGE_STAINED_GLASS =
             register("circular_orange_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_ORANGE_STAINED_GLASS_PILLAR =
-            register("fancy_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_ORANGE_STAINED_GLASS_PILLAR =
-            register("ornate_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_ORANGE_STAINED_GLASS_PILLAR =
-            register("raster_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_ORANGE_STAINED_GLASS_CTM =
+            register("fancy_orange_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_ORANGE_STAINED_GLASS_CTM =
+            register("ornate_orange_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_ORANGE_STAINED_GLASS_CTM =
+            register("raster_orange_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_ORANGE_DIAMOND_STAINED_GLASS =
             register("small_orange_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_ORANGE_STAINED_GLASS_PILLAR =
-            register("tiled_orange_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_ORANGE_STAINED_GLASS_CTM =
+            register("tiled_orange_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> ORANGE_LEADED_STAINED_GLASS =
             register("orange_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_ORANGE_STAINED_GLASS =
@@ -3484,8 +3426,8 @@ public class ModBlocks {
             register("inscribed_orange_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_TERRACOTTA)));
     public static final DeferredBlock<Block> ORANGE_TERRACOTTA_COLUMN =
             register("orange_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_TERRACOTTA)));
-    public static final DeferredBlock<Block> ORANGE_TERRACOTTA_PILLAR =
-            register("orange_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_TERRACOTTA)));
+    public static final DeferredBlock<Block> ORANGE_TERRACOTTA_CTM =
+            register("orange_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_ORANGE_TERRACOTTA_TILES =
             register("small_orange_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_ORANGE_TERRACOTTA =
@@ -3506,24 +3448,24 @@ public class ModBlocks {
             register("bordered_packed_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_PACKED_ICE =
             register("brick_bordered_packed_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-    public static final DeferredBlock<Block> CURLY_PACKED_ICE_PILLAR =
-            register("curly_packed_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
+    public static final DeferredBlock<Block> CURLY_PACKED_ICE_CTM =
+            register("curly_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> CUT_PACKED_ICE_COLUMN =
             register("cut_packed_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> EDGED_PACKED_ICE_BRICKS =
             register("edged_packed_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-    public static final DeferredBlock<Block> FINE_PACKED_ICE_PILLAR =
-            register("fine_packed_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
+    public static final DeferredBlock<Block> FINE_PACKED_ICE_CTM =
+            register("fine_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> MASSIVE_PACKED_ICE_BRICKS =
             register("massive_packed_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-    public static final DeferredBlock<Block> ORNATE_PACKED_ICE_PILLAR =
-            register("ornate_packed_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
+    public static final DeferredBlock<Block> ORNATE_PACKED_ICE_CTM =
+            register("ornate_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> OVERLAPPING_PACKED_ICE_TILES =
             register("overlapping_packed_ice_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> POLISHED_PACKED_ICE =
             register("polished_packed_ice", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-    public static final DeferredBlock<Block> SIMPLE_PACKED_ICE_PILLAR =
-            register("simple_packed_ice_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
+    public static final DeferredBlock<Block> SIMPLE_PACKED_ICE_CTM =
+            register("simple_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> SMOOTH_PACKED_ICE_COLUMN =
             register("smooth_packed_ice_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> THICK_INLAYED_PACKED_ICE =
@@ -3540,16 +3482,16 @@ public class ModBlocks {
             register("bordered_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> BRICK_BORDERED_PACKED_MUD =
             register("brick_bordered_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> CARVED_PACKED_MUD_PILLAR =
-            register("carved_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> CURLY_PACKED_MUD_PILLAR =
-            register("curly_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> CARVED_PACKED_MUD_CTM =
+            register("carved_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> CURLY_PACKED_MUD_CTM =
+            register("curly_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> EDGED_PACKED_MUD_BRICKS =
             register("edged_packed_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> FANCY_PACKED_MUD_PILLAR =
-            register("fancy_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> FINE_PACKED_MUD_PILLAR =
-            register("fine_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> FANCY_PACKED_MUD_CTM =
+            register("fancy_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> FINE_PACKED_MUD_CTM =
+            register("fine_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> HARD_PACKED_MUD =
             register("hard_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> LARGE_PACKED_MUD_SIGIL =
@@ -3558,14 +3500,14 @@ public class ModBlocks {
             register("loreful_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> MASSIVE_PACKED_MUD_BRICKS =
             register("massive_packed_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> ORNATE_PACKED_MUD_PILLAR =
-            register("ornate_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> ORNATE_PACKED_MUD_CTM =
+            register("ornate_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> OVERLAPPING_PACKED_MUD_TILES =
             register("overlapping_packed_mud_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> SCALY_PACKED_MUD =
             register("scaly_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-    public static final DeferredBlock<Block> SIMPLE_PACKED_MUD_PILLAR =
-            register("simple_packed_mud_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> SIMPLE_PACKED_MUD_CTM =
+            register("simple_packed_mud_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> TILED_BORDERED_PACKED_MUD =
             register("tiled_bordered_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> TILED_PACKED_MUD_COLUMN =
@@ -3578,8 +3520,8 @@ public class ModBlocks {
             register("pegged_pink_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
     public static final DeferredBlock<Block> PINK_CONCRETE_PANEL =
             register("pink_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
-    public static final DeferredBlock<Block> PINK_CONCRETE_PILLAR =
-            register("pink_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
+    public static final DeferredBlock<Block> PINK_CONCRETE_CTM =
+            register("pink_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_PINK_CONCRETE =
             register("smooth_pink_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
     public static final DeferredBlock<Block> STRIPED_PINK_CONCRETE =
@@ -3588,20 +3530,20 @@ public class ModBlocks {
             register("wired_pink_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_CONCRETE)));
 
     // ── Pink Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_PINK_STAINED_GLASS_PILLAR =
-            register("arched_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_PINK_STAINED_GLASS_CTM =
+            register("arched_pink_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_PINK_STAINED_GLASS =
             register("circular_pink_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_PINK_STAINED_GLASS_PILLAR =
-            register("fancy_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_PINK_STAINED_GLASS_PILLAR =
-            register("ornate_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_PINK_STAINED_GLASS_PILLAR =
-            register("raster_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_PINK_STAINED_GLASS_CTM =
+            register("fancy_pink_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_PINK_STAINED_GLASS_CTM =
+            register("ornate_pink_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_PINK_STAINED_GLASS_CTM =
+            register("raster_pink_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_PINK_DIAMOND_STAINED_GLASS =
             register("small_pink_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_PINK_STAINED_GLASS_PILLAR =
-            register("tiled_pink_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_PINK_STAINED_GLASS_CTM =
+            register("tiled_pink_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> PINK_LEADED_STAINED_GLASS =
             register("pink_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_PINK_STAINED_GLASS =
@@ -3634,8 +3576,8 @@ public class ModBlocks {
             register("inscribed_pink_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_TERRACOTTA)));
     public static final DeferredBlock<Block> PINK_TERRACOTTA_COLUMN =
             register("pink_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_TERRACOTTA)));
-    public static final DeferredBlock<Block> PINK_TERRACOTTA_PILLAR =
-            register("pink_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_TERRACOTTA)));
+    public static final DeferredBlock<Block> PINK_TERRACOTTA_CTM =
+            register("pink_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_PINK_TERRACOTTA_TILES =
             register("small_pink_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_PINK_TERRACOTTA =
@@ -3656,24 +3598,24 @@ public class ModBlocks {
             register("bordered_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_PRISMARINE =
             register("brick_bordered_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
-    public static final DeferredBlock<Block> CURLY_PRISMARINE_PILLAR =
-            register("curly_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> CURLY_PRISMARINE_CTM =
+            register("curly_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> CUT_PRISMARINE_COLUMN =
             register("cut_prismarine_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> EDGED_PRISMARINE_BRICKS =
             register("edged_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
-    public static final DeferredBlock<Block> FINE_PRISMARINE_PILLAR =
-            register("fine_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> FINE_PRISMARINE_CTM =
+            register("fine_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> MASSIVE_PRISMARINE_BRICKS =
             register("massive_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
-    public static final DeferredBlock<Block> ORNATE_PRISMARINE_PILLAR =
-            register("ornate_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> ORNATE_PRISMARINE_CTM =
+            register("ornate_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> OVERLAPPING_PRISMARINE_TILES =
             register("overlapping_prismarine_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> POLISHED_PRISMARINE =
             register("polished_prismarine", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
-    public static final DeferredBlock<Block> SIMPLE_PRISMARINE_PILLAR =
-            register("simple_prismarine_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> SIMPLE_PRISMARINE_CTM =
+            register("simple_prismarine_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> SMOOTH_PRISMARINE_COLUMN =
             register("smooth_prismarine_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> THICK_INLAYED_PRISMARINE =
@@ -3692,8 +3634,8 @@ public class ModBlocks {
             register("pegged_purple_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
     public static final DeferredBlock<Block> PURPLE_CONCRETE_PANEL =
             register("purple_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
-    public static final DeferredBlock<Block> PURPLE_CONCRETE_PILLAR =
-            register("purple_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
+    public static final DeferredBlock<Block> PURPLE_CONCRETE_CTM =
+            register("purple_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_PURPLE_CONCRETE =
             register("smooth_purple_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
     public static final DeferredBlock<Block> STRIPED_PURPLE_CONCRETE =
@@ -3702,20 +3644,20 @@ public class ModBlocks {
             register("wired_purple_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_CONCRETE)));
 
     // ── Purple Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_PURPLE_STAINED_GLASS_PILLAR =
-            register("arched_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_PURPLE_STAINED_GLASS_CTM =
+            register("arched_purple_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_PURPLE_STAINED_GLASS =
             register("circular_purple_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_PURPLE_STAINED_GLASS_PILLAR =
-            register("fancy_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_PURPLE_STAINED_GLASS_PILLAR =
-            register("ornate_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_PURPLE_STAINED_GLASS_PILLAR =
-            register("raster_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_PURPLE_STAINED_GLASS_CTM =
+            register("fancy_purple_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_PURPLE_STAINED_GLASS_CTM =
+            register("ornate_purple_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_PURPLE_STAINED_GLASS_CTM =
+            register("raster_purple_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_PURPLE_DIAMOND_STAINED_GLASS =
             register("small_purple_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_PURPLE_STAINED_GLASS_PILLAR =
-            register("tiled_purple_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_PURPLE_STAINED_GLASS_CTM =
+            register("tiled_purple_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> PURPLE_LEADED_STAINED_GLASS =
             register("purple_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_PURPLE_STAINED_GLASS =
@@ -3748,8 +3690,8 @@ public class ModBlocks {
             register("inscribed_purple_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)));
     public static final DeferredBlock<Block> PURPLE_TERRACOTTA_COLUMN =
             register("purple_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)));
-    public static final DeferredBlock<Block> PURPLE_TERRACOTTA_PILLAR =
-            register("purple_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)));
+    public static final DeferredBlock<Block> PURPLE_TERRACOTTA_CTM =
+            register("purple_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_PURPLE_TERRACOTTA_TILES =
             register("small_purple_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_PURPLE_TERRACOTTA =
@@ -3770,24 +3712,24 @@ public class ModBlocks {
             register("bordered_purpur_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_PURPUR_BLOCK =
             register("brick_bordered_purpur_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_PURPUR_BLOCK_PILLAR =
-            register("curly_purpur_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_PURPUR_BLOCK_CTM =
+            register("curly_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> CUT_PURPUR_BLOCK_COLUMN =
             register("cut_purpur_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> EDGED_PURPUR_BLOCK_BRICKS =
             register("edged_purpur_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> FINE_PURPUR_BLOCK_PILLAR =
-            register("fine_purpur_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> FINE_PURPUR_BLOCK_CTM =
+            register("fine_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_PURPUR_BLOCK_BRICKS =
             register("massive_purpur_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_PURPUR_BLOCK_PILLAR =
-            register("ornate_purpur_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_PURPUR_BLOCK_CTM =
+            register("ornate_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_PURPUR_BLOCK_TILES =
             register("overlapping_purpur_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_PURPUR_BLOCK =
             register("polished_purpur_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_PURPUR_BLOCK_PILLAR =
-            register("simple_purpur_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_PURPUR_BLOCK_CTM =
+            register("simple_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_PURPUR_BLOCK_COLUMN =
             register("smooth_purpur_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_PURPUR_BLOCK =
@@ -3804,24 +3746,24 @@ public class ModBlocks {
             register("bordered_quartz_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_QUARTZ_BLOCK =
             register("brick_bordered_quartz_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_QUARTZ_BLOCK_PILLAR =
-            register("curly_quartz_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_QUARTZ_BLOCK_CTM =
+            register("curly_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> CUT_QUARTZ_BLOCK_COLUMN =
             register("cut_quartz_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> EDGED_QUARTZ_BLOCK_BRICKS =
             register("edged_quartz_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
-    public static final DeferredBlock<Block> FINE_QUARTZ_BLOCK_PILLAR =
-            register("fine_quartz_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+    public static final DeferredBlock<Block> FINE_QUARTZ_BLOCK_CTM =
+            register("fine_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_QUARTZ_BLOCK_BRICKS =
             register("massive_quartz_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_QUARTZ_BLOCK_PILLAR =
-            register("ornate_quartz_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_QUARTZ_BLOCK_CTM =
+            register("ornate_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_QUARTZ_BLOCK_TILES =
             register("overlapping_quartz_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_QUARTZ_BLOCK =
             register("polished_quartz_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_QUARTZ_BLOCK_PILLAR =
-            register("simple_quartz_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_QUARTZ_BLOCK_CTM =
+            register("simple_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_QUARTZ_BLOCK_COLUMN =
             register("smooth_quartz_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_QUARTZ_BLOCK =
@@ -3838,24 +3780,24 @@ public class ModBlocks {
             register("bordered_raw_copper_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_RAW_COPPER_BLOCK =
             register("brick_bordered_raw_copper_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_RAW_COPPER_BLOCK_PILLAR =
-            register("curly_raw_copper_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_RAW_COPPER_BLOCK_CTM =
+            register("curly_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> CUT_RAW_COPPER_BLOCK_COLUMN =
             register("cut_raw_copper_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_COPPER_BLOCK_BRICKS =
             register("edged_raw_copper_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> FINE_RAW_COPPER_BLOCK_PILLAR =
-            register("fine_raw_copper_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> FINE_RAW_COPPER_BLOCK_CTM =
+            register("fine_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_RAW_COPPER_BLOCK_BRICKS =
             register("massive_raw_copper_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_RAW_COPPER_BLOCK_PILLAR =
-            register("ornate_raw_copper_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_RAW_COPPER_BLOCK_CTM =
+            register("ornate_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_COPPER_BLOCK_TILES =
             register("overlapping_raw_copper_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_COPPER_BLOCK =
             register("polished_raw_copper_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_RAW_COPPER_BLOCK_PILLAR =
-            register("simple_raw_copper_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_RAW_COPPER_BLOCK_CTM =
+            register("simple_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_RAW_COPPER_BLOCK_COLUMN =
             register("smooth_raw_copper_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_RAW_COPPER_BLOCK =
@@ -3872,24 +3814,24 @@ public class ModBlocks {
             register("bordered_raw_gold_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_RAW_GOLD_BLOCK =
             register("brick_bordered_raw_gold_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_RAW_GOLD_BLOCK_PILLAR =
-            register("curly_raw_gold_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_RAW_GOLD_BLOCK_CTM =
+            register("curly_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> CUT_RAW_GOLD_BLOCK_COLUMN =
             register("cut_raw_gold_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_GOLD_BLOCK_BRICKS =
             register("edged_raw_gold_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
-    public static final DeferredBlock<Block> FINE_RAW_GOLD_BLOCK_PILLAR =
-            register("fine_raw_gold_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
+    public static final DeferredBlock<Block> FINE_RAW_GOLD_BLOCK_CTM =
+            register("fine_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_RAW_GOLD_BLOCK_BRICKS =
             register("massive_raw_gold_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_RAW_GOLD_BLOCK_PILLAR =
-            register("ornate_raw_gold_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_RAW_GOLD_BLOCK_CTM =
+            register("ornate_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_GOLD_BLOCK_TILES =
             register("overlapping_raw_gold_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_GOLD_BLOCK =
             register("polished_raw_gold_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_RAW_GOLD_BLOCK_PILLAR =
-            register("simple_raw_gold_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_RAW_GOLD_BLOCK_CTM =
+            register("simple_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_RAW_GOLD_BLOCK_COLUMN =
             register("smooth_raw_gold_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_RAW_GOLD_BLOCK =
@@ -3906,24 +3848,24 @@ public class ModBlocks {
             register("bordered_raw_iron_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_RAW_IRON_BLOCK =
             register("brick_bordered_raw_iron_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_RAW_IRON_BLOCK_PILLAR =
-            register("curly_raw_iron_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_RAW_IRON_BLOCK_CTM =
+            register("curly_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> CUT_RAW_IRON_BLOCK_COLUMN =
             register("cut_raw_iron_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_IRON_BLOCK_BRICKS =
             register("edged_raw_iron_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
-    public static final DeferredBlock<Block> FINE_RAW_IRON_BLOCK_PILLAR =
-            register("fine_raw_iron_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+    public static final DeferredBlock<Block> FINE_RAW_IRON_BLOCK_CTM =
+            register("fine_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_RAW_IRON_BLOCK_BRICKS =
             register("massive_raw_iron_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_RAW_IRON_BLOCK_PILLAR =
-            register("ornate_raw_iron_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_RAW_IRON_BLOCK_CTM =
+            register("ornate_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_IRON_BLOCK_TILES =
             register("overlapping_raw_iron_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_IRON_BLOCK =
             register("polished_raw_iron_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_RAW_IRON_BLOCK_PILLAR =
-            register("simple_raw_iron_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_RAW_IRON_BLOCK_CTM =
+            register("simple_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_RAW_IRON_BLOCK_COLUMN =
             register("smooth_raw_iron_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_RAW_IRON_BLOCK =
@@ -3940,24 +3882,24 @@ public class ModBlocks {
             register("bordered_redstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_REDSTONE_BLOCK =
             register("brick_bordered_redstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_REDSTONE_BLOCK_PILLAR =
-            register("curly_redstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_REDSTONE_BLOCK_CTM =
+            register("curly_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> CUT_REDSTONE_BLOCK_COLUMN =
             register("cut_redstone_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> EDGED_REDSTONE_BLOCK_BRICKS =
             register("edged_redstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
-    public static final DeferredBlock<Block> FINE_REDSTONE_BLOCK_PILLAR =
-            register("fine_redstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
+    public static final DeferredBlock<Block> FINE_REDSTONE_BLOCK_CTM =
+            register("fine_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_REDSTONE_BLOCK_BRICKS =
             register("massive_redstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_REDSTONE_BLOCK_PILLAR =
-            register("ornate_redstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_REDSTONE_BLOCK_CTM =
+            register("ornate_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_REDSTONE_BLOCK_TILES =
             register("overlapping_redstone_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_REDSTONE_BLOCK =
             register("polished_redstone_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_REDSTONE_BLOCK_PILLAR =
-            register("simple_redstone_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_REDSTONE_BLOCK_CTM =
+            register("simple_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_REDSTONE_BLOCK_COLUMN =
             register("smooth_redstone_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_REDSTONE_BLOCK =
@@ -3976,8 +3918,8 @@ public class ModBlocks {
             register("pegged_red_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
     public static final DeferredBlock<Block> RED_CONCRETE_PANEL =
             register("red_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
-    public static final DeferredBlock<Block> RED_CONCRETE_PILLAR =
-            register("red_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
+    public static final DeferredBlock<Block> RED_CONCRETE_CTM =
+            register("red_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
     public static final DeferredBlock<Block> SMOOTH_RED_CONCRETE =
             register("smooth_red_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_CONCRETE)));
     public static final DeferredBlock<Block> STRIPED_RED_CONCRETE =
@@ -3990,24 +3932,24 @@ public class ModBlocks {
             register("bordered_red_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> BRICK_BORDERED_RED_NETHER_BRICKS =
             register("brick_bordered_red_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
-    public static final DeferredBlock<Block> CURLY_RED_NETHER_BRICKS_PILLAR =
-            register("curly_red_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
+    public static final DeferredBlock<Block> CURLY_RED_NETHER_BRICKS_CTM =
+            register("curly_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> CUT_RED_NETHER_BRICKS_COLUMN =
             register("cut_red_nether_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> EDGED_RED_NETHER_BRICKS_BRICKS =
             register("edged_red_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
-    public static final DeferredBlock<Block> FINE_RED_NETHER_BRICKS_PILLAR =
-            register("fine_red_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
+    public static final DeferredBlock<Block> FINE_RED_NETHER_BRICKS_CTM =
+            register("fine_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> MASSIVE_RED_NETHER_BRICKS_BRICKS =
             register("massive_red_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
-    public static final DeferredBlock<Block> ORNATE_RED_NETHER_BRICKS_PILLAR =
-            register("ornate_red_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
+    public static final DeferredBlock<Block> ORNATE_RED_NETHER_BRICKS_CTM =
+            register("ornate_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_RED_NETHER_BRICKS_TILES =
             register("overlapping_red_nether_bricks_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> POLISHED_RED_NETHER_BRICKS =
             register("polished_red_nether_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
-    public static final DeferredBlock<Block> SIMPLE_RED_NETHER_BRICKS_PILLAR =
-            register("simple_red_nether_bricks_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
+    public static final DeferredBlock<Block> SIMPLE_RED_NETHER_BRICKS_CTM =
+            register("simple_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> SMOOTH_RED_NETHER_BRICKS_COLUMN =
             register("smooth_red_nether_bricks_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> THICK_INLAYED_RED_NETHER_BRICKS =
@@ -4024,24 +3966,24 @@ public class ModBlocks {
             register("bordered_red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_RED_SANDSTONE =
             register("brick_bordered_red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> CURLY_RED_SANDSTONE_PILLAR =
-            register("curly_red_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> CURLY_RED_SANDSTONE_CTM =
+            register("curly_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> CUT_RED_SANDSTONE_COLUMN =
             register("cut_red_sandstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> EDGED_RED_SANDSTONE_BRICKS =
             register("edged_red_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> FINE_RED_SANDSTONE_PILLAR =
-            register("fine_red_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> FINE_RED_SANDSTONE_CTM =
+            register("fine_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> MASSIVE_RED_SANDSTONE_BRICKS =
             register("massive_red_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> ORNATE_RED_SANDSTONE_PILLAR =
-            register("ornate_red_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> ORNATE_RED_SANDSTONE_CTM =
+            register("ornate_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_RED_SANDSTONE_TILES =
             register("overlapping_red_sandstone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> POLISHED_RED_SANDSTONE =
             register("polished_red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> SIMPLE_RED_SANDSTONE_PILLAR =
-            register("simple_red_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> SIMPLE_RED_SANDSTONE_CTM =
+            register("simple_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> SMOOTH_RED_SANDSTONE_COLUMN =
             register("smooth_red_sandstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_RED_SANDSTONE =
@@ -4054,20 +3996,20 @@ public class ModBlocks {
             register("tiny_brick_bordered_red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
 
     // ── Red Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_RED_STAINED_GLASS_PILLAR =
-            register("arched_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_RED_STAINED_GLASS_CTM =
+            register("arched_red_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_RED_STAINED_GLASS =
             register("circular_red_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_RED_STAINED_GLASS_PILLAR =
-            register("fancy_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_RED_STAINED_GLASS_PILLAR =
-            register("ornate_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_RED_STAINED_GLASS_PILLAR =
-            register("raster_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_RED_STAINED_GLASS_CTM =
+            register("fancy_red_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_RED_STAINED_GLASS_CTM =
+            register("ornate_red_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_RED_STAINED_GLASS_CTM =
+            register("raster_red_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_RED_DIAMOND_STAINED_GLASS =
             register("small_red_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_RED_STAINED_GLASS_PILLAR =
-            register("tiled_red_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_RED_STAINED_GLASS_CTM =
+            register("tiled_red_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> RED_LEADED_STAINED_GLASS =
             register("red_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_RED_STAINED_GLASS =
@@ -4100,8 +4042,8 @@ public class ModBlocks {
             register("inscribed_red_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_TERRACOTTA)));
     public static final DeferredBlock<Block> RED_TERRACOTTA_COLUMN =
             register("red_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_TERRACOTTA)));
-    public static final DeferredBlock<Block> RED_TERRACOTTA_PILLAR =
-            register("red_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_TERRACOTTA)));
+    public static final DeferredBlock<Block> RED_TERRACOTTA_CTM =
+            register("red_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_TERRACOTTA)));
     public static final DeferredBlock<Block> SMALL_RED_TERRACOTTA_TILES =
             register("small_red_terracotta_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_TERRACOTTA)));
     public static final DeferredBlock<Block> STARRY_RED_TERRACOTTA =
@@ -4122,24 +4064,24 @@ public class ModBlocks {
             register("bordered_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_SANDSTONE =
             register("brick_bordered_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> CURLY_SANDSTONE_PILLAR =
-            register("curly_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> CURLY_SANDSTONE_CTM =
+            register("curly_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> CUT_SANDSTONE_COLUMN =
             register("cut_sandstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> EDGED_SANDSTONE_BRICKS =
             register("edged_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> FINE_SANDSTONE_PILLAR =
-            register("fine_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> FINE_SANDSTONE_CTM =
+            register("fine_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> MASSIVE_SANDSTONE_BRICKS =
             register("massive_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> ORNATE_SANDSTONE_PILLAR =
-            register("ornate_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> ORNATE_SANDSTONE_CTM =
+            register("ornate_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_SANDSTONE_TILES =
             register("overlapping_sandstone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> POLISHED_SANDSTONE =
             register("polished_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> SIMPLE_SANDSTONE_PILLAR =
-            register("simple_sandstone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> SIMPLE_SANDSTONE_CTM =
+            register("simple_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> SMOOTH_SANDSTONE_COLUMN =
             register("smooth_sandstone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_SANDSTONE =
@@ -4156,24 +4098,24 @@ public class ModBlocks {
             register("bordered_smooth_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> BRICK_BORDERED_SMOOTH_STONE =
             register("brick_bordered_smooth_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> CURLY_SMOOTH_STONE_PILLAR =
-            register("curly_smooth_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> CURLY_SMOOTH_STONE_CTM =
+            register("curly_smooth_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> CUT_SMOOTH_STONE_COLUMN =
             register("cut_smooth_stone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> EDGED_SMOOTH_STONE_BRICKS =
             register("edged_smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> FINE_SMOOTH_STONE_PILLAR =
-            register("fine_smooth_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> FINE_SMOOTH_STONE_CTM =
+            register("fine_smooth_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> MASSIVE_SMOOTH_STONE_BRICKS =
             register("massive_smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> ORNATE_SMOOTH_STONE_PILLAR =
-            register("ornate_smooth_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> ORNATE_SMOOTH_STONE_CTM =
+            register("ornate_smooth_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> OVERLAPPING_SMOOTH_STONE_TILES =
             register("overlapping_smooth_stone_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> POLISHED_SMOOTH_STONE =
             register("polished_smooth_stone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> SIMPLE_SMOOTH_STONE_PILLAR =
-            register("simple_smooth_stone_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> SIMPLE_SMOOTH_STONE_CTM =
+            register("simple_smooth_stone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> SMOOTH_SMOOTH_STONE_COLUMN =
             register("smooth_smooth_stone_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> THICK_INLAYED_SMOOTH_STONE =
@@ -4190,24 +4132,24 @@ public class ModBlocks {
             register("bordered_snow_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> BRICK_BORDERED_SNOW_BLOCK =
             register("brick_bordered_snow_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
-    public static final DeferredBlock<Block> CURLY_SNOW_BLOCK_PILLAR =
-            register("curly_snow_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+    public static final DeferredBlock<Block> CURLY_SNOW_BLOCK_CTM =
+            register("curly_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> CUT_SNOW_BLOCK_COLUMN =
             register("cut_snow_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> EDGED_SNOW_BLOCK_BRICKS =
             register("edged_snow_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
-    public static final DeferredBlock<Block> FINE_SNOW_BLOCK_PILLAR =
-            register("fine_snow_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+    public static final DeferredBlock<Block> FINE_SNOW_BLOCK_CTM =
+            register("fine_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> MASSIVE_SNOW_BLOCK_BRICKS =
             register("massive_snow_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
-    public static final DeferredBlock<Block> ORNATE_SNOW_BLOCK_PILLAR =
-            register("ornate_snow_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+    public static final DeferredBlock<Block> ORNATE_SNOW_BLOCK_CTM =
+            register("ornate_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_SNOW_BLOCK_TILES =
             register("overlapping_snow_block_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_SNOW_BLOCK =
             register("polished_snow_block", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
-    public static final DeferredBlock<Block> SIMPLE_SNOW_BLOCK_PILLAR =
-            register("simple_snow_block_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+    public static final DeferredBlock<Block> SIMPLE_SNOW_BLOCK_CTM =
+            register("simple_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> SMOOTH_SNOW_BLOCK_COLUMN =
             register("smooth_snow_block_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> THICK_INLAYED_SNOW_BLOCK =
@@ -4252,32 +4194,32 @@ public class ModBlocks {
             register("starry_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA)));
     public static final DeferredBlock<Block> TERRACOTTA_COLUMN =
             register("terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA)));
-    public static final DeferredBlock<Block> TERRACOTTA_PILLAR =
-            register("terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA)));
+    public static final DeferredBlock<Block> TERRACOTTA_CTM =
+            register("terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TERRACOTTA)));
 
     // ── Tuff ──
     public static final DeferredBlock<Block> BORDERED_TUFF =
             register("bordered_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> BRICK_BORDERED_TUFF =
             register("brick_bordered_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final DeferredBlock<Block> CURLY_TUFF_PILLAR =
-            register("curly_tuff_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+    public static final DeferredBlock<Block> CURLY_TUFF_CTM =
+            register("curly_tuff_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> CUT_TUFF_COLUMN =
             register("cut_tuff_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> EDGED_TUFF_BRICKS =
             register("edged_tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final DeferredBlock<Block> FINE_TUFF_PILLAR =
-            register("fine_tuff_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+    public static final DeferredBlock<Block> FINE_TUFF_CTM =
+            register("fine_tuff_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> MASSIVE_TUFF_BRICKS =
             register("massive_tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final DeferredBlock<Block> ORNATE_TUFF_PILLAR =
-            register("ornate_tuff_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+    public static final DeferredBlock<Block> ORNATE_TUFF_CTM =
+            register("ornate_tuff_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> OVERLAPPING_TUFF_TILES =
             register("overlapping_tuff_tiles", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> POLISHED_TUFF =
             register("polished_tuff", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
-    public static final DeferredBlock<Block> SIMPLE_TUFF_PILLAR =
-            register("simple_tuff_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+    public static final DeferredBlock<Block> SIMPLE_TUFF_CTM =
+            register("simple_tuff_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> SMOOTH_TUFF_COLUMN =
             register("smooth_tuff_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> THICK_INLAYED_TUFF =
@@ -4318,26 +4260,26 @@ public class ModBlocks {
             register("striped_white_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
     public static final DeferredBlock<Block> WHITE_CONCRETE_PANEL =
             register("white_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
-    public static final DeferredBlock<Block> WHITE_CONCRETE_PILLAR =
-            register("white_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
+    public static final DeferredBlock<Block> WHITE_CONCRETE_CTM =
+            register("white_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
     public static final DeferredBlock<Block> WIRED_WHITE_CONCRETE =
             register("wired_white_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_CONCRETE)));
 
     // ── White Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_WHITE_STAINED_GLASS_PILLAR =
-            register("arched_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_WHITE_STAINED_GLASS_CTM =
+            register("arched_white_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_WHITE_STAINED_GLASS =
             register("circular_white_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_WHITE_STAINED_GLASS_PILLAR =
-            register("fancy_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_WHITE_STAINED_GLASS_PILLAR =
-            register("ornate_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_WHITE_STAINED_GLASS_PILLAR =
-            register("raster_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_WHITE_STAINED_GLASS_CTM =
+            register("fancy_white_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_WHITE_STAINED_GLASS_CTM =
+            register("ornate_white_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_WHITE_STAINED_GLASS_CTM =
+            register("raster_white_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_WHITE_DIAMOND_STAINED_GLASS =
             register("small_white_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_WHITE_STAINED_GLASS_PILLAR =
-            register("tiled_white_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_WHITE_STAINED_GLASS_CTM =
+            register("tiled_white_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> WHITE_LEADED_STAINED_GLASS =
             register("white_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_WHITE_STAINED_GLASS =
@@ -4396,24 +4338,24 @@ public class ModBlocks {
             register("wired_yellow_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
     public static final DeferredBlock<Block> YELLOW_CONCRETE_PANEL =
             register("yellow_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
-    public static final DeferredBlock<Block> YELLOW_CONCRETE_PILLAR =
-            register("yellow_concrete_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
+    public static final DeferredBlock<Block> YELLOW_CONCRETE_CTM =
+            register("yellow_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
 
     // ── Yellow Stained Glass ──
-    public static final DeferredBlock<Block> ARCHED_YELLOW_STAINED_GLASS_PILLAR =
-            register("arched_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ARCHED_YELLOW_STAINED_GLASS_CTM =
+            register("arched_yellow_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> CIRCULAR_YELLOW_STAINED_GLASS =
             register("circular_yellow_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
-    public static final DeferredBlock<Block> FANCY_YELLOW_STAINED_GLASS_PILLAR =
-            register("fancy_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
-    public static final DeferredBlock<Block> ORNATE_YELLOW_STAINED_GLASS_PILLAR =
-            register("ornate_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
-    public static final DeferredBlock<Block> RASTER_YELLOW_STAINED_GLASS_PILLAR =
-            register("raster_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+    public static final DeferredBlock<Block> FANCY_YELLOW_STAINED_GLASS_CTM =
+            register("fancy_yellow_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+    public static final DeferredBlock<Block> ORNATE_YELLOW_STAINED_GLASS_CTM =
+            register("ornate_yellow_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+    public static final DeferredBlock<Block> RASTER_YELLOW_STAINED_GLASS_CTM =
+            register("raster_yellow_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> SMALL_YELLOW_DIAMOND_STAINED_GLASS =
             register("small_yellow_diamond_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
-    public static final DeferredBlock<Block> TILED_YELLOW_STAINED_GLASS_PILLAR =
-            register("tiled_yellow_stained_glass_pillar", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
+    public static final DeferredBlock<Block> TILED_YELLOW_STAINED_GLASS_CTM =
+            register("tiled_yellow_stained_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> YELLOW_LEADED_STAINED_GLASS =
             register("yellow_leaded_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_STAINED_GLASS)));
     public static final DeferredBlock<Block> FANCY_YELLOW_STAINED_GLASS =
@@ -4450,8 +4392,8 @@ public class ModBlocks {
             register("starry_yellow_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
     public static final DeferredBlock<Block> YELLOW_TERRACOTTA_COLUMN =
             register("yellow_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
-    public static final DeferredBlock<Block> YELLOW_TERRACOTTA_PILLAR =
-            register("yellow_terracotta_pillar", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
+    public static final DeferredBlock<Block> YELLOW_TERRACOTTA_CTM =
+            register("yellow_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
 
     // ── Yellow Wool ──
     public static final DeferredBlock<Block> CORNERED_YELLOW_WOOL =
@@ -4464,15 +4406,15 @@ public class ModBlocks {
             register("rectangle_yellow_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
 
     // ── New CTM batch blocks ──────────────────────────────────────────────
-    public static final DeferredBlock<Block> ACACIA_WINDOW_TILES_PILLAR = register("acacia_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_TILES_PILLAR = register("birch_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_TILES_PILLAR = register("crimson_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_TILES_PILLAR = register("dark_oak_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_TILES_PILLAR = register("jungle_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_TILES_PILLAR = register("mangrove_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_TILES_PILLAR = register("oak_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_TILES_PILLAR = register("spruce_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_TILES_PILLAR = register("warped_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_TILES_CTM = register("acacia_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_TILES_CTM = register("birch_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_TILES_CTM = register("crimson_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_TILES_CTM = register("dark_oak_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_TILES_CTM = register("jungle_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_TILES_CTM = register("mangrove_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_TILES_CTM = register("oak_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_TILES_CTM = register("spruce_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_TILES_CTM = register("warped_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> ACACIA_PLANKS_BRICK_PATTERN = register("acacia_planks_brick_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ANDESITE_BRICK_PATTERN = register("andesite_brick_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ANDESITE_CUT_POLISHED = register("andesite_cut_polished", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -4517,7 +4459,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> END_STONE_BRICK_PATTERN = register("end_stone_brick_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> FRAMED_GLASS = register("framed_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> FROSTED_GLASS = register("frosted_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> GLASS = register("glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> GLOWSTONE_BRICK_PATTERN = register("glowstone_brick_pattern", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GOLDEN_FRAMED_BLACK_STAINED_GLASS = register("golden_framed_black_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> GOLDEN_FRAMED_BLUE_STAINED_GLASS = register("golden_framed_blue_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
@@ -4612,7 +4553,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WHITE_STAINED_CLEAR_GLASS = register("white_stained_clear_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> YELLOW_FRAMED_GLASS = register("yellow_framed_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> YELLOW_STAINED_CLEAR_GLASS = register("yellow_stained_clear_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> BLUE_ICE_PILLAR = register("blue_ice_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> BLUE_ICE_CTM = register("blue_ice_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_BEAMS = register("acacia_planks_beams", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_BRICK_PAVING = register("acacia_planks_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_CRATE = register("acacia_planks_crate", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -5072,7 +5013,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> QUARTZ_BLOCK = register("quartz_block", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> QUARTZ_BLOCK_BORDERED = register("quartz_block_bordered", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> QUARTZ_BLOCK_BRICK_PAVING = register("quartz_block_brick_paving", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> QUARTZ_BLOCK_CHISELED_PILLAR = register("quartz_block_chiseled_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> QUARTZ_BLOCK_CHISELED_CTM = register("quartz_block_chiseled_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> QUARTZ_BLOCK_CONNECTING = register("quartz_block_connecting", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> QUARTZ_BLOCK_CROSSES = register("quartz_block_crosses", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> QUARTZ_BLOCK_DIAGONAL_TILES = register("quartz_block_diagonal_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -5208,9 +5149,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WEATHERED_COPPER_GRATE = register("weathered_copper_grate", () -> new Block(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> WHITE_STAINED_GLASS = register("white_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> YELLOW_STAINED_GLASS = register("yellow_stained_glass", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    public static final DeferredBlock<Block> AMETHYST_BLOCK_PILLAR = register("amethyst_block_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> EMERALD_BLOCK_PILLAR = register("emerald_block_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> REDSTONE_BLOCK_PILLAR = register("redstone_block_pillar", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> AMETHYST_BLOCK_CTM = register("amethyst_block_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> EMERALD_BLOCK_CTM = register("emerald_block_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> REDSTONE_BLOCK_CTM = register("redstone_block_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_BRICKS = register("acacia_planks_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> AMETHYST_BLOCK_BRICKS = register("amethyst_block_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ANDESITE_BRICKS = register("andesite_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -5245,89 +5186,89 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SPRUCE_PLANKS_BRICKS = register("spruce_planks_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> STONE_SMALL_BRICKS = register("stone_small_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WARPED_PLANKS_BRICKS = register("warped_planks_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_BARS_PILLAR = register("acacia_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_COVERED_PILLAR = register("acacia_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_DIAGONAL_PILLAR = register("acacia_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_LARGE_PILLAR = register("acacia_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_PANES_PILLAR = register("acacia_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_ROUNDED_PILLAR = register("acacia_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_SLIM_PILLAR = register("acacia_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> ACACIA_WINDOW_SWIRLING_PILLAR = register("acacia_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_BARS_PILLAR = register("birch_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_COVERED_PILLAR = register("birch_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_DIAGONAL_PILLAR = register("birch_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_LARGE_PILLAR = register("birch_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_PANES_PILLAR = register("birch_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_ROUNDED_PILLAR = register("birch_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_SLIM_PILLAR = register("birch_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> BIRCH_WINDOW_SWIRLING_PILLAR = register("birch_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_BARS_CTM = register("acacia_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_COVERED_CTM = register("acacia_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_DIAGONAL_CTM = register("acacia_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_LARGE_CTM = register("acacia_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_PANES_CTM = register("acacia_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_ROUNDED_CTM = register("acacia_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_SLIM_CTM = register("acacia_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> ACACIA_WINDOW_SWIRLING_CTM = register("acacia_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_BARS_CTM = register("birch_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_COVERED_CTM = register("birch_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_DIAGONAL_CTM = register("birch_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_LARGE_CTM = register("birch_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_PANES_CTM = register("birch_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_ROUNDED_CTM = register("birch_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_SLIM_CTM = register("birch_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BIRCH_WINDOW_SWIRLING_CTM = register("birch_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> BONE_BLOCK_CONNECTING = register("bone_block_connecting", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_BARS_PILLAR = register("crimson_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_COVERED_PILLAR = register("crimson_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_DIAGONAL_PILLAR = register("crimson_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_LARGE_PILLAR = register("crimson_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_PANES_PILLAR = register("crimson_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_ROUNDED_PILLAR = register("crimson_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_SLIM_PILLAR = register("crimson_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> CRIMSON_WINDOW_SWIRLING_PILLAR = register("crimson_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_BARS_PILLAR = register("dark_oak_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_COVERED_PILLAR = register("dark_oak_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_DIAGONAL_PILLAR = register("dark_oak_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_LARGE_PILLAR = register("dark_oak_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_PANES_PILLAR = register("dark_oak_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_ROUNDED_PILLAR = register("dark_oak_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_SLIM_PILLAR = register("dark_oak_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> DARK_OAK_WINDOW_SWIRLING_PILLAR = register("dark_oak_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_BARS_PILLAR = register("jungle_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_COVERED_PILLAR = register("jungle_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_DIAGONAL_PILLAR = register("jungle_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_LARGE_PILLAR = register("jungle_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_PANES_PILLAR = register("jungle_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_ROUNDED_PILLAR = register("jungle_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_SLIM_PILLAR = register("jungle_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> JUNGLE_WINDOW_SWIRLING_PILLAR = register("jungle_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_BARS_PILLAR = register("mangrove_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_COVERED_PILLAR = register("mangrove_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_DIAGONAL_PILLAR = register("mangrove_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_LARGE_PILLAR = register("mangrove_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_PANES_PILLAR = register("mangrove_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_ROUNDED_PILLAR = register("mangrove_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_SLIM_PILLAR = register("mangrove_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> MANGROVE_WINDOW_SWIRLING_PILLAR = register("mangrove_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_BARS_PILLAR = register("oak_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_COVERED_PILLAR = register("oak_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_DIAGONAL_PILLAR = register("oak_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_LARGE_PILLAR = register("oak_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_PANES_PILLAR = register("oak_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_ROUNDED_PILLAR = register("oak_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_SLIM_PILLAR = register("oak_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_WINDOW_SWIRLING_PILLAR = register("oak_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_BARS_CTM = register("crimson_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_COVERED_CTM = register("crimson_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_DIAGONAL_CTM = register("crimson_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_LARGE_CTM = register("crimson_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_PANES_CTM = register("crimson_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_ROUNDED_CTM = register("crimson_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_SLIM_CTM = register("crimson_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CRIMSON_WINDOW_SWIRLING_CTM = register("crimson_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_BARS_CTM = register("dark_oak_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_COVERED_CTM = register("dark_oak_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_DIAGONAL_CTM = register("dark_oak_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_LARGE_CTM = register("dark_oak_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_PANES_CTM = register("dark_oak_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_ROUNDED_CTM = register("dark_oak_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_SLIM_CTM = register("dark_oak_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> DARK_OAK_WINDOW_SWIRLING_CTM = register("dark_oak_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_BARS_CTM = register("jungle_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_COVERED_CTM = register("jungle_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_DIAGONAL_CTM = register("jungle_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_LARGE_CTM = register("jungle_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_PANES_CTM = register("jungle_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_ROUNDED_CTM = register("jungle_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_SLIM_CTM = register("jungle_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> JUNGLE_WINDOW_SWIRLING_CTM = register("jungle_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_BARS_CTM = register("mangrove_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_COVERED_CTM = register("mangrove_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_DIAGONAL_CTM = register("mangrove_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_LARGE_CTM = register("mangrove_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_PANES_CTM = register("mangrove_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_ROUNDED_CTM = register("mangrove_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_SLIM_CTM = register("mangrove_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> MANGROVE_WINDOW_SWIRLING_CTM = register("mangrove_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_BARS_CTM = register("oak_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_COVERED_CTM = register("oak_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_DIAGONAL_CTM = register("oak_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_LARGE_CTM = register("oak_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_PANES_CTM = register("oak_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_ROUNDED_CTM = register("oak_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_SLIM_CTM = register("oak_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_WINDOW_SWIRLING_CTM = register("oak_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> ROSE_QUARTZ_BRICKS = register("rose_quartz_bricks", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_BARS_PILLAR = register("spruce_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_COVERED_PILLAR = register("spruce_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_DIAGONAL_PILLAR = register("spruce_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_LARGE_PILLAR = register("spruce_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_PANES_PILLAR = register("spruce_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_ROUNDED_PILLAR = register("spruce_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_SLIM_PILLAR = register("spruce_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> SPRUCE_WINDOW_SWIRLING_PILLAR = register("spruce_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_BARS_PILLAR = register("warped_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_COVERED_PILLAR = register("warped_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_DIAGONAL_PILLAR = register("warped_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_LARGE_PILLAR = register("warped_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_PANES_PILLAR = register("warped_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_ROUNDED_PILLAR = register("warped_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_SLIM_PILLAR = register("warped_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> WARPED_WINDOW_SWIRLING_PILLAR = register("warped_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_BARS_PILLAR = register("pale_oak_window_bars_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_COVERED_PILLAR = register("pale_oak_window_covered_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_DIAGONAL_PILLAR = register("pale_oak_window_diagonal_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_LARGE_PILLAR = register("pale_oak_window_large_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_PANES_PILLAR = register("pale_oak_window_panes_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_ROUNDED_PILLAR = register("pale_oak_window_rounded_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_SLIM_PILLAR = register("pale_oak_window_slim_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_SWIRLING_PILLAR = register("pale_oak_window_swirling_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PALE_OAK_WINDOW_TILES_PILLAR = register("pale_oak_window_tiles_pillar", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_BARS_CTM = register("spruce_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_COVERED_CTM = register("spruce_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_DIAGONAL_CTM = register("spruce_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_LARGE_CTM = register("spruce_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_PANES_CTM = register("spruce_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_ROUNDED_CTM = register("spruce_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_SLIM_CTM = register("spruce_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> SPRUCE_WINDOW_SWIRLING_CTM = register("spruce_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_BARS_CTM = register("warped_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_COVERED_CTM = register("warped_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_DIAGONAL_CTM = register("warped_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_LARGE_CTM = register("warped_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_PANES_CTM = register("warped_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_ROUNDED_CTM = register("warped_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_SLIM_CTM = register("warped_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> WARPED_WINDOW_SWIRLING_CTM = register("warped_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_BARS_CTM = register("pale_oak_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_COVERED_CTM = register("pale_oak_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_DIAGONAL_CTM = register("pale_oak_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_LARGE_CTM = register("pale_oak_window_large_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_PANES_CTM = register("pale_oak_window_panes_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_ROUNDED_CTM = register("pale_oak_window_rounded_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_SLIM_CTM = register("pale_oak_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_SWIRLING_CTM = register("pale_oak_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> PALE_OAK_WINDOW_TILES_CTM = register("pale_oak_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
 
     // ── Plain window blocks (cube_column) ──────────────────────────────────────────
     public static final DeferredBlock<Block> ACACIA_WINDOW_BARS = register("acacia_window_bars", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));

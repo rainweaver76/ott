@@ -1,0 +1,13 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical_compact",
+  "textures": {
+    "side": "ott:block/deepslate/ctm/cobbled_deepslate_ctm",
+    "top":  "ott:block/cobbled_deepslate/ctm/cobbled_deepslate_ctm_end"
+  },
+  "connections": {
+    "side": [{"type": "is_same_block"}],
+    "top":  {"layout": "compact", "rules": [{"type": "is_same_block"}]}
+  }
+}

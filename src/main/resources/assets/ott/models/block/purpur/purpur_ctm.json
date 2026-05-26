@@ -1,0 +1,21 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_cube_column_compact",
+  "textures": {
+    "side": "ott:block/purpur/ctm/purpur_ctm",
+    "top": "ott:block/purpur/ctm/purpur_ctm_top"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ],
+    "top": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}
