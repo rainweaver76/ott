@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
   "textures": {
     "pane": "ott:block/quicksoil/ctm/quicksoil_glass",
-    "edge": "ott:block/quicksoil/ctm/quicksoil_glass"
+    "edge": "ott:block/quicksoil/ctm/quicksoil_glass_edge"
   },
   "connections": {
     "pane": [

@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
   "textures": {
     "pane": "ott:block/glass/ctm/frosted_glass",
-    "edge": "ott:block/glass/ctm/frosted_glass"
+    "edge": "ott:block/glass/ctm/frosted_glass_edge"
   },
   "connections": {
     "pane": [

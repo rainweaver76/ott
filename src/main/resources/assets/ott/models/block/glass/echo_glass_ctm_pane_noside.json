@@ -4,7 +4,7 @@
   "parent": "ott:block/ctm/ctm_pane_noside_compact",
   "textures": {
     "pane": "ott:block/echo/ctm/echo_glass",
-    "edge": "ott:block/echo/ctm/echo_glass"
+    "edge": "ott:block/echo/ctm/echo_glass_edge"
   },
   "connections": {
     "pane": [

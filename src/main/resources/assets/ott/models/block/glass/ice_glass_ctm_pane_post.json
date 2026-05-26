@@ -4,7 +4,7 @@
   "parent": "ott:block/ctm/ctm_pane_post_compact",
   "textures": {
     "pane": "ott:block/ice/ctm/ice_glass",
-    "edge": "ott:block/ice/ctm/ice_glass"
+    "edge": "ott:block/ice/ctm/ice_glass_edge"
   },
   "connections": {
     "pane": [

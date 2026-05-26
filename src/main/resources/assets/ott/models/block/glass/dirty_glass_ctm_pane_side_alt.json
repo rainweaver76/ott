@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_side_alt_full",
   "textures": {
     "pane": "ott:block/glass/ctm/dirty_glass",
-    "edge": "ott:block/glass/ctm/dirty_glass"
+    "edge": "ott:block/glass/ctm/dirty_glass_edge"
   },
   "connections": {
     "pane": [
