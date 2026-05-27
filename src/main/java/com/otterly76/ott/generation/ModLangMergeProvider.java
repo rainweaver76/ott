@@ -92,7 +92,7 @@ public class ModLangMergeProvider implements DataProvider {
         ottBase.addProperty("itemGroup.ott.wood_sets", "New Otterhome Wood Sets");
         ottBase.addProperty("ott.creative_category.stone_vanilla",             "Vanilla Plus: Stone");
         ottBase.addProperty("ott.creative_category.stone_custom",              "Custom Stone");
-        ottBase.addProperty("ott.creative_category.stone_mosaic_traditional",  "Mosaic Traditional");
+        ottBase.addProperty("ott.creative_category.stone_mosaic_traditional",  "Traditional Mosaic");
 
         Path mcOut = output.getOutputFolder(PackOutput.Target.RESOURCE_PACK)
                 .resolve("minecraft/lang/en_us.json");

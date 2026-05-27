@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_side_full",
   "textures": {
     "pane": "ott:block/obsidian/ctm/obsidian_framed_glass",
-    "edge": "minecraft:block/glass_pane_top"
+    "edge": "ott:block/obsidian/ctm/obsidian_framed_glass_edge"
   },
   "connections": {
     "pane": [

@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/quicksoil/ctm/quicksoil_glass",
-    "side": "minecraft:block/glass_pane_top"
+    "side": "ott:block/quicksoil/ctm/quicksoil_glass_edge"
   },
-  "render_type": "minecraft:cutout"
+  "render_type": "minecraft:translucent"
 }

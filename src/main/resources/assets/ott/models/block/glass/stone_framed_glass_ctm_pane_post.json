@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
     "pane": "ott:block/stone/ctm/stone_framed_glass",
-    "edge": "minecraft:block/glass_pane_top"
+    "edge": "ott:block/stone/ctm/stone_framed_glass_edge"
   },
   "connections": {
     "pane": [

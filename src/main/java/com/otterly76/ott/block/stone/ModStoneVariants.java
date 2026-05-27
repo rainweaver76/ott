@@ -285,7 +285,7 @@ public class ModStoneVariants {
             of("sandstone_slender_turquoise_pattern", ModBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
     );
 
-    // ── Group 9: Mosaic Traditional ──────────────────────────────────────────────
+    // ── Group 9: Traditional Mosaic ──────────────────────────────────────────────
 
     public static final List<StoneVariant> MOSAIC_TRADITIONAL = List.of(
             of("water_mosaic_traditional",   ModBlocks.WATER_MOSAIC_TRADITIONAL,  "ott:block/water_mosaic/water_mosaic_traditional"),

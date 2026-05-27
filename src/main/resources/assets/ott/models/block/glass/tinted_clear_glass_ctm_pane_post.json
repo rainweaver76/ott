@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
     "pane": "ott:block/glass/ctm/tinted_clear_glass",
-    "edge": "ott:block/glass/ctm/tinted_clear_glass"
+    "edge": "ott:block/tinted/ctm/tinted_glass_edge"
   },
   "connections": {
     "pane": [
@@ -12,5 +12,5 @@
       }
     ]
   },
-  "render_type": "minecraft:cutout"
+  "render_type": "minecraft:translucent"
 }
