@@ -8,6 +8,8 @@ import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.neoforged.neoforge.client.model.BakedModelWrapper;
 import net.neoforged.neoforge.client.model.IQuadTransformer;
 import net.neoforged.neoforge.client.model.data.ModelData;
@@ -222,11 +224,58 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
             return isolated;
         }
 
+        // Suppress outer arm faces for pane-type blocks in connected directions.
+        // The translucent render pass does not always respect Block.skipRendering(), so
+        // both the east arm of block A and the west arm of block B would be rendered at
+        // the shared block boundary, doubling opacity and producing a dark stripe.
+        // A connected arm's outer face is always meant to be culled (by skipRendering for
+        // same-type panes, or by cullface against the solid neighbor), so suppressing it
+        // here is always correct.
+        if (side != null && state != null && side.getAxis().isHorizontal()) {
+            BooleanProperty connProp = switch (side) {
+                case NORTH -> BlockStateProperties.NORTH;
+                case SOUTH -> BlockStateProperties.SOUTH;
+                case EAST  -> BlockStateProperties.EAST;
+                case WEST  -> BlockStateProperties.WEST;
+                default    -> null;
+            };
+            if (connProp != null && state.hasProperty(connProp) && state.getValue(connProp)) {
+                return List.of();
+            }
+        }
+
         List<BakedQuad> base = originalModel.getQuads(state, side, rand, data, renderType);
 
         int[][] masks = data.get(CTM_MASKS);
         if (masks == null) masks = MASKS_FALLBACK.get(); // fallback for multipart models
         if (masks == null || base.isEmpty()) return base;
+
+        // Pane-type blocks (IronBarsBlock subclasses) have directional connection properties.
+        // Their thin arm faces get AO-darkened at block boundaries where adjacent panes meet,
+        // creating a dark stripe. Disable AO for these blocks by stripping the per-quad flag.
+        boolean stripAO = state != null
+                && state.hasProperty(BlockStateProperties.NORTH)
+                && state.hasProperty(BlockStateProperties.EAST);
+
+        // For pane-type blocks: when rendering unculled (POST) quads, suppress faces in
+        // connected directions. The ARM model already renders those faces; overlapping POST
+        // + ARM quads at the same z-plane cause translucent z-sorting seams.
+        if (stripAO && side == null) {
+            List<BakedQuad> filtered = new ArrayList<>(base.size());
+            for (BakedQuad q : base) {
+                Direction dir = q.getDirection();
+                BooleanProperty prop = switch (dir) {
+                    case NORTH -> BlockStateProperties.NORTH;
+                    case SOUTH -> BlockStateProperties.SOUTH;
+                    case EAST  -> BlockStateProperties.EAST;
+                    case WEST  -> BlockStateProperties.WEST;
+                    default    -> null;
+                };
+                if (prop != null && state.hasProperty(prop) && state.getValue(prop)) continue;
+                filtered.add(q);
+            }
+            base = filtered;
+        }
 
         List<BakedQuad> result = new ArrayList<>(base.size());
         for (BakedQuad quad : base) {
@@ -234,7 +283,7 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
             // Unculled quads (e.g. glass pane faces that lack cullface): fall back to
             // the quad's own facing direction so CTM still fires for thin blocks.
             Direction quadFace = (side != null) ? side : quad.getDirection();
-            result.add(remapQuad(quad, masks, quadFace.ordinal()));
+            result.add(remapQuad(quad, masks, quadFace.ordinal(), stripAO));
         }
         return result;
     }
@@ -265,12 +314,16 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         return t | (tl << 1) | (l << 2) | (bl << 3) | (b << 4) | (br << 5) | (r << 6) | (tr << 7);
     }
 
-    private BakedQuad remapQuad(BakedQuad quad, int[][] masks, int faceOrdinal) {
+    private BakedQuad remapQuad(BakedQuad quad, int[][] masks, int faceOrdinal, boolean stripAO) {
         TextureAtlasSprite sprite = quad.getSprite();
 
         // Find rule index for this sprite
         int ruleIdx = spriteToRuleIndex.getOrDefault(sprite, catchAllRuleIndex);
-        if (ruleIdx < 0 || ruleIdx >= masks.length) return quad;
+        if (ruleIdx < 0 || ruleIdx >= masks.length) {
+            return (stripAO && quad.hasAmbientOcclusion())
+                    ? new BakedQuad(quad.getVertices(), quad.getTintIndex(), quad.getDirection(), sprite, quad.isShade(), false)
+                    : quad;
+        }
 
         int mask = masks[ruleIdx][faceOrdinal];
         if (FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
@@ -279,14 +332,20 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         int tileX = tile[0];
         int tileY = tile[1];
 
-        // Tile [0,0] means "no connections" — input UV is already at tile [0,0], nothing to shift
-        if (tileX == 0 && tileY == 0) return quad;
+        boolean aoFlag = !stripAO && quad.hasAmbientOcclusion();
+
+        // Tile [0,0] means "no connections" — input UV is already at tile [0,0], nothing to shift.
+        if (tileX == 0 && tileY == 0) {
+            if (aoFlag == quad.hasAmbientOcclusion()) return quad;
+            return new BakedQuad(quad.getVertices(), quad.getTintIndex(), quad.getDirection(),
+                    sprite, quad.isShade(), aoFlag);
+        }
 
         int[] newVerts = Arrays.copyOf(quad.getVertices(), quad.getVertices().length);
         remapUV(newVerts, sprite, tileX, tileY, l);
 
         return new BakedQuad(newVerts, quad.getTintIndex(), quad.getDirection(),
-                sprite, quad.isShade(), quad.hasAmbientOcclusion());
+                sprite, quad.isShade(), aoFlag);
     }
 
     /**

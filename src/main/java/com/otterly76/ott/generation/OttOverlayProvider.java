@@ -32,6 +32,7 @@ import java.util.concurrent.CompletableFuture;
  *
  * <p>Blocks generated here:
  * <ul>
+ *   <li>7 Create mod stone blocks (asurine, crimsite, etc.) — overlay model files are hand-written
  *   <li>{@code {color}_dyed_stone}         — 33 colors
  *   <li>{@code {color}_dyed_cobblestone}   — 33 colors
  *   <li>{@code {color}_concrete_powder}    — 17 custom OTT colors
@@ -99,16 +100,30 @@ public class OttOverlayProvider implements DataProvider {
             }
         }
 
+        // ── Create mod — overlay model files are hand-written, config-only ────
+        Map<String, Map<String, List<String>>> newConditional = new LinkedHashMap<>();
+        Map<String, List<String>> createOverlays = new LinkedHashMap<>();
+        createOverlays.put("create:asurine",   List.of("ott:block/overlays/asurine_overlay"));
+        createOverlays.put("create:crimsite",  List.of("ott:block/overlays/crimsite_overlay"));
+        createOverlays.put("create:limestone", List.of("ott:block/overlays/create_limestone_overlay"));
+        createOverlays.put("create:ochrum",    List.of("ott:block/overlays/ochrum_overlay"));
+        createOverlays.put("create:scorchia",  List.of("ott:block/overlays/scorchia_overlay"));
+        createOverlays.put("create:scoria",    List.of("ott:block/overlays/scoria_overlay"));
+        createOverlays.put("create:veridium",  List.of("ott:block/overlays/veridium_overlay"));
+        newConditional.put("create", createOverlays);
+
         // ── merge into overlay config only (tier_config is user-managed) ──────
         Path configDir = mainPath.resolve("ott_overlay_modifiers");
-        mergeOverlayConfig(cache, configDir.resolve("overlay_config.json"), newOverlays);
+        mergeOverlayConfig(cache, configDir.resolve("overlay_config.json"), newOverlays, newConditional);
 
         return CompletableFuture.completedFuture(null);
     }
 
     // ── config mergers ────────────────────────────────────────────────────────
 
-    private void mergeOverlayConfig(CachedOutput cache, Path file, Map<String, List<String>> newEntries) {
+    private void mergeOverlayConfig(CachedOutput cache, Path file,
+                                     Map<String, List<String>> newEntries,
+                                     Map<String, Map<String, List<String>>> newConditional) {
         JsonObject existing = readJsonObject(file);
         JsonObject overlays = existing.has("overlays") ? existing.getAsJsonObject("overlays") : new JsonObject();
 
@@ -118,9 +133,23 @@ public class OttOverlayProvider implements DataProvider {
             overlays.add(entry.getKey(), arr);
         }
 
-        JsonObject sorted = sortedObject(overlays);
+        // Build mod_conditional_overlays section
+        JsonObject conditional = existing.has("mod_conditional_overlays")
+                ? existing.getAsJsonObject("mod_conditional_overlays") : new JsonObject();
+        for (Map.Entry<String, Map<String, List<String>>> modEntry : newConditional.entrySet()) {
+            JsonObject modSection = conditional.has(modEntry.getKey())
+                    ? conditional.getAsJsonObject(modEntry.getKey()) : new JsonObject();
+            for (Map.Entry<String, List<String>> blockEntry : modEntry.getValue().entrySet()) {
+                JsonArray arr = new JsonArray();
+                blockEntry.getValue().forEach(arr::add);
+                modSection.add(blockEntry.getKey(), arr);
+            }
+            conditional.add(modEntry.getKey(), sortedObject(modSection));
+        }
+
         JsonObject out = new JsonObject();
-        out.add("overlays", sorted);
+        out.add("overlays", sortedObject(overlays));
+        out.add("mod_conditional_overlays", conditional);
         writeJson(cache, file, out);
     }
 

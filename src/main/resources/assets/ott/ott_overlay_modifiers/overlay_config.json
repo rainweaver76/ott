@@ -1,26 +1,5 @@
 {
   "overlays": {
-    "create:asurine": [
-      "ott:block/overlays/asurine_overlay"
-    ],
-    "create:crimsite": [
-      "ott:block/overlays/crimsite_overlay"
-    ],
-    "create:limestone": [
-      "ott:block/overlays/create_limestone_overlay"
-    ],
-    "create:ochrum": [
-      "ott:block/overlays/ochrum_overlay"
-    ],
-    "create:scorchia": [
-      "ott:block/overlays/scorchia_overlay"
-    ],
-    "create:scoria": [
-      "ott:block/overlays/scoria_overlay"
-    ],
-    "create:veridium": [
-      "ott:block/overlays/veridium_overlay"
-    ],
     "minecraft:amethyst_block": [
       "ott:block/overlays/amethyst_block_overlay"
     ],
@@ -1395,5 +1374,30 @@
     "ott:yellow_white_concrete_powder": [
       "ott:block/overlays/yellow_white_concrete_powder_overlay"
     ]
+  },
+  "mod_conditional_overlays": {
+    "create": {
+      "create:asurine": [
+        "ott:block/overlays/asurine_overlay"
+      ],
+      "create:crimsite": [
+        "ott:block/overlays/crimsite_overlay"
+      ],
+      "create:limestone": [
+        "ott:block/overlays/create_limestone_overlay"
+      ],
+      "create:ochrum": [
+        "ott:block/overlays/ochrum_overlay"
+      ],
+      "create:scorchia": [
+        "ott:block/overlays/scorchia_overlay"
+      ],
+      "create:scoria": [
+        "ott:block/overlays/scoria_overlay"
+      ],
+      "create:veridium": [
+        "ott:block/overlays/veridium_overlay"
+      ]
+    }
   }
 }
