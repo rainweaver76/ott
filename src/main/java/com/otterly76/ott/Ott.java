@@ -324,6 +324,7 @@ ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.COMMO
         generator.addProvider(event.includeClient(), new GradientTextureProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new ColorSetTextureProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new OttOverlayProvider(generator.getPackOutput()));
+        generator.addProvider(event.includeClient(), new OttCtmPaneProvider(generator.getPackOutput()));
         generator.addProvider(event.includeClient(), new OttBlockStateProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new MinecraftBackportBlockStateProvider(generator.getPackOutput(), event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new MinecraftBackportItemModelProvider(generator.getPackOutput(), event.getExistingFileHelper()));

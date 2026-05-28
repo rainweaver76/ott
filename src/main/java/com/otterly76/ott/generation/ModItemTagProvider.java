@@ -54,6 +54,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
         TagKey<Item> cGlassBlocksKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks"));
         TagKey<Item> cGlassBlocksCheapKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks_cheap"));
         TagKey<Item> cGlassBlocksColoredKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks/colored"));
+        TagKey<Item> cGlassPanesKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "glass_panes"));
+        TagKey<Item> cGlassPanesColoredKey = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", "glass_panes/colored"));
 
         TagKey<Item> mcTier1Key = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("minecolonies", "tier1blocks"));
         TagKey<Item> mcTier2Key = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("minecolonies", "tier2blocks"));
@@ -86,6 +88,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
         copyCommonTag(cGlassBlocksKey);
         copyCommonTag(cGlassBlocksCheapKey);
         copyCommonTag(cGlassBlocksColoredKey);
+        copyCommonTag(cGlassPanesKey);
+        copyCommonTag(cGlassPanesColoredKey);
         copyCommonTag(cDyedKey);
 
         // Vanilla Copies

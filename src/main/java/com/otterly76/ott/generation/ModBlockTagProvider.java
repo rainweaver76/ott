@@ -2,9 +2,12 @@ package com.otterly76.ott.generation;
 
 import com.otterly76.ott.Constants;
 import com.otterly76.ott.block.*;
+import com.otterly76.ott.block.custom.CtmPaneBlock;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -45,6 +48,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         TagKey<Block> cGlassBlocksKey = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks"));
         TagKey<Block> cGlassBlocksCheapKey = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks_cheap"));
         TagKey<Block> cGlassBlocksColoredKey = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "glass_blocks/colored"));
+        TagKey<Block> cGlassPanesKey = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "glass_panes"));
+        TagKey<Block> cGlassPanesColoredKey = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "glass_panes/colored"));
 
         TagKey<Block> paleOakLogsKey = ModTags.Blocks.PALE_OAK_LOGS;
 
@@ -138,6 +143,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                     ottStainedGlass.add(glass);
                     mcStainedGlass.add(glass);
                     this.tag(BlockTags.IMPERMEABLE).add(glass);
+                }
+                case CtmPaneBlock ctmPane -> {
+                    this.tag(cGlassKey).add(ctmPane);
+                    this.tag(cGlassPanesKey).add(ctmPane);
+                    this.tag(ModTags.Blocks.CTM_BLOCKS).add(ctmPane);
+                }
+                case TransparentBlock transparent -> {
+                    this.tag(cGlassKey).add(transparent);
+                    this.tag(cGlassBlocksKey).add(transparent);
+                    this.tag(BlockTags.IMPERMEABLE).add(transparent);
+                    this.tag(doDefaultKey).add(transparent);
                 }
                 default -> { }
             }
@@ -2798,6 +2814,72 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(ModBlocks.SILK_COCOON.get());
         this.tag(ModTags.Blocks.FERRET_DIG_GROUNDS).add(Blocks.DIRT, Blocks.GRASS_BLOCK, Blocks.PODZOL, Blocks.COARSE_DIRT, Blocks.ROOTED_DIRT, Blocks.MOSS_BLOCK, Blocks.SAND, Blocks.RED_SAND);
+
+        // ── Per-colour stained glass: add to colored subtags and minecraft:stained_glass ──
+        // (The registry loop above handles c:glass_blocks and c:glass via TransparentBlock/CtmPaneBlock cases)
+        for (DyeColor color : DyeColor.values()) {
+            String c = color.getName();
+            // Stained glass BLOCK variants (coloured, non-tinted)
+            String[] coloredBlockNames = {
+                "arched_" + c + "_stained_glass_ctm",
+                c + "_framed_glass",
+                "fancy_" + c + "_stained_glass_ctm",
+                "fancy_" + c + "_stained_glass",
+                "golden_framed_" + c + "_stained_glass",
+                "ornate_" + c + "_stained_glass_ctm",
+                "ornate_" + c + "_stained_glass",
+                "raster_" + c + "_stained_glass_ctm",
+                "raster_" + c + "_stained_glass",
+                "scratched_glass_" + c,
+                "small_" + c + "_diamond_stained_glass",
+                "tiled_" + c + "_stained_glass_ctm",
+                "tiled_" + c + "_stained_glass",
+                "borderless_glass_" + c,
+                c + "_stained_clear_glass",
+                "circular_" + c + "_stained_glass",
+                "large_diamond_" + c + "_stained_glass",
+                "small_" + c + "_stained_glass",
+                "square_" + c + "_stained_glass",
+                "vertical_striped_" + c + "_stained_glass",
+                "woven_" + c + "_stained_glass",
+                c + "_leaded_stained_glass"
+            };
+            for (String name : coloredBlockNames) {
+                Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", name));
+                if (block != Blocks.AIR) {
+                    this.tag(cGlassBlocksColoredKey).add(block);
+                    mcStainedGlass.add(block);
+                }
+            }
+            // Tinted coloured block — colored but not stained_glass
+            Block tintedColored = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", "tinted_borderless_glass_" + c));
+            if (tintedColored != Blocks.AIR) {
+                this.tag(cGlassBlocksColoredKey).add(tintedColored);
+            }
+
+            // CTM pane coloured variants
+            String[] coloredPaneNames = {
+                "arched_" + c + "_stained_glass_ctm_pane",
+                c + "_framed_glass_ctm_pane",
+                c + "_stained_glass_ctm_pane",
+                "fancy_" + c + "_stained_glass_ctm_pane",
+                "golden_framed_" + c + "_stained_glass_ctm_pane",
+                "ornate_" + c + "_stained_glass_ctm_pane",
+                "raster_" + c + "_stained_glass_ctm_pane",
+                "scratched_glass_" + c + "_ctm_pane",
+                "small_" + c + "_diamond_stained_glass_ctm_pane",
+                "tiled_" + c + "_stained_glass_ctm_pane",
+                "borderless_glass_" + c + "_ctm_pane",
+                c + "_stained_clear_glass_ctm_pane",
+                "tinted_borderless_glass_" + c + "_ctm_pane"
+            };
+            for (String name : coloredPaneNames) {
+                Block pane = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", name));
+                if (pane != Blocks.AIR) {
+                    this.tag(cGlassPanesColoredKey).add(pane);
+                }
+            }
+        }
     }
 
     @SafeVarargs

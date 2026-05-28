@@ -112,6 +112,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(noAdv, getRecipePath(Constants.MOD_ID, "engraving_table"));
 
         this.engraveRecipes(noAdv);
+        this.ctmPaneRecipes(noAdv);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GLASS_JAR.get())
                 .define('G', Items.GLASS_PANE)
@@ -4809,6 +4810,79 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 }
+
+    // ── CTM Pane recipes (new batch) ──────────────────────────────────────────
+    private void ctmPaneRecipes(RecipeOutput exporter) {
+        // 1. Plain glass CTM panes (engraved from vanilla glass)
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.SCRATCHED_GLASS_CTM_PANE,         "scratched_glass_ctm_pane_engraving");
+        engraveOne(exporter, Blocks.GLASS, ModBlocks.BORDERLESS_GLASS_CTM_PANE,        "borderless_glass_ctm_pane_engraving");
+        paneFrom6(exporter, ModBlocks.SCRATCHED_GLASS,       ModBlocks.SCRATCHED_GLASS_CTM_PANE,        "scratched_glass_ctm_pane_from_block");
+        paneFrom6(exporter, ModBlocks.BORDERLESS_GLASS,      ModBlocks.BORDERLESS_GLASS_CTM_PANE,       "borderless_glass_ctm_pane_from_block");
+
+        // 2. Tinted borderless CTM pane (engraved from vanilla tinted glass)
+        engraveOne(exporter, Blocks.TINTED_GLASS, ModBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_engraving");
+        paneFrom6(exporter, ModBlocks.TINTED_BORDERLESS_GLASS, ModBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_from_block");
+
+        // 3. Per-color stained glass CTM panes (engraved from vanilla stained glass of that colour)
+        for (DyeColor color : DyeColor.values()) {
+            String c = color.getName();
+            Block sg = BuiltInRegistries.BLOCK.get(ResourceLocation.withDefaultNamespace(c + "_stained_glass"));
+            // 12 pane types, each with matching OTT block source for shaped recipe
+            engravePaneFromBlock(exporter, sg, "arched_" + c + "_stained_glass_ctm",       "arched_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, c + "_framed_glass",                          c + "_framed_glass_ctm_pane");
+            engravePaneSelfBlock(exporter, sg,                                                c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "fancy_" + c + "_stained_glass_ctm",         "fancy_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "golden_framed_" + c + "_stained_glass",      "golden_framed_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "ornate_" + c + "_stained_glass_ctm",        "ornate_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "raster_" + c + "_stained_glass_ctm",        "raster_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "scratched_glass_" + c,                       "scratched_glass_" + c + "_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "small_" + c + "_diamond_stained_glass",      "small_" + c + "_diamond_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "tiled_" + c + "_stained_glass_ctm",         "tiled_" + c + "_stained_glass_ctm_pane");
+            engravePaneFromBlock(exporter, sg, "borderless_glass_" + c,                      "borderless_glass_" + c + "_ctm_pane");
+            engravePaneFromBlock(exporter, sg, c + "_stained_clear_glass",                   c + "_stained_clear_glass_ctm_pane");
+            // Tinted coloured pane (engraved from vanilla tinted glass)
+            engravePaneFromBlock(exporter, Blocks.TINTED_GLASS, "tinted_borderless_glass_" + c, "tinted_borderless_glass_" + c + "_ctm_pane");
+        }
+
+        // 4. Wood window CTM panes (engraved from planks, crafted 6→16 from the CTM block)
+        String[] styles = {"bars", "covered", "diagonal", "large", "panes", "rounded", "slim", "swirling", "tiles"};
+        String[] woods  = {"oak", "acacia", "birch", "jungle", "dark_oak", "spruce", "mangrove", "cherry", "bamboo", "crimson", "warped", "pale_oak"};
+        for (String wood : woods) {
+            Block planks = BuiltInRegistries.BLOCK.get(ResourceLocation.withDefaultNamespace(wood + "_planks"));
+            for (String style : styles) {
+                engravePaneFromBlock(exporter, planks,
+                    wood + "_window_" + style + "_ctm",
+                    wood + "_window_" + style + "_ctm_pane");
+            }
+        }
+    }
+
+    /** Engraves material → pane, and adds a 6-block → 16-pane shaped recipe using the named OTT block. */
+    private void engravePaneFromBlock(RecipeOutput exporter, ItemLike material, String blockOttName, String paneName) {
+        Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", blockOttName));
+        Block pane  = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));
+        if (block == Blocks.AIR || pane == Blocks.AIR) return;
+        engraveOne(exporter, material, pane, paneName + "_engraving");
+        paneFrom6(exporter, block, pane, paneName + "_from_block");
+    }
+
+    /** Engraves material → pane, and uses material itself as the 6-block source (e.g. vanilla stained glass → plain CTM pane). */
+    private void engravePaneSelfBlock(RecipeOutput exporter, ItemLike material, String paneName) {
+        Block pane = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));
+        if (pane == Blocks.AIR) return;
+        engraveOne(exporter, material, pane, paneName + "_engraving");
+        paneFrom6(exporter, material, pane, paneName + "_from_block");
+    }
+
+    /** Shaped recipe: 6 of block (2×3) → 16 panes. */
+    private void paneFrom6(RecipeOutput exporter, ItemLike block, ItemLike pane, String id) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pane, 16)
+                .define('G', block)
+                .pattern("GGG")
+                .pattern("GGG")
+                .unlockedBy(getHasName(block), has(block))
+                .save(exporter, getRecipePath("ott", id));
+    }
 
     private void woodcutStructural(RecipeOutput exporter, ItemLike input, String prefix, ModBlocks.WoodSetBlocks set) {
         woodcutOne(exporter, input, set.planksPlate().get(),     prefix + "_plate_woodcutting");
