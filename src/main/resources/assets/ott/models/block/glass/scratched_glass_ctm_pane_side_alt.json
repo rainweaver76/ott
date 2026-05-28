@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "textures": {
+    "pane": "ott:block/scratched/ctm/scratched_glass",
+    "edge": "minecraft:block/glass_pane_top"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout"
+}

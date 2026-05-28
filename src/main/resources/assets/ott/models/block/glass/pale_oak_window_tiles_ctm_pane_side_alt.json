@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "textures": {
+    "pane": "ott:block/pale_oak_planks/ctm/pale_oak_window_tiles",
+    "edge": "minecraft:block/pale_oak_planks"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

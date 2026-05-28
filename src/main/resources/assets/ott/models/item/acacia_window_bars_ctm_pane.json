@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_vertical",
+  "textures": {
+    "front": "ott:block/acacia_planks/ctm/acacia_window_bars",
+    "side": "minecraft:block/acacia_planks"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

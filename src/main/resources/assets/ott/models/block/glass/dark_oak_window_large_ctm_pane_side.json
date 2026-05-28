@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_pane_side_vertical",
+  "textures": {
+    "pane": "ott:block/dark_oak_planks/ctm/dark_oak_window_large",
+    "edge": "minecraft:block/dark_oak_planks"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

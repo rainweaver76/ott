@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_full",
+  "textures": {
+    "front": "ott:block/tinted/ctm/tinted_borderless_glass_yellow",
+    "side": "ott:block/tinted/ctm/tinted_borderless_glass_yellow_edge"
+  },
+  "render_type": "minecraft:translucent"
+}

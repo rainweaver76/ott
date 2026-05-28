@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_full",
+  "textures": {
+    "front": "ott:block/white_stained_glass/ctm/white_stained_clear_glass",
+    "side": "ott:block/white_stained_glass/clear_glass_white_edge"
+  },
+  "render_type": "minecraft:translucent"
+}

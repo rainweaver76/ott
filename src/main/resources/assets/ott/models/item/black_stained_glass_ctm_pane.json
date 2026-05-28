@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_full",
+  "textures": {
+    "front": "ott:block/black_stained_glass/ctm/black_stained_glass",
+    "side": "minecraft:block/black_stained_glass_pane_top"
+  },
+  "render_type": "minecraft:translucent"
+}

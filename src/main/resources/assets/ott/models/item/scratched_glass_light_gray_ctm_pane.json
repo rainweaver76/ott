@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_full",
+  "textures": {
+    "front": "ott:block/scratched/ctm/scratched_glass_light_gray",
+    "side": "ott:block/scratched/ctm/scratched_glass_light_gray_edge"
+  },
+  "render_type": "minecraft:translucent"
+}
