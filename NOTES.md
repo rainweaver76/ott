@@ -1,3 +1,9 @@
+textures need to be moved into their proper named directory
+each new block needs its blockstate, block and item models
+each new block needs to be added to the engraving system as a 1:1 exchange for its material type
+each new block needs its language translation key
+each new block needs to be added to the ott Creative tab for Engraving
+
 Notes:
 =====
 §
@@ -585,13 +591,9 @@ Fallen logs and hollow logs; both very nice for an environment, and the hollow l
 
 Slime in a bucket
 
-Firehounds (because you can tame them and place them on top of a furnace, which improves the furnace function)
-
 Ambient disks
 
 Ancient tomes
-
-Framed glass
 
 Glass item frame
 
