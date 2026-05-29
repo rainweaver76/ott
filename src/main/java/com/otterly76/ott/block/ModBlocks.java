@@ -122,6 +122,14 @@ public class ModBlocks {
                     .isRedstoneConductor((state, level, pos) -> false)
                     .isSuffocating((state, level, pos) -> false)
                     .isViewBlocking((state, level, pos) -> false)));
+    public static final DeferredBlock<Block> SOUL_GLASS_CTM = register("soul_glass_ctm",
+            () -> new TransparentBlock(Properties.of().strength(0.3F).sound(SoundType.GLASS).noOcclusion()
+                    .isValidSpawn((state, level, pos, type) -> false)
+                    .isRedstoneConductor((state, level, pos) -> false)
+                    .isSuffocating((state, level, pos) -> false)
+                    .isViewBlocking((state, level, pos) -> false)));
+    public static final DeferredBlock<CtmPaneBlock> SOUL_GLASS_CTM_PANE = register("soul_glass_ctm_pane",
+            () -> new CtmPaneBlock(Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
 
     public static final DeferredBlock<Block> PINK_SALT_BLOCK = register("pink_salt_block", () -> new Block(Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND)));
     public static final DeferredBlock<Block> POLISHED_PINK_SALT_BLOCK = register("polished_pink_salt_block", () -> new Block(Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND)));

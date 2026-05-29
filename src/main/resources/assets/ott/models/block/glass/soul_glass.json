@@ -1,15 +1,7 @@
 {
-  "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/glass/ctm/soul_glass"
-  },
-  "connections": {
-    "all": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "all": "ott:block/misc/soul_glass"
   },
   "render_type": "minecraft:translucent"
 }

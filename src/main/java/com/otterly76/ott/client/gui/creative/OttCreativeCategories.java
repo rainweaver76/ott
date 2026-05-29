@@ -796,6 +796,8 @@ public enum OttCreativeCategories {
 
                 output.accept(ModBlocks.SOUL_GLASS);
                 output.accept(ModBlocks.SOUL_GLASS_PANE);
+                output.accept(ModBlocks.SOUL_GLASS_CTM);
+                output.accept(ModBlocks.SOUL_GLASS_CTM_PANE);
 
                 // Opal crystal sets — raw stone blocks only; buds/crystals are in MISC, decorative in ENGRAVED
                 ModBlocks.OPAL_SETS.values().forEach(set -> {

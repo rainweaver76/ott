@@ -38,6 +38,7 @@ public class ModTags {
 
         public static final TagKey<Block> STONE = mcTag("stone");
         public static final TagKey<Block> CTM_BLOCKS = createTag("ctm_blocks");
+        public static final TagKey<Block> FLOOR_TILES = createTag("floor_tiles");
         public static final TagKey<Block> PATHS = createTag("paths");
         public static final TagKey<Block> HARVEST_BLACKLIST = createTag("harvest_blacklist");
         public static final TagKey<Block> FERRET_DIG_GROUNDS = createTag("ferret_dig_grounds");

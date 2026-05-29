@@ -3,6 +3,7 @@ package com.otterly76.ott.generation;
 import com.otterly76.ott.Constants;
 import com.otterly76.ott.block.*;
 import com.otterly76.ott.block.custom.CtmPaneBlock;
+import com.otterly76.ott.block.custom.TileBlock;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -150,12 +151,57 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                     this.tag(ModTags.Blocks.CTM_BLOCKS).add(ctmPane);
                 }
                 case TransparentBlock transparent -> {
-                    this.tag(cGlassKey).add(transparent);
-                    this.tag(cGlassBlocksKey).add(transparent);
-                    this.tag(BlockTags.IMPERMEABLE).add(transparent);
-                    this.tag(doDefaultKey).add(transparent);
+                    String blockPath = BuiltInRegistries.BLOCK.getKey(transparent).getPath();
+                    boolean isWindowBlock = blockPath.contains("_window_");
+                    // A TransparentBlock is CTM if:
+                    // (a) its name ends with _ctm, OR
+                    // (b) a {name}_ctm_pane exists but {name}_ctm does NOT
+                    //     (means this IS the CTM block, not the non-CTM sibling of one)
+                    boolean endsWithCtm = blockPath.endsWith("_ctm");
+                    boolean hasPaneVariant = BuiltInRegistries.BLOCK.containsKey(
+                        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, blockPath + "_ctm_pane"));
+                    boolean hasCtmSibling = BuiltInRegistries.BLOCK.containsKey(
+                        ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, blockPath + "_ctm"));
+                    boolean isCtm = endsWithCtm || (hasPaneVariant && !hasCtmSibling);
+                    if (isCtm) {
+                        // CTM glass blocks: tag them, give them glass/impermeable tags where appropriate,
+                        // but exclude from c:glass_blocks (AC input) and doDefaultKey (DO material).
+                        this.tag(ModTags.Blocks.CTM_BLOCKS).add(transparent);
+                        if (!isWindowBlock) {
+                            this.tag(cGlassKey).add(transparent);
+                            this.tag(BlockTags.IMPERMEABLE).add(transparent);
+                        }
+                    } else if (!isWindowBlock) {
+                        // Non-CTM, non-window glass: full tag set
+                        this.tag(cGlassKey).add(transparent);
+                        this.tag(cGlassBlocksKey).add(transparent);
+                        this.tag(BlockTags.IMPERMEABLE).add(transparent);
+                        this.tag(doDefaultKey).add(transparent);
+                    } else {
+                        // Window blocks (non-CTM architectural glass+wood): DO material but not glass tags
+                        this.tag(doDefaultKey).add(transparent);
+                    }
                 }
-                default -> { }
+                case TileBlock tileBlock -> {
+                    // Carpet-style floor tiles — pickaxe mineable but excluded from DO material inputs
+                    this.tag(ModTags.Blocks.FLOOR_TILES).add(tileBlock);
+                    pickaxeTag.add(tileBlock);
+                }
+                // Carpets — thin floor coverings, excluded from DO material inputs
+                case CarpetBlock carpetBlock -> this.tag(ModTags.Blocks.FLOOR_TILES).add(carpetBlock);
+                default -> {
+                    String bPath = BuiltInRegistries.BLOCK.getKey(block).getPath();
+                    if (bPath.endsWith("_ctm") || bPath.endsWith("_connecting")
+                            || bPath.startsWith("bordered_") || bPath.contains("_bordered_")) {
+                        // CTM blocks (including bordered variants that lack the _ctm suffix)
+                        this.tag(ModTags.Blocks.CTM_BLOCKS).add(block);
+                        pickaxeTag.add(block);
+                    } else if (bPath.contains("_marble")) {
+                        // Marble blocks: DO material inputs + pickaxe mineable
+                        this.tag(doDefaultKey).add(block);
+                        pickaxeTag.add(block);
+                    }
+                }
             }
         });
 
@@ -1762,23 +1808,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.ACACIA_PLANKS_TILES.get(),
         ModBlocks.ACACIA_PLANKS_WAVY.get(),
         ModBlocks.ACACIA_PLANKS_WOVEN.get(),
-        ModBlocks.ACACIA_WINDOW_BARS.get(),
-        ModBlocks.ACACIA_WINDOW_COVERED.get(),
-        ModBlocks.ACACIA_WINDOW_DIAGONAL.get(),
-        ModBlocks.ACACIA_WINDOW_LARGE.get(),
-        ModBlocks.ACACIA_WINDOW_PANES.get(),
-        ModBlocks.ACACIA_WINDOW_ROUNDED.get(),
-        ModBlocks.ACACIA_WINDOW_SLIM.get(),
-        ModBlocks.ACACIA_WINDOW_SWIRLING.get(),
-        ModBlocks.ACACIA_WINDOW_TILES.get(),
-        ModBlocks.BAMBOO_WINDOW_BARS.get(),
-        ModBlocks.BAMBOO_WINDOW_COVERED.get(),
-        ModBlocks.BAMBOO_WINDOW_DIAGONAL.get(),
-        ModBlocks.BAMBOO_WINDOW_LARGE.get(),
-        ModBlocks.BAMBOO_WINDOW_PANES.get(),
-        ModBlocks.BAMBOO_WINDOW_ROUNDED.get(),
-        ModBlocks.BAMBOO_WINDOW_SLIM.get(),
-        ModBlocks.BAMBOO_WINDOW_SWIRLING.get(),
         ModBlocks.BAMBOO_WINDOW_BARS_CTM.get(),
         ModBlocks.BAMBOO_WINDOW_COVERED_CTM.get(),
         ModBlocks.BAMBOO_WINDOW_DIAGONAL_CTM.get(),
@@ -1856,23 +1885,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.BIRCH_PLANKS_TILES.get(),
         ModBlocks.BIRCH_PLANKS_WAVY.get(),
         ModBlocks.BIRCH_PLANKS_WOVEN.get(),
-        ModBlocks.BIRCH_WINDOW_BARS.get(),
-        ModBlocks.BIRCH_WINDOW_COVERED.get(),
-        ModBlocks.BIRCH_WINDOW_DIAGONAL.get(),
-        ModBlocks.BIRCH_WINDOW_LARGE.get(),
-        ModBlocks.BIRCH_WINDOW_PANES.get(),
-        ModBlocks.BIRCH_WINDOW_ROUNDED.get(),
-        ModBlocks.BIRCH_WINDOW_SLIM.get(),
-        ModBlocks.BIRCH_WINDOW_SWIRLING.get(),
-        ModBlocks.BIRCH_WINDOW_TILES.get(),
-        ModBlocks.CHERRY_WINDOW_BARS.get(),
-        ModBlocks.CHERRY_WINDOW_COVERED.get(),
-        ModBlocks.CHERRY_WINDOW_DIAGONAL.get(),
-        ModBlocks.CHERRY_WINDOW_LARGE.get(),
-        ModBlocks.CHERRY_WINDOW_PANES.get(),
-        ModBlocks.CHERRY_WINDOW_ROUNDED.get(),
-        ModBlocks.CHERRY_WINDOW_SLIM.get(),
-        ModBlocks.CHERRY_WINDOW_SWIRLING.get(),
         ModBlocks.CHERRY_WINDOW_BARS_CTM.get(),
         ModBlocks.CHERRY_WINDOW_COVERED_CTM.get(),
         ModBlocks.CHERRY_WINDOW_DIAGONAL_CTM.get(),
@@ -2016,15 +2028,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.CRIMSON_PLANKS_TILES.get(),
         ModBlocks.CRIMSON_PLANKS_WAVY.get(),
         ModBlocks.CRIMSON_PLANKS_WOVEN.get(),
-        ModBlocks.CRIMSON_WINDOW_BARS.get(),
-        ModBlocks.CRIMSON_WINDOW_COVERED.get(),
-        ModBlocks.CRIMSON_WINDOW_DIAGONAL.get(),
-        ModBlocks.CRIMSON_WINDOW_LARGE.get(),
-        ModBlocks.CRIMSON_WINDOW_PANES.get(),
-        ModBlocks.CRIMSON_WINDOW_ROUNDED.get(),
-        ModBlocks.CRIMSON_WINDOW_SLIM.get(),
-        ModBlocks.CRIMSON_WINDOW_SWIRLING.get(),
-        ModBlocks.CRIMSON_WINDOW_TILES.get(),
         ModBlocks.CUT_RED_SANDSTONE.get(),
         ModBlocks.CUT_SANDSTONE.get(),
         ModBlocks.CYAN_FRAMED_GLASS.get(),
@@ -2048,15 +2051,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.DARK_OAK_PLANKS_TILES.get(),
         ModBlocks.DARK_OAK_PLANKS_WAVY.get(),
         ModBlocks.DARK_OAK_PLANKS_WOVEN.get(),
-        ModBlocks.DARK_OAK_WINDOW_BARS.get(),
-        ModBlocks.DARK_OAK_WINDOW_COVERED.get(),
-        ModBlocks.DARK_OAK_WINDOW_DIAGONAL.get(),
-        ModBlocks.DARK_OAK_WINDOW_LARGE.get(),
-        ModBlocks.DARK_OAK_WINDOW_PANES.get(),
-        ModBlocks.DARK_OAK_WINDOW_ROUNDED.get(),
-        ModBlocks.DARK_OAK_WINDOW_SLIM.get(),
-        ModBlocks.DARK_OAK_WINDOW_SWIRLING.get(),
-        ModBlocks.DARK_OAK_WINDOW_TILES.get(),
         ModBlocks.DARK_PRISMARINE_BEAMS.get(),
         ModBlocks.DARK_PRISMARINE_BRICKS.get(),
         ModBlocks.DARK_PRISMARINE_BRICK_PAVING.get(),
@@ -2227,15 +2221,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.JUNGLE_PLANKS_TILES.get(),
         ModBlocks.JUNGLE_PLANKS_WAVY.get(),
         ModBlocks.JUNGLE_PLANKS_WOVEN.get(),
-        ModBlocks.JUNGLE_WINDOW_BARS.get(),
-        ModBlocks.JUNGLE_WINDOW_COVERED.get(),
-        ModBlocks.JUNGLE_WINDOW_DIAGONAL.get(),
-        ModBlocks.JUNGLE_WINDOW_LARGE.get(),
-        ModBlocks.JUNGLE_WINDOW_PANES.get(),
-        ModBlocks.JUNGLE_WINDOW_ROUNDED.get(),
-        ModBlocks.JUNGLE_WINDOW_SLIM.get(),
-        ModBlocks.JUNGLE_WINDOW_SWIRLING.get(),
-        ModBlocks.JUNGLE_WINDOW_TILES.get(),
         ModBlocks.LAPIS_BLOCK.get(),
         ModBlocks.LAPIS_BLOCK_BORDERED.get(),
         ModBlocks.LAPIS_BLOCK_CONNECTING.get(),
@@ -2281,15 +2266,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.MANGROVE_PLANKS_TILES.get(),
         ModBlocks.MANGROVE_PLANKS_WAVY.get(),
         ModBlocks.MANGROVE_PLANKS_WOVEN.get(),
-        ModBlocks.MANGROVE_WINDOW_BARS.get(),
-        ModBlocks.MANGROVE_WINDOW_COVERED.get(),
-        ModBlocks.MANGROVE_WINDOW_DIAGONAL.get(),
-        ModBlocks.MANGROVE_WINDOW_LARGE.get(),
-        ModBlocks.MANGROVE_WINDOW_PANES.get(),
-        ModBlocks.MANGROVE_WINDOW_ROUNDED.get(),
-        ModBlocks.MANGROVE_WINDOW_SLIM.get(),
-        ModBlocks.MANGROVE_WINDOW_SWIRLING.get(),
-        ModBlocks.MANGROVE_WINDOW_TILES.get(),
         ModBlocks.MOSSY_COBBLESTONE_BEAMS.get(),
         ModBlocks.MOSSY_COBBLESTONE_DENTED.get(),
         ModBlocks.MOSSY_COBBLESTONE_INVERTED_DENTED.get(),
@@ -2346,15 +2322,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.OAK_PLANKS_TILES.get(),
         ModBlocks.OAK_PLANKS_WAVY.get(),
         ModBlocks.OAK_PLANKS_WOVEN.get(),
-        ModBlocks.OAK_WINDOW_BARS.get(),
-        ModBlocks.OAK_WINDOW_COVERED.get(),
-        ModBlocks.OAK_WINDOW_DIAGONAL.get(),
-        ModBlocks.OAK_WINDOW_LARGE.get(),
-        ModBlocks.OAK_WINDOW_PANES.get(),
-        ModBlocks.OAK_WINDOW_ROUNDED.get(),
-        ModBlocks.OAK_WINDOW_SLIM.get(),
-        ModBlocks.OAK_WINDOW_SWIRLING.get(),
-        ModBlocks.OAK_WINDOW_TILES.get(),
         ModBlocks.OBSIDIAN_BORDERED.get(),
         ModBlocks.OBSIDIAN_BRICKS.get(),
         ModBlocks.OBSIDIAN_BRICK_PATTERN.get(),
@@ -2544,15 +2511,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.SPRUCE_PLANKS_TILES.get(),
         ModBlocks.SPRUCE_PLANKS_WAVY.get(),
         ModBlocks.SPRUCE_PLANKS_WOVEN.get(),
-        ModBlocks.SPRUCE_WINDOW_BARS.get(),
-        ModBlocks.SPRUCE_WINDOW_COVERED.get(),
-        ModBlocks.SPRUCE_WINDOW_DIAGONAL.get(),
-        ModBlocks.SPRUCE_WINDOW_LARGE.get(),
-        ModBlocks.SPRUCE_WINDOW_PANES.get(),
-        ModBlocks.SPRUCE_WINDOW_ROUNDED.get(),
-        ModBlocks.SPRUCE_WINDOW_SLIM.get(),
-        ModBlocks.SPRUCE_WINDOW_SWIRLING.get(),
-        ModBlocks.SPRUCE_WINDOW_TILES.get(),
         ModBlocks.STONE_BIG_TILES.get(),
         ModBlocks.STONE_BORDERED.get(),
         ModBlocks.STONE_BRICK_PATTERN.get(),
@@ -2615,15 +2573,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.WARPED_PLANKS_TILES.get(),
         ModBlocks.WARPED_PLANKS_WAVY.get(),
         ModBlocks.WARPED_PLANKS_WOVEN.get(),
-        ModBlocks.WARPED_WINDOW_BARS.get(),
-        ModBlocks.WARPED_WINDOW_COVERED.get(),
-        ModBlocks.WARPED_WINDOW_DIAGONAL.get(),
-        ModBlocks.WARPED_WINDOW_LARGE.get(),
-        ModBlocks.WARPED_WINDOW_PANES.get(),
-        ModBlocks.WARPED_WINDOW_ROUNDED.get(),
-        ModBlocks.WARPED_WINDOW_SLIM.get(),
-        ModBlocks.WARPED_WINDOW_SWIRLING.get(),
-        ModBlocks.WARPED_WINDOW_TILES.get(),
         ModBlocks.WEATHERED_COPPER_BLOCK.get(),
         ModBlocks.WEATHERED_COPPER_GRATE.get(),
         ModBlocks.WHITE_FRAMED_GLASS.get(),
@@ -2651,8 +2600,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         hoeTag.add(ModBlocks.PALE_OAK_LEAVES.value());
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(ModBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
-        pickaxeTag.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get());
-        this.tag(ModTags.Blocks.CTM_BLOCKS).add(ModBlocks.SOUL_GLASS.get());
+        pickaxeTag.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+                ModBlocks.SOUL_GLASS_CTM.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
                 ModBlocks.ARCHED_LEADED_GLASS_CTM_PANE.get(),
                 ModBlocks.CHISELED_GLASS_CTM_PANE.get(),
@@ -2679,11 +2628,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.SQUARE_OAK_GLASS_CTM_PANE.get(),
                 ModBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(),
                 ModBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(),
-                ModBlocks.TINTED_GLASS_CTM_PANE.get()
+                ModBlocks.TINTED_GLASS_CTM_PANE.get(),
+                ModBlocks.SOUL_GLASS_CTM_PANE.get()
         );
-        mcStainedGlass.add(ModBlocks.SOUL_GLASS.get());
-        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(ModBlocks.SOUL_GLASS_PANE.get());
-        this.tag(BlockTags.IMPERMEABLE).add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get());
+        mcStainedGlass.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_CTM.get());
+        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(
+                ModBlocks.SOUL_GLASS_PANE.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
+        this.tag(BlockTags.IMPERMEABLE).add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+                ModBlocks.SOUL_GLASS_CTM.get());
         this.tag(doDefaultKey).add(ModBlocks.SOUL_GLASS.get());
 
         // Opal sets — pickaxe mineable + DO default for all 18 blocks × 3 types

@@ -1,0 +1,19 @@
+{
+  "textures": {
+    "0": "block/glass",
+    "particle": "block/glass"
+  },
+  "elements": [
+    {
+      "name": "arm_west",
+      "from": [0, 0, 7],
+      "to": [8, 16, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 8, 16], "texture": "#0"},
+        "south": {"uv": [0, 0, 8, 16], "texture": "#0"},
+        "east":  {"uv": [7, 0, 9, 16], "texture": "#0"},
+        "west":  {"uv": [7, 0, 9, 16], "texture": "#0"}
+      }
+    }
+  ]
+}

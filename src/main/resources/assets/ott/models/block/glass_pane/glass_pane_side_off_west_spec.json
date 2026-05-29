@@ -1,0 +1,17 @@
+{
+  "textures": {
+    "0": "block/glass",
+    "particle": "block/glass"
+  },
+  "elements": [
+    {
+      "name": "cap_west",
+      "from": [7, 0, 7],
+      "to": [7, 16, 9],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 16], "texture": "#0"},
+        "south": {"uv": [0, 0, 2, 16], "texture": "#0"}
+      }
+    }
+  ]
+}

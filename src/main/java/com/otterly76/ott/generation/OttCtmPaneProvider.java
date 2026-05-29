@@ -90,6 +90,7 @@ public class OttCtmPaneProvider implements DataProvider {
         }
 
         // ── per DyeColor stained glass patterns ───────────────────────────────
+        // Stained glass panes use translucent so you can see through the coloured glass area.
         for (DyeColor color : DyeColor.values()) {
             String c          = color.getName();
             String sg         = "ott:block/" + c + "_stained_glass/ctm/";
@@ -166,15 +167,19 @@ public class OttCtmPaneProvider implements DataProvider {
         // ── plain (un-tinted/colourless) single-block variants ─────────────────
         specs.add(new PaneSpec("scratched_glass_ctm_pane",
             "ott:block/scratched/ctm/scratched_glass",
-            "minecraft:block/glass_pane_top", "minecraft:cutout", false));
+            "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
 
         specs.add(new PaneSpec("tinted_borderless_glass_ctm_pane",
             "ott:block/tinted/ctm/tinted_borderless_glass",
             "ott:block/tinted/ctm/tinted_glass_edge", "minecraft:translucent", false));
 
+        specs.add(new PaneSpec("soul_glass_ctm_pane",
+            "ott:block/glass/ctm/soul_glass",
+            "ott:block/misc/soul_glass", "minecraft:translucent", false));
+
         specs.add(new PaneSpec("borderless_glass_ctm_pane",
             "ott:block/borderless/ctm/borderless_glass",
-            "minecraft:block/glass_pane_top", "minecraft:cutout", false));
+            "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
 
         return specs;
     }

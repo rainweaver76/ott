@@ -1,0 +1,4 @@
+{
+  "parent": "ott:block/glass_pane/glass_pane_side_east_spec",
+  "loader": "domum_ornamentum:materially_textured"
+}

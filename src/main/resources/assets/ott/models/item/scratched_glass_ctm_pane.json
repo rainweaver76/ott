@@ -4,5 +4,5 @@
     "front": "ott:block/scratched/ctm/scratched_glass",
     "side": "minecraft:block/glass_pane_top"
   },
-  "render_type": "minecraft:cutout"
+  "render_type": "minecraft:cutout_mipped"
 }

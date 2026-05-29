@@ -3,6 +3,7 @@ each new block needs its blockstate, block and item models
 item models should each parent the block model
 each new block needs to be added to the engraving crafting system as a 1:1 exchange for its material type
 each new block needs its language translation key
+each new block needs to be properly registered in ModBlocks and ModItems
 each new block needs to be added to the ott Creative tab for Engraving
 each new block needs its proper minecraft tag for mining (wood=axe, stone=pickaxe, soils=shovel)
 each new block needs to be added to the Domum Ornamentum tags for all_brick_materials, default, shingles_cover, stairs_materials, wall_materials

@@ -58,6 +58,8 @@ public class ModItems {
     public static final DeferredItem<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties()));
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS = registerBlockItem("soul_glass", ModBlocks.SOUL_GLASS);
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_PANE = registerBlockItem("soul_glass_pane", ModBlocks.SOUL_GLASS_PANE);
+    public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM = registerBlockItem("soul_glass_ctm", ModBlocks.SOUL_GLASS_CTM);
+    public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM_PANE = registerBlockItem("soul_glass_ctm_pane", ModBlocks.SOUL_GLASS_CTM_PANE);
 
     // Opal crystal drop items
     public static final DeferredItem<Item> WHITE_OPAL_CRYSTAL = ITEMS.register("white_opal_crystal", () -> new Item(new Item.Properties()));

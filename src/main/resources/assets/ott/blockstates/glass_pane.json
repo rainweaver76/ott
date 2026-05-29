@@ -1,0 +1,39 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "ott:block/glass_pane/glass_pane_post", "uvlock": true }
+    },
+    {
+      "when": { "north": "true" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_north", "uvlock": true }
+    },
+    {
+      "when": { "north": "false" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_off_north", "uvlock": true }
+    },
+    {
+      "when": { "south": "true" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_south", "uvlock": true }
+    },
+    {
+      "when": { "south": "false" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_off_south", "uvlock": true }
+    },
+    {
+      "when": { "east": "true" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_east", "uvlock": true }
+    },
+    {
+      "when": { "east": "false" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_off_east", "uvlock": true }
+    },
+    {
+      "when": { "west": "true" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_west", "uvlock": true }
+    },
+    {
+      "when": { "west": "false" },
+      "apply": { "model": "ott:block/glass_pane/glass_pane_side_off_west", "uvlock": true }
+    }
+  ]
+}
