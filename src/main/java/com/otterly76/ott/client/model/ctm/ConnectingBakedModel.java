@@ -182,6 +182,28 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
                 masks[ri][face.ordinal()] = computeMask(level, pos, state, face, ruleList.get(ri));
             }
         }
+
+        // For pane-type blocks (IronBarsBlock subclasses with N/S/E/W connection properties),
+        // each arm is an independent visual frame — rows of panes should not CTM-merge vertically.
+        // On horizontal-axis faces (the N/S/E/W glass body), only L/R neighbour connectivity
+        // applies; T, B, and all diagonal bits are cleared so the tile never loses its
+        // top/bottom border based on what's above or below the block.
+        // This also makes front and back faces consistent: diagonal bits (TR/TL) would otherwise
+        // differ between NORTH and SOUTH faces because they reference opposite above-diagonal
+        // corners, producing asymmetric tile lookups.
+        if (state.hasProperty(BlockStateProperties.NORTH)
+                && state.hasProperty(BlockStateProperties.EAST)) {
+            // Keep only R (bit 2) and L (bit 6); clear T, TR, BR, B, BL, TL.
+            final int LR_ONLY = (1 << 2) | (1 << 6);
+            for (int ri = 0; ri < numRules; ri++) {
+                for (Direction face : Direction.values()) {
+                    if (face.getAxis().isHorizontal()) {
+                        masks[ri][face.ordinal()] &= LR_ONLY;
+                    }
+                }
+            }
+        }
+
         MASKS_FALLBACK.set(masks);
         return existing.derive().with(CTM_MASKS, masks).build();
     }
@@ -224,31 +246,8 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
             return isolated;
         }
 
-        // Suppress outer arm faces for pane-type blocks in connected directions.
-        // The translucent render pass does not always respect Block.skipRendering(), so
-        // both the east arm of block A and the west arm of block B would be rendered at
-        // the shared block boundary, doubling opacity and producing a dark stripe.
-        // A connected arm's outer face is always meant to be culled (by skipRendering for
-        // same-type panes, or by cullface against the solid neighbor), so suppressing it
-        // here is always correct.
-        if (side != null && state != null && side.getAxis().isHorizontal()) {
-            BooleanProperty connProp = switch (side) {
-                case NORTH -> BlockStateProperties.NORTH;
-                case SOUTH -> BlockStateProperties.SOUTH;
-                case EAST  -> BlockStateProperties.EAST;
-                case WEST  -> BlockStateProperties.WEST;
-                default    -> null;
-            };
-            if (connProp != null && state.hasProperty(connProp) && state.getValue(connProp)) {
-                return List.of();
-            }
-        }
-
         List<BakedQuad> base = originalModel.getQuads(state, side, rand, data, renderType);
-
-        int[][] masks = data.get(CTM_MASKS);
-        if (masks == null) masks = MASKS_FALLBACK.get(); // fallback for multipart models
-        if (masks == null || base.isEmpty()) return base;
+        if (base.isEmpty()) return base;
 
         // Pane-type blocks (IronBarsBlock subclasses) have directional connection properties.
         // Their thin arm faces get AO-darkened at block boundaries where adjacent panes meet,
@@ -257,25 +256,45 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
                 && state.hasProperty(BlockStateProperties.NORTH)
                 && state.hasProperty(BlockStateProperties.EAST);
 
-        // For pane-type blocks: when rendering unculled (POST) quads, suppress faces in
-        // connected directions. The ARM model already renders those faces; overlapping POST
-        // + ARM quads at the same z-plane cause translucent z-sorting seams.
+        // For pane-type blocks, suppress the post's own side faces in connected directions.
+        // This must run BEFORE the masks null-check so it fires even when CTM data is absent
+        // (multipart models may not propagate ModelData to sub-model getQuads calls).
+        // The post model is uniquely identified by having unculled faces in all 4 horizontal
+        // directions (N+S+E+W). Arm models only expose 2 horizontal directions (their two
+        // glass faces), so this check safely targets the post without touching arm faces.
         if (stripAO && side == null) {
-            List<BakedQuad> filtered = new ArrayList<>(base.size());
+            boolean hasN = false, hasS = false, hasE = false, hasW = false;
             for (BakedQuad q : base) {
-                Direction dir = q.getDirection();
-                BooleanProperty prop = switch (dir) {
-                    case NORTH -> BlockStateProperties.NORTH;
-                    case SOUTH -> BlockStateProperties.SOUTH;
-                    case EAST  -> BlockStateProperties.EAST;
-                    case WEST  -> BlockStateProperties.WEST;
-                    default    -> null;
-                };
-                if (prop != null && state.hasProperty(prop) && state.getValue(prop)) continue;
-                filtered.add(q);
+                switch (q.getDirection()) {
+                    case NORTH -> hasN = true;
+                    case SOUTH -> hasS = true;
+                    case EAST  -> hasE = true;
+                    case WEST  -> hasW = true;
+                    default -> {}
+                }
             }
-            base = filtered;
+            if (hasN && hasS && hasE && hasW) {
+                List<BakedQuad> filtered = new ArrayList<>(base.size());
+                for (BakedQuad q : base) {
+                    Direction dir = q.getDirection();
+                    BooleanProperty prop = switch (dir) {
+                        case NORTH -> BlockStateProperties.NORTH;
+                        case SOUTH -> BlockStateProperties.SOUTH;
+                        case EAST  -> BlockStateProperties.EAST;
+                        case WEST  -> BlockStateProperties.WEST;
+                        default    -> null;
+                    };
+                    if (prop != null && state.hasProperty(prop) && state.getValue(prop)) continue;
+                    filtered.add(q);
+                }
+                base = filtered;
+                if (base.isEmpty()) return base;
+            }
         }
+
+        int[][] masks = data.get(CTM_MASKS);
+        if (masks == null) masks = MASKS_FALLBACK.get(); // fallback for multipart models
+        if (masks == null) return base;
 
         List<BakedQuad> result = new ArrayList<>(base.size());
         for (BakedQuad quad : base) {

@@ -32,6 +32,18 @@ public class CtmPaneBlock extends IronBarsBlock {
         return CODEC;
     }
 
+    // IronBarsBlock.skipRendering() suppresses both UP and DOWN faces between same-type stacked
+    // blocks, which hides the colored edge border on arm tops. We want asymmetric behavior:
+    //   UP  → never suppress (lower arm's top edge should always be visible)
+    //   DOWN → suppress only when same-type pane is directly below (avoids double-rendering the
+    //          edge stripe at a tier junction; the lower pane's UP face already shows there)
+    @Override
+    public boolean skipRendering(@NotNull BlockState state, @NotNull BlockState adjacentState, @NotNull Direction side) {
+        if (side == Direction.UP) return false;
+        if (side == Direction.DOWN) return adjacentState.is(this);
+        return super.skipRendering(state, adjacentState, side);
+    }
+
     // attachsTo() is final in IronBarsBlock, so we override the two callers instead.
 
     @Override
@@ -66,12 +78,12 @@ public class CtmPaneBlock extends IronBarsBlock {
     }
 
     /**
-     * Connects to: solid-faced blocks (excluding barrier/leaves/etc.), any CtmPaneBlock, and walls.
-     * Does NOT connect to vanilla panes or iron bars.
+     * Connects to: solid-faced blocks (excluding barrier/leaves/etc.), any pane/bar block
+     * (IronBarsBlock subclasses — vanilla glass panes, CTM panes, iron bars, etc.), and walls.
      */
     private boolean myAttachsTo(BlockState neighbor, boolean solidSide) {
         return !Block.isExceptionForConnection(neighbor) && solidSide
-            || neighbor.getBlock() instanceof CtmPaneBlock
+            || neighbor.getBlock() instanceof IronBarsBlock
             || neighbor.is(BlockTags.WALLS);
     }
 }
