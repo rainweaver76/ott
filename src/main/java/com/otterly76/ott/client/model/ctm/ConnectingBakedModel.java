@@ -183,27 +183,6 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
             }
         }
 
-        // For pane-type blocks (IronBarsBlock subclasses with N/S/E/W connection properties),
-        // each arm is an independent visual frame — rows of panes should not CTM-merge vertically.
-        // On horizontal-axis faces (the N/S/E/W glass body), only L/R neighbour connectivity
-        // applies; T, B, and all diagonal bits are cleared so the tile never loses its
-        // top/bottom border based on what's above or below the block.
-        // This also makes front and back faces consistent: diagonal bits (TR/TL) would otherwise
-        // differ between NORTH and SOUTH faces because they reference opposite above-diagonal
-        // corners, producing asymmetric tile lookups.
-        if (state.hasProperty(BlockStateProperties.NORTH)
-                && state.hasProperty(BlockStateProperties.EAST)) {
-            // Keep only R (bit 2) and L (bit 6); clear T, TR, BR, B, BL, TL.
-            final int LR_ONLY = (1 << 2) | (1 << 6);
-            for (int ri = 0; ri < numRules; ri++) {
-                for (Direction face : Direction.values()) {
-                    if (face.getAxis().isHorizontal()) {
-                        masks[ri][face.ordinal()] &= LR_ONLY;
-                    }
-                }
-            }
-        }
-
         MASKS_FALLBACK.set(masks);
         return existing.derive().with(CTM_MASKS, masks).build();
     }

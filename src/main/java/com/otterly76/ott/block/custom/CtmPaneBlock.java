@@ -32,15 +32,13 @@ public class CtmPaneBlock extends IronBarsBlock {
         return CODEC;
     }
 
-    // IronBarsBlock.skipRendering() suppresses both UP and DOWN faces between same-type stacked
-    // blocks, which hides the colored edge border on arm tops. We want asymmetric behavior:
-    //   UP  → never suppress (lower arm's top edge should always be visible)
-    //   DOWN → suppress only when same-type pane is directly below (avoids double-rendering the
-    //          edge stripe at a tier junction; the lower pane's UP face already shows there)
+    // Suppress UP and DOWN edge faces when a same-type pane is directly above or below.
+    // Without this, the arm's top/bottom #edge face shows as a stripe at every block boundary.
+    // The glass body CTM tiles handle vertical seamlessness via T/B connectivity bits, so
+    // hiding the edge faces at junctions does not expose any glass body border artifact.
     @Override
     public boolean skipRendering(@NotNull BlockState state, @NotNull BlockState adjacentState, @NotNull Direction side) {
-        if (side == Direction.UP) return false;
-        if (side == Direction.DOWN) return adjacentState.is(this);
+        if ((side == Direction.UP || side == Direction.DOWN) && adjacentState.is(this)) return true;
         return super.skipRendering(state, adjacentState, side);
     }
 
