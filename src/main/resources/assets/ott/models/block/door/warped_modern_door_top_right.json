@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ott:block/warped_door/warped_modern_lower",
+    "top": "ott:block/warped_door/warped_modern_upper"
+  }
+}

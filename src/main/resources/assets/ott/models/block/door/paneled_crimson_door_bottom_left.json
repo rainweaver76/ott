@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ott:block/crimson_door/paneled_crimson_lower",
+    "top": "ott:block/crimson_door/paneled_crimson_upper"
+  }
+}

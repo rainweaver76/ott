@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "max": 1.0,
+                "min": 1.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "block": "ott:acacia_mystic_door",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "half": "lower"
+                  }
+                }
+              ]
+            }
+          ],
+          "name": "ott:acacia_mystic_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ott:blocks/acacia_mystic_door"
+}

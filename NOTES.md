@@ -19,6 +19,10 @@ Notes:
 ☺
 ♥
 
+add overlay for moss carpets
+
+check models and DO for bookshelf variants
+
 add missing framed * concrete ctm
 
 find/make better marble textures
@@ -33,6 +37,8 @@ create planks (all) overlay textures and modifiers
 create overlay textures and modifiers for DO bricks
 
 add transition textures for custom blocks
+
+pale oak bookshelf
 
 more snail textures
 
@@ -90,6 +96,7 @@ Mods to Implement:
 =====
 Aquaculture2
 Autochef’s Delight
+Beautify
 Better F3?
 Disenchanting Table
 Enchantment Descriptions

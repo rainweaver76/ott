@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Geometry loader registered as "ott:connecting".
+ * Geometry loader registered as "ott:mosaic".
  * Replaces "fusion:model" + "type":"connecting" with our own CTM implementation.
  */
 public class ConnectingModelLoader implements IGeometryLoader<ConnectingUnbakedGeometry> {

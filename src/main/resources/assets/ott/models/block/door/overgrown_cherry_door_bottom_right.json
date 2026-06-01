@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ott:block/cherry_door/overgrown_cherry_lower",
+    "top": "ott:block/cherry_door/overgrown_cherry_upper"
+  }
+}

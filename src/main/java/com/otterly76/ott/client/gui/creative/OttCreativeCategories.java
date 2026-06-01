@@ -365,6 +365,7 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.BUSH);
                 output.accept(ModBlocks.FIREFLY_BUSH);
                 output.accept(ModBlocks.WILDFLOWERS);
+                output.accept(ModBlocks.PALE_WILDFLOWERS);
                 output.accept(ModBlocks.LEAF_LITTER);
                 output.accept(ModBlocks.CACTUS_FLOWER);
                 output.accept(ModBlocks.SHORT_DRY_GRASS);
@@ -964,6 +965,15 @@ public enum OttCreativeCategories {
 
                 // Wood door variants
                 ModItems.WOOD_DOOR_ITEMS.values().forEach(woodMap -> woodMap.values().forEach(output::accept));
+
+                // Extra wood doors (new-style naming)
+                ModBlocks.EXTRA_DOORS.values().forEach(output::accept);
+
+                // Wood trapdoors
+                ModBlocks.WOOD_TRAPDOORS.values().forEach(output::accept);
+
+                // Bookshelves
+                ModBlocks.BOOKSHELVES.values().forEach(output::accept);
 
                 // ── Batch CTM blocks ──────────────────────────────────────────────
         // Acacia Planks

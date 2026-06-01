@@ -1,0 +1,7 @@
+{
+  "loader": "ott:wildflowers",
+  "layer": 0,
+  "variants": [
+    "ott:block/pale_wildflowers/pale_wildflowers_1"
+  ]
+}

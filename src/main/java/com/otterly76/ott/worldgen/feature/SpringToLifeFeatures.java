@@ -34,6 +34,7 @@ public class SpringToLifeFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_FIREFLY_BUSH = registerKey("patch_firefly_bush");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILDFLOWERS_BIRCH_FOREST = registerKey("wildflowers_birch_forest");
     public static final ResourceKey<ConfiguredFeature<?, ?>> WILDFLOWERS_MEADOW = registerKey("wildflowers_meadow");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WILDFLOWERS_PALE_GARDEN = registerKey("wildflowers_pale_garden");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_DRY_GRASS = registerKey("patch_dry_grass");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PATCH_LEAF_LITTER = registerKey("patch_leaf_litter");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEAF_LITTER = registerKey("leaf_litter");
@@ -54,8 +55,11 @@ public class SpringToLifeFeatures {
         FeatureUtils.register(context, WILDFLOWERS_BIRCH_FOREST, Feature.FLOWER, 
                 new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(flowerBedPatchBuilder(ModBlocks.WILDFLOWERS.get()))))));
         
-        FeatureUtils.register(context, WILDFLOWERS_MEADOW, Feature.FLOWER, 
+        FeatureUtils.register(context, WILDFLOWERS_MEADOW, Feature.FLOWER,
                 new RandomPatchConfiguration(8, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(flowerBedPatchBuilder(ModBlocks.WILDFLOWERS.get()))))));
+
+        FeatureUtils.register(context, WILDFLOWERS_PALE_GARDEN, Feature.FLOWER,
+                new RandomPatchConfiguration(24, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(new WeightedStateProvider(flowerBedPatchBuilder(ModBlocks.PALE_WILDFLOWERS.get()))))));
         
         FeatureUtils.register(context, PATCH_DRY_GRASS, Feature.RANDOM_PATCH, 
                 grassPatch(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.SHORT_DRY_GRASS.get().defaultBlockState(), 1).add(ModBlocks.TALL_DRY_GRASS.get().defaultBlockState(), 1).build())));

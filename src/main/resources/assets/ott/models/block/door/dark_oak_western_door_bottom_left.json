@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ott:block/dark_oak_door/dark_oak_western_lower",
+    "top": "ott:block/dark_oak_door/dark_oak_western_upper"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "ott:block/jungle_door/jungle_barn_lower",
+    "top": "ott:block/jungle_door/jungle_barn_upper"
+  }
+}

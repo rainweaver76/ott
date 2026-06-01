@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "max": 1.0,
+                "min": 1.0,
+                "type": "minecraft:uniform"
+              },
+              "function": "minecraft:set_count",
+              "conditions": [
+                {
+                  "block": "ott:bamboo_four_panel_door",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "half": "lower"
+                  }
+                }
+              ]
+            }
+          ],
+          "name": "ott:bamboo_four_panel_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ott:blocks/bamboo_four_panel_door"
+}

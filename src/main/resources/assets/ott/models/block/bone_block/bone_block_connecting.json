@@ -1,7 +1,6 @@
 {
   "loader": "ott:mosaic",
-  "layout": "simple",
-  "parent": "ott:block/ctm/ctm_cube_column_simple_compact",
+  "parent": "ott:block/ctm/ctm_cube_column_full_compact",
   "textures": {
     "side": "ott:block/bone_block/ctm/bone_block_connecting",
     "top":  "ott:block/bone_block/ctm/bone_block_connecting_end"

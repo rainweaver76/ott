@@ -27,6 +27,7 @@ public class SpringToLifePlacements {
     public static final ResourceKey<PlacedFeature> PATCH_FIREFLY_BUSH_SWAMP = registerKey("patch_firefly_bush_swamp");
     public static final ResourceKey<PlacedFeature> WILDFLOWERS_BIRCH_FOREST = registerKey("wildflowers_birch_forest");
     public static final ResourceKey<PlacedFeature> WILDFLOWERS_MEADOW = registerKey("wildflowers_meadow");
+    public static final ResourceKey<PlacedFeature> WILDFLOWERS_PALE_GARDEN = registerKey("wildflowers_pale_garden");
     public static final ResourceKey<PlacedFeature> PATCH_DRY_GRASS_BADLANDS = registerKey("patch_dry_grass_badlands");
     public static final ResourceKey<PlacedFeature> PATCH_DRY_GRASS_DESERT = registerKey("patch_dry_grass_desert");
     public static final ResourceKey<PlacedFeature> PATCH_LEAF_LITTER = registerKey("patch_leaf_litter");
@@ -64,8 +65,11 @@ public class SpringToLifePlacements {
         PlacementUtils.register(context, WILDFLOWERS_BIRCH_FOREST, features.getOrThrow(SpringToLifeFeatures.WILDFLOWERS_BIRCH_FOREST), 
                 List.of(CountPlacement.of(3), RarityFilter.onAverageOnceEvery(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         
-        PlacementUtils.register(context, WILDFLOWERS_MEADOW, features.getOrThrow(SpringToLifeFeatures.WILDFLOWERS_MEADOW), 
+        PlacementUtils.register(context, WILDFLOWERS_MEADOW, features.getOrThrow(SpringToLifeFeatures.WILDFLOWERS_MEADOW),
                 List.of(NoiseThresholdCountPlacement.of(-0.8, 5, 10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+        PlacementUtils.register(context, WILDFLOWERS_PALE_GARDEN, features.getOrThrow(SpringToLifeFeatures.WILDFLOWERS_PALE_GARDEN),
+                List.of(CountPlacement.of(2), RarityFilter.onAverageOnceEvery(3), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
         
         PlacementUtils.register(context, PATCH_DRY_GRASS_BADLANDS, features.getOrThrow(SpringToLifeFeatures.PATCH_DRY_GRASS), 
                 List.of(RarityFilter.onAverageOnceEvery(6), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));

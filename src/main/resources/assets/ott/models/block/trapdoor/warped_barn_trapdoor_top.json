@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_trapdoor_top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "ott:block/warped_trapdoor/warped_barn_trapdoor"
+  }
+}

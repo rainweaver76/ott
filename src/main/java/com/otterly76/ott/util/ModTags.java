@@ -67,6 +67,7 @@ public class ModTags {
         public static final TagKey<Item> HARNESSES = mcTag("harnesses");
         public static final TagKey<Item> BUNDLES = mcTag("bundles");
         public static final TagKey<Item> EGGS = mcTag("eggs");
+        public static final TagKey<Item> BOOKSHELVES = createTag("bookshelves");
         public static final TagKey<Item> BIRD_FOOD_ITEMS = createTag("bird_food_items");
         public static final TagKey<Item> ALLIGATOR_FOOD_ITEMS = createTag("alligator_food_items");
         public static final TagKey<Item> CATFISH_FOOD_ITEMS = createTag("catfish_food_items");
