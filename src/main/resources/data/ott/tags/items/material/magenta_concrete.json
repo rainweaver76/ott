@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:magenta_concrete",
+    "ott:magenta_concrete_ctm",
+    "ott:magenta_concrete_panel",
+    "ott:grill_magenta_concrete",
+    "ott:pegged_magenta_concrete",
+    "ott:smooth_magenta_concrete",
+    "ott:striped_magenta_concrete",
+    "ott:wired_magenta_concrete"
+  ]
+}

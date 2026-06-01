@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_stained_glass",
+    "ott:arched_yellow_stained_glass_ctm",
+    "ott:circular_yellow_stained_glass",
+    "ott:fancy_yellow_stained_glass_ctm",
+    "ott:ornate_yellow_stained_glass_ctm",
+    "ott:raster_yellow_stained_glass_ctm",
+    "ott:small_yellow_diamond_stained_glass",
+    "ott:tiled_yellow_stained_glass_ctm",
+    "ott:yellow_leaded_stained_glass",
+    "ott:fancy_yellow_stained_glass",
+    "ott:large_diamond_yellow_stained_glass",
+    "ott:ornate_yellow_stained_glass",
+    "ott:raster_yellow_stained_glass",
+    "ott:small_yellow_stained_glass",
+    "ott:square_yellow_stained_glass",
+    "ott:tiled_yellow_stained_glass",
+    "ott:vertical_striped_yellow_stained_glass",
+    "ott:woven_yellow_stained_glass",
+    "ott:yellow_framed_glass",
+    "ott:yellow_stained_clear_glass",
+    "ott:borderless_glass_yellow",
+    "ott:scratched_glass_yellow",
+    "ott:tinted_borderless_glass_yellow",
+    "ott:golden_framed_yellow_stained_glass",
+    "ott:yellow_stained_glass"
+  ]
+}

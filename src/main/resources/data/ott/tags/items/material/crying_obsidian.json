@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crying_obsidian",
+    "ott:bordered_crying_obsidian",
+    "ott:brick_bordered_crying_obsidian",
+    "ott:curly_crying_obsidian_ctm",
+    "ott:cut_crying_obsidian_column",
+    "ott:edged_crying_obsidian_bricks",
+    "ott:fine_crying_obsidian_ctm",
+    "ott:massive_crying_obsidian_bricks",
+    "ott:ornate_crying_obsidian_ctm",
+    "ott:overlapping_crying_obsidian_tiles",
+    "ott:polished_crying_obsidian",
+    "ott:simple_crying_obsidian_ctm",
+    "ott:smooth_crying_obsidian_column",
+    "ott:thick_inlayed_crying_obsidian",
+    "ott:tiled_bordered_crying_obsidian",
+    "ott:tiled_crying_obsidian_column",
+    "ott:tiny_brick_bordered_crying_obsidian"
+  ]
+}

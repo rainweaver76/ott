@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:acacia_leaves",
+    "ott:apple_acacia_leaves",
+    "ott:cherry_acacia_leaves",
+    "ott:dead_acacia_leaves",
+    "ott:frosted_acacia_leaves",
+    "ott:golden_acacia_leaves",
+    "ott:golden_apple_acacia_leaves",
+    "ott:golden_cherry_acacia_leaves",
+    "ott:magenta_flower_acacia_leaves",
+    "ott:orange_acacia_leaves",
+    "ott:red_acacia_leaves",
+    "ott:white_flower_acacia_leaves"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pale_oak_trapdoor",
+    "ott:pale_oak_bamboo_trapdoor",
+    "ott:pale_oak_barn_trapdoor",
+    "ott:pale_oak_barred_trapdoor",
+    "ott:pale_oak_beach_trapdoor",
+    "ott:pale_oak_blossom_trapdoor",
+    "ott:pale_oak_classic_trapdoor",
+    "ott:pale_oak_cottage_trapdoor",
+    "ott:pale_oak_four_panel_trapdoor",
+    "ott:pale_oak_glass_trapdoor",
+    "ott:pale_oak_mystic_trapdoor",
+    "ott:pale_oak_paper_trapdoor",
+    "ott:pale_oak_swamp_trapdoor",
+    "ott:pale_oak_tropical_trapdoor"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ott:veridium_cut_polished",
+    "ott:veridium_cut_small_brick",
+    "create:veridium"
+  ]
+}

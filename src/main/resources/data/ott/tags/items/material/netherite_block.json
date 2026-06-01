@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherite_block",
+    "ott:netherite_block",
+    "ott:netherite_block",
+    "ott:netherite_block_beams",
+    "ott:netherite_block_bricks",
+    "ott:netherite_block_chiseled",
+    "ott:netherite_block_compacted",
+    "ott:netherite_block_decorated",
+    "ott:netherite_block_diagonal_tiles",
+    "ott:netherite_block_indented",
+    "ott:netherite_block_patterned",
+    "ott:netherite_block_small_tiles"
+  ]
+}

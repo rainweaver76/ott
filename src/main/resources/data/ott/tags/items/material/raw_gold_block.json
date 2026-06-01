@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:raw_gold_block",
+    "ott:bordered_raw_gold_block",
+    "ott:brick_bordered_raw_gold_block",
+    "ott:curly_raw_gold_block_ctm",
+    "ott:cut_raw_gold_block_column",
+    "ott:edged_raw_gold_block_bricks",
+    "ott:fine_raw_gold_block_ctm",
+    "ott:massive_raw_gold_block_bricks",
+    "ott:ornate_raw_gold_block_ctm",
+    "ott:overlapping_raw_gold_block_tiles",
+    "ott:polished_raw_gold_block",
+    "ott:simple_raw_gold_block_ctm",
+    "ott:smooth_raw_gold_block_column",
+    "ott:thick_inlayed_raw_gold_block",
+    "ott:tiled_bordered_raw_gold_block",
+    "ott:tiled_raw_gold_block_column",
+    "ott:tiny_brick_bordered_raw_gold_block"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:jungle_leaves",
+    "ott:apple_jungle_leaves",
+    "ott:cherry_jungle_leaves",
+    "ott:dead_jungle_leaves",
+    "ott:frosted_jungle_leaves",
+    "ott:golden_apple_jungle_leaves",
+    "ott:golden_cherry_jungle_leaves",
+    "ott:golden_jungle_leaves",
+    "ott:magenta_flower_jungle_leaves",
+    "ott:orange_jungle_leaves",
+    "ott:red_jungle_leaves",
+    "ott:white_flower_jungle_leaves"
+  ]
+}

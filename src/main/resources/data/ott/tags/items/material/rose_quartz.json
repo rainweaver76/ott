@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ott:rose_quartz_polished_block",
+    "ott:rose_quartz_bricks",
+    "ott:rose_quartz_chiseled",
+    "ott:rose_quartz_crushed",
+    "ott:rose_quartz_squares",
+    "ott:rose_quartz_tiles"
+  ]
+}

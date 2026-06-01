@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:orange_stained_glass_pane",
+    "ott:arched_orange_stained_glass_ctm_pane",
+    "ott:orange_framed_glass_ctm_pane",
+    "ott:orange_stained_glass_ctm_pane",
+    "ott:fancy_orange_stained_glass_ctm_pane",
+    "ott:golden_framed_orange_stained_glass_ctm_pane",
+    "ott:ornate_orange_stained_glass_ctm_pane",
+    "ott:raster_orange_stained_glass_ctm_pane",
+    "ott:scratched_glass_orange_ctm_pane",
+    "ott:small_orange_diamond_stained_glass_ctm_pane",
+    "ott:tiled_orange_stained_glass_ctm_pane",
+    "ott:borderless_glass_orange_ctm_pane",
+    "ott:orange_stained_clear_glass_ctm_pane",
+    "ott:orange_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_orange_ctm_pane",
+    "ott:circular_orange_stained_glass_pane",
+    "ott:fancy_orange_stained_glass_pane",
+    "ott:large_diamond_orange_stained_glass_pane",
+    "ott:ornate_orange_stained_glass_pane",
+    "ott:raster_orange_stained_glass_pane",
+    "ott:small_orange_stained_glass_pane",
+    "ott:square_orange_stained_glass_pane",
+    "ott:tiled_orange_stained_glass_pane",
+    "ott:vertical_striped_orange_stained_glass_pane",
+    "ott:woven_orange_stained_glass_pane"
+  ]
+}

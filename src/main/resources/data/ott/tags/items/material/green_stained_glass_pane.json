@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:green_stained_glass_pane",
+    "ott:arched_green_stained_glass_ctm_pane",
+    "ott:green_framed_glass_ctm_pane",
+    "ott:green_stained_glass_ctm_pane",
+    "ott:fancy_green_stained_glass_ctm_pane",
+    "ott:golden_framed_green_stained_glass_ctm_pane",
+    "ott:ornate_green_stained_glass_ctm_pane",
+    "ott:raster_green_stained_glass_ctm_pane",
+    "ott:scratched_glass_green_ctm_pane",
+    "ott:small_green_diamond_stained_glass_ctm_pane",
+    "ott:tiled_green_stained_glass_ctm_pane",
+    "ott:borderless_glass_green_ctm_pane",
+    "ott:green_stained_clear_glass_ctm_pane",
+    "ott:green_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_green_ctm_pane",
+    "ott:circular_green_stained_glass_pane",
+    "ott:fancy_green_stained_glass_pane",
+    "ott:large_diamond_green_stained_glass_pane",
+    "ott:ornate_green_stained_glass_pane",
+    "ott:raster_green_stained_glass_pane",
+    "ott:small_green_stained_glass_pane",
+    "ott:square_green_stained_glass_pane",
+    "ott:tiled_green_stained_glass_pane",
+    "ott:vertical_striped_green_stained_glass_pane",
+    "ott:woven_green_stained_glass_pane"
+  ]
+}

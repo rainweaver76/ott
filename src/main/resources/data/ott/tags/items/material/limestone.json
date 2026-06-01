@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "ott:limestone",
+    "ott:limestone_masonry",
+    "ott:mixed_limestone_bricks",
+    "ott:limestone_cut_polished",
+    "ott:limestone_cut_small_brick"
+  ]
+}

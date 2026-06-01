@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/jungle_door/jungle_japanese_lower",
-    "top": "ott:block/jungle_door/jungle_japanese_upper"
+    "bottom": "ott:block/jungle_door/jungle_japanese_door_lower",
+    "top": "ott:block/jungle_door/jungle_japanese_door_upper"
   }
 }

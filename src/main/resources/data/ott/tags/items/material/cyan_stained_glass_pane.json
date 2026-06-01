@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_stained_glass_pane",
+    "ott:arched_cyan_stained_glass_ctm_pane",
+    "ott:cyan_framed_glass_ctm_pane",
+    "ott:cyan_stained_glass_ctm_pane",
+    "ott:fancy_cyan_stained_glass_ctm_pane",
+    "ott:golden_framed_cyan_stained_glass_ctm_pane",
+    "ott:ornate_cyan_stained_glass_ctm_pane",
+    "ott:raster_cyan_stained_glass_ctm_pane",
+    "ott:scratched_glass_cyan_ctm_pane",
+    "ott:small_cyan_diamond_stained_glass_ctm_pane",
+    "ott:tiled_cyan_stained_glass_ctm_pane",
+    "ott:borderless_glass_cyan_ctm_pane",
+    "ott:cyan_stained_clear_glass_ctm_pane",
+    "ott:cyan_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_cyan_ctm_pane",
+    "ott:circular_cyan_stained_glass_pane",
+    "ott:fancy_cyan_stained_glass_pane",
+    "ott:large_diamond_cyan_stained_glass_pane",
+    "ott:ornate_cyan_stained_glass_pane",
+    "ott:raster_cyan_stained_glass_pane",
+    "ott:small_cyan_stained_glass_pane",
+    "ott:square_cyan_stained_glass_pane",
+    "ott:tiled_cyan_stained_glass_pane",
+    "ott:vertical_striped_cyan_stained_glass_pane",
+    "ott:woven_cyan_stained_glass_pane"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:green_concrete",
+    "ott:green_concrete_ctm",
+    "ott:green_concrete_panel",
+    "ott:grill_green_concrete",
+    "ott:pegged_green_concrete",
+    "ott:smooth_green_concrete",
+    "ott:striped_green_concrete",
+    "ott:wired_green_concrete"
+  ]
+}

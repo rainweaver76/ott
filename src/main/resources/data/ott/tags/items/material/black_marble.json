@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:black_marble",
+    "ott:black_marble_bricks",
+    "ott:black_marble_diamond_pavers",
+    "ott:black_marble_fancy_fence",
+    "ott:black_marble_floor_tile",
+    "ott:black_marble_pillar",
+    "ott:black_marble_pillar_cap",
+    "ott:black_marble_small_bricks",
+    "ott:black_marble_tiles",
+    "ott:black_polished_marble"
+  ]
+}

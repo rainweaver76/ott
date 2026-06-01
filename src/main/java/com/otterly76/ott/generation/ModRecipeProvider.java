@@ -4189,7 +4189,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, ModBlocks.CLEAR_GLASS.get(), ModBlocks.CLEAR_GLASS_CTM_PANE.get(), "clear_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.CLEAR_LEADED_GLASS_CTM.get(), ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE.get(), "clear_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.DIRTY_GLASS.get(), ModBlocks.DIRTY_GLASS_CTM_PANE.get(), "dirty_glass_ctm_pane_engraving");
-        engraveOne(exporter, ModBlocks.ECHO_GLASS.get(), ModBlocks.ECHO_GLASS_CTM_PANE.get(), "echo_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.FROSTED_GLASS.get(), ModBlocks.FROSTED_GLASS_CTM_PANE.get(), "frosted_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.ICE_GLASS.get(), ModBlocks.ICE_GLASS_CTM_PANE.get(), "ice_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.OAK_BARRED_GLASS_CTM.get(), ModBlocks.OAK_BARRED_GLASS_CTM_PANE.get(), "oak_barred_glass_ctm_pane_engraving");
@@ -4202,7 +4201,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, ModBlocks.OAK_WOVEN_GLASS_CTM.get(), ModBlocks.OAK_WOVEN_GLASS_CTM_PANE.get(), "oak_woven_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.OBSIDIAN_FRAMED_GLASS.get(), ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(), "obsidian_framed_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.ORNATE_LEADED_GLASS.get(), ModBlocks.ORNATE_LEADED_GLASS_CTM_PANE.get(), "ornate_leaded_glass_ctm_pane_engraving");
-        engraveOne(exporter, ModBlocks.QUICKSOIL_GLASS.get(), ModBlocks.QUICKSOIL_GLASS_CTM_PANE.get(), "quicksoil_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.RASTER_LEADED_GLASS_CTM.get(), ModBlocks.RASTER_LEADED_GLASS_CTM_PANE.get(), "raster_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.REINFORCED_GLASS.get(), ModBlocks.REINFORCED_GLASS_CTM_PANE.get(), "reinforced_glass_ctm_pane_engraving");
         engraveOne(exporter, ModBlocks.SANDSTONE_FRAMED_GLASS.get(), ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "sandstone_framed_glass_ctm_pane_engraving");

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:copper_block",
+    "ott:copper_block",
+    "ott:copper_block_bars",
+    "ott:copper_block_circles",
+    "ott:copper_block_ctm",
+    "ott:copper_block_gears",
+    "ott:copper_block_lines",
+    "ott:copper_block_pattern",
+    "ott:copper_block_polished",
+    "ott:copper_block_shafts",
+    "ott:copper_block_small_bricks"
+  ]
+}

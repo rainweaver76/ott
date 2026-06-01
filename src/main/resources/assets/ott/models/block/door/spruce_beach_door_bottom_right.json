@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/spruce_door/spruce_beach_lower",
-    "top": "ott:block/spruce_door/spruce_beach_upper"
+    "bottom": "ott:block/spruce_door/spruce_beach_door_lower",
+    "top": "ott:block/spruce_door/spruce_beach_door_upper"
   }
 }

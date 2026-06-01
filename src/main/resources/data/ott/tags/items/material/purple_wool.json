@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:purple_wool",
+    "ott:cornered_purple_wool",
+    "ott:crafted_purple_wool",
+    "ott:delicate_purple_wool",
+    "ott:harsh_quilted_purple_wool",
+    "ott:ornamented_purple_wool",
+    "ott:rectangle_purple_wool"
+  ]
+}

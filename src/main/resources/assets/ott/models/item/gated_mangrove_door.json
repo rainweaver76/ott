@@ -1,3 +1,8 @@
 {
-  "parent": "ott:block/door/gated_mangrove_door_bottom_left"
+  "parent": "minecraft:item/door_base",
+  "textures": {
+    "bottom": "ott:block/mangrove_door/gated_mangrove_door_lower",
+    "particle": "ott:block/mangrove_door/gated_mangrove_door_upper",
+    "top": "ott:block/mangrove_door/gated_mangrove_door_upper"
+  }
 }

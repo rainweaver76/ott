@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:white_marble",
+    "ott:white_marble_bricks",
+    "ott:white_marble_diamond_pavers",
+    "ott:white_marble_fancy_fence",
+    "ott:white_marble_floor_tile",
+    "ott:white_marble_pillar",
+    "ott:white_marble_pillar_cap",
+    "ott:white_marble_small_bricks",
+    "ott:white_marble_tiles",
+    "ott:white_polished_marble"
+  ]
+}

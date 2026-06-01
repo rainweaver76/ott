@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:spruce_leaves",
+    "ott:apple_spruce_leaves",
+    "ott:cherry_spruce_leaves",
+    "ott:dead_spruce_leaves",
+    "ott:frosted_spruce_leaves",
+    "ott:golden_apple_spruce_leaves",
+    "ott:golden_cherry_spruce_leaves",
+    "ott:golden_spruce_leaves",
+    "ott:magenta_flower_spruce_leaves",
+    "ott:orange_spruce_leaves",
+    "ott:red_spruce_leaves",
+    "ott:white_flower_spruce_leaves"
+  ]
+}

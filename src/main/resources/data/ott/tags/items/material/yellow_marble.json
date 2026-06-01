@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:yellow_marble",
+    "ott:yellow_marble_bricks",
+    "ott:yellow_marble_diamond_pavers",
+    "ott:yellow_marble_fancy_fence",
+    "ott:yellow_marble_floor_tile",
+    "ott:yellow_marble_pillar",
+    "ott:yellow_marble_pillar_cap",
+    "ott:yellow_marble_small_bricks",
+    "ott:yellow_marble_tiles",
+    "ott:yellow_polished_marble"
+  ]
+}

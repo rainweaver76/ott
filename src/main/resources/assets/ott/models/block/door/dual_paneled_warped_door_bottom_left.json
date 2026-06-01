@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/warped_door/dual_paneled_warped_lower",
-    "top": "ott:block/warped_door/dual_paneled_warped_upper"
+    "bottom": "ott:block/warped_door/dual_paneled_warped_door_lower",
+    "top": "ott:block/warped_door/dual_paneled_warped_door_upper"
   }
 }

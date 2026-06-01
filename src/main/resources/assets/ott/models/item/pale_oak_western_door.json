@@ -1,3 +1,8 @@
 {
-  "parent": "ott:block/door/pale_oak_western_door_bottom_left"
+  "parent": "minecraft:item/door_base",
+  "textures": {
+    "bottom": "ott:block/pale_oak_door/pale_oak_western_door_lower",
+    "particle": "ott:block/pale_oak_door/pale_oak_western_door_upper",
+    "top": "ott:block/pale_oak_door/pale_oak_western_door_upper"
+  }
 }

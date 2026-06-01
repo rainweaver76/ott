@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_stained_glass_pane",
+    "ott:arched_black_stained_glass_ctm_pane",
+    "ott:black_framed_glass_ctm_pane",
+    "ott:black_stained_glass_ctm_pane",
+    "ott:fancy_black_stained_glass_ctm_pane",
+    "ott:golden_framed_black_stained_glass_ctm_pane",
+    "ott:ornate_black_stained_glass_ctm_pane",
+    "ott:raster_black_stained_glass_ctm_pane",
+    "ott:scratched_glass_black_ctm_pane",
+    "ott:small_black_diamond_stained_glass_ctm_pane",
+    "ott:tiled_black_stained_glass_ctm_pane",
+    "ott:borderless_glass_black_ctm_pane",
+    "ott:black_stained_clear_glass_ctm_pane",
+    "ott:black_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_black_ctm_pane",
+    "ott:circular_black_stained_glass_pane",
+    "ott:fancy_black_stained_glass_pane",
+    "ott:large_diamond_black_stained_glass_pane",
+    "ott:ornate_black_stained_glass_pane",
+    "ott:raster_black_stained_glass_pane",
+    "ott:small_black_stained_glass_pane",
+    "ott:square_black_stained_glass_pane",
+    "ott:tiled_black_stained_glass_pane",
+    "ott:vertical_striped_black_stained_glass_pane",
+    "ott:woven_black_stained_glass_pane"
+  ]
+}

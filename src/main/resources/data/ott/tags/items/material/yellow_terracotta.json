@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_terracotta",
+    "ott:yellow_terracotta_column",
+    "ott:yellow_terracotta_ctm",
+    "ott:circular_yellow_terracotta",
+    "ott:curled_yellow_terracotta",
+    "ott:hexagonical_yellow_terracotta",
+    "ott:inscribed_yellow_terracotta",
+    "ott:small_yellow_terracotta_tiles",
+    "ott:starry_yellow_terracotta"
+  ]
+}

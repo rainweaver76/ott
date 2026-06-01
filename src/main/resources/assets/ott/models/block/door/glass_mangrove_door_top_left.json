@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_top_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/mangrove_door/glass_mangrove_lower",
-    "top": "ott:block/mangrove_door/glass_mangrove_upper"
+    "bottom": "ott:block/mangrove_door/glass_mangrove_door_lower",
+    "top": "ott:block/mangrove_door/glass_mangrove_door_upper"
   }
 }

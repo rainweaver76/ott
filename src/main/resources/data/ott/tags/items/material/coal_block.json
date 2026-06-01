@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:coal_block",
+    "ott:bordered_coal_block",
+    "ott:brick_bordered_coal_block",
+    "ott:coal_block_carved",
+    "ott:coal_block_chiseled",
+    "ott:coal_block_circles",
+    "ott:coal_block_compacted",
+    "ott:coal_block_ctm",
+    "ott:coal_block_ovals",
+    "ott:coal_block_pattern",
+    "ott:coal_block_rotated_bricks",
+    "ott:coal_block_small_tiles",
+    "ott:coal_block_stripes",
+    "ott:curly_coal_block_ctm",
+    "ott:cut_coal_block_column",
+    "ott:edged_coal_block_bricks",
+    "ott:fine_coal_block_ctm",
+    "ott:massive_coal_block_bricks",
+    "ott:ornate_coal_block_ctm",
+    "ott:overlapping_coal_block_tiles",
+    "ott:polished_coal_block",
+    "ott:simple_coal_block_ctm",
+    "ott:smooth_coal_block_column",
+    "ott:thick_inlayed_coal_block",
+    "ott:tiled_bordered_coal_block",
+    "ott:tiled_coal_block_column",
+    "ott:tiny_brick_bordered_coal_block"
+  ]
+}

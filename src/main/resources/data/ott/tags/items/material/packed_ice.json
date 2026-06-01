@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:packed_ice",
+    "ott:bordered_packed_ice",
+    "ott:brick_bordered_packed_ice",
+    "ott:curly_packed_ice_ctm",
+    "ott:cut_packed_ice_column",
+    "ott:edged_packed_ice_bricks",
+    "ott:fine_packed_ice_ctm",
+    "ott:massive_packed_ice_bricks",
+    "ott:ornate_packed_ice_ctm",
+    "ott:overlapping_packed_ice_tiles",
+    "ott:polished_packed_ice",
+    "ott:simple_packed_ice_ctm",
+    "ott:smooth_packed_ice_column",
+    "ott:thick_inlayed_packed_ice",
+    "ott:tiled_bordered_packed_ice",
+    "ott:tiled_packed_ice_column",
+    "ott:tiny_brick_bordered_packed_ice"
+  ]
+}

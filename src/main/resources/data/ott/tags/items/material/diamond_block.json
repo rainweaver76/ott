@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond_block",
+    "ott:diamond_block",
+    "ott:diamond_block_chiseled",
+    "ott:diamond_block_chiseled_cubes",
+    "ott:diamond_block_connecting",
+    "ott:diamond_block_grid",
+    "ott:diamond_block_jewel_block",
+    "ott:diamond_block_polished",
+    "ott:diamond_block_rhombuses",
+    "ott:diamond_block_shiny_bordered",
+    "ott:diamond_block_small_tiles"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tuff",
+    "ott:bordered_tuff",
+    "ott:brick_bordered_tuff",
+    "ott:curly_tuff_ctm",
+    "ott:cut_tuff_column",
+    "ott:edged_tuff_bricks",
+    "ott:fine_tuff_ctm",
+    "ott:massive_tuff_bricks",
+    "ott:ornate_tuff_ctm",
+    "ott:overlapping_tuff_tiles",
+    "ott:polished_tuff",
+    "ott:simple_tuff_ctm",
+    "ott:smooth_tuff_column",
+    "ott:thick_inlayed_tuff",
+    "ott:tiled_bordered_tuff",
+    "ott:tiled_tuff_column",
+    "ott:tiny_brick_bordered_tuff",
+    "ott:tuff_cut_polished",
+    "ott:tuff_cut_small_brick"
+  ]
+}

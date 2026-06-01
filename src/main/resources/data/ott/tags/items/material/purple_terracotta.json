@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:purple_terracotta",
+    "ott:purple_terracotta_column",
+    "ott:purple_terracotta_ctm",
+    "ott:circular_purple_terracotta",
+    "ott:curled_purple_terracotta",
+    "ott:hexagonical_purple_terracotta",
+    "ott:inscribed_purple_terracotta",
+    "ott:small_purple_terracotta_tiles",
+    "ott:starry_purple_terracotta"
+  ]
+}

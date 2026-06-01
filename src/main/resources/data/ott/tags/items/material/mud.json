@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:mud",
+    "ott:bordered_mud",
+    "ott:brick_bordered_mud",
+    "ott:carved_mud_ctm",
+    "ott:curly_mud_ctm",
+    "ott:edged_mud",
+    "ott:fancy_mud_ctm",
+    "ott:fine_mud_ctm",
+    "ott:hard_mud",
+    "ott:large_mud_sigil",
+    "ott:loreful_mud",
+    "ott:massive_mud_bricks",
+    "ott:ornate_mud_ctm",
+    "ott:overlapping_mud_tiles",
+    "ott:scaly_mud",
+    "ott:simple_mud_ctm",
+    "ott:tiled_bordered_mud",
+    "ott:tiled_mud_column"
+  ]
+}

@@ -1,3 +1,8 @@
 {
-  "parent": "ott:block/door/supported_acacia_door_bottom_left"
+  "parent": "minecraft:item/door_base",
+  "textures": {
+    "bottom": "ott:block/acacia_door/supported_acacia_door_lower",
+    "particle": "ott:block/acacia_door/supported_acacia_door_upper",
+    "top": "ott:block/acacia_door/supported_acacia_door_upper"
+  }
 }

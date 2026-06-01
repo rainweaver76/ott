@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:magenta_wool",
+    "ott:cornered_magenta_wool",
+    "ott:crafted_magenta_wool",
+    "ott:harsh_quilted_magenta_wool",
+    "ott:rectangle_magenta_wool"
+  ]
+}

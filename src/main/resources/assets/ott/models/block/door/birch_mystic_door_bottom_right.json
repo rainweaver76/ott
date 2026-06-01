@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/birch_door/birch_mystic_lower",
-    "top": "ott:block/birch_door/birch_mystic_upper"
+    "bottom": "ott:block/birch_door/birch_mystic_door_lower",
+    "top": "ott:block/birch_door/birch_mystic_door_upper"
   }
 }

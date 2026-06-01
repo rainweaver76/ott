@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_wool",
+    "ott:cornered_white_wool",
+    "ott:crafted_white_wool",
+    "ott:harsh_quilted_white_wool",
+    "ott:rectangle_white_wool"
+  ]
+}

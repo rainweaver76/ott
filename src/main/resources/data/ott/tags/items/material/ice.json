@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:ice",
+    "ott:bordered_ice",
+    "ott:brick_bordered_ice",
+    "ott:curly_ice_ctm",
+    "ott:cut_ice_column",
+    "ott:edged_ice_bricks",
+    "ott:fine_ice_ctm",
+    "ott:massive_ice_bricks",
+    "ott:ornate_ice_ctm",
+    "ott:overlapping_ice_tiles",
+    "ott:polished_ice",
+    "ott:simple_ice_ctm",
+    "ott:smooth_ice_column",
+    "ott:thick_inlayed_ice",
+    "ott:tiled_bordered_ice",
+    "ott:tiled_ice_column",
+    "ott:tiny_brick_bordered_ice"
+  ]
+}

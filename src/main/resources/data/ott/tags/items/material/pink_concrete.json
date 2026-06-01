@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_concrete",
+    "ott:pink_concrete_ctm",
+    "ott:pink_concrete_panel",
+    "ott:grill_pink_concrete",
+    "ott:pegged_pink_concrete",
+    "ott:smooth_pink_concrete",
+    "ott:striped_pink_concrete",
+    "ott:wired_pink_concrete"
+  ]
+}

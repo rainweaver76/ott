@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_stained_glass",
+    "ott:arched_black_stained_glass_ctm",
+    "ott:circular_black_stained_glass",
+    "ott:fancy_black_stained_glass_ctm",
+    "ott:ornate_black_stained_glass_ctm",
+    "ott:raster_black_stained_glass_ctm",
+    "ott:small_black_diamond_stained_glass",
+    "ott:tiled_black_stained_glass_ctm",
+    "ott:black_leaded_stained_glass",
+    "ott:fancy_black_stained_glass",
+    "ott:large_diamond_black_stained_glass",
+    "ott:ornate_black_stained_glass",
+    "ott:raster_black_stained_glass",
+    "ott:small_black_stained_glass",
+    "ott:square_black_stained_glass",
+    "ott:tiled_black_stained_glass",
+    "ott:vertical_striped_black_stained_glass",
+    "ott:woven_black_stained_glass",
+    "ott:black_framed_glass",
+    "ott:black_stained_clear_glass",
+    "ott:borderless_glass_black",
+    "ott:scratched_glass_black",
+    "ott:tinted_borderless_glass_black",
+    "ott:golden_framed_black_stained_glass",
+    "ott:black_stained_glass"
+  ]
+}

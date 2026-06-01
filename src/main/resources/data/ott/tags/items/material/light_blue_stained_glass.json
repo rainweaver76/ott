@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_blue_stained_glass",
+    "ott:arched_light_blue_stained_glass_ctm",
+    "ott:circular_light_blue_stained_glass",
+    "ott:fancy_light_blue_stained_glass_ctm",
+    "ott:ornate_light_blue_stained_glass_ctm",
+    "ott:raster_light_blue_stained_glass_ctm",
+    "ott:small_light_blue_diamond_stained_glass",
+    "ott:tiled_light_blue_stained_glass_ctm",
+    "ott:light_blue_leaded_stained_glass",
+    "ott:fancy_light_blue_stained_glass",
+    "ott:large_diamond_light_blue_stained_glass",
+    "ott:ornate_light_blue_stained_glass",
+    "ott:raster_light_blue_stained_glass",
+    "ott:small_light_blue_stained_glass",
+    "ott:square_light_blue_stained_glass",
+    "ott:tiled_light_blue_stained_glass",
+    "ott:vertical_striped_light_blue_stained_glass",
+    "ott:woven_light_blue_stained_glass",
+    "ott:light_blue_stained_glass"
+  ]
+}

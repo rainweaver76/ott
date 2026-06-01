@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:exposed_copper",
+    "ott:exposed_copper_block"
+  ]
+}

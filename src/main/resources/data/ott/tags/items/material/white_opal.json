@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "ott:white_opal",
+    "ott:white_opal_bricks",
+    "ott:white_opal_glass",
+    "ott:white_opal_glass_pane",
+    "ott:white_opal_pillar",
+    "ott:white_opal_tiles",
+    "ott:white_opal_tiling",
+    "ott:chiseled_white_opal",
+    "ott:cut_white_opal",
+    "ott:polished_white_opal",
+    "ott:small_white_opal_bricks",
+    "ott:small_white_opal_tiles"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_wool",
+    "ott:cornered_cyan_wool",
+    "ott:crafted_cyan_wool",
+    "ott:harsh_quilted_cyan_wool",
+    "ott:rectangle_cyan_wool"
+  ]
+}

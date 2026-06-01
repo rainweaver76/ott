@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_terracotta",
+    "ott:cyan_terracotta_column",
+    "ott:cyan_terracotta_ctm",
+    "ott:circular_cyan_terracotta",
+    "ott:curled_cyan_terracotta",
+    "ott:hexagonical_cyan_terracotta",
+    "ott:inscribed_cyan_terracotta",
+    "ott:small_cyan_terracotta_tiles",
+    "ott:starry_cyan_terracotta"
+  ]
+}

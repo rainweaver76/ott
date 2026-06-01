@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:amethyst_marble",
+    "ott:amethyst_marble_bricks",
+    "ott:amethyst_marble_diamond_pavers",
+    "ott:amethyst_marble_fancy_fence",
+    "ott:amethyst_marble_floor_tile",
+    "ott:amethyst_marble_pillar",
+    "ott:amethyst_marble_pillar_cap",
+    "ott:amethyst_marble_small_bricks",
+    "ott:amethyst_marble_tiles",
+    "ott:amethyst_polished_marble"
+  ]
+}

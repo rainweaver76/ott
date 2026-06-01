@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_top_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/bamboo_door/bamboo_mystic_lower",
-    "top": "ott:block/bamboo_door/bamboo_mystic_upper"
+    "bottom": "ott:block/bamboo_door/bamboo_mystic_door_lower",
+    "top": "ott:block/bamboo_door/bamboo_mystic_door_upper"
   }
 }

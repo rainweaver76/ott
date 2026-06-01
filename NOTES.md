@@ -25,8 +25,6 @@ check models and DO for bookshelf variants
 
 add missing framed * concrete ctm
 
-find/make better marble textures
-
 add buttons to starting menu for git, discord, reddit, server host
 
 create prismarine bricks overlay textures and modifiers
@@ -39,6 +37,7 @@ create overlay textures and modifiers for DO bricks
 add transition textures for custom blocks
 
 pale oak bookshelf
+pale oak damned near everything
 
 more snail textures
 

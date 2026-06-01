@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/oak_door/oak_stable_lower",
-    "top": "ott:block/oak_door/oak_stable_upper"
+    "bottom": "ott:block/oak_door/oak_stable_door_lower",
+    "top": "ott:block/oak_door/oak_stable_door_upper"
   }
 }

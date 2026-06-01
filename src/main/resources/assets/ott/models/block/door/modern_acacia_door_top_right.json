@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_top_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/acacia_door/modern_acacia_lower",
-    "top": "ott:block/acacia_door/modern_acacia_upper"
+    "bottom": "ott:block/acacia_door/modern_acacia_door_lower",
+    "top": "ott:block/acacia_door/modern_acacia_door_upper"
   }
 }

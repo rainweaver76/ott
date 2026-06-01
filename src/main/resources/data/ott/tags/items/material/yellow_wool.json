@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_wool",
+    "ott:cornered_yellow_wool",
+    "ott:crafted_yellow_wool",
+    "ott:harsh_quilted_yellow_wool",
+    "ott:rectangle_yellow_wool"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lime_terracotta",
+    "ott:lime_terracotta_column",
+    "ott:lime_terracotta_ctm",
+    "ott:circular_lime_terracotta",
+    "ott:curled_lime_terracotta",
+    "ott:hexagonical_lime_terracotta",
+    "ott:inscribed_lime_terracotta",
+    "ott:small_lime_terracotta_tiles",
+    "ott:starry_lime_terracotta"
+  ]
+}

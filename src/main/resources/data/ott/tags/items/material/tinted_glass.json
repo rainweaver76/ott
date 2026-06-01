@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:tinted_glass",
+    "ott:tinted_glass",
+    "ott:tinted_borderless_glass",
+    "ott:tinted_clear_glass",
+    "ott:tinted_borderless_glass_black",
+    "ott:tinted_borderless_glass_blue",
+    "ott:tinted_borderless_glass_brown",
+    "ott:tinted_borderless_glass_cyan",
+    "ott:tinted_borderless_glass_gray",
+    "ott:tinted_borderless_glass_green",
+    "ott:tinted_borderless_glass_light_blue",
+    "ott:tinted_borderless_glass_light_gray",
+    "ott:tinted_borderless_glass_lime",
+    "ott:tinted_borderless_glass_magenta",
+    "ott:tinted_borderless_glass_orange",
+    "ott:tinted_borderless_glass_pink",
+    "ott:tinted_borderless_glass_purple",
+    "ott:tinted_borderless_glass_red",
+    "ott:tinted_borderless_glass_white",
+    "ott:tinted_borderless_glass_yellow"
+  ]
+}

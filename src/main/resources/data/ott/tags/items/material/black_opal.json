@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "ott:black_opal",
+    "ott:black_opal_bricks",
+    "ott:black_opal_glass",
+    "ott:black_opal_glass_pane",
+    "ott:black_opal_pillar",
+    "ott:black_opal_tiles",
+    "ott:black_opal_tiling",
+    "ott:chiseled_black_opal",
+    "ott:cut_black_opal",
+    "ott:polished_black_opal",
+    "ott:small_black_opal_bricks",
+    "ott:small_black_opal_tiles"
+  ]
+}

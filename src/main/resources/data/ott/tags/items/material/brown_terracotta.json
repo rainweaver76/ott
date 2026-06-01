@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_terracotta",
+    "ott:brown_terracotta_column",
+    "ott:brown_terracotta_ctm",
+    "ott:circular_brown_terracotta",
+    "ott:curled_brown_terracotta",
+    "ott:hexagonical_brown_terracotta",
+    "ott:inscribed_brown_terracotta",
+    "ott:small_brown_terracotta_tiles",
+    "ott:starry_brown_terracotta"
+  ]
+}

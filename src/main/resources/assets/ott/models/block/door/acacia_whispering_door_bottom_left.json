@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/acacia_door/acacia_whispering_lower",
-    "top": "ott:block/acacia_door/acacia_whispering_upper"
+    "bottom": "ott:block/acacia_door/acacia_whispering_door_lower",
+    "top": "ott:block/acacia_door/acacia_whispering_door_upper"
   }
 }

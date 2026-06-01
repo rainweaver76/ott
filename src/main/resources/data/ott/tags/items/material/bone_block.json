@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bone_block",
+    "ott:bone_block_bordered",
+    "ott:bone_block_chiseled",
+    "ott:bone_block_connecting",
+    "ott:bone_block_ctm",
+    "ott:bone_block_decorated_bordered",
+    "ott:bone_block_inverted_tiles",
+    "ott:bone_block_patterned"
+  ]
+}

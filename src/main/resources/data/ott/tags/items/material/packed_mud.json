@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:packed_mud",
+    "ott:bordered_packed_mud",
+    "ott:brick_bordered_packed_mud",
+    "ott:carved_packed_mud_ctm",
+    "ott:curly_packed_mud_ctm",
+    "ott:edged_packed_mud_bricks",
+    "ott:fancy_packed_mud_ctm",
+    "ott:fine_packed_mud_ctm",
+    "ott:hard_packed_mud",
+    "ott:large_packed_mud_sigil",
+    "ott:loreful_packed_mud",
+    "ott:massive_packed_mud_bricks",
+    "ott:ornate_packed_mud_ctm",
+    "ott:overlapping_packed_mud_tiles",
+    "ott:scaly_packed_mud",
+    "ott:simple_packed_mud_ctm",
+    "ott:tiled_bordered_packed_mud",
+    "ott:tiled_packed_mud_column"
+  ]
+}

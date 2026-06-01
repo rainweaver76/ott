@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:red_marble",
+    "ott:red_marble_bricks",
+    "ott:red_marble_diamond_pavers",
+    "ott:red_marble_fancy_fence",
+    "ott:red_marble_floor_tile",
+    "ott:red_marble_pillar",
+    "ott:red_marble_pillar_cap",
+    "ott:red_marble_small_bricks",
+    "ott:red_marble_tiles",
+    "ott:red_polished_marble"
+  ]
+}

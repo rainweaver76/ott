@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:raw_iron_block",
+    "ott:bordered_raw_iron_block",
+    "ott:brick_bordered_raw_iron_block",
+    "ott:curly_raw_iron_block_ctm",
+    "ott:cut_raw_iron_block_column",
+    "ott:edged_raw_iron_block_bricks",
+    "ott:fine_raw_iron_block_ctm",
+    "ott:massive_raw_iron_block_bricks",
+    "ott:ornate_raw_iron_block_ctm",
+    "ott:overlapping_raw_iron_block_tiles",
+    "ott:polished_raw_iron_block",
+    "ott:simple_raw_iron_block_ctm",
+    "ott:smooth_raw_iron_block_column",
+    "ott:thick_inlayed_raw_iron_block",
+    "ott:tiled_bordered_raw_iron_block",
+    "ott:tiled_raw_iron_block_column",
+    "ott:tiny_brick_bordered_raw_iron_block"
+  ]
+}

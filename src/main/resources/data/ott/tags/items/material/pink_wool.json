@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_wool",
+    "ott:cornered_pink_wool",
+    "ott:crafted_pink_wool",
+    "ott:harsh_quilted_pink_wool",
+    "ott:rectangle_pink_wool"
+  ]
+}

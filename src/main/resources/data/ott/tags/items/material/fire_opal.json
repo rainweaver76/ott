@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "ott:fire_opal",
+    "ott:fire_opal_bricks",
+    "ott:fire_opal_glass",
+    "ott:fire_opal_glass_pane",
+    "ott:fire_opal_pillar",
+    "ott:fire_opal_tiles",
+    "ott:fire_opal_tiling",
+    "ott:chiseled_fire_opal",
+    "ott:cut_fire_opal",
+    "ott:polished_fire_opal",
+    "ott:small_fire_opal_bricks",
+    "ott:small_fire_opal_tiles"
+  ]
+}

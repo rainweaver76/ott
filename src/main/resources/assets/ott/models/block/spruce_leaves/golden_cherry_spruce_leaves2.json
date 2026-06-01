@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/leaves/leaves_notint2",
+  "textures": {
+    "all": "ott:block/spruce_leaves/golden_cherry_spruce_leaves"
+  }
+}

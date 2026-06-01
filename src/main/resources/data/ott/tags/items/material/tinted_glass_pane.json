@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "ott:tinted_glass_ctm_pane",
+    "ott:tinted_borderless_glass_ctm_pane",
+    "ott:tinted_clear_glass_ctm_pane",
+    "ott:tinted_borderless_glass_black_ctm_pane",
+    "ott:tinted_borderless_glass_blue_ctm_pane",
+    "ott:tinted_borderless_glass_brown_ctm_pane",
+    "ott:tinted_borderless_glass_cyan_ctm_pane",
+    "ott:tinted_borderless_glass_gray_ctm_pane",
+    "ott:tinted_borderless_glass_green_ctm_pane",
+    "ott:tinted_borderless_glass_light_blue_ctm_pane",
+    "ott:tinted_borderless_glass_light_gray_ctm_pane",
+    "ott:tinted_borderless_glass_lime_ctm_pane",
+    "ott:tinted_borderless_glass_magenta_ctm_pane",
+    "ott:tinted_borderless_glass_orange_ctm_pane",
+    "ott:tinted_borderless_glass_pink_ctm_pane",
+    "ott:tinted_borderless_glass_purple_ctm_pane",
+    "ott:tinted_borderless_glass_red_ctm_pane",
+    "ott:tinted_borderless_glass_white_ctm_pane",
+    "ott:tinted_borderless_glass_yellow_ctm_pane"
+  ]
+}

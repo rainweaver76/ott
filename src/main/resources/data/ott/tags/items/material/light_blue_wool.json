@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_blue_wool",
+    "ott:cornered_light_blue_wool",
+    "ott:crafted_light_blue_wool",
+    "ott:harsh_quilted_light_blue_wool",
+    "ott:rectangle_light_blue_wool"
+  ]
+}

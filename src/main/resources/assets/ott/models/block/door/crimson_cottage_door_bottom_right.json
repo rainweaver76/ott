@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/crimson_door/crimson_cottage_lower",
-    "top": "ott:block/crimson_door/crimson_cottage_upper"
+    "bottom": "ott:block/crimson_door/crimson_cottage_door_lower",
+    "top": "ott:block/crimson_door/crimson_cottage_door_upper"
   }
 }

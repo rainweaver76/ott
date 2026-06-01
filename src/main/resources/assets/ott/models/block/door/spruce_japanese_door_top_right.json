@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_top_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/spruce_door/spruce_japanese_lower",
-    "top": "ott:block/spruce_door/spruce_japanese_upper"
+    "bottom": "ott:block/spruce_door/spruce_japanese_door_lower",
+    "top": "ott:block/spruce_door/spruce_japanese_door_upper"
   }
 }

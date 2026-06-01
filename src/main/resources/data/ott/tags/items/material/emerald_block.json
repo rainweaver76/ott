@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:emerald_block",
+    "ott:emerald_block",
+    "ott:emerald_block",
+    "ott:emerald_block_bordered_crosses",
+    "ott:emerald_block_bordered_plating",
+    "ott:emerald_block_chiseled",
+    "ott:emerald_block_clovers",
+    "ott:emerald_block_crystal",
+    "ott:emerald_block_patterned",
+    "ott:emerald_block_patterned_squares",
+    "ott:emerald_block_polished",
+    "ott:emerald_block_striped",
+    "ott:emerald_block_waxed"
+  ]
+}

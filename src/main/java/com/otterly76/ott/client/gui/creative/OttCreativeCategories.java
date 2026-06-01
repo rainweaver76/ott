@@ -975,6 +975,86 @@ public enum OttCreativeCategories {
                 // Bookshelves
                 ModBlocks.BOOKSHELVES.values().forEach(output::accept);
 
+                // ── Leaves ───────────────────────────────────────────────────────
+                // Acacia Leaves
+                output.accept(ModBlocks.APPLE_ACACIA_LEAVES);
+                output.accept(ModBlocks.CHERRY_ACACIA_LEAVES);
+                output.accept(ModBlocks.DEAD_ACACIA_LEAVES);
+                output.accept(ModBlocks.FROSTED_ACACIA_LEAVES);
+                output.accept(ModBlocks.GOLDEN_ACACIA_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_ACACIA_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_ACACIA_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_ACACIA_LEAVES);
+                output.accept(ModBlocks.ORANGE_ACACIA_LEAVES);
+                output.accept(ModBlocks.RED_ACACIA_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_ACACIA_LEAVES);
+
+                // Birch Leaves
+                output.accept(ModBlocks.APPLE_BIRCH_LEAVES);
+                output.accept(ModBlocks.CHERRY_BIRCH_LEAVES);
+                output.accept(ModBlocks.DEAD_BIRCH_LEAVES);
+                output.accept(ModBlocks.FROSTED_BIRCH_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_BIRCH_LEAVES);
+                output.accept(ModBlocks.GOLDEN_BIRCH_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_BIRCH_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_BIRCH_LEAVES);
+                output.accept(ModBlocks.ORANGE_BIRCH_LEAVES);
+                output.accept(ModBlocks.RED_BIRCH_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_BIRCH_LEAVES);
+
+                // Dark Oak Leaves
+                output.accept(ModBlocks.APPLE_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.CHERRY_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.DEAD_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.FROSTED_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.ORANGE_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.RED_DARK_OAK_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_DARK_OAK_LEAVES);
+
+                // Jungle Leaves
+                output.accept(ModBlocks.APPLE_JUNGLE_LEAVES);
+                output.accept(ModBlocks.CHERRY_JUNGLE_LEAVES);
+                output.accept(ModBlocks.DEAD_JUNGLE_LEAVES);
+                output.accept(ModBlocks.FROSTED_JUNGLE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_JUNGLE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_JUNGLE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_JUNGLE_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_JUNGLE_LEAVES);
+                output.accept(ModBlocks.ORANGE_JUNGLE_LEAVES);
+                output.accept(ModBlocks.RED_JUNGLE_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_JUNGLE_LEAVES);
+
+                // Oak Leaves
+                output.accept(ModBlocks.APPLE_OAK_LEAVES);
+                output.accept(ModBlocks.CHERRY_OAK_LEAVES);
+                output.accept(ModBlocks.DEAD_OAK_LEAVES);
+                output.accept(ModBlocks.FROSTED_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_OAK_LEAVES);
+                output.accept(ModBlocks.GOLDEN_OAK_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_OAK_LEAVES);
+                output.accept(ModBlocks.ORANGE_OAK_LEAVES);
+                output.accept(ModBlocks.RED_OAK_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_OAK_LEAVES);
+
+                // Spruce Leaves
+                output.accept(ModBlocks.APPLE_SPRUCE_LEAVES);
+                output.accept(ModBlocks.CHERRY_SPRUCE_LEAVES);
+                output.accept(ModBlocks.DEAD_SPRUCE_LEAVES);
+                output.accept(ModBlocks.FROSTED_SPRUCE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_APPLE_SPRUCE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_CHERRY_SPRUCE_LEAVES);
+                output.accept(ModBlocks.GOLDEN_SPRUCE_LEAVES);
+                output.accept(ModBlocks.MAGENTA_FLOWER_SPRUCE_LEAVES);
+                output.accept(ModBlocks.ORANGE_SPRUCE_LEAVES);
+                output.accept(ModBlocks.RED_SPRUCE_LEAVES);
+                output.accept(ModBlocks.WHITE_FLOWER_SPRUCE_LEAVES);
+
+
                 // ── Batch CTM blocks ──────────────────────────────────────────────
         // Acacia Planks
         output.accept(ModBlocks.ACACIA_PLANKS_PANEL);
@@ -3066,7 +3146,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.DIRT_SQUARES);
         output.accept(ModBlocks.DIRT_TILES);
         output.accept(ModBlocks.DIRT_TILLED);
-        output.accept(ModBlocks.ECHO_GLASS);
         output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_CROSSES);
         output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_PLATING);
         output.accept(ModBlocks.EMERALD_BLOCK_CHISELED);
@@ -3301,7 +3380,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.QUARTZ_BLOCK_SQUARES);
         output.accept(ModBlocks.QUARTZ_BLOCK_STRIPES);
         output.accept(ModBlocks.QUARTZ_BLOCK_TILES);
-        output.accept(ModBlocks.QUICKSOIL_GLASS);
         output.accept(ModBlocks.REDSTONE_BLOCK_BORDERED);
         output.accept(ModBlocks.REDSTONE_BLOCK_CHISELED_CLOVERS);
         output.accept(ModBlocks.REDSTONE_BLOCK_CIRCLES);
@@ -3990,7 +4068,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.DIRTY_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ECHO_GLASS_CTM_PANE);
         output.accept(ModBlocks.FROSTED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ICE_GLASS_CTM_PANE);
         output.accept(ModBlocks.OAK_BARRED_GLASS_CTM_PANE);
@@ -4003,7 +4080,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM_PANE);
         output.accept(ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ORNATE_LEADED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.QUICKSOIL_GLASS_CTM_PANE);
         output.accept(ModBlocks.RASTER_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.REINFORCED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);

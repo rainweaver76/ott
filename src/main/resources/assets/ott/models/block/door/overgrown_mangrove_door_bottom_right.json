@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_right",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/mangrove_door/overgrown_mangrove_lower",
-    "top": "ott:block/mangrove_door/overgrown_mangrove_upper"
+    "bottom": "ott:block/mangrove_door/overgrown_mangrove_door_lower",
+    "top": "ott:block/mangrove_door/overgrown_mangrove_door_upper"
   }
 }

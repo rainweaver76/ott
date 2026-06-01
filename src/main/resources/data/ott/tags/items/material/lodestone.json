@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lodestone",
+    "ott:bordered_lodestone",
+    "ott:brick_bordered_lodestone",
+    "ott:curly_lodestone_ctm",
+    "ott:cut_lodestone_column",
+    "ott:edged_lodestone_bricks",
+    "ott:fine_lodestone_ctm",
+    "ott:massive_lodestone_bricks",
+    "ott:ornate_lodestone_ctm",
+    "ott:overlapping_lodestone_tiles",
+    "ott:polished_lodestone",
+    "ott:simple_lodestone_ctm",
+    "ott:smooth_lodestone_column",
+    "ott:thick_inlayed_lodestone",
+    "ott:tiled_bordered_lodestone",
+    "ott:tiled_lodestone_column",
+    "ott:tiny_brick_bordered_lodestone"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/leaves/leaves_notint2",
+  "textures": {
+    "all": "ott:block/oak_leaves/orange_oak_leaves"
+  }
+}

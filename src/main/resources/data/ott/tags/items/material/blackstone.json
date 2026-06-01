@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:blackstone",
+    "ott:blackstone_brick_pattern",
+    "ott:blackstone_brick_paving",
+    "ott:blackstone_diagonal_bricks",
+    "ott:blackstone_polished",
+    "ott:blackstone_rotated_bricks",
+    "ott:blackstone_tiles",
+    "ott:bordered_blackstone",
+    "ott:brick_bordered_blackstone",
+    "ott:curly_blackstone_ctm",
+    "ott:cut_blackstone_column",
+    "ott:edged_blackstone_bricks",
+    "ott:fine_blackstone_ctm",
+    "ott:massive_blackstone_bricks",
+    "ott:ornate_blackstone_ctm",
+    "ott:overlapping_blackstone_tiles",
+    "ott:polished_blackstone",
+    "ott:simple_blackstone_ctm",
+    "ott:smooth_blackstone_column",
+    "ott:thick_inlayed_blackstone",
+    "ott:tiled_blackstone_column",
+    "ott:tiled_bordered_blackstone",
+    "ott:tiny_brick_bordered_blackstone"
+  ]
+}

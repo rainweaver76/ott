@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:glowstone",
+    "ott:glowstone_brick_pattern",
+    "ott:glowstone_brick_paving",
+    "ott:glowstone_bricks",
+    "ott:glowstone_crushed",
+    "ott:glowstone_large_tiles",
+    "ott:glowstone_rotated_bricks",
+    "ott:glowstone_small_tiles",
+    "ott:glowstone_smooth",
+    "ott:glowstone_tiles",
+    "ott:refined_glowstone"
+  ]
+}

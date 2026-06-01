@@ -2,7 +2,7 @@
   "parent": "minecraft:block/door_bottom_left",
   "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "ott:block/jungle_door/boarded_jungle_lower",
-    "top": "ott:block/jungle_door/boarded_jungle_upper"
+    "bottom": "ott:block/jungle_door/boarded_jungle_door_lower",
+    "top": "ott:block/jungle_door/boarded_jungle_door_upper"
   }
 }

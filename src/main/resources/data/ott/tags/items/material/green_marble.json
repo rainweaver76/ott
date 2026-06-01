@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:green_marble",
+    "ott:green_marble_bricks",
+    "ott:green_marble_diamond_pavers",
+    "ott:green_marble_fancy_fence",
+    "ott:green_marble_floor_tile",
+    "ott:green_marble_pillar",
+    "ott:green_marble_pillar_cap",
+    "ott:green_marble_small_bricks",
+    "ott:green_marble_tiles",
+    "ott:green_polished_marble"
+  ]
+}

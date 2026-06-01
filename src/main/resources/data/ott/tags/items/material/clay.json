@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:clay",
+    "ott:bordered_clay",
+    "ott:brick_bordered_clay",
+    "ott:curly_clay_ctm",
+    "ott:cut_clay_column",
+    "ott:edged_clay_bricks",
+    "ott:fine_clay_ctm",
+    "ott:massive_clay_bricks",
+    "ott:ornate_clay_ctm",
+    "ott:overlapping_clay_tiles",
+    "ott:polished_clay",
+    "ott:simple_clay_ctm",
+    "ott:smooth_clay_column",
+    "ott:thick_inlayed_clay",
+    "ott:tiled_bordered_clay",
+    "ott:tiled_clay_column",
+    "ott:tiny_brick_bordered_clay"
+  ]
+}

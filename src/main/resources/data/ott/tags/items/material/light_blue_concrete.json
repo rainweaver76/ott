@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_blue_concrete",
+    "ott:light_blue_concrete_ctm",
+    "ott:light_blue_concrete_panel",
+    "ott:grill_light_blue_concrete",
+    "ott:pegged_light_blue_concrete",
+    "ott:smooth_light_blue_concrete",
+    "ott:striped_light_blue_concrete",
+    "ott:wired_light_blue_concrete"
+  ]
+}

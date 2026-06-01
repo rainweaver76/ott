@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:weathered_copper",
+    "ott:weathered_copper_block"
+  ]
+}
