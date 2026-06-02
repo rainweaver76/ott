@@ -1,8 +1,8 @@
 {
-  "parent": "minecraft:block/door_bottom_left",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "ott:block/oak_door/barred_oak_door_lower",
-    "top": "ott:block/oak_door/barred_oak_door_upper"
-  }
+    "parent": "minecraft:block/door_bottom_left",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "bottom": "ott:block/oak_door/barred_oak_door_bottom",
+        "top": "ott:block/oak_door/barred_oak_door_top"
+    }
 }

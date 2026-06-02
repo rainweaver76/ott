@@ -1,8 +1,8 @@
 {
-  "parent": "minecraft:block/door_bottom_left",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "ott:block/mangrove_door/japanese_mangrove_door_lower",
-    "top": "ott:block/mangrove_door/japanese_mangrove_door_upper"
-  }
+    "parent": "minecraft:block/door_bottom_left",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "bottom": "ott:block/mangrove_door/japanese_mangrove_lower",
+        "top": "ott:block/mangrove_door/japanese_mangrove_upper"
+    }
 }

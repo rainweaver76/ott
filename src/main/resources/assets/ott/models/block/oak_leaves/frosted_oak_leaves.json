@@ -1,6 +1,0 @@
-{
-  "parent": "ott:block/leaves/leaves_notint",
-  "textures": {
-    "all": "ott:block/oak_leaves/frosted_oak_leaves"
-  }
-}

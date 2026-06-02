@@ -1,6 +1,0 @@
-{
-  "parent": "ott:block/leaves/leaves_notint2",
-  "textures": {
-    "all": "ott:block/acacia_leaves/dead_acacia_leaves"
-  }
-}

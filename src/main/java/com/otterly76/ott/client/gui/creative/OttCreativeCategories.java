@@ -938,6 +938,7 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.ORIG_NETHERITE_BLOCK_CTM);
                 output.accept(ModBlocks.ORIG_SMOOTH_STONE_CTM);
                 output.accept(ModBlocks.ORIG_EMERALD_BLOCK_CTM);
+                output.accept(ModBlocks.EMERALD_BLOCK_CTM);
                 // CTM vertical pillars
                 output.accept(ModBlocks.BONE_BLOCK_CTM);
                 output.accept(ModBlocks.COAL_BLOCK_CTM);
@@ -3505,6 +3506,7 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.AMETHYST_BLOCK_CTM);
         output.accept(ModBlocks.ORIG_EMERALD_BLOCK_CTM);
+        output.accept(ModBlocks.EMERALD_BLOCK_CTM);
         output.accept(ModBlocks.REDSTONE_BLOCK_CTM);
         output.accept(ModBlocks.ACACIA_PLANKS_BRICKS);
         output.accept(ModBlocks.AMETHYST_BLOCK_BRICKS);

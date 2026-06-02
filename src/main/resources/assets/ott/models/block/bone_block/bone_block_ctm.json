@@ -1,13 +1,12 @@
 {
   "loader": "ott:mosaic",
   "layout": "vertical",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical_compact",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
     "side": "ott:block/bone_block/ctm/bone_block_ctm",
     "top":  "ott:block/bone_block/ctm/bone_block_ctm_end"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}],
-    "top":  {"layout": "compact", "rules": [{"type": "is_same_block"}]}
+    "side": [{"type": "is_same_block"}]
   }
 }

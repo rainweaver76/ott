@@ -1,8 +1,8 @@
 {
-  "parent": "minecraft:block/door_top_left",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "ott:block/acacia_door/supported_acacia_door_lower",
-    "top": "ott:block/acacia_door/supported_acacia_door_upper"
-  }
+    "parent": "minecraft:block/door_top_left",
+    "render_type": "minecraft:cutout",
+    "textures": {
+        "bottom": "ott:block/acacia_door/supported_acacia_door_bottom",
+        "top": "ott:block/acacia_door/supported_acacia_door_top"
+    }
 }
