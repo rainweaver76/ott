@@ -1,12 +1,15 @@
 {
   "loader": "ott:mosaic",
   "layout": "horizontal",
-  "parent": "ott:block/ctm/ctm_cube_column_horizontal",
+  "parent": "ott:block/ctm/ctm_cube_all_horizontal",
   "textures": {
-    "side": "ott:block/sandstone/ctm/sandstone_bricks",
-    "top":  "minecraft:block/sandstone_top"
+    "all": "ott:block/sandstone/ctm/sandstone_bricks"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}]
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
   }
 }

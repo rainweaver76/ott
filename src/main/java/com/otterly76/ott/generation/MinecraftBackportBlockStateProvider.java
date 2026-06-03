@@ -166,6 +166,17 @@ public class MinecraftBackportBlockStateProvider extends ModBlockStateProvider {
                 .renderType("cutout");
         simpleBlock(ModBlocks.POTTED_OPEN_EYEBLOSSOM.get(), pottedOpenEyeblossom);
 
+        ModelFile paleOakSapling = models()
+                .cross("pale_oak_sapling", mcLoc("block/pale_oak_sapling"))
+                .renderType("cutout");
+        simpleBlockWithItem(ModBlocks.PALE_OAK_SAPLING.get(), paleOakSapling);
+
+        ModelFile pottedPaleOakSapling = models()
+                .withExistingParent("potted_pale_oak_sapling", mcLoc("block/flower_pot_cross"))
+                .texture("plant", mcLoc("block/pale_oak_sapling"))
+                .renderType("cutout");
+        simpleBlock(ModBlocks.POTTED_PALE_OAK_SAPLING.get(), pottedPaleOakSapling);
+
         simpleBlock(ModBlocks.RESIN_BLOCK.get());
         simpleBlock(ModBlocks.RESIN_BRICKS.get());
         simpleBlock(ModBlocks.CHISELED_RESIN_BRICKS.get());

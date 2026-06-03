@@ -1,7 +1,0 @@
-{
-	"parent": "block/potted_tulip_template",
-	"textures": {
-        "petal": "block/tulip_orange",
-        "particle": "block/terracotta"
-    }
-}

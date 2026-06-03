@@ -1,15 +1,11 @@
 {
   "loader": "ott:mosaic",
-  "layout": "compact",
-  "parent": "ott:block/ctm/ctm_cube_all_compact",
+  "parent": "ott:block/ctm/ctm_cube_column_full_compact_flat_top",
   "textures": {
-    "all": "ott:block/red_sandstone/ctm/cut_red_sandstone"
+    "side": "ott:block/red_sandstone/ctm/cut_red_sandstone",
+    "top":  "minecraft:block/red_sandstone_top"
   },
   "connections": {
-    "all": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": [{"type": "is_same_block"}]
   }
 }

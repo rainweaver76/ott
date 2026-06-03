@@ -1854,7 +1854,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CREEPER_STONE_CARVING = register("creeper_stone_carving", () -> new Block(ST));
     public static final DeferredBlock<Block> CRYING_STONE = register("crying_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> CURLY_STONE_CTM = register("curly_stone_ctm", () -> new Block(ST));
-    public static final DeferredBlock<Block> CUT_BLANK_STONE = register("cut_blank_stone", () -> new Block(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CUT_BLANK_STONE = register("cut_blank_stone", () -> new RotatedPillarBlock(ST));
     public static final DeferredBlock<Block> DUH_STONE = register("duh_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> ENGRAVED_STONE = register("engraved_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> ETCHED_STONE_BRICKS = register("etched_stone_bricks", () -> new Block(ST));
@@ -1963,14 +1963,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WEATHERED_TILED_STONE = register("weathered_tiled_stone", () -> new Block(ST));
     public static final DeferredBlock<Block> WEAVER_STONE = register("weaver_stone", () -> new Block(ST));
 
-    // --- New cube-bottom-top stone blocks ---
-    public static final DeferredBlock<Block> CARVED_STONE_CREEPER = register("carved_stone_creeper", () -> new Block(ST));
-    public static final DeferredBlock<Block> CARVED_STONE_DERP = register("carved_stone_derp", () -> new Block(ST));
-    public static final DeferredBlock<Block> CARVED_STONE_VILLAGER = register("carved_stone_villager", () -> new Block(ST));
-    public static final DeferredBlock<Block> CARVED_STONE_WITHER = register("carved_stone_wither", () -> new Block(ST));
-    public static final DeferredBlock<Block> CARVED_STONE_WRITING = register("carved_stone_writing", () -> new Block(ST));
-    public static final DeferredBlock<Block> CUT_STONE = register("cut_stone", () -> new Block(ST));
-    public static final DeferredBlock<Block> ROUGH_CUT_STONE = register("rough_cut_stone", () -> new Block(ST));
+    // --- New RotatedPillarBlock stone blocks ---
+    public static final DeferredBlock<RotatedPillarBlock> CARVED_STONE_CREEPER = register("carved_stone_creeper", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CARVED_STONE_DERP = register("carved_stone_derp", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CARVED_STONE_VILLAGER = register("carved_stone_villager", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CARVED_STONE_WITHER = register("carved_stone_wither", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CARVED_STONE_WRITING = register("carved_stone_writing", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> CUT_STONE = register("cut_stone", () -> new RotatedPillarBlock(ST));
+    public static final DeferredBlock<RotatedPillarBlock> ROUGH_CUT_STONE = register("rough_cut_stone", () -> new RotatedPillarBlock(ST));
 
     // --- New RotatedPillarBlocks ---
     public static final DeferredBlock<RotatedPillarBlock> SHEARED_STONE_PILLAR = register("sheared_stone_pillar", () -> new RotatedPillarBlock(ST));

@@ -59,6 +59,8 @@ minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/
 runs {
     // applies to all the run configs below
     configureEach {
+        jvmArgument '-Xmx4G'
+
         // Recommended logging data for a userdev environment
         // The markers can be added/remove as needed separated by commas.
         // "SCAN": For mods scan.
@@ -216,6 +218,10 @@ publishing {
             url "file://${project.projectDir}/repo"
         }
     }
+}
+
+tasks.named('jar') {
+    zip64 = true
 }
 
 tasks.withType(JavaCompile).configureEach {

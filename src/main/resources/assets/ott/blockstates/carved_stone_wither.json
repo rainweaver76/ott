@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": {"model": "ott:block/stone/carved_stone_wither", "x": 90, "y": 90},
+    "axis=y": {"model": "ott:block/stone/carved_stone_wither"},
+    "axis=z": {"model": "ott:block/stone/carved_stone_wither", "x": 90}
+  }
+}

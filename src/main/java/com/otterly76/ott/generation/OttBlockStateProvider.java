@@ -253,11 +253,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
     }
 
     private void registerSapling(Block sapling, Block potted, String name) {
-        ModelFile saplingModel = models().getExistingFile(modLoc("block/" + name + "_sapling"));
-        simpleBlock(sapling, saplingModel);
-        itemModels().withExistingParent(name + "_sapling", modLoc("block/" + name + "_sapling"));
+        ModelFile saplingModel = models().cross(name + "_sapling", modLoc("block/" + name + "_sapling"))
+                .renderType("cutout");
+        simpleBlockWithItem(sapling, saplingModel);
 
-        ModelFile pottedModel = models().getExistingFile(modLoc("block/potted_" + name + "_sapling"));
+        ModelFile pottedModel = models().withExistingParent("potted_" + name + "_sapling", mcLoc("block/flower_pot_cross"))
+                .texture("plant", modLoc("block/" + name + "_sapling"))
+                .renderType("cutout");
         simpleBlock(potted, pottedModel);
     }
 

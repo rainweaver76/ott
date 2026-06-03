@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side":   "ott:block/stone/rough_cut_stone_side",
+    "top":    "ott:block/stone/rough_cut_stone_top",
+    "bottom": "ott:block/stone/rough_cut_stone_bottom"
+  }
+}
