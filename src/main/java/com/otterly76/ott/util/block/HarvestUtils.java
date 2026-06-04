@@ -139,6 +139,7 @@ public class HarvestUtils {
     }
 
     @Nullable
+    @SuppressWarnings("deprecation") // AxeItem.STRIPPABLES deprecated; call site retained pending API migration
     private static BlockState getAxeStrippingState(BlockState state) {
         Block block = AxeItem.STRIPPABLES.get(state.getBlock());
         return block != null ? block.defaultBlockState().setValue(RotatedPillarBlock.AXIS, state.getValue(RotatedPillarBlock.AXIS)) : null;

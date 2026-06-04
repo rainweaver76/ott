@@ -63,7 +63,3 @@ public class HuskGeoModel<T extends Husk & HuskGeoEntity> extends GeoModel<T> {
         if (headwear != null) { headwear.setScaleX(headScale); headwear.setScaleY(headScale); headwear.setScaleZ(headScale); }
     }
 }
-
-
-
-

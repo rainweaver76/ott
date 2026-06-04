@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("deprecation") // delegates deprecated BakedModel getQuads(3-arg)/getParticleIcon() to ModelData overloads
 public class EmissiveModelWrapper implements BakedModel {
     private final BakedModel baseModel;
     private final BakedModel emissiveModel;

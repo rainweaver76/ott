@@ -96,7 +96,3 @@ public class VexGeoModel<T extends Vex & VexGeoEntity> extends GeoModel<T> {
         }
     }
 }
-
-
-
-

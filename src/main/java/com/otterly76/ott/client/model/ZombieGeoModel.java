@@ -63,7 +63,3 @@ public class ZombieGeoModel<T extends Zombie & ZombieGeoEntity> extends GeoModel
         if (leftArm != null) leftArm.setRotX(leftArm.getRotX() + (float)Math.PI / 2F);
     }
 }
-
-
-
-

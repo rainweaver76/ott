@@ -40,6 +40,7 @@ import java.util.Set;
  * <em>appended</em> on top of a block's normal model by
  * {@link OverlayModifierBakedModel}.
  */
+@SuppressWarnings("deprecation") // delegates deprecated BakedModel getQuads(3-arg) to ModelData overload
 public class OverlayBakedModel implements net.minecraft.client.resources.model.BakedModel {
 
     /** ModelData property storing per-rule 8-bit connection masks for all 6 faces. */

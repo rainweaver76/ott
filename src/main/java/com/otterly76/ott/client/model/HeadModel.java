@@ -33,13 +33,13 @@ public class HeadModel extends GeoModel<HeadAnimatable> {
             return ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/entity/dragon/dragon_skull.png");
         }
 
-        String path = switch ((SkullBlock.Types) type) {
-            case SKELETON -> "skeleton/skeleton_head";
-            case WITHER_SKELETON -> "skeleton/wither_skeleton_head";
-            case ZOMBIE -> "zombie/zombie_head";
-            default -> "dragon/dragon_head";
+        // Vanilla mob heads pull from each mob's base entity texture; only the dragon keeps an OTT texture.
+        return switch ((SkullBlock.Types) type) {
+            case SKELETON -> ResourceLocation.withDefaultNamespace("textures/entity/skeleton/skeleton.png");
+            case WITHER_SKELETON -> ResourceLocation.withDefaultNamespace("textures/entity/skeleton/wither_skeleton.png");
+            case ZOMBIE -> ResourceLocation.withDefaultNamespace("textures/entity/zombie/zombie.png");
+            default -> ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/entity/dragon/dragon_head.png");
         };
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, "textures/entity/" + path + ".png");
     }
 
     @Override
@@ -47,8 +47,3 @@ public class HeadModel extends GeoModel<HeadAnimatable> {
         return null;
     }
 }
-
-
-
-
-

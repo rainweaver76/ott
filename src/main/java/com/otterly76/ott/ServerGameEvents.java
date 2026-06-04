@@ -194,6 +194,7 @@ public class ServerGameEvents {
     // ── Lunge enchantment: propel player horizontally on spear jab ─────────────
 
     @SubscribeEvent
+    @SuppressWarnings("deprecation") // EnchantmentHelper.getItemEnchantmentLevel deprecated; call site retained pending API migration
     public static void onPlayerAttack(AttackEntityEvent event) {
         Player player = event.getEntity();
         ItemStack mainHand = player.getMainHandItem();

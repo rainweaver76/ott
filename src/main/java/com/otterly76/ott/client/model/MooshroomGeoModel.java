@@ -54,7 +54,3 @@ public class MooshroomGeoModel<T extends MushroomCow & MooshroomGeoEntity> exten
         GeoModelUtils.applyLimbSwing4Legs(animationState, leg1, leg2, leg3, leg4);
     }
 }
-
-
-
-

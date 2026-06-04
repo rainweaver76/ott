@@ -54,7 +54,3 @@ public class WitherSkeletonGeoModel<T extends WitherSkeleton & WitherSkeletonGeo
         GeoModelUtils.applyLimbSwingHumanoid(animationState, leftArm, rightArm, leftLeg, rightLeg);
     }
 }
-
-
-
-

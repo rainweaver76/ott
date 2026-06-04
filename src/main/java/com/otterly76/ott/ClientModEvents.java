@@ -25,7 +25,6 @@ import com.otterly76.ott.item.ModItems;
 import com.otterly76.ott.client.handler.DryFoliageColorReloadListener;
 import com.otterly76.ott.client.handler.ItemPropertyRegistrar;
 import com.otterly76.ott.client.handler.LeafColorReloadListener;
-import com.otterly76.ott.client.util.LeafColors;
 import com.otterly76.ott.particle.*;
 import com.otterly76.ott.block.entity.ModBlockEntities;
 import net.minecraft.client.particle.FlameParticle;
@@ -45,6 +44,7 @@ import net.minecraft.server.packs.resources.ResourceMetadata;
 import net.minecraft.client.renderer.texture.SpriteContents;
 import net.minecraft.client.resources.metadata.animation.FrameSize;
 import com.otterly76.ott.config.OttConfig;
+import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.GrassColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -593,7 +593,7 @@ public class ClientModEvents {
             // These blocks are included in solidTargetBlocks, so the opalOverlayHandler above
             // would overwrite any earlier registration.  Registering them here (after) wins.
 
-            // LEAF_LITTER — dry-foliage biome colour
+            // LEAF_LITTER — biome foliage colour
             event.register((state, level, pos, tint) -> switch (tint) {
                 case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
                         whiteOpalOverlay.getColor(state, level, pos, tint);
@@ -603,7 +603,7 @@ public class ClientModEvents {
                         fireOpalOverlay.getColor(state, level, pos, tint);
                 case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
                         level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                default -> level != null && pos != null ? LeafColors.getAverageDryFoliageColor(pos) : -10732494;
+                default -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor();
             }, ModBlocks.LEAF_LITTER.get());
 
             // BUSH + BIG_LILY_PAD — biome grass colour
@@ -728,7 +728,7 @@ public class ClientModEvents {
     }
 
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        event.register((stack, tintIndex) -> event.getBlockColors().getColor(((net.minecraft.world.item.BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex), ModBlocks.BUSH.get(), ModBlocks.WILDFLOWERS.get(), ModBlocks.WEATHERING_STATION.get(), ModBlocks.BIG_LILY_PAD.get());
+        event.register((stack, tintIndex) -> event.getBlockColors().getColor(((net.minecraft.world.item.BlockItem)stack.getItem()).getBlock().defaultBlockState(), null, null, tintIndex), ModBlocks.BUSH.get(), ModBlocks.WILDFLOWERS.get(), ModBlocks.WEATHERING_STATION.get(), ModBlocks.BIG_LILY_PAD.get(), ModBlocks.LEAF_LITTER.get());
 
         ModBlocks.getAllGradientBlocks().forEach(deferredBlock -> {
             event.register((stack, tintIndex) -> {
