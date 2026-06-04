@@ -59,7 +59,7 @@ minecraft.accessTransformers.file rootProject.file('src/main/resources/META-INF/
 runs {
     // applies to all the run configs below
     configureEach {
-        jvmArgument '-Xmx4G'
+        jvmArgument '-Xmx8G'
 
         // Recommended logging data for a userdev environment
         // The markers can be added/remove as needed separated by commas.
@@ -75,6 +75,9 @@ runs {
 
         // Expose source resources path so ModPatterns can scan the patterns directory
         systemProperty 'ott.sourceResources', file('src/main/resources').absolutePath
+
+        // Dev-only log4j2 config (copy of NeoForge's default + mutes Sodium's "color provider replaced" INFO spam)
+        systemProperty 'log4j2.configurationFile', file('dev/log4j2.xml').absolutePath
 
         modSource project.sourceSets.main
     }
