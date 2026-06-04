@@ -2,7 +2,7 @@
   "parent": "minecraft:item/glass_pane",
   "textures": {
     "front": "ott:block/red_stained_glass/large_diamond_red_stained_glass",
-    "side": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "side": "ott:block/glass/leaded_glass_pane_edge"
   },
   "render_type": "minecraft:translucent"
 }

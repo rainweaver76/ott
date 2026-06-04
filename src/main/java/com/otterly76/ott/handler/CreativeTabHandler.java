@@ -441,7 +441,10 @@ public class CreativeTabHandler {
                     ModItems.COPPER_SHEARS,
                     ModItems.EXPOSED_COPPER_SHEARS,
                     ModItems.WEATHERED_COPPER_SHEARS,
-                    ModItems.OXIDIZED_COPPER_SHEARS
+                    ModItems.OXIDIZED_COPPER_SHEARS,
+                    ModItems.GOLDEN_SHEARS,
+                    ModItems.DIAMOND_SHEARS,
+                    ModItems.NETHERITE_SHEARS
             ), visibility);
 
             insertAllAfter(event, Items.NETHERITE_HOE, List.of(

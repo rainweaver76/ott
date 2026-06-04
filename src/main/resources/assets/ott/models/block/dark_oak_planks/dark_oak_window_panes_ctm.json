@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/dark_oak_planks/ctm/dark_oak_window_panes",
+    "side": "ott:block/dark_oak_windows/ctm/dark_oak_window_panes",
     "top": "minecraft:block/dark_oak_planks"
   },
   "connections": {

@@ -3,7 +3,7 @@
   "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/tinted/ctm/tinted_borderless_glass_purple"
+    "all": "ott:block/purple_stained_glass/ctm/tinted_borderless_glass_purple"
   },
   "connections": {
     "all": [

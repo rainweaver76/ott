@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/pale_oak_planks/pale_oak_window_covered"
+      "model": "ott:block/pale_oak_windows/pale_oak_window_covered"
     }
   }
 }

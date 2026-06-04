@@ -1,8 +1,8 @@
 {
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
-    "front": "ott:block/tinted/ctm/tinted_borderless_glass_orange",
-    "side": "ott:block/tinted/ctm/tinted_borderless_glass_orange_edge"
+    "front": "ott:block/orange_stained_glass/ctm/tinted_borderless_glass_orange",
+    "side": "ott:block/orange_stained_glass/ctm/tinted_borderless_glass_orange_edge"
   },
   "render_type": "minecraft:translucent"
 }

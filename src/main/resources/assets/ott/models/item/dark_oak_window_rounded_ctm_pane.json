@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_vertical",
   "textures": {
-    "front": "ott:block/dark_oak_planks/ctm/dark_oak_window_rounded",
+    "front": "ott:block/dark_oak_windows/ctm/dark_oak_window_rounded",
     "side": "minecraft:block/dark_oak_planks"
   },
   "render_type": "minecraft:cutout_mipped"

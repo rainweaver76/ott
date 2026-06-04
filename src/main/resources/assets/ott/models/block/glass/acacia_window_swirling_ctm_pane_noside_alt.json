@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_pane_noside_alt_vertical",
   "textures": {
-    "pane": "ott:block/acacia_planks/ctm/acacia_window_swirling",
+    "pane": "ott:block/acacia_windows/ctm/acacia_window_swirling",
     "edge": "minecraft:block/acacia_planks"
   },
   "connections": {

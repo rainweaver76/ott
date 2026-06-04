@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/reinforced/reinforced_glass"
+      "model": "ott:block/glass/reinforced_glass"
     }
   }
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_side",
   "textures": {
     "pane": "ott:block/cyan_stained_glass/small_cyan_stained_glass",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "render_type": "minecraft:translucent"
 }

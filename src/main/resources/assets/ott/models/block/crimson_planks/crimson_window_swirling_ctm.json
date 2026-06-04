@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/crimson_planks/ctm/crimson_window_swirling",
+    "side": "ott:block/crimson_windows/ctm/crimson_window_swirling",
     "top": "minecraft:block/crimson_planks"
   },
   "connections": {

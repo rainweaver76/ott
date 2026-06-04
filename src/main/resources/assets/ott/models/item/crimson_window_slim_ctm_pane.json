@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_vertical",
   "textures": {
-    "front": "ott:block/crimson_planks/ctm/crimson_window_slim",
+    "front": "ott:block/crimson_windows/ctm/crimson_window_slim",
     "side": "minecraft:block/crimson_planks"
   },
   "render_type": "minecraft:cutout_mipped"

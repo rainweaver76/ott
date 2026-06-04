@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/glass_pane",
   "textures": {
-    "front": "ott:block/spruce_planks/spruce_window_covered",
+    "front": "ott:block/spruce_windows/spruce_window_covered",
     "side": "ott:block/spruce_planks/spruce_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"

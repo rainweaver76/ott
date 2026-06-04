@@ -3,7 +3,7 @@
   "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/oak_glass/ctm/oak_line_bared_glass"
+    "all": "ott:block/oak_planks/ctm/oak_line_bared_glass"
   },
   "connections": {
     "all": [

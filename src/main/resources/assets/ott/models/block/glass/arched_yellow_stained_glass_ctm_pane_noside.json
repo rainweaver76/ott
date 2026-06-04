@@ -4,7 +4,7 @@
   "parent": "ott:block/ctm/ctm_pane_noside_vertical",
   "textures": {
     "pane": "ott:block/yellow_stained_glass/ctm/arched_yellow_stained_glass_ctm",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "connections": {
     "pane": [

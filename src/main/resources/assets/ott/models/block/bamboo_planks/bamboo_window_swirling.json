@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/bamboo_planks/bamboo_window_swirling",
+    "side": "ott:block/bamboo_windows/bamboo_window_swirling",
     "end": "minecraft:block/bamboo_planks"
   },
   "render_type": "minecraft:cutout_mipped"

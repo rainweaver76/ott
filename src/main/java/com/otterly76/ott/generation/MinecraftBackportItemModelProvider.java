@@ -193,6 +193,11 @@ public class MinecraftBackportItemModelProvider extends ItemModelProvider {
             }
         }
 
+        // Tiered shears — 3D models live in ott namespace
+        for (String shears : new String[]{"golden_shears", "diamond_shears", "netherite_shears"}) {
+            getBuilder(shears).parent(new ModelFile.UncheckedModelFile(ResourceLocation.fromNamespaceAndPath("ott", "item/" + shears)));
+        }
+
         // Copper Armor
         generatedItem(ModItems.COPPER_HELMET.getId().getPath());
         generatedItem(ModItems.COPPER_CHESTPLATE.getId().getPath());

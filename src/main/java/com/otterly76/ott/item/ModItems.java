@@ -56,6 +56,7 @@ public class ModItems {
     public static final DeferredItem<Item> KOI_FISH = ITEMS.register("koi_fish", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1F).build())));
     public static final DeferredItem<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> PHEASANT_FEATHER = ITEMS.register("pheasant_feather", () -> new Item(new Item.Properties()));
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS = registerBlockItem("soul_glass", ModBlocks.SOUL_GLASS);
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_PANE = registerBlockItem("soul_glass_pane", ModBlocks.SOUL_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM = registerBlockItem("soul_glass_ctm", ModBlocks.SOUL_GLASS_CTM);
@@ -345,6 +346,10 @@ public class ModItems {
     public static DeferredItem<AxeItem> OXIDIZED_COPPER_AXE;
     public static DeferredItem<HoeItem> OXIDIZED_COPPER_HOE;
     public static DeferredItem<ShearsItem> OXIDIZED_COPPER_SHEARS;
+
+    public static DeferredItem<ShearsItem> GOLDEN_SHEARS;
+    public static DeferredItem<ShearsItem> DIAMOND_SHEARS;
+    public static DeferredItem<ShearsItem> NETHERITE_SHEARS;
 
     // --- Mounts of Mayhem: Spears ---
     public static DeferredItem<SpearItem> WOODEN_SPEAR;
@@ -5711,6 +5716,7 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> VERTICAL_DISORDERED_STONE_BRICKS  = registerBlockItem("vertical_disordered_stone_bricks",  ModBlocks.VERTICAL_DISORDERED_STONE_BRICKS);
     public static final DeferredHolder<Item, BlockItem> WEATHERED_STONE                   = registerBlockItem("weathered_stone",                   ModBlocks.WEATHERED_STONE);
     public static final DeferredHolder<Item, BlockItem> PURPUR_PILLAR_CTM                  = registerBlockItem("purpur_ctm",          ModBlocks.PURPUR_PILLAR_CTM);
+    public static final DeferredHolder<Item, BlockItem> PURPUR_COLUMN_CTM = registerBlockItem("purpur_column_ctm", ModBlocks.PURPUR_COLUMN_CTM);
     public static final DeferredHolder<Item, BlockItem> ORIG_SANDSTONE_CTM                      = registerBlockItem("sandstone",              ModBlocks.ORIG_SANDSTONE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORIG_RED_SANDSTONE_CTM                  = registerBlockItem("red_sandstone",          ModBlocks.ORIG_RED_SANDSTONE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORIG_BORDERED_ANDESITE_CTM              = registerBlockItem("bordered_andesite",       ModBlocks.ORIG_BORDERED_ANDESITE_CTM);
@@ -5976,6 +5982,11 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
         OXIDIZED_COPPER_AXE = MINECRAFT_ITEMS.register("oxidized_copper_axe", () -> new AxeItem(ModToolMaterials.OXIDIZED_COPPER, (new Item.Properties()).attributes(AxeItem.createAttributes(ModToolMaterials.OXIDIZED_COPPER, 6.0F, -3.1F))));
         OXIDIZED_COPPER_HOE = MINECRAFT_ITEMS.register("oxidized_copper_hoe", () -> new HoeItem(ModToolMaterials.OXIDIZED_COPPER, (new Item.Properties()).attributes(HoeItem.createAttributes(ModToolMaterials.OXIDIZED_COPPER, -2.0F, -1.0F))));
         OXIDIZED_COPPER_SHEARS = MINECRAFT_ITEMS.register("oxidized_copper_shears", () -> new ShearsItem((new Item.Properties()).durability(190)));
+
+        // Tiered shears — boosted durability over basic (vanilla) shears (238); 3D models live in the ott namespace
+        GOLDEN_SHEARS    = MINECRAFT_ITEMS.register("golden_shears",    () -> new ShearsItem((new Item.Properties()).durability(280)));
+        DIAMOND_SHEARS   = MINECRAFT_ITEMS.register("diamond_shears",   () -> new ShearsItem((new Item.Properties()).durability(1561)));
+        NETHERITE_SHEARS = MINECRAFT_ITEMS.register("netherite_shears", () -> new ShearsItem((new Item.Properties()).fireResistant().durability(2031)));
 
         // --- Mounts of Mayhem: Spears ---
         WOODEN_SPEAR   = MINECRAFT_ITEMS.register("wooden_spear",   () -> new SpearItem(Tiers.WOOD,      (new Item.Properties()).attributes(SpearItem.createAttributes(Tiers.WOOD,      3, -2.6F))));

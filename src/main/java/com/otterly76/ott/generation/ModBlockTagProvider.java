@@ -1707,6 +1707,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.STONE_BRICKS_MASONRY.get(),
                 // CTM polished/vanilla variants
                 ModBlocks.PURPUR_PILLAR_CTM.get(),
+                ModBlocks.PURPUR_COLUMN_CTM.get(),
                 ModBlocks.ORIG_SANDSTONE_CTM.get(),
                 ModBlocks.ORIG_RED_SANDSTONE_CTM.get(),
                 ModBlocks.ORIG_POLISHED_ANDESITE_CTM.get(),
@@ -2396,6 +2397,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         ModBlocks.PURPUR_LARGE_TILES.get(),
         ModBlocks.PURPUR_ORGANIC_PATTERN.get(),
         ModBlocks.PURPUR_PILLAR_CTM.get(),
+        ModBlocks.PURPUR_COLUMN_CTM.get(),
         ModBlocks.PURPUR_ROTATED_BRICKS.get(),
         ModBlocks.PURPUR_SLANTED_TILES.get(),
         ModBlocks.PURPUR_SMALL_TILES.get(),

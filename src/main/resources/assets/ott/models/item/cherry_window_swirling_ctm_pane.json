@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_vertical",
   "textures": {
-    "front": "ott:block/cherry_planks/ctm/cherry_window_swirling",
+    "front": "ott:block/cherry_windows/ctm/cherry_window_swirling",
     "side": "minecraft:block/cherry_planks"
   },
   "render_type": "minecraft:cutout_mipped"

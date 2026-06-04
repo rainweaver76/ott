@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
-    "front": "ott:block/mangrove_planks/ctm/mangrove_window_tiles",
+    "front": "ott:block/mangrove_windows/ctm/mangrove_window_tiles",
     "side": "minecraft:block/mangrove_planks"
   },
   "render_type": "minecraft:cutout_mipped"

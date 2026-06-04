@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_cube_column_planks_top",
   "textures": {
-    "side": "ott:block/birch_planks/ctm/birch_window_tiles",
+    "side": "ott:block/birch_windows/ctm/birch_window_tiles",
     "up": "minecraft:block/birch_planks"
   },
   "connections": {

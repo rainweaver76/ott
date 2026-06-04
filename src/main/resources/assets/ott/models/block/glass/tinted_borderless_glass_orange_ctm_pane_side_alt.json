@@ -2,8 +2,8 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_side_alt_full",
   "textures": {
-    "pane": "ott:block/tinted/ctm/tinted_borderless_glass_orange",
-    "edge": "ott:block/tinted/ctm/tinted_borderless_glass_orange_edge"
+    "pane": "ott:block/orange_stained_glass/ctm/tinted_borderless_glass_orange",
+    "edge": "ott:block/orange_stained_glass/ctm/tinted_borderless_glass_orange_edge"
   },
   "connections": {
     "pane": [

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/prismarine/edged_prismarine_bricks"
+      "model": "ott:block/prismarine_bricks/edged_prismarine_bricks"
     }
   }
 }

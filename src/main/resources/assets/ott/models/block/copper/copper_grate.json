@@ -3,7 +3,7 @@
   "layout": "compact",
   "parent": "ott:block/ctm/ctm_cube_all_compact",
   "textures": {
-    "all": "ott:block/copper/ctm/copper_grate"
+    "all": "ott:block/copper_block/ctm/copper_grate"
   },
   "connections": {
     "all": [

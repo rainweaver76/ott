@@ -37,6 +37,7 @@ public class OttEntityLootTableProvider extends EntityLootSubProvider {
         this.add(ModEntities.FINCH.get(), createBirdDrops());
         this.add(ModEntities.ROBIN.get(), createBirdDrops());
         this.add(ModEntities.SPARROW.get(), createBirdDrops());
+        this.add(ModEntities.PHEASANT.get(), createPheasantDrops());
         this.add(ModEntities.BROWN_BEAR.get(), createBearDrops());
         this.add(ModEntities.BLACK_BEAR.get(), createBearDrops());
         this.add(ModEntities.DEER.get(), LootTable.lootTable());
@@ -227,6 +228,14 @@ public class OttEntityLootTableProvider extends EntityLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))));
     }
 
+    private LootTable.Builder createPheasantDrops() {
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .add(LootItem.lootTableItem(com.otterly76.ott.item.ModItems.PHEASANT_FEATHER.get())
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))));
+    }
+
     private LootTable.Builder createChickenLikeDrops() {
         return LootTable.lootTable()
                 .withPool(LootPool.lootPool()
@@ -260,6 +269,7 @@ public class OttEntityLootTableProvider extends EntityLootSubProvider {
                 ModEntities.FINCH.get(),
                 ModEntities.ROBIN.get(),
                 ModEntities.SPARROW.get(),
+                ModEntities.PHEASANT.get(),
                 ModEntities.BROWN_BEAR.get(),
                 ModEntities.BLACK_BEAR.get(),
                 ModEntities.DEER.get(),

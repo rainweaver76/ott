@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/purpur/purpur_organic_pattern"
+      "model": "ott:block/purpur_block/purpur_organic_pattern"
     }
   }
 }

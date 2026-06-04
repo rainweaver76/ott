@@ -79,13 +79,13 @@ public class OttCtmPaneProvider implements DataProvider {
             for (String style : verticalStyles) {
                 specs.add(new PaneSpec(
                     wood + "_window_" + style + "_ctm_pane",
-                    "ott:block/" + wood + "_planks/ctm/" + wood + "_window_" + style,
+                    "ott:block/" + wood + "_windows/ctm/" + wood + "_window_" + style,
                     planksEdge, "minecraft:cutout_mipped", true));
             }
             // tiles — full layout
             specs.add(new PaneSpec(
                 wood + "_window_tiles_ctm_pane",
-                "ott:block/" + wood + "_planks/ctm/" + wood + "_window_tiles",
+                "ott:block/" + wood + "_windows/ctm/" + wood + "_window_tiles",
                 planksEdge, "minecraft:cutout_mipped", false));
         }
 
@@ -95,7 +95,7 @@ public class OttCtmPaneProvider implements DataProvider {
             String c          = color.getName();
             String sg         = "ott:block/" + c + "_stained_glass/ctm/";
             String vanillaEdge = "minecraft:block/" + c + "_stained_glass_pane_top";
-            String leadedEdge = "ott:block/leaded_glass/leaded_glass_pane_edge";
+            String leadedEdge = "ott:block/glass/leaded_glass_pane_edge";
 
             // arched — vertical
             specs.add(new PaneSpec("arched_" + c + "_stained_glass_ctm_pane",
@@ -133,8 +133,8 @@ public class OttCtmPaneProvider implements DataProvider {
 
             // scratched — lives in scratched/ctm/
             specs.add(new PaneSpec("scratched_glass_" + c + "_ctm_pane",
-                "ott:block/scratched/ctm/scratched_glass_" + c,
-                "ott:block/scratched/ctm/scratched_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/ctm/scratched_glass_" + c,
+                "ott:block/" + c + "_stained_glass/ctm/scratched_glass_" + c + "_edge", "minecraft:translucent", false));
 
             // small diamond
             specs.add(new PaneSpec("small_" + c + "_diamond_stained_glass_ctm_pane",
@@ -146,13 +146,13 @@ public class OttCtmPaneProvider implements DataProvider {
 
             // tinted borderless — lives in tinted/ctm/
             specs.add(new PaneSpec("tinted_borderless_glass_" + c + "_ctm_pane",
-                "ott:block/tinted/ctm/tinted_borderless_glass_" + c,
-                "ott:block/tinted/ctm/tinted_borderless_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/ctm/tinted_borderless_glass_" + c,
+                "ott:block/" + c + "_stained_glass/ctm/tinted_borderless_glass_" + c + "_edge", "minecraft:translucent", false));
 
             // borderless — lives in borderless/ctm/
             specs.add(new PaneSpec("borderless_glass_" + c + "_ctm_pane",
-                "ott:block/borderless/ctm/borderless_glass_" + c,
-                "ott:block/borderless/ctm/borderless_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/ctm/borderless_glass_" + c,
+                "ott:block/" + c + "_stained_glass/ctm/borderless_glass_" + c + "_edge", "minecraft:translucent", false));
         }
 
         // ── stained clear glass ───────────────────────────────────────────────
@@ -166,19 +166,19 @@ public class OttCtmPaneProvider implements DataProvider {
 
         // ── plain (un-tinted/colourless) single-block variants ─────────────────
         specs.add(new PaneSpec("scratched_glass_ctm_pane",
-            "ott:block/scratched/ctm/scratched_glass",
+            "ott:block/glass/ctm/scratched_glass",
             "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
 
         specs.add(new PaneSpec("tinted_borderless_glass_ctm_pane",
-            "ott:block/tinted/ctm/tinted_borderless_glass",
-            "ott:block/tinted/ctm/tinted_glass_edge", "minecraft:translucent", false));
+            "ott:block/glass/ctm/tinted_borderless_glass",
+            "ott:block/glass/ctm/tinted_glass_edge", "minecraft:translucent", false));
 
         specs.add(new PaneSpec("soul_glass_ctm_pane",
             "ott:block/glass/ctm/soul_glass",
             "ott:block/misc/soul_glass", "minecraft:translucent", false));
 
         specs.add(new PaneSpec("borderless_glass_ctm_pane",
-            "ott:block/borderless/ctm/borderless_glass",
+            "ott:block/glass/ctm/borderless_glass",
             "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
 
         return specs;

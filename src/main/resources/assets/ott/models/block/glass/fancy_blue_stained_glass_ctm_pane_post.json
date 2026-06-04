@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
     "pane": "ott:block/blue_stained_glass/ctm/fancy_blue_stained_glass_ctm",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "connections": {
     "pane": [

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/copper/copper_grate"
+      "model": "ott:block/copper_block/copper_grate"
     }
   }
 }

@@ -3,8 +3,8 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_pane_side_alt_vertical",
   "textures": {
-    "pane": "ott:block/leaded_glass/ctm/arched_leaded_glass_ctm",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "pane": "ott:block/glass/ctm/arched_leaded_glass_ctm",
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "connections": {
     "pane": [

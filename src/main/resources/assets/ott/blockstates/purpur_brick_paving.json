@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/purpur/purpur_brick_paving"
+      "model": "ott:block/purpur_block/purpur_brick_paving"
     }
   }
 }

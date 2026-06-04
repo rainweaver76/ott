@@ -73,6 +73,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(@NotNull RecipeOutput exporter) {
         RecipeOutput noAdv = new NoAdvancementOutput(exporter);
 
+        // Tiered shears — vanilla shears layout (two diagonal ingots)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLDEN_SHEARS.get())
+                .define('#', Items.GOLD_INGOT).pattern(" #").pattern("# ")
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(noAdv, getRecipePath(Constants.MOD_ID, "golden_shears"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_SHEARS.get())
+                .define('#', Items.DIAMOND).pattern(" #").pattern("# ")
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
+                .save(noAdv, getRecipePath(Constants.MOD_ID, "diamond_shears"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NETHERITE_SHEARS.get())
+                .define('#', Items.NETHERITE_INGOT).pattern(" #").pattern("# ")
+                .unlockedBy("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(noAdv, getRecipePath(Constants.MOD_ID, "netherite_shears"));
+
         // Wood (backported pale oak + ott wood sets)
         this.woodRecipes(noAdv);
 

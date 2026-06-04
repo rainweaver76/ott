@@ -1,12 +1,16 @@
 {
   "loader": "ott:mosaic",
-  "layout": "horizontal",
-  "parent": "ott:block/ctm/ctm_cube_column_horizontal",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/purpur_block/ctm/purpur_ctm",
-    "top":  "minecraft:block/purpur_pillar_top"
+    "side": "ott:block/purpur_block/ctm/purpur_pillar_ctm",
+    "top": "minecraft:block/purpur_pillar_top"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}]
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
   }
 }

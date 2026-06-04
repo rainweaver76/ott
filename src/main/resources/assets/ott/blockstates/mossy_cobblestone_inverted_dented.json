@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/mossy/mossy_cobblestone_inverted_dented"
+      "model": "ott:block/mossy_cobblestone/mossy_cobblestone_inverted_dented"
     }
   }
 }

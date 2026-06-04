@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_vertical",
   "textures": {
     "front": "ott:block/light_gray_stained_glass/ctm/arched_light_gray_stained_glass_ctm",
-    "side": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "side": "ott:block/glass/leaded_glass_pane_edge"
   },
   "render_type": "minecraft:translucent"
 }

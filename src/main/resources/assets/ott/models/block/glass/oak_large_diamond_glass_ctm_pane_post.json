@@ -2,8 +2,8 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
-    "pane": "ott:block/oak_glass/ctm/oak_large_diamond_glass",
-    "edge": "ott:block/oak_glass/oak_glass_pane_edge"
+    "pane": "ott:block/oak_planks/ctm/oak_large_diamond_glass",
+    "edge": "ott:block/oak_planks/oak_glass_pane_edge"
   },
   "connections": {
     "pane": [

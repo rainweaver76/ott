@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_pane_post_vertical",
   "textures": {
-    "pane": "ott:block/jungle_planks/ctm/jungle_window_swirling",
+    "pane": "ott:block/jungle_windows/ctm/jungle_window_swirling",
     "edge": "minecraft:block/jungle_planks"
   },
   "connections": {

@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/template_glass_pane_side_alt",
   "textures": {
-    "pane": "ott:block/bamboo_planks/bamboo_window_tiles",
-    "edge": "ott:block/oak_glass/oak_glass_pane_edge"
+    "pane": "ott:block/bamboo_windows/bamboo_window_tiles",
+    "edge": "ott:block/bamboo_planks/bamboo_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

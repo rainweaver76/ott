@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_pane_noside_vertical",
   "textures": {
-    "pane": "ott:block/cherry_planks/ctm/cherry_window_slim",
+    "pane": "ott:block/cherry_windows/ctm/cherry_window_slim",
     "edge": "minecraft:block/cherry_planks"
   },
   "connections": {

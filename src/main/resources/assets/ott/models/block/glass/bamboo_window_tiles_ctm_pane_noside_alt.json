@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
   "textures": {
-    "pane": "ott:block/bamboo_planks/ctm/bamboo_window_tiles",
+    "pane": "ott:block/bamboo_windows/ctm/bamboo_window_tiles",
     "edge": "minecraft:block/bamboo_planks"
   },
   "connections": {

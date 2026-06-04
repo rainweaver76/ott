@@ -134,7 +134,9 @@ public class DumboOctopusEntity extends WaterAnimal implements OttGeoEntity, Buc
     @NotNull
     @Override
     public ItemStack getBucketItemStack() {
-        return new ItemStack(ModItems.DUMBO_OCTOPUS_BUCKET.get());
+        ItemStack stack = new ItemStack(ModItems.DUMBO_OCTOPUS_BUCKET.get());
+        stack.set(DataComponents.CUSTOM_MODEL_DATA, new net.minecraft.world.item.component.CustomModelData(this.getVariant()));
+        return stack;
     }
 
     @NotNull

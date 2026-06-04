@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/birch_planks/ctm/birch_window_rounded",
+    "side": "ott:block/birch_windows/ctm/birch_window_rounded",
     "top": "minecraft:block/birch_planks"
   },
   "connections": {

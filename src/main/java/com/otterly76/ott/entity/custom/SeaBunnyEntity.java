@@ -158,7 +158,9 @@ public class SeaBunnyEntity extends WaterAnimal implements Bucketable, OttGeoEnt
     @NotNull
     @Override
     public ItemStack getBucketItemStack() {
-        return new ItemStack(ModItems.SEA_BUNNY_BUCKET.get());
+        ItemStack stack = new ItemStack(ModItems.SEA_BUNNY_BUCKET.get());
+        stack.set(DataComponents.CUSTOM_MODEL_DATA, new net.minecraft.world.item.component.CustomModelData(this.getVariant()));
+        return stack;
     }
 
     @Override

@@ -928,6 +928,7 @@ public enum OttCreativeCategories {
 
                 // CTM blocks
                 output.accept(ModBlocks.PURPUR_PILLAR_CTM);
+                output.accept(ModBlocks.PURPUR_COLUMN_CTM);
                 output.accept(ModBlocks.ORIG_SANDSTONE_CTM);
                 output.accept(ModBlocks.ORIG_RED_SANDSTONE_CTM);
                 output.accept(ModBlocks.ORIG_BORDERED_ANDESITE_CTM);
@@ -4474,6 +4475,7 @@ public enum OttCreativeCategories {
                 output.accept(ModItems.KOI_FISH);
                 output.accept(ModItems.PEARL);
                 output.accept(ModItems.SILK);
+                output.accept(ModItems.PHEASANT_FEATHER);
                 output.accept(ModItems.SNAIL_SHELL);
                 output.accept(ModBlocks.GLOW_GOOP);
 

@@ -3,7 +3,7 @@
   "layout": "compact",
   "parent": "ott:block/ctm/ctm_cube_all_compact",
   "textures": {
-    "all": "ott:block/mossy/ctm/mossy_cobblestone_worn_stripes"
+    "all": "ott:block/mossy_cobblestone/ctm/mossy_cobblestone_worn_stripes"
   },
   "connections": {
     "all": [

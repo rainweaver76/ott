@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/glass/ctm/tinted_clear_glass",
-    "side": "ott:block/tinted/ctm/tinted_glass_edge"
+    "side": "ott:block/glass/ctm/tinted_glass_edge"
   },
   "render_type": "minecraft:translucent"
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/leaded_glass/fancy_leaded_glass"
+      "model": "ott:block/glass/fancy_leaded_glass"
     }
   }
 }

@@ -156,9 +156,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         generatedItemFromTexture(ModItems.SILK.getId().getPath(), modLoc("item/silk"));
 
         // Opal crystals — all three use the same base crystal texture (tinted in inventory)
-        generatedItemFromTexture(ModItems.WHITE_OPAL_CRYSTAL.getId().getPath(), modLoc("item/opal/opal_crystal"));
-        generatedItemFromTexture(ModItems.BLACK_OPAL_CRYSTAL.getId().getPath(), modLoc("item/opal/opal_crystal"));
-        generatedItemFromTexture(ModItems.FIRE_OPAL_CRYSTAL.getId().getPath(),  modLoc("item/opal/opal_crystal"));
+        generatedItemFromTexture(ModItems.WHITE_OPAL_CRYSTAL.getId().getPath(), modLoc("item/opal_crystal"));
+        generatedItemFromTexture(ModItems.BLACK_OPAL_CRYSTAL.getId().getPath(), modLoc("item/opal_crystal"));
+        generatedItemFromTexture(ModItems.FIRE_OPAL_CRYSTAL.getId().getPath(),  modLoc("item/opal_crystal"));
         
         generatedItemFromTexture(ModItems.JELLYFISH_JELLY.getId().getPath(), modLoc("item/jellyfish_jelly"));
         generatedItemFromTexture(ModItems.SEA_URCHIN_CAVIAR.getId().getPath(), modLoc("item/sea_urchin_caviar"));
@@ -313,12 +313,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         spawnEggItem(ModItems.PARCHED_SPAWN_EGG);
         spawnEggItem(ModItems.CAMEL_HUSK_SPAWN_EGG);
 
-        generatedItemFromTexture(ModItems.DUMBO_OCTOPUS_BUCKET.getId().getPath(), modLoc("item/dumbo_octopus_bucket"));
+        // dumbo_octopus_bucket & sea_bunny_bucket: hand-authored with custom_model_data variant overrides (assets/ott/models/item/)
         generatedItemFromTexture(ModItems.KOI_FISH_BUCKET.getId().getPath(), modLoc("item/koi_fish_bucket"));
         generatedItemFromTexture(ModItems.BASS_BUCKET.getId().getPath(), modLoc("item/bass_bucket"));
         generatedItemFromTexture(ModItems.CATFISH_BUCKET.getId().getPath(), modLoc("item/catfish_bucket"));
         generatedItemFromTexture(ModItems.STINGRAY_BUCKET.getId().getPath(), modLoc("item/stingray_bucket"));
-        generatedItemFromTexture(ModItems.SEA_BUNNY_BUCKET.getId().getPath(), modLoc("item/sea_bunny_bucket"));
         generatedItemFromTexture(ModItems.CICHLID_BUCKET.getId().getPath(), modLoc("item/cichlid_bucket"));
         generatedItemFromTexture(ModItems.GUITARFISH_BUCKET.getId().getPath(), modLoc("item/guitarfish_bucket"));
         generatedItemFromTexture(ModItems.BONNETHEAD_SHARK_BUCKET.getId().getPath(), modLoc("item/bonnethead_shark_bucket"));

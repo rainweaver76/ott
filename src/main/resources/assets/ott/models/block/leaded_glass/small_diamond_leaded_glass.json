@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/leaded_glass/small_diamond_leaded_glass"
+    "all": "ott:block/glass/small_diamond_leaded_glass"
   },
   "render_type": "minecraft:cutout"
 }

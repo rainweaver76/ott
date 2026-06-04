@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
   "textures": {
-    "pane": "ott:block/scratched/ctm/scratched_glass",
+    "pane": "ott:block/glass/ctm/scratched_glass",
     "edge": "minecraft:block/glass_pane_top"
   },
   "connections": {

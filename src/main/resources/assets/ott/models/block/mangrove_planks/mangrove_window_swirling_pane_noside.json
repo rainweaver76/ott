@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside",
   "textures": {
-    "pane": "ott:block/mangrove_planks/mangrove_window_swirling",
+    "pane": "ott:block/mangrove_windows/mangrove_window_swirling",
     "edge": "ott:block/mangrove_planks/mangrove_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"

@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
-    "front": "ott:block/jungle_planks/ctm/jungle_window_tiles",
+    "front": "ott:block/jungle_windows/ctm/jungle_window_tiles",
     "side": "minecraft:block/jungle_planks"
   },
   "render_type": "minecraft:cutout_mipped"

@@ -3,7 +3,7 @@
   "layout": "horizontal",
   "parent": "ott:block/ctm/ctm_cube_all_horizontal",
   "textures": {
-    "all": "ott:block/purpur/ctm/purpur_bricks"
+    "all": "ott:block/purpur_block/ctm/purpur_bricks"
   },
   "connections": {
     "all": [

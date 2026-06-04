@@ -2,6 +2,6 @@
   "parent": "minecraft:item/glass_pane",
   "textures": {
     "front": "ott:block/ochre_froglight/glass_ochre_froglight",
-    "side": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "side": "ott:block/glass/leaded_glass_pane_edge"
   }
 }

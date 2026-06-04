@@ -1909,6 +1909,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SMOOTH_STONE_COLUMN = register("smooth_stone_column", () -> new Block(ST));
     public static final DeferredBlock<Block> TILED_STONE_COLUMN = register("tiled_stone_column", () -> new Block(ST));
     public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> PURPUR_COLUMN_CTM = register("purpur_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> ORIG_SANDSTONE_CTM = register("sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> ORIG_RED_SANDSTONE_CTM = register("red_sandstone", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> ORIG_BORDERED_ANDESITE_CTM = register("bordered_andesite", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));

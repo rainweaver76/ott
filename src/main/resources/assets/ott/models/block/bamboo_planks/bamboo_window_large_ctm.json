@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/bamboo_planks/ctm/bamboo_window_large",
+    "side": "ott:block/bamboo_windows/ctm/bamboo_window_large",
     "top": "minecraft:block/bamboo_planks"
   },
   "connections": {

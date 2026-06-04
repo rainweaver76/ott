@@ -3,7 +3,7 @@
   "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/prismarine/ctm/simple_prismarine_ctm"
+    "all": "ott:block/prismarine_bricks/ctm/simple_prismarine_ctm"
   },
   "connections": {
     "all": [

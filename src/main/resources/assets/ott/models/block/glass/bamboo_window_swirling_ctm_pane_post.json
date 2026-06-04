@@ -3,7 +3,7 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_pane_post_vertical",
   "textures": {
-    "pane": "ott:block/bamboo_planks/ctm/bamboo_window_swirling",
+    "pane": "ott:block/bamboo_windows/ctm/bamboo_window_swirling",
     "edge": "minecraft:block/bamboo_planks"
   },
   "connections": {

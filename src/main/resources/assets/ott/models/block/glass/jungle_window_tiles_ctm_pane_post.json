@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
-    "pane": "ott:block/jungle_planks/ctm/jungle_window_tiles",
+    "pane": "ott:block/jungle_windows/ctm/jungle_window_tiles",
     "edge": "minecraft:block/jungle_planks"
   },
   "connections": {

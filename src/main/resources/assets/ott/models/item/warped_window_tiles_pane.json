@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/glass_pane",
   "textures": {
-    "front": "ott:block/warped_planks/warped_window_tiles",
+    "front": "ott:block/warped_windows/warped_window_tiles",
     "side": "ott:block/warped_planks/warped_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"

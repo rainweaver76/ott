@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "ott:block/crimson_planks/crimson_window_large",
+    "side": "ott:block/crimson_windows/crimson_window_large",
     "end": "minecraft:block/crimson_planks"
   },
   "render_type": "minecraft:cutout_mipped"

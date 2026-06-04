@@ -2,6 +2,12 @@
 	"format_version": "1.9.0",
 	"credit": "Throttled by Otterly76",
 	"parent": "item/bucket",
+	"overrides": [
+		{ "predicate": { "custom_model_data": 1 }, "model": "minecraft:item/axolotl_wild_bucket" },
+		{ "predicate": { "custom_model_data": 2 }, "model": "minecraft:item/axolotl_gold_bucket" },
+		{ "predicate": { "custom_model_data": 3 }, "model": "minecraft:item/axolotl_cyan_bucket" },
+		{ "predicate": { "custom_model_data": 4 }, "model": "minecraft:item/axolotl_blue_bucket" }
+	],
 	"textures": {
 		"1": "item/bucket_base",
 		"2": "item/water",

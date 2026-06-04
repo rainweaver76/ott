@@ -2,7 +2,7 @@
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
     "pane": "ott:block/light_gray_stained_glass/ornate_light_gray_stained_glass",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "render_type": "minecraft:translucent"
 }

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside",
   "textures": {
-    "pane": "ott:block/spruce_planks/spruce_window_panes",
+    "pane": "ott:block/spruce_windows/spruce_window_panes",
     "edge": "ott:block/spruce_planks/spruce_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"

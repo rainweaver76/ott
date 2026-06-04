@@ -3,7 +3,7 @@
   "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/reinforced/ctm/reinforced_glass"
+    "all": "ott:block/glass/ctm/reinforced_glass"
   },
   "connections": {
     "all": [

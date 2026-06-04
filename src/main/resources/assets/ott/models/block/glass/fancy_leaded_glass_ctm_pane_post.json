@@ -2,8 +2,8 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_post_full",
   "textures": {
-    "pane": "ott:block/leaded_glass/ctm/fancy_leaded_glass",
-    "edge": "ott:block/leaded_glass/leaded_glass_pane_edge"
+    "pane": "ott:block/glass/ctm/fancy_leaded_glass",
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "connections": {
     "pane": [

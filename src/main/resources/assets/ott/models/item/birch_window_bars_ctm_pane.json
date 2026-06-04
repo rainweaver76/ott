@@ -1,7 +1,7 @@
 {
   "parent": "ott:item/glass_pane_ctm_vertical",
   "textures": {
-    "front": "ott:block/birch_planks/ctm/birch_window_bars",
+    "front": "ott:block/birch_windows/ctm/birch_window_bars",
     "side": "minecraft:block/birch_planks"
   },
   "render_type": "minecraft:cutout_mipped"

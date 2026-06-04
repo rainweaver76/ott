@@ -3,7 +3,7 @@
   "layout": "compact",
   "parent": "ott:block/ctm/ctm_cube_all_compact",
   "textures": {
-    "all": "ott:block/purpur/ctm/purpur_jagged_pattern"
+    "all": "ott:block/purpur_block/ctm/purpur_jagged_pattern"
   },
   "connections": {
     "all": [

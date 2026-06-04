@@ -253,12 +253,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
     }
 
     private void registerSapling(Block sapling, Block potted, String name) {
-        ModelFile saplingModel = models().cross(name + "_sapling", modLoc("block/" + name + "_sapling"))
+        ResourceLocation saplingTex = modLoc("block/wood/" + name + "/sapling");
+        ModelFile saplingModel = models().cross(name + "_sapling", saplingTex)
                 .renderType("cutout");
         simpleBlockWithItem(sapling, saplingModel);
 
         ModelFile pottedModel = models().withExistingParent("potted_" + name + "_sapling", mcLoc("block/flower_pot_cross"))
-                .texture("plant", modLoc("block/" + name + "_sapling"))
+                .texture("plant", saplingTex)
                 .renderType("cutout");
         simpleBlock(potted, pottedModel);
     }
@@ -1935,12 +1936,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
     /** Tinted cube used as a horizontal-directional tiling block. */
     private void opalTintedHorizontal(@NotNull net.minecraft.world.level.block.GlazedTerracottaBlock block,
                                       @NotNull String modelName, @NotNull ResourceLocation texture) {
-        ModelFile model = models().withExistingParent(modelName, mcLoc("block/block"))
+        // Parent the glazed-terracotta-style template (per-face rotations) so the pattern
+        // tiles correctly on vertical faces too; tintindex=0 kept for PrismaticColorHandler.
+        ModelFile model = models().withExistingParent(modelName, modLoc("block/template_opal_tiling"))
                 .texture("all", texture)
-                .texture("particle", texture)
-                .element().from(0, 0, 0).to(16, 16, 16)
-                    .allFaces((dir, face) -> face.texture("#all").tintindex(0).cullface(dir))
-                .end();
+                .texture("particle", texture);
         horizontalBlock(block, model);
         itemModels().withExistingParent(blockPath(block), modLoc(modelName));
     }

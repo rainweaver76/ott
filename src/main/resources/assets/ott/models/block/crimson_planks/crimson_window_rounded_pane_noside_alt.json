@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
-    "pane": "ott:block/crimson_planks/crimson_window_rounded",
+    "pane": "ott:block/crimson_windows/crimson_window_rounded",
     "edge": "ott:block/crimson_planks/crimson_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"

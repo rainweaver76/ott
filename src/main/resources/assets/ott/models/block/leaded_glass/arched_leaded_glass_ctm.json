@@ -3,8 +3,8 @@
   "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "side": "ott:block/leaded_glass/ctm/arched_leaded_glass_ctm",
-    "top": "ott:block/leaded_glass/circular_leaded_stained_glass"
+    "side": "ott:block/glass/ctm/arched_leaded_glass_ctm",
+    "top": "ott:block/glass/circular_leaded_stained_glass"
   },
   "connections": {
     "side": [

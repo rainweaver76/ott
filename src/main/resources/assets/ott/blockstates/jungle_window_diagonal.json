@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/jungle_planks/jungle_window_diagonal"
+      "model": "ott:block/jungle_windows/jungle_window_diagonal"
     }
   }
 }
