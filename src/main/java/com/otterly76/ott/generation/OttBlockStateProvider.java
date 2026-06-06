@@ -1451,96 +1451,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         // ── Stone variant blocks (simple CTM — Chipped style) ─────────────────
         // Plain cube_all
-        stoneBlock(ModBlocks.ANGRY_STONE);
-        stoneBlock(ModBlocks.BLANK_STONE_CARVING);
-        stoneCTMBlock(ModBlocks.BRICK_BORDERED_STONE);
-        stoneBlock(ModBlocks.CARVED_STONE);
-        stoneBlock(ModBlocks.CHECKERED_STONE_TILES);
-        stoneBlock(ModBlocks.COBBLED_STONE);
-        stoneBlock(ModBlocks.CRACKED_DISORDERED_STONE_BRICKS);
-        stoneBlock(ModBlocks.CRACKED_FLAT_STONE_TILES);
-        stoneBlock(ModBlocks.CREEPER_STONE_CARVING);
-        stoneBlock(ModBlocks.CRYING_STONE);
-        stoneCTMBlock(ModBlocks.CURLY_STONE_CTM);
-        stoneBlock(ModBlocks.CUT_BLANK_STONE);
-        stoneBlock(ModBlocks.DUH_STONE);
-        stoneBlock(ModBlocks.ENGRAVED_STONE);
-        stoneBlock(ModBlocks.ETCHED_STONE_BRICKS);
-        stoneCTMBlock(ModBlocks.FINE_STONE_CTM);
-        stoneBlock(ModBlocks.FLAT_STONE_TILES);
-        stoneBlock(ModBlocks.GLAD_STONE);
-        stoneBlock(ModBlocks.INLAYED_STONE);
-        stoneBlock(ModBlocks.INSCRIBED_STONE);
-        stoneBlock(ModBlocks.LAYED_STONE_BRICKS);
-        stoneBlock(ModBlocks.LODED_STONE);
-        stoneBlock(ModBlocks.OFFSET_STONE_BRICKS);
-        stoneCTMBlock(ModBlocks.ORNATE_STONE_CTM);
-        stoneCTMBlock(ModBlocks.OVERLAPPING_STONE_TILES);
-        stoneBlock(ModBlocks.PILLAR_STONE_BRICKS);
-        stoneCTMBlock(ModBlocks.POLISHED_STONE);
-        stoneBlock(ModBlocks.PRISMAL_STONE_REMNANTS);
-        stoneBlock(ModBlocks.ROUGH_STONE);
-        stoneBlock(ModBlocks.ROUNDED_STONE_BRICKS);
-        stoneBlock(ModBlocks.RUNIC_CARVED_STONE);
-        stoneBlock(ModBlocks.SAD_STONE);
-        stoneBlock(ModBlocks.SANDED_STONE);
-        stoneCTMBlock(ModBlocks.SIMPLE_STONE_CTM);
-        stoneBlock(ModBlocks.SMALL_STONE_BRICKS);
-        stoneBlock(ModBlocks.SMOOTH_INLAYED_STONE);
-        stoneBlock(ModBlocks.SMOOTHED_DOUBLE_INLAYED_STONE);
-        stoneBlock(ModBlocks.SPIDER_STONE_CARVING);
-        stoneBlock(ModBlocks.SPIRALED_STONE);
-        stoneBlock(ModBlocks.STACKED_STONE_BRICKS);
-        stoneBlock(ModBlocks.STONE_MINI_TILES);
-        stoneBlock(ModBlocks.STONE_SCALES);
-        stoneCTMBlock(ModBlocks.THICK_INLAYED_STONE);
-        stoneCTMBlock(ModBlocks.TILED_BORDERED_STONE);
-        stoneBlock(ModBlocks.TILED_STONE);
-        stoneCTMBlock(ModBlocks.TINY_BRICK_BORDERED_STONE);
-        stoneBlock(ModBlocks.TINY_LAYERED_STONE_BRICKS);
-        stoneBlock(ModBlocks.TINY_LAYERED_STONE_SLABS);
-        stoneBlock(ModBlocks.TINY_STONE_BRICKS);
-        stoneBlock(ModBlocks.TRODDEN_STONE);
-        stoneBlock(ModBlocks.UNAMUSED_STONE);
-        stoneBlock(ModBlocks.VERTICAL_CUT_STONE);
-        stoneBlock(ModBlocks.VERTICAL_DISORDERED_STONE_BRICKS);
-        stoneBlock(ModBlocks.WEATHERED_STONE);
         // Column (RotatedPillarBlock)
-        existingAxisBlock(ModBlocks.STONE_PILLAR.get(), "block/stone/stone_pillar");
         // Static decorative (plain cube_all)
-        stoneCTMBlock(ModBlocks.BORDERED_STONE);
-        stoneCTMBlock(ModBlocks.EDGED_STONE_BRICKS);
-        stoneBlock(ModBlocks.MASSIVE_STONE_BRICKS);
         // CTM connecting column blocks (plain Block, not RotatedPillar — rotation breaks CTM UV mapping)
-        stoneCTMBlock(ModBlocks.CUT_STONE_COLUMN);
-        stoneCTMBlock(ModBlocks.SMOOTH_STONE_COLUMN);
-        stoneCTMBlock(ModBlocks.TILED_STONE_COLUMN);
 
         // Purpur CTM blocks
-        simpleBlockWithItem(ModBlocks.PURPUR_PILLAR_CTM.get(),
-                models().getExistingFile(modLoc("block/purpur_block/purpur_ctm")));
 
         // Sandstone CTM blocks
-        simpleBlockWithItem(ModBlocks.ORIG_SANDSTONE_CTM.get(),
-                models().getExistingFile(modLoc("block/sandstone/sandstone")));
-        simpleBlockWithItem(ModBlocks.ORIG_RED_SANDSTONE_CTM.get(),
-                models().getExistingFile(modLoc("block/red_sandstone/red_sandstone")));
-        simpleBlockWithItem(ModBlocks.ORIG_BORDERED_ANDESITE_CTM.get(),
-                models().getExistingFile(modLoc("block/andesite/bordered_andesite")));
-        simpleBlockWithItem(ModBlocks.ORIG_POLISHED_ANDESITE_CTM.get(),
-                models().getExistingFile(modLoc("block/andesite/polished_andesite")));
-        simpleBlockWithItem(ModBlocks.ORIG_POLISHED_BLACKSTONE_CTM.get(),
-                models().getExistingFile(modLoc("block/blackstone/polished_blackstone")));
-        simpleBlockWithItem(ModBlocks.ORIG_POLISHED_DIORITE_CTM.get(),
-                models().getExistingFile(modLoc("block/diorite/polished_diorite")));
-        simpleBlockWithItem(ModBlocks.ORIG_POLISHED_GRANITE_CTM.get(),
-                models().getExistingFile(modLoc("block/granite/polished_granite")));
-        simpleBlockWithItem(ModBlocks.ORIG_NETHERITE_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/netherite_block/netherite_block")));
-        simpleBlockWithItem(ModBlocks.ORIG_SMOOTH_STONE_CTM.get(),
-                models().getExistingFile(modLoc("block/stone/smooth_stone")));
-        simpleBlockWithItem(ModBlocks.ORIG_EMERALD_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/emerald_block/emerald_block")));
         existingAxisBlock(ModBlocks.CHISELED_PLASTERED_STONE_PILLAR.get(), "block/chiseled_plastered_stone_pillar");
 
         // --- New plain cube_all stone blocks ---
@@ -1575,11 +1492,6 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         stoneBlock(ModBlocks.WEATHERED_TILED_STONE);
         stoneBlock(ModBlocks.WEAVER_STONE);
         // --- Cube-bottom-top stone blocks ---
-        stoneBottomTopBlock(ModBlocks.CARVED_STONE_CREEPER, "block/stone/carved_stone_creeper", "block/stone/cut_stone_top", "block/stone/carved_stone_bottom");
-        stoneBottomTopBlock(ModBlocks.CARVED_STONE_DERP,    "block/stone/carved_stone_derp",    "block/stone/cut_stone_top", "block/stone/carved_stone_bottom");
-        stoneBottomTopBlock(ModBlocks.CARVED_STONE_VILLAGER,"block/stone/carved_stone_villager","block/stone/cut_stone_top", "block/stone/carved_stone_bottom");
-        stoneBottomTopBlock(ModBlocks.CARVED_STONE_WITHER,  "block/stone/carved_stone_wither",  "block/stone/cut_stone_top", "block/stone/carved_stone_bottom");
-        stoneBottomTopBlock(ModBlocks.CARVED_STONE_WRITING, "block/stone/carved_stone_writing", "block/stone/cut_stone_top", "block/stone/carved_stone_bottom");
         stoneBottomTopBlock(ModBlocks.CUT_STONE,            "block/stone/cut_stone_side",       "block/stone/cut_stone_top", "minecraft:block/stone");
         stoneBottomTopBlock(ModBlocks.ROUGH_CUT_STONE,      "block/stone/rough_cut_stone_side", "block/stone/rough_cut_stone_top", "block/stone/rough_cut_stone_bottom");
         // --- Simple RotatedPillarBlocks ---
@@ -1594,22 +1506,6 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 stoneLegendBlock(block, "block/stone/stone_chisels/legend/" + name));
 
         // CTM vertical pillars
-        simpleBlockWithItem(ModBlocks.BONE_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/bone_block/bone_block_ctm")));
-        simpleBlockWithItem(ModBlocks.COAL_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/coal_block/coal_block_ctm")));
-        simpleBlockWithItem(ModBlocks.COBBLED_DEEPSLATE_CTM.get(),
-                models().getExistingFile(modLoc("block/deepslate/cobbled_deepslate_ctm")));
-        simpleBlockWithItem(ModBlocks.COBBLESTONE_CTM.get(),
-                models().getExistingFile(modLoc("block/cobblestone/cobblestone_ctm")));
-        simpleBlockWithItem(ModBlocks.COPPER_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/waxed_copper_block/copper_block_ctm")));
-        simpleBlockWithItem(ModBlocks.LAPIS_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/lapis_block/lapis_block_ctm")));
-        simpleBlockWithItem(ModBlocks.NETHERITE_BLOCK_CTM.get(),
-                models().getExistingFile(modLoc("block/netherite_block/netherite_block_ctm")));
-        simpleBlockWithItem(ModBlocks.OBSIDIAN_CTM.get(),
-                models().getExistingFile(modLoc("block/obsidian/obsidian_ctm")));
 
         beehiveBlock(ModBlocks.ACACIA_BEEHIVE,   "acacia");
         beehiveBlock(ModBlocks.BAMBOO_BEEHIVE,   "bamboo");

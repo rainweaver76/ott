@@ -59,6 +59,12 @@ public class OttCtmPaneProvider implements DataProvider {
         Path itemModelDir  = mainPath.resolve("models/item");
 
         for (PaneSpec spec : buildSpecs()) {
+            // Skip panes whose block is no longer registered (removed in a trim wave) so we don't
+            // emit orphaned blockstates/models referencing deleted textures.
+            if (!net.minecraft.core.registries.BuiltInRegistries.BLOCK.containsKey(
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", spec.name()))) {
+                continue;
+            }
             writeBlockstate(cache, bsDir.resolve(spec.name() + ".json"), spec.name());
             writeBlockPaneModels(cache, blockModelDir, spec);
             writeItemModel(cache, itemModelDir.resolve(spec.name() + ".json"), spec);

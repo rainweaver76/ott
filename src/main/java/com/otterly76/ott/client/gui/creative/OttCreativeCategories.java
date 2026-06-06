@@ -812,70 +812,9 @@ public enum OttCreativeCategories {
 
     // ── Engraved / Connecting Blocks ──────────────────────────────────────────
     ENGRAVED("engraved",
-            () -> ModBlocks.ENGRAVED_STONE.get().asItem(),
+            () -> ModBlocks.CHAOTIC_STONE_BRICKS.get().asItem(),
             (params, output) -> {
                 // Stone variants
-                output.accept(ModBlocks.ANGRY_STONE);
-                output.accept(ModBlocks.BLANK_STONE_CARVING);
-                output.accept(ModBlocks.BORDERED_STONE);
-                output.accept(ModBlocks.BRICK_BORDERED_STONE);
-                output.accept(ModBlocks.CARVED_STONE);
-                output.accept(ModBlocks.CHECKERED_STONE_TILES);
-                output.accept(ModBlocks.COBBLED_STONE);
-                output.accept(ModBlocks.CRACKED_DISORDERED_STONE_BRICKS);
-                output.accept(ModBlocks.CRACKED_FLAT_STONE_TILES);
-                output.accept(ModBlocks.CREEPER_STONE_CARVING);
-                output.accept(ModBlocks.CRYING_STONE);
-                output.accept(ModBlocks.CURLY_STONE_CTM);
-                output.accept(ModBlocks.CUT_BLANK_STONE);
-                output.accept(ModBlocks.CUT_STONE_COLUMN);
-                output.accept(ModBlocks.DUH_STONE);
-                output.accept(ModBlocks.EDGED_STONE_BRICKS);
-                output.accept(ModBlocks.ENGRAVED_STONE);
-                output.accept(ModBlocks.ETCHED_STONE_BRICKS);
-                output.accept(ModBlocks.FINE_STONE_CTM);
-                output.accept(ModBlocks.FLAT_STONE_TILES);
-                output.accept(ModBlocks.GLAD_STONE);
-                output.accept(ModBlocks.INLAYED_STONE);
-                output.accept(ModBlocks.INSCRIBED_STONE);
-                output.accept(ModBlocks.LAYED_STONE_BRICKS);
-                output.accept(ModBlocks.LODED_STONE);
-                output.accept(ModBlocks.MASSIVE_STONE_BRICKS);
-                output.accept(ModBlocks.OFFSET_STONE_BRICKS);
-                output.accept(ModBlocks.ORNATE_STONE_CTM);
-                output.accept(ModBlocks.OVERLAPPING_STONE_TILES);
-                output.accept(ModBlocks.PILLAR_STONE_BRICKS);
-                output.accept(ModBlocks.POLISHED_STONE);
-                output.accept(ModBlocks.PRISMAL_STONE_REMNANTS);
-                output.accept(ModBlocks.ROUGH_STONE);
-                output.accept(ModBlocks.ROUNDED_STONE_BRICKS);
-                output.accept(ModBlocks.RUNIC_CARVED_STONE);
-                output.accept(ModBlocks.SAD_STONE);
-                output.accept(ModBlocks.SANDED_STONE);
-                output.accept(ModBlocks.SIMPLE_STONE_CTM);
-                output.accept(ModBlocks.SMALL_STONE_BRICKS);
-                output.accept(ModBlocks.SMOOTH_INLAYED_STONE);
-                output.accept(ModBlocks.SMOOTH_STONE_COLUMN);
-                output.accept(ModBlocks.SMOOTHED_DOUBLE_INLAYED_STONE);
-                output.accept(ModBlocks.SPIDER_STONE_CARVING);
-                output.accept(ModBlocks.SPIRALED_STONE);
-                output.accept(ModBlocks.STACKED_STONE_BRICKS);
-                output.accept(ModBlocks.STONE_MINI_TILES);
-                output.accept(ModBlocks.STONE_PILLAR);
-                output.accept(ModBlocks.STONE_SCALES);
-                output.accept(ModBlocks.THICK_INLAYED_STONE);
-                output.accept(ModBlocks.TILED_BORDERED_STONE);
-                output.accept(ModBlocks.TILED_STONE);
-                output.accept(ModBlocks.TILED_STONE_COLUMN);
-                output.accept(ModBlocks.TINY_BRICK_BORDERED_STONE);
-                output.accept(ModBlocks.TINY_LAYERED_STONE_BRICKS);
-                output.accept(ModBlocks.TINY_LAYERED_STONE_SLABS);
-                output.accept(ModBlocks.TINY_STONE_BRICKS);
-                output.accept(ModBlocks.TRODDEN_STONE);
-                output.accept(ModBlocks.UNAMUSED_STONE);
-                output.accept(ModBlocks.VERTICAL_CUT_STONE);
-                output.accept(ModBlocks.VERTICAL_DISORDERED_STONE_BRICKS);
-                output.accept(ModBlocks.WEATHERED_STONE);
 
                 // New plain cube_all stone blocks
                 output.accept(ModBlocks.CHAOTIC_STONE_BRICKS);
@@ -909,11 +848,6 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.WEATHERED_TILED_STONE);
                 output.accept(ModBlocks.WEAVER_STONE);
                 // Cube-bottom-top carved stone blocks
-                output.accept(ModBlocks.CARVED_STONE_CREEPER);
-                output.accept(ModBlocks.CARVED_STONE_DERP);
-                output.accept(ModBlocks.CARVED_STONE_VILLAGER);
-                output.accept(ModBlocks.CARVED_STONE_WITHER);
-                output.accept(ModBlocks.CARVED_STONE_WRITING);
                 output.accept(ModBlocks.CUT_STONE);
                 output.accept(ModBlocks.ROUGH_CUT_STONE);
                 // New pillar blocks
@@ -927,28 +861,7 @@ public enum OttCreativeCategories {
                 ModBlocks.CHISEL_LEGEND.values().forEach(output::accept);
 
                 // CTM blocks
-                output.accept(ModBlocks.PURPUR_PILLAR_CTM);
-                output.accept(ModBlocks.PURPUR_COLUMN_CTM);
-                output.accept(ModBlocks.ORIG_SANDSTONE_CTM);
-                output.accept(ModBlocks.ORIG_RED_SANDSTONE_CTM);
-                output.accept(ModBlocks.ORIG_BORDERED_ANDESITE_CTM);
-                output.accept(ModBlocks.ORIG_POLISHED_ANDESITE_CTM);
-                output.accept(ModBlocks.ORIG_POLISHED_BLACKSTONE_CTM);
-                output.accept(ModBlocks.ORIG_POLISHED_DIORITE_CTM);
-                output.accept(ModBlocks.ORIG_POLISHED_GRANITE_CTM);
-                output.accept(ModBlocks.ORIG_NETHERITE_BLOCK_CTM);
-                output.accept(ModBlocks.ORIG_SMOOTH_STONE_CTM);
-                output.accept(ModBlocks.ORIG_EMERALD_BLOCK_CTM);
-                output.accept(ModBlocks.EMERALD_BLOCK_CTM);
                 // CTM vertical pillars
-                output.accept(ModBlocks.BONE_BLOCK_CTM);
-                output.accept(ModBlocks.COAL_BLOCK_CTM);
-                output.accept(ModBlocks.COBBLED_DEEPSLATE_CTM);
-                output.accept(ModBlocks.COBBLESTONE_CTM);
-                output.accept(ModBlocks.COPPER_BLOCK_CTM);
-                output.accept(ModBlocks.LAPIS_BLOCK_CTM);
-                output.accept(ModBlocks.ORIG_NETHERITE_BLOCK_CTM);
-                output.accept(ModBlocks.OBSIDIAN_CTM);
 
                 // Opal decorative variants
                 ModBlocks.OPAL_SETS.values().forEach(set -> {
@@ -979,410 +892,71 @@ public enum OttCreativeCategories {
 
                 // ── Leaves ───────────────────────────────────────────────────────
                 // Acacia Leaves
-                output.accept(ModBlocks.APPLE_ACACIA_LEAVES);
-                output.accept(ModBlocks.CHERRY_ACACIA_LEAVES);
-                output.accept(ModBlocks.DEAD_ACACIA_LEAVES);
-                output.accept(ModBlocks.FROSTED_ACACIA_LEAVES);
-                output.accept(ModBlocks.GOLDEN_ACACIA_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_ACACIA_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_ACACIA_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_ACACIA_LEAVES);
-                output.accept(ModBlocks.ORANGE_ACACIA_LEAVES);
-                output.accept(ModBlocks.RED_ACACIA_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_ACACIA_LEAVES);
 
                 // Birch Leaves
-                output.accept(ModBlocks.APPLE_BIRCH_LEAVES);
-                output.accept(ModBlocks.CHERRY_BIRCH_LEAVES);
-                output.accept(ModBlocks.DEAD_BIRCH_LEAVES);
-                output.accept(ModBlocks.FROSTED_BIRCH_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_BIRCH_LEAVES);
-                output.accept(ModBlocks.GOLDEN_BIRCH_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_BIRCH_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_BIRCH_LEAVES);
-                output.accept(ModBlocks.ORANGE_BIRCH_LEAVES);
-                output.accept(ModBlocks.RED_BIRCH_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_BIRCH_LEAVES);
 
                 // Dark Oak Leaves
-                output.accept(ModBlocks.APPLE_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.CHERRY_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.DEAD_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.FROSTED_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.ORANGE_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.RED_DARK_OAK_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_DARK_OAK_LEAVES);
 
                 // Jungle Leaves
-                output.accept(ModBlocks.APPLE_JUNGLE_LEAVES);
-                output.accept(ModBlocks.CHERRY_JUNGLE_LEAVES);
-                output.accept(ModBlocks.DEAD_JUNGLE_LEAVES);
-                output.accept(ModBlocks.FROSTED_JUNGLE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_JUNGLE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_JUNGLE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_JUNGLE_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_JUNGLE_LEAVES);
-                output.accept(ModBlocks.ORANGE_JUNGLE_LEAVES);
-                output.accept(ModBlocks.RED_JUNGLE_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_JUNGLE_LEAVES);
 
                 // Oak Leaves
-                output.accept(ModBlocks.APPLE_OAK_LEAVES);
-                output.accept(ModBlocks.CHERRY_OAK_LEAVES);
-                output.accept(ModBlocks.DEAD_OAK_LEAVES);
-                output.accept(ModBlocks.FROSTED_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_OAK_LEAVES);
-                output.accept(ModBlocks.GOLDEN_OAK_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_OAK_LEAVES);
-                output.accept(ModBlocks.ORANGE_OAK_LEAVES);
-                output.accept(ModBlocks.RED_OAK_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_OAK_LEAVES);
 
                 // Spruce Leaves
-                output.accept(ModBlocks.APPLE_SPRUCE_LEAVES);
-                output.accept(ModBlocks.CHERRY_SPRUCE_LEAVES);
-                output.accept(ModBlocks.DEAD_SPRUCE_LEAVES);
-                output.accept(ModBlocks.FROSTED_SPRUCE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_APPLE_SPRUCE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_CHERRY_SPRUCE_LEAVES);
-                output.accept(ModBlocks.GOLDEN_SPRUCE_LEAVES);
-                output.accept(ModBlocks.MAGENTA_FLOWER_SPRUCE_LEAVES);
-                output.accept(ModBlocks.ORANGE_SPRUCE_LEAVES);
-                output.accept(ModBlocks.RED_SPRUCE_LEAVES);
-                output.accept(ModBlocks.WHITE_FLOWER_SPRUCE_LEAVES);
 
 
                 // ── Batch CTM blocks ──────────────────────────────────────────────
         // Acacia Planks
-        output.accept(ModBlocks.ACACIA_PLANKS_PANEL);
-        output.accept(ModBlocks.CORNERED_ACACIA_PLANKS);
-        output.accept(ModBlocks.CRATED_ACACIA_PLANKS);
-        output.accept(ModBlocks.ENCLOSED_ACACIA_PLANKS);
-        output.accept(ModBlocks.FRAMED_ACACIA_PLANKS);
-        output.accept(ModBlocks.NATURAL_ACACIA_PLANKS);
-        output.accept(ModBlocks.PEGGED_ACACIA_PLANKS);
-        output.accept(ModBlocks.WHIRLWIND_ACACIA_PLANKS);
 
         // Amethyst Block
-        output.accept(ModBlocks.BORDERED_AMETHYST_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_AMETHYST_BLOCK);
-        output.accept(ModBlocks.CURLY_AMETHYST_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_AMETHYST_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_AMETHYST_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_AMETHYST_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_AMETHYST_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_AMETHYST_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_AMETHYST_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_AMETHYST_BLOCK);
-        output.accept(ModBlocks.SIMPLE_AMETHYST_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_AMETHYST_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_AMETHYST_BLOCK);
-        output.accept(ModBlocks.TILED_AMETHYST_BLOCK_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_AMETHYST_BLOCK);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_AMETHYST_BLOCK);
 
         // Ancient Debris
-        output.accept(ModBlocks.BORDERED_ANCIENT_DEBRIS);
-        output.accept(ModBlocks.BRICK_BORDERED_ANCIENT_DEBRIS);
-        output.accept(ModBlocks.CURLY_ANCIENT_DEBRIS_CTM);
-        output.accept(ModBlocks.CUT_ANCIENT_DEBRIS_COLUMN);
-        output.accept(ModBlocks.EDGED_ANCIENT_DEBRIS_BRICKS);
-        output.accept(ModBlocks.FINE_ANCIENT_DEBRIS_CTM);
-        output.accept(ModBlocks.MASSIVE_ANCIENT_DEBRIS_BRICKS);
-        output.accept(ModBlocks.ORNATE_ANCIENT_DEBRIS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_ANCIENT_DEBRIS_TILES);
-        output.accept(ModBlocks.POLISHED_ANCIENT_DEBRIS);
-        output.accept(ModBlocks.SIMPLE_ANCIENT_DEBRIS_CTM);
-        output.accept(ModBlocks.SMOOTH_ANCIENT_DEBRIS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_ANCIENT_DEBRIS);
-        output.accept(ModBlocks.TILED_ANCIENT_DEBRIS_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_ANCIENT_DEBRIS);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_ANCIENT_DEBRIS);
 
         // Andesite
-        output.accept(ModBlocks.BRICK_BORDERED_ANDESITE);
-        output.accept(ModBlocks.CURLY_ANDESITE_CTM);
-        output.accept(ModBlocks.CUT_ANDESITE_COLUMN);
-        output.accept(ModBlocks.EDGED_ANDESITE_BRICKS);
-        output.accept(ModBlocks.FINE_ANDESITE_CTM);
-        output.accept(ModBlocks.MASSIVE_ANDESITE_BRICKS);
-        output.accept(ModBlocks.ORNATE_ANDESITE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_ANDESITE_TILES);
-        output.accept(ModBlocks.SIMPLE_ANDESITE_CTM);
-        output.accept(ModBlocks.SMOOTH_ANDESITE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_ANDESITE);
-        output.accept(ModBlocks.TILED_ANDESITE_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_ANDESITE);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_ANDESITE);
 
         // Bamboo Planks
-        output.accept(ModBlocks.BAMBOO_PLANKS_PANEL);
-        output.accept(ModBlocks.CORNERED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.CRATED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.ENCLOSED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.FRAMED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.NATURAL_BAMBOO_PLANKS);
-        output.accept(ModBlocks.POLISHED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.TIED_BAMBOO_PLANKS);
-        output.accept(ModBlocks.WHIRLWIND_BAMBOO_PLANKS);
 
         // Basalt
-        output.accept(ModBlocks.BORDERED_BASALT);
-        output.accept(ModBlocks.BRICK_BORDERED_BASALT);
-        output.accept(ModBlocks.CURLY_BASALT_CTM);
-        output.accept(ModBlocks.CUT_BASALT_COLUMN);
-        output.accept(ModBlocks.EDGED_BASALT_BRICKS);
-        output.accept(ModBlocks.FINE_BASALT_CTM);
-        output.accept(ModBlocks.MASSIVE_BASALT_BRICKS);
-        output.accept(ModBlocks.ORNATE_BASALT_CTM);
-        output.accept(ModBlocks.OVERLAPPING_BASALT_TILES);
-        output.accept(ModBlocks.POLISHED_BASALT);
-        output.accept(ModBlocks.SIMPLE_BASALT_CTM);
-        output.accept(ModBlocks.SMOOTH_BASALT_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_BASALT);
-        output.accept(ModBlocks.TILED_BASALT_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_BASALT);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_BASALT);
 
         // Birch Planks
-        output.accept(ModBlocks.BIRCH_PLANKS_PANEL);
-        output.accept(ModBlocks.CORNERED_BIRCH_PLANKS);
-        output.accept(ModBlocks.CRATED_BIRCH_PLANKS);
-        output.accept(ModBlocks.ENCLOSED_BIRCH_PLANKS);
-        output.accept(ModBlocks.FRAMED_BIRCH_PLANKS);
-        output.accept(ModBlocks.NATURAL_BIRCH_PLANKS);
-        output.accept(ModBlocks.PEGGED_BIRCH_PLANKS);
-        output.accept(ModBlocks.POLISHED_BIRCH_PLANKS);
-        output.accept(ModBlocks.WHIRLWIND_BIRCH_PLANKS);
 
         // Blackstone
-        output.accept(ModBlocks.BORDERED_BLACKSTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_BLACKSTONE);
-        output.accept(ModBlocks.CURLY_BLACKSTONE_CTM);
-        output.accept(ModBlocks.CUT_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_BLACKSTONE_BRICKS);
-        output.accept(ModBlocks.FINE_BLACKSTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_BLACKSTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_BLACKSTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_BLACKSTONE_TILES);
-        output.accept(ModBlocks.SIMPLE_BLACKSTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_BLACKSTONE);
-        output.accept(ModBlocks.TILED_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_BLACKSTONE);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_BLACKSTONE);
 
         // Black Concrete
-        output.accept(ModBlocks.BLACK_CONCRETE_PANEL);
-        output.accept(ModBlocks.BLACK_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_BLACK_CONCRETE);
-        output.accept(ModBlocks.PEGGED_BLACK_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_BLACK_CONCRETE);
-        output.accept(ModBlocks.STRIPED_BLACK_CONCRETE);
-        output.accept(ModBlocks.WIRED_BLACK_CONCRETE);
 
         // Black Stained Glass
-        output.accept(ModBlocks.ARCHED_BLACK_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS_CTM);
         output.accept(ModBlocks.BLACK_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_BLACK_STAINED_GLASS);
 
         // Black Terracotta
-        output.accept(ModBlocks.BLACK_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.BLACK_TERRACOTTA_CTM);
-        output.accept(ModBlocks.CIRCULAR_BLACK_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_BLACK_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_BLACK_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_BLACK_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_BLACK_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_BLACK_TERRACOTTA);
 
         // Black Wool
-        output.accept(ModBlocks.CORNERED_BLACK_WOOL);
-        output.accept(ModBlocks.CRAFTED_BLACK_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_BLACK_WOOL);
-        output.accept(ModBlocks.RECTANGLE_BLACK_WOOL);
 
         // Blue Concrete
-        output.accept(ModBlocks.BLUE_CONCRETE_PANEL);
-        output.accept(ModBlocks.BLUE_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_BLUE_CONCRETE);
-        output.accept(ModBlocks.PEGGED_BLUE_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_BLUE_CONCRETE);
-        output.accept(ModBlocks.STRIPED_BLUE_CONCRETE);
-        output.accept(ModBlocks.WIRED_BLUE_CONCRETE);
 
         // Blue Ice
-        output.accept(ModBlocks.BORDERED_BLUE_ICE);
-        output.accept(ModBlocks.BRICK_BORDERED_BLUE_ICE);
-        output.accept(ModBlocks.CURLY_BLUE_ICE_CTM);
-        output.accept(ModBlocks.CUT_BLUE_ICE_COLUMN);
-        output.accept(ModBlocks.EDGED_BLUE_ICE_BRICKS);
-        output.accept(ModBlocks.FINE_BLUE_ICE_CTM);
-        output.accept(ModBlocks.MASSIVE_BLUE_ICE_BRICKS);
-        output.accept(ModBlocks.ORNATE_BLUE_ICE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_BLUE_ICE_TILES);
-        output.accept(ModBlocks.POLISHED_BLUE_ICE);
-        output.accept(ModBlocks.SIMPLE_BLUE_ICE_CTM);
-        output.accept(ModBlocks.SMOOTH_BLUE_ICE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_BLUE_ICE);
-        output.accept(ModBlocks.TILED_BLUE_ICE_COLUMN);
-        output.accept(ModBlocks.TILED_BORDERED_BLUE_ICE);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_BLUE_ICE);
 
         // Blue Stained Glass
-        output.accept(ModBlocks.ARCHED_BLUE_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.BLUE_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_BLUE_STAINED_GLASS);
 
         // Blue Terracotta
-        output.accept(ModBlocks.BLUE_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.BLUE_TERRACOTTA_CTM);
-        output.accept(ModBlocks.CIRCULAR_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_BLUE_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_BLUE_TERRACOTTA);
 
         // Blue Wool
-        output.accept(ModBlocks.CORNERED_BLUE_WOOL);
-        output.accept(ModBlocks.CRAFTED_BLUE_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_BLUE_WOOL);
-        output.accept(ModBlocks.RECTANGLE_BLUE_WOOL);
 
         // Borderless Bricks
-        output.accept(ModBlocks.BORDERED_BORDERLESS_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_BORDERLESS_BRICKS);
-        output.accept(ModBlocks.CURLY_BORDERLESS_BRICKS_CTM);
-        output.accept(ModBlocks.CUT_BORDERLESS_BRICKS_COLUMN);
-        output.accept(ModBlocks.EDGED_BORDERLESS_BRICKS_BRICKS);
-        output.accept(ModBlocks.FINE_BORDERLESS_BRICKS_CTM);
-        output.accept(ModBlocks.MASSIVE_BORDERLESS_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_BORDERLESS_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_BORDERLESS_BRICKS_TILES);
-        output.accept(ModBlocks.POLISHED_BORDERLESS_BRICKS);
-        output.accept(ModBlocks.SIMPLE_BORDERLESS_BRICKS_CTM);
-        output.accept(ModBlocks.SMOOTH_BORDERLESS_BRICKS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_BORDERLESS_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERED_BORDERLESS_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERLESS_BRICKS_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_BORDERLESS_BRICKS);
 
         // Bricks
-        output.accept(ModBlocks.BORDERED_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_BRICKS);
-        output.accept(ModBlocks.CURLY_BRICKS_CTM);
-        output.accept(ModBlocks.CUT_BRICKS_COLUMN);
-        output.accept(ModBlocks.EDGED_BRICKS_BRICKS);
-        output.accept(ModBlocks.FINE_BRICKS_CTM);
-        output.accept(ModBlocks.MASSIVE_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_BRICKS_TILES);
-        output.accept(ModBlocks.POLISHED_BRICKS);
-        output.accept(ModBlocks.SIMPLE_BRICKS_CTM);
-        output.accept(ModBlocks.SMOOTH_BRICKS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERED_BRICKS);
-        output.accept(ModBlocks.TILED_BRICKS_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_BRICKS);
 
         // Brown Concrete
-        output.accept(ModBlocks.BROWN_CONCRETE_PANEL);
-        output.accept(ModBlocks.BROWN_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_BROWN_CONCRETE);
-        output.accept(ModBlocks.PEGGED_BROWN_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_BROWN_CONCRETE);
-        output.accept(ModBlocks.STRIPED_BROWN_CONCRETE);
-        output.accept(ModBlocks.WIRED_BROWN_CONCRETE);
 
         // Brown Stained Glass
-        output.accept(ModBlocks.ARCHED_BROWN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS_CTM);
         output.accept(ModBlocks.BROWN_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_BROWN_STAINED_GLASS);
 
         // Brown Terracotta
-        output.accept(ModBlocks.BROWN_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.BROWN_TERRACOTTA_CTM);
-        output.accept(ModBlocks.CIRCULAR_BROWN_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_BROWN_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_BROWN_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_BROWN_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_BROWN_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_BROWN_TERRACOTTA);
 
         // Brown Wool
-        output.accept(ModBlocks.CORNERED_BROWN_WOOL);
-        output.accept(ModBlocks.CRAFTED_BROWN_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_BROWN_WOOL);
-        output.accept(ModBlocks.RECTANGLE_BROWN_WOOL);
 
         // Calcite
-        output.accept(ModBlocks.BORDERED_CALCITE);
-        output.accept(ModBlocks.BRICK_BORDERED_CALCITE);
-        output.accept(ModBlocks.CURLY_CALCITE_CTM);
-        output.accept(ModBlocks.CUT_CALCITE_COLUMN);
-        output.accept(ModBlocks.EDGED_CALCITE_BRICKS);
-        output.accept(ModBlocks.FINE_CALCITE_CTM);
-        output.accept(ModBlocks.MASSIVE_CALCITE_BRICKS);
-        output.accept(ModBlocks.ORNATE_CALCITE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_CALCITE_TILES);
-        output.accept(ModBlocks.POLISHED_CALCITE);
-        output.accept(ModBlocks.SIMPLE_CALCITE_CTM);
-        output.accept(ModBlocks.SMOOTH_CALCITE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_CALCITE);
-        output.accept(ModBlocks.TILED_BORDERED_CALCITE);
-        output.accept(ModBlocks.TILED_CALCITE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_CALCITE);
 
         // Cherry Planks
-        output.accept(ModBlocks.CHERRY_PLANKS_PANEL);
         output.accept(ModBlocks.CORNERED_CHERRY_PLANKS);
         output.accept(ModBlocks.CRATED_CHERRY_PLANKS);
         output.accept(ModBlocks.ENCLOSED_CHERRY_PLANKS);
@@ -1392,63 +966,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WHIRLWIND_CHERRY_PLANKS);
 
         // Clay
-        output.accept(ModBlocks.BORDERED_CLAY);
-        output.accept(ModBlocks.BRICK_BORDERED_CLAY);
-        output.accept(ModBlocks.CURLY_CLAY_CTM);
-        output.accept(ModBlocks.CUT_CLAY_COLUMN);
-        output.accept(ModBlocks.EDGED_CLAY_BRICKS);
-        output.accept(ModBlocks.FINE_CLAY_CTM);
-        output.accept(ModBlocks.MASSIVE_CLAY_BRICKS);
-        output.accept(ModBlocks.ORNATE_CLAY_CTM);
-        output.accept(ModBlocks.OVERLAPPING_CLAY_TILES);
-        output.accept(ModBlocks.POLISHED_CLAY);
-        output.accept(ModBlocks.SIMPLE_CLAY_CTM);
-        output.accept(ModBlocks.SMOOTH_CLAY_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_CLAY);
-        output.accept(ModBlocks.TILED_BORDERED_CLAY);
-        output.accept(ModBlocks.TILED_CLAY_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_CLAY);
 
         // Coal Block
-        output.accept(ModBlocks.BORDERED_COAL_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_COAL_BLOCK);
-        output.accept(ModBlocks.CURLY_COAL_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_COAL_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_COAL_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_COAL_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_COAL_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_COAL_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_COAL_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_COAL_BLOCK);
-        output.accept(ModBlocks.SIMPLE_COAL_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_COAL_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_COAL_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_COAL_BLOCK);
-        output.accept(ModBlocks.TILED_COAL_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_COAL_BLOCK);
 
         // Cobblestone
-        output.accept(ModBlocks.BORDERED_COBBLESTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_COBBLESTONE);
-        output.accept(ModBlocks.CURLY_COBBLESTONE_CTM);
-        output.accept(ModBlocks.CUT_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_COBBLESTONE_BRICKS);
-        output.accept(ModBlocks.FINE_COBBLESTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_COBBLESTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_COBBLESTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_COBBLESTONE_TILES);
-        output.accept(ModBlocks.POLISHED_COBBLESTONE);
-        output.accept(ModBlocks.SIMPLE_COBBLESTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_COBBLESTONE);
-        output.accept(ModBlocks.TILED_BORDERED_COBBLESTONE);
-        output.accept(ModBlocks.TILED_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_COBBLESTONE);
 
         // Crimson Planks
         output.accept(ModBlocks.CORNERED_CRIMSON_PLANKS);
         output.accept(ModBlocks.CRATED_CRIMSON_PLANKS);
-        output.accept(ModBlocks.CRIMSON_PLANKS_PANEL);
         output.accept(ModBlocks.ENCLOSED_CRIMSON_PLANKS);
         output.accept(ModBlocks.FRAMED_CRIMSON_PLANKS);
         output.accept(ModBlocks.NATURAL_CRIMSON_PLANKS);
@@ -1456,71 +981,19 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WHIRLWIND_CRIMSON_PLANKS);
 
         // Crying Obsidian
-        output.accept(ModBlocks.BORDERED_CRYING_OBSIDIAN);
-        output.accept(ModBlocks.BRICK_BORDERED_CRYING_OBSIDIAN);
-        output.accept(ModBlocks.CURLY_CRYING_OBSIDIAN_CTM);
-        output.accept(ModBlocks.CUT_CRYING_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.EDGED_CRYING_OBSIDIAN_BRICKS);
-        output.accept(ModBlocks.FINE_CRYING_OBSIDIAN_CTM);
-        output.accept(ModBlocks.MASSIVE_CRYING_OBSIDIAN_BRICKS);
-        output.accept(ModBlocks.ORNATE_CRYING_OBSIDIAN_CTM);
-        output.accept(ModBlocks.OVERLAPPING_CRYING_OBSIDIAN_TILES);
-        output.accept(ModBlocks.POLISHED_CRYING_OBSIDIAN);
-        output.accept(ModBlocks.SIMPLE_CRYING_OBSIDIAN_CTM);
-        output.accept(ModBlocks.SMOOTH_CRYING_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_CRYING_OBSIDIAN);
-        output.accept(ModBlocks.TILED_BORDERED_CRYING_OBSIDIAN);
-        output.accept(ModBlocks.TILED_CRYING_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_CRYING_OBSIDIAN);
 
         // Cyan Concrete
-        output.accept(ModBlocks.CYAN_CONCRETE_PANEL);
-        output.accept(ModBlocks.CYAN_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_CYAN_CONCRETE);
-        output.accept(ModBlocks.PEGGED_CYAN_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_CYAN_CONCRETE);
-        output.accept(ModBlocks.STRIPED_CYAN_CONCRETE);
-        output.accept(ModBlocks.WIRED_CYAN_CONCRETE);
 
         // Cyan Stained Glass
-        output.accept(ModBlocks.ARCHED_CYAN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CYAN_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_CYAN_STAINED_GLASS);
 
         // Cyan Terracotta
-        output.accept(ModBlocks.CIRCULAR_CYAN_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_CYAN_TERRACOTTA);
-        output.accept(ModBlocks.CYAN_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.CYAN_TERRACOTTA_CTM);
-        output.accept(ModBlocks.HEXAGONICAL_CYAN_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_CYAN_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_CYAN_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_CYAN_TERRACOTTA);
 
         // Cyan Wool
-        output.accept(ModBlocks.CORNERED_CYAN_WOOL);
-        output.accept(ModBlocks.CRAFTED_CYAN_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_CYAN_WOOL);
-        output.accept(ModBlocks.RECTANGLE_CYAN_WOOL);
 
         // Dark Oak Planks
         output.accept(ModBlocks.CORNERED_DARK_OAK_PLANKS);
         output.accept(ModBlocks.CRATED_DARK_OAK_PLANKS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_PANEL);
         output.accept(ModBlocks.ENCLOSED_DARK_OAK_PLANKS);
         output.accept(ModBlocks.FRAMED_DARK_OAK_PLANKS);
         output.accept(ModBlocks.NATURAL_DARK_OAK_PLANKS);
@@ -1528,254 +1001,40 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WHIRLWIND_DARK_OAK_PLANKS);
 
         // Dark Prismarine
-        output.accept(ModBlocks.BORDERED_DARK_PRISMARINE);
-        output.accept(ModBlocks.BRICK_BORDERED_DARK_PRISMARINE);
-        output.accept(ModBlocks.CURLY_DARK_PRISMARINE_CTM);
-        output.accept(ModBlocks.CUT_DARK_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.EDGED_DARK_PRISMARINE_BRICKS);
-        output.accept(ModBlocks.FINE_DARK_PRISMARINE_CTM);
-        output.accept(ModBlocks.MASSIVE_DARK_PRISMARINE_BRICKS);
-        output.accept(ModBlocks.ORNATE_DARK_PRISMARINE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_DARK_PRISMARINE_TILES);
-        output.accept(ModBlocks.POLISHED_DARK_PRISMARINE);
-        output.accept(ModBlocks.SIMPLE_DARK_PRISMARINE_CTM);
-        output.accept(ModBlocks.SMOOTH_DARK_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_DARK_PRISMARINE);
-        output.accept(ModBlocks.TILED_BORDERED_DARK_PRISMARINE);
-        output.accept(ModBlocks.TILED_DARK_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_DARK_PRISMARINE);
 
         // Deepslate
-        output.accept(ModBlocks.BORDERED_DEEPSLATE);
-        output.accept(ModBlocks.BRICK_BORDERED_DEEPSLATE);
-        output.accept(ModBlocks.CURLY_DEEPSLATE_CTM);
-        output.accept(ModBlocks.CUT_DEEPSLATE_COLUMN);
-        output.accept(ModBlocks.EDGED_DEEPSLATE_BRICKS);
-        output.accept(ModBlocks.FINE_DEEPSLATE_CTM);
-        output.accept(ModBlocks.MASSIVE_DEEPSLATE_BRICKS);
-        output.accept(ModBlocks.ORNATE_DEEPSLATE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_DEEPSLATE_TILES);
-        output.accept(ModBlocks.POLISHED_DEEPSLATE);
-        output.accept(ModBlocks.SIMPLE_DEEPSLATE_CTM);
-        output.accept(ModBlocks.SMOOTH_DEEPSLATE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_DEEPSLATE);
-        output.accept(ModBlocks.TILED_BORDERED_DEEPSLATE);
-        output.accept(ModBlocks.TILED_DEEPSLATE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_DEEPSLATE);
 
         // Diorite
-        output.accept(ModBlocks.BORDERED_DIORITE);
-        output.accept(ModBlocks.BRICK_BORDERED_DIORITE);
-        output.accept(ModBlocks.CURLY_DIORITE_CTM);
-        output.accept(ModBlocks.CUT_DIORITE_COLUMN);
-        output.accept(ModBlocks.EDGED_DIORITE_BRICKS);
-        output.accept(ModBlocks.FINE_DIORITE_CTM);
-        output.accept(ModBlocks.MASSIVE_DIORITE_BRICKS);
-        output.accept(ModBlocks.ORNATE_DIORITE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_DIORITE_TILES);
-        output.accept(ModBlocks.SIMPLE_DIORITE_CTM);
-        output.accept(ModBlocks.SMOOTH_DIORITE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_DIORITE);
-        output.accept(ModBlocks.TILED_BORDERED_DIORITE);
-        output.accept(ModBlocks.TILED_DIORITE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_DIORITE);
 
         // Dirt
-        output.accept(ModBlocks.BORDERED_DIRT);
-        output.accept(ModBlocks.BRICK_BORDERED_DIRT);
-        output.accept(ModBlocks.CURLY_DIRT_CTM);
-        output.accept(ModBlocks.CUT_DIRT_COLUMN);
-        output.accept(ModBlocks.EDGED_DIRT_BRICKS);
-        output.accept(ModBlocks.FINE_DIRT_CTM);
-        output.accept(ModBlocks.MASSIVE_DIRT_BRICKS);
-        output.accept(ModBlocks.ORNATE_DIRT_CTM);
-        output.accept(ModBlocks.OVERLAPPING_DIRT_TILES);
-        output.accept(ModBlocks.POLISHED_DIRT);
-        output.accept(ModBlocks.SIMPLE_DIRT_CTM);
-        output.accept(ModBlocks.SMOOTH_DIRT_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_DIRT);
-        output.accept(ModBlocks.TILED_BORDERED_DIRT);
-        output.accept(ModBlocks.TILED_DIRT_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_DIRT);
 
         // Dripstone
-        output.accept(ModBlocks.BORDERED_DRIPSTONE_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_DRIPSTONE_BLOCK);
-        output.accept(ModBlocks.CURLY_DRIPSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_DRIPSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_DRIPSTONE_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_DRIPSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_DRIPSTONE_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_DRIPSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_DRIPSTONE_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_DRIPSTONE_BLOCK);
-        output.accept(ModBlocks.SIMPLE_DRIPSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_DRIPSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_DRIPSTONE_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_DRIPSTONE_BLOCK);
-        output.accept(ModBlocks.TILED_DRIPSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_DRIPSTONE_BLOCK);
 
         // End Stone
-        output.accept(ModBlocks.BORDERED_END_STONE);
-        output.accept(ModBlocks.BRICK_BORDERED_END_STONE);
-        output.accept(ModBlocks.CURLY_END_STONE_CTM);
-        output.accept(ModBlocks.CUT_END_STONE_COLUMN);
-        output.accept(ModBlocks.EDGED_END_STONE_BRICKS);
-        output.accept(ModBlocks.FINE_END_STONE_CTM);
-        output.accept(ModBlocks.MASSIVE_END_STONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_END_STONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_END_STONE_TILES);
-        output.accept(ModBlocks.POLISHED_END_STONE);
-        output.accept(ModBlocks.SIMPLE_END_STONE_CTM);
-        output.accept(ModBlocks.SMOOTH_END_STONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_END_STONE);
-        output.accept(ModBlocks.TILED_BORDERED_END_STONE);
-        output.accept(ModBlocks.TILED_END_STONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_END_STONE);
 
         // Gilded Blackston
-        output.accept(ModBlocks.BORDERED_GILDED_BLACKSTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_GILDED_BLACKSTONE);
-        output.accept(ModBlocks.CURLY_GILDED_BLACKSTONE_CTM);
-        output.accept(ModBlocks.CUT_GILDED_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_GILDED_BLACKSTONE_BRICKS);
-        output.accept(ModBlocks.FINE_GILDED_BLACKSTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_GILDED_BLACKSTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_GILDED_BLACKSTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_GILDED_BLACKSTONE_TILES);
-        output.accept(ModBlocks.POLISHED_GILDED_BLACKSTONE);
-        output.accept(ModBlocks.SIMPLE_GILDED_BLACKSTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_GILDED_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_GILDED_BLACKSTONE);
-        output.accept(ModBlocks.TILED_BORDERED_GILDED_BLACKSTONE);
-        output.accept(ModBlocks.TILED_GILDED_BLACKSTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_GILDED_BLACKSTONE);
 
         // Granite
-        output.accept(ModBlocks.BORDERED_GRANITE);
-        output.accept(ModBlocks.BRICK_BORDERED_GRANITE);
-        output.accept(ModBlocks.CURLY_GRANITE_CTM);
-        output.accept(ModBlocks.CUT_GRANITE_COLUMN);
-        output.accept(ModBlocks.EDGED_GRANITE_BRICKS);
-        output.accept(ModBlocks.FINE_GRANITE_CTM);
-        output.accept(ModBlocks.GRANITE_PRISMARINE);
-        output.accept(ModBlocks.MASSIVE_GRANITE_BRICKS);
-        output.accept(ModBlocks.ORNATE_GRANITE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_GRANITE_TILES);
-        output.accept(ModBlocks.SIMPLE_GRANITE_CTM);
-        output.accept(ModBlocks.SMOOTH_GRANITE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_GRANITE);
-        output.accept(ModBlocks.TILED_BORDERED_GRANITE);
-        output.accept(ModBlocks.TILED_GRANITE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_GRANITE);
 
         // Gray Concrete
-        output.accept(ModBlocks.GRAY_CONCRETE_PANEL);
-        output.accept(ModBlocks.GRAY_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_GRAY_CONCRETE);
-        output.accept(ModBlocks.PEGGED_GRAY_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_GRAY_CONCRETE);
-        output.accept(ModBlocks.STRIPED_GRAY_CONCRETE);
-        output.accept(ModBlocks.WIRED_GRAY_CONCRETE);
-        output.accept(ModBlocks.WIRED_LIGHT_GRAY_CONCRETE);
 
         // Gray Stained Glass
-        output.accept(ModBlocks.ARCHED_GRAY_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS_CTM);
         output.accept(ModBlocks.GRAY_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_GRAY_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_GRAY_STAINED_GLASS);
 
         // Gray Terracotta
-        output.accept(ModBlocks.CIRCULAR_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.GRAY_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.GRAY_TERRACOTTA_CTM);
-        output.accept(ModBlocks.HEXAGONICAL_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_GRAY_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_GRAY_TERRACOTTA);
 
         // Gray Wool
-        output.accept(ModBlocks.CORNERED_GRAY_WOOL);
-        output.accept(ModBlocks.CRAFTED_GRAY_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_GRAY_WOOL);
-        output.accept(ModBlocks.RECTANGLE_GRAY_WOOL);
 
         // Green Concrete
-        output.accept(ModBlocks.GREEN_CONCRETE_PANEL);
-        output.accept(ModBlocks.GREEN_CONCRETE_CTM);
-        output.accept(ModBlocks.GRILL_GREEN_CONCRETE);
-        output.accept(ModBlocks.PEGGED_GREEN_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_GREEN_CONCRETE);
-        output.accept(ModBlocks.STRIPED_GREEN_CONCRETE);
-        output.accept(ModBlocks.WIRED_GREEN_CONCRETE);
 
         // Green Stained Glass
-        output.accept(ModBlocks.ARCHED_GREEN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.CIRCULAR_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS_CTM);
         output.accept(ModBlocks.GREEN_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.SMALL_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.SQUARE_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS);
-        output.accept(ModBlocks.WOVEN_GREEN_STAINED_GLASS);
 
         // Green Terracotta
-        output.accept(ModBlocks.CIRCULAR_GREEN_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_GREEN_TERRACOTTA);
-        output.accept(ModBlocks.GREEN_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.GREEN_TERRACOTTA_CTM);
-        output.accept(ModBlocks.HEXAGONICAL_GREEN_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_GREEN_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_GREEN_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_GREEN_TERRACOTTA);
 
         // Green Wool
-        output.accept(ModBlocks.CORNERED_GREEN_WOOL);
-        output.accept(ModBlocks.CRAFTED_GREEN_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_GREEN_WOOL);
-        output.accept(ModBlocks.RECTANGLE_GREEN_WOOL);
 
         // Ice
-        output.accept(ModBlocks.BORDERED_ICE);
-        output.accept(ModBlocks.BRICK_BORDERED_ICE);
-        output.accept(ModBlocks.CURLY_ICE_CTM);
-        output.accept(ModBlocks.CUT_ICE_COLUMN);
-        output.accept(ModBlocks.EDGED_ICE_BRICKS);
-        output.accept(ModBlocks.FINE_ICE_CTM);
-        output.accept(ModBlocks.MASSIVE_ICE_BRICKS);
-        output.accept(ModBlocks.ORNATE_ICE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_ICE_TILES);
-        output.accept(ModBlocks.POLISHED_ICE);
-        output.accept(ModBlocks.SIMPLE_ICE_CTM);
-        output.accept(ModBlocks.SMOOTH_ICE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_ICE);
-        output.accept(ModBlocks.TILED_BORDERED_ICE);
-        output.accept(ModBlocks.TILED_ICE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_ICE);
 
         // Jungle Planks
         output.accept(ModBlocks.CORNERED_JUNGLE_PLANKS);
@@ -1787,52 +1046,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WHIRLWIND_JUNGLE_PLANKS);
 
         // Lapis Block
-        output.accept(ModBlocks.BORDERED_LAPIS_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_LAPIS_BLOCK);
-        output.accept(ModBlocks.CURLY_LAPIS_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_LAPIS_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_LAPIS_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_LAPIS_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_LAPIS_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_LAPIS_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_LAPIS_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_LAPIS_BLOCK);
-        output.accept(ModBlocks.SIMPLE_LAPIS_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_LAPIS_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_LAPIS_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_LAPIS_BLOCK);
-        output.accept(ModBlocks.TILED_LAPIS_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_LAPIS_BLOCK);
 
         // Leaded Glass
-        output.accept(ModBlocks.ARCHED_LEADED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_LEADED_STAINED_GLASS);
-        output.accept(ModBlocks.CLEAR_LEADED_GLASS_CTM);
-        output.accept(ModBlocks.FANCY_LEADED_GLASS);
-        output.accept(ModBlocks.FANCY_LEADED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_LEADED_GLASS_CTM);
-        output.accept(ModBlocks.RASTER_LEADED_GLASS_CTM);
-        output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM);
-        output.accept(ModBlocks.CLEAR_LEADED_GLASS);
-        output.accept(ModBlocks.LARGE_DIAMOND_LEADED_GLASS);
-        output.accept(ModBlocks.LEAD_WOVEN_GLASS);
-        output.accept(ModBlocks.ORNATE_LEADED_GLASS);
-        output.accept(ModBlocks.RASTER_LEADED_GLASS);
-        output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
-        output.accept(ModBlocks.SQUARE_LEADED_GLASS);
-        output.accept(ModBlocks.VERTICAL_LEADED_GLASS);
 
         // Light Blue Concrete
-        output.accept(ModBlocks.GRILL_LIGHT_BLUE_CONCRETE);
-        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_PANEL);
-        output.accept(ModBlocks.LIGHT_BLUE_CONCRETE_CTM);
-        output.accept(ModBlocks.PEGGED_LIGHT_BLUE_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_LIGHT_BLUE_CONCRETE);
-        output.accept(ModBlocks.STRIPED_LIGHT_BLUE_CONCRETE);
-        output.accept(ModBlocks.WIRED_LIGHT_BLUE_CONCRETE);
 
         // Light Blue Stained Glass
-        output.accept(ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS_CTM);
@@ -1851,31 +1072,12 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_LIGHT_BLUE_STAINED_GLASS);
 
         // Light Blue Terracotta
-        output.accept(ModBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_LIGHT_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_LIGHT_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_LIGHT_BLUE_TERRACOTTA);
-        output.accept(ModBlocks.LIGHT_BLUE_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.LIGHT_BLUE_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_LIGHT_BLUE_TERRACOTTA);
 
         // Light Blue Wool
-        output.accept(ModBlocks.CORNERED_LIGHT_BLUE_WOOL);
-        output.accept(ModBlocks.CRAFTED_LIGHT_BLUE_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_LIGHT_BLUE_WOOL);
-        output.accept(ModBlocks.RECTANGLE_LIGHT_BLUE_WOOL);
 
         // Light Gray Concrete
-        output.accept(ModBlocks.GRILL_LIGHT_GRAY_CONCRETE);
-        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_PANEL);
-        output.accept(ModBlocks.LIGHT_GRAY_CONCRETE_CTM);
-        output.accept(ModBlocks.PEGGED_LIGHT_GRAY_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_LIGHT_GRAY_CONCRETE);
-        output.accept(ModBlocks.STRIPED_LIGHT_GRAY_CONCRETE);
 
         // Light Gray Stained Glass
-        output.accept(ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS_CTM);
@@ -1894,32 +1096,12 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_LIGHT_GRAY_STAINED_GLASS);
 
         // Light Gray Terracotta
-        output.accept(ModBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_LIGHT_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_LIGHT_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_LIGHT_GRAY_TERRACOTTA);
-        output.accept(ModBlocks.LIGHT_GRAY_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.LIGHT_GRAY_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_LIGHT_GRAY_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_LIGHT_GRAY_TERRACOTTA);
 
         // Light Gray Wool
-        output.accept(ModBlocks.CORNERED_LIGHT_GRAY_WOOL);
-        output.accept(ModBlocks.CRAFTED_LIGHT_GRAY_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_LIGHT_GRAY_WOOL);
-        output.accept(ModBlocks.RECTANGLE_LIGHT_GRAY_WOOL);
 
         // Lime Concrete
-        output.accept(ModBlocks.GRILL_LIME_CONCRETE);
-        output.accept(ModBlocks.LIME_CONCRETE_PANEL);
-        output.accept(ModBlocks.LIME_CONCRETE_CTM);
-        output.accept(ModBlocks.PEGGED_LIME_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_LIME_CONCRETE);
-        output.accept(ModBlocks.STRIPED_LIME_CONCRETE);
-        output.accept(ModBlocks.WIRED_LIME_CONCRETE);
 
         // Lime Stained Glass
-        output.accept(ModBlocks.ARCHED_LIME_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_LIME_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_LIME_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_LIME_STAINED_GLASS_CTM);
@@ -1938,50 +1120,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_LIME_STAINED_GLASS);
 
         // Lime Terracotta
-        output.accept(ModBlocks.CIRCULAR_LIME_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_LIME_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_LIME_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_LIME_TERRACOTTA);
-        output.accept(ModBlocks.LIME_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.LIME_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_LIME_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_LIME_TERRACOTTA);
 
         // Lime Wool
-        output.accept(ModBlocks.CORNERED_LIME_WOOL);
-        output.accept(ModBlocks.CRAFTED_LIME_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_LIME_WOOL);
-        output.accept(ModBlocks.RECTANGLE_LIME_WOOL);
 
         // Lodestone
-        output.accept(ModBlocks.BORDERED_LODESTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_LODESTONE);
-        output.accept(ModBlocks.CURLY_LODESTONE_CTM);
-        output.accept(ModBlocks.CUT_LODESTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_LODESTONE_BRICKS);
-        output.accept(ModBlocks.FINE_LODESTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_LODESTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_LODESTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_LODESTONE_TILES);
-        output.accept(ModBlocks.POLISHED_LODESTONE);
-        output.accept(ModBlocks.SIMPLE_LODESTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_LODESTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_LODESTONE);
-        output.accept(ModBlocks.TILED_BORDERED_LODESTONE);
-        output.accept(ModBlocks.TILED_LODESTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_LODESTONE);
 
         // Magenta Concrete
-        output.accept(ModBlocks.GRILL_MAGENTA_CONCRETE);
-        output.accept(ModBlocks.MAGENTA_CONCRETE_PANEL);
-        output.accept(ModBlocks.MAGENTA_CONCRETE_CTM);
-        output.accept(ModBlocks.PEGGED_MAGENTA_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_MAGENTA_CONCRETE);
-        output.accept(ModBlocks.STRIPED_MAGENTA_CONCRETE);
-        output.accept(ModBlocks.WIRED_MAGENTA_CONCRETE);
 
         // Magenta Stained Glass
-        output.accept(ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_MAGENTA_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_MAGENTA_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_MAGENTA_STAINED_GLASS_CTM);
@@ -2000,38 +1146,10 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_MAGENTA_STAINED_GLASS);
 
         // Magenta Terracotta
-        output.accept(ModBlocks.CIRCULAR_MAGENTA_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_MAGENTA_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_MAGENTA_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_MAGENTA_TERRACOTTA);
-        output.accept(ModBlocks.MAGENTA_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.MAGENTA_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_MAGENTA_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_MAGENTA_TERRACOTTA);
 
         // Magenta Wool
-        output.accept(ModBlocks.CORNERED_MAGENTA_WOOL);
-        output.accept(ModBlocks.CRAFTED_MAGENTA_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_MAGENTA_WOOL);
-        output.accept(ModBlocks.RECTANGLE_MAGENTA_WOOL);
 
         // Magma Block
-        output.accept(ModBlocks.BORDERED_MAGMA_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_MAGMA_BLOCK);
-        output.accept(ModBlocks.CURLY_MAGMA_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_MAGMA_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_MAGMA_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_MAGMA_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_MAGMA_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_MAGMA_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_MAGMA_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_MAGMA_BLOCK);
-        output.accept(ModBlocks.SIMPLE_MAGMA_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_MAGMA_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_MAGMA_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_MAGMA_BLOCK);
-        output.accept(ModBlocks.TILED_MAGMA_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_MAGMA_BLOCK);
 
         // Mangrove Planks
         output.accept(ModBlocks.BRICKED_MANGROVE_PLANKS);
@@ -2039,169 +1157,30 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.CRATED_MANGROVE_PLANKS);
         output.accept(ModBlocks.ENCLOSED_MANGROVE_PLANKS);
         output.accept(ModBlocks.FRAMED_MANGROVE_PLANKS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_PANEL);
         output.accept(ModBlocks.NATURAL_MANGROVE_PLANKS);
         output.accept(ModBlocks.PEGGED_MANGROVE_PLANKS);
 
         // Mossy Cobblestone
-        output.accept(ModBlocks.BORDERED_MOSSY_COBBLESTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_MOSSY_COBBLESTONE);
-        output.accept(ModBlocks.CURLY_MOSSY_COBBLESTONE_CTM);
-        output.accept(ModBlocks.CUT_MOSSY_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_MOSSY_COBBLESTONE_BRICKS);
-        output.accept(ModBlocks.FINE_MOSSY_COBBLESTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_MOSSY_COBBLESTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_MOSSY_COBBLESTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_MOSSY_COBBLESTONE_TILES);
-        output.accept(ModBlocks.POLISHED_MOSSY_COBBLESTONE);
-        output.accept(ModBlocks.SIMPLE_MOSSY_COBBLESTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_MOSSY_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_MOSSY_COBBLESTONE);
-        output.accept(ModBlocks.TILED_BORDERED_MOSSY_COBBLESTONE);
-        output.accept(ModBlocks.TILED_MOSSY_COBBLESTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_MOSSY_COBBLESTONE);
 
         // Mossy Stone
-        output.accept(ModBlocks.BORDERED_MOSSY_STONE_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_MOSSY_STONE_BRICKS);
-        output.accept(ModBlocks.CURLY_MOSSY_STONE_BRICKS_CTM);
-        output.accept(ModBlocks.CUT_MOSSY_STONE_BRICKS_COLUMN);
-        output.accept(ModBlocks.EDGED_MOSSY_STONE_BRICKS_BRICKS);
-        output.accept(ModBlocks.FINE_MOSSY_STONE_BRICKS_CTM);
-        output.accept(ModBlocks.MASSIVE_MOSSY_STONE_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_MOSSY_STONE_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_MOSSY_STONE_BRICKS_TILES);
-        output.accept(ModBlocks.POLISHED_MOSSY_STONE_BRICKS);
-        output.accept(ModBlocks.SIMPLE_MOSSY_STONE_BRICKS_CTM);
-        output.accept(ModBlocks.SMOOTH_MOSSY_STONE_BRICKS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_MOSSY_STONE_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERED_MOSSY_STONE_BRICKS);
-        output.accept(ModBlocks.TILED_MOSSY_STONE_BRICKS_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_MOSSY_STONE_BRICKS);
 
         // Mud
-        output.accept(ModBlocks.BORDERED_MUD);
-        output.accept(ModBlocks.BRICK_BORDERED_MUD);
-        output.accept(ModBlocks.CARVED_MUD_CTM);
-        output.accept(ModBlocks.CURLY_MUD_CTM);
-        output.accept(ModBlocks.EDGED_MUD);
-        output.accept(ModBlocks.FANCY_MUD_CTM);
-        output.accept(ModBlocks.FINE_MUD_CTM);
-        output.accept(ModBlocks.HARD_MUD);
-        output.accept(ModBlocks.LARGE_MUD_SIGIL);
-        output.accept(ModBlocks.LOREFUL_MUD);
-        output.accept(ModBlocks.MASSIVE_MUD_BRICKS);
-        output.accept(ModBlocks.ORNATE_MUD_CTM);
-        output.accept(ModBlocks.OVERLAPPING_MUD_TILES);
-        output.accept(ModBlocks.SCALY_MUD);
-        output.accept(ModBlocks.SIMPLE_MUD_CTM);
-        output.accept(ModBlocks.TILED_BORDERED_MUD);
-        output.accept(ModBlocks.TILED_MUD_COLUMN);
 
         // Mud Bricks
-        output.accept(ModBlocks.BORDERED_MUD_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_MUD_BRICKS);
-        output.accept(ModBlocks.CARVED_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.CURLY_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.EDGED_MUD_BRICKS_BRICKS);
-        output.accept(ModBlocks.FANCY_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.FINE_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.HARD_MUD_BRICKS);
-        output.accept(ModBlocks.LARGE_MUD_BRICKS_SIGIL);
-        output.accept(ModBlocks.LOREFUL_MUD_BRICKS);
-        output.accept(ModBlocks.MASSIVE_MUD_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_MUD_BRICKS_TILES);
-        output.accept(ModBlocks.SIMPLE_MUD_BRICKS_CTM);
-        output.accept(ModBlocks.TILED_BORDERED_MUD_BRICKS);
-        output.accept(ModBlocks.TILED_MUD_BRICKS_COLUMN);
 
         // Netherrack
-        output.accept(ModBlocks.BORDERED_NETHERRACK);
-        output.accept(ModBlocks.BRICK_BORDERED_NETHERRACK);
-        output.accept(ModBlocks.CURLY_NETHERRACK_CTM);
-        output.accept(ModBlocks.CUT_NETHERRACK_COLUMN);
-        output.accept(ModBlocks.EDGED_NETHERRACK_BRICKS);
-        output.accept(ModBlocks.FINE_NETHERRACK_CTM);
-        output.accept(ModBlocks.MASSIVE_NETHERRACK_BRICKS);
-        output.accept(ModBlocks.ORNATE_NETHERRACK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_NETHERRACK_TILES);
-        output.accept(ModBlocks.POLISHED_NETHERRACK);
-        output.accept(ModBlocks.SIMPLE_NETHERRACK_CTM);
-        output.accept(ModBlocks.SMOOTH_NETHERRACK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_NETHERRACK);
-        output.accept(ModBlocks.TILED_BORDERED_NETHERRACK);
-        output.accept(ModBlocks.TILED_NETHERRACK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_NETHERRACK);
 
         // Nether Bricks
-        output.accept(ModBlocks.BORDERED_NETHER_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_NETHER_BRICKS);
-        output.accept(ModBlocks.CURLY_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.CUT_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.EDGED_NETHER_BRICKS_BRICKS);
-        output.accept(ModBlocks.FINE_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.MASSIVE_NETHER_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_NETHER_BRICKS_TILES);
-        output.accept(ModBlocks.POLISHED_NETHER_BRICKS);
-        output.accept(ModBlocks.SIMPLE_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.SMOOTH_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_NETHER_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERED_NETHER_BRICKS);
-        output.accept(ModBlocks.TILED_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_NETHER_BRICKS);
 
         // Oak Glass
-        output.accept(ModBlocks.OAK_BARRED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_BORDERED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM);
-        output.accept(ModBlocks.SQUARE_OAK_GLASS_CTM);
 
         // Oak Planks
-        output.accept(ModBlocks.CORNERED_OAK_PLANKS);
-        output.accept(ModBlocks.CRATED_OAK_PLANKS);
-        output.accept(ModBlocks.ENCLOSED_OAK_PLANKS);
-        output.accept(ModBlocks.FRAMED_OAK_PLANKS);
-        output.accept(ModBlocks.NATURAL_OAK_PLANKS);
-        output.accept(ModBlocks.OAK_PLANKS_PANEL);
-        output.accept(ModBlocks.PEGGED_OAK_PLANKS);
-        output.accept(ModBlocks.WHIRLWIND_OAK_PLANKS);
 
         // Obsidian
-        output.accept(ModBlocks.BORDERED_OBSIDIAN);
-        output.accept(ModBlocks.BRICK_BORDERED_OBSIDIAN);
-        output.accept(ModBlocks.CURLY_OBSIDIAN_CTM);
-        output.accept(ModBlocks.CUT_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.EDGED_OBSIDIAN_BRICKS);
-        output.accept(ModBlocks.FINE_OBSIDIAN_CTM);
-        output.accept(ModBlocks.MASSIVE_OBSIDIAN_BRICKS);
-        output.accept(ModBlocks.ORNATE_OBSIDIAN_CTM);
-        output.accept(ModBlocks.OVERLAPPING_OBSIDIAN_TILES);
-        output.accept(ModBlocks.POLISHED_OBSIDIAN);
-        output.accept(ModBlocks.SIMPLE_OBSIDIAN_CTM);
-        output.accept(ModBlocks.SMOOTH_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_OBSIDIAN);
-        output.accept(ModBlocks.TILED_BORDERED_OBSIDIAN);
-        output.accept(ModBlocks.TILED_OBSIDIAN_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_OBSIDIAN);
 
         // Orange Concrete
-        output.accept(ModBlocks.GRILL_ORANGE_CONCRETE);
-        output.accept(ModBlocks.ORANGE_CONCRETE_PANEL);
-        output.accept(ModBlocks.ORANGE_CONCRETE_CTM);
-        output.accept(ModBlocks.PEGGED_ORANGE_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_ORANGE_CONCRETE);
-        output.accept(ModBlocks.STRIPED_ORANGE_CONCRETE);
-        output.accept(ModBlocks.WIRED_ORANGE_CONCRETE);
 
         // Orange Stained Glass
-        output.accept(ModBlocks.ARCHED_ORANGE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_ORANGE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_ORANGE_STAINED_GLASS_CTM);
@@ -2220,69 +1199,16 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_ORANGE_STAINED_GLASS);
 
         // Orange Terracotta
-        output.accept(ModBlocks.CIRCULAR_ORANGE_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_ORANGE_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_ORANGE_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_ORANGE_TERRACOTTA);
-        output.accept(ModBlocks.ORANGE_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.ORANGE_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_ORANGE_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_ORANGE_TERRACOTTA);
 
         // Orange Wool
-        output.accept(ModBlocks.CORNERED_ORANGE_WOOL);
-        output.accept(ModBlocks.CRAFTED_ORANGE_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_ORANGE_WOOL);
-        output.accept(ModBlocks.RECTANGLE_ORANGE_WOOL);
 
         // Packed Ice
-        output.accept(ModBlocks.BORDERED_PACKED_ICE);
-        output.accept(ModBlocks.BRICK_BORDERED_PACKED_ICE);
-        output.accept(ModBlocks.CURLY_PACKED_ICE_CTM);
-        output.accept(ModBlocks.CUT_PACKED_ICE_COLUMN);
-        output.accept(ModBlocks.EDGED_PACKED_ICE_BRICKS);
-        output.accept(ModBlocks.FINE_PACKED_ICE_CTM);
-        output.accept(ModBlocks.MASSIVE_PACKED_ICE_BRICKS);
-        output.accept(ModBlocks.ORNATE_PACKED_ICE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_PACKED_ICE_TILES);
-        output.accept(ModBlocks.POLISHED_PACKED_ICE);
-        output.accept(ModBlocks.SIMPLE_PACKED_ICE_CTM);
-        output.accept(ModBlocks.SMOOTH_PACKED_ICE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_PACKED_ICE);
-        output.accept(ModBlocks.TILED_BORDERED_PACKED_ICE);
-        output.accept(ModBlocks.TILED_PACKED_ICE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_PACKED_ICE);
 
         // Packed Mud
-        output.accept(ModBlocks.BORDERED_PACKED_MUD);
-        output.accept(ModBlocks.BRICK_BORDERED_PACKED_MUD);
-        output.accept(ModBlocks.CARVED_PACKED_MUD_CTM);
-        output.accept(ModBlocks.CURLY_PACKED_MUD_CTM);
-        output.accept(ModBlocks.EDGED_PACKED_MUD_BRICKS);
-        output.accept(ModBlocks.FANCY_PACKED_MUD_CTM);
-        output.accept(ModBlocks.FINE_PACKED_MUD_CTM);
-        output.accept(ModBlocks.HARD_PACKED_MUD);
-        output.accept(ModBlocks.LARGE_PACKED_MUD_SIGIL);
-        output.accept(ModBlocks.LOREFUL_PACKED_MUD);
-        output.accept(ModBlocks.MASSIVE_PACKED_MUD_BRICKS);
-        output.accept(ModBlocks.ORNATE_PACKED_MUD_CTM);
-        output.accept(ModBlocks.OVERLAPPING_PACKED_MUD_TILES);
-        output.accept(ModBlocks.SCALY_PACKED_MUD);
-        output.accept(ModBlocks.SIMPLE_PACKED_MUD_CTM);
-        output.accept(ModBlocks.TILED_BORDERED_PACKED_MUD);
-        output.accept(ModBlocks.TILED_PACKED_MUD_COLUMN);
 
         // Pink Concrete
-        output.accept(ModBlocks.GRILL_PINK_CONCRETE);
-        output.accept(ModBlocks.PEGGED_PINK_CONCRETE);
-        output.accept(ModBlocks.PINK_CONCRETE_PANEL);
-        output.accept(ModBlocks.PINK_CONCRETE_CTM);
-        output.accept(ModBlocks.SMOOTH_PINK_CONCRETE);
-        output.accept(ModBlocks.STRIPED_PINK_CONCRETE);
-        output.accept(ModBlocks.WIRED_PINK_CONCRETE);
 
         // Pink Stained Glass
-        output.accept(ModBlocks.ARCHED_PINK_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_PINK_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_PINK_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_PINK_STAINED_GLASS_CTM);
@@ -2301,50 +1227,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_PINK_STAINED_GLASS);
 
         // Pink Terracotta
-        output.accept(ModBlocks.CIRCULAR_PINK_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_PINK_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_PINK_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_PINK_TERRACOTTA);
-        output.accept(ModBlocks.PINK_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.PINK_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_PINK_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_PINK_TERRACOTTA);
 
         // Pink Wool
-        output.accept(ModBlocks.CORNERED_PINK_WOOL);
-        output.accept(ModBlocks.CRAFTED_PINK_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_PINK_WOOL);
-        output.accept(ModBlocks.RECTANGLE_PINK_WOOL);
 
         // Prismarine
-        output.accept(ModBlocks.BORDERED_PRISMARINE);
-        output.accept(ModBlocks.BRICK_BORDERED_PRISMARINE);
-        output.accept(ModBlocks.CURLY_PRISMARINE_CTM);
-        output.accept(ModBlocks.CUT_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.EDGED_PRISMARINE_BRICKS);
-        output.accept(ModBlocks.FINE_PRISMARINE_CTM);
-        output.accept(ModBlocks.MASSIVE_PRISMARINE_BRICKS);
-        output.accept(ModBlocks.ORNATE_PRISMARINE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_PRISMARINE_TILES);
-        output.accept(ModBlocks.POLISHED_PRISMARINE);
-        output.accept(ModBlocks.SIMPLE_PRISMARINE_CTM);
-        output.accept(ModBlocks.SMOOTH_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_PRISMARINE);
-        output.accept(ModBlocks.TILED_BORDERED_PRISMARINE);
-        output.accept(ModBlocks.TILED_PRISMARINE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_PRISMARINE);
 
         // Purple Concrete
-        output.accept(ModBlocks.GRILL_PURPLE_CONCRETE);
-        output.accept(ModBlocks.PEGGED_PURPLE_CONCRETE);
-        output.accept(ModBlocks.PURPLE_CONCRETE_PANEL);
-        output.accept(ModBlocks.PURPLE_CONCRETE_CTM);
-        output.accept(ModBlocks.SMOOTH_PURPLE_CONCRETE);
-        output.accept(ModBlocks.STRIPED_PURPLE_CONCRETE);
-        output.accept(ModBlocks.WIRED_PURPLE_CONCRETE);
 
         // Purple Stained Glass
-        output.accept(ModBlocks.ARCHED_PURPLE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_PURPLE_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_PURPLE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_PURPLE_STAINED_GLASS_CTM);
@@ -2363,176 +1253,28 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_PURPLE_STAINED_GLASS);
 
         // Purple Terracotta
-        output.accept(ModBlocks.CIRCULAR_PURPLE_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_PURPLE_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_PURPLE_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_PURPLE_TERRACOTTA);
-        output.accept(ModBlocks.PURPLE_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.PURPLE_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_PURPLE_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_PURPLE_TERRACOTTA);
 
         // Purple Wool
-        output.accept(ModBlocks.CORNERED_PURPLE_WOOL);
-        output.accept(ModBlocks.CRAFTED_PURPLE_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_PURPLE_WOOL);
-        output.accept(ModBlocks.RECTANGLE_PURPLE_WOOL);
 
         // Purpur Block
-        output.accept(ModBlocks.BORDERED_PURPUR_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_PURPUR_BLOCK);
-        output.accept(ModBlocks.CURLY_PURPUR_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_PURPUR_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_PURPUR_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_PURPUR_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_PURPUR_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_PURPUR_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_PURPUR_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_PURPUR_BLOCK);
-        output.accept(ModBlocks.SIMPLE_PURPUR_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_PURPUR_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_PURPUR_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_PURPUR_BLOCK);
-        output.accept(ModBlocks.TILED_PURPUR_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_PURPUR_BLOCK);
 
         // Quartz Block
-        output.accept(ModBlocks.BORDERED_QUARTZ_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_QUARTZ_BLOCK);
-        output.accept(ModBlocks.CURLY_QUARTZ_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_QUARTZ_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_QUARTZ_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_QUARTZ_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_QUARTZ_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_QUARTZ_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_QUARTZ_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_QUARTZ_BLOCK);
-        output.accept(ModBlocks.SIMPLE_QUARTZ_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_QUARTZ_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_QUARTZ_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_QUARTZ_BLOCK);
-        output.accept(ModBlocks.TILED_QUARTZ_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_QUARTZ_BLOCK);
 
         // Raw Copper Block
-        output.accept(ModBlocks.BORDERED_RAW_COPPER_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_RAW_COPPER_BLOCK);
-        output.accept(ModBlocks.CURLY_RAW_COPPER_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_RAW_COPPER_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_RAW_COPPER_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_RAW_COPPER_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_RAW_COPPER_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_RAW_COPPER_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_RAW_COPPER_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_RAW_COPPER_BLOCK);
-        output.accept(ModBlocks.SIMPLE_RAW_COPPER_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_RAW_COPPER_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_RAW_COPPER_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_RAW_COPPER_BLOCK);
-        output.accept(ModBlocks.TILED_RAW_COPPER_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_RAW_COPPER_BLOCK);
 
         // Raw Gold Block
-        output.accept(ModBlocks.BORDERED_RAW_GOLD_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_RAW_GOLD_BLOCK);
-        output.accept(ModBlocks.CURLY_RAW_GOLD_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_RAW_GOLD_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_RAW_GOLD_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_RAW_GOLD_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_RAW_GOLD_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_RAW_GOLD_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_RAW_GOLD_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_RAW_GOLD_BLOCK);
-        output.accept(ModBlocks.SIMPLE_RAW_GOLD_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_RAW_GOLD_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_RAW_GOLD_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_RAW_GOLD_BLOCK);
-        output.accept(ModBlocks.TILED_RAW_GOLD_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_RAW_GOLD_BLOCK);
 
         // Raw Iron Block
-        output.accept(ModBlocks.BORDERED_RAW_IRON_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_RAW_IRON_BLOCK);
-        output.accept(ModBlocks.CURLY_RAW_IRON_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_RAW_IRON_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_RAW_IRON_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_RAW_IRON_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_RAW_IRON_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_RAW_IRON_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_RAW_IRON_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_RAW_IRON_BLOCK);
-        output.accept(ModBlocks.SIMPLE_RAW_IRON_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_RAW_IRON_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_RAW_IRON_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_RAW_IRON_BLOCK);
-        output.accept(ModBlocks.TILED_RAW_IRON_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_RAW_IRON_BLOCK);
 
         // Redstone Block
-        output.accept(ModBlocks.BORDERED_REDSTONE_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_REDSTONE_BLOCK);
-        output.accept(ModBlocks.CURLY_REDSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_REDSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_REDSTONE_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_REDSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_REDSTONE_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_REDSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_REDSTONE_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_REDSTONE_BLOCK);
-        output.accept(ModBlocks.SIMPLE_REDSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_REDSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_REDSTONE_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_REDSTONE_BLOCK);
-        output.accept(ModBlocks.TILED_REDSTONE_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_REDSTONE_BLOCK);
 
         // Red Concrete
-        output.accept(ModBlocks.GRILL_RED_CONCRETE);
-        output.accept(ModBlocks.PEGGED_RED_CONCRETE);
-        output.accept(ModBlocks.RED_CONCRETE_PANEL);
-        output.accept(ModBlocks.RED_CONCRETE_CTM);
-        output.accept(ModBlocks.SMOOTH_RED_CONCRETE);
-        output.accept(ModBlocks.STRIPED_RED_CONCRETE);
-        output.accept(ModBlocks.WIRED_RED_CONCRETE);
 
         // Red Nether Bricks
-        output.accept(ModBlocks.BORDERED_RED_NETHER_BRICKS);
-        output.accept(ModBlocks.BRICK_BORDERED_RED_NETHER_BRICKS);
-        output.accept(ModBlocks.CURLY_RED_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.CUT_RED_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.EDGED_RED_NETHER_BRICKS_BRICKS);
-        output.accept(ModBlocks.FINE_RED_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.MASSIVE_RED_NETHER_BRICKS_BRICKS);
-        output.accept(ModBlocks.ORNATE_RED_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.OVERLAPPING_RED_NETHER_BRICKS_TILES);
-        output.accept(ModBlocks.POLISHED_RED_NETHER_BRICKS);
-        output.accept(ModBlocks.SIMPLE_RED_NETHER_BRICKS_CTM);
-        output.accept(ModBlocks.SMOOTH_RED_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_RED_NETHER_BRICKS);
-        output.accept(ModBlocks.TILED_BORDERED_RED_NETHER_BRICKS);
-        output.accept(ModBlocks.TILED_RED_NETHER_BRICKS_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_RED_NETHER_BRICKS);
 
         // Red Sandstone
-        output.accept(ModBlocks.BORDERED_RED_SANDSTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_RED_SANDSTONE);
-        output.accept(ModBlocks.CURLY_RED_SANDSTONE_CTM);
-        output.accept(ModBlocks.CUT_RED_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_RED_SANDSTONE_BRICKS);
-        output.accept(ModBlocks.FINE_RED_SANDSTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_RED_SANDSTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_RED_SANDSTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_RED_SANDSTONE_TILES);
-        output.accept(ModBlocks.POLISHED_RED_SANDSTONE);
-        output.accept(ModBlocks.SIMPLE_RED_SANDSTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_RED_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_RED_SANDSTONE);
-        output.accept(ModBlocks.TILED_BORDERED_RED_SANDSTONE);
-        output.accept(ModBlocks.TILED_RED_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_RED_SANDSTONE);
 
         // Red Stained Glass
-        output.accept(ModBlocks.ARCHED_RED_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_RED_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_RED_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_RED_STAINED_GLASS_CTM);
@@ -2551,74 +1293,14 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_RED_STAINED_GLASS);
 
         // Red Terracotta
-        output.accept(ModBlocks.CIRCULAR_RED_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_RED_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_RED_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_RED_TERRACOTTA);
-        output.accept(ModBlocks.RED_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.RED_TERRACOTTA_CTM);
-        output.accept(ModBlocks.SMALL_RED_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_RED_TERRACOTTA);
 
         // Red Wool
-        output.accept(ModBlocks.CORNERED_RED_WOOL);
-        output.accept(ModBlocks.CRAFTED_RED_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_RED_WOOL);
-        output.accept(ModBlocks.RECTANGLE_RED_WOOL);
 
         // Sandstone
-        output.accept(ModBlocks.BORDERED_SANDSTONE);
-        output.accept(ModBlocks.BRICK_BORDERED_SANDSTONE);
-        output.accept(ModBlocks.CURLY_SANDSTONE_CTM);
-        output.accept(ModBlocks.CUT_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.EDGED_SANDSTONE_BRICKS);
-        output.accept(ModBlocks.FINE_SANDSTONE_CTM);
-        output.accept(ModBlocks.MASSIVE_SANDSTONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_SANDSTONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_SANDSTONE_TILES);
-        output.accept(ModBlocks.POLISHED_SANDSTONE);
-        output.accept(ModBlocks.SIMPLE_SANDSTONE_CTM);
-        output.accept(ModBlocks.SMOOTH_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_SANDSTONE);
-        output.accept(ModBlocks.TILED_BORDERED_SANDSTONE);
-        output.accept(ModBlocks.TILED_SANDSTONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_SANDSTONE);
 
         // Smooth Stone
-        output.accept(ModBlocks.BORDERED_SMOOTH_STONE);
-        output.accept(ModBlocks.BRICK_BORDERED_SMOOTH_STONE);
-        output.accept(ModBlocks.CURLY_SMOOTH_STONE_CTM);
-        output.accept(ModBlocks.CUT_SMOOTH_STONE_COLUMN);
-        output.accept(ModBlocks.EDGED_SMOOTH_STONE_BRICKS);
-        output.accept(ModBlocks.FINE_SMOOTH_STONE_CTM);
-        output.accept(ModBlocks.MASSIVE_SMOOTH_STONE_BRICKS);
-        output.accept(ModBlocks.ORNATE_SMOOTH_STONE_CTM);
-        output.accept(ModBlocks.OVERLAPPING_SMOOTH_STONE_TILES);
-        output.accept(ModBlocks.POLISHED_SMOOTH_STONE);
-        output.accept(ModBlocks.SIMPLE_SMOOTH_STONE_CTM);
-        output.accept(ModBlocks.SMOOTH_SMOOTH_STONE_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_SMOOTH_STONE);
-        output.accept(ModBlocks.TILED_BORDERED_SMOOTH_STONE);
-        output.accept(ModBlocks.TILED_SMOOTH_STONE_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_SMOOTH_STONE);
 
         // Snow Block
-        output.accept(ModBlocks.BORDERED_SNOW_BLOCK);
-        output.accept(ModBlocks.BRICK_BORDERED_SNOW_BLOCK);
-        output.accept(ModBlocks.CURLY_SNOW_BLOCK_CTM);
-        output.accept(ModBlocks.CUT_SNOW_BLOCK_COLUMN);
-        output.accept(ModBlocks.EDGED_SNOW_BLOCK_BRICKS);
-        output.accept(ModBlocks.FINE_SNOW_BLOCK_CTM);
-        output.accept(ModBlocks.MASSIVE_SNOW_BLOCK_BRICKS);
-        output.accept(ModBlocks.ORNATE_SNOW_BLOCK_CTM);
-        output.accept(ModBlocks.OVERLAPPING_SNOW_BLOCK_TILES);
-        output.accept(ModBlocks.POLISHED_SNOW_BLOCK);
-        output.accept(ModBlocks.SIMPLE_SNOW_BLOCK_CTM);
-        output.accept(ModBlocks.SMOOTH_SNOW_BLOCK_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_SNOW_BLOCK);
-        output.accept(ModBlocks.TILED_BORDERED_SNOW_BLOCK);
-        output.accept(ModBlocks.TILED_SNOW_BLOCK_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_SNOW_BLOCK);
 
         // Spruce Planks
         output.accept(ModBlocks.CORNERED_SPRUCE_PLANKS);
@@ -2627,36 +1309,11 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.FRAMED_SPRUCE_PLANKS);
         output.accept(ModBlocks.NATURAL_SPRUCE_PLANKS);
         output.accept(ModBlocks.PEGGED_SPRUCE_PLANKS);
-        output.accept(ModBlocks.SPRUCE_PLANKS_PANEL);
         output.accept(ModBlocks.WHIRLWIND_SPRUCE_PLANKS);
 
         // Terracotta
-        output.accept(ModBlocks.CIRCULAR_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_TERRACOTTA);
-        output.accept(ModBlocks.TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.TERRACOTTA_CTM);
 
         // Tuff
-        output.accept(ModBlocks.BORDERED_TUFF);
-        output.accept(ModBlocks.BRICK_BORDERED_TUFF);
-        output.accept(ModBlocks.CURLY_TUFF_CTM);
-        output.accept(ModBlocks.CUT_TUFF_COLUMN);
-        output.accept(ModBlocks.EDGED_TUFF_BRICKS);
-        output.accept(ModBlocks.FINE_TUFF_CTM);
-        output.accept(ModBlocks.MASSIVE_TUFF_BRICKS);
-        output.accept(ModBlocks.ORNATE_TUFF_CTM);
-        output.accept(ModBlocks.OVERLAPPING_TUFF_TILES);
-        output.accept(ModBlocks.POLISHED_TUFF);
-        output.accept(ModBlocks.SIMPLE_TUFF_CTM);
-        output.accept(ModBlocks.SMOOTH_TUFF_COLUMN);
-        output.accept(ModBlocks.THICK_INLAYED_TUFF);
-        output.accept(ModBlocks.TILED_BORDERED_TUFF);
-        output.accept(ModBlocks.TILED_TUFF_COLUMN);
-        output.accept(ModBlocks.TINY_BRICK_BORDERED_TUFF);
 
         // Warped Planks
         output.accept(ModBlocks.CORNERED_WARPED_PLANKS);
@@ -2665,20 +1322,11 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.FRAMED_WARPED_PLANKS);
         output.accept(ModBlocks.NATURAL_WARPED_PLANKS);
         output.accept(ModBlocks.PEGGED_WARPED_PLANKS);
-        output.accept(ModBlocks.WARPED_PLANKS_PANEL);
         output.accept(ModBlocks.WHIRLWIND_WARPED_PLANKS);
 
         // White Concrete
-        output.accept(ModBlocks.GRILL_WHITE_CONCRETE);
-        output.accept(ModBlocks.PEGGED_WHITE_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_WHITE_CONCRETE);
-        output.accept(ModBlocks.STRIPED_WHITE_CONCRETE);
-        output.accept(ModBlocks.WHITE_CONCRETE_PANEL);
-        output.accept(ModBlocks.WHITE_CONCRETE_CTM);
-        output.accept(ModBlocks.WIRED_WHITE_CONCRETE);
 
         // White Stained Glass
-        output.accept(ModBlocks.ARCHED_WHITE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_WHITE_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_WHITE_STAINED_GLASS_CTM);
@@ -2697,30 +1345,12 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_WHITE_STAINED_GLASS);
 
         // White Terracotta
-        output.accept(ModBlocks.CIRCULAR_WHITE_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_WHITE_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_WHITE_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_WHITE_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_WHITE_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_WHITE_TERRACOTTA);
 
         // White Wool
-        output.accept(ModBlocks.CORNERED_WHITE_WOOL);
-        output.accept(ModBlocks.CRAFTED_WHITE_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_WHITE_WOOL);
-        output.accept(ModBlocks.RECTANGLE_WHITE_WOOL);
 
         // Yellow Concrete
-        output.accept(ModBlocks.GRILL_YELLOW_CONCRETE);
-        output.accept(ModBlocks.PEGGED_YELLOW_CONCRETE);
-        output.accept(ModBlocks.SMOOTH_YELLOW_CONCRETE);
-        output.accept(ModBlocks.STRIPED_YELLOW_CONCRETE);
-        output.accept(ModBlocks.WIRED_YELLOW_CONCRETE);
-        output.accept(ModBlocks.YELLOW_CONCRETE_PANEL);
-        output.accept(ModBlocks.YELLOW_CONCRETE_CTM);
 
         // Yellow Stained Glass
-        output.accept(ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM);
         output.accept(ModBlocks.CIRCULAR_YELLOW_STAINED_GLASS);
         output.accept(ModBlocks.FANCY_YELLOW_STAINED_GLASS_CTM);
         output.accept(ModBlocks.ORNATE_YELLOW_STAINED_GLASS_CTM);
@@ -2739,78 +1369,25 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.WOVEN_YELLOW_STAINED_GLASS);
 
         // Yellow Terracotta
-        output.accept(ModBlocks.CIRCULAR_YELLOW_TERRACOTTA);
-        output.accept(ModBlocks.CURLED_YELLOW_TERRACOTTA);
-        output.accept(ModBlocks.HEXAGONICAL_YELLOW_TERRACOTTA);
-        output.accept(ModBlocks.INSCRIBED_YELLOW_TERRACOTTA);
-        output.accept(ModBlocks.SMALL_YELLOW_TERRACOTTA_TILES);
-        output.accept(ModBlocks.STARRY_YELLOW_TERRACOTTA);
-        output.accept(ModBlocks.YELLOW_TERRACOTTA_COLUMN);
-        output.accept(ModBlocks.YELLOW_TERRACOTTA_CTM);
 
         // Yellow Wool
-        output.accept(ModBlocks.CORNERED_YELLOW_WOOL);
-        output.accept(ModBlocks.CRAFTED_YELLOW_WOOL);
-        output.accept(ModBlocks.HARSH_QUILTED_YELLOW_WOOL);
-        output.accept(ModBlocks.RECTANGLE_YELLOW_WOOL);
 
         // ── New CTM batch blocks ────────────────────────────────────────────
-        output.accept(ModBlocks.ACACIA_WINDOW_TILES_CTM);
         output.accept(ModBlocks.BAMBOO_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_TILES_CTM);
         output.accept(ModBlocks.CHERRY_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.ACACIA_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.ANDESITE_BRICK_PATTERN);
-        output.accept(ModBlocks.ANDESITE_CUT_POLISHED);
-        output.accept(ModBlocks.ANDESITE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.ASURINE_CUT_POLISHED);
-        output.accept(ModBlocks.ASURINE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.BAMBOO_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.BASALT_PATTERN);
-        output.accept(ModBlocks.BIRCH_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.BLACKSTONE_BRICK_PATTERN);
         output.accept(ModBlocks.BLACK_FRAMED_GLASS);
         output.accept(ModBlocks.BLACK_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.BLUE_FRAMED_GLASS);
         output.accept(ModBlocks.BLUE_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.BONE_BLOCK_PATTERNED);
         output.accept(ModBlocks.BROWN_FRAMED_GLASS);
         output.accept(ModBlocks.BROWN_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.CALCITE_CUT_POLISHED);
-        output.accept(ModBlocks.CALCITE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.CHERRY_PLANKS_BRICK_PATTERN);
         output.accept(ModBlocks.CHISELED_GLASS);
         output.accept(ModBlocks.CLEAR_GLASS);
-        output.accept(ModBlocks.COAL_BLOCK_CHISELED);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_BRICK_PATTERN);
-        output.accept(ModBlocks.COBBLESTONE_BRICK_PATTERN);
-        output.accept(ModBlocks.COPPER_BLOCK_CIRCLES);
-        output.accept(ModBlocks.CRIMSITE_CUT_POLISHED);
-        output.accept(ModBlocks.CRIMSITE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.CRIMSON_PLANKS_BRICK_PATTERN);
         output.accept(ModBlocks.CYAN_FRAMED_GLASS);
         output.accept(ModBlocks.CYAN_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.DEEPSLATE_CUT_POLISHED);
-        output.accept(ModBlocks.DEEPSLATE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.DELICATE_LAPIS_BLOCK);
-        output.accept(ModBlocks.DIORITE_BRICK_PATTERN);
-        output.accept(ModBlocks.DIORITE_CUT_POLISHED);
-        output.accept(ModBlocks.DIORITE_CUT_SMALL_BRICK);
         output.accept(ModBlocks.DIRTY_GLASS);
-        output.accept(ModBlocks.DRIPSTONE_CUT_POLISHED);
-        output.accept(ModBlocks.DRIPSTONE_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.END_STONE_BRICK_PATTERN);
         output.accept(ModBlocks.FRAMED_GLASS);
         output.accept(ModBlocks.FROSTED_GLASS);
-        output.accept(ModBlocks.GLOWSTONE_BRICK_PATTERN);
         output.accept(ModBlocks.GOLDEN_FRAMED_BLACK_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_BROWN_STAINED_GLASS);
@@ -2828,170 +1405,40 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.GOLDEN_FRAMED_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_WHITE_STAINED_GLASS);
         output.accept(ModBlocks.GOLDEN_FRAMED_YELLOW_STAINED_GLASS);
-        output.accept(ModBlocks.GOLD_BLOCK_LINES);
-        output.accept(ModBlocks.GOLD_BLOCK_PATTERN);
-        output.accept(ModBlocks.GRANITE_BRICK_PATTERN);
-        output.accept(ModBlocks.GRANITE_CUT_POLISHED);
-        output.accept(ModBlocks.GRANITE_CUT_SMALL_BRICK);
         output.accept(ModBlocks.GRAY_FRAMED_GLASS);
         output.accept(ModBlocks.GRAY_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.GREEN_FRAMED_GLASS);
         output.accept(ModBlocks.GREEN_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.IRON_BLOCK_LINES);
-        output.accept(ModBlocks.IRON_BLOCK_PIPES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.LAPIS_BLOCK_DECORATED);
         output.accept(ModBlocks.LIGHT_BLUE_FRAMED_GLASS);
         output.accept(ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.LIGHT_GRAY_FRAMED_GLASS);
         output.accept(ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.LIMESTONE_CUT_POLISHED);
-        output.accept(ModBlocks.LIMESTONE_CUT_SMALL_BRICK);
         output.accept(ModBlocks.LIME_FRAMED_GLASS);
         output.accept(ModBlocks.LIME_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.MAGENTA_FRAMED_GLASS);
         output.accept(ModBlocks.MAGENTA_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.NETHERITE_BLOCK_CHISELED);
-        output.accept(ModBlocks.NETHERITE_BLOCK_DECORATED);
-        output.accept(ModBlocks.NETHERITE_BLOCK_PATTERNED);
-        output.accept(ModBlocks.NETHERRACK_BRICK_PATTERN);
-        output.accept(ModBlocks.NETHER_BRICKS_BRICK_PATTERN);
-        output.accept(ModBlocks.OAK_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.OBSIDIAN_BRICK_PATTERN);
-        output.accept(ModBlocks.OBSIDIAN_CHISELED_CIRCLES);
         output.accept(ModBlocks.OBSIDIAN_FRAMED_GLASS);
-        output.accept(ModBlocks.OCHRUM_CUT_POLISHED);
-        output.accept(ModBlocks.OCHRUM_CUT_SMALL_BRICK);
         output.accept(ModBlocks.ORANGE_FRAMED_GLASS);
         output.accept(ModBlocks.ORANGE_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.PALE_OAK_PLANKS_BRICK_PATTERN);
         output.accept(ModBlocks.PINK_FRAMED_GLASS);
         output.accept(ModBlocks.PINK_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.POLISHED_DRIPSTONE);
         output.accept(ModBlocks.POLISHED_LIMESTONE);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_BRICK_PATTERN);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_PILLARS);
         output.accept(ModBlocks.PURPLE_FRAMED_GLASS);
         output.accept(ModBlocks.PURPLE_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.PURPUR_BRICK_PATTERN);
         output.accept(ModBlocks.RED_FRAMED_GLASS);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_BRICK_PATTERN);
-        output.accept(ModBlocks.RED_SANDSTONE_BRICK_PATTERN);
         output.accept(ModBlocks.RED_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.ROSE_QUARTZ_CHISELED);
-        output.accept(ModBlocks.ROSE_QUARTZ_CRUSHED);
-        output.accept(ModBlocks.ROSE_QUARTZ_POLISHED_BLOCK);
-        output.accept(ModBlocks.ROSE_QUARTZ_SQUARES);
-        output.accept(ModBlocks.ROSE_QUARTZ_TILES);
-        output.accept(ModBlocks.SANDSTONE_BRICK_PATTERN);
         output.accept(ModBlocks.SANDSTONE_FRAMED_GLASS);
-        output.accept(ModBlocks.SCORCHIA_CUT_POLISHED);
-        output.accept(ModBlocks.SCORCHIA_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.SCORIA_CUT_POLISHED);
-        output.accept(ModBlocks.SCORIA_CUT_SMALL_BRICK);
         output.accept(ModBlocks.SEA_LANTERN);
-        output.accept(ModBlocks.SPRUCE_PLANKS_BRICK_PATTERN);
-        output.accept(ModBlocks.STONE_BRICK_PATTERN);
         output.accept(ModBlocks.STONE_FRAMED_GLASS);
         output.accept(ModBlocks.TINTED_CLEAR_GLASS);
-        output.accept(ModBlocks.TUFF_CUT_POLISHED);
-        output.accept(ModBlocks.TUFF_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.VERIDIUM_CUT_POLISHED);
-        output.accept(ModBlocks.VERIDIUM_CUT_SMALL_BRICK);
-        output.accept(ModBlocks.WARPED_PLANKS_BRICK_PATTERN);
         output.accept(ModBlocks.WHITE_FRAMED_GLASS);
         output.accept(ModBlocks.WHITE_STAINED_CLEAR_GLASS);
         output.accept(ModBlocks.YELLOW_FRAMED_GLASS);
         output.accept(ModBlocks.YELLOW_STAINED_CLEAR_GLASS);
-        output.accept(ModBlocks.BLUE_ICE_CTM);
-        output.accept(ModBlocks.ACACIA_PLANKS_BEAMS);
-        output.accept(ModBlocks.ACACIA_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.ACACIA_PLANKS_CRATE);
-        output.accept(ModBlocks.ACACIA_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.ACACIA_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.ACACIA_PLANKS_DOTTED);
-        output.accept(ModBlocks.ACACIA_PLANKS_FLOORING);
-        output.accept(ModBlocks.ACACIA_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.ACACIA_PLANKS_PATTERN);
-        output.accept(ModBlocks.ACACIA_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.ACACIA_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.ACACIA_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.ACACIA_PLANKS_SQUARES);
-        output.accept(ModBlocks.ACACIA_PLANKS_TILES);
-        output.accept(ModBlocks.ACACIA_PLANKS_WAVY);
-        output.accept(ModBlocks.ACACIA_PLANKS_WOVEN);
-        output.accept(ModBlocks.AMETHYST_BLOCK_BEAMS);
-        output.accept(ModBlocks.AMETHYST_BLOCK_BORDERED_DIAGONAL_TILES);
-        output.accept(ModBlocks.AMETHYST_BLOCK_CUT);
-        output.accept(ModBlocks.AMETHYST_BLOCK_EDGED);
-        output.accept(ModBlocks.AMETHYST_BLOCK_POLISHED);
-        output.accept(ModBlocks.AMETHYST_BLOCK_SHINY);
-        output.accept(ModBlocks.AMETHYST_BLOCK_TILES);
-        output.accept(ModBlocks.ANDESITE_BRICK_PAVING);
-        output.accept(ModBlocks.ANDESITE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.ANDESITE_DOTTED);
-        output.accept(ModBlocks.ANDESITE_PAVING);
-        output.accept(ModBlocks.ANDESITE_POLISHED);
-        output.accept(ModBlocks.ANDESITE_ROTATED_BRICKS);
-        output.accept(ModBlocks.ANDESITE_SQUARES);
-        output.accept(ModBlocks.ANDESITE_TILES);
-        output.accept(ModBlocks.ANDESITE_WAVY);
-        output.accept(ModBlocks.BAMBOO_PLANKS_BEAMS);
-        output.accept(ModBlocks.BAMBOO_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.BAMBOO_PLANKS_CRATE);
-        output.accept(ModBlocks.BAMBOO_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_DOTTED);
-        output.accept(ModBlocks.BAMBOO_PLANKS_FLOORING);
-        output.accept(ModBlocks.BAMBOO_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_PATTERN);
-        output.accept(ModBlocks.BAMBOO_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.BAMBOO_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.BAMBOO_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_SQUARES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_TILES);
-        output.accept(ModBlocks.BAMBOO_PLANKS_WAVY);
-        output.accept(ModBlocks.BAMBOO_PLANKS_WOVEN);
-        output.accept(ModBlocks.BASALT_BEAMS);
-        output.accept(ModBlocks.BASALT_BORDERED);
-        output.accept(ModBlocks.BASALT_BORDERED_POLISHED);
-        output.accept(ModBlocks.BASALT_DIAGONAL_TILES);
-        output.accept(ModBlocks.BASALT_PATTERNED);
-        output.accept(ModBlocks.BASALT_TILES);
-        output.accept(ModBlocks.BIRCH_PLANKS_BEAMS);
-        output.accept(ModBlocks.BIRCH_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.BIRCH_PLANKS_CRATE);
-        output.accept(ModBlocks.BIRCH_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.BIRCH_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.BIRCH_PLANKS_DOTTED);
-        output.accept(ModBlocks.BIRCH_PLANKS_FLOORING);
-        output.accept(ModBlocks.BIRCH_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.BIRCH_PLANKS_PATTERN);
-        output.accept(ModBlocks.BIRCH_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.BIRCH_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.BIRCH_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.BIRCH_PLANKS_SQUARES);
-        output.accept(ModBlocks.BIRCH_PLANKS_TILES);
-        output.accept(ModBlocks.BIRCH_PLANKS_WAVY);
-        output.accept(ModBlocks.BIRCH_PLANKS_WOVEN);
-        output.accept(ModBlocks.BLACKSTONE_BRICK_PAVING);
-        output.accept(ModBlocks.BLACKSTONE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.BLACKSTONE_POLISHED);
-        output.accept(ModBlocks.BLACKSTONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.BLACKSTONE_TILES);
         output.accept(ModBlocks.BLACK_STAINED_GLASS);
-        output.accept(ModBlocks.BLUE_ICE_BORDERED);
-        output.accept(ModBlocks.BLUE_ICE_CHISELED);
-        output.accept(ModBlocks.BLUE_ICE_PATTERNED);
-        output.accept(ModBlocks.BLUE_ICE_SLANTED_TILES);
-        output.accept(ModBlocks.BLUE_ICE_TILES);
         output.accept(ModBlocks.BLUE_STAINED_GLASS);
-        output.accept(ModBlocks.BONE_BLOCK_BORDERED);
-        output.accept(ModBlocks.BONE_BLOCK_CHISELED);
 
-        output.accept(ModBlocks.BONE_BLOCK_DECORATED_BORDERED);
-        output.accept(ModBlocks.BONE_BLOCK_INVERTED_TILES);
 
         output.accept(ModBlocks.BORDERLESS_GLASS);
         output.accept(ModBlocks.BORDERLESS_GLASS_BLACK);
@@ -3011,311 +1458,23 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.BORDERLESS_GLASS_WHITE);
         output.accept(ModBlocks.BORDERLESS_GLASS_YELLOW);
         output.accept(ModBlocks.BROWN_STAINED_GLASS);
-        output.accept(ModBlocks.CHERRY_PLANKS_BEAMS);
-        output.accept(ModBlocks.CHERRY_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.CHERRY_PLANKS_CRATE);
-        output.accept(ModBlocks.CHERRY_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.CHERRY_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.CHERRY_PLANKS_DOTTED);
-        output.accept(ModBlocks.CHERRY_PLANKS_FLOORING);
-        output.accept(ModBlocks.CHERRY_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.CHERRY_PLANKS_PATTERN);
-        output.accept(ModBlocks.CHERRY_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.CHERRY_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.CHERRY_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.CHERRY_PLANKS_SQUARES);
-        output.accept(ModBlocks.CHERRY_PLANKS_TILES);
-        output.accept(ModBlocks.CHERRY_PLANKS_WAVY);
-        output.accept(ModBlocks.CHERRY_PLANKS_WOVEN);
-        output.accept(ModBlocks.COAL_BLOCK_CARVED);
-        output.accept(ModBlocks.COAL_BLOCK_CIRCLES);
-        output.accept(ModBlocks.COAL_BLOCK_COMPACTED);
-        output.accept(ModBlocks.COAL_BLOCK_OVALS);
-        output.accept(ModBlocks.COAL_BLOCK_PATTERN);
 
-        output.accept(ModBlocks.COAL_BLOCK_ROTATED_BRICKS);
-        output.accept(ModBlocks.COAL_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.COAL_BLOCK_STRIPES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_BEAMS);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_BRICK_PAVING);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_LARGE_TILES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_PAVING);
 
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_PULVERIZED);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_ROTATED_BRICKS);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_SMALL_TILES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_SQUARES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_STRIPES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_TILES);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_WORN_STRIPES);
-        output.accept(ModBlocks.COBBLESTONE_BEAMS);
-        output.accept(ModBlocks.COBBLESTONE_BRICK_PAVING);
-        output.accept(ModBlocks.COBBLESTONE_CHISELED_BORDER);
-        output.accept(ModBlocks.COBBLESTONE_CROSSES);
-        output.accept(ModBlocks.COBBLESTONE_DENTED);
-        output.accept(ModBlocks.COBBLESTONE_INVERTED_DENTED);
-        output.accept(ModBlocks.COBBLESTONE_PAVING);
 
-        output.accept(ModBlocks.COBBLESTONE_PULVERIZED);
-        output.accept(ModBlocks.COBBLESTONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.COBBLESTONE_SMALL_TILES);
-        output.accept(ModBlocks.COBBLESTONE_SQUARES);
-        output.accept(ModBlocks.COBBLESTONE_STRIPES);
-        output.accept(ModBlocks.COBBLESTONE_TILES);
-        output.accept(ModBlocks.COBBLESTONE_WORN_STRIPES);
         output.accept(ModBlocks.COPPER_BLOCK);
-        output.accept(ModBlocks.COPPER_BLOCK_BARS);
-        output.accept(ModBlocks.COPPER_BLOCK_GEARS);
-        output.accept(ModBlocks.COPPER_BLOCK_LINES);
-        output.accept(ModBlocks.COPPER_BLOCK_PATTERN);
-        output.accept(ModBlocks.COPPER_BLOCK_POLISHED);
-        output.accept(ModBlocks.COPPER_BLOCK_SHAFTS);
         output.accept(ModBlocks.COPPER_GRATE);
-        output.accept(ModBlocks.CRIMSON_PLANKS_BEAMS);
-        output.accept(ModBlocks.CRIMSON_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.CRIMSON_PLANKS_CRATE);
-        output.accept(ModBlocks.CRIMSON_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_DOTTED);
-        output.accept(ModBlocks.CRIMSON_PLANKS_FLOORING);
-        output.accept(ModBlocks.CRIMSON_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_PATTERN);
-        output.accept(ModBlocks.CRIMSON_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.CRIMSON_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.CRIMSON_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_SQUARES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_TILES);
-        output.accept(ModBlocks.CRIMSON_PLANKS_WAVY);
-        output.accept(ModBlocks.CRIMSON_PLANKS_WOVEN);
-        output.accept(ModBlocks.CUT_RED_SANDSTONE);
-        output.accept(ModBlocks.CUT_SANDSTONE);
         output.accept(ModBlocks.CYAN_STAINED_GLASS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_BEAMS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_CRATE);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_DOTTED);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_FLOORING);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_PATTERN);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_SQUARES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_TILES);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_WAVY);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_WOVEN);
-        output.accept(ModBlocks.DARK_PRISMARINE_BEAMS);
-        output.accept(ModBlocks.DARK_PRISMARINE_BRICK_PAVING);
-        output.accept(ModBlocks.DARK_PRISMARINE_DOTTED);
-        output.accept(ModBlocks.DARK_PRISMARINE_FABRIC);
-        output.accept(ModBlocks.DARK_PRISMARINE_LARGE_TILES);
-        output.accept(ModBlocks.DARK_PRISMARINE_ROTATED_BRICKS);
-        output.accept(ModBlocks.DARK_PRISMARINE_ROWS);
-        output.accept(ModBlocks.DARK_PRISMARINE_SQUARES);
-        output.accept(ModBlocks.DARK_PRISMARINE_TILES);
-        output.accept(ModBlocks.DARK_PRISMARINE_WAVY);
-        output.accept(ModBlocks.DARK_PRISMARINE_WOVEN);
-        output.accept(ModBlocks.DIAMOND_BLOCK);
-        output.accept(ModBlocks.DIAMOND_BLOCK_CHISELED);
-        output.accept(ModBlocks.DIAMOND_BLOCK_CHISELED_CUBES);
-        output.accept(ModBlocks.DIAMOND_BLOCK_CONNECTING);
-        output.accept(ModBlocks.DIAMOND_BLOCK_GRID);
-        output.accept(ModBlocks.DIAMOND_BLOCK_JEWEL_BLOCK);
-        output.accept(ModBlocks.DIAMOND_BLOCK_POLISHED);
-        output.accept(ModBlocks.DIAMOND_BLOCK_RHOMBUSES);
-        output.accept(ModBlocks.DIAMOND_BLOCK_SHINY_BORDERED);
-        output.accept(ModBlocks.DIAMOND_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.DIORITE_BRICK_PAVING);
-        output.accept(ModBlocks.DIORITE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.DIORITE_DOTTED);
-        output.accept(ModBlocks.DIORITE_PAVING);
-        output.accept(ModBlocks.DIORITE_POLISHED);
-        output.accept(ModBlocks.DIORITE_ROTATED_BRICKS);
-        output.accept(ModBlocks.DIORITE_SQUARES);
-        output.accept(ModBlocks.DIORITE_TILES);
-        output.accept(ModBlocks.DIORITE_WAVY);
-        output.accept(ModBlocks.DIRT_BLOBS);
-        output.accept(ModBlocks.DIRT_BRICKS);
-        output.accept(ModBlocks.DIRT_CHUNKS);
-        output.accept(ModBlocks.DIRT_CLUMPS);
-        output.accept(ModBlocks.DIRT_LARGE_TILES);
-        output.accept(ModBlocks.DIRT_SMALL_BRICKS);
-        output.accept(ModBlocks.DIRT_SMALL_TILES);
-        output.accept(ModBlocks.DIRT_SMOOTH_CLUMPS);
-        output.accept(ModBlocks.DIRT_SOIL);
-        output.accept(ModBlocks.DIRT_SQUARES);
-        output.accept(ModBlocks.DIRT_TILES);
-        output.accept(ModBlocks.DIRT_TILLED);
-        output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_CROSSES);
-        output.accept(ModBlocks.EMERALD_BLOCK_BORDERED_PLATING);
-        output.accept(ModBlocks.EMERALD_BLOCK_CHISELED);
-        output.accept(ModBlocks.EMERALD_BLOCK_CLOVERS);
-        output.accept(ModBlocks.EMERALD_BLOCK_CRYSTAL);
-        output.accept(ModBlocks.EMERALD_BLOCK_PATTERNED);
-        output.accept(ModBlocks.EMERALD_BLOCK_PATTERNED_SQUARES);
-        output.accept(ModBlocks.EMERALD_BLOCK_POLISHED);
-        output.accept(ModBlocks.EMERALD_BLOCK_STRIPED);
-        output.accept(ModBlocks.EMERALD_BLOCK_WAXED);
-        output.accept(ModBlocks.END_STONE_BLOBS);
-        output.accept(ModBlocks.END_STONE_BRICK_PAVING);
-        output.accept(ModBlocks.END_STONE_CHISELED);
-        output.accept(ModBlocks.END_STONE_CRUSHED);
-        output.accept(ModBlocks.END_STONE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.END_STONE_MESH);
-        output.accept(ModBlocks.END_STONE_PAVING);
-        output.accept(ModBlocks.END_STONE_POLISHED);
-        output.accept(ModBlocks.END_STONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.END_STONE_SCALES);
-        output.accept(ModBlocks.END_STONE_SMALL_TILES);
-        output.accept(ModBlocks.END_STONE_SPIRAL_PATTERN);
-        output.accept(ModBlocks.END_STONE_SQUARES);
-        output.accept(ModBlocks.END_STONE_TILES);
         output.accept(ModBlocks.EXPOSED_COPPER_BLOCK);
         output.accept(ModBlocks.EXPOSED_COPPER_GRATE);
-        output.accept(ModBlocks.GLOWSTONE_BRICK_PAVING);
-        output.accept(ModBlocks.GLOWSTONE_CRUSHED);
-        output.accept(ModBlocks.GLOWSTONE_LARGE_TILES);
-        output.accept(ModBlocks.GLOWSTONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.GLOWSTONE_SMALL_TILES);
-        output.accept(ModBlocks.GLOWSTONE_SMOOTH);
-        output.accept(ModBlocks.GLOWSTONE_TILES);
-        output.accept(ModBlocks.GOLD_BLOCK);
-        output.accept(ModBlocks.GOLD_BLOCK_BEAMS);
-        output.accept(ModBlocks.GOLD_BLOCK_BORDERED);
-        output.accept(ModBlocks.GOLD_BLOCK_POLISHED);
-        output.accept(ModBlocks.GOLD_BLOCK_SCALES);
-        output.accept(ModBlocks.GOLD_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.GOLD_BLOCK_STRIPED);
-        output.accept(ModBlocks.GOLD_BLOCK_TILES);
-        output.accept(ModBlocks.GRANITE_BRICK_PAVING);
-        output.accept(ModBlocks.GRANITE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.GRANITE_DOTTED);
-        output.accept(ModBlocks.GRANITE_PAVING);
-        output.accept(ModBlocks.GRANITE_POLISHED);
-        output.accept(ModBlocks.GRANITE_ROTATED_BRICKS);
-        output.accept(ModBlocks.GRANITE_SQUARES);
-        output.accept(ModBlocks.GRANITE_TILES);
-        output.accept(ModBlocks.GRANITE_WAVY);
         output.accept(ModBlocks.GRAY_STAINED_GLASS);
         output.accept(ModBlocks.GREEN_STAINED_GLASS);
         output.accept(ModBlocks.ICE_GLASS);
-        output.accept(ModBlocks.IRON_BLOCK);
-        output.accept(ModBlocks.IRON_BLOCK_BORDERED);
-        output.accept(ModBlocks.IRON_BLOCK_CHISELED);
-        output.accept(ModBlocks.IRON_BLOCK_CONNECTING);
-        output.accept(ModBlocks.IRON_BLOCK_FRAMED);
-        output.accept(ModBlocks.IRON_BLOCK_GEARS);
-        output.accept(ModBlocks.IRON_BLOCK_PATTERNED);
-        output.accept(ModBlocks.IRON_BLOCK_POLISHED);
-        output.accept(ModBlocks.IRON_BLOCK_PROCESSED);
-        output.accept(ModBlocks.JUNGLE_PLANKS_BEAMS);
-        output.accept(ModBlocks.JUNGLE_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.JUNGLE_PLANKS_CRATE);
-        output.accept(ModBlocks.JUNGLE_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_DOTTED);
-        output.accept(ModBlocks.JUNGLE_PLANKS_FLOORING);
-        output.accept(ModBlocks.JUNGLE_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_PATTERN);
-        output.accept(ModBlocks.JUNGLE_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.JUNGLE_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.JUNGLE_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_SQUARES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_TILES);
-        output.accept(ModBlocks.JUNGLE_PLANKS_WAVY);
-        output.accept(ModBlocks.JUNGLE_PLANKS_WOVEN);
-        output.accept(ModBlocks.LAPIS_BLOCK);
-        output.accept(ModBlocks.LAPIS_BLOCK_BORDERED);
-        output.accept(ModBlocks.LAPIS_BLOCK_CONNECTING);
-        output.accept(ModBlocks.LAPIS_BLOCK_GLOSSY);
-        output.accept(ModBlocks.LAPIS_BLOCK_INVERTED_TILES);
-        output.accept(ModBlocks.LAPIS_BLOCK_MOSAIC);
-        output.accept(ModBlocks.LAPIS_BLOCK_PATTERN);
 
-        output.accept(ModBlocks.LAPIS_BLOCK_POLISHED);
-        output.accept(ModBlocks.LAPIS_BLOCK_SCALES);
-        output.accept(ModBlocks.LAPIS_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.LAPIS_BLOCK_STRIPES);
-        output.accept(ModBlocks.LAPIS_BLOCK_TILES);
         output.accept(ModBlocks.LIGHT_BLUE_STAINED_GLASS);
         output.accept(ModBlocks.LIGHT_GRAY_STAINED_GLASS);
         output.accept(ModBlocks.LIME_STAINED_GLASS);
         output.accept(ModBlocks.MAGENTA_STAINED_GLASS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_BEAMS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.MANGROVE_PLANKS_CRATE);
-        output.accept(ModBlocks.MANGROVE_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_DOTTED);
-        output.accept(ModBlocks.MANGROVE_PLANKS_FLOORING);
-        output.accept(ModBlocks.MANGROVE_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_PATTERN);
-        output.accept(ModBlocks.MANGROVE_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_SQUARES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_TILES);
-        output.accept(ModBlocks.MANGROVE_PLANKS_WAVY);
-        output.accept(ModBlocks.MANGROVE_PLANKS_WOVEN);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_BEAMS);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_DENTED);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_INVERTED_DENTED);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_PAVING);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_SMALL_TILES);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_SQUARES);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_STRIPES);
-        output.accept(ModBlocks.MOSSY_COBBLESTONE_WORN_STRIPES);
-        output.accept(ModBlocks.NETHERITE_BLOCK_BEAMS);
-        output.accept(ModBlocks.NETHERITE_BLOCK_COMPACTED);
-        output.accept(ModBlocks.NETHERITE_BLOCK_DIAGONAL_TILES);
-        output.accept(ModBlocks.NETHERITE_BLOCK_INDENTED);
 
-        output.accept(ModBlocks.NETHERITE_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.NETHERRACK_BEAMS);
-        output.accept(ModBlocks.NETHERRACK_BRICK_PAVING);
-        output.accept(ModBlocks.NETHERRACK_DENTED);
-        output.accept(ModBlocks.NETHERRACK_ROTATED_BRICKS);
-        output.accept(ModBlocks.NETHERRACK_SMALL_TILES);
-        output.accept(ModBlocks.NETHERRACK_STRIPES);
-        output.accept(ModBlocks.NETHERRACK_TILES);
-        output.accept(ModBlocks.NETHER_BRICKS_BEAMS);
-        output.accept(ModBlocks.NETHER_BRICKS_BRICK_PAVING);
-        output.accept(ModBlocks.NETHER_BRICKS_CHISELED_SQUARES);
-        output.accept(ModBlocks.NETHER_BRICKS_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.NETHER_BRICKS_LARGE_BRICKS);
-        output.accept(ModBlocks.NETHER_BRICKS_LARGE_TILES);
-        output.accept(ModBlocks.NETHER_BRICKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.NETHER_BRICKS_SMALL_TILES);
-        output.accept(ModBlocks.NETHER_BRICKS_SMOOTH);
-        output.accept(ModBlocks.NETHER_BRICKS_SQUARES);
-        output.accept(ModBlocks.NETHER_BRICKS_TILES);
-        output.accept(ModBlocks.OAK_PLANKS_BEAMS);
-        output.accept(ModBlocks.OAK_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.OAK_PLANKS_CRATE);
-        output.accept(ModBlocks.OAK_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.OAK_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.OAK_PLANKS_DOTTED);
-        output.accept(ModBlocks.OAK_PLANKS_FLOORING);
-        output.accept(ModBlocks.OAK_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.OAK_PLANKS_PATTERN);
-        output.accept(ModBlocks.OAK_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.OAK_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.OAK_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.OAK_PLANKS_SQUARES);
-        output.accept(ModBlocks.OAK_PLANKS_TILES);
-        output.accept(ModBlocks.OAK_PLANKS_WAVY);
-        output.accept(ModBlocks.OAK_PLANKS_WOVEN);
-        output.accept(ModBlocks.OBSIDIAN_BORDERED);
-        output.accept(ModBlocks.OBSIDIAN_BRICK_PAVING);
-        output.accept(ModBlocks.OBSIDIAN_CHISELED);
-        output.accept(ModBlocks.OBSIDIAN_DARK);
-        output.accept(ModBlocks.OBSIDIAN_ROTATED_BRICKS);
-        output.accept(ModBlocks.OBSIDIAN_SPOTS);
-        output.accept(ModBlocks.OBSIDIAN_SQUARES);
-        output.accept(ModBlocks.OBSIDIAN_STRIPES);
-        output.accept(ModBlocks.OBSIDIAN_TILES);
         output.accept(ModBlocks.ORANGE_STAINED_GLASS);
         output.accept(ModBlocks.OXIDIZED_COPPER_BLOCK);
         output.accept(ModBlocks.OXIDIZED_COPPER_GRATE);
@@ -3336,86 +1495,9 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.PALE_OAK_PLANKS_WAVY);
         output.accept(ModBlocks.PALE_OAK_PLANKS_WOVEN);
         output.accept(ModBlocks.PINK_STAINED_GLASS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_BEAMS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_BRICK_PAVING);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_CHISELED_CIRCLES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_CHISELED_SQUARES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_DOTTED);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_POLISHED);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_ROWS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_SMALL_TILES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_SQUARES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_TILES);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_WAVY);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_WOVEN);
         output.accept(ModBlocks.PURPLE_STAINED_GLASS);
-        output.accept(ModBlocks.PURPUR_BRICK_PAVING);
-        output.accept(ModBlocks.PURPUR_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.PURPUR_DIAGONAL_TILES);
-        output.accept(ModBlocks.PURPUR_DOTTED);
-        output.accept(ModBlocks.PURPUR_FABRIC);
-        output.accept(ModBlocks.PURPUR_JAGGED_PATTERN);
-        output.accept(ModBlocks.PURPUR_LARGE_TILES);
-        output.accept(ModBlocks.PURPUR_ORGANIC_PATTERN);
-        output.accept(ModBlocks.PURPUR_ROTATED_BRICKS);
-        output.accept(ModBlocks.PURPUR_SLANTED_TILES);
-        output.accept(ModBlocks.PURPUR_SMALL_TILES);
-        output.accept(ModBlocks.PURPUR_SPIRAL_PATTERN);
-        output.accept(ModBlocks.PURPUR_SQUARES);
-        output.accept(ModBlocks.PURPUR_TILES);
-        output.accept(ModBlocks.PURPUR_WOVEN);
-        output.accept(ModBlocks.QUARTZ_BLOCK);
-        output.accept(ModBlocks.QUARTZ_BLOCK_BORDERED);
-        output.accept(ModBlocks.QUARTZ_BLOCK_BRICK_PAVING);
-        output.accept(ModBlocks.QUARTZ_BLOCK_CHISELED_CTM);
-        output.accept(ModBlocks.QUARTZ_BLOCK_CONNECTING);
-        output.accept(ModBlocks.QUARTZ_BLOCK_CROSSES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_DIAGONAL_TILES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_PATTERN);
-        output.accept(ModBlocks.QUARTZ_BLOCK_ROTATED_BRICKS);
-        output.accept(ModBlocks.QUARTZ_BLOCK_ROWS);
-        output.accept(ModBlocks.QUARTZ_BLOCK_SCALES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_SQUARES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_STRIPES);
-        output.accept(ModBlocks.QUARTZ_BLOCK_TILES);
-        output.accept(ModBlocks.REDSTONE_BLOCK_BORDERED);
-        output.accept(ModBlocks.REDSTONE_BLOCK_CHISELED_CLOVERS);
-        output.accept(ModBlocks.REDSTONE_BLOCK_CIRCLES);
-        output.accept(ModBlocks.REDSTONE_BLOCK_COMPRESSED);
-        output.accept(ModBlocks.REDSTONE_BLOCK_DIAGONAL_TILES);
-        output.accept(ModBlocks.REDSTONE_BLOCK_PATTERNED);
-        output.accept(ModBlocks.REDSTONE_BLOCK_PAVING);
-        output.accept(ModBlocks.REDSTONE_BLOCK_POLISHED);
-        output.accept(ModBlocks.REDSTONE_BLOCK_SCALES);
-        output.accept(ModBlocks.REDSTONE_BLOCK_SMALL_TILES);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_BEAMS);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_BRICK_PAVING);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_CHISELED_SQUARES);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_LARGE_TILES);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_SMALL_TILES);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_SMOOTH);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_SQUARES);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_TILES);
-        output.accept(ModBlocks.RED_SANDSTONE_BRICK_PAVING);
-        output.accept(ModBlocks.RED_SANDSTONE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.RED_SANDSTONE_LARGE_TILES);
-        output.accept(ModBlocks.RED_SANDSTONE_POLISHED);
-        output.accept(ModBlocks.RED_SANDSTONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.RED_SANDSTONE_TILES);
         output.accept(ModBlocks.RED_STAINED_GLASS);
         output.accept(ModBlocks.REINFORCED_GLASS);
-        output.accept(ModBlocks.SANDSTONE_BRICK_PAVING);
-        output.accept(ModBlocks.SANDSTONE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.SANDSTONE_LARGE_TILES);
-        output.accept(ModBlocks.SANDSTONE_POLISHED);
-        output.accept(ModBlocks.SANDSTONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.SANDSTONE_TILES);
         output.accept(ModBlocks.SCRATCHED_GLASS);
         output.accept(ModBlocks.SCRATCHED_GLASS_BLACK);
         output.accept(ModBlocks.SCRATCHED_GLASS_BLUE);
@@ -3433,40 +1515,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.SCRATCHED_GLASS_RED);
         output.accept(ModBlocks.SCRATCHED_GLASS_WHITE);
         output.accept(ModBlocks.SCRATCHED_GLASS_YELLOW);
-        output.accept(ModBlocks.SPRUCE_PLANKS_BEAMS);
-        output.accept(ModBlocks.SPRUCE_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.SPRUCE_PLANKS_CRATE);
-        output.accept(ModBlocks.SPRUCE_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_DOTTED);
-        output.accept(ModBlocks.SPRUCE_PLANKS_FLOORING);
-        output.accept(ModBlocks.SPRUCE_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_PATTERN);
-        output.accept(ModBlocks.SPRUCE_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.SPRUCE_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.SPRUCE_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_SQUARES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_TILES);
-        output.accept(ModBlocks.SPRUCE_PLANKS_WAVY);
-        output.accept(ModBlocks.SPRUCE_PLANKS_WOVEN);
-        output.accept(ModBlocks.STONE_BIG_TILES);
-        output.accept(ModBlocks.STONE_BORDERED);
-        output.accept(ModBlocks.STONE_BRICK_PAVING);
-        output.accept(ModBlocks.STONE_CHISELED_BRICKS);
-        output.accept(ModBlocks.STONE_CRUSHED);
-        output.accept(ModBlocks.STONE_DIAGONAL_BRICKS);
-        output.accept(ModBlocks.STONE_PATH);
-        output.accept(ModBlocks.STONE_ROTATED_BRICKS);
-        output.accept(ModBlocks.STONE_SLATED_END);
-        output.accept(ModBlocks.STONE_SMALL_TILES);
-        output.accept(ModBlocks.STONE_SMOOTH);
-        output.accept(ModBlocks.STONE_SMOOTH_BRICK_PAVING);
-        output.accept(ModBlocks.STONE_SMOOTH_LARGE_TILES);
-        output.accept(ModBlocks.STONE_SMOOTH_ROTATED_BRICKS);
-        output.accept(ModBlocks.STONE_SMOOTH_TILES);
-        output.accept(ModBlocks.STONE_SQUARES);
-        output.accept(ModBlocks.STONE_TILES);
-        output.accept(ModBlocks.STONE_WAVES);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_BLACK);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_BLUE);
@@ -3485,121 +1533,11 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_WHITE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_YELLOW);
         output.accept(ModBlocks.TINTED_GLASS);
-        output.accept(ModBlocks.WARPED_PLANKS_BEAMS);
-        output.accept(ModBlocks.WARPED_PLANKS_BRICK_PAVING);
-        output.accept(ModBlocks.WARPED_PLANKS_CRATE);
-        output.accept(ModBlocks.WARPED_PLANKS_DIAGONAL_STRIPES);
-        output.accept(ModBlocks.WARPED_PLANKS_DIAGONAL_TILES);
-        output.accept(ModBlocks.WARPED_PLANKS_DOTTED);
-        output.accept(ModBlocks.WARPED_PLANKS_FLOORING);
-        output.accept(ModBlocks.WARPED_PLANKS_LARGE_TILES);
-        output.accept(ModBlocks.WARPED_PLANKS_PATTERN);
-        output.accept(ModBlocks.WARPED_PLANKS_ROTATED_BRICKS);
-        output.accept(ModBlocks.WARPED_PLANKS_SMALL_BRICKS);
-        output.accept(ModBlocks.WARPED_PLANKS_SMALL_TILES);
-        output.accept(ModBlocks.WARPED_PLANKS_SQUARES);
-        output.accept(ModBlocks.WARPED_PLANKS_TILES);
-        output.accept(ModBlocks.WARPED_PLANKS_WAVY);
-        output.accept(ModBlocks.WARPED_PLANKS_WOVEN);
         output.accept(ModBlocks.WEATHERED_COPPER_BLOCK);
         output.accept(ModBlocks.WEATHERED_COPPER_GRATE);
         output.accept(ModBlocks.WHITE_STAINED_GLASS);
         output.accept(ModBlocks.YELLOW_STAINED_GLASS);
-        output.accept(ModBlocks.AMETHYST_BLOCK_CTM);
-        output.accept(ModBlocks.ORIG_EMERALD_BLOCK_CTM);
-        output.accept(ModBlocks.EMERALD_BLOCK_CTM);
-        output.accept(ModBlocks.REDSTONE_BLOCK_CTM);
-        output.accept(ModBlocks.ACACIA_PLANKS_BRICKS);
-        output.accept(ModBlocks.AMETHYST_BLOCK_BRICKS);
-        output.accept(ModBlocks.ANDESITE_BRICKS);
-        output.accept(ModBlocks.BAMBOO_PLANKS_BRICKS);
-        output.accept(ModBlocks.BASALT_BRICKS);
-        output.accept(ModBlocks.BIRCH_PLANKS_BRICKS);
-        output.accept(ModBlocks.BLUE_ICE_BRICKS);
-        output.accept(ModBlocks.CHERRY_PLANKS_BRICKS);
-        output.accept(ModBlocks.COBBLED_DEEPSLATE_BRICKS);
-        output.accept(ModBlocks.COPPER_BLOCK_SMALL_BRICKS);
-        output.accept(ModBlocks.CRIMSON_PLANKS_BRICKS);
-        output.accept(ModBlocks.DARK_OAK_PLANKS_BRICKS);
-        output.accept(ModBlocks.DARK_PRISMARINE_BRICKS);
-        output.accept(ModBlocks.DIORITE_BRICKS);
-        output.accept(ModBlocks.GLOWSTONE_BRICKS);
-        output.accept(ModBlocks.GOLD_BLOCK_SMALL_BRICKS);
-        output.accept(ModBlocks.GRANITE_BRICKS);
-        output.accept(ModBlocks.IRON_BLOCK_SMALL_BRICKS);
-        output.accept(ModBlocks.JUNGLE_PLANKS_BRICKS);
-        output.accept(ModBlocks.MANGROVE_PLANKS_BRICKS);
-        output.accept(ModBlocks.NETHERITE_BLOCK_BRICKS);
-        output.accept(ModBlocks.NETHERRACK_BRICKS);
-        output.accept(ModBlocks.OAK_PLANKS_BRICKS);
-        output.accept(ModBlocks.OBSIDIAN_BRICKS);
         output.accept(ModBlocks.PALE_OAK_PLANKS_BRICKS);
-        output.accept(ModBlocks.PRISMARINE_BRICKS_BRICKS);
-        output.accept(ModBlocks.PURPUR_BRICKS);
-        output.accept(ModBlocks.REDSTONE_BLOCK_BRICKS);
-        output.accept(ModBlocks.RED_NETHER_BRICKS_LARGE_BRICKS);
-        output.accept(ModBlocks.RED_SANDSTONE_BRICKS);
-        output.accept(ModBlocks.SANDSTONE_BRICKS);
-        output.accept(ModBlocks.SPRUCE_PLANKS_BRICKS);
-        output.accept(ModBlocks.STONE_SMALL_BRICKS);
-        output.accept(ModBlocks.WARPED_PLANKS_BRICKS);
-        output.accept(ModBlocks.ACACIA_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.BIRCH_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.BONE_BLOCK_CONNECTING);
-        output.accept(ModBlocks.CRIMSON_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.OAK_WINDOW_SWIRLING_CTM);
         output.accept(ModBlocks.BAMBOO_WINDOW_BARS_CTM);
         output.accept(ModBlocks.BAMBOO_WINDOW_COVERED_CTM);
         output.accept(ModBlocks.BAMBOO_WINDOW_DIAGONAL_CTM);
@@ -3618,23 +1556,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.CHERRY_WINDOW_SLIM_CTM);
         output.accept(ModBlocks.CHERRY_WINDOW_SWIRLING_CTM);
         output.accept(ModBlocks.CHERRY_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.ROSE_QUARTZ_BRICKS);
-        output.accept(ModBlocks.SPRUCE_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SWIRLING_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_BARS_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_COVERED_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_DIAGONAL_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_LARGE_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_PANES_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_ROUNDED_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_SLIM_CTM);
-        output.accept(ModBlocks.WARPED_WINDOW_SWIRLING_CTM);
         output.accept(ModBlocks.PALE_OAK_WINDOW_BARS_CTM);
         output.accept(ModBlocks.PALE_OAK_WINDOW_COVERED_CTM);
         output.accept(ModBlocks.PALE_OAK_WINDOW_DIAGONAL_CTM);
@@ -3644,69 +1565,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.PALE_OAK_WINDOW_SLIM_CTM);
         output.accept(ModBlocks.PALE_OAK_WINDOW_SWIRLING_CTM);
         output.accept(ModBlocks.PALE_OAK_WINDOW_TILES_CTM);
-        output.accept(ModBlocks.ACACIA_WINDOW_BARS);
-        output.accept(ModBlocks.ACACIA_WINDOW_COVERED);
-        output.accept(ModBlocks.ACACIA_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.ACACIA_WINDOW_LARGE);
-        output.accept(ModBlocks.ACACIA_WINDOW_PANES);
-        output.accept(ModBlocks.ACACIA_WINDOW_ROUNDED);
-        output.accept(ModBlocks.ACACIA_WINDOW_SLIM);
-        output.accept(ModBlocks.ACACIA_WINDOW_SWIRLING);
-        output.accept(ModBlocks.ACACIA_WINDOW_TILES);
-        output.accept(ModBlocks.BIRCH_WINDOW_BARS);
-        output.accept(ModBlocks.BIRCH_WINDOW_COVERED);
-        output.accept(ModBlocks.BIRCH_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.BIRCH_WINDOW_LARGE);
-        output.accept(ModBlocks.BIRCH_WINDOW_PANES);
-        output.accept(ModBlocks.BIRCH_WINDOW_ROUNDED);
-        output.accept(ModBlocks.BIRCH_WINDOW_SLIM);
-        output.accept(ModBlocks.BIRCH_WINDOW_SWIRLING);
-        output.accept(ModBlocks.BIRCH_WINDOW_TILES);
-        output.accept(ModBlocks.CRIMSON_WINDOW_BARS);
-        output.accept(ModBlocks.CRIMSON_WINDOW_COVERED);
-        output.accept(ModBlocks.CRIMSON_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.CRIMSON_WINDOW_LARGE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_PANES);
-        output.accept(ModBlocks.CRIMSON_WINDOW_ROUNDED);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SLIM);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SWIRLING);
-        output.accept(ModBlocks.CRIMSON_WINDOW_TILES);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_BARS);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_COVERED);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_LARGE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_PANES);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_TILES);
-        output.accept(ModBlocks.JUNGLE_WINDOW_BARS);
-        output.accept(ModBlocks.JUNGLE_WINDOW_COVERED);
-        output.accept(ModBlocks.JUNGLE_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.JUNGLE_WINDOW_LARGE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_PANES);
-        output.accept(ModBlocks.JUNGLE_WINDOW_ROUNDED);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SLIM);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SWIRLING);
-        output.accept(ModBlocks.JUNGLE_WINDOW_TILES);
-        output.accept(ModBlocks.MANGROVE_WINDOW_BARS);
-        output.accept(ModBlocks.MANGROVE_WINDOW_COVERED);
-        output.accept(ModBlocks.MANGROVE_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.MANGROVE_WINDOW_LARGE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_PANES);
-        output.accept(ModBlocks.MANGROVE_WINDOW_ROUNDED);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SLIM);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SWIRLING);
-        output.accept(ModBlocks.MANGROVE_WINDOW_TILES);
-        output.accept(ModBlocks.OAK_WINDOW_BARS);
-        output.accept(ModBlocks.OAK_WINDOW_COVERED);
-        output.accept(ModBlocks.OAK_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.OAK_WINDOW_LARGE);
-        output.accept(ModBlocks.OAK_WINDOW_PANES);
-        output.accept(ModBlocks.OAK_WINDOW_ROUNDED);
-        output.accept(ModBlocks.OAK_WINDOW_SLIM);
-        output.accept(ModBlocks.OAK_WINDOW_SWIRLING);
-        output.accept(ModBlocks.OAK_WINDOW_TILES);
         output.accept(ModBlocks.BAMBOO_WINDOW_BARS);
         output.accept(ModBlocks.BAMBOO_WINDOW_COVERED);
         output.accept(ModBlocks.BAMBOO_WINDOW_DIAGONAL);
@@ -3734,93 +1592,11 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.PALE_OAK_WINDOW_TILES);
 
         // Glass/ plain blocks
-        output.accept(ModBlocks.CIRCLE_OAK_GLASS);
         output.accept(ModBlocks.LEADED_GLASS);
-        output.accept(ModBlocks.OAK_BARRED_GLASS);
-        output.accept(ModBlocks.OAK_BORDERED_GLASS);
-        output.accept(ModBlocks.OAK_BORDERED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
-        output.accept(ModBlocks.OAK_SNOWFLAKE_GLASS);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM);
-        output.accept(ModBlocks.SQUARE_OAK_GLASS);
-        output.accept(ModBlocks.SQUARE_OAK_GLASS_CTM);
         output.accept(ModBlocks.GLASS_OCHRE_FROGLIGHT);
         output.accept(ModBlocks.GLASS_PEARLESCENT_FROGLIGHT);
         output.accept(ModBlocks.GLASS_VERDANT_FROGLIGHT);
         // Window panes
-        output.accept(ModBlocks.ACACIA_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_TILES_PANE);
         output.accept(ModBlocks.BAMBOO_WINDOW_BARS_PANE);
         output.accept(ModBlocks.BAMBOO_WINDOW_COVERED_PANE);
         output.accept(ModBlocks.BAMBOO_WINDOW_DIAGONAL_PANE);
@@ -3848,102 +1624,15 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.PALE_OAK_WINDOW_SLIM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_SWIRLING_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_TILES_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_BARS_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_COVERED_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_DIAGONAL_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_LARGE_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_PANES_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_ROUNDED_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_SLIM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_SWIRLING_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_TILES_PANE);
         // Leaded glass panes
         output.accept(ModBlocks.CIRCULAR_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CLEAR_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.LEAD_WOVEN_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_LEADED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_LEADED_GLASS_PANE);
         // Stained glass panes
-        output.accept(ModBlocks.CIRCULAR_BLACK_STAINED_GLASS_PANE);
         output.accept(ModBlocks.BLACK_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_BLACK_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CIRCULAR_BLUE_STAINED_GLASS_PANE);
         output.accept(ModBlocks.BLUE_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_BLUE_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CIRCULAR_BROWN_STAINED_GLASS_PANE);
         output.accept(ModBlocks.BROWN_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_BROWN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CIRCULAR_CYAN_STAINED_GLASS_PANE);
         output.accept(ModBlocks.CYAN_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_CYAN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CIRCULAR_GRAY_STAINED_GLASS_PANE);
         output.accept(ModBlocks.GRAY_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_GRAY_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.CIRCULAR_GREEN_STAINED_GLASS_PANE);
         output.accept(ModBlocks.GREEN_LEADED_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.LARGE_DIAMOND_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SMALL_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.SQUARE_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS_PANE);
-        output.accept(ModBlocks.WOVEN_GREEN_STAINED_GLASS_PANE);
         output.accept(ModBlocks.CIRCULAR_LIGHT_BLUE_STAINED_GLASS_PANE);
         output.accept(ModBlocks.LIGHT_BLUE_LEADED_STAINED_GLASS_PANE);
         output.accept(ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_PANE);
@@ -4055,105 +1744,19 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.VERTICAL_STRIPED_YELLOW_STAINED_GLASS_PANE);
         output.accept(ModBlocks.WOVEN_YELLOW_STAINED_GLASS_PANE);
         // glass/ panes
-        output.accept(ModBlocks.CIRCLE_OAK_GLASS_PANE);
         output.accept(ModBlocks.LEADED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_BARRED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_SNOWFLAKE_GLASS_PANE);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_PANE);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_PANE);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS_PANE);
-        output.accept(ModBlocks.ARCHED_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.CHISELED_GLASS_CTM_PANE);
         output.accept(ModBlocks.CLEAR_GLASS_CTM_PANE);
-        output.accept(ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.DIRTY_GLASS_CTM_PANE);
         output.accept(ModBlocks.FROSTED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ICE_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_BARRED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_BORDERED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_LINE_BARED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_WOVEN_GLASS_CTM_PANE);
         output.accept(ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ORNATE_LEADED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.REINFORCED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.SQUARE_OAK_GLASS_CTM_PANE);
         output.accept(ModBlocks.STONE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_CLEAR_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.OAK_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.BIRCH_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.JUNGLE_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.ACACIA_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.DARK_OAK_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.MANGROVE_WINDOW_TILES_CTM_PANE);
         output.accept(ModBlocks.CHERRY_WINDOW_SWIRLING_CTM_PANE);
         output.accept(ModBlocks.CHERRY_WINDOW_BARS_CTM_PANE);
         output.accept(ModBlocks.CHERRY_WINDOW_COVERED_CTM_PANE);
@@ -4172,24 +1775,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.BAMBOO_WINDOW_ROUNDED_CTM_PANE);
         output.accept(ModBlocks.BAMBOO_WINDOW_SLIM_CTM_PANE);
         output.accept(ModBlocks.BAMBOO_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.CRIMSON_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_SWIRLING_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_BARS_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_COVERED_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_DIAGONAL_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_LARGE_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_PANES_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_ROUNDED_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_SLIM_CTM_PANE);
-        output.accept(ModBlocks.WARPED_WINDOW_TILES_CTM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_SWIRLING_CTM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_BARS_CTM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_COVERED_CTM_PANE);
@@ -4199,7 +1784,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.PALE_OAK_WINDOW_ROUNDED_CTM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_SLIM_CTM_PANE);
         output.accept(ModBlocks.PALE_OAK_WINDOW_TILES_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_WHITE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.WHITE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.WHITE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_WHITE_STAINED_GLASS_CTM_PANE);
@@ -4211,7 +1795,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_WHITE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_WHITE_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_WHITE_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_ORANGE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ORANGE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ORANGE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_ORANGE_STAINED_GLASS_CTM_PANE);
@@ -4223,7 +1806,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_ORANGE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_ORANGE_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_ORANGE_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.MAGENTA_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.MAGENTA_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_MAGENTA_STAINED_GLASS_CTM_PANE);
@@ -4235,7 +1817,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_MAGENTA_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_MAGENTA_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_MAGENTA_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIGHT_BLUE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
@@ -4247,7 +1828,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.YELLOW_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.YELLOW_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_YELLOW_STAINED_GLASS_CTM_PANE);
@@ -4259,7 +1839,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_YELLOW_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_YELLOW_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_YELLOW_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_LIME_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIME_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIME_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_LIME_STAINED_GLASS_CTM_PANE);
@@ -4271,7 +1850,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_LIME_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_LIME_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_LIME_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_PINK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.PINK_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.PINK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_PINK_STAINED_GLASS_CTM_PANE);
@@ -4283,19 +1861,12 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_PINK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_PINK_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_PINK_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GRAY_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GRAY_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_GRAY_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_GRAY_CTM_PANE);
-        output.accept(ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_GRAY_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_GRAY_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIGHT_GRAY_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
@@ -4307,19 +1878,12 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_CYAN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.CYAN_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.CYAN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_CYAN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_CYAN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_CYAN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_CYAN_CTM_PANE);
-        output.accept(ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_CYAN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_CYAN_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_CYAN_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_PURPLE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.PURPLE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.PURPLE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_PURPLE_STAINED_GLASS_CTM_PANE);
@@ -4331,43 +1895,24 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_PURPLE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_PURPLE_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_PURPLE_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BLUE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BLUE_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_BLUE_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_BLUE_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_BLUE_CTM_PANE);
-        output.accept(ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_BLUE_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_BLUE_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_BLUE_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_BROWN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BROWN_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BROWN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_BROWN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_BROWN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_BROWN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_BROWN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_BROWN_CTM_PANE);
-        output.accept(ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_BROWN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_BROWN_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_BROWN_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_GREEN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GREEN_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GREEN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_GREEN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_GREEN_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_GREEN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_GREEN_CTM_PANE);
-        output.accept(ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_GREEN_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_GREEN_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_GREEN_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_RED_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.RED_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.RED_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.FANCY_RED_STAINED_GLASS_CTM_PANE);
@@ -4379,16 +1924,10 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.TILED_RED_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_RED_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_RED_CTM_PANE);
-        output.accept(ModBlocks.ARCHED_BLACK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BLACK_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.BLACK_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.FANCY_BLACK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.GOLDEN_FRAMED_BLACK_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_BLACK_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.RASTER_BLACK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_BLACK_CTM_PANE);
-        output.accept(ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.TILED_BLACK_STAINED_GLASS_CTM_PANE);
         output.accept(ModBlocks.TINTED_BORDERLESS_GLASS_BLACK_CTM_PANE);
         output.accept(ModBlocks.BORDERLESS_GLASS_BLACK_CTM_PANE);
         output.accept(ModBlocks.SCRATCHED_GLASS_CTM_PANE);
@@ -4412,24 +1951,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.BLACK_STAINED_CLEAR_GLASS_CTM_PANE);        output.accept(ModBlocks.GLASS_OCHRE_FROGLIGHT_PANE);
         output.accept(ModBlocks.GLASS_PEARLESCENT_FROGLIGHT_PANE);
         output.accept(ModBlocks.GLASS_VERDANT_FROGLIGHT_PANE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_BARS);
-        output.accept(ModBlocks.SPRUCE_WINDOW_COVERED);
-        output.accept(ModBlocks.SPRUCE_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.SPRUCE_WINDOW_LARGE);
-        output.accept(ModBlocks.SPRUCE_WINDOW_PANES);
-        output.accept(ModBlocks.SPRUCE_WINDOW_ROUNDED);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SLIM);
-        output.accept(ModBlocks.SPRUCE_WINDOW_SWIRLING);
-        output.accept(ModBlocks.SPRUCE_WINDOW_TILES);
-        output.accept(ModBlocks.WARPED_WINDOW_BARS);
-        output.accept(ModBlocks.WARPED_WINDOW_COVERED);
-        output.accept(ModBlocks.WARPED_WINDOW_DIAGONAL);
-        output.accept(ModBlocks.WARPED_WINDOW_LARGE);
-        output.accept(ModBlocks.WARPED_WINDOW_PANES);
-        output.accept(ModBlocks.WARPED_WINDOW_ROUNDED);
-        output.accept(ModBlocks.WARPED_WINDOW_SLIM);
-        output.accept(ModBlocks.WARPED_WINDOW_SWIRLING);
-        output.accept(ModBlocks.WARPED_WINDOW_TILES);
 
 
 
