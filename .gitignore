@@ -32,5 +32,4 @@ repo
 /config/ott.json
 /logs/*
 /scripts/*
-/sorting/*
 /src/to_add/*
