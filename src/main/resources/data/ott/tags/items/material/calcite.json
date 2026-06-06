@@ -1,24 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:calcite",
-    "ott:bordered_calcite",
-    "ott:brick_bordered_calcite",
-    "ott:calcite_cut_polished",
-    "ott:calcite_cut_small_brick",
-    "ott:curly_calcite_ctm",
-    "ott:cut_calcite_column",
-    "ott:edged_calcite_bricks",
-    "ott:fine_calcite_ctm",
-    "ott:massive_calcite_bricks",
-    "ott:ornate_calcite_ctm",
-    "ott:overlapping_calcite_tiles",
-    "ott:polished_calcite",
-    "ott:simple_calcite_ctm",
-    "ott:smooth_calcite_column",
-    "ott:thick_inlayed_calcite",
-    "ott:tiled_bordered_calcite",
-    "ott:tiled_calcite_column",
-    "ott:tiny_brick_bordered_calcite"
+    "minecraft:calcite"
   ]
 }

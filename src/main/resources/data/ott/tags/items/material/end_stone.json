@@ -1,37 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:end_stone",
-    "ott:bordered_end_stone",
-    "ott:brick_bordered_end_stone",
-    "ott:curly_end_stone_ctm",
-    "ott:cut_end_stone_column",
-    "ott:edged_end_stone_bricks",
-    "ott:end_stone_blobs",
-    "ott:end_stone_brick_pattern",
-    "ott:end_stone_brick_paving",
-    "ott:end_stone_chiseled",
-    "ott:end_stone_crushed",
-    "ott:end_stone_diagonal_bricks",
-    "ott:end_stone_mesh",
-    "ott:end_stone_paving",
-    "ott:end_stone_polished",
-    "ott:end_stone_rotated_bricks",
-    "ott:end_stone_scales",
-    "ott:end_stone_small_tiles",
-    "ott:end_stone_spiral_pattern",
-    "ott:end_stone_squares",
-    "ott:end_stone_tiles",
-    "ott:fine_end_stone_ctm",
-    "ott:massive_end_stone_bricks",
-    "ott:ornate_end_stone_ctm",
-    "ott:overlapping_end_stone_tiles",
-    "ott:polished_end_stone",
-    "ott:simple_end_stone_ctm",
-    "ott:smooth_end_stone_column",
-    "ott:thick_inlayed_end_stone",
-    "ott:tiled_bordered_end_stone",
-    "ott:tiled_end_stone_column",
-    "ott:tiny_brick_bordered_end_stone"
+    "minecraft:end_stone"
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side",
-  "textures": {
-    "pane": "ott:block/mangrove_windows/mangrove_window_large",
-    "edge": "ott:block/mangrove_planks/mangrove_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

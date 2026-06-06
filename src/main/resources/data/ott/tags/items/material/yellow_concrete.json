@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:yellow_concrete",
-    "ott:yellow_concrete_ctm",
-    "ott:yellow_concrete_panel",
-    "ott:grill_yellow_concrete",
-    "ott:pegged_yellow_concrete",
-    "ott:smooth_yellow_concrete",
-    "ott:striped_yellow_concrete",
-    "ott:wired_yellow_concrete"
+    "minecraft:yellow_concrete"
   ]
 }

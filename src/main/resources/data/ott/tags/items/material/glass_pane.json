@@ -13,24 +13,10 @@
     "ott:sandstone_framed_glass_ctm_pane",
     "ott:stone_framed_glass_ctm_pane",
     "ott:scratched_glass_ctm_pane",
-    "ott:arched_leaded_glass_ctm_pane",
-    "ott:clear_leaded_glass_ctm_pane",
-    "ott:clear_leaded_glass_pane",
-    "ott:fancy_leaded_glass_ctm_pane",
-    "ott:fancy_leaded_glass_pane",
-    "ott:large_diamond_leaded_glass_pane",
     "ott:leaded_glass_pane",
     "ott:ornate_leaded_glass_ctm_pane",
-    "ott:ornate_leaded_glass_pane",
-    "ott:raster_leaded_glass_ctm_pane",
-    "ott:raster_leaded_glass_pane",
-    "ott:small_diamond_leaded_glass_ctm_pane",
-    "ott:small_diamond_leaded_glass_pane",
-    "ott:square_leaded_glass_pane",
-    "ott:vertical_leaded_glass_pane",
     "ott:circular_leaded_stained_glass_pane",
     "ott:soul_glass_ctm_pane",
-    "ott:soul_glass_pane",
-    "ott:lead_woven_glass_pane"
+    "ott:soul_glass_pane"
   ]
 }

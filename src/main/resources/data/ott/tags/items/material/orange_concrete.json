@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:orange_concrete",
-    "ott:orange_concrete_ctm",
-    "ott:orange_concrete_panel",
-    "ott:grill_orange_concrete",
-    "ott:pegged_orange_concrete",
-    "ott:smooth_orange_concrete",
-    "ott:striped_orange_concrete",
-    "ott:wired_orange_concrete"
+    "minecraft:orange_concrete"
   ]
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/cyan_stained_glass/vertical_striped_cyan_stained_glass"
-  },
-  "render_type": "minecraft:translucent"
-}

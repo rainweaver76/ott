@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/glass_pane",
-  "textures": {
-    "front": "ott:block/oak_planks/oak_woven_glass",
-    "side": "ott:block/oak_planks/oak_glass_pane_edge"
-  }
-}

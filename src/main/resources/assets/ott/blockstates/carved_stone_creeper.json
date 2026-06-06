@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "axis=x": {"model": "ott:block/stone/carved_stone_creeper", "x": 90, "y": 90},
-    "axis=y": {"model": "ott:block/stone/carved_stone_creeper"},
-    "axis=z": {"model": "ott:block/stone/carved_stone_creeper", "x": 90}
-  }
-}

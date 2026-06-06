@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:birch_door",
-    "ott:barred_birch_door",
-    "ott:beach_birch_door",
     "ott:birch_bamboo_door",
     "ott:birch_barn_door",
     "ott:birch_barn_glass_door",
@@ -23,24 +21,6 @@
     "ott:birch_waffle_door",
     "ott:birch_western_door",
     "ott:birch_whispering_door",
-    "ott:boarded_birch_door",
-    "ott:dual_paneled_birch_door",
-    "ott:fortified_birch_door",
-    "ott:gated_birch_door",
-    "ott:glass_birch_door",
-    "ott:heavy_birch_door",
-    "ott:japanese_birch_door",
-    "ott:modern_birch_door",
-    "ott:overgrown_birch_door",
-    "ott:paneled_birch_door",
-    "ott:pressed_birch_door",
-    "ott:screen_birch_door",
-    "ott:secret_birch_door",
-    "ott:shack_birch_door",
-    "ott:sliding_birch_door",
-    "ott:supported_birch_door",
-    "ott:tile_windowed_birch_door",
-    "ott:tiled_birch_door",
-    "ott:windowed_birch_door"
+    "ott:japanese_birch_door"
   ]
 }

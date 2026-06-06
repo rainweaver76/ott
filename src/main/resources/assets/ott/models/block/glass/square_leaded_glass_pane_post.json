@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_post",
-  "textures": {
-    "pane": "ott:block/glass/square_leaded_glass",
-    "edge": "ott:block/glass/leaded_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout"
-}

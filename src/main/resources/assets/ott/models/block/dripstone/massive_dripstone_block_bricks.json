@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/dripstone/massive_dripstone_block_bricks"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/ice/massive_ice_bricks"
-  },
-  "render_type": "minecraft:translucent"
-}

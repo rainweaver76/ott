@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "side":   "ott:block/stone/carved_stone_derp",
-    "top":    "ott:block/stone/carved_stone",
-    "bottom": "ott:block/stone/carved_stone_bottom"
-  }
-}

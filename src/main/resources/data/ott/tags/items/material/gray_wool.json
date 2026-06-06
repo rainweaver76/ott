@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:gray_wool",
-    "ott:cornered_gray_wool",
-    "ott:crafted_gray_wool",
-    "ott:harsh_quilted_gray_wool",
-    "ott:rectangle_gray_wool"
+    "minecraft:gray_wool"
   ]
 }

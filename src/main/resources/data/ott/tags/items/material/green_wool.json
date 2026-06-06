@@ -2,11 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:green_wool",
-    "ott:cornered_green_wool",
-    "ott:crafted_green_wool",
     "ott:delicate_green_wool",
-    "ott:harsh_quilted_green_wool",
-    "ott:ornamented_green_wool",
-    "ott:rectangle_green_wool"
+    "ott:ornamented_green_wool"
   ]
 }

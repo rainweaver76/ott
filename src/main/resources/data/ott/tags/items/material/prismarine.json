@@ -1,22 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:prismarine",
-    "ott:bordered_prismarine",
-    "ott:brick_bordered_prismarine",
-    "ott:curly_prismarine_ctm",
-    "ott:cut_prismarine_column",
-    "ott:edged_prismarine_bricks",
-    "ott:fine_prismarine_ctm",
-    "ott:massive_prismarine_bricks",
-    "ott:ornate_prismarine_ctm",
-    "ott:overlapping_prismarine_tiles",
-    "ott:polished_prismarine",
-    "ott:simple_prismarine_ctm",
-    "ott:smooth_prismarine_column",
-    "ott:thick_inlayed_prismarine",
-    "ott:tiled_bordered_prismarine",
-    "ott:tiled_prismarine_column",
-    "ott:tiny_brick_bordered_prismarine"
+    "minecraft:prismarine"
   ]
 }

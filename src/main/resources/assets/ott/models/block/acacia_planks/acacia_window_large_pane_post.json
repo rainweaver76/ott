@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_post",
-  "textures": {
-    "pane": "ott:block/acacia_windows/acacia_window_large",
-    "edge": "ott:block/acacia_planks/acacia_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

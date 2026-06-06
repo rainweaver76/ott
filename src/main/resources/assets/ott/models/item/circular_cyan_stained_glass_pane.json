@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/glass_pane",
-  "textures": {
-    "front": "ott:block/cyan_stained_glass/circular_cyan_stained_glass",
-    "side": "ott:block/glass/leaded_glass_pane_edge"
-  },
-  "render_type": "minecraft:translucent"
-}

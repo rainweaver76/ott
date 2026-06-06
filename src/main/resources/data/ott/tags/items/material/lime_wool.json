@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:lime_wool",
-    "ott:cornered_lime_wool",
-    "ott:crafted_lime_wool",
-    "ott:harsh_quilted_lime_wool",
-    "ott:rectangle_lime_wool"
+    "minecraft:lime_wool"
   ]
 }

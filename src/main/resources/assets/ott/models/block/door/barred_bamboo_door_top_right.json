@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/door_top_right",
-    "render_type": "minecraft:cutout",
-    "textures": {
-        "bottom": "ott:block/bamboo_door/barred_bamboo_door_bottom",
-        "top": "ott:block/bamboo_door/barred_bamboo_door_top"
-    }
-}

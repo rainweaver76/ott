@@ -1,18 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:iron_block",
-    "ott:iron_block",
-    "ott:iron_block_bordered",
-    "ott:iron_block_chiseled",
-    "ott:iron_block_connecting",
-    "ott:iron_block_framed",
-    "ott:iron_block_gears",
-    "ott:iron_block_lines",
-    "ott:iron_block_patterned",
-    "ott:iron_block_pipes",
-    "ott:iron_block_polished",
-    "ott:iron_block_processed",
-    "ott:iron_block_small_bricks"
+    "minecraft:iron_block"
   ]
 }

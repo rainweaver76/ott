@@ -1,24 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:deepslate",
-    "ott:bordered_deepslate",
-    "ott:brick_bordered_deepslate",
-    "ott:curly_deepslate_ctm",
-    "ott:cut_deepslate_column",
-    "ott:deepslate_cut_polished",
-    "ott:deepslate_cut_small_brick",
-    "ott:edged_deepslate_bricks",
-    "ott:fine_deepslate_ctm",
-    "ott:massive_deepslate_bricks",
-    "ott:ornate_deepslate_ctm",
-    "ott:overlapping_deepslate_tiles",
-    "ott:polished_deepslate",
-    "ott:simple_deepslate_ctm",
-    "ott:smooth_deepslate_column",
-    "ott:thick_inlayed_deepslate",
-    "ott:tiled_bordered_deepslate",
-    "ott:tiled_deepslate_column",
-    "ott:tiny_brick_bordered_deepslate"
+    "minecraft:deepslate"
   ]
 }

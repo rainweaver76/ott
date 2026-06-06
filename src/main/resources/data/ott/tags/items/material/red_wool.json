@@ -2,11 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:red_wool",
-    "ott:cornered_red_wool",
-    "ott:crafted_red_wool",
     "ott:delicate_red_wool",
-    "ott:harsh_quilted_red_wool",
-    "ott:ornamented_red_wool",
-    "ott:rectangle_red_wool"
+    "ott:ornamented_red_wool"
   ]
 }

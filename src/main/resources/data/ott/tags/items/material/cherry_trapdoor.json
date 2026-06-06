@@ -2,8 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:cherry_trapdoor",
-    "ott:barred_cherry_trapdoor",
-    "ott:checkered_cherry_trapdoor",
     "ott:cherry_bamboo_trapdoor",
     "ott:cherry_barn_trapdoor",
     "ott:cherry_barred_trapdoor",
@@ -17,27 +15,6 @@
     "ott:cherry_paper_trapdoor",
     "ott:cherry_swamp_trapdoor",
     "ott:cherry_tropical_trapdoor",
-    "ott:cherry_whispering_trapdoor",
-    "ott:classic_cherry_trapdoor",
-    "ott:classic_windowed_cherry_trapdoor",
-    "ott:cobweb_cherry_trapdoor",
-    "ott:distorted_cherry_trapdoor",
-    "ott:fancy_cherry_trapdoor",
-    "ott:golden_barred_cherry_trapdoor",
-    "ott:heavy_cherry_trapdoor",
-    "ott:iron_barred_cherry_trapdoor",
-    "ott:leafy_cherry_trapdoor",
-    "ott:meshed_cherry_trapdoor",
-    "ott:overgrown_cherry_trapdoor",
-    "ott:pointless_cherry_trapdoor",
-    "ott:screened_cherry_trapdoor",
-    "ott:slotted_cherry_trapdoor",
-    "ott:solid_cherry_trapdoor",
-    "ott:suspicious_cherry_trapdoor",
-    "ott:twisted_cherry_trapdoor",
-    "ott:vined_cherry_trapdoor",
-    "ott:warted_cherry_trapdoor",
-    "ott:windowed_cherry_trapdoor",
-    "ott:woven_cherry_trapdoor"
+    "ott:cherry_whispering_trapdoor"
   ]
 }

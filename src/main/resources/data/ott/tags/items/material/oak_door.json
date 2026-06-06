@@ -2,14 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:oak_door",
-    "ott:barred_oak_door",
-    "ott:beach_oak_door",
-    "ott:boarded_oak_door",
-    "ott:dual_paneled_oak_door",
-    "ott:fortified_oak_door",
-    "ott:gated_oak_door",
-    "ott:glass_oak_door",
-    "ott:heavy_oak_door",
     "ott:japanese_oak_door",
     "ott:oak_bamboo_door",
     "ott:oak_barn_door",
@@ -29,18 +21,6 @@
     "ott:oak_tropical_door",
     "ott:oak_waffle_door",
     "ott:oak_western_door",
-    "ott:oak_whispering_door",
-    "ott:overgrown_oak_door",
-    "ott:paneled_oak_door",
-    "ott:paper_oak_door",
-    "ott:pressed_oak_door",
-    "ott:screen_oak_door",
-    "ott:secret_oak_door",
-    "ott:shack_oak_door",
-    "ott:sliding_oak_door",
-    "ott:supported_oak_door",
-    "ott:tile_windowed_oak_door",
-    "ott:tiled_oak_door",
-    "ott:windowed_oak_door"
+    "ott:oak_whispering_door"
   ]
 }

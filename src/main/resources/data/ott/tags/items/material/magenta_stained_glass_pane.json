@@ -2,7 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:magenta_stained_glass_pane",
-    "ott:arched_magenta_stained_glass_ctm_pane",
     "ott:magenta_framed_glass_ctm_pane",
     "ott:magenta_stained_glass_ctm_pane",
     "ott:fancy_magenta_stained_glass_ctm_pane",

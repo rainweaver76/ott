@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:purple_concrete",
-    "ott:purple_concrete_ctm",
-    "ott:purple_concrete_panel",
-    "ott:grill_purple_concrete",
-    "ott:pegged_purple_concrete",
-    "ott:smooth_purple_concrete",
-    "ott:striped_purple_concrete",
-    "ott:wired_purple_concrete"
+    "minecraft:purple_concrete"
   ]
 }

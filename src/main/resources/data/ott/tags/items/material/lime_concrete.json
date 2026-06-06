@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:lime_concrete",
-    "ott:lime_concrete_ctm",
-    "ott:lime_concrete_panel",
-    "ott:grill_lime_concrete",
-    "ott:pegged_lime_concrete",
-    "ott:smooth_lime_concrete",
-    "ott:striped_lime_concrete",
-    "ott:wired_lime_concrete"
+    "minecraft:lime_concrete"
   ]
 }

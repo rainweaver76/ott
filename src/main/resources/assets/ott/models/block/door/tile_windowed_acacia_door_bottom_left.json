@@ -1,8 +1,0 @@
-{
-    "parent": "minecraft:block/door_bottom_left",
-    "render_type": "minecraft:cutout",
-    "textures": {
-        "bottom": "ott:block/acacia_door/tile_windowed_acacia_door_bottom",
-        "top": "ott:block/acacia_door/tile_windowed_acacia_door_top"
-    }
-}

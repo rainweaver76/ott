@@ -1,9 +1,0 @@
-{
-  "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
-  "textures": {
-    "all": "ott:block/granite/ctm/polished_granite"
-  },
-  "connections": {"all": [{"type": "is_same_block"}]}
-}

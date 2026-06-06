@@ -1,8 +1,0 @@
-{
-  "parent": "ott:item/glass_pane_ctm_vertical",
-  "textures": {
-    "front": "ott:block/spruce_windows/ctm/spruce_window_rounded",
-    "side": "minecraft:block/spruce_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

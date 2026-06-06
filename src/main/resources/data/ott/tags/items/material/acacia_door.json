@@ -21,26 +21,7 @@
     "ott:acacia_waffle_door",
     "ott:acacia_western_door",
     "ott:acacia_whispering_door",
-    "ott:beach_acacia_door",
-    "ott:boarded_acacia_door",
-    "ott:dual_paneled_acacia_door",
-    "ott:fortified_acacia_door",
-    "ott:gated_acacia_door",
-    "ott:glass_acacia_door",
-    "ott:heavy_acacia_door",
     "ott:japanese_acacia_door",
-    "ott:modern_acacia_door",
-    "ott:overgrown_acacia_door",
-    "ott:paneled_acacia_door",
-    "ott:paper_acacia_door",
-    "ott:pressed_acacia_door",
-    "ott:screen_acacia_door",
-    "ott:secret_acacia_door",
-    "ott:shack_acacia_door",
-    "ott:sliding_acacia_door",
-    "ott:supported_acacia_door",
-    "ott:tile_windowed_acacia_door",
-    "ott:tiled_acacia_door",
-    "ott:windowed_acacia_door"
+    "ott:paper_acacia_door"
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side_alt",
-  "textures": {
-    "pane": "ott:block/crimson_windows/crimson_window_bars",
-    "edge": "ott:block/crimson_planks/crimson_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

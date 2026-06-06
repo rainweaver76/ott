@@ -21,26 +21,6 @@
     "ott:bamboo_waffle_door",
     "ott:bamboo_western_door",
     "ott:bamboo_whispering_door",
-    "ott:barred_bamboo_door",
-    "ott:beach_bamboo_door",
-    "ott:boarded_bamboo_door",
-    "ott:dual_paneled_bamboo_door",
-    "ott:fortified_bamboo_door",
-    "ott:gated_bamboo_door",
-    "ott:glass_bamboo_door",
-    "ott:heavy_bamboo_door",
-    "ott:japanese_bamboo_door",
-    "ott:modern_bamboo_door",
-    "ott:overgrown_bamboo_door",
-    "ott:paneled_bamboo_door",
-    "ott:paper_bamboo_door",
-    "ott:pressed_bamboo_door",
-    "ott:screen_bamboo_door",
-    "ott:secret_bamboo_door",
-    "ott:shack_bamboo_door",
-    "ott:sliding_bamboo_door",
-    "ott:supported_bamboo_door",
-    "ott:tile_windowed_bamboo_door",
-    "ott:tiled_bamboo_door"
+    "ott:japanese_bamboo_door"
   ]
 }

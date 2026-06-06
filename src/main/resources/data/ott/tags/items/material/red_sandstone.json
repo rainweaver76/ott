@@ -1,32 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:red_sandstone",
-    "ott:bordered_red_sandstone",
-    "ott:brick_bordered_red_sandstone",
-    "ott:curly_red_sandstone_ctm",
-    "ott:cut_red_sandstone_column",
-    "ott:edged_red_sandstone_bricks",
-    "ott:fine_red_sandstone_ctm",
-    "ott:massive_red_sandstone_bricks",
-    "ott:ornate_red_sandstone_ctm",
-    "ott:overlapping_red_sandstone_tiles",
-    "ott:polished_red_sandstone",
-    "ott:red_sandstone",
-    "ott:red_sandstone_brick_pattern",
-    "ott:red_sandstone_brick_paving",
-    "ott:red_sandstone_bricks",
-    "ott:red_sandstone_diagonal_bricks",
-    "ott:red_sandstone_large_tiles",
-    "ott:red_sandstone_polished",
-    "ott:red_sandstone_rotated_bricks",
-    "ott:red_sandstone_tiles",
-    "ott:simple_red_sandstone_ctm",
-    "ott:smooth_red_sandstone_column",
-    "ott:thick_inlayed_red_sandstone",
-    "ott:tiled_bordered_red_sandstone",
-    "ott:tiled_red_sandstone_column",
-    "ott:tiny_brick_bordered_red_sandstone",
-    "ott:cut_red_sandstone"
+    "minecraft:red_sandstone"
   ]
 }

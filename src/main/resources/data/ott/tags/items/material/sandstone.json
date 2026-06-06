@@ -1,32 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:sandstone",
-    "ott:bordered_sandstone",
-    "ott:brick_bordered_sandstone",
-    "ott:curly_sandstone_ctm",
-    "ott:cut_sandstone_column",
-    "ott:edged_sandstone_bricks",
-    "ott:fine_sandstone_ctm",
-    "ott:massive_sandstone_bricks",
-    "ott:ornate_sandstone_ctm",
-    "ott:overlapping_sandstone_tiles",
-    "ott:polished_sandstone",
-    "ott:sandstone",
-    "ott:sandstone_brick_pattern",
-    "ott:sandstone_brick_paving",
-    "ott:sandstone_bricks",
-    "ott:sandstone_diagonal_bricks",
-    "ott:sandstone_large_tiles",
-    "ott:sandstone_polished",
-    "ott:sandstone_rotated_bricks",
-    "ott:sandstone_tiles",
-    "ott:simple_sandstone_ctm",
-    "ott:smooth_sandstone_column",
-    "ott:thick_inlayed_sandstone",
-    "ott:tiled_bordered_sandstone",
-    "ott:tiled_sandstone_column",
-    "ott:tiny_brick_bordered_sandstone",
-    "ott:cut_sandstone"
+    "minecraft:sandstone"
   ]
 }

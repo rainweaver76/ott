@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/glass_pane",
-  "textures": {
-    "front": "ott:block/jungle_windows/jungle_window_panes",
-    "side": "ott:block/jungle_planks/jungle_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

@@ -1,34 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:red_nether_bricks",
-    "ott:bordered_red_nether_bricks",
-    "ott:brick_bordered_red_nether_bricks",
-    "ott:curly_red_nether_bricks_ctm",
-    "ott:cut_red_nether_bricks_column",
-    "ott:edged_red_nether_bricks_bricks",
-    "ott:fine_red_nether_bricks_ctm",
-    "ott:massive_red_nether_bricks_bricks",
-    "ott:ornate_red_nether_bricks_ctm",
-    "ott:overlapping_red_nether_bricks_tiles",
-    "ott:polished_red_nether_bricks",
-    "ott:simple_red_nether_bricks_ctm",
-    "ott:smooth_red_nether_bricks_column",
-    "ott:thick_inlayed_red_nether_bricks",
-    "ott:tiled_bordered_red_nether_bricks",
-    "ott:tiled_red_nether_bricks_column",
-    "ott:tiny_brick_bordered_red_nether_bricks",
-    "ott:red_nether_bricks_beams",
-    "ott:red_nether_bricks_brick_pattern",
-    "ott:red_nether_bricks_brick_paving",
-    "ott:red_nether_bricks_chiseled_squares",
-    "ott:red_nether_bricks_diagonal_bricks",
-    "ott:red_nether_bricks_large_bricks",
-    "ott:red_nether_bricks_large_tiles",
-    "ott:red_nether_bricks_rotated_bricks",
-    "ott:red_nether_bricks_small_tiles",
-    "ott:red_nether_bricks_smooth",
-    "ott:red_nether_bricks_squares",
-    "ott:red_nether_bricks_tiles"
+    "minecraft:red_nether_bricks"
   ]
 }

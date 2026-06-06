@@ -1,14 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:magenta_terracotta",
-    "ott:magenta_terracotta_column",
-    "ott:magenta_terracotta_ctm",
-    "ott:circular_magenta_terracotta",
-    "ott:curled_magenta_terracotta",
-    "ott:hexagonical_magenta_terracotta",
-    "ott:inscribed_magenta_terracotta",
-    "ott:small_magenta_terracotta_tiles",
-    "ott:starry_magenta_terracotta"
+    "minecraft:magenta_terracotta"
   ]
 }

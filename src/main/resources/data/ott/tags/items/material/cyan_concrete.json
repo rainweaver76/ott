@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:cyan_concrete",
-    "ott:cyan_concrete_ctm",
-    "ott:cyan_concrete_panel",
-    "ott:grill_cyan_concrete",
-    "ott:pegged_cyan_concrete",
-    "ott:smooth_cyan_concrete",
-    "ott:striped_cyan_concrete",
-    "ott:wired_cyan_concrete"
+    "minecraft:cyan_concrete"
   ]
 }

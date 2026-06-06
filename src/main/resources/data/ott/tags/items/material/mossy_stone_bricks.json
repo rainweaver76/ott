@@ -1,22 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:mossy_stone_bricks",
-    "ott:bordered_mossy_stone_bricks",
-    "ott:brick_bordered_mossy_stone_bricks",
-    "ott:curly_mossy_stone_bricks_ctm",
-    "ott:cut_mossy_stone_bricks_column",
-    "ott:edged_mossy_stone_bricks_bricks",
-    "ott:fine_mossy_stone_bricks_ctm",
-    "ott:massive_mossy_stone_bricks_bricks",
-    "ott:ornate_mossy_stone_bricks_ctm",
-    "ott:overlapping_mossy_stone_bricks_tiles",
-    "ott:polished_mossy_stone_bricks",
-    "ott:simple_mossy_stone_bricks_ctm",
-    "ott:smooth_mossy_stone_bricks_column",
-    "ott:thick_inlayed_mossy_stone_bricks",
-    "ott:tiled_bordered_mossy_stone_bricks",
-    "ott:tiled_mossy_stone_bricks_column",
-    "ott:tiny_brick_bordered_mossy_stone_bricks"
+    "minecraft:mossy_stone_bricks"
   ]
 }

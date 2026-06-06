@@ -1,29 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:blue_ice",
-    "ott:blue_ice_bordered",
-    "ott:blue_ice_bricks",
-    "ott:blue_ice_chiseled",
-    "ott:blue_ice_ctm",
-    "ott:blue_ice_patterned",
-    "ott:blue_ice_slanted_tiles",
-    "ott:blue_ice_tiles",
-    "ott:bordered_blue_ice",
-    "ott:brick_bordered_blue_ice",
-    "ott:curly_blue_ice_ctm",
-    "ott:cut_blue_ice_column",
-    "ott:edged_blue_ice_bricks",
-    "ott:fine_blue_ice_ctm",
-    "ott:massive_blue_ice_bricks",
-    "ott:ornate_blue_ice_ctm",
-    "ott:overlapping_blue_ice_tiles",
-    "ott:polished_blue_ice",
-    "ott:simple_blue_ice_ctm",
-    "ott:smooth_blue_ice_column",
-    "ott:thick_inlayed_blue_ice",
-    "ott:tiled_blue_ice_column",
-    "ott:tiled_bordered_blue_ice",
-    "ott:tiny_brick_bordered_blue_ice"
+    "minecraft:blue_ice"
   ]
 }

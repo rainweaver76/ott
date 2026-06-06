@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_noside",
-  "textures": {
-    "pane": "ott:block/dark_oak_windows/dark_oak_window_panes",
-    "edge": "ott:block/dark_oak_planks/dark_oak_glass_pane_edge"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

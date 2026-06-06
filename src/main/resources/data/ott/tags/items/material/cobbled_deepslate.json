@@ -1,20 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:cobbled_deepslate",
-    "ott:cobbled_deepslate_beams",
-    "ott:cobbled_deepslate_brick_pattern",
-    "ott:cobbled_deepslate_brick_paving",
-    "ott:cobbled_deepslate_bricks",
-    "ott:cobbled_deepslate_ctm",
-    "ott:cobbled_deepslate_large_tiles",
-    "ott:cobbled_deepslate_paving",
-    "ott:cobbled_deepslate_pulverized",
-    "ott:cobbled_deepslate_rotated_bricks",
-    "ott:cobbled_deepslate_small_tiles",
-    "ott:cobbled_deepslate_squares",
-    "ott:cobbled_deepslate_stripes",
-    "ott:cobbled_deepslate_tiles",
-    "ott:cobbled_deepslate_worn_stripes"
+    "minecraft:cobbled_deepslate"
   ]
 }

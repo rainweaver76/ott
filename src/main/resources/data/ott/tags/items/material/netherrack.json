@@ -1,31 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:netherrack",
-    "ott:bordered_netherrack",
-    "ott:brick_bordered_netherrack",
-    "ott:curly_netherrack_ctm",
-    "ott:cut_netherrack_column",
-    "ott:edged_netherrack_bricks",
-    "ott:fine_netherrack_ctm",
-    "ott:massive_netherrack_bricks",
-    "ott:netherrack_beams",
-    "ott:netherrack_brick_pattern",
-    "ott:netherrack_brick_paving",
-    "ott:netherrack_bricks",
-    "ott:netherrack_dented",
-    "ott:netherrack_rotated_bricks",
-    "ott:netherrack_small_tiles",
-    "ott:netherrack_stripes",
-    "ott:netherrack_tiles",
-    "ott:ornate_netherrack_ctm",
-    "ott:overlapping_netherrack_tiles",
-    "ott:polished_netherrack",
-    "ott:simple_netherrack_ctm",
-    "ott:smooth_netherrack_column",
-    "ott:thick_inlayed_netherrack",
-    "ott:tiled_bordered_netherrack",
-    "ott:tiled_netherrack_column",
-    "ott:tiny_brick_bordered_netherrack"
+    "minecraft:netherrack"
   ]
 }

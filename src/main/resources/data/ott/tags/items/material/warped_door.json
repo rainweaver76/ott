@@ -2,26 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:warped_door",
-    "ott:barred_warped_door",
-    "ott:beach_warped_door",
-    "ott:boarded_warped_door",
-    "ott:dual_paneled_warped_door",
-    "ott:fortified_warped_door",
-    "ott:gated_warped_door",
-    "ott:glass_warped_door",
-    "ott:heavy_warped_door",
     "ott:japanese_warped_door",
-    "ott:modern_warped_door",
-    "ott:paneled_warped_door",
-    "ott:paper_warped_door",
-    "ott:pressed_warped_door",
-    "ott:screen_warped_door",
-    "ott:secret_warped_door",
-    "ott:shack_warped_door",
-    "ott:sliding_warped_door",
-    "ott:supported_warped_door",
-    "ott:tile_windowed_warped_door",
-    "ott:tiled_warped_door",
     "ott:warped_bamboo_door",
     "ott:warped_barn_door",
     "ott:warped_barn_glass_door",
@@ -40,7 +21,6 @@
     "ott:warped_tropical_door",
     "ott:warped_waffle_door",
     "ott:warped_western_door",
-    "ott:warped_whispering_door",
-    "ott:windowed_warped_door"
+    "ott:warped_whispering_door"
   ]
 }

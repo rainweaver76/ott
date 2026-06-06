@@ -1,17 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:oak_leaves",
-    "ott:apple_oak_leaves",
-    "ott:cherry_oak_leaves",
-    "ott:dead_oak_leaves",
-    "ott:frosted_oak_leaves",
-    "ott:golden_apple_oak_leaves",
-    "ott:golden_cherry_oak_leaves",
-    "ott:golden_oak_leaves",
-    "ott:magenta_flower_oak_leaves",
-    "ott:orange_oak_leaves",
-    "ott:red_oak_leaves",
-    "ott:white_flower_oak_leaves"
+    "minecraft:oak_leaves"
   ]
 }

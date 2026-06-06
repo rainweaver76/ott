@@ -1,14 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:orange_terracotta",
-    "ott:orange_terracotta_column",
-    "ott:orange_terracotta_ctm",
-    "ott:circular_orange_terracotta",
-    "ott:curled_orange_terracotta",
-    "ott:hexagonical_orange_terracotta",
-    "ott:inscribed_orange_terracotta",
-    "ott:small_orange_terracotta_tiles",
-    "ott:starry_orange_terracotta"
+    "minecraft:orange_terracotta"
   ]
 }

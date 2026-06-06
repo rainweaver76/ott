@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/crimson_door/windowed_crimson_door_bottom",
-    "particle": "ott:block/crimson_door/windowed_crimson_door_top",
-    "top": "ott:block/crimson_door/windowed_crimson_door_top"
-  }
-}

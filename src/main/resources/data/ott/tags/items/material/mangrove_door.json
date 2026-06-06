@@ -2,15 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:mangrove_door",
-    "ott:barred_mangrove_door",
-    "ott:beach_mangrove_door",
-    "ott:boarded_mangrove_door",
-    "ott:cut_mangrove_door",
-    "ott:dual_paneled_mangrove_door",
-    "ott:fortified_mangrove_door",
-    "ott:gated_mangrove_door",
-    "ott:glass_mangrove_door",
-    "ott:heavy_mangrove_door",
     "ott:japanese_mangrove_door",
     "ott:mangrove_bamboo_door",
     "ott:mangrove_barn_door",
@@ -30,17 +21,6 @@
     "ott:mangrove_tropical_door",
     "ott:mangrove_waffle_door",
     "ott:mangrove_western_door",
-    "ott:mangrove_whispering_door",
-    "ott:modern_mangrove_door",
-    "ott:overgrown_mangrove_door",
-    "ott:paneled_mangrove_door",
-    "ott:paper_mangrove_door",
-    "ott:pressed_mangrove_door",
-    "ott:reinforced_mangrove_door",
-    "ott:secret_mangrove_door",
-    "ott:sliding_mangrove_door",
-    "ott:supported_mangrove_door",
-    "ott:tile_windowed_mangrove_door",
-    "ott:windowed_mangrove_door"
+    "ott:mangrove_whispering_door"
   ]
 }

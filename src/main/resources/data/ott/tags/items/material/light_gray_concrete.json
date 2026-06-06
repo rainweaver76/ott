@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:light_gray_concrete",
-    "ott:light_gray_concrete_ctm",
-    "ott:light_gray_concrete_panel",
-    "ott:grill_light_gray_concrete",
-    "ott:pegged_light_gray_concrete",
-    "ott:smooth_light_gray_concrete",
-    "ott:striped_light_gray_concrete",
-    "ott:wired_light_gray_concrete"
+    "minecraft:light_gray_concrete"
   ]
 }

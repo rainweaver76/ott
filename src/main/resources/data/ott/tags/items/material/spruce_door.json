@@ -2,23 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:spruce_door",
-    "ott:barred_spruce_door",
-    "ott:beach_spruce_door",
-    "ott:dual_paneled_spruce_door",
-    "ott:fortified_spruce_door",
-    "ott:gated_spruce_door",
-    "ott:glass_spruce_door",
-    "ott:heavy_spruce_door",
     "ott:japanese_spruce_door",
-    "ott:modern_spruce_door",
-    "ott:overgrown_spruce_door",
-    "ott:paneled_spruce_door",
-    "ott:paper_spruce_door",
-    "ott:pressed_spruce_door",
-    "ott:screen_spruce_door",
-    "ott:secret_spruce_door",
-    "ott:shack_spruce_door",
-    "ott:sliding_spruce_door",
     "ott:spruce_bamboo_door",
     "ott:spruce_barn_door",
     "ott:spruce_barn_glass_door",
@@ -37,10 +21,6 @@
     "ott:spruce_tropical_door",
     "ott:spruce_waffle_door",
     "ott:spruce_western_door",
-    "ott:spruce_whispering_door",
-    "ott:supported_spruce_door",
-    "ott:tile_windowed_spruce_door",
-    "ott:tiled_spruce_door",
-    "ott:windowed_spruce_door"
+    "ott:spruce_whispering_door"
   ]
 }

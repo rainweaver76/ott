@@ -1,14 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:green_terracotta",
-    "ott:green_terracotta_column",
-    "ott:green_terracotta_ctm",
-    "ott:circular_green_terracotta",
-    "ott:curled_green_terracotta",
-    "ott:hexagonical_green_terracotta",
-    "ott:inscribed_green_terracotta",
-    "ott:small_green_terracotta_tiles",
-    "ott:starry_green_terracotta"
+    "minecraft:green_terracotta"
   ]
 }

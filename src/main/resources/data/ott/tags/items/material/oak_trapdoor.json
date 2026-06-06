@@ -2,18 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:oak_trapdoor",
-    "ott:airy_oak_trapdoor",
-    "ott:barred_oak_trapdoor",
-    "ott:checkered_oak_trapdoor",
-    "ott:classic_windowed_oak_trapdoor",
-    "ott:cobweb_oak_trapdoor",
-    "ott:distorted_oak_trapdoor",
-    "ott:fancy_oak_trapdoor",
-    "ott:golden_barred_oak_trapdoor",
-    "ott:heavy_oak_trapdoor",
-    "ott:iron_barred_oak_trapdoor",
-    "ott:leafy_oak_trapdoor",
-    "ott:meshed_oak_trapdoor",
     "ott:oak_bamboo_trapdoor",
     "ott:oak_barn_trapdoor",
     "ott:oak_barred_trapdoor",
@@ -26,17 +14,6 @@
     "ott:oak_paper_trapdoor",
     "ott:oak_swamp_trapdoor",
     "ott:oak_tropical_trapdoor",
-    "ott:oak_whispering_trapdoor",
-    "ott:overgrown_oak_trapdoor",
-    "ott:pointless_oak_trapdoor",
-    "ott:screened_oak_trapdoor",
-    "ott:slotted_oak_trapdoor",
-    "ott:solid_oak_trapdoor",
-    "ott:suspicious_oak_trapdoor",
-    "ott:twisted_oak_trapdoor",
-    "ott:vined_oak_trapdoor",
-    "ott:warted_oak_trapdoor",
-    "ott:windowed_oak_trapdoor",
-    "ott:woven_oak_trapdoor"
+    "ott:oak_whispering_trapdoor"
   ]
 }

@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:black_wool",
-    "ott:cornered_black_wool",
-    "ott:crafted_black_wool",
-    "ott:harsh_quilted_black_wool",
-    "ott:rectangle_black_wool"
+    "minecraft:black_wool"
   ]
 }

@@ -1,22 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:gilded_blackstone",
-    "ott:bordered_gilded_blackstone",
-    "ott:brick_bordered_gilded_blackstone",
-    "ott:curly_gilded_blackstone_ctm",
-    "ott:cut_gilded_blackstone_column",
-    "ott:edged_gilded_blackstone_bricks",
-    "ott:fine_gilded_blackstone_ctm",
-    "ott:massive_gilded_blackstone_bricks",
-    "ott:ornate_gilded_blackstone_ctm",
-    "ott:overlapping_gilded_blackstone_tiles",
-    "ott:polished_gilded_blackstone",
-    "ott:simple_gilded_blackstone_ctm",
-    "ott:smooth_gilded_blackstone_column",
-    "ott:thick_inlayed_gilded_blackstone",
-    "ott:tiled_bordered_gilded_blackstone",
-    "ott:tiled_gilded_blackstone_column",
-    "ott:tiny_brick_bordered_gilded_blackstone"
+    "minecraft:gilded_blackstone"
   ]
 }

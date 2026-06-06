@@ -1,26 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:prismarine_bricks",
-    "ott:edged_prismarine_bricks",
-    "ott:massive_prismarine_bricks",
-    "ott:prismarine_bricks_beams",
-    "ott:prismarine_bricks_brick_pattern",
-    "ott:prismarine_bricks_brick_paving",
-    "ott:prismarine_bricks_bricks",
-    "ott:prismarine_bricks_chiseled_circles",
-    "ott:prismarine_bricks_chiseled_squares",
-    "ott:prismarine_bricks_diagonal_bricks",
-    "ott:prismarine_bricks_diagonal_tiles",
-    "ott:prismarine_bricks_dotted",
-    "ott:prismarine_bricks_pillars",
-    "ott:prismarine_bricks_polished",
-    "ott:prismarine_bricks_rotated_bricks",
-    "ott:prismarine_bricks_rows",
-    "ott:prismarine_bricks_small_tiles",
-    "ott:prismarine_bricks_squares",
-    "ott:prismarine_bricks_tiles",
-    "ott:prismarine_bricks_wavy",
-    "ott:prismarine_bricks_woven"
+    "minecraft:prismarine_bricks"
   ]
 }

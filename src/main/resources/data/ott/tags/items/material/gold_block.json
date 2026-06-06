@@ -1,17 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:gold_block",
-    "ott:gold_block",
-    "ott:gold_block_beams",
-    "ott:gold_block_bordered",
-    "ott:gold_block_lines",
-    "ott:gold_block_pattern",
-    "ott:gold_block_polished",
-    "ott:gold_block_scales",
-    "ott:gold_block_small_bricks",
-    "ott:gold_block_small_tiles",
-    "ott:gold_block_striped",
-    "ott:gold_block_tiles"
+    "minecraft:gold_block"
   ]
 }

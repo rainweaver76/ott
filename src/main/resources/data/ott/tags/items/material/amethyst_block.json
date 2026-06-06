@@ -1,31 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:amethyst_block",
-    "ott:amethyst_block_beams",
-    "ott:amethyst_block_bordered_diagonal_tiles",
-    "ott:amethyst_block_bricks",
-    "ott:amethyst_block_ctm",
-    "ott:amethyst_block_cut",
-    "ott:amethyst_block_edged",
-    "ott:amethyst_block_polished",
-    "ott:amethyst_block_shiny",
-    "ott:amethyst_block_tiles",
-    "ott:bordered_amethyst_block",
-    "ott:brick_bordered_amethyst_block",
-    "ott:curly_amethyst_block_ctm",
-    "ott:cut_amethyst_block_column",
-    "ott:edged_amethyst_block_bricks",
-    "ott:fine_amethyst_block_ctm",
-    "ott:massive_amethyst_block_bricks",
-    "ott:ornate_amethyst_block_ctm",
-    "ott:overlapping_amethyst_block_tiles",
-    "ott:polished_amethyst_block",
-    "ott:simple_amethyst_block_ctm",
-    "ott:smooth_amethyst_block_column",
-    "ott:thick_inlayed_amethyst_block",
-    "ott:tiled_amethyst_block_column",
-    "ott:tiled_bordered_amethyst_block",
-    "ott:tiny_brick_bordered_amethyst_block"
+    "minecraft:amethyst_block"
   ]
 }

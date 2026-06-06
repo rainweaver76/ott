@@ -1,35 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:andesite",
-    "ott:andesite_brick_pattern",
-    "ott:andesite_brick_paving",
-    "ott:andesite_bricks",
-    "ott:andesite_cut_polished",
-    "ott:andesite_cut_small_brick",
-    "ott:andesite_diagonal_bricks",
-    "ott:andesite_dotted",
-    "ott:andesite_paving",
-    "ott:andesite_polished",
-    "ott:andesite_rotated_bricks",
-    "ott:andesite_squares",
-    "ott:andesite_tiles",
-    "ott:andesite_wavy",
-    "ott:brick_bordered_andesite",
-    "ott:curly_andesite_ctm",
-    "ott:cut_andesite_column",
-    "ott:edged_andesite_bricks",
-    "ott:fine_andesite_ctm",
-    "ott:massive_andesite_bricks",
-    "ott:ornate_andesite_ctm",
-    "ott:overlapping_andesite_tiles",
-    "ott:polished_andesite",
-    "ott:simple_andesite_ctm",
-    "ott:smooth_andesite_column",
-    "ott:thick_inlayed_andesite",
-    "ott:tiled_andesite_column",
-    "ott:tiled_bordered_andesite",
-    "ott:tiny_brick_bordered_andesite",
-    "ott:bordered_andesite"
+    "minecraft:andesite"
   ]
 }

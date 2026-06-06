@@ -2,12 +2,6 @@
   "replace": false,
   "values": [
     "minecraft:crimson_trapdoor",
-    "ott:airy_crimson_trapdoor",
-    "ott:barred_crimson_trapdoor",
-    "ott:checkered_crimson_trapdoor",
-    "ott:classic_crimson_trapdoor",
-    "ott:classic_windowed_crimson_trapdoor",
-    "ott:cobweb_crimson_trapdoor",
     "ott:crimson_bamboo_trapdoor",
     "ott:crimson_barn_trapdoor",
     "ott:crimson_beach_trapdoor",
@@ -20,23 +14,6 @@
     "ott:crimson_paper_trapdoor",
     "ott:crimson_swamp_trapdoor",
     "ott:crimson_tropical_trapdoor",
-    "ott:crimson_whispering_trapdoor",
-    "ott:distorted_crimson_trapdoor",
-    "ott:fancy_crimson_trapdoor",
-    "ott:golden_barred_crimson_trapdoor",
-    "ott:heavy_crimson_trapdoor",
-    "ott:iron_barred_crimson_trapdoor",
-    "ott:leafy_crimson_trapdoor",
-    "ott:meshed_crimson_trapdoor",
-    "ott:overgrown_crimson_trapdoor",
-    "ott:pointless_crimson_trapdoor",
-    "ott:screened_crimson_trapdoor",
-    "ott:slotted_crimson_trapdoor",
-    "ott:solid_crimson_trapdoor",
-    "ott:twisted_crimson_trapdoor",
-    "ott:vined_crimson_trapdoor",
-    "ott:warted_crimson_trapdoor",
-    "ott:windowed_crimson_trapdoor",
-    "ott:woven_crimson_trapdoor"
+    "ott:crimson_whispering_trapdoor"
   ]
 }

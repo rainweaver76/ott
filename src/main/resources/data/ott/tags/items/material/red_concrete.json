@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:red_concrete",
-    "ott:red_concrete_ctm",
-    "ott:red_concrete_panel",
-    "ott:grill_red_concrete",
-    "ott:pegged_red_concrete",
-    "ott:smooth_red_concrete",
-    "ott:striped_red_concrete",
-    "ott:wired_red_concrete"
+    "minecraft:red_concrete"
   ]
 }

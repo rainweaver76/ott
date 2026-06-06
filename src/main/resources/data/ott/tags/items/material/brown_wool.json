@@ -1,10 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:brown_wool",
-    "ott:cornered_brown_wool",
-    "ott:crafted_brown_wool",
-    "ott:harsh_quilted_brown_wool",
-    "ott:rectangle_brown_wool"
+    "minecraft:brown_wool"
   ]
 }

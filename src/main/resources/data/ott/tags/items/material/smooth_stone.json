@@ -1,22 +1,6 @@
 {
   "replace": false,
   "values": [
-    "minecraft:smooth_stone",
-    "ott:bordered_smooth_stone",
-    "ott:brick_bordered_smooth_stone",
-    "ott:curly_smooth_stone_ctm",
-    "ott:cut_smooth_stone_column",
-    "ott:edged_smooth_stone_bricks",
-    "ott:fine_smooth_stone_ctm",
-    "ott:massive_smooth_stone_bricks",
-    "ott:ornate_smooth_stone_ctm",
-    "ott:overlapping_smooth_stone_tiles",
-    "ott:polished_smooth_stone",
-    "ott:simple_smooth_stone_ctm",
-    "ott:smooth_smooth_stone_column",
-    "ott:thick_inlayed_smooth_stone",
-    "ott:tiled_bordered_smooth_stone",
-    "ott:tiled_smooth_stone_column",
-    "ott:tiny_brick_bordered_smooth_stone"
+    "minecraft:smooth_stone"
   ]
 }
