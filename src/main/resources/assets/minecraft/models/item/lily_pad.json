@@ -1,3 +1,6 @@
 {
-  "parent": "block/lily_pad"
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "minecraft:block/lily_pad"
+ }
 }

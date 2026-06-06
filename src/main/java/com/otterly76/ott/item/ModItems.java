@@ -1567,7 +1567,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> FROSTED_GLASS_CTM_PANE = registerBlockItem("frosted_glass_ctm_pane", ModBlocks.FROSTED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ICE_GLASS_CTM_PANE = registerBlockItem("ice_glass_ctm_pane", ModBlocks.ICE_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OBSIDIAN_FRAMED_GLASS_CTM_PANE = registerBlockItem("obsidian_framed_glass_ctm_pane", ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_LEADED_GLASS_CTM_PANE = registerBlockItem("ornate_leaded_glass_ctm_pane", ModBlocks.ORNATE_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> REINFORCED_GLASS_CTM_PANE = registerBlockItem("reinforced_glass_ctm_pane", ModBlocks.REINFORCED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_FRAMED_GLASS_CTM_PANE = registerBlockItem("sandstone_framed_glass_ctm_pane", ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> STONE_FRAMED_GLASS_CTM_PANE = registerBlockItem("stone_framed_glass_ctm_pane", ModBlocks.STONE_FRAMED_GLASS_CTM_PANE);

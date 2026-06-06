@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "ott:block/birch_windows/birch_window_swirling",
-    "end": "minecraft:block/birch_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

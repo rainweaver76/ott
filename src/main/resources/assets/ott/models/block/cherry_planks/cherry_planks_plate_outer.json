@@ -1,7 +1,0 @@
-{
-	"parent": "ott:block/plate_outer",
-	"textures": {
-		"top": "minecraft:block/cherry_planks",
-		"frieze": "minecraft:block/cherry_planks"
-	}
-}

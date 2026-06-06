@@ -2,7 +2,7 @@
   "parent": "minecraft:item/glass_pane",
   "textures": {
     "front": "ott:block/bamboo_windows/bamboo_window_slim",
-    "side": "ott:block/oak_planks/oak_glass_pane_edge"
+    "side": "ott:block/bamboo_planks/bamboo_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

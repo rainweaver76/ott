@@ -2,7 +2,7 @@
   "parent": "minecraft:item/glass_pane",
   "textures": {
     "front": "ott:block/cherry_windows/cherry_window_swirling",
-    "side": "ott:block/oak_planks/oak_glass_pane_edge"
+    "side": "ott:block/cherry_planks/cherry_glass_pane_edge"
   },
   "render_type": "minecraft:cutout_mipped"
 }

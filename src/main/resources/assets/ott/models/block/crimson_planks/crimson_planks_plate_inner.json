@@ -1,8 +1,0 @@
-{
-	"parent": "ott:block/plate_inner",
-	"textures": {
-		"side": "minecraft:block/crimson_planks",
-		"top": "minecraft:block/crimson_planks",
-		"frieze": "minecraft:block/crimson_planks"
-	}
-}

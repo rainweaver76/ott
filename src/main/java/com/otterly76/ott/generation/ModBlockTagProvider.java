@@ -197,9 +197,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         this.tag(ModTags.Blocks.CTM_BLOCKS).add(block);
                         pickaxeTag.add(block);
                     } else if (bPath.contains("_marble")) {
-                        // Marble blocks: DO material inputs + pickaxe mineable
-                        this.tag(doDefaultKey).add(block);
+                        // Marble blocks: always pickaxe mineable, but ONLY full-cube shapes
+                        // belong in DO material tags. Exclude non-cube structural shapes
+                        // (plate/edge/beam/pergola/bannister/support beam/support slab).
                         pickaxeTag.add(block);
+                        boolean nonCubeShape = bPath.contains("_plate") || bPath.contains("_edge")
+                                || bPath.contains("_beam") || bPath.contains("_pergola")
+                                || bPath.contains("_bannister") || bPath.contains("_support_slab")
+                                || bPath.contains("_geometric_window") || bPath.contains("_fancy_fence");
+                        if (!nonCubeShape) {
+                            this.tag(doDefaultKey).add(block);
+                        }
                     }
                 }
             }

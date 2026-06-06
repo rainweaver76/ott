@@ -1,7 +1,7 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "item/food/apple/apple1",
+		"1": "item/apple",
 		"particle": "item/food/food_particles/apple"
 	},
 	"elements": [

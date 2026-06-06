@@ -1751,7 +1751,6 @@ public enum OttCreativeCategories {
         output.accept(ModBlocks.FROSTED_GLASS_CTM_PANE);
         output.accept(ModBlocks.ICE_GLASS_CTM_PANE);
         output.accept(ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE);
-        output.accept(ModBlocks.ORNATE_LEADED_GLASS_CTM_PANE);
         output.accept(ModBlocks.REINFORCED_GLASS_CTM_PANE);
         output.accept(ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);
         output.accept(ModBlocks.STONE_FRAMED_GLASS_CTM_PANE);

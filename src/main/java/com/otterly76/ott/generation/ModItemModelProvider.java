@@ -330,13 +330,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         generatedItemFromTexture(ModItems.ETHEREAL_SHRIMP_BUCKET.getId().getPath(), modLoc("item/shrimp_bucket"));
 
         generatedItemFromTexture(ModItems.RAW_CICHLID.getId().getPath(), modLoc("item/raw_cichlid"));
-        generatedItemFromTexture(ModItems.COOKED_CICHLID.getId().getPath(), modLoc("item/raw_cichlid"));
+        generatedItemFromTexture(ModItems.COOKED_CICHLID.getId().getPath(), modLoc("item/cooked_cichlid"));
         generatedItemFromTexture(ModItems.RAW_BONNETHEAD.getId().getPath(), modLoc("item/raw_bonnethead"));
-        generatedItemFromTexture(ModItems.COOKED_BONNETHEAD.getId().getPath(), modLoc("item/raw_bonnethead"));
+        generatedItemFromTexture(ModItems.COOKED_BONNETHEAD.getId().getPath(), modLoc("item/cooked_bonnethead"));
         generatedItemFromTexture(ModItems.RAW_GUITARFISH.getId().getPath(), modLoc("item/raw_guitarfish"));
-        generatedItemFromTexture(ModItems.COOKED_GUITARFISH.getId().getPath(), modLoc("item/raw_guitarfish"));
+        generatedItemFromTexture(ModItems.COOKED_GUITARFISH.getId().getPath(), modLoc("item/cooked_guitarfish"));
         generatedItemFromTexture(ModItems.RAW_GOBLIN_SHARK.getId().getPath(), modLoc("item/raw_goblin_shark"));
-        generatedItemFromTexture(ModItems.COOKED_GOBLIN_SHARK.getId().getPath(), modLoc("item/raw_goblin_shark"));
+        generatedItemFromTexture(ModItems.COOKED_GOBLIN_SHARK.getId().getPath(), modLoc("item/cooked_goblin_shark"));
         
         parentItemToBlockModel(ModItems.SILK_COCOON.getId().getPath(), "block/silk_cocoon");
         parentItemToBlockModel(ModItems.GLASS_JAR.getId().getPath(), "block/glass_jar");

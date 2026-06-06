@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "ott:block/mangrove_windows/mangrove_window_swirling",
-    "end": "minecraft:block/mangrove_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

@@ -501,10 +501,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         // Meat Tags
         this.tag(ModTags.ItemTags.C_RAW_MEAT)
-                .add(ModItems.LIZARD_TAIL.get());
+                .add(ModItems.LIZARD_TAIL.get(), ModItems.BASS.get(), ModItems.CATFISH.get(),
+                        ModItems.RAW_KRILL.get(), ModItems.RAW_SHRIMP.get(), ModItems.RAW_SUNFISH_MEAT.get(),
+                        ModItems.RAW_GOLDEN_SUNFISH_MEAT.get(), ModItems.RAW_SNAIL.get(), ModItems.RAW_WILD_BIRD_MEAT.get(),
+                        ModItems.RAW_WILD_GAME_MEAT.get(), ModItems.RAW_CRAB_MEAT.get(), ModItems.RAW_BONNETHEAD.get(),
+                        ModItems.RAW_CICHLID.get(), ModItems.RAW_GOBLIN_SHARK.get(), ModItems.RAW_GUITARFISH.get());
 
         this.tag(ModTags.ItemTags.C_COOKED_MEAT)
-                .add(ModItems.COOKED_LIZARD_TAIL.get());
+                .add(ModItems.COOKED_LIZARD_TAIL.get(), ModItems.COOKED_BASS.get(), ModItems.COOKED_CATFISH.get(),
+                        ModItems.FRIED_KRILL.get(), ModItems.STEAMED_SHRIMP.get(), ModItems.COOKED_SUNFISH_MEAT.get(),
+                        ModItems.COOKED_GOLDEN_SUNFISH_MEAT.get(), ModItems.COOKED_SNAIL.get(), ModItems.COOKED_WILD_BIRD_MEAT.get(),
+                        ModItems.COOKED_WILD_GAME_MEAT.get(), ModItems.STEAMED_CRAB_MEAT.get(), ModItems.COOKED_BONNETHEAD.get(),
+                        ModItems.COOKED_CICHLID.get(), ModItems.COOKED_GOBLIN_SHARK.get(), ModItems.COOKED_GUITARFISH.get());
 
         this.tag(ModTags.ItemTags.IS_MEAT)
                 .addTag(ModTags.ItemTags.C_RAW_MEAT)

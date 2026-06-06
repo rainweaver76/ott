@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "ott:block/jungle_windows/jungle_window_tiles",
-    "end": "minecraft:block/jungle_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}
