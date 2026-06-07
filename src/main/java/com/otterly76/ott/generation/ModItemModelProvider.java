@@ -169,7 +169,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         generatedItemFromTexture(ModItems.CATFISH.getId().getPath(), modLoc("item/catfish"));
         generatedItemFromTexture(ModItems.COOKED_CATFISH.getId().getPath(), modLoc("item/cooked_catfish"));
         generatedItemFromTexture(ModItems.LIZARD_TAIL.getId().getPath(), modLoc("item/lizard_tail"));
-        generatedItemFromTexture(ModItems.COOKED_LIZARD_TAIL.getId().getPath(), modLoc("item/lizard_tail")); // Use placeholder
+        generatedItemFromTexture(ModItems.COOKED_LIZARD_TAIL.getId().getPath(), modLoc("item/cooked_lizard_tail"));
         generatedItemFromTexture(ModItems.COOKED_EGG.getId().getPath(), mcLoc("item/egg")); // Use placeholder
         generatedItemFromTexture(ModItems.RAW_SUNFISH_MEAT.getId().getPath(), modLoc("item/raw_sunfish_meat"));
         generatedItemFromTexture(ModItems.COOKED_SUNFISH_MEAT.getId().getPath(), modLoc("item/cooked_sunfish_meat"));

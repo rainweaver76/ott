@@ -1,7 +1,7 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "item/spy_glass",
+		"1": "item/spyglass_3d",
 		"particle": "item/spy_glass"
 	},
 	"elements": [

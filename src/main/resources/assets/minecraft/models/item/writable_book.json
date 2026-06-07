@@ -1,7 +1,7 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "item/written_book"
+		"2": "item/written_book_3d"
 	},
 	"elements": [
 		{

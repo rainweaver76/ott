@@ -1,7 +1,7 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "item/name_tag1",
+		"2": "item/name_tag_3d",
 		"particle": "item/name_tag"
 	},
 	"elements": [

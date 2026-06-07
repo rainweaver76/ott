@@ -1,7 +1,7 @@
 {
 	"texture_size": [64, 64],
 	"textures": {
-		"1": "item/bow",
+		"1": "item/bow_3d",
 		"particle": "item/bow"
 	},
 	"elements": [

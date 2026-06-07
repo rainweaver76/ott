@@ -3,7 +3,7 @@
 	"credit": "Throttled by Otterly76",
 	"texture_size": [32, 32],
 	"textures": {
-		"particle": "item/brush"
+		"particle": "item/brush_3d"
 	},
 	"elements": [
 		{

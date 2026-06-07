@@ -1,8 +1,8 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "item/fishing_rod",
-		"particle": "item/fishing_rod"
+		"2": "item/fishing_rod_3d",
+		"particle": "item/warped_fungus_on_a_stick"
 	},
 	"elements": [
 		{

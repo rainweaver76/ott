@@ -2,7 +2,7 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "item/golden_apple_3d",
+		"0": "item/enchanted_golden_apple_3d",
 		"particle": "item/food_particles/golden_apple"
 	},
 	"elements": [

@@ -1,8 +1,8 @@
 {
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "item/heavy_core",
-		"3": "item/mace",
+		"1": "item/heavy_core_3d",
+		"3": "item/mace_3d",
 		"particle": "item/mace"
 	},
 	"elements": [
