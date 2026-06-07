@@ -127,6 +127,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         this.engraveRecipes(noAdv);
         this.ctmPaneRecipes(noAdv);
+        this.recoveredWindowRecipes(noAdv);
         this.stainedGlassGroupRecipes(noAdv);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GLASS_JAR.get())
@@ -3373,7 +3374,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 
-    /** Engraves material → pane, and adds a 6-block → 16-pane shaped recipe using the named OTT block. */
+    /** Recovered window blocks/panes: engrave from the wood's planks (registry-guarded, skips unregistered). */
+    private void recoveredWindowRecipes(RecipeOutput exporter) {
+        String[] styles = {"bars", "covered", "diagonal", "large", "panes", "rounded", "slim", "swirling", "tiles"};
+        String[] woods  = {"acacia", "birch", "crimson", "dark_oak", "jungle", "mangrove", "oak", "spruce", "warped"};
+        String[] suffixes = {"", "_pane", "_ctm_pane"};
+        for (String wood : woods) {
+            Block planks = BuiltInRegistries.BLOCK.get(ResourceLocation.withDefaultNamespace(wood + "_planks"));
+            if (planks == Blocks.AIR) continue;
+            for (String style : styles) {
+                for (String suf : suffixes) {
+                    String id = wood + "_window_" + style + suf;
+                    Block out = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", id));
+                    if (out == Blocks.AIR) continue;
+                    engraveOne(exporter, planks, out, id + "_engraving");
+                }
+            }
+        }
+    }
+
     private void engravePaneFromBlock(RecipeOutput exporter, ItemLike material, String blockOttName, String paneName) {
         Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", blockOttName));
         Block pane  = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));

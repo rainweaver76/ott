@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_vertical",
+  "textures": {
+    "front": "ott:block/crimson_windows/ctm/crimson_window_covered",
+    "side": "minecraft:block/crimson_planks"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

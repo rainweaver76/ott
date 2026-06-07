@@ -13,6 +13,28 @@ copper
 framed_light_center
 glaced_terracotta
 
+copper (all) ladder item models
+chipped: cobwebs
+need breaking rules fixed
+chipped lanterns item models
+chipped pointed dripstone models
+chipped iron bars models
+chipped torch models
+chipped glass pane item models
+chipped door models
+chipped ladder models
+create glass panes item models
+create door item models
+create ladder models
+create bars models
+find better totem of undying
+make prettier pink petals item texture
+make prettier sunflower item texture
+swap to 3d nether wart item model
+swap to cross item model for coral & coral fans
+swap to 3d model for end crystal
+item models adjust for copper rails
+
 Notes:
 =====
 §

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "pane": "ott:block/jungle_windows/jungle_window_slim",
+    "edge": "ott:block/jungle_planks/jungle_glass_pane_edge"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_vertical",
+  "textures": {
+    "pane": "ott:block/spruce_windows/ctm/spruce_window_slim",
+    "edge": "minecraft:block/spruce_planks"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

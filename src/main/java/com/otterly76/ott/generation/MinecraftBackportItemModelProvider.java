@@ -273,9 +273,10 @@ public class MinecraftBackportItemModelProvider extends ItemModelProvider {
             parentItemToBlockModel(state + "copper_cauldron", "block/" + state + "copper_cauldron");
             parentItemToBlockModel("waxed_" + state + "copper_cauldron", "block/waxed_" + state + "copper_cauldron");
 
-            String railTextureName = "block/" + state + "copper_rail";
-            generatedItem(state + "copper_rail", railTextureName);
-            generatedItem("waxed_" + state + "copper_rail", railTextureName);
+            // Parent the custom 3D flat-rail block model (waxed reuses the unwaxed model) + vanilla rail item display.
+            String railModel = "block/" + state + "copper_rail_flat";
+            railItem(state + "copper_rail", railModel);
+            railItem("waxed_" + state + "copper_rail", railModel);
         }
 
 
@@ -355,6 +356,31 @@ public class MinecraftBackportItemModelProvider extends ItemModelProvider {
 
     private void parentItemToBlockModel(String itemName, String blockModelPath) {
         getBuilder(itemName).parent(new ModelFile.UncheckedModelFile(mcLoc(blockModelPath)));
+    }
+
+    // Rail item model: parent the custom 3D flat-rail block model + match the vanilla rail item GUI display.
+    private void railItem(String name, String blockModel) {
+        getBuilder(name).parent(new ModelFile.UncheckedModelFile(mcLoc(blockModel)))
+                .guiLight(BlockModel.GuiLight.FRONT)
+                .transforms()
+                .transform(ItemDisplayContext.THIRD_PERSON_RIGHT_HAND)
+                .rotation(0, 180, 0).translation(0, 0.75f, 0).scale(0.375f, 0.375f, 0.375f)
+                .end()
+                .transform(ItemDisplayContext.THIRD_PERSON_LEFT_HAND)
+                .rotation(0, 180, 0).translation(0, 0.75f, 0).scale(0.375f, 0.375f, 0.375f)
+                .end()
+                .transform(ItemDisplayContext.FIRST_PERSON_RIGHT_HAND)
+                .rotation(0, 180, 0).translation(0, 1.5f, 0).scale(0.4f, 0.4f, 0.4f)
+                .end()
+                .transform(ItemDisplayContext.FIRST_PERSON_LEFT_HAND)
+                .rotation(0, 180, 0).translation(0, 1.5f, 0).scale(0.4f, 0.4f, 0.4f)
+                .end()
+                .transform(ItemDisplayContext.GROUND)
+                .translation(0, 3, 0).scale(0.25f, 0.25f, 0.25f)
+                .end()
+                .transform(ItemDisplayContext.GUI)
+                .rotation(30, 225, 0).translation(0, 3, 0).scale(0.9f, 0.9f, 0.9f)
+                .end();
     }
 
     private void handheldItem(String name) {

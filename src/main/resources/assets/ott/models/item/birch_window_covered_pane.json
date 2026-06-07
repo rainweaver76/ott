@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/glass_pane",
+  "textures": {
+    "front": "ott:block/birch_windows/birch_window_covered",
+    "side": "ott:block/birch_planks/birch_glass_pane_edge"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}
