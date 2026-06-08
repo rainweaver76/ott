@@ -41,6 +41,8 @@ Notes:
 ☺
 ♥
 
+disable overgrowth and respawning structures for custom dimensions
+
 add overlay for moss carpets
 
 check models and DO for bookshelf variants
