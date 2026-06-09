@@ -130,8 +130,6 @@ public class ModItems {
     public static final DeferredItem<Item> PHEASANT_SPAWN_EGG = ITEMS.register("pheasant_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.PHEASANT, 0xFF4B3621, 0xFF8B4513, new Item.Properties()));
     public static final DeferredItem<Item> TOUCAN_SPAWN_EGG = ITEMS.register("toucan_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.TOUCAN, 0xFF000000, 0xFFFFA500, new Item.Properties()));
     public static final DeferredItem<Item> PINK_SALT = ITEMS.register("pink_salt", () -> new net.minecraft.world.item.BlockItem(ModBlocks.PINK_SALT_DUST.get(), new Item.Properties()));
-    public static final DeferredItem<Item> PINK_SALT_BLOCK = ITEMS.register("pink_salt_block", () -> new net.minecraft.world.item.BlockItem(ModBlocks.PINK_SALT_BLOCK.get(), new Item.Properties()));
-    public static final DeferredItem<Item> POLISHED_PINK_SALT_BLOCK = ITEMS.register("polished_pink_salt_block", () -> new net.minecraft.world.item.BlockItem(ModBlocks.POLISHED_PINK_SALT_BLOCK.get(), new Item.Properties()));
     public static final DeferredItem<Item> PINK_SALT_LAMP = ITEMS.register("pink_salt_lamp", () -> new net.minecraft.world.item.BlockItem(ModBlocks.PINK_SALT_LAMP.get(), new Item.Properties()));
     public static final DeferredItem<Item> OAK_NEST       = ITEMS.register("oak_nest",       () -> new net.minecraft.world.item.BlockItem(ModBlocks.OAK_NEST.get(),       new Item.Properties()));
     public static final DeferredItem<Item> ACACIA_BEEHIVE   = ITEMS.register("acacia_beehive",   () -> new net.minecraft.world.item.BlockItem(ModBlocks.ACACIA_BEEHIVE.get(),   new Item.Properties()));
@@ -246,7 +244,6 @@ public class ModItems {
     public static final DeferredItem<Item> DUCK_EGG = ITEMS.register("duck_egg", () -> new DuckEggItem(new Item.Properties()));
     public static final DeferredItem<Item> TORTOISE_EGG = ITEMS.register("tortoise_egg", () -> new BlockItem(ModBlocks.TORTOISE_EGG.get(), new Item.Properties()));
     public static final DeferredItem<Item> SNAIL_EGG = ITEMS.register("snail_egg", () -> new BlockItem(ModBlocks.SNAIL_EGG.get(), new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> REFINED_GLOWSTONE = registerBlockItem("refined_glowstone", ModBlocks.REFINED_GLOWSTONE);
     public static final DeferredItem<Item> GLOW_GOOP = ITEMS.register("glow_goop", () -> new GlowGoopItem(ModBlocks.GLOW_GOOP.get(), new Item.Properties()));
     public static final DeferredItem<Item> LIZARD_TAIL = ITEMS.register("lizard_tail", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.1F).build())));
     public static final DeferredItem<Item> COOKED_LIZARD_TAIL = ITEMS.register("cooked_lizard_tail", () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(0.3F).build())));
@@ -1186,232 +1183,20 @@ public class ModItems {
     // ── Yellow Wool ──
 
     // ── New CTM batch blocks ──────────────────────────────────────────────
-    public static final DeferredHolder<Item, BlockItem> BLACK_FRAMED_GLASS = registerBlockItem("black_framed_glass", ModBlocks.BLACK_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BLACK_STAINED_CLEAR_GLASS = registerBlockItem("black_stained_clear_glass", ModBlocks.BLACK_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_FRAMED_GLASS = registerBlockItem("blue_framed_glass", ModBlocks.BLUE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_STAINED_CLEAR_GLASS = registerBlockItem("blue_stained_clear_glass", ModBlocks.BLUE_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BROWN_FRAMED_GLASS = registerBlockItem("brown_framed_glass", ModBlocks.BROWN_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BROWN_STAINED_CLEAR_GLASS = registerBlockItem("brown_stained_clear_glass", ModBlocks.BROWN_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> CHISELED_GLASS = registerBlockItem("chiseled_glass", ModBlocks.CHISELED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS = registerBlockItem("clear_glass", ModBlocks.CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> CYAN_FRAMED_GLASS = registerBlockItem("cyan_framed_glass", ModBlocks.CYAN_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> CYAN_STAINED_CLEAR_GLASS = registerBlockItem("cyan_stained_clear_glass", ModBlocks.CYAN_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> DIRTY_GLASS = registerBlockItem("dirty_glass", ModBlocks.DIRTY_GLASS);
-    public static final DeferredHolder<Item, BlockItem> FRAMED_GLASS = registerBlockItem("framed_glass", ModBlocks.FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> FROSTED_GLASS = registerBlockItem("frosted_glass", ModBlocks.FROSTED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BLACK_STAINED_GLASS = registerBlockItem("golden_framed_black_stained_glass", ModBlocks.GOLDEN_FRAMED_BLACK_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BLUE_STAINED_GLASS = registerBlockItem("golden_framed_blue_stained_glass", ModBlocks.GOLDEN_FRAMED_BLUE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BROWN_STAINED_GLASS = registerBlockItem("golden_framed_brown_stained_glass", ModBlocks.GOLDEN_FRAMED_BROWN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_CYAN_STAINED_GLASS = registerBlockItem("golden_framed_cyan_stained_glass", ModBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GRAY_STAINED_GLASS = registerBlockItem("golden_framed_gray_stained_glass", ModBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GREEN_STAINED_GLASS = registerBlockItem("golden_framed_green_stained_glass", ModBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS = registerBlockItem("golden_framed_light_blue_stained_glass", ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS = registerBlockItem("golden_framed_light_gray_stained_glass", ModBlocks.GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIME_STAINED_GLASS = registerBlockItem("golden_framed_lime_stained_glass", ModBlocks.GOLDEN_FRAMED_LIME_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_MAGENTA_STAINED_GLASS = registerBlockItem("golden_framed_magenta_stained_glass", ModBlocks.GOLDEN_FRAMED_MAGENTA_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_ORANGE_STAINED_GLASS = registerBlockItem("golden_framed_orange_stained_glass", ModBlocks.GOLDEN_FRAMED_ORANGE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_PINK_STAINED_GLASS = registerBlockItem("golden_framed_pink_stained_glass", ModBlocks.GOLDEN_FRAMED_PINK_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_PURPLE_STAINED_GLASS = registerBlockItem("golden_framed_purple_stained_glass", ModBlocks.GOLDEN_FRAMED_PURPLE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_RED_STAINED_GLASS = registerBlockItem("golden_framed_red_stained_glass", ModBlocks.GOLDEN_FRAMED_RED_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_STAINED_GLASS = registerBlockItem("golden_framed_stained_glass", ModBlocks.GOLDEN_FRAMED_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_WHITE_STAINED_GLASS = registerBlockItem("golden_framed_white_stained_glass", ModBlocks.GOLDEN_FRAMED_WHITE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_YELLOW_STAINED_GLASS = registerBlockItem("golden_framed_yellow_stained_glass", ModBlocks.GOLDEN_FRAMED_YELLOW_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GRAY_FRAMED_GLASS = registerBlockItem("gray_framed_glass", ModBlocks.GRAY_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GRAY_STAINED_CLEAR_GLASS = registerBlockItem("gray_stained_clear_glass", ModBlocks.GRAY_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_FRAMED_GLASS = registerBlockItem("green_framed_glass", ModBlocks.GREEN_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_STAINED_CLEAR_GLASS = registerBlockItem("green_stained_clear_glass", ModBlocks.GREEN_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_FRAMED_GLASS = registerBlockItem("light_blue_framed_glass", ModBlocks.LIGHT_BLUE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_STAINED_CLEAR_GLASS = registerBlockItem("light_blue_stained_clear_glass", ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_FRAMED_GLASS = registerBlockItem("light_gray_framed_glass", ModBlocks.LIGHT_GRAY_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_STAINED_CLEAR_GLASS = registerBlockItem("light_gray_stained_clear_glass", ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIME_FRAMED_GLASS = registerBlockItem("lime_framed_glass", ModBlocks.LIME_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIME_STAINED_CLEAR_GLASS = registerBlockItem("lime_stained_clear_glass", ModBlocks.LIME_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_FRAMED_GLASS = registerBlockItem("magenta_framed_glass", ModBlocks.MAGENTA_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_STAINED_CLEAR_GLASS = registerBlockItem("magenta_stained_clear_glass", ModBlocks.MAGENTA_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_FRAMED_GLASS = registerBlockItem("obsidian_framed_glass", ModBlocks.OBSIDIAN_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_FRAMED_GLASS = registerBlockItem("orange_framed_glass", ModBlocks.ORANGE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_STAINED_CLEAR_GLASS = registerBlockItem("orange_stained_clear_glass", ModBlocks.ORANGE_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_BRICK_PATTERN = registerBlockItem("pale_oak_planks_brick_pattern", ModBlocks.PALE_OAK_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PINK_FRAMED_GLASS = registerBlockItem("pink_framed_glass", ModBlocks.PINK_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> PINK_STAINED_CLEAR_GLASS = registerBlockItem("pink_stained_clear_glass", ModBlocks.PINK_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> POLISHED_LIMESTONE = registerBlockItem("polished_limestone", ModBlocks.POLISHED_LIMESTONE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_FRAMED_GLASS = registerBlockItem("purple_framed_glass", ModBlocks.PURPLE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_STAINED_CLEAR_GLASS = registerBlockItem("purple_stained_clear_glass", ModBlocks.PURPLE_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> RED_FRAMED_GLASS = registerBlockItem("red_framed_glass", ModBlocks.RED_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> RED_STAINED_CLEAR_GLASS = registerBlockItem("red_stained_clear_glass", ModBlocks.RED_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_FRAMED_GLASS = registerBlockItem("sandstone_framed_glass", ModBlocks.SANDSTONE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SEA_LANTERN = registerBlockItem("sea_lantern", ModBlocks.SEA_LANTERN);
-    public static final DeferredHolder<Item, BlockItem> STONE_FRAMED_GLASS = registerBlockItem("stone_framed_glass", ModBlocks.STONE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> TINTED_CLEAR_GLASS = registerBlockItem("tinted_clear_glass", ModBlocks.TINTED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> WHITE_FRAMED_GLASS = registerBlockItem("white_framed_glass", ModBlocks.WHITE_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> WHITE_STAINED_CLEAR_GLASS = registerBlockItem("white_stained_clear_glass", ModBlocks.WHITE_STAINED_CLEAR_GLASS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_FRAMED_GLASS = registerBlockItem("yellow_framed_glass", ModBlocks.YELLOW_FRAMED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_STAINED_CLEAR_GLASS = registerBlockItem("yellow_stained_clear_glass", ModBlocks.YELLOW_STAINED_CLEAR_GLASS);
-
-    public static final DeferredHolder<Item, BlockItem> BLACK_STAINED_GLASS = registerBlockItem("black_stained_glass", ModBlocks.BLACK_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_STAINED_GLASS = registerBlockItem("blue_stained_glass", ModBlocks.BLUE_STAINED_GLASS);
-
-
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS = registerBlockItem("borderless_glass", ModBlocks.BORDERLESS_GLASS);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLACK = registerBlockItem("borderless_glass_black", ModBlocks.BORDERLESS_GLASS_BLACK);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLUE = registerBlockItem("borderless_glass_blue", ModBlocks.BORDERLESS_GLASS_BLUE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BROWN = registerBlockItem("borderless_glass_brown", ModBlocks.BORDERLESS_GLASS_BROWN);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_CYAN = registerBlockItem("borderless_glass_cyan", ModBlocks.BORDERLESS_GLASS_CYAN);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_GRAY = registerBlockItem("borderless_glass_gray", ModBlocks.BORDERLESS_GLASS_GRAY);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_GREEN = registerBlockItem("borderless_glass_green", ModBlocks.BORDERLESS_GLASS_GREEN);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIGHT_BLUE = registerBlockItem("borderless_glass_light_blue", ModBlocks.BORDERLESS_GLASS_LIGHT_BLUE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIGHT_GRAY = registerBlockItem("borderless_glass_light_gray", ModBlocks.BORDERLESS_GLASS_LIGHT_GRAY);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIME = registerBlockItem("borderless_glass_lime", ModBlocks.BORDERLESS_GLASS_LIME);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_MAGENTA = registerBlockItem("borderless_glass_magenta", ModBlocks.BORDERLESS_GLASS_MAGENTA);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_ORANGE = registerBlockItem("borderless_glass_orange", ModBlocks.BORDERLESS_GLASS_ORANGE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_PINK = registerBlockItem("borderless_glass_pink", ModBlocks.BORDERLESS_GLASS_PINK);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_PURPLE = registerBlockItem("borderless_glass_purple", ModBlocks.BORDERLESS_GLASS_PURPLE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_RED = registerBlockItem("borderless_glass_red", ModBlocks.BORDERLESS_GLASS_RED);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_WHITE = registerBlockItem("borderless_glass_white", ModBlocks.BORDERLESS_GLASS_WHITE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_YELLOW = registerBlockItem("borderless_glass_yellow", ModBlocks.BORDERLESS_GLASS_YELLOW);
-    public static final DeferredHolder<Item, BlockItem> BROWN_STAINED_GLASS = registerBlockItem("brown_stained_glass", ModBlocks.BROWN_STAINED_GLASS);
 
 
 
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK = registerBlockItem("copper_block", ModBlocks.COPPER_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> COPPER_GRATE = registerBlockItem("copper_grate", ModBlocks.COPPER_GRATE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_STAINED_GLASS = registerBlockItem("cyan_stained_glass", ModBlocks.CYAN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> EXPOSED_COPPER_BLOCK = registerBlockItem("exposed_copper_block", ModBlocks.EXPOSED_COPPER_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> EXPOSED_COPPER_GRATE = registerBlockItem("exposed_copper_grate", ModBlocks.EXPOSED_COPPER_GRATE);
-    public static final DeferredHolder<Item, BlockItem> GRAY_STAINED_GLASS = registerBlockItem("gray_stained_glass", ModBlocks.GRAY_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_STAINED_GLASS = registerBlockItem("green_stained_glass", ModBlocks.GREEN_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> ICE_GLASS = registerBlockItem("ice_glass", ModBlocks.ICE_GLASS);
 
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_STAINED_GLASS = registerBlockItem("light_blue_stained_glass", ModBlocks.LIGHT_BLUE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_STAINED_GLASS = registerBlockItem("light_gray_stained_glass", ModBlocks.LIGHT_GRAY_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> LIME_STAINED_GLASS = registerBlockItem("lime_stained_glass", ModBlocks.LIME_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_STAINED_GLASS = registerBlockItem("magenta_stained_glass", ModBlocks.MAGENTA_STAINED_GLASS);
 
-    public static final DeferredHolder<Item, BlockItem> ORANGE_STAINED_GLASS = registerBlockItem("orange_stained_glass", ModBlocks.ORANGE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> OXIDIZED_COPPER_BLOCK = registerBlockItem("oxidized_copper_block", ModBlocks.OXIDIZED_COPPER_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> OXIDIZED_COPPER_GRATE = registerBlockItem("oxidized_copper_grate", ModBlocks.OXIDIZED_COPPER_GRATE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_BEAMS = registerBlockItem("pale_oak_planks_beams", ModBlocks.PALE_OAK_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_BRICK_PAVING = registerBlockItem("pale_oak_planks_brick_paving", ModBlocks.PALE_OAK_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_CRATE = registerBlockItem("pale_oak_planks_crate", ModBlocks.PALE_OAK_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_DIAGONAL_STRIPES = registerBlockItem("pale_oak_planks_diagonal_stripes", ModBlocks.PALE_OAK_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_DIAGONAL_TILES = registerBlockItem("pale_oak_planks_diagonal_tiles", ModBlocks.PALE_OAK_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_DOTTED = registerBlockItem("pale_oak_planks_dotted", ModBlocks.PALE_OAK_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_FLOORING = registerBlockItem("pale_oak_planks_flooring", ModBlocks.PALE_OAK_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_LARGE_TILES = registerBlockItem("pale_oak_planks_large_tiles", ModBlocks.PALE_OAK_PLANKS_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_PATTERN = registerBlockItem("pale_oak_planks_pattern", ModBlocks.PALE_OAK_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_ROTATED_BRICKS = registerBlockItem("pale_oak_planks_rotated_bricks", ModBlocks.PALE_OAK_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_SMALL_BRICKS = registerBlockItem("pale_oak_planks_small_bricks", ModBlocks.PALE_OAK_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_SMALL_TILES = registerBlockItem("pale_oak_planks_small_tiles", ModBlocks.PALE_OAK_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_SQUARES = registerBlockItem("pale_oak_planks_squares", ModBlocks.PALE_OAK_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_TILES = registerBlockItem("pale_oak_planks_tiles", ModBlocks.PALE_OAK_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_WAVY = registerBlockItem("pale_oak_planks_wavy", ModBlocks.PALE_OAK_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_WOVEN = registerBlockItem("pale_oak_planks_woven", ModBlocks.PALE_OAK_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> PINK_STAINED_GLASS = registerBlockItem("pink_stained_glass", ModBlocks.PINK_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_STAINED_GLASS = registerBlockItem("purple_stained_glass", ModBlocks.PURPLE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> RED_STAINED_GLASS = registerBlockItem("red_stained_glass", ModBlocks.RED_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> REINFORCED_GLASS = registerBlockItem("reinforced_glass", ModBlocks.REINFORCED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS = registerBlockItem("scratched_glass", ModBlocks.SCRATCHED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BLACK = registerBlockItem("scratched_glass_black", ModBlocks.SCRATCHED_GLASS_BLACK);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BLUE = registerBlockItem("scratched_glass_blue", ModBlocks.SCRATCHED_GLASS_BLUE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BROWN = registerBlockItem("scratched_glass_brown", ModBlocks.SCRATCHED_GLASS_BROWN);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_CYAN = registerBlockItem("scratched_glass_cyan", ModBlocks.SCRATCHED_GLASS_CYAN);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_GRAY = registerBlockItem("scratched_glass_gray", ModBlocks.SCRATCHED_GLASS_GRAY);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_GREEN = registerBlockItem("scratched_glass_green", ModBlocks.SCRATCHED_GLASS_GREEN);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIGHT_BLUE = registerBlockItem("scratched_glass_light_blue", ModBlocks.SCRATCHED_GLASS_LIGHT_BLUE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIGHT_GRAY = registerBlockItem("scratched_glass_light_gray", ModBlocks.SCRATCHED_GLASS_LIGHT_GRAY);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIME = registerBlockItem("scratched_glass_lime", ModBlocks.SCRATCHED_GLASS_LIME);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_MAGENTA = registerBlockItem("scratched_glass_magenta", ModBlocks.SCRATCHED_GLASS_MAGENTA);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_ORANGE = registerBlockItem("scratched_glass_orange", ModBlocks.SCRATCHED_GLASS_ORANGE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_PINK = registerBlockItem("scratched_glass_pink", ModBlocks.SCRATCHED_GLASS_PINK);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_PURPLE = registerBlockItem("scratched_glass_purple", ModBlocks.SCRATCHED_GLASS_PURPLE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_RED = registerBlockItem("scratched_glass_red", ModBlocks.SCRATCHED_GLASS_RED);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_WHITE = registerBlockItem("scratched_glass_white", ModBlocks.SCRATCHED_GLASS_WHITE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_YELLOW = registerBlockItem("scratched_glass_yellow", ModBlocks.SCRATCHED_GLASS_YELLOW);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS = registerBlockItem("tinted_borderless_glass", ModBlocks.TINTED_BORDERLESS_GLASS);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BLACK = registerBlockItem("tinted_borderless_glass_black", ModBlocks.TINTED_BORDERLESS_GLASS_BLACK);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BLUE = registerBlockItem("tinted_borderless_glass_blue", ModBlocks.TINTED_BORDERLESS_GLASS_BLUE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BROWN = registerBlockItem("tinted_borderless_glass_brown", ModBlocks.TINTED_BORDERLESS_GLASS_BROWN);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_CYAN = registerBlockItem("tinted_borderless_glass_cyan", ModBlocks.TINTED_BORDERLESS_GLASS_CYAN);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_GRAY = registerBlockItem("tinted_borderless_glass_gray", ModBlocks.TINTED_BORDERLESS_GLASS_GRAY);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_GREEN = registerBlockItem("tinted_borderless_glass_green", ModBlocks.TINTED_BORDERLESS_GLASS_GREEN);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIGHT_BLUE = registerBlockItem("tinted_borderless_glass_light_blue", ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIGHT_GRAY = registerBlockItem("tinted_borderless_glass_light_gray", ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIME = registerBlockItem("tinted_borderless_glass_lime", ModBlocks.TINTED_BORDERLESS_GLASS_LIME);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_MAGENTA = registerBlockItem("tinted_borderless_glass_magenta", ModBlocks.TINTED_BORDERLESS_GLASS_MAGENTA);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_ORANGE = registerBlockItem("tinted_borderless_glass_orange", ModBlocks.TINTED_BORDERLESS_GLASS_ORANGE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_PINK = registerBlockItem("tinted_borderless_glass_pink", ModBlocks.TINTED_BORDERLESS_GLASS_PINK);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_PURPLE = registerBlockItem("tinted_borderless_glass_purple", ModBlocks.TINTED_BORDERLESS_GLASS_PURPLE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_RED = registerBlockItem("tinted_borderless_glass_red", ModBlocks.TINTED_BORDERLESS_GLASS_RED);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_WHITE = registerBlockItem("tinted_borderless_glass_white", ModBlocks.TINTED_BORDERLESS_GLASS_WHITE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_YELLOW = registerBlockItem("tinted_borderless_glass_yellow", ModBlocks.TINTED_BORDERLESS_GLASS_YELLOW);
-    public static final DeferredHolder<Item, BlockItem> TINTED_GLASS = registerBlockItem("tinted_glass", ModBlocks.TINTED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> WEATHERED_COPPER_BLOCK = registerBlockItem("weathered_copper_block", ModBlocks.WEATHERED_COPPER_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> WEATHERED_COPPER_GRATE = registerBlockItem("weathered_copper_grate", ModBlocks.WEATHERED_COPPER_GRATE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_STAINED_GLASS = registerBlockItem("white_stained_glass", ModBlocks.WHITE_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_STAINED_GLASS = registerBlockItem("yellow_stained_glass", ModBlocks.YELLOW_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_PLANKS_BRICKS = registerBlockItem("pale_oak_planks_bricks", ModBlocks.PALE_OAK_PLANKS_BRICKS);
+
+
+
     // ── Bamboo Windows CTM ──
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_BARS_CTM = registerBlockItem("bamboo_window_bars_ctm", ModBlocks.BAMBOO_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_COVERED_CTM = registerBlockItem("bamboo_window_covered_ctm", ModBlocks.BAMBOO_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_DIAGONAL_CTM = registerBlockItem("bamboo_window_diagonal_ctm", ModBlocks.BAMBOO_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_LARGE_CTM = registerBlockItem("bamboo_window_large_ctm", ModBlocks.BAMBOO_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_PANES_CTM = registerBlockItem("bamboo_window_panes_ctm", ModBlocks.BAMBOO_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_ROUNDED_CTM = registerBlockItem("bamboo_window_rounded_ctm", ModBlocks.BAMBOO_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SLIM_CTM = registerBlockItem("bamboo_window_slim_ctm", ModBlocks.BAMBOO_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SWIRLING_CTM = registerBlockItem("bamboo_window_swirling_ctm", ModBlocks.BAMBOO_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_TILES_CTM = registerBlockItem("bamboo_window_tiles_ctm", ModBlocks.BAMBOO_WINDOW_TILES_CTM);
     // ── Cherry Windows CTM ──
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_BARS_CTM = registerBlockItem("cherry_window_bars_ctm", ModBlocks.CHERRY_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_COVERED_CTM = registerBlockItem("cherry_window_covered_ctm", ModBlocks.CHERRY_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_DIAGONAL_CTM = registerBlockItem("cherry_window_diagonal_ctm", ModBlocks.CHERRY_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_LARGE_CTM = registerBlockItem("cherry_window_large_ctm", ModBlocks.CHERRY_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_PANES_CTM = registerBlockItem("cherry_window_panes_ctm", ModBlocks.CHERRY_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_ROUNDED_CTM = registerBlockItem("cherry_window_rounded_ctm", ModBlocks.CHERRY_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SLIM_CTM = registerBlockItem("cherry_window_slim_ctm", ModBlocks.CHERRY_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SWIRLING_CTM = registerBlockItem("cherry_window_swirling_ctm", ModBlocks.CHERRY_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_TILES_CTM = registerBlockItem("cherry_window_tiles_ctm", ModBlocks.CHERRY_WINDOW_TILES_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_BARS_CTM = registerBlockItem("pale_oak_window_bars_ctm", ModBlocks.PALE_OAK_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_COVERED_CTM = registerBlockItem("pale_oak_window_covered_ctm", ModBlocks.PALE_OAK_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_DIAGONAL_CTM = registerBlockItem("pale_oak_window_diagonal_ctm", ModBlocks.PALE_OAK_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_LARGE_CTM = registerBlockItem("pale_oak_window_large_ctm", ModBlocks.PALE_OAK_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_PANES_CTM = registerBlockItem("pale_oak_window_panes_ctm", ModBlocks.PALE_OAK_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_ROUNDED_CTM = registerBlockItem("pale_oak_window_rounded_ctm", ModBlocks.PALE_OAK_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SLIM_CTM = registerBlockItem("pale_oak_window_slim_ctm", ModBlocks.PALE_OAK_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SWIRLING_CTM = registerBlockItem("pale_oak_window_swirling_ctm", ModBlocks.PALE_OAK_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_TILES_CTM = registerBlockItem("pale_oak_window_tiles_ctm", ModBlocks.PALE_OAK_WINDOW_TILES_CTM);
     // ── Bamboo Windows ──
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_BARS = registerBlockItem("bamboo_window_bars", ModBlocks.BAMBOO_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_COVERED = registerBlockItem("bamboo_window_covered", ModBlocks.BAMBOO_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_DIAGONAL = registerBlockItem("bamboo_window_diagonal", ModBlocks.BAMBOO_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_LARGE = registerBlockItem("bamboo_window_large", ModBlocks.BAMBOO_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_PANES = registerBlockItem("bamboo_window_panes", ModBlocks.BAMBOO_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_ROUNDED = registerBlockItem("bamboo_window_rounded", ModBlocks.BAMBOO_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SLIM = registerBlockItem("bamboo_window_slim", ModBlocks.BAMBOO_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SWIRLING = registerBlockItem("bamboo_window_swirling", ModBlocks.BAMBOO_WINDOW_SWIRLING);
     // ── Cherry Windows ──
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_BARS = registerBlockItem("cherry_window_bars", ModBlocks.CHERRY_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_COVERED = registerBlockItem("cherry_window_covered", ModBlocks.CHERRY_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_DIAGONAL = registerBlockItem("cherry_window_diagonal", ModBlocks.CHERRY_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_LARGE = registerBlockItem("cherry_window_large", ModBlocks.CHERRY_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_PANES = registerBlockItem("cherry_window_panes", ModBlocks.CHERRY_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_ROUNDED = registerBlockItem("cherry_window_rounded", ModBlocks.CHERRY_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SLIM = registerBlockItem("cherry_window_slim", ModBlocks.CHERRY_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SWIRLING = registerBlockItem("cherry_window_swirling", ModBlocks.CHERRY_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_BARS = registerBlockItem("pale_oak_window_bars", ModBlocks.PALE_OAK_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_COVERED = registerBlockItem("pale_oak_window_covered", ModBlocks.PALE_OAK_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_DIAGONAL = registerBlockItem("pale_oak_window_diagonal", ModBlocks.PALE_OAK_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_LARGE = registerBlockItem("pale_oak_window_large", ModBlocks.PALE_OAK_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_PANES = registerBlockItem("pale_oak_window_panes", ModBlocks.PALE_OAK_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_ROUNDED = registerBlockItem("pale_oak_window_rounded", ModBlocks.PALE_OAK_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SLIM = registerBlockItem("pale_oak_window_slim", ModBlocks.PALE_OAK_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SWIRLING = registerBlockItem("pale_oak_window_swirling", ModBlocks.PALE_OAK_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_TILES = registerBlockItem("pale_oak_window_tiles", ModBlocks.PALE_OAK_WINDOW_TILES);
 
     // ── Glass/ plain block items ──────────────────────────────────────────────────
-    public static final DeferredHolder<Item, BlockItem> LEADED_GLASS = registerBlockItem("leaded_glass", ModBlocks.LEADED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> GLASS_OCHRE_FROGLIGHT = registerBlockItem("glass_ochre_froglight", ModBlocks.GLASS_OCHRE_FROGLIGHT);
-    public static final DeferredHolder<Item, BlockItem> GLASS_PEARLESCENT_FROGLIGHT = registerBlockItem("glass_pearlescent_froglight", ModBlocks.GLASS_PEARLESCENT_FROGLIGHT);
-    public static final DeferredHolder<Item, BlockItem> GLASS_VERDANT_FROGLIGHT = registerBlockItem("glass_verdant_froglight", ModBlocks.GLASS_VERDANT_FROGLIGHT);
 
     // ── Pane items ────────────────────────────────────────────────────────────────
     // ── Bamboo Window Panes ──
@@ -1879,7 +1664,6 @@ public class ModItems {
     // ── Diamond Pavers (10 new colors) ──
 
     // --- Stone variant block items ---
-    public static final DeferredHolder<Item, BlockItem> CHISELED_PLASTERED_STONE_PILLAR    = registerBlockItem("chiseled_plastered_stone_pillar",    ModBlocks.CHISELED_PLASTERED_STONE_PILLAR);
     // CTM vertical pillars
 
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_CRENELATION = registerBlockItem("sandstone_crenelation", ModBlocks.SANDSTONE_CRENELATION);
@@ -1893,29 +1677,18 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> BAMBOO_THATCH_EDGE = registerBlockItem("bamboo_thatch_edge", ModBlocks.BAMBOO_THATCH_EDGE);
     public static final DeferredHolder<Item, BlockItem> BAMBOO_THATCH_PLATE = registerBlockItem("bamboo_thatch_plate", ModBlocks.BAMBOO_THATCH_PLATE);
 
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MASONRY = registerBlockItem("stone_bricks_masonry", ModBlocks.STONE_BRICKS_MASONRY);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MASONRY_EDGE = registerBlockItem("stone_bricks_masonry_edge", ModBlocks.STONE_BRICKS_MASONRY_EDGE);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MASONRY_PLATE = registerBlockItem("stone_bricks_masonry_plate", ModBlocks.STONE_BRICKS_MASONRY_PLATE);
     public static final DeferredHolder<Item, BlockItem> CURVED_RAKED_GRAVEL = registerBlockItem("curved_raked_gravel", ModBlocks.CURVED_RAKED_GRAVEL);
     public static final DeferredHolder<Item, BlockItem> STRAIGHT_RAKED_GRAVEL = registerBlockItem("straight_raked_gravel", ModBlocks.STRAIGHT_RAKED_GRAVEL);
 
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_SLENDER_BRICKS = registerBlockItem("sandstone_slender_bricks", ModBlocks.SANDSTONE_SLENDER_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_SLENDER_TURQUOISE_PATTERN = registerBlockItem("sandstone_slender_turquoise_pattern", ModBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN);
 
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_RED_WOOL = registerBlockItem("ornamented_red_wool", ModBlocks.ORNAMENTED_RED_WOOL);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_RED_WOOL = registerBlockItem("delicate_red_wool", ModBlocks.DELICATE_RED_WOOL);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_RED_CARPET = registerBlockItem("ornamented_red_carpet", ModBlocks.ORNAMENTED_RED_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_RED_CARPET = registerBlockItem("delicate_red_carpet", ModBlocks.DELICATE_RED_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_BLUE_WOOL = registerBlockItem("ornamented_blue_wool", ModBlocks.ORNAMENTED_BLUE_WOOL);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_BLUE_WOOL = registerBlockItem("delicate_blue_wool", ModBlocks.DELICATE_BLUE_WOOL);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_BLUE_CARPET = registerBlockItem("ornamented_blue_carpet", ModBlocks.ORNAMENTED_BLUE_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_BLUE_CARPET = registerBlockItem("delicate_blue_carpet", ModBlocks.DELICATE_BLUE_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_GREEN_WOOL = registerBlockItem("ornamented_green_wool", ModBlocks.ORNAMENTED_GREEN_WOOL);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_GREEN_WOOL = registerBlockItem("delicate_green_wool", ModBlocks.DELICATE_GREEN_WOOL);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_GREEN_CARPET = registerBlockItem("ornamented_green_carpet", ModBlocks.ORNAMENTED_GREEN_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_GREEN_CARPET = registerBlockItem("delicate_green_carpet", ModBlocks.DELICATE_GREEN_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_PURPLE_WOOL = registerBlockItem("ornamented_purple_wool", ModBlocks.ORNAMENTED_PURPLE_WOOL);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_PURPLE_WOOL = registerBlockItem("delicate_purple_wool", ModBlocks.DELICATE_PURPLE_WOOL);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_PURPLE_CARPET = registerBlockItem("ornamented_purple_carpet", ModBlocks.ORNAMENTED_PURPLE_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_PURPLE_CARPET = registerBlockItem("delicate_purple_carpet", ModBlocks.DELICATE_PURPLE_CARPET);
 
@@ -2218,44 +1991,8 @@ public class ModItems {
         ModBlocks.FUTONS.values().forEach(ModItems::registerBlockItem);
 
         // New stone blocks (plain cube-all)
-        registerBlockItem(ModBlocks.CHAOTIC_STONE_BRICKS);
-        registerBlockItem(ModBlocks.CHAOTIC_MEDIUM_STONE_BRICKS);
-        registerBlockItem(ModBlocks.CHAOTIC_SMALL_STONE_BRICKS);
-        registerBlockItem(ModBlocks.DIAMOND_STONE_PAVERS);
-        registerBlockItem(ModBlocks.ENCASED_STONE_BRICKS);
-        registerBlockItem(ModBlocks.FRENCH_STONE);
-        registerBlockItem(ModBlocks.LARGE_ORNATE_STONE);
-        registerBlockItem(ModBlocks.LARGE_STONE_TILE);
-        registerBlockItem(ModBlocks.MESSY_STONE_TILES);
-        registerBlockItem(ModBlocks.MOSAIC_STONE);
-        registerBlockItem(ModBlocks.NOTCHED_STONE_BRICKS);
-        registerBlockItem(ModBlocks.ORNATE_STONE);
-        registerBlockItem(ModBlocks.POISON_STONE);
-        registerBlockItem(ModBlocks.POLISHED_CUT_STONE);
-        registerBlockItem(ModBlocks.POLISHED_STONE_TILES);
-        registerBlockItem(ModBlocks.PRISM_STONE);
-        registerBlockItem(ModBlocks.SLANTED_STONE);
-        registerBlockItem(ModBlocks.STONE_ARRAY);
-        registerBlockItem(ModBlocks.STONE_BRAID);
-        registerBlockItem(ModBlocks.STONE_DENT);
-        registerBlockItem(ModBlocks.STONE_JELLYBEAN);
-        registerBlockItem(ModBlocks.STONE_LAYERS);
-        registerBlockItem(ModBlocks.STONE_PANEL);
-        registerBlockItem(ModBlocks.STONE_ROAD);
-        registerBlockItem(ModBlocks.STONE_ZAG);
-        registerBlockItem(ModBlocks.SUNKEN_STONE);
-        registerBlockItem(ModBlocks.TRIPLE_STONE_BRICKS);
-        registerBlockItem(ModBlocks.WEATHERED_STONE_BRICKS);
-        registerBlockItem(ModBlocks.WEATHERED_TILED_STONE);
-        registerBlockItem(ModBlocks.WEAVER_STONE);
         // New stone blocks (cube-bottom-top)
-        registerBlockItem(ModBlocks.CUT_STONE);
-        registerBlockItem(ModBlocks.ROUGH_CUT_STONE);
         // New stone pillars (RotatedPillarBlock)
-        registerBlockItem(ModBlocks.SHEARED_STONE_PILLAR);
-        registerBlockItem(ModBlocks.SLATED_STONE);
-        registerBlockItem(ModBlocks.STONE_COLUMN);
-        registerBlockItem(ModBlocks.STONE_TWISTING_COLUMN);
         // Chisel pillar blocks and legend blocks
         ModBlocks.CHISEL_PILLARS.values().forEach(ModItems::registerBlockItem);
         ModBlocks.CHISEL_LEGEND.values().forEach(ModItems::registerBlockItem);
@@ -2293,7 +2030,6 @@ public class ModItems {
 
 
     // ===== RECOVERED WINDOW ITEMS =====
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_BARS = registerBlockItem("acacia_window_bars", ModBlocks.ACACIA_WINDOW_BARS);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_BARS_PANE = registerBlockItem("acacia_window_bars_pane", ModBlocks.ACACIA_WINDOW_BARS_PANE);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_COVERED_CTM_PANE = registerBlockItem("acacia_window_covered_ctm_pane", ModBlocks.ACACIA_WINDOW_COVERED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_COVERED_PANE = registerBlockItem("acacia_window_covered_pane", ModBlocks.ACACIA_WINDOW_COVERED_PANE);
@@ -2313,7 +2049,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_TILES_PANE = registerBlockItem("acacia_window_tiles_pane", ModBlocks.ACACIA_WINDOW_TILES_PANE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS_CTM_PANE = registerBlockItem("birch_window_bars_ctm_pane", ModBlocks.BIRCH_WINDOW_BARS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS_PANE = registerBlockItem("birch_window_bars_pane", ModBlocks.BIRCH_WINDOW_BARS_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED = registerBlockItem("birch_window_covered", ModBlocks.BIRCH_WINDOW_COVERED);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED_PANE = registerBlockItem("birch_window_covered_pane", ModBlocks.BIRCH_WINDOW_COVERED_PANE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("birch_window_diagonal_ctm_pane", ModBlocks.BIRCH_WINDOW_DIAGONAL_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL_PANE = registerBlockItem("birch_window_diagonal_pane", ModBlocks.BIRCH_WINDOW_DIAGONAL_PANE);
@@ -2333,7 +2068,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_BARS_PANE = registerBlockItem("crimson_window_bars_pane", ModBlocks.CRIMSON_WINDOW_BARS_PANE);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_COVERED_CTM_PANE = registerBlockItem("crimson_window_covered_ctm_pane", ModBlocks.CRIMSON_WINDOW_COVERED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_COVERED_PANE = registerBlockItem("crimson_window_covered_pane", ModBlocks.CRIMSON_WINDOW_COVERED_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_DIAGONAL = registerBlockItem("crimson_window_diagonal", ModBlocks.CRIMSON_WINDOW_DIAGONAL);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_DIAGONAL_PANE = registerBlockItem("crimson_window_diagonal_pane", ModBlocks.CRIMSON_WINDOW_DIAGONAL_PANE);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_LARGE_CTM_PANE = registerBlockItem("crimson_window_large_ctm_pane", ModBlocks.CRIMSON_WINDOW_LARGE_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_LARGE_PANE = registerBlockItem("crimson_window_large_pane", ModBlocks.CRIMSON_WINDOW_LARGE_PANE);
@@ -2353,7 +2087,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_COVERED_PANE = registerBlockItem("dark_oak_window_covered_pane", ModBlocks.DARK_OAK_WINDOW_COVERED_PANE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("dark_oak_window_diagonal_ctm_pane", ModBlocks.DARK_OAK_WINDOW_DIAGONAL_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_DIAGONAL_PANE = registerBlockItem("dark_oak_window_diagonal_pane", ModBlocks.DARK_OAK_WINDOW_DIAGONAL_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_LARGE = registerBlockItem("dark_oak_window_large", ModBlocks.DARK_OAK_WINDOW_LARGE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_LARGE_CTM_PANE = registerBlockItem("dark_oak_window_large_ctm_pane", ModBlocks.DARK_OAK_WINDOW_LARGE_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_LARGE_PANE = registerBlockItem("dark_oak_window_large_pane", ModBlocks.DARK_OAK_WINDOW_LARGE_PANE);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_PANES_CTM_PANE = registerBlockItem("dark_oak_window_panes_ctm_pane", ModBlocks.DARK_OAK_WINDOW_PANES_CTM_PANE);
@@ -2378,7 +2111,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_PANES_PANE = registerBlockItem("jungle_window_panes_pane", ModBlocks.JUNGLE_WINDOW_PANES_PANE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("jungle_window_rounded_ctm_pane", ModBlocks.JUNGLE_WINDOW_ROUNDED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_ROUNDED_PANE = registerBlockItem("jungle_window_rounded_pane", ModBlocks.JUNGLE_WINDOW_ROUNDED_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SLIM = registerBlockItem("jungle_window_slim", ModBlocks.JUNGLE_WINDOW_SLIM);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SLIM_PANE = registerBlockItem("jungle_window_slim_pane", ModBlocks.JUNGLE_WINDOW_SLIM_PANE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("jungle_window_swirling_ctm_pane", ModBlocks.JUNGLE_WINDOW_SWIRLING_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SWIRLING_PANE = registerBlockItem("jungle_window_swirling_pane", ModBlocks.JUNGLE_WINDOW_SWIRLING_PANE);
@@ -2394,7 +2126,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_LARGE_PANE = registerBlockItem("mangrove_window_large_pane", ModBlocks.MANGROVE_WINDOW_LARGE_PANE);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_PANES_CTM_PANE = registerBlockItem("mangrove_window_panes_ctm_pane", ModBlocks.MANGROVE_WINDOW_PANES_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_PANES_PANE = registerBlockItem("mangrove_window_panes_pane", ModBlocks.MANGROVE_WINDOW_PANES_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_ROUNDED = registerBlockItem("mangrove_window_rounded", ModBlocks.MANGROVE_WINDOW_ROUNDED);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_ROUNDED_PANE = registerBlockItem("mangrove_window_rounded_pane", ModBlocks.MANGROVE_WINDOW_ROUNDED_PANE);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SLIM_CTM_PANE = registerBlockItem("mangrove_window_slim_ctm_pane", ModBlocks.MANGROVE_WINDOW_SLIM_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SLIM_PANE = registerBlockItem("mangrove_window_slim_pane", ModBlocks.MANGROVE_WINDOW_SLIM_PANE);
@@ -2410,7 +2141,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_DIAGONAL_PANE = registerBlockItem("oak_window_diagonal_pane", ModBlocks.OAK_WINDOW_DIAGONAL_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_LARGE_CTM_PANE = registerBlockItem("oak_window_large_ctm_pane", ModBlocks.OAK_WINDOW_LARGE_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_LARGE_PANE = registerBlockItem("oak_window_large_pane", ModBlocks.OAK_WINDOW_LARGE_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_PANES = registerBlockItem("oak_window_panes", ModBlocks.OAK_WINDOW_PANES);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_PANES_PANE = registerBlockItem("oak_window_panes_pane", ModBlocks.OAK_WINDOW_PANES_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("oak_window_rounded_ctm_pane", ModBlocks.OAK_WINDOW_ROUNDED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED_PANE = registerBlockItem("oak_window_rounded_pane", ModBlocks.OAK_WINDOW_ROUNDED_PANE);
@@ -2451,7 +2181,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_ROUNDED_PANE = registerBlockItem("warped_window_rounded_pane", ModBlocks.WARPED_WINDOW_ROUNDED_PANE);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM_CTM_PANE = registerBlockItem("warped_window_slim_ctm_pane", ModBlocks.WARPED_WINDOW_SLIM_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM_PANE = registerBlockItem("warped_window_slim_pane", ModBlocks.WARPED_WINDOW_SLIM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING = registerBlockItem("warped_window_swirling", ModBlocks.WARPED_WINDOW_SWIRLING);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING_PANE = registerBlockItem("warped_window_swirling_pane", ModBlocks.WARPED_WINDOW_SWIRLING_PANE);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_TILES_CTM_PANE = registerBlockItem("warped_window_tiles_ctm_pane", ModBlocks.WARPED_WINDOW_TILES_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_TILES_PANE = registerBlockItem("warped_window_tiles_pane", ModBlocks.WARPED_WINDOW_TILES_PANE);
@@ -2470,21 +2199,8 @@ public class ModItems {
         registerBlockItem("edged_granite_bricks", ModBlocks.EDGED_GRANITE_BRICKS);
     public static final DeferredHolder<Item, BlockItem> FINE_GRANITE_CTM =
         registerBlockItem("fine_granite_ctm", ModBlocks.FINE_GRANITE_CTM);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_BRICK_PATTERN = registerBlockItem("granite_brick_pattern", ModBlocks.GRANITE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_BRICK_PAVING = registerBlockItem("granite_brick_paving", ModBlocks.GRANITE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_BRICKS = registerBlockItem("granite_bricks", ModBlocks.GRANITE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_CUT_POLISHED = registerBlockItem("granite_cut_polished", ModBlocks.GRANITE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_CUT_SMALL_BRICK = registerBlockItem("granite_cut_small_brick", ModBlocks.GRANITE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_DIAGONAL_BRICKS = registerBlockItem("granite_diagonal_bricks", ModBlocks.GRANITE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_DOTTED = registerBlockItem("granite_dotted", ModBlocks.GRANITE_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_PAVING = registerBlockItem("granite_paving", ModBlocks.GRANITE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_POLISHED = registerBlockItem("granite_polished", ModBlocks.GRANITE_POLISHED);
     public static final DeferredHolder<Item, BlockItem> GRANITE_PRISMARINE =
         registerBlockItem("granite_prismarine", ModBlocks.GRANITE_PRISMARINE);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_ROTATED_BRICKS = registerBlockItem("granite_rotated_bricks", ModBlocks.GRANITE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_SQUARES = registerBlockItem("granite_squares", ModBlocks.GRANITE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_TILES = registerBlockItem("granite_tiles", ModBlocks.GRANITE_TILES);
-    public static final DeferredHolder<Item, BlockItem> GRANITE_WAVY = registerBlockItem("granite_wavy", ModBlocks.GRANITE_WAVY);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_GRANITE_BRICKS =
         registerBlockItem("massive_granite_bricks", ModBlocks.MASSIVE_GRANITE_BRICKS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_GRANITE_CTM =
@@ -2506,66 +2222,9 @@ public class ModItems {
 
 
     // ===== RECOVERED WAVE1 =====
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_BEAMS = registerBlockItem("acacia_planks_beams", ModBlocks.ACACIA_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_BRICK_PATTERN = registerBlockItem("acacia_planks_brick_pattern", ModBlocks.ACACIA_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_BRICK_PAVING = registerBlockItem("acacia_planks_brick_paving", ModBlocks.ACACIA_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_BRICKS = registerBlockItem("acacia_planks_bricks", ModBlocks.ACACIA_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_CRATE = registerBlockItem("acacia_planks_crate", ModBlocks.ACACIA_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_DIAGONAL_STRIPES = registerBlockItem("acacia_planks_diagonal_stripes", ModBlocks.ACACIA_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_DIAGONAL_TILES = registerBlockItem("acacia_planks_diagonal_tiles", ModBlocks.ACACIA_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_DOTTED = registerBlockItem("acacia_planks_dotted", ModBlocks.ACACIA_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_FLOORING = registerBlockItem("acacia_planks_flooring", ModBlocks.ACACIA_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_LARGE_TILES = registerBlockItem("acacia_planks_large_tiles", ModBlocks.ACACIA_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_PANEL =
         registerBlockItem("acacia_planks_panel", ModBlocks.ACACIA_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_PATTERN = registerBlockItem("acacia_planks_pattern", ModBlocks.ACACIA_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_ROTATED_BRICKS = registerBlockItem("acacia_planks_rotated_bricks", ModBlocks.ACACIA_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_SMALL_BRICKS = registerBlockItem("acacia_planks_small_bricks", ModBlocks.ACACIA_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_SMALL_TILES = registerBlockItem("acacia_planks_small_tiles", ModBlocks.ACACIA_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_SQUARES = registerBlockItem("acacia_planks_squares", ModBlocks.ACACIA_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_TILES = registerBlockItem("acacia_planks_tiles", ModBlocks.ACACIA_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_WAVY = registerBlockItem("acacia_planks_wavy", ModBlocks.ACACIA_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_WOVEN = registerBlockItem("acacia_planks_woven", ModBlocks.ACACIA_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_BARS_CTM = registerBlockItem("acacia_window_bars_ctm", ModBlocks.ACACIA_WINDOW_BARS_CTM);
     public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_BARS_CTM_PANE = registerBlockItem("acacia_window_bars_ctm_pane", ModBlocks.ACACIA_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_COVERED = registerBlockItem("acacia_window_covered", ModBlocks.ACACIA_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_COVERED_CTM = registerBlockItem("acacia_window_covered_ctm", ModBlocks.ACACIA_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_DIAGONAL = registerBlockItem("acacia_window_diagonal", ModBlocks.ACACIA_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_DIAGONAL_CTM = registerBlockItem("acacia_window_diagonal_ctm", ModBlocks.ACACIA_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_LARGE = registerBlockItem("acacia_window_large", ModBlocks.ACACIA_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_LARGE_CTM = registerBlockItem("acacia_window_large_ctm", ModBlocks.ACACIA_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_PANES = registerBlockItem("acacia_window_panes", ModBlocks.ACACIA_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_PANES_CTM = registerBlockItem("acacia_window_panes_ctm", ModBlocks.ACACIA_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_ROUNDED = registerBlockItem("acacia_window_rounded", ModBlocks.ACACIA_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_ROUNDED_CTM = registerBlockItem("acacia_window_rounded_ctm", ModBlocks.ACACIA_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SLIM = registerBlockItem("acacia_window_slim", ModBlocks.ACACIA_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SLIM_CTM = registerBlockItem("acacia_window_slim_ctm", ModBlocks.ACACIA_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SWIRLING = registerBlockItem("acacia_window_swirling", ModBlocks.ACACIA_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SWIRLING_CTM = registerBlockItem("acacia_window_swirling_ctm", ModBlocks.ACACIA_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_TILES = registerBlockItem("acacia_window_tiles", ModBlocks.ACACIA_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_TILES_CTM = registerBlockItem("acacia_window_tiles_ctm", ModBlocks.ACACIA_WINDOW_TILES_CTM);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_BEAMS = registerBlockItem("amethyst_block_beams", ModBlocks.AMETHYST_BLOCK_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_BORDERED_DIAGONAL_TILES = registerBlockItem("amethyst_block_bordered_diagonal_tiles", ModBlocks.AMETHYST_BLOCK_BORDERED_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_BRICKS = registerBlockItem("amethyst_block_bricks", ModBlocks.AMETHYST_BLOCK_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_CTM = registerBlockItem("amethyst_block_ctm", ModBlocks.AMETHYST_BLOCK_CTM);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_CUT = registerBlockItem("amethyst_block_cut", ModBlocks.AMETHYST_BLOCK_CUT);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_EDGED = registerBlockItem("amethyst_block_edged", ModBlocks.AMETHYST_BLOCK_EDGED);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_POLISHED = registerBlockItem("amethyst_block_polished", ModBlocks.AMETHYST_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_SHINY = registerBlockItem("amethyst_block_shiny", ModBlocks.AMETHYST_BLOCK_SHINY);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_BLOCK_TILES = registerBlockItem("amethyst_block_tiles", ModBlocks.AMETHYST_BLOCK_TILES);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_BRICK_PATTERN = registerBlockItem("andesite_brick_pattern", ModBlocks.ANDESITE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_BRICK_PAVING = registerBlockItem("andesite_brick_paving", ModBlocks.ANDESITE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_BRICKS = registerBlockItem("andesite_bricks", ModBlocks.ANDESITE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_CUT_POLISHED = registerBlockItem("andesite_cut_polished", ModBlocks.ANDESITE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_CUT_SMALL_BRICK = registerBlockItem("andesite_cut_small_brick", ModBlocks.ANDESITE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_DIAGONAL_BRICKS = registerBlockItem("andesite_diagonal_bricks", ModBlocks.ANDESITE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_DOTTED = registerBlockItem("andesite_dotted", ModBlocks.ANDESITE_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_PAVING = registerBlockItem("andesite_paving", ModBlocks.ANDESITE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_POLISHED = registerBlockItem("andesite_polished", ModBlocks.ANDESITE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_ROTATED_BRICKS = registerBlockItem("andesite_rotated_bricks", ModBlocks.ANDESITE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_SQUARES = registerBlockItem("andesite_squares", ModBlocks.ANDESITE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_TILES = registerBlockItem("andesite_tiles", ModBlocks.ANDESITE_TILES);
-    public static final DeferredHolder<Item, BlockItem> ANDESITE_WAVY = registerBlockItem("andesite_wavy", ModBlocks.ANDESITE_WAVY);
     public static final DeferredHolder<Item, BlockItem> APPLE_ACACIA_LEAVES =
         registerBlockItem("apple_acacia_leaves", ModBlocks.APPLE_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> APPLE_BIRCH_LEAVES =
@@ -2629,74 +2288,11 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> ARCHED_YELLOW_STAINED_GLASS_CTM =
         registerBlockItem("arched_yellow_stained_glass_ctm", ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> ARCHED_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_yellow_stained_glass_ctm_pane", ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ASURINE_CUT_POLISHED = registerBlockItem("asurine_cut_polished", ModBlocks.ASURINE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> ASURINE_CUT_SMALL_BRICK = registerBlockItem("asurine_cut_small_brick", ModBlocks.ASURINE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_BEAMS = registerBlockItem("bamboo_planks_beams", ModBlocks.BAMBOO_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_BRICK_PATTERN = registerBlockItem("bamboo_planks_brick_pattern", ModBlocks.BAMBOO_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_BRICK_PAVING = registerBlockItem("bamboo_planks_brick_paving", ModBlocks.BAMBOO_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_BRICKS = registerBlockItem("bamboo_planks_bricks", ModBlocks.BAMBOO_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_CRATE = registerBlockItem("bamboo_planks_crate", ModBlocks.BAMBOO_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_DIAGONAL_STRIPES = registerBlockItem("bamboo_planks_diagonal_stripes", ModBlocks.BAMBOO_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_DIAGONAL_TILES = registerBlockItem("bamboo_planks_diagonal_tiles", ModBlocks.BAMBOO_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_DOTTED = registerBlockItem("bamboo_planks_dotted", ModBlocks.BAMBOO_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_FLOORING = registerBlockItem("bamboo_planks_flooring", ModBlocks.BAMBOO_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_LARGE_TILES = registerBlockItem("bamboo_planks_large_tiles", ModBlocks.BAMBOO_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_PANEL =
         registerBlockItem("bamboo_planks_panel", ModBlocks.BAMBOO_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_PATTERN = registerBlockItem("bamboo_planks_pattern", ModBlocks.BAMBOO_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_ROTATED_BRICKS = registerBlockItem("bamboo_planks_rotated_bricks", ModBlocks.BAMBOO_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_SMALL_BRICKS = registerBlockItem("bamboo_planks_small_bricks", ModBlocks.BAMBOO_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_SMALL_TILES = registerBlockItem("bamboo_planks_small_tiles", ModBlocks.BAMBOO_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_SQUARES = registerBlockItem("bamboo_planks_squares", ModBlocks.BAMBOO_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_TILES = registerBlockItem("bamboo_planks_tiles", ModBlocks.BAMBOO_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_WAVY = registerBlockItem("bamboo_planks_wavy", ModBlocks.BAMBOO_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_WOVEN = registerBlockItem("bamboo_planks_woven", ModBlocks.BAMBOO_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> BASALT_BEAMS = registerBlockItem("basalt_beams", ModBlocks.BASALT_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> BASALT_BORDERED = registerBlockItem("basalt_bordered", ModBlocks.BASALT_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> BASALT_BORDERED_POLISHED = registerBlockItem("basalt_bordered_polished", ModBlocks.BASALT_BORDERED_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> BASALT_BRICKS = registerBlockItem("basalt_bricks", ModBlocks.BASALT_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BASALT_DIAGONAL_TILES = registerBlockItem("basalt_diagonal_tiles", ModBlocks.BASALT_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> BASALT_PATTERN = registerBlockItem("basalt_pattern", ModBlocks.BASALT_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BASALT_PATTERNED = registerBlockItem("basalt_patterned", ModBlocks.BASALT_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> BASALT_TILES = registerBlockItem("basalt_tiles", ModBlocks.BASALT_TILES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_BEAMS = registerBlockItem("birch_planks_beams", ModBlocks.BIRCH_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_BRICK_PATTERN = registerBlockItem("birch_planks_brick_pattern", ModBlocks.BIRCH_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_BRICK_PAVING = registerBlockItem("birch_planks_brick_paving", ModBlocks.BIRCH_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_BRICKS = registerBlockItem("birch_planks_bricks", ModBlocks.BIRCH_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_CRATE = registerBlockItem("birch_planks_crate", ModBlocks.BIRCH_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_DIAGONAL_STRIPES = registerBlockItem("birch_planks_diagonal_stripes", ModBlocks.BIRCH_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_DIAGONAL_TILES = registerBlockItem("birch_planks_diagonal_tiles", ModBlocks.BIRCH_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_DOTTED = registerBlockItem("birch_planks_dotted", ModBlocks.BIRCH_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_FLOORING = registerBlockItem("birch_planks_flooring", ModBlocks.BIRCH_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_LARGE_TILES = registerBlockItem("birch_planks_large_tiles", ModBlocks.BIRCH_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_PANEL =
         registerBlockItem("birch_planks_panel", ModBlocks.BIRCH_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_PATTERN = registerBlockItem("birch_planks_pattern", ModBlocks.BIRCH_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_ROTATED_BRICKS = registerBlockItem("birch_planks_rotated_bricks", ModBlocks.BIRCH_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_SMALL_BRICKS = registerBlockItem("birch_planks_small_bricks", ModBlocks.BIRCH_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_SMALL_TILES = registerBlockItem("birch_planks_small_tiles", ModBlocks.BIRCH_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_SQUARES = registerBlockItem("birch_planks_squares", ModBlocks.BIRCH_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_TILES = registerBlockItem("birch_planks_tiles", ModBlocks.BIRCH_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_WAVY = registerBlockItem("birch_planks_wavy", ModBlocks.BIRCH_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_WOVEN = registerBlockItem("birch_planks_woven", ModBlocks.BIRCH_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS = registerBlockItem("birch_window_bars", ModBlocks.BIRCH_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS_CTM = registerBlockItem("birch_window_bars_ctm", ModBlocks.BIRCH_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED_CTM = registerBlockItem("birch_window_covered_ctm", ModBlocks.BIRCH_WINDOW_COVERED_CTM);
     public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED_CTM_PANE = registerBlockItem("birch_window_covered_ctm_pane", ModBlocks.BIRCH_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL = registerBlockItem("birch_window_diagonal", ModBlocks.BIRCH_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL_CTM = registerBlockItem("birch_window_diagonal_ctm", ModBlocks.BIRCH_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_LARGE = registerBlockItem("birch_window_large", ModBlocks.BIRCH_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_LARGE_CTM = registerBlockItem("birch_window_large_ctm", ModBlocks.BIRCH_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_PANES = registerBlockItem("birch_window_panes", ModBlocks.BIRCH_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_PANES_CTM = registerBlockItem("birch_window_panes_ctm", ModBlocks.BIRCH_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_ROUNDED = registerBlockItem("birch_window_rounded", ModBlocks.BIRCH_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_ROUNDED_CTM = registerBlockItem("birch_window_rounded_ctm", ModBlocks.BIRCH_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SLIM = registerBlockItem("birch_window_slim", ModBlocks.BIRCH_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SLIM_CTM = registerBlockItem("birch_window_slim_ctm", ModBlocks.BIRCH_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SWIRLING = registerBlockItem("birch_window_swirling", ModBlocks.BIRCH_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SWIRLING_CTM = registerBlockItem("birch_window_swirling_ctm", ModBlocks.BIRCH_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_TILES = registerBlockItem("birch_window_tiles", ModBlocks.BIRCH_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_TILES_CTM = registerBlockItem("birch_window_tiles_ctm", ModBlocks.BIRCH_WINDOW_TILES_CTM);
     public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_CTM =
         registerBlockItem("black_concrete_ctm", ModBlocks.BLACK_CONCRETE_CTM);
     public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_PANEL =
@@ -2705,33 +2301,14 @@ public class ModItems {
         registerBlockItem("black_terracotta_column", ModBlocks.BLACK_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> BLACK_TERRACOTTA_CTM =
         registerBlockItem("black_terracotta_ctm", ModBlocks.BLACK_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_BRICK_PATTERN = registerBlockItem("blackstone_brick_pattern", ModBlocks.BLACKSTONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_BRICK_PAVING = registerBlockItem("blackstone_brick_paving", ModBlocks.BLACKSTONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_DIAGONAL_BRICKS = registerBlockItem("blackstone_diagonal_bricks", ModBlocks.BLACKSTONE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_POLISHED = registerBlockItem("blackstone_polished", ModBlocks.BLACKSTONE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_ROTATED_BRICKS = registerBlockItem("blackstone_rotated_bricks", ModBlocks.BLACKSTONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLACKSTONE_TILES = registerBlockItem("blackstone_tiles", ModBlocks.BLACKSTONE_TILES);
     public static final DeferredHolder<Item, BlockItem> BLUE_CONCRETE_CTM =
         registerBlockItem("blue_concrete_ctm", ModBlocks.BLUE_CONCRETE_CTM);
     public static final DeferredHolder<Item, BlockItem> BLUE_CONCRETE_PANEL =
         registerBlockItem("blue_concrete_panel", ModBlocks.BLUE_CONCRETE_PANEL);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_BORDERED = registerBlockItem("blue_ice_bordered", ModBlocks.BLUE_ICE_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_BRICKS = registerBlockItem("blue_ice_bricks", ModBlocks.BLUE_ICE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_CHISELED = registerBlockItem("blue_ice_chiseled", ModBlocks.BLUE_ICE_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_CTM = registerBlockItem("blue_ice_ctm", ModBlocks.BLUE_ICE_CTM);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_PATTERNED = registerBlockItem("blue_ice_patterned", ModBlocks.BLUE_ICE_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_SLANTED_TILES = registerBlockItem("blue_ice_slanted_tiles", ModBlocks.BLUE_ICE_SLANTED_TILES);
-    public static final DeferredHolder<Item, BlockItem> BLUE_ICE_TILES = registerBlockItem("blue_ice_tiles", ModBlocks.BLUE_ICE_TILES);
     public static final DeferredHolder<Item, BlockItem> BLUE_TERRACOTTA_COLUMN =
         registerBlockItem("blue_terracotta_column", ModBlocks.BLUE_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> BLUE_TERRACOTTA_CTM =
         registerBlockItem("blue_terracotta_ctm", ModBlocks.BLUE_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_BORDERED = registerBlockItem("bone_block_bordered", ModBlocks.BONE_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_CHISELED = registerBlockItem("bone_block_chiseled", ModBlocks.BONE_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_CONNECTING = registerBlockItem("bone_block_connecting", ModBlocks.BONE_BLOCK_CONNECTING);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_DECORATED_BORDERED = registerBlockItem("bone_block_decorated_bordered", ModBlocks.BONE_BLOCK_DECORATED_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_INVERTED_TILES = registerBlockItem("bone_block_inverted_tiles", ModBlocks.BONE_BLOCK_INVERTED_TILES);
-    public static final DeferredHolder<Item, BlockItem> BONE_BLOCK_PATTERNED = registerBlockItem("bone_block_patterned", ModBlocks.BONE_BLOCK_PATTERNED);
     public static final DeferredHolder<Item, BlockItem> BORDERED_AMETHYST_BLOCK =
         registerBlockItem("bordered_amethyst_block", ModBlocks.BORDERED_AMETHYST_BLOCK);
     public static final DeferredHolder<Item, BlockItem> BORDERED_ANCIENT_DEBRIS =
@@ -2925,8 +2502,6 @@ public class ModItems {
         registerBlockItem("brown_terracotta_column", ModBlocks.BROWN_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> BROWN_TERRACOTTA_CTM =
         registerBlockItem("brown_terracotta_ctm", ModBlocks.BROWN_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> CALCITE_CUT_POLISHED = registerBlockItem("calcite_cut_polished", ModBlocks.CALCITE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> CALCITE_CUT_SMALL_BRICK = registerBlockItem("calcite_cut_small_brick", ModBlocks.CALCITE_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> CARVED_MUD_BRICKS_CTM =
         registerBlockItem("carved_mud_bricks_ctm", ModBlocks.CARVED_MUD_BRICKS_CTM);
     public static final DeferredHolder<Item, BlockItem> CARVED_MUD_CTM =
@@ -2943,29 +2518,10 @@ public class ModItems {
         registerBlockItem("cherry_jungle_leaves", ModBlocks.CHERRY_JUNGLE_LEAVES);
     public static final DeferredHolder<Item, BlockItem> CHERRY_OAK_LEAVES =
         registerBlockItem("cherry_oak_leaves", ModBlocks.CHERRY_OAK_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_BEAMS = registerBlockItem("cherry_planks_beams", ModBlocks.CHERRY_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_BRICK_PATTERN = registerBlockItem("cherry_planks_brick_pattern", ModBlocks.CHERRY_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_BRICK_PAVING = registerBlockItem("cherry_planks_brick_paving", ModBlocks.CHERRY_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_BRICKS = registerBlockItem("cherry_planks_bricks", ModBlocks.CHERRY_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_CRATE = registerBlockItem("cherry_planks_crate", ModBlocks.CHERRY_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_DIAGONAL_STRIPES = registerBlockItem("cherry_planks_diagonal_stripes", ModBlocks.CHERRY_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_DIAGONAL_TILES = registerBlockItem("cherry_planks_diagonal_tiles", ModBlocks.CHERRY_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_DOTTED = registerBlockItem("cherry_planks_dotted", ModBlocks.CHERRY_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_FLOORING = registerBlockItem("cherry_planks_flooring", ModBlocks.CHERRY_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_LARGE_TILES = registerBlockItem("cherry_planks_large_tiles", ModBlocks.CHERRY_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_PANEL =
         registerBlockItem("cherry_planks_panel", ModBlocks.CHERRY_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_PATTERN = registerBlockItem("cherry_planks_pattern", ModBlocks.CHERRY_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_ROTATED_BRICKS = registerBlockItem("cherry_planks_rotated_bricks", ModBlocks.CHERRY_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_SMALL_BRICKS = registerBlockItem("cherry_planks_small_bricks", ModBlocks.CHERRY_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_SMALL_TILES = registerBlockItem("cherry_planks_small_tiles", ModBlocks.CHERRY_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_SQUARES = registerBlockItem("cherry_planks_squares", ModBlocks.CHERRY_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_TILES = registerBlockItem("cherry_planks_tiles", ModBlocks.CHERRY_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_WAVY = registerBlockItem("cherry_planks_wavy", ModBlocks.CHERRY_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_PLANKS_WOVEN = registerBlockItem("cherry_planks_woven", ModBlocks.CHERRY_PLANKS_WOVEN);
     public static final DeferredHolder<Item, BlockItem> CHERRY_SPRUCE_LEAVES =
         registerBlockItem("cherry_spruce_leaves", ModBlocks.CHERRY_SPRUCE_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> CIRCLE_OAK_GLASS = registerBlockItem("circle_oak_glass", ModBlocks.CIRCLE_OAK_GLASS);
     public static final DeferredHolder<Item, BlockItem> CIRCLE_OAK_GLASS_PANE = registerBlockItem("circle_oak_glass_pane", ModBlocks.CIRCLE_OAK_GLASS_PANE);
     public static final DeferredHolder<Item, BlockItem> CIRCULAR_BLACK_STAINED_GLASS =
         registerBlockItem("circular_black_stained_glass", ModBlocks.CIRCULAR_BLACK_STAINED_GLASS);
@@ -3025,51 +2581,6 @@ public class ModItems {
         registerBlockItem("clear_leaded_glass_ctm", ModBlocks.CLEAR_LEADED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS_CTM_PANE = registerBlockItem("clear_leaded_glass_ctm_pane", ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS_PANE = registerBlockItem("clear_leaded_glass_pane", ModBlocks.CLEAR_LEADED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_CARVED = registerBlockItem("coal_block_carved", ModBlocks.COAL_BLOCK_CARVED);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_CHISELED = registerBlockItem("coal_block_chiseled", ModBlocks.COAL_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_CIRCLES = registerBlockItem("coal_block_circles", ModBlocks.COAL_BLOCK_CIRCLES);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_COMPACTED = registerBlockItem("coal_block_compacted", ModBlocks.COAL_BLOCK_COMPACTED);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_OVALS = registerBlockItem("coal_block_ovals", ModBlocks.COAL_BLOCK_OVALS);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_PATTERN = registerBlockItem("coal_block_pattern", ModBlocks.COAL_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_ROTATED_BRICKS = registerBlockItem("coal_block_rotated_bricks", ModBlocks.COAL_BLOCK_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_SMALL_TILES = registerBlockItem("coal_block_small_tiles", ModBlocks.COAL_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> COAL_BLOCK_STRIPES = registerBlockItem("coal_block_stripes", ModBlocks.COAL_BLOCK_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_BEAMS = registerBlockItem("cobbled_deepslate_beams", ModBlocks.COBBLED_DEEPSLATE_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_BRICK_PATTERN = registerBlockItem("cobbled_deepslate_brick_pattern", ModBlocks.COBBLED_DEEPSLATE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_BRICK_PAVING = registerBlockItem("cobbled_deepslate_brick_paving", ModBlocks.COBBLED_DEEPSLATE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_BRICKS = registerBlockItem("cobbled_deepslate_bricks", ModBlocks.COBBLED_DEEPSLATE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_LARGE_TILES = registerBlockItem("cobbled_deepslate_large_tiles", ModBlocks.COBBLED_DEEPSLATE_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_PAVING = registerBlockItem("cobbled_deepslate_paving", ModBlocks.COBBLED_DEEPSLATE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_PULVERIZED = registerBlockItem("cobbled_deepslate_pulverized", ModBlocks.COBBLED_DEEPSLATE_PULVERIZED);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_ROTATED_BRICKS = registerBlockItem("cobbled_deepslate_rotated_bricks", ModBlocks.COBBLED_DEEPSLATE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_SMALL_TILES = registerBlockItem("cobbled_deepslate_small_tiles", ModBlocks.COBBLED_DEEPSLATE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_SQUARES = registerBlockItem("cobbled_deepslate_squares", ModBlocks.COBBLED_DEEPSLATE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_STRIPES = registerBlockItem("cobbled_deepslate_stripes", ModBlocks.COBBLED_DEEPSLATE_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_TILES = registerBlockItem("cobbled_deepslate_tiles", ModBlocks.COBBLED_DEEPSLATE_TILES);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_DEEPSLATE_WORN_STRIPES = registerBlockItem("cobbled_deepslate_worn_stripes", ModBlocks.COBBLED_DEEPSLATE_WORN_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_BEAMS = registerBlockItem("cobblestone_beams", ModBlocks.COBBLESTONE_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_BRICK_PATTERN = registerBlockItem("cobblestone_brick_pattern", ModBlocks.COBBLESTONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_BRICK_PAVING = registerBlockItem("cobblestone_brick_paving", ModBlocks.COBBLESTONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_CHISELED_BORDER = registerBlockItem("cobblestone_chiseled_border", ModBlocks.COBBLESTONE_CHISELED_BORDER);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_CROSSES = registerBlockItem("cobblestone_crosses", ModBlocks.COBBLESTONE_CROSSES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_DENTED = registerBlockItem("cobblestone_dented", ModBlocks.COBBLESTONE_DENTED);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_INVERTED_DENTED = registerBlockItem("cobblestone_inverted_dented", ModBlocks.COBBLESTONE_INVERTED_DENTED);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_PAVING = registerBlockItem("cobblestone_paving", ModBlocks.COBBLESTONE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_PULVERIZED = registerBlockItem("cobblestone_pulverized", ModBlocks.COBBLESTONE_PULVERIZED);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_ROTATED_BRICKS = registerBlockItem("cobblestone_rotated_bricks", ModBlocks.COBBLESTONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_SMALL_TILES = registerBlockItem("cobblestone_small_tiles", ModBlocks.COBBLESTONE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_SQUARES = registerBlockItem("cobblestone_squares", ModBlocks.COBBLESTONE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_STRIPES = registerBlockItem("cobblestone_stripes", ModBlocks.COBBLESTONE_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_TILES = registerBlockItem("cobblestone_tiles", ModBlocks.COBBLESTONE_TILES);
-    public static final DeferredHolder<Item, BlockItem> COBBLESTONE_WORN_STRIPES = registerBlockItem("cobblestone_worn_stripes", ModBlocks.COBBLESTONE_WORN_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_BARS = registerBlockItem("copper_block_bars", ModBlocks.COPPER_BLOCK_BARS);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_CIRCLES = registerBlockItem("copper_block_circles", ModBlocks.COPPER_BLOCK_CIRCLES);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_GEARS = registerBlockItem("copper_block_gears", ModBlocks.COPPER_BLOCK_GEARS);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_LINES = registerBlockItem("copper_block_lines", ModBlocks.COPPER_BLOCK_LINES);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_PATTERN = registerBlockItem("copper_block_pattern", ModBlocks.COPPER_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_POLISHED = registerBlockItem("copper_block_polished", ModBlocks.COPPER_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_SHAFTS = registerBlockItem("copper_block_shafts", ModBlocks.COPPER_BLOCK_SHAFTS);
-    public static final DeferredHolder<Item, BlockItem> COPPER_BLOCK_SMALL_BRICKS = registerBlockItem("copper_block_small_bricks", ModBlocks.COPPER_BLOCK_SMALL_BRICKS);
     public static final DeferredHolder<Item, BlockItem> CORNERED_ACACIA_PLANKS =
         registerBlockItem("cornered_acacia_planks", ModBlocks.CORNERED_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> CORNERED_BAMBOO_PLANKS =
@@ -3150,46 +2661,9 @@ public class ModItems {
         registerBlockItem("crated_birch_planks", ModBlocks.CRATED_BIRCH_PLANKS);
     public static final DeferredHolder<Item, BlockItem> CRATED_OAK_PLANKS =
         registerBlockItem("crated_oak_planks", ModBlocks.CRATED_OAK_PLANKS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSITE_CUT_POLISHED = registerBlockItem("crimsite_cut_polished", ModBlocks.CRIMSITE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> CRIMSITE_CUT_SMALL_BRICK = registerBlockItem("crimsite_cut_small_brick", ModBlocks.CRIMSITE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_BEAMS = registerBlockItem("crimson_planks_beams", ModBlocks.CRIMSON_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_BRICK_PATTERN = registerBlockItem("crimson_planks_brick_pattern", ModBlocks.CRIMSON_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_BRICK_PAVING = registerBlockItem("crimson_planks_brick_paving", ModBlocks.CRIMSON_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_BRICKS = registerBlockItem("crimson_planks_bricks", ModBlocks.CRIMSON_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_CRATE = registerBlockItem("crimson_planks_crate", ModBlocks.CRIMSON_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_DIAGONAL_STRIPES = registerBlockItem("crimson_planks_diagonal_stripes", ModBlocks.CRIMSON_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_DIAGONAL_TILES = registerBlockItem("crimson_planks_diagonal_tiles", ModBlocks.CRIMSON_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_DOTTED = registerBlockItem("crimson_planks_dotted", ModBlocks.CRIMSON_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_FLOORING = registerBlockItem("crimson_planks_flooring", ModBlocks.CRIMSON_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_LARGE_TILES = registerBlockItem("crimson_planks_large_tiles", ModBlocks.CRIMSON_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_PANEL =
         registerBlockItem("crimson_planks_panel", ModBlocks.CRIMSON_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_PATTERN = registerBlockItem("crimson_planks_pattern", ModBlocks.CRIMSON_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_ROTATED_BRICKS = registerBlockItem("crimson_planks_rotated_bricks", ModBlocks.CRIMSON_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_SMALL_BRICKS = registerBlockItem("crimson_planks_small_bricks", ModBlocks.CRIMSON_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_SMALL_TILES = registerBlockItem("crimson_planks_small_tiles", ModBlocks.CRIMSON_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_SQUARES = registerBlockItem("crimson_planks_squares", ModBlocks.CRIMSON_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_TILES = registerBlockItem("crimson_planks_tiles", ModBlocks.CRIMSON_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_WAVY = registerBlockItem("crimson_planks_wavy", ModBlocks.CRIMSON_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_WOVEN = registerBlockItem("crimson_planks_woven", ModBlocks.CRIMSON_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_BARS = registerBlockItem("crimson_window_bars", ModBlocks.CRIMSON_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_BARS_CTM = registerBlockItem("crimson_window_bars_ctm", ModBlocks.CRIMSON_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_COVERED = registerBlockItem("crimson_window_covered", ModBlocks.CRIMSON_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_COVERED_CTM = registerBlockItem("crimson_window_covered_ctm", ModBlocks.CRIMSON_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_DIAGONAL_CTM = registerBlockItem("crimson_window_diagonal_ctm", ModBlocks.CRIMSON_WINDOW_DIAGONAL_CTM);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("crimson_window_diagonal_ctm_pane", ModBlocks.CRIMSON_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_LARGE = registerBlockItem("crimson_window_large", ModBlocks.CRIMSON_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_LARGE_CTM = registerBlockItem("crimson_window_large_ctm", ModBlocks.CRIMSON_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_PANES = registerBlockItem("crimson_window_panes", ModBlocks.CRIMSON_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_PANES_CTM = registerBlockItem("crimson_window_panes_ctm", ModBlocks.CRIMSON_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_ROUNDED = registerBlockItem("crimson_window_rounded", ModBlocks.CRIMSON_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_ROUNDED_CTM = registerBlockItem("crimson_window_rounded_ctm", ModBlocks.CRIMSON_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SLIM = registerBlockItem("crimson_window_slim", ModBlocks.CRIMSON_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SLIM_CTM = registerBlockItem("crimson_window_slim_ctm", ModBlocks.CRIMSON_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SWIRLING = registerBlockItem("crimson_window_swirling", ModBlocks.CRIMSON_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SWIRLING_CTM = registerBlockItem("crimson_window_swirling_ctm", ModBlocks.CRIMSON_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_TILES = registerBlockItem("crimson_window_tiles", ModBlocks.CRIMSON_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_TILES_CTM = registerBlockItem("crimson_window_tiles_ctm", ModBlocks.CRIMSON_WINDOW_TILES_CTM);
     public static final DeferredHolder<Item, BlockItem> CURLED_BLACK_TERRACOTTA =
         registerBlockItem("curled_black_terracotta", ModBlocks.CURLED_BLACK_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> CURLED_BLUE_TERRACOTTA =
@@ -3326,7 +2800,6 @@ public class ModItems {
         registerBlockItem("cut_basalt_column", ModBlocks.CUT_BASALT_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CUT_BLACKSTONE_COLUMN =
         registerBlockItem("cut_blackstone_column", ModBlocks.CUT_BLACKSTONE_COLUMN);
-    public static final DeferredHolder<Item, BlockItem> CUT_BLANK_STONE                   = registerBlockItem("cut_blank_stone",                   ModBlocks.CUT_BLANK_STONE);
     public static final DeferredHolder<Item, BlockItem> CUT_BLUE_ICE_COLUMN =
         registerBlockItem("cut_blue_ice_column", ModBlocks.CUT_BLUE_ICE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CUT_BORDERLESS_BRICKS_COLUMN =
@@ -3391,12 +2864,10 @@ public class ModItems {
         registerBlockItem("cut_raw_iron_block_column", ModBlocks.CUT_RAW_IRON_BLOCK_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CUT_RED_NETHER_BRICKS_COLUMN =
         registerBlockItem("cut_red_nether_bricks_column", ModBlocks.CUT_RED_NETHER_BRICKS_COLUMN);
-    public static final DeferredHolder<Item, BlockItem> CUT_RED_SANDSTONE = registerBlockItem("cut_red_sandstone", ModBlocks.CUT_RED_SANDSTONE);
     public static final DeferredHolder<Item, BlockItem> CUT_RED_SANDSTONE_COLUMN =
         registerBlockItem("cut_red_sandstone_column", ModBlocks.CUT_RED_SANDSTONE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CUT_REDSTONE_BLOCK_COLUMN =
         registerBlockItem("cut_redstone_block_column", ModBlocks.CUT_REDSTONE_BLOCK_COLUMN);
-    public static final DeferredHolder<Item, BlockItem> CUT_SANDSTONE = registerBlockItem("cut_sandstone", ModBlocks.CUT_SANDSTONE);
     public static final DeferredHolder<Item, BlockItem> CUT_SANDSTONE_COLUMN =
         registerBlockItem("cut_sandstone_column", ModBlocks.CUT_SANDSTONE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CUT_SMOOTH_STONE_COLUMN =
@@ -3413,55 +2884,8 @@ public class ModItems {
         registerBlockItem("cyan_terracotta_column", ModBlocks.CYAN_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> CYAN_TERRACOTTA_CTM =
         registerBlockItem("cyan_terracotta_ctm", ModBlocks.CYAN_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_BEAMS = registerBlockItem("dark_oak_planks_beams", ModBlocks.DARK_OAK_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_BRICK_PATTERN = registerBlockItem("dark_oak_planks_brick_pattern", ModBlocks.DARK_OAK_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_BRICK_PAVING = registerBlockItem("dark_oak_planks_brick_paving", ModBlocks.DARK_OAK_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_BRICKS = registerBlockItem("dark_oak_planks_bricks", ModBlocks.DARK_OAK_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_CRATE = registerBlockItem("dark_oak_planks_crate", ModBlocks.DARK_OAK_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_DIAGONAL_STRIPES = registerBlockItem("dark_oak_planks_diagonal_stripes", ModBlocks.DARK_OAK_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_DIAGONAL_TILES = registerBlockItem("dark_oak_planks_diagonal_tiles", ModBlocks.DARK_OAK_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_DOTTED = registerBlockItem("dark_oak_planks_dotted", ModBlocks.DARK_OAK_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_FLOORING = registerBlockItem("dark_oak_planks_flooring", ModBlocks.DARK_OAK_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_LARGE_TILES = registerBlockItem("dark_oak_planks_large_tiles", ModBlocks.DARK_OAK_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_PANEL =
         registerBlockItem("dark_oak_planks_panel", ModBlocks.DARK_OAK_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_PATTERN = registerBlockItem("dark_oak_planks_pattern", ModBlocks.DARK_OAK_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_ROTATED_BRICKS = registerBlockItem("dark_oak_planks_rotated_bricks", ModBlocks.DARK_OAK_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_SMALL_BRICKS = registerBlockItem("dark_oak_planks_small_bricks", ModBlocks.DARK_OAK_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_SMALL_TILES = registerBlockItem("dark_oak_planks_small_tiles", ModBlocks.DARK_OAK_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_SQUARES = registerBlockItem("dark_oak_planks_squares", ModBlocks.DARK_OAK_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_TILES = registerBlockItem("dark_oak_planks_tiles", ModBlocks.DARK_OAK_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_WAVY = registerBlockItem("dark_oak_planks_wavy", ModBlocks.DARK_OAK_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_PLANKS_WOVEN = registerBlockItem("dark_oak_planks_woven", ModBlocks.DARK_OAK_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_BARS = registerBlockItem("dark_oak_window_bars", ModBlocks.DARK_OAK_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_BARS_CTM = registerBlockItem("dark_oak_window_bars_ctm", ModBlocks.DARK_OAK_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_COVERED = registerBlockItem("dark_oak_window_covered", ModBlocks.DARK_OAK_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_COVERED_CTM = registerBlockItem("dark_oak_window_covered_ctm", ModBlocks.DARK_OAK_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_DIAGONAL = registerBlockItem("dark_oak_window_diagonal", ModBlocks.DARK_OAK_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_DIAGONAL_CTM = registerBlockItem("dark_oak_window_diagonal_ctm", ModBlocks.DARK_OAK_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_LARGE_CTM = registerBlockItem("dark_oak_window_large_ctm", ModBlocks.DARK_OAK_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_PANES = registerBlockItem("dark_oak_window_panes", ModBlocks.DARK_OAK_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_PANES_CTM = registerBlockItem("dark_oak_window_panes_ctm", ModBlocks.DARK_OAK_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_ROUNDED = registerBlockItem("dark_oak_window_rounded", ModBlocks.DARK_OAK_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_ROUNDED_CTM = registerBlockItem("dark_oak_window_rounded_ctm", ModBlocks.DARK_OAK_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SLIM = registerBlockItem("dark_oak_window_slim", ModBlocks.DARK_OAK_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SLIM_CTM = registerBlockItem("dark_oak_window_slim_ctm", ModBlocks.DARK_OAK_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SWIRLING = registerBlockItem("dark_oak_window_swirling", ModBlocks.DARK_OAK_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SWIRLING_CTM = registerBlockItem("dark_oak_window_swirling_ctm", ModBlocks.DARK_OAK_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_TILES = registerBlockItem("dark_oak_window_tiles", ModBlocks.DARK_OAK_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_TILES_CTM = registerBlockItem("dark_oak_window_tiles_ctm", ModBlocks.DARK_OAK_WINDOW_TILES_CTM);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_BEAMS = registerBlockItem("dark_prismarine_beams", ModBlocks.DARK_PRISMARINE_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_BRICK_PAVING = registerBlockItem("dark_prismarine_brick_paving", ModBlocks.DARK_PRISMARINE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_BRICKS = registerBlockItem("dark_prismarine_bricks", ModBlocks.DARK_PRISMARINE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_DOTTED = registerBlockItem("dark_prismarine_dotted", ModBlocks.DARK_PRISMARINE_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_FABRIC = registerBlockItem("dark_prismarine_fabric", ModBlocks.DARK_PRISMARINE_FABRIC);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_LARGE_TILES = registerBlockItem("dark_prismarine_large_tiles", ModBlocks.DARK_PRISMARINE_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_ROTATED_BRICKS = registerBlockItem("dark_prismarine_rotated_bricks", ModBlocks.DARK_PRISMARINE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_ROWS = registerBlockItem("dark_prismarine_rows", ModBlocks.DARK_PRISMARINE_ROWS);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_SQUARES = registerBlockItem("dark_prismarine_squares", ModBlocks.DARK_PRISMARINE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_TILES = registerBlockItem("dark_prismarine_tiles", ModBlocks.DARK_PRISMARINE_TILES);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_WAVY = registerBlockItem("dark_prismarine_wavy", ModBlocks.DARK_PRISMARINE_WAVY);
-    public static final DeferredHolder<Item, BlockItem> DARK_PRISMARINE_WOVEN = registerBlockItem("dark_prismarine_woven", ModBlocks.DARK_PRISMARINE_WOVEN);
     public static final DeferredHolder<Item, BlockItem> DEAD_ACACIA_LEAVES =
         registerBlockItem("dead_acacia_leaves", ModBlocks.DEAD_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> DEAD_BIRCH_LEAVES =
@@ -3474,46 +2898,6 @@ public class ModItems {
         registerBlockItem("dead_oak_leaves", ModBlocks.DEAD_OAK_LEAVES);
     public static final DeferredHolder<Item, BlockItem> DEAD_SPRUCE_LEAVES =
         registerBlockItem("dead_spruce_leaves", ModBlocks.DEAD_SPRUCE_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> DEEPSLATE_CUT_POLISHED = registerBlockItem("deepslate_cut_polished", ModBlocks.DEEPSLATE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> DEEPSLATE_CUT_SMALL_BRICK = registerBlockItem("deepslate_cut_small_brick", ModBlocks.DEEPSLATE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_LAPIS_BLOCK = registerBlockItem("delicate_lapis_block", ModBlocks.DELICATE_LAPIS_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK = registerBlockItem("diamond_block", ModBlocks.DIAMOND_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_CHISELED = registerBlockItem("diamond_block_chiseled", ModBlocks.DIAMOND_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_CHISELED_CUBES = registerBlockItem("diamond_block_chiseled_cubes", ModBlocks.DIAMOND_BLOCK_CHISELED_CUBES);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_CONNECTING = registerBlockItem("diamond_block_connecting", ModBlocks.DIAMOND_BLOCK_CONNECTING);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_GRID = registerBlockItem("diamond_block_grid", ModBlocks.DIAMOND_BLOCK_GRID);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_JEWEL_BLOCK = registerBlockItem("diamond_block_jewel_block", ModBlocks.DIAMOND_BLOCK_JEWEL_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_POLISHED = registerBlockItem("diamond_block_polished", ModBlocks.DIAMOND_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_RHOMBUSES = registerBlockItem("diamond_block_rhombuses", ModBlocks.DIAMOND_BLOCK_RHOMBUSES);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_SHINY_BORDERED = registerBlockItem("diamond_block_shiny_bordered", ModBlocks.DIAMOND_BLOCK_SHINY_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> DIAMOND_BLOCK_SMALL_TILES = registerBlockItem("diamond_block_small_tiles", ModBlocks.DIAMOND_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_BRICK_PATTERN = registerBlockItem("diorite_brick_pattern", ModBlocks.DIORITE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_BRICK_PAVING = registerBlockItem("diorite_brick_paving", ModBlocks.DIORITE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_BRICKS = registerBlockItem("diorite_bricks", ModBlocks.DIORITE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_CUT_POLISHED = registerBlockItem("diorite_cut_polished", ModBlocks.DIORITE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_CUT_SMALL_BRICK = registerBlockItem("diorite_cut_small_brick", ModBlocks.DIORITE_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_DIAGONAL_BRICKS = registerBlockItem("diorite_diagonal_bricks", ModBlocks.DIORITE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_DOTTED = registerBlockItem("diorite_dotted", ModBlocks.DIORITE_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_PAVING = registerBlockItem("diorite_paving", ModBlocks.DIORITE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_POLISHED = registerBlockItem("diorite_polished", ModBlocks.DIORITE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_ROTATED_BRICKS = registerBlockItem("diorite_rotated_bricks", ModBlocks.DIORITE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_SQUARES = registerBlockItem("diorite_squares", ModBlocks.DIORITE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_TILES = registerBlockItem("diorite_tiles", ModBlocks.DIORITE_TILES);
-    public static final DeferredHolder<Item, BlockItem> DIORITE_WAVY = registerBlockItem("diorite_wavy", ModBlocks.DIORITE_WAVY);
-    public static final DeferredHolder<Item, BlockItem> DIRT_BLOBS = registerBlockItem("dirt_blobs", ModBlocks.DIRT_BLOBS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_BRICKS = registerBlockItem("dirt_bricks", ModBlocks.DIRT_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_CHUNKS = registerBlockItem("dirt_chunks", ModBlocks.DIRT_CHUNKS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_CLUMPS = registerBlockItem("dirt_clumps", ModBlocks.DIRT_CLUMPS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_LARGE_TILES = registerBlockItem("dirt_large_tiles", ModBlocks.DIRT_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> DIRT_SMALL_BRICKS = registerBlockItem("dirt_small_bricks", ModBlocks.DIRT_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_SMALL_TILES = registerBlockItem("dirt_small_tiles", ModBlocks.DIRT_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> DIRT_SMOOTH_CLUMPS = registerBlockItem("dirt_smooth_clumps", ModBlocks.DIRT_SMOOTH_CLUMPS);
-    public static final DeferredHolder<Item, BlockItem> DIRT_SOIL = registerBlockItem("dirt_soil", ModBlocks.DIRT_SOIL);
-    public static final DeferredHolder<Item, BlockItem> DIRT_SQUARES = registerBlockItem("dirt_squares", ModBlocks.DIRT_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> DIRT_TILES = registerBlockItem("dirt_tiles", ModBlocks.DIRT_TILES);
-    public static final DeferredHolder<Item, BlockItem> DIRT_TILLED = registerBlockItem("dirt_tilled", ModBlocks.DIRT_TILLED);
-    public static final DeferredHolder<Item, BlockItem> DRIPSTONE_CUT_POLISHED = registerBlockItem("dripstone_cut_polished", ModBlocks.DRIPSTONE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> DRIPSTONE_CUT_SMALL_BRICK = registerBlockItem("dripstone_cut_small_brick", ModBlocks.DRIPSTONE_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> EDGED_AMETHYST_BLOCK_BRICKS =
         registerBlockItem("edged_amethyst_block_bricks", ModBlocks.EDGED_AMETHYST_BLOCK_BRICKS);
     public static final DeferredHolder<Item, BlockItem> EDGED_ANCIENT_DEBRIS_BRICKS =
@@ -3606,17 +2990,6 @@ public class ModItems {
         registerBlockItem("edged_snow_block_bricks", ModBlocks.EDGED_SNOW_BLOCK_BRICKS);
     public static final DeferredHolder<Item, BlockItem> EDGED_TUFF_BRICKS =
         registerBlockItem("edged_tuff_bricks", ModBlocks.EDGED_TUFF_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_BORDERED_CROSSES = registerBlockItem("emerald_block_bordered_crosses", ModBlocks.EMERALD_BLOCK_BORDERED_CROSSES);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_BORDERED_PLATING = registerBlockItem("emerald_block_bordered_plating", ModBlocks.EMERALD_BLOCK_BORDERED_PLATING);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_CHISELED = registerBlockItem("emerald_block_chiseled", ModBlocks.EMERALD_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_CLOVERS = registerBlockItem("emerald_block_clovers", ModBlocks.EMERALD_BLOCK_CLOVERS);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_CRYSTAL = registerBlockItem("emerald_block_crystal", ModBlocks.EMERALD_BLOCK_CRYSTAL);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_CTM = registerBlockItem("emerald_block_ctm", ModBlocks.EMERALD_BLOCK_CTM);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_PATTERNED = registerBlockItem("emerald_block_patterned", ModBlocks.EMERALD_BLOCK_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_PATTERNED_SQUARES = registerBlockItem("emerald_block_patterned_squares", ModBlocks.EMERALD_BLOCK_PATTERNED_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_POLISHED = registerBlockItem("emerald_block_polished", ModBlocks.EMERALD_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_STRIPED = registerBlockItem("emerald_block_striped", ModBlocks.EMERALD_BLOCK_STRIPED);
-    public static final DeferredHolder<Item, BlockItem> EMERALD_BLOCK_WAXED = registerBlockItem("emerald_block_waxed", ModBlocks.EMERALD_BLOCK_WAXED);
     public static final DeferredHolder<Item, BlockItem> ENCLOSED_ACACIA_PLANKS =
         registerBlockItem("enclosed_acacia_planks", ModBlocks.ENCLOSED_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> ENCLOSED_BAMBOO_PLANKS =
@@ -3625,21 +2998,6 @@ public class ModItems {
         registerBlockItem("enclosed_birch_planks", ModBlocks.ENCLOSED_BIRCH_PLANKS);
     public static final DeferredHolder<Item, BlockItem> ENCLOSED_OAK_PLANKS =
         registerBlockItem("enclosed_oak_planks", ModBlocks.ENCLOSED_OAK_PLANKS);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_BLOBS = registerBlockItem("end_stone_blobs", ModBlocks.END_STONE_BLOBS);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_BRICK_PATTERN = registerBlockItem("end_stone_brick_pattern", ModBlocks.END_STONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_BRICK_PAVING = registerBlockItem("end_stone_brick_paving", ModBlocks.END_STONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_CHISELED = registerBlockItem("end_stone_chiseled", ModBlocks.END_STONE_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_CRUSHED = registerBlockItem("end_stone_crushed", ModBlocks.END_STONE_CRUSHED);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_DIAGONAL_BRICKS = registerBlockItem("end_stone_diagonal_bricks", ModBlocks.END_STONE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_MESH = registerBlockItem("end_stone_mesh", ModBlocks.END_STONE_MESH);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_PAVING = registerBlockItem("end_stone_paving", ModBlocks.END_STONE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_POLISHED = registerBlockItem("end_stone_polished", ModBlocks.END_STONE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_ROTATED_BRICKS = registerBlockItem("end_stone_rotated_bricks", ModBlocks.END_STONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_SCALES = registerBlockItem("end_stone_scales", ModBlocks.END_STONE_SCALES);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_SMALL_TILES = registerBlockItem("end_stone_small_tiles", ModBlocks.END_STONE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_SPIRAL_PATTERN = registerBlockItem("end_stone_spiral_pattern", ModBlocks.END_STONE_SPIRAL_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_SQUARES = registerBlockItem("end_stone_squares", ModBlocks.END_STONE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> END_STONE_TILES = registerBlockItem("end_stone_tiles", ModBlocks.END_STONE_TILES);
     public static final DeferredHolder<Item, BlockItem> FANCY_BLACK_STAINED_GLASS =
         registerBlockItem("fancy_black_stained_glass", ModBlocks.FANCY_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_BLACK_STAINED_GLASS_CTM =
@@ -3800,26 +3158,6 @@ public class ModItems {
         registerBlockItem("frosted_oak_leaves", ModBlocks.FROSTED_OAK_LEAVES);
     public static final DeferredHolder<Item, BlockItem> FROSTED_SPRUCE_LEAVES =
         registerBlockItem("frosted_spruce_leaves", ModBlocks.FROSTED_SPRUCE_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_BRICK_PATTERN = registerBlockItem("glowstone_brick_pattern", ModBlocks.GLOWSTONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_BRICK_PAVING = registerBlockItem("glowstone_brick_paving", ModBlocks.GLOWSTONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_BRICKS = registerBlockItem("glowstone_bricks", ModBlocks.GLOWSTONE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_CRUSHED = registerBlockItem("glowstone_crushed", ModBlocks.GLOWSTONE_CRUSHED);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_LARGE_TILES = registerBlockItem("glowstone_large_tiles", ModBlocks.GLOWSTONE_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_ROTATED_BRICKS = registerBlockItem("glowstone_rotated_bricks", ModBlocks.GLOWSTONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_SMALL_TILES = registerBlockItem("glowstone_small_tiles", ModBlocks.GLOWSTONE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_SMOOTH = registerBlockItem("glowstone_smooth", ModBlocks.GLOWSTONE_SMOOTH);
-    public static final DeferredHolder<Item, BlockItem> GLOWSTONE_TILES = registerBlockItem("glowstone_tiles", ModBlocks.GLOWSTONE_TILES);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK = registerBlockItem("gold_block", ModBlocks.GOLD_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_BEAMS = registerBlockItem("gold_block_beams", ModBlocks.GOLD_BLOCK_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_BORDERED = registerBlockItem("gold_block_bordered", ModBlocks.GOLD_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_LINES = registerBlockItem("gold_block_lines", ModBlocks.GOLD_BLOCK_LINES);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_PATTERN = registerBlockItem("gold_block_pattern", ModBlocks.GOLD_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_POLISHED = registerBlockItem("gold_block_polished", ModBlocks.GOLD_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_SCALES = registerBlockItem("gold_block_scales", ModBlocks.GOLD_BLOCK_SCALES);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_SMALL_BRICKS = registerBlockItem("gold_block_small_bricks", ModBlocks.GOLD_BLOCK_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_SMALL_TILES = registerBlockItem("gold_block_small_tiles", ModBlocks.GOLD_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_STRIPED = registerBlockItem("gold_block_striped", ModBlocks.GOLD_BLOCK_STRIPED);
-    public static final DeferredHolder<Item, BlockItem> GOLD_BLOCK_TILES = registerBlockItem("gold_block_tiles", ModBlocks.GOLD_BLOCK_TILES);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_ACACIA_LEAVES =
         registerBlockItem("golden_acacia_leaves", ModBlocks.GOLDEN_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> GOLDEN_APPLE_ACACIA_LEAVES =
@@ -4013,67 +3351,7 @@ public class ModItems {
         registerBlockItem("inscribed_white_terracotta", ModBlocks.INSCRIBED_WHITE_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> INSCRIBED_YELLOW_TERRACOTTA =
         registerBlockItem("inscribed_yellow_terracotta", ModBlocks.INSCRIBED_YELLOW_TERRACOTTA);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK = registerBlockItem("iron_block", ModBlocks.IRON_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_BORDERED = registerBlockItem("iron_block_bordered", ModBlocks.IRON_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_CHISELED = registerBlockItem("iron_block_chiseled", ModBlocks.IRON_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_CONNECTING = registerBlockItem("iron_block_connecting", ModBlocks.IRON_BLOCK_CONNECTING);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_FRAMED = registerBlockItem("iron_block_framed", ModBlocks.IRON_BLOCK_FRAMED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_GEARS = registerBlockItem("iron_block_gears", ModBlocks.IRON_BLOCK_GEARS);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_LINES = registerBlockItem("iron_block_lines", ModBlocks.IRON_BLOCK_LINES);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_PATTERNED = registerBlockItem("iron_block_patterned", ModBlocks.IRON_BLOCK_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_PIPES = registerBlockItem("iron_block_pipes", ModBlocks.IRON_BLOCK_PIPES);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_POLISHED = registerBlockItem("iron_block_polished", ModBlocks.IRON_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_PROCESSED = registerBlockItem("iron_block_processed", ModBlocks.IRON_BLOCK_PROCESSED);
-    public static final DeferredHolder<Item, BlockItem> IRON_BLOCK_SMALL_BRICKS = registerBlockItem("iron_block_small_bricks", ModBlocks.IRON_BLOCK_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_BEAMS = registerBlockItem("jungle_planks_beams", ModBlocks.JUNGLE_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_BRICK_PATTERN = registerBlockItem("jungle_planks_brick_pattern", ModBlocks.JUNGLE_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_BRICK_PAVING = registerBlockItem("jungle_planks_brick_paving", ModBlocks.JUNGLE_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_BRICKS = registerBlockItem("jungle_planks_bricks", ModBlocks.JUNGLE_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_CRATE = registerBlockItem("jungle_planks_crate", ModBlocks.JUNGLE_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_DIAGONAL_STRIPES = registerBlockItem("jungle_planks_diagonal_stripes", ModBlocks.JUNGLE_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_DIAGONAL_TILES = registerBlockItem("jungle_planks_diagonal_tiles", ModBlocks.JUNGLE_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_DOTTED = registerBlockItem("jungle_planks_dotted", ModBlocks.JUNGLE_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_FLOORING = registerBlockItem("jungle_planks_flooring", ModBlocks.JUNGLE_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_LARGE_TILES = registerBlockItem("jungle_planks_large_tiles", ModBlocks.JUNGLE_PLANKS_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_PATTERN = registerBlockItem("jungle_planks_pattern", ModBlocks.JUNGLE_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_ROTATED_BRICKS = registerBlockItem("jungle_planks_rotated_bricks", ModBlocks.JUNGLE_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_SMALL_BRICKS = registerBlockItem("jungle_planks_small_bricks", ModBlocks.JUNGLE_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_SMALL_TILES = registerBlockItem("jungle_planks_small_tiles", ModBlocks.JUNGLE_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_SQUARES = registerBlockItem("jungle_planks_squares", ModBlocks.JUNGLE_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_TILES = registerBlockItem("jungle_planks_tiles", ModBlocks.JUNGLE_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_WAVY = registerBlockItem("jungle_planks_wavy", ModBlocks.JUNGLE_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_PLANKS_WOVEN = registerBlockItem("jungle_planks_woven", ModBlocks.JUNGLE_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_BARS = registerBlockItem("jungle_window_bars", ModBlocks.JUNGLE_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_BARS_CTM = registerBlockItem("jungle_window_bars_ctm", ModBlocks.JUNGLE_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_COVERED = registerBlockItem("jungle_window_covered", ModBlocks.JUNGLE_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_COVERED_CTM = registerBlockItem("jungle_window_covered_ctm", ModBlocks.JUNGLE_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_DIAGONAL = registerBlockItem("jungle_window_diagonal", ModBlocks.JUNGLE_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_DIAGONAL_CTM = registerBlockItem("jungle_window_diagonal_ctm", ModBlocks.JUNGLE_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_LARGE = registerBlockItem("jungle_window_large", ModBlocks.JUNGLE_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_LARGE_CTM = registerBlockItem("jungle_window_large_ctm", ModBlocks.JUNGLE_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_PANES = registerBlockItem("jungle_window_panes", ModBlocks.JUNGLE_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_PANES_CTM = registerBlockItem("jungle_window_panes_ctm", ModBlocks.JUNGLE_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_ROUNDED = registerBlockItem("jungle_window_rounded", ModBlocks.JUNGLE_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_ROUNDED_CTM = registerBlockItem("jungle_window_rounded_ctm", ModBlocks.JUNGLE_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SLIM_CTM = registerBlockItem("jungle_window_slim_ctm", ModBlocks.JUNGLE_WINDOW_SLIM_CTM);
     public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SLIM_CTM_PANE = registerBlockItem("jungle_window_slim_ctm_pane", ModBlocks.JUNGLE_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SWIRLING = registerBlockItem("jungle_window_swirling", ModBlocks.JUNGLE_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SWIRLING_CTM = registerBlockItem("jungle_window_swirling_ctm", ModBlocks.JUNGLE_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_TILES = registerBlockItem("jungle_window_tiles", ModBlocks.JUNGLE_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_TILES_CTM = registerBlockItem("jungle_window_tiles_ctm", ModBlocks.JUNGLE_WINDOW_TILES_CTM);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK = registerBlockItem("lapis_block", ModBlocks.LAPIS_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_BORDERED = registerBlockItem("lapis_block_bordered", ModBlocks.LAPIS_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_CONNECTING = registerBlockItem("lapis_block_connecting", ModBlocks.LAPIS_BLOCK_CONNECTING);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_DECORATED = registerBlockItem("lapis_block_decorated", ModBlocks.LAPIS_BLOCK_DECORATED);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_GLOSSY = registerBlockItem("lapis_block_glossy", ModBlocks.LAPIS_BLOCK_GLOSSY);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_INVERTED_TILES = registerBlockItem("lapis_block_inverted_tiles", ModBlocks.LAPIS_BLOCK_INVERTED_TILES);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_MOSAIC = registerBlockItem("lapis_block_mosaic", ModBlocks.LAPIS_BLOCK_MOSAIC);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_PATTERN = registerBlockItem("lapis_block_pattern", ModBlocks.LAPIS_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_POLISHED = registerBlockItem("lapis_block_polished", ModBlocks.LAPIS_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_SCALES = registerBlockItem("lapis_block_scales", ModBlocks.LAPIS_BLOCK_SCALES);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_SMALL_TILES = registerBlockItem("lapis_block_small_tiles", ModBlocks.LAPIS_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_STRIPES = registerBlockItem("lapis_block_stripes", ModBlocks.LAPIS_BLOCK_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> LAPIS_BLOCK_TILES = registerBlockItem("lapis_block_tiles", ModBlocks.LAPIS_BLOCK_TILES);
     public static final DeferredHolder<Item, BlockItem> LARGE_DIAMOND_BLACK_STAINED_GLASS =
         registerBlockItem("large_diamond_black_stained_glass", ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> LARGE_DIAMOND_BLACK_STAINED_GLASS_PANE = registerBlockItem("large_diamond_black_stained_glass_pane", ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS_PANE);
@@ -4128,8 +3406,6 @@ public class ModItems {
         registerBlockItem("lime_terracotta_column", ModBlocks.LIME_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> LIME_TERRACOTTA_CTM =
         registerBlockItem("lime_terracotta_ctm", ModBlocks.LIME_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> LIMESTONE_CUT_POLISHED = registerBlockItem("limestone_cut_polished", ModBlocks.LIMESTONE_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> LIMESTONE_CUT_SMALL_BRICK = registerBlockItem("limestone_cut_small_brick", ModBlocks.LIMESTONE_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> LOREFUL_MUD =
         registerBlockItem("loreful_mud", ModBlocks.LOREFUL_MUD);
     public static final DeferredHolder<Item, BlockItem> LOREFUL_MUD_BRICKS =
@@ -4156,44 +3432,9 @@ public class ModItems {
         registerBlockItem("magenta_terracotta_column", ModBlocks.MAGENTA_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> MAGENTA_TERRACOTTA_CTM =
         registerBlockItem("magenta_terracotta_ctm", ModBlocks.MAGENTA_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_BEAMS = registerBlockItem("mangrove_planks_beams", ModBlocks.MANGROVE_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_BRICK_PATTERN = registerBlockItem("mangrove_planks_brick_pattern", ModBlocks.MANGROVE_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_BRICK_PAVING = registerBlockItem("mangrove_planks_brick_paving", ModBlocks.MANGROVE_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_BRICKS = registerBlockItem("mangrove_planks_bricks", ModBlocks.MANGROVE_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_CRATE = registerBlockItem("mangrove_planks_crate", ModBlocks.MANGROVE_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_DIAGONAL_STRIPES = registerBlockItem("mangrove_planks_diagonal_stripes", ModBlocks.MANGROVE_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_DIAGONAL_TILES = registerBlockItem("mangrove_planks_diagonal_tiles", ModBlocks.MANGROVE_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_DOTTED = registerBlockItem("mangrove_planks_dotted", ModBlocks.MANGROVE_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_FLOORING = registerBlockItem("mangrove_planks_flooring", ModBlocks.MANGROVE_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_LARGE_TILES = registerBlockItem("mangrove_planks_large_tiles", ModBlocks.MANGROVE_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_PANEL =
         registerBlockItem("mangrove_planks_panel", ModBlocks.MANGROVE_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_PATTERN = registerBlockItem("mangrove_planks_pattern", ModBlocks.MANGROVE_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_ROTATED_BRICKS = registerBlockItem("mangrove_planks_rotated_bricks", ModBlocks.MANGROVE_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_SMALL_BRICKS = registerBlockItem("mangrove_planks_small_bricks", ModBlocks.MANGROVE_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_SMALL_TILES = registerBlockItem("mangrove_planks_small_tiles", ModBlocks.MANGROVE_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_SQUARES = registerBlockItem("mangrove_planks_squares", ModBlocks.MANGROVE_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_TILES = registerBlockItem("mangrove_planks_tiles", ModBlocks.MANGROVE_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_WAVY = registerBlockItem("mangrove_planks_wavy", ModBlocks.MANGROVE_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_WOVEN = registerBlockItem("mangrove_planks_woven", ModBlocks.MANGROVE_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_BARS = registerBlockItem("mangrove_window_bars", ModBlocks.MANGROVE_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_BARS_CTM = registerBlockItem("mangrove_window_bars_ctm", ModBlocks.MANGROVE_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_COVERED = registerBlockItem("mangrove_window_covered", ModBlocks.MANGROVE_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_COVERED_CTM = registerBlockItem("mangrove_window_covered_ctm", ModBlocks.MANGROVE_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_DIAGONAL = registerBlockItem("mangrove_window_diagonal", ModBlocks.MANGROVE_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_DIAGONAL_CTM = registerBlockItem("mangrove_window_diagonal_ctm", ModBlocks.MANGROVE_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_LARGE = registerBlockItem("mangrove_window_large", ModBlocks.MANGROVE_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_LARGE_CTM = registerBlockItem("mangrove_window_large_ctm", ModBlocks.MANGROVE_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_PANES = registerBlockItem("mangrove_window_panes", ModBlocks.MANGROVE_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_PANES_CTM = registerBlockItem("mangrove_window_panes_ctm", ModBlocks.MANGROVE_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_ROUNDED_CTM = registerBlockItem("mangrove_window_rounded_ctm", ModBlocks.MANGROVE_WINDOW_ROUNDED_CTM);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("mangrove_window_rounded_ctm_pane", ModBlocks.MANGROVE_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SLIM = registerBlockItem("mangrove_window_slim", ModBlocks.MANGROVE_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SLIM_CTM = registerBlockItem("mangrove_window_slim_ctm", ModBlocks.MANGROVE_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SWIRLING = registerBlockItem("mangrove_window_swirling", ModBlocks.MANGROVE_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SWIRLING_CTM = registerBlockItem("mangrove_window_swirling_ctm", ModBlocks.MANGROVE_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_TILES = registerBlockItem("mangrove_window_tiles", ModBlocks.MANGROVE_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_TILES_CTM = registerBlockItem("mangrove_window_tiles_ctm", ModBlocks.MANGROVE_WINDOW_TILES_CTM);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_AMETHYST_BLOCK_BRICKS =
         registerBlockItem("massive_amethyst_block_bricks", ModBlocks.MASSIVE_AMETHYST_BLOCK_BRICKS);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_ANCIENT_DEBRIS_BRICKS =
@@ -4286,14 +3527,6 @@ public class ModItems {
         registerBlockItem("massive_snow_block_bricks", ModBlocks.MASSIVE_SNOW_BLOCK_BRICKS);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_TUFF_BRICKS =
         registerBlockItem("massive_tuff_bricks", ModBlocks.MASSIVE_TUFF_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_BEAMS = registerBlockItem("mossy_cobblestone_beams", ModBlocks.MOSSY_COBBLESTONE_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_DENTED = registerBlockItem("mossy_cobblestone_dented", ModBlocks.MOSSY_COBBLESTONE_DENTED);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_INVERTED_DENTED = registerBlockItem("mossy_cobblestone_inverted_dented", ModBlocks.MOSSY_COBBLESTONE_INVERTED_DENTED);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_PAVING = registerBlockItem("mossy_cobblestone_paving", ModBlocks.MOSSY_COBBLESTONE_PAVING);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_SMALL_TILES = registerBlockItem("mossy_cobblestone_small_tiles", ModBlocks.MOSSY_COBBLESTONE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_SQUARES = registerBlockItem("mossy_cobblestone_squares", ModBlocks.MOSSY_COBBLESTONE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_STRIPES = registerBlockItem("mossy_cobblestone_stripes", ModBlocks.MOSSY_COBBLESTONE_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> MOSSY_COBBLESTONE_WORN_STRIPES = registerBlockItem("mossy_cobblestone_worn_stripes", ModBlocks.MOSSY_COBBLESTONE_WORN_STRIPES);
     public static final DeferredHolder<Item, BlockItem> NATURAL_ACACIA_PLANKS =
         registerBlockItem("natural_acacia_planks", ModBlocks.NATURAL_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> NATURAL_BAMBOO_PLANKS =
@@ -4302,129 +3535,41 @@ public class ModItems {
         registerBlockItem("natural_birch_planks", ModBlocks.NATURAL_BIRCH_PLANKS);
     public static final DeferredHolder<Item, BlockItem> NATURAL_OAK_PLANKS =
         registerBlockItem("natural_oak_planks", ModBlocks.NATURAL_OAK_PLANKS);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_BEAMS = registerBlockItem("nether_bricks_beams", ModBlocks.NETHER_BRICKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_BRICK_PATTERN = registerBlockItem("nether_bricks_brick_pattern", ModBlocks.NETHER_BRICKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_BRICK_PAVING = registerBlockItem("nether_bricks_brick_paving", ModBlocks.NETHER_BRICKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_CHISELED_SQUARES = registerBlockItem("nether_bricks_chiseled_squares", ModBlocks.NETHER_BRICKS_CHISELED_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_DIAGONAL_BRICKS = registerBlockItem("nether_bricks_diagonal_bricks", ModBlocks.NETHER_BRICKS_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_LARGE_BRICKS = registerBlockItem("nether_bricks_large_bricks", ModBlocks.NETHER_BRICKS_LARGE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_LARGE_TILES = registerBlockItem("nether_bricks_large_tiles", ModBlocks.NETHER_BRICKS_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_ROTATED_BRICKS = registerBlockItem("nether_bricks_rotated_bricks", ModBlocks.NETHER_BRICKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_SMALL_TILES = registerBlockItem("nether_bricks_small_tiles", ModBlocks.NETHER_BRICKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_SMOOTH = registerBlockItem("nether_bricks_smooth", ModBlocks.NETHER_BRICKS_SMOOTH);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_SQUARES = registerBlockItem("nether_bricks_squares", ModBlocks.NETHER_BRICKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> NETHER_BRICKS_TILES = registerBlockItem("nether_bricks_tiles", ModBlocks.NETHER_BRICKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_BEAMS = registerBlockItem("netherite_block_beams", ModBlocks.NETHERITE_BLOCK_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_BRICKS = registerBlockItem("netherite_block_bricks", ModBlocks.NETHERITE_BLOCK_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_CHISELED = registerBlockItem("netherite_block_chiseled", ModBlocks.NETHERITE_BLOCK_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_COMPACTED = registerBlockItem("netherite_block_compacted", ModBlocks.NETHERITE_BLOCK_COMPACTED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_DECORATED = registerBlockItem("netherite_block_decorated", ModBlocks.NETHERITE_BLOCK_DECORATED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_DIAGONAL_TILES = registerBlockItem("netherite_block_diagonal_tiles", ModBlocks.NETHERITE_BLOCK_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_INDENTED = registerBlockItem("netherite_block_indented", ModBlocks.NETHERITE_BLOCK_INDENTED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_PATTERNED = registerBlockItem("netherite_block_patterned", ModBlocks.NETHERITE_BLOCK_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> NETHERITE_BLOCK_SMALL_TILES = registerBlockItem("netherite_block_small_tiles", ModBlocks.NETHERITE_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_BEAMS = registerBlockItem("netherrack_beams", ModBlocks.NETHERRACK_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_BRICK_PATTERN = registerBlockItem("netherrack_brick_pattern", ModBlocks.NETHERRACK_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_BRICK_PAVING = registerBlockItem("netherrack_brick_paving", ModBlocks.NETHERRACK_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_BRICKS = registerBlockItem("netherrack_bricks", ModBlocks.NETHERRACK_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_DENTED = registerBlockItem("netherrack_dented", ModBlocks.NETHERRACK_DENTED);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_ROTATED_BRICKS = registerBlockItem("netherrack_rotated_bricks", ModBlocks.NETHERRACK_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_SMALL_TILES = registerBlockItem("netherrack_small_tiles", ModBlocks.NETHERRACK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_STRIPES = registerBlockItem("netherrack_stripes", ModBlocks.NETHERRACK_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> NETHERRACK_TILES = registerBlockItem("netherrack_tiles", ModBlocks.NETHERRACK_TILES);
-    public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS = registerBlockItem("oak_barred_glass", ModBlocks.OAK_BARRED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_CTM =
         registerBlockItem("oak_barred_glass_ctm", ModBlocks.OAK_BARRED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_CTM_PANE = registerBlockItem("oak_barred_glass_ctm_pane", ModBlocks.OAK_BARRED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_PANE = registerBlockItem("oak_barred_glass_pane", ModBlocks.OAK_BARRED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS = registerBlockItem("oak_bordered_glass", ModBlocks.OAK_BORDERED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS_CTM =
         registerBlockItem("oak_bordered_glass_ctm", ModBlocks.OAK_BORDERED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS_CTM_PANE = registerBlockItem("oak_bordered_glass_ctm_pane", ModBlocks.OAK_BORDERED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS = registerBlockItem("oak_diamond_bordered_glass", ModBlocks.OAK_DIAMOND_BORDERED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_CTM =
         registerBlockItem("oak_diamond_bordered_glass_ctm", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_CTM_PANE = registerBlockItem("oak_diamond_bordered_glass_ctm_pane", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_PANE = registerBlockItem("oak_diamond_bordered_glass_pane", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS = registerBlockItem("oak_horizontal_lined_glass", ModBlocks.OAK_HORIZONTAL_LINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_CTM =
         registerBlockItem("oak_horizontal_lined_glass_ctm", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_CTM_PANE = registerBlockItem("oak_horizontal_lined_glass_ctm_pane", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_PANE = registerBlockItem("oak_horizontal_lined_glass_pane", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS = registerBlockItem("oak_large_diamond_glass", ModBlocks.OAK_LARGE_DIAMOND_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_CTM =
         registerBlockItem("oak_large_diamond_glass_ctm", ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_CTM_PANE = registerBlockItem("oak_large_diamond_glass_ctm_pane", ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_PANE = registerBlockItem("oak_large_diamond_glass_pane", ModBlocks.OAK_LARGE_DIAMOND_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS = registerBlockItem("oak_line_bared_glass", ModBlocks.OAK_LINE_BARED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_CTM =
         registerBlockItem("oak_line_bared_glass_ctm", ModBlocks.OAK_LINE_BARED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_CTM_PANE = registerBlockItem("oak_line_bared_glass_ctm_pane", ModBlocks.OAK_LINE_BARED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_PANE = registerBlockItem("oak_line_bared_glass_pane", ModBlocks.OAK_LINE_BARED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS = registerBlockItem("oak_ornate_bared_glass", ModBlocks.OAK_ORNATE_BARED_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_CTM =
         registerBlockItem("oak_ornate_bared_glass_ctm", ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_CTM_PANE = registerBlockItem("oak_ornate_bared_glass_ctm_pane", ModBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_PANE = registerBlockItem("oak_ornate_bared_glass_pane", ModBlocks.OAK_ORNATE_BARED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_BEAMS = registerBlockItem("oak_planks_beams", ModBlocks.OAK_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_BRICK_PATTERN = registerBlockItem("oak_planks_brick_pattern", ModBlocks.OAK_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_BRICK_PAVING = registerBlockItem("oak_planks_brick_paving", ModBlocks.OAK_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_BRICKS = registerBlockItem("oak_planks_bricks", ModBlocks.OAK_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_CRATE = registerBlockItem("oak_planks_crate", ModBlocks.OAK_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_DIAGONAL_STRIPES = registerBlockItem("oak_planks_diagonal_stripes", ModBlocks.OAK_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_DIAGONAL_TILES = registerBlockItem("oak_planks_diagonal_tiles", ModBlocks.OAK_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_DOTTED = registerBlockItem("oak_planks_dotted", ModBlocks.OAK_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_FLOORING = registerBlockItem("oak_planks_flooring", ModBlocks.OAK_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_LARGE_TILES = registerBlockItem("oak_planks_large_tiles", ModBlocks.OAK_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_PANEL =
         registerBlockItem("oak_planks_panel", ModBlocks.OAK_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_PATTERN = registerBlockItem("oak_planks_pattern", ModBlocks.OAK_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_ROTATED_BRICKS = registerBlockItem("oak_planks_rotated_bricks", ModBlocks.OAK_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_SMALL_BRICKS = registerBlockItem("oak_planks_small_bricks", ModBlocks.OAK_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_SMALL_TILES = registerBlockItem("oak_planks_small_tiles", ModBlocks.OAK_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_SQUARES = registerBlockItem("oak_planks_squares", ModBlocks.OAK_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_TILES = registerBlockItem("oak_planks_tiles", ModBlocks.OAK_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_WAVY = registerBlockItem("oak_planks_wavy", ModBlocks.OAK_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_WOVEN = registerBlockItem("oak_planks_woven", ModBlocks.OAK_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> OAK_SNOWFLAKE_GLASS = registerBlockItem("oak_snowflake_glass", ModBlocks.OAK_SNOWFLAKE_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_SNOWFLAKE_GLASS_PANE = registerBlockItem("oak_snowflake_glass_pane", ModBlocks.OAK_SNOWFLAKE_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_BARS = registerBlockItem("oak_window_bars", ModBlocks.OAK_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_BARS_CTM = registerBlockItem("oak_window_bars_ctm", ModBlocks.OAK_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_COVERED = registerBlockItem("oak_window_covered", ModBlocks.OAK_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_COVERED_CTM = registerBlockItem("oak_window_covered_ctm", ModBlocks.OAK_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_DIAGONAL = registerBlockItem("oak_window_diagonal", ModBlocks.OAK_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_DIAGONAL_CTM = registerBlockItem("oak_window_diagonal_ctm", ModBlocks.OAK_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_LARGE = registerBlockItem("oak_window_large", ModBlocks.OAK_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_LARGE_CTM = registerBlockItem("oak_window_large_ctm", ModBlocks.OAK_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_PANES_CTM = registerBlockItem("oak_window_panes_ctm", ModBlocks.OAK_WINDOW_PANES_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_PANES_CTM_PANE = registerBlockItem("oak_window_panes_ctm_pane", ModBlocks.OAK_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED = registerBlockItem("oak_window_rounded", ModBlocks.OAK_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED_CTM = registerBlockItem("oak_window_rounded_ctm", ModBlocks.OAK_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SLIM = registerBlockItem("oak_window_slim", ModBlocks.OAK_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SLIM_CTM = registerBlockItem("oak_window_slim_ctm", ModBlocks.OAK_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SWIRLING = registerBlockItem("oak_window_swirling", ModBlocks.OAK_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SWIRLING_CTM = registerBlockItem("oak_window_swirling_ctm", ModBlocks.OAK_WINDOW_SWIRLING_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_TILES = registerBlockItem("oak_window_tiles", ModBlocks.OAK_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_TILES_CTM = registerBlockItem("oak_window_tiles_ctm", ModBlocks.OAK_WINDOW_TILES_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS = registerBlockItem("oak_woven_glass", ModBlocks.OAK_WOVEN_GLASS);
     public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_CTM =
         registerBlockItem("oak_woven_glass_ctm", ModBlocks.OAK_WOVEN_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_CTM_PANE = registerBlockItem("oak_woven_glass_ctm_pane", ModBlocks.OAK_WOVEN_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_PANE = registerBlockItem("oak_woven_glass_pane", ModBlocks.OAK_WOVEN_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_BORDERED = registerBlockItem("obsidian_bordered", ModBlocks.OBSIDIAN_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_BRICK_PATTERN = registerBlockItem("obsidian_brick_pattern", ModBlocks.OBSIDIAN_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_BRICK_PAVING = registerBlockItem("obsidian_brick_paving", ModBlocks.OBSIDIAN_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_BRICKS = registerBlockItem("obsidian_bricks", ModBlocks.OBSIDIAN_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_CHISELED = registerBlockItem("obsidian_chiseled", ModBlocks.OBSIDIAN_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_CHISELED_CIRCLES = registerBlockItem("obsidian_chiseled_circles", ModBlocks.OBSIDIAN_CHISELED_CIRCLES);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_DARK = registerBlockItem("obsidian_dark", ModBlocks.OBSIDIAN_DARK);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_ROTATED_BRICKS = registerBlockItem("obsidian_rotated_bricks", ModBlocks.OBSIDIAN_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_SPOTS = registerBlockItem("obsidian_spots", ModBlocks.OBSIDIAN_SPOTS);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_SQUARES = registerBlockItem("obsidian_squares", ModBlocks.OBSIDIAN_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_STRIPES = registerBlockItem("obsidian_stripes", ModBlocks.OBSIDIAN_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_TILES = registerBlockItem("obsidian_tiles", ModBlocks.OBSIDIAN_TILES);
-    public static final DeferredHolder<Item, BlockItem> OCHRUM_CUT_POLISHED = registerBlockItem("ochrum_cut_polished", ModBlocks.OCHRUM_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> OCHRUM_CUT_SMALL_BRICK = registerBlockItem("ochrum_cut_small_brick", ModBlocks.OCHRUM_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> ORANGE_ACACIA_LEAVES =
         registerBlockItem("orange_acacia_leaves", ModBlocks.ORANGE_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> ORANGE_BIRCH_LEAVES =
@@ -4746,7 +3891,6 @@ public class ModItems {
         registerBlockItem("polished_deepslate", ModBlocks.POLISHED_DEEPSLATE);
     public static final DeferredHolder<Item, BlockItem> POLISHED_DIRT =
         registerBlockItem("polished_dirt", ModBlocks.POLISHED_DIRT);
-    public static final DeferredHolder<Item, BlockItem> POLISHED_DRIPSTONE = registerBlockItem("polished_dripstone", ModBlocks.POLISHED_DRIPSTONE);
     public static final DeferredHolder<Item, BlockItem> POLISHED_DRIPSTONE_BLOCK =
         registerBlockItem("polished_dripstone_block", ModBlocks.POLISHED_DRIPSTONE_BLOCK);
     public static final DeferredHolder<Item, BlockItem> POLISHED_END_STONE =
@@ -4799,24 +3943,6 @@ public class ModItems {
         registerBlockItem("polished_snow_block", ModBlocks.POLISHED_SNOW_BLOCK);
     public static final DeferredHolder<Item, BlockItem> POLISHED_TUFF =
         registerBlockItem("polished_tuff", ModBlocks.POLISHED_TUFF);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_BEAMS = registerBlockItem("prismarine_bricks_beams", ModBlocks.PRISMARINE_BRICKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_BRICK_PATTERN = registerBlockItem("prismarine_bricks_brick_pattern", ModBlocks.PRISMARINE_BRICKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_BRICK_PAVING = registerBlockItem("prismarine_bricks_brick_paving", ModBlocks.PRISMARINE_BRICKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_BRICKS = registerBlockItem("prismarine_bricks_bricks", ModBlocks.PRISMARINE_BRICKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_CHISELED_CIRCLES = registerBlockItem("prismarine_bricks_chiseled_circles", ModBlocks.PRISMARINE_BRICKS_CHISELED_CIRCLES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_CHISELED_SQUARES = registerBlockItem("prismarine_bricks_chiseled_squares", ModBlocks.PRISMARINE_BRICKS_CHISELED_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_DIAGONAL_BRICKS = registerBlockItem("prismarine_bricks_diagonal_bricks", ModBlocks.PRISMARINE_BRICKS_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_DIAGONAL_TILES = registerBlockItem("prismarine_bricks_diagonal_tiles", ModBlocks.PRISMARINE_BRICKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_DOTTED = registerBlockItem("prismarine_bricks_dotted", ModBlocks.PRISMARINE_BRICKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_PILLARS = registerBlockItem("prismarine_bricks_pillars", ModBlocks.PRISMARINE_BRICKS_PILLARS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_POLISHED = registerBlockItem("prismarine_bricks_polished", ModBlocks.PRISMARINE_BRICKS_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_ROTATED_BRICKS = registerBlockItem("prismarine_bricks_rotated_bricks", ModBlocks.PRISMARINE_BRICKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_ROWS = registerBlockItem("prismarine_bricks_rows", ModBlocks.PRISMARINE_BRICKS_ROWS);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_SMALL_TILES = registerBlockItem("prismarine_bricks_small_tiles", ModBlocks.PRISMARINE_BRICKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_SQUARES = registerBlockItem("prismarine_bricks_squares", ModBlocks.PRISMARINE_BRICKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_TILES = registerBlockItem("prismarine_bricks_tiles", ModBlocks.PRISMARINE_BRICKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_WAVY = registerBlockItem("prismarine_bricks_wavy", ModBlocks.PRISMARINE_BRICKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> PRISMARINE_BRICKS_WOVEN = registerBlockItem("prismarine_bricks_woven", ModBlocks.PRISMARINE_BRICKS_WOVEN);
     public static final DeferredHolder<Item, BlockItem> PURPLE_CONCRETE_CTM =
         registerBlockItem("purple_concrete_ctm", ModBlocks.PURPLE_CONCRETE_CTM);
     public static final DeferredHolder<Item, BlockItem> PURPLE_CONCRETE_PANEL =
@@ -4825,39 +3951,6 @@ public class ModItems {
         registerBlockItem("purple_terracotta_column", ModBlocks.PURPLE_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> PURPLE_TERRACOTTA_CTM =
         registerBlockItem("purple_terracotta_ctm", ModBlocks.PURPLE_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_BRICK_PATTERN = registerBlockItem("purpur_brick_pattern", ModBlocks.PURPUR_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_BRICK_PAVING = registerBlockItem("purpur_brick_paving", ModBlocks.PURPUR_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_BRICKS = registerBlockItem("purpur_bricks", ModBlocks.PURPUR_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_COLUMN_CTM = registerBlockItem("purpur_column_ctm", ModBlocks.PURPUR_COLUMN_CTM);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_DIAGONAL_BRICKS = registerBlockItem("purpur_diagonal_bricks", ModBlocks.PURPUR_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_DIAGONAL_TILES = registerBlockItem("purpur_diagonal_tiles", ModBlocks.PURPUR_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_DOTTED = registerBlockItem("purpur_dotted", ModBlocks.PURPUR_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_FABRIC = registerBlockItem("purpur_fabric", ModBlocks.PURPUR_FABRIC);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_JAGGED_PATTERN = registerBlockItem("purpur_jagged_pattern", ModBlocks.PURPUR_JAGGED_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_LARGE_TILES = registerBlockItem("purpur_large_tiles", ModBlocks.PURPUR_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_ORGANIC_PATTERN = registerBlockItem("purpur_organic_pattern", ModBlocks.PURPUR_ORGANIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_ROTATED_BRICKS = registerBlockItem("purpur_rotated_bricks", ModBlocks.PURPUR_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_SLANTED_TILES = registerBlockItem("purpur_slanted_tiles", ModBlocks.PURPUR_SLANTED_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_SMALL_TILES = registerBlockItem("purpur_small_tiles", ModBlocks.PURPUR_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_SPIRAL_PATTERN = registerBlockItem("purpur_spiral_pattern", ModBlocks.PURPUR_SPIRAL_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_SQUARES = registerBlockItem("purpur_squares", ModBlocks.PURPUR_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_TILES = registerBlockItem("purpur_tiles", ModBlocks.PURPUR_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPUR_WOVEN = registerBlockItem("purpur_woven", ModBlocks.PURPUR_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK = registerBlockItem("quartz_block", ModBlocks.QUARTZ_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_BORDERED = registerBlockItem("quartz_block_bordered", ModBlocks.QUARTZ_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_BRICK_PAVING = registerBlockItem("quartz_block_brick_paving", ModBlocks.QUARTZ_BLOCK_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_CHISELED_CTM = registerBlockItem("quartz_block_chiseled_ctm", ModBlocks.QUARTZ_BLOCK_CHISELED_CTM);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_CONNECTING = registerBlockItem("quartz_block_connecting", ModBlocks.QUARTZ_BLOCK_CONNECTING);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_CROSSES = registerBlockItem("quartz_block_crosses", ModBlocks.QUARTZ_BLOCK_CROSSES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_DIAGONAL_TILES = registerBlockItem("quartz_block_diagonal_tiles", ModBlocks.QUARTZ_BLOCK_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_PATTERN = registerBlockItem("quartz_block_pattern", ModBlocks.QUARTZ_BLOCK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_ROTATED_BRICKS = registerBlockItem("quartz_block_rotated_bricks", ModBlocks.QUARTZ_BLOCK_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_ROWS = registerBlockItem("quartz_block_rows", ModBlocks.QUARTZ_BLOCK_ROWS);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_SCALES = registerBlockItem("quartz_block_scales", ModBlocks.QUARTZ_BLOCK_SCALES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_SMALL_TILES = registerBlockItem("quartz_block_small_tiles", ModBlocks.QUARTZ_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_SQUARES = registerBlockItem("quartz_block_squares", ModBlocks.QUARTZ_BLOCK_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_STRIPES = registerBlockItem("quartz_block_stripes", ModBlocks.QUARTZ_BLOCK_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> QUARTZ_BLOCK_TILES = registerBlockItem("quartz_block_tiles", ModBlocks.QUARTZ_BLOCK_TILES);
     public static final DeferredHolder<Item, BlockItem> RASTER_BLACK_STAINED_GLASS =
         registerBlockItem("raster_black_stained_glass", ModBlocks.RASTER_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_BLACK_STAINED_GLASS_CTM =
@@ -4947,68 +4040,18 @@ public class ModItems {
         registerBlockItem("red_dark_oak_leaves", ModBlocks.RED_DARK_OAK_LEAVES);
     public static final DeferredHolder<Item, BlockItem> RED_JUNGLE_LEAVES =
         registerBlockItem("red_jungle_leaves", ModBlocks.RED_JUNGLE_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_BEAMS = registerBlockItem("red_nether_bricks_beams", ModBlocks.RED_NETHER_BRICKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_BRICK_PATTERN = registerBlockItem("red_nether_bricks_brick_pattern", ModBlocks.RED_NETHER_BRICKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_BRICK_PAVING = registerBlockItem("red_nether_bricks_brick_paving", ModBlocks.RED_NETHER_BRICKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_CHISELED_SQUARES = registerBlockItem("red_nether_bricks_chiseled_squares", ModBlocks.RED_NETHER_BRICKS_CHISELED_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_DIAGONAL_BRICKS = registerBlockItem("red_nether_bricks_diagonal_bricks", ModBlocks.RED_NETHER_BRICKS_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_LARGE_BRICKS = registerBlockItem("red_nether_bricks_large_bricks", ModBlocks.RED_NETHER_BRICKS_LARGE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_LARGE_TILES = registerBlockItem("red_nether_bricks_large_tiles", ModBlocks.RED_NETHER_BRICKS_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_ROTATED_BRICKS = registerBlockItem("red_nether_bricks_rotated_bricks", ModBlocks.RED_NETHER_BRICKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_SMALL_TILES = registerBlockItem("red_nether_bricks_small_tiles", ModBlocks.RED_NETHER_BRICKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_SMOOTH = registerBlockItem("red_nether_bricks_smooth", ModBlocks.RED_NETHER_BRICKS_SMOOTH);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_SQUARES = registerBlockItem("red_nether_bricks_squares", ModBlocks.RED_NETHER_BRICKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> RED_NETHER_BRICKS_TILES = registerBlockItem("red_nether_bricks_tiles", ModBlocks.RED_NETHER_BRICKS_TILES);
     public static final DeferredHolder<Item, BlockItem> RED_OAK_LEAVES =
         registerBlockItem("red_oak_leaves", ModBlocks.RED_OAK_LEAVES);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_BRICK_PATTERN = registerBlockItem("red_sandstone_brick_pattern", ModBlocks.RED_SANDSTONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_BRICK_PAVING = registerBlockItem("red_sandstone_brick_paving", ModBlocks.RED_SANDSTONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_BRICKS = registerBlockItem("red_sandstone_bricks", ModBlocks.RED_SANDSTONE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_DIAGONAL_BRICKS = registerBlockItem("red_sandstone_diagonal_bricks", ModBlocks.RED_SANDSTONE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_LARGE_TILES = registerBlockItem("red_sandstone_large_tiles", ModBlocks.RED_SANDSTONE_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_POLISHED = registerBlockItem("red_sandstone_polished", ModBlocks.RED_SANDSTONE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_ROTATED_BRICKS = registerBlockItem("red_sandstone_rotated_bricks", ModBlocks.RED_SANDSTONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_SANDSTONE_TILES = registerBlockItem("red_sandstone_tiles", ModBlocks.RED_SANDSTONE_TILES);
     public static final DeferredHolder<Item, BlockItem> RED_SPRUCE_LEAVES =
         registerBlockItem("red_spruce_leaves", ModBlocks.RED_SPRUCE_LEAVES);
     public static final DeferredHolder<Item, BlockItem> RED_TERRACOTTA_COLUMN =
         registerBlockItem("red_terracotta_column", ModBlocks.RED_TERRACOTTA_COLUMN);
     public static final DeferredHolder<Item, BlockItem> RED_TERRACOTTA_CTM =
         registerBlockItem("red_terracotta_ctm", ModBlocks.RED_TERRACOTTA_CTM);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_BORDERED = registerBlockItem("redstone_block_bordered", ModBlocks.REDSTONE_BLOCK_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_BRICKS = registerBlockItem("redstone_block_bricks", ModBlocks.REDSTONE_BLOCK_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_CHISELED_CLOVERS = registerBlockItem("redstone_block_chiseled_clovers", ModBlocks.REDSTONE_BLOCK_CHISELED_CLOVERS);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_CIRCLES = registerBlockItem("redstone_block_circles", ModBlocks.REDSTONE_BLOCK_CIRCLES);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_COMPRESSED = registerBlockItem("redstone_block_compressed", ModBlocks.REDSTONE_BLOCK_COMPRESSED);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_CTM = registerBlockItem("redstone_block_ctm", ModBlocks.REDSTONE_BLOCK_CTM);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_DIAGONAL_TILES = registerBlockItem("redstone_block_diagonal_tiles", ModBlocks.REDSTONE_BLOCK_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_PATTERNED = registerBlockItem("redstone_block_patterned", ModBlocks.REDSTONE_BLOCK_PATTERNED);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_PAVING = registerBlockItem("redstone_block_paving", ModBlocks.REDSTONE_BLOCK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_POLISHED = registerBlockItem("redstone_block_polished", ModBlocks.REDSTONE_BLOCK_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_SCALES = registerBlockItem("redstone_block_scales", ModBlocks.REDSTONE_BLOCK_SCALES);
-    public static final DeferredHolder<Item, BlockItem> REDSTONE_BLOCK_SMALL_TILES = registerBlockItem("redstone_block_small_tiles", ModBlocks.REDSTONE_BLOCK_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_BRICKS = registerBlockItem("rose_quartz_bricks", ModBlocks.ROSE_QUARTZ_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_CHISELED = registerBlockItem("rose_quartz_chiseled", ModBlocks.ROSE_QUARTZ_CHISELED);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_CRUSHED = registerBlockItem("rose_quartz_crushed", ModBlocks.ROSE_QUARTZ_CRUSHED);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_POLISHED_BLOCK = registerBlockItem("rose_quartz_polished_block", ModBlocks.ROSE_QUARTZ_POLISHED_BLOCK);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_SQUARES = registerBlockItem("rose_quartz_squares", ModBlocks.ROSE_QUARTZ_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> ROSE_QUARTZ_TILES = registerBlockItem("rose_quartz_tiles", ModBlocks.ROSE_QUARTZ_TILES);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_BRICK_PATTERN = registerBlockItem("sandstone_brick_pattern", ModBlocks.SANDSTONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_BRICK_PAVING = registerBlockItem("sandstone_brick_paving", ModBlocks.SANDSTONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_BRICKS = registerBlockItem("sandstone_bricks", ModBlocks.SANDSTONE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_DIAGONAL_BRICKS = registerBlockItem("sandstone_diagonal_bricks", ModBlocks.SANDSTONE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_LARGE_TILES = registerBlockItem("sandstone_large_tiles", ModBlocks.SANDSTONE_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_POLISHED = registerBlockItem("sandstone_polished", ModBlocks.SANDSTONE_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_ROTATED_BRICKS = registerBlockItem("sandstone_rotated_bricks", ModBlocks.SANDSTONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_TILES = registerBlockItem("sandstone_tiles", ModBlocks.SANDSTONE_TILES);
     public static final DeferredHolder<Item, BlockItem> SCALY_MUD =
         registerBlockItem("scaly_mud", ModBlocks.SCALY_MUD);
     public static final DeferredHolder<Item, BlockItem> SCALY_PACKED_MUD =
         registerBlockItem("scaly_packed_mud", ModBlocks.SCALY_PACKED_MUD);
-    public static final DeferredHolder<Item, BlockItem> SCORCHIA_CUT_POLISHED = registerBlockItem("scorchia_cut_polished", ModBlocks.SCORCHIA_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> SCORCHIA_CUT_SMALL_BRICK = registerBlockItem("scorchia_cut_small_brick", ModBlocks.SCORCHIA_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> SCORIA_CUT_POLISHED = registerBlockItem("scoria_cut_polished", ModBlocks.SCORIA_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> SCORIA_CUT_SMALL_BRICK = registerBlockItem("scoria_cut_small_brick", ModBlocks.SCORIA_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> SIMPLE_AMETHYST_BLOCK_CTM =
         registerBlockItem("simple_amethyst_block_ctm", ModBlocks.SIMPLE_AMETHYST_BLOCK_CTM);
     public static final DeferredHolder<Item, BlockItem> SIMPLE_ANCIENT_DEBRIS_CTM =
@@ -5295,45 +4338,9 @@ public class ModItems {
         registerBlockItem("smooth_white_concrete", ModBlocks.SMOOTH_WHITE_CONCRETE);
     public static final DeferredHolder<Item, BlockItem> SMOOTH_YELLOW_CONCRETE =
         registerBlockItem("smooth_yellow_concrete", ModBlocks.SMOOTH_YELLOW_CONCRETE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_BEAMS = registerBlockItem("spruce_planks_beams", ModBlocks.SPRUCE_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_BRICK_PATTERN = registerBlockItem("spruce_planks_brick_pattern", ModBlocks.SPRUCE_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_BRICK_PAVING = registerBlockItem("spruce_planks_brick_paving", ModBlocks.SPRUCE_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_BRICKS = registerBlockItem("spruce_planks_bricks", ModBlocks.SPRUCE_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_CRATE = registerBlockItem("spruce_planks_crate", ModBlocks.SPRUCE_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_DIAGONAL_STRIPES = registerBlockItem("spruce_planks_diagonal_stripes", ModBlocks.SPRUCE_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_DIAGONAL_TILES = registerBlockItem("spruce_planks_diagonal_tiles", ModBlocks.SPRUCE_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_DOTTED = registerBlockItem("spruce_planks_dotted", ModBlocks.SPRUCE_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_FLOORING = registerBlockItem("spruce_planks_flooring", ModBlocks.SPRUCE_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_LARGE_TILES = registerBlockItem("spruce_planks_large_tiles", ModBlocks.SPRUCE_PLANKS_LARGE_TILES);
     public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_PANEL =
         registerBlockItem("spruce_planks_panel", ModBlocks.SPRUCE_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_PATTERN = registerBlockItem("spruce_planks_pattern", ModBlocks.SPRUCE_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_ROTATED_BRICKS = registerBlockItem("spruce_planks_rotated_bricks", ModBlocks.SPRUCE_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_SMALL_BRICKS = registerBlockItem("spruce_planks_small_bricks", ModBlocks.SPRUCE_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_SMALL_TILES = registerBlockItem("spruce_planks_small_tiles", ModBlocks.SPRUCE_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_SQUARES = registerBlockItem("spruce_planks_squares", ModBlocks.SPRUCE_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_TILES = registerBlockItem("spruce_planks_tiles", ModBlocks.SPRUCE_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_WAVY = registerBlockItem("spruce_planks_wavy", ModBlocks.SPRUCE_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_WOVEN = registerBlockItem("spruce_planks_woven", ModBlocks.SPRUCE_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_BARS = registerBlockItem("spruce_window_bars", ModBlocks.SPRUCE_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_BARS_CTM = registerBlockItem("spruce_window_bars_ctm", ModBlocks.SPRUCE_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_COVERED = registerBlockItem("spruce_window_covered", ModBlocks.SPRUCE_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_COVERED_CTM = registerBlockItem("spruce_window_covered_ctm", ModBlocks.SPRUCE_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_DIAGONAL = registerBlockItem("spruce_window_diagonal", ModBlocks.SPRUCE_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_DIAGONAL_CTM = registerBlockItem("spruce_window_diagonal_ctm", ModBlocks.SPRUCE_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_LARGE = registerBlockItem("spruce_window_large", ModBlocks.SPRUCE_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_LARGE_CTM = registerBlockItem("spruce_window_large_ctm", ModBlocks.SPRUCE_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_PANES = registerBlockItem("spruce_window_panes", ModBlocks.SPRUCE_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_PANES_CTM = registerBlockItem("spruce_window_panes_ctm", ModBlocks.SPRUCE_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_ROUNDED = registerBlockItem("spruce_window_rounded", ModBlocks.SPRUCE_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_ROUNDED_CTM = registerBlockItem("spruce_window_rounded_ctm", ModBlocks.SPRUCE_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SLIM = registerBlockItem("spruce_window_slim", ModBlocks.SPRUCE_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SLIM_CTM = registerBlockItem("spruce_window_slim_ctm", ModBlocks.SPRUCE_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SWIRLING = registerBlockItem("spruce_window_swirling", ModBlocks.SPRUCE_WINDOW_SWIRLING);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SWIRLING_CTM = registerBlockItem("spruce_window_swirling_ctm", ModBlocks.SPRUCE_WINDOW_SWIRLING_CTM);
     public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("spruce_window_swirling_ctm_pane", ModBlocks.SPRUCE_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_TILES = registerBlockItem("spruce_window_tiles", ModBlocks.SPRUCE_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_TILES_CTM = registerBlockItem("spruce_window_tiles_ctm", ModBlocks.SPRUCE_WINDOW_TILES_CTM);
     public static final DeferredHolder<Item, BlockItem> SQUARE_BLACK_STAINED_GLASS =
         registerBlockItem("square_black_stained_glass", ModBlocks.SQUARE_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SQUARE_BLACK_STAINED_GLASS_PANE = registerBlockItem("square_black_stained_glass_pane", ModBlocks.SQUARE_BLACK_STAINED_GLASS_PANE);
@@ -5355,7 +4362,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> SQUARE_LEADED_GLASS =
         registerBlockItem("square_leaded_glass", ModBlocks.SQUARE_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SQUARE_LEADED_GLASS_PANE = registerBlockItem("square_leaded_glass_pane", ModBlocks.SQUARE_LEADED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS = registerBlockItem("square_oak_glass", ModBlocks.SQUARE_OAK_GLASS);
     public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS_CTM =
         registerBlockItem("square_oak_glass_ctm", ModBlocks.SQUARE_OAK_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS_CTM_PANE = registerBlockItem("square_oak_glass_ctm_pane", ModBlocks.SQUARE_OAK_GLASS_CTM_PANE);
@@ -5393,26 +4399,6 @@ public class ModItems {
         registerBlockItem("starry_white_terracotta", ModBlocks.STARRY_WHITE_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> STARRY_YELLOW_TERRACOTTA =
         registerBlockItem("starry_yellow_terracotta", ModBlocks.STARRY_YELLOW_TERRACOTTA);
-    public static final DeferredHolder<Item, BlockItem> STONE_BIG_TILES = registerBlockItem("stone_big_tiles", ModBlocks.STONE_BIG_TILES);
-    public static final DeferredHolder<Item, BlockItem> STONE_BORDERED = registerBlockItem("stone_bordered", ModBlocks.STONE_BORDERED);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICK_PATTERN = registerBlockItem("stone_brick_pattern", ModBlocks.STONE_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICK_PAVING = registerBlockItem("stone_brick_paving", ModBlocks.STONE_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> STONE_CHISELED_BRICKS = registerBlockItem("stone_chiseled_bricks", ModBlocks.STONE_CHISELED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> STONE_CRUSHED = registerBlockItem("stone_crushed", ModBlocks.STONE_CRUSHED);
-    public static final DeferredHolder<Item, BlockItem> STONE_DIAGONAL_BRICKS = registerBlockItem("stone_diagonal_bricks", ModBlocks.STONE_DIAGONAL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> STONE_PATH = registerBlockItem("stone_path", ModBlocks.STONE_PATH);
-    public static final DeferredHolder<Item, BlockItem> STONE_ROTATED_BRICKS = registerBlockItem("stone_rotated_bricks", ModBlocks.STONE_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> STONE_SLATED_END = registerBlockItem("stone_slated_end", ModBlocks.STONE_SLATED_END);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMALL_BRICKS = registerBlockItem("stone_small_bricks", ModBlocks.STONE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMALL_TILES = registerBlockItem("stone_small_tiles", ModBlocks.STONE_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMOOTH = registerBlockItem("stone_smooth", ModBlocks.STONE_SMOOTH);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMOOTH_BRICK_PAVING = registerBlockItem("stone_smooth_brick_paving", ModBlocks.STONE_SMOOTH_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMOOTH_LARGE_TILES = registerBlockItem("stone_smooth_large_tiles", ModBlocks.STONE_SMOOTH_LARGE_TILES);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMOOTH_ROTATED_BRICKS = registerBlockItem("stone_smooth_rotated_bricks", ModBlocks.STONE_SMOOTH_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> STONE_SMOOTH_TILES = registerBlockItem("stone_smooth_tiles", ModBlocks.STONE_SMOOTH_TILES);
-    public static final DeferredHolder<Item, BlockItem> STONE_SQUARES = registerBlockItem("stone_squares", ModBlocks.STONE_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> STONE_TILES = registerBlockItem("stone_tiles", ModBlocks.STONE_TILES);
-    public static final DeferredHolder<Item, BlockItem> STONE_WAVES = registerBlockItem("stone_waves", ModBlocks.STONE_WAVES);
     public static final DeferredHolder<Item, BlockItem> STRIPED_BLACK_CONCRETE =
         registerBlockItem("striped_black_concrete", ModBlocks.STRIPED_BLACK_CONCRETE);
     public static final DeferredHolder<Item, BlockItem> STRIPED_BLUE_CONCRETE =
@@ -5843,10 +4829,6 @@ public class ModItems {
         registerBlockItem("tiny_brick_bordered_snow_block", ModBlocks.TINY_BRICK_BORDERED_SNOW_BLOCK);
     public static final DeferredHolder<Item, BlockItem> TINY_BRICK_BORDERED_TUFF =
         registerBlockItem("tiny_brick_bordered_tuff", ModBlocks.TINY_BRICK_BORDERED_TUFF);
-    public static final DeferredHolder<Item, BlockItem> TUFF_CUT_POLISHED = registerBlockItem("tuff_cut_polished", ModBlocks.TUFF_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> TUFF_CUT_SMALL_BRICK = registerBlockItem("tuff_cut_small_brick", ModBlocks.TUFF_CUT_SMALL_BRICK);
-    public static final DeferredHolder<Item, BlockItem> VERIDIUM_CUT_POLISHED = registerBlockItem("veridium_cut_polished", ModBlocks.VERIDIUM_CUT_POLISHED);
-    public static final DeferredHolder<Item, BlockItem> VERIDIUM_CUT_SMALL_BRICK = registerBlockItem("veridium_cut_small_brick", ModBlocks.VERIDIUM_CUT_SMALL_BRICK);
     public static final DeferredHolder<Item, BlockItem> VERTICAL_LEADED_GLASS =
         registerBlockItem("vertical_leaded_glass", ModBlocks.VERTICAL_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> VERTICAL_LEADED_GLASS_PANE = registerBlockItem("vertical_leaded_glass_pane", ModBlocks.VERTICAL_LEADED_GLASS_PANE);
@@ -5868,44 +4850,9 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> VERTICAL_STRIPED_GREEN_STAINED_GLASS =
         registerBlockItem("vertical_striped_green_stained_glass", ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> VERTICAL_STRIPED_GREEN_STAINED_GLASS_PANE = registerBlockItem("vertical_striped_green_stained_glass_pane", ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_BEAMS = registerBlockItem("warped_planks_beams", ModBlocks.WARPED_PLANKS_BEAMS);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_BRICK_PATTERN = registerBlockItem("warped_planks_brick_pattern", ModBlocks.WARPED_PLANKS_BRICK_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_BRICK_PAVING = registerBlockItem("warped_planks_brick_paving", ModBlocks.WARPED_PLANKS_BRICK_PAVING);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_BRICKS = registerBlockItem("warped_planks_bricks", ModBlocks.WARPED_PLANKS_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_CRATE = registerBlockItem("warped_planks_crate", ModBlocks.WARPED_PLANKS_CRATE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_DIAGONAL_STRIPES = registerBlockItem("warped_planks_diagonal_stripes", ModBlocks.WARPED_PLANKS_DIAGONAL_STRIPES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_DIAGONAL_TILES = registerBlockItem("warped_planks_diagonal_tiles", ModBlocks.WARPED_PLANKS_DIAGONAL_TILES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_DOTTED = registerBlockItem("warped_planks_dotted", ModBlocks.WARPED_PLANKS_DOTTED);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_FLOORING = registerBlockItem("warped_planks_flooring", ModBlocks.WARPED_PLANKS_FLOORING);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_LARGE_TILES = registerBlockItem("warped_planks_large_tiles", ModBlocks.WARPED_PLANKS_LARGE_TILES);
 public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
         registerBlockItem("warped_planks_panel", ModBlocks.WARPED_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PATTERN = registerBlockItem("warped_planks_pattern", ModBlocks.WARPED_PLANKS_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_ROTATED_BRICKS = registerBlockItem("warped_planks_rotated_bricks", ModBlocks.WARPED_PLANKS_ROTATED_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_SMALL_BRICKS = registerBlockItem("warped_planks_small_bricks", ModBlocks.WARPED_PLANKS_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_SMALL_TILES = registerBlockItem("warped_planks_small_tiles", ModBlocks.WARPED_PLANKS_SMALL_TILES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_SQUARES = registerBlockItem("warped_planks_squares", ModBlocks.WARPED_PLANKS_SQUARES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_TILES = registerBlockItem("warped_planks_tiles", ModBlocks.WARPED_PLANKS_TILES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_WAVY = registerBlockItem("warped_planks_wavy", ModBlocks.WARPED_PLANKS_WAVY);
-    public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_WOVEN = registerBlockItem("warped_planks_woven", ModBlocks.WARPED_PLANKS_WOVEN);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_BARS = registerBlockItem("warped_window_bars", ModBlocks.WARPED_WINDOW_BARS);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_BARS_CTM = registerBlockItem("warped_window_bars_ctm", ModBlocks.WARPED_WINDOW_BARS_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_COVERED = registerBlockItem("warped_window_covered", ModBlocks.WARPED_WINDOW_COVERED);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_COVERED_CTM = registerBlockItem("warped_window_covered_ctm", ModBlocks.WARPED_WINDOW_COVERED_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_DIAGONAL = registerBlockItem("warped_window_diagonal", ModBlocks.WARPED_WINDOW_DIAGONAL);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_DIAGONAL_CTM = registerBlockItem("warped_window_diagonal_ctm", ModBlocks.WARPED_WINDOW_DIAGONAL_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_LARGE = registerBlockItem("warped_window_large", ModBlocks.WARPED_WINDOW_LARGE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_LARGE_CTM = registerBlockItem("warped_window_large_ctm", ModBlocks.WARPED_WINDOW_LARGE_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_PANES = registerBlockItem("warped_window_panes", ModBlocks.WARPED_WINDOW_PANES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_PANES_CTM = registerBlockItem("warped_window_panes_ctm", ModBlocks.WARPED_WINDOW_PANES_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_ROUNDED = registerBlockItem("warped_window_rounded", ModBlocks.WARPED_WINDOW_ROUNDED);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_ROUNDED_CTM = registerBlockItem("warped_window_rounded_ctm", ModBlocks.WARPED_WINDOW_ROUNDED_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM = registerBlockItem("warped_window_slim", ModBlocks.WARPED_WINDOW_SLIM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM_CTM = registerBlockItem("warped_window_slim_ctm", ModBlocks.WARPED_WINDOW_SLIM_CTM);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING_CTM = registerBlockItem("warped_window_swirling_ctm", ModBlocks.WARPED_WINDOW_SWIRLING_CTM);
     public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("warped_window_swirling_ctm_pane", ModBlocks.WARPED_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_TILES = registerBlockItem("warped_window_tiles", ModBlocks.WARPED_WINDOW_TILES);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_TILES_CTM = registerBlockItem("warped_window_tiles_ctm", ModBlocks.WARPED_WINDOW_TILES_CTM);
     public static final DeferredHolder<Item, BlockItem> WHIRLWIND_ACACIA_PLANKS =
         registerBlockItem("whirlwind_acacia_planks", ModBlocks.WHIRLWIND_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> WHIRLWIND_BAMBOO_PLANKS =
@@ -5991,6 +4938,5 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
 
 
     // ===== RECOVERED PURPUR_CTM =====
-    public static final DeferredHolder<Item, BlockItem> PURPUR_PILLAR_CTM                  = registerBlockItem("purpur_ctm",          ModBlocks.PURPUR_PILLAR_CTM);
 
 }

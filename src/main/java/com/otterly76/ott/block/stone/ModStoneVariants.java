@@ -172,8 +172,8 @@ public class ModStoneVariants {
             ofVanillaProps("resin_block",           ModBlocks.RESIN_BLOCK,          () -> Blocks.CLAY,   "minecraft:block/resin_block"),
             ofVanillaProps("resin_bricks",          ModBlocks.RESIN_BRICKS,         () -> Blocks.BRICKS, "minecraft:block/resin_bricks"),
             ofVanillaProps("chiseled_resin_bricks", ModBlocks.CHISELED_RESIN_BRICKS, () -> Blocks.BRICKS, "minecraft:block/chiseled_resin_bricks"),
-            of("pink_salt_block",             ModBlocks.PINK_SALT_BLOCK,              "ott:block/pink_salt/pink_salt_block"),
-            of("polished_pink_salt_block",    ModBlocks.POLISHED_PINK_SALT_BLOCK,     "ott:block/pink_salt/polished_pink_salt_block")
+            of("pink_salt_block",             OttBlocks.PINK_SALT_BLOCK,              "ott:block/pink_salt/pink_salt_block"),
+            of("polished_pink_salt_block",    OttBlocks.POLISHED_PINK_SALT_BLOCK,     "ott:block/pink_salt/polished_pink_salt_block")
     );
 
     // ── Group 7: Copper ─────────────────────────────────────────────────────────
@@ -210,7 +210,7 @@ public class ModStoneVariants {
     public static final List<StoneVariant> CUSTOM = List.of(
             of("limestone",                         ModBlocks.PLAIN_LIMESTONE,                        "ott:block/limestone/limestone"),
             of("cobbled_limestone",                 ModBlocks.COBBLED_LIMESTONE,                      "ott:block/limestone/cobbled_limestone"),
-            of("refined_glowstone",                 ModBlocks.REFINED_GLOWSTONE,                      "ott:block/glowstone/refined_glowstone"),
+            of("refined_glowstone",                 OttBlocks.REFINED_GLOWSTONE,                      "ott:block/glowstone/refined_glowstone"),
             of("roofing_slates",                    ModBlocks.ROOFING_SLATES,                         "ott:block/misc/roofing_slates"),
             of("black_marble",                      OttBlocks.BLACK_MARBLE,                           "ott:block/black_marble/black_marble"),
             of("black_marble_bricks",               OttBlocks.BLACK_MARBLE_BRICKS,                    "ott:block/black_marble/black_marble_bricks"),
@@ -282,8 +282,8 @@ public class ModStoneVariants {
             of("yellow_marble_small_bricks", OttBlocks.YELLOW_MARBLE_SMALL_BRICKS, "ott:block/yellow_marble/yellow_marble_small_bricks"),
             of("yellow_marble_tiles", OttBlocks.YELLOW_MARBLE_TILES, "ott:block/yellow_marble/yellow_marble_tiles"),
             of("yellow_polished_marble", OttBlocks.YELLOW_POLISHED_MARBLE, "ott:block/yellow_marble/yellow_polished_marble"),
-            of("sandstone_slender_bricks",          ModBlocks.SANDSTONE_SLENDER_BRICKS,               "ott:block/sandstone/sandstone_slender_bricks"),
-            of("sandstone_slender_turquoise_pattern", ModBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
+            of("sandstone_slender_bricks",          OttBlocks.SANDSTONE_SLENDER_BRICKS,               "ott:block/sandstone/sandstone_slender_bricks"),
+            of("sandstone_slender_turquoise_pattern", OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
     );
 
     // ── Group 9: Traditional Mosaic ──────────────────────────────────────────────

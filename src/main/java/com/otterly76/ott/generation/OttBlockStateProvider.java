@@ -1357,9 +1357,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlock(ModBlocks.LIMESTONE_MASONRY_PLATE.get(),    "block/limestone/limestone_masonry_plate");
 
         // ── Salt & misc stone ─────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.PINK_SALT_BLOCK.get(),          models().getExistingFile(modLoc("block/pink_salt/pink_salt_block")));
-        simpleBlockWithItem(ModBlocks.POLISHED_PINK_SALT_BLOCK.get(), models().getExistingFile(modLoc("block/pink_salt/polished_pink_salt_block")));
-        simpleBlockWithItem(ModBlocks.REFINED_GLOWSTONE.get(),    models().getExistingFile(modLoc("block/glowstone/refined_glowstone")));
+        simpleBlockWithItem(OttBlocks.PINK_SALT_BLOCK.get(),          models().getExistingFile(modLoc("block/pink_salt/pink_salt_block")));
+        simpleBlockWithItem(OttBlocks.POLISHED_PINK_SALT_BLOCK.get(), models().getExistingFile(modLoc("block/pink_salt/polished_pink_salt_block")));
+        simpleBlockWithItem(OttBlocks.REFINED_GLOWSTONE.get(),    models().getExistingFile(modLoc("block/glowstone/refined_glowstone")));
         simpleBlockWithItem(ModBlocks.GLASS_JAR.get(),           models().getExistingFile(modLoc("block/glass_jar")));
 
 
@@ -1380,13 +1380,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlockNoUvLock(ModBlocks.SANDSTONE_CRENELATION.get(), "block/sandstone/sandstone_crenelation");
 
         // ── Stone bricks masonry ──────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.STONE_BRICKS_MASONRY.get(),      models().getExistingFile(modLoc("block/stone_bricks/stone_bricks_masonry")));
+        simpleBlockWithItem(OttBlocks.STONE_BRICKS_MASONRY.get(),      models().getExistingFile(modLoc("block/stone_bricks/stone_bricks_masonry")));
         existingEdgeBlock(ModBlocks.STONE_BRICKS_MASONRY_EDGE.get(),          "block/stone_bricks/stone_bricks_masonry_edge");
         existingFacingShapeBlock(ModBlocks.STONE_BRICKS_MASONRY_PLATE.get(),  "block/stone_bricks/stone_bricks_masonry_plate");
 
         // ── Sandstone slender ─────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.SANDSTONE_SLENDER_BRICKS.get(),           models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_bricks")));
-        simpleBlockWithItem(ModBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(), models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_turquoise_pattern")));
+        simpleBlockWithItem(OttBlocks.SANDSTONE_SLENDER_BRICKS.get(),           models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_bricks")));
+        simpleBlockWithItem(OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(), models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_turquoise_pattern")));
 
         // ── Mosaic floors ─────────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.MOSAIC_FLOOR.get(),         models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor")));
@@ -1424,20 +1424,20 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(ModBlocks.ROMAN_FRESCO_BLACK.get(), models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_black")));
 
         // ── Ornamented / delicate wool & carpet ───────────────────────────────
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_RED_WOOL.get(),      models().getExistingFile(modLoc("block/ornamented_red_wool")));
-        simpleBlockWithItem(ModBlocks.DELICATE_RED_WOOL.get(),        models().getExistingFile(modLoc("block/delicate_red_wool")));
+        simpleBlockWithItem(OttBlocks.ORNAMENTED_RED_WOOL.get(),      models().getExistingFile(modLoc("block/ornamented_red_wool")));
+        simpleBlockWithItem(OttBlocks.DELICATE_RED_WOOL.get(),        models().getExistingFile(modLoc("block/delicate_red_wool")));
         simpleBlockWithItem(ModBlocks.ORNAMENTED_RED_CARPET.get(),    models().getExistingFile(modLoc("block/ornamented_red_carpet")));
         simpleBlockWithItem(ModBlocks.DELICATE_RED_CARPET.get(),      models().getExistingFile(modLoc("block/delicate_red_carpet")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_BLUE_WOOL.get(),     models().getExistingFile(modLoc("block/ornamented_blue_wool")));
-        simpleBlockWithItem(ModBlocks.DELICATE_BLUE_WOOL.get(),       models().getExistingFile(modLoc("block/delicate_blue_wool")));
+        simpleBlockWithItem(OttBlocks.ORNAMENTED_BLUE_WOOL.get(),     models().getExistingFile(modLoc("block/ornamented_blue_wool")));
+        simpleBlockWithItem(OttBlocks.DELICATE_BLUE_WOOL.get(),       models().getExistingFile(modLoc("block/delicate_blue_wool")));
         simpleBlockWithItem(ModBlocks.ORNAMENTED_BLUE_CARPET.get(),   models().getExistingFile(modLoc("block/ornamented_blue_carpet")));
         simpleBlockWithItem(ModBlocks.DELICATE_BLUE_CARPET.get(),     models().getExistingFile(modLoc("block/delicate_blue_carpet")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_GREEN_WOOL.get(),    models().getExistingFile(modLoc("block/ornamented_green_wool")));
-        simpleBlockWithItem(ModBlocks.DELICATE_GREEN_WOOL.get(),      models().getExistingFile(modLoc("block/delicate_green_wool")));
+        simpleBlockWithItem(OttBlocks.ORNAMENTED_GREEN_WOOL.get(),    models().getExistingFile(modLoc("block/ornamented_green_wool")));
+        simpleBlockWithItem(OttBlocks.DELICATE_GREEN_WOOL.get(),      models().getExistingFile(modLoc("block/delicate_green_wool")));
         simpleBlockWithItem(ModBlocks.ORNAMENTED_GREEN_CARPET.get(),  models().getExistingFile(modLoc("block/ornamented_green_carpet")));
         simpleBlockWithItem(ModBlocks.DELICATE_GREEN_CARPET.get(),    models().getExistingFile(modLoc("block/delicate_green_carpet")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_PURPLE_WOOL.get(),   models().getExistingFile(modLoc("block/ornamented_purple_wool")));
-        simpleBlockWithItem(ModBlocks.DELICATE_PURPLE_WOOL.get(),     models().getExistingFile(modLoc("block/delicate_purple_wool")));
+        simpleBlockWithItem(OttBlocks.ORNAMENTED_PURPLE_WOOL.get(),   models().getExistingFile(modLoc("block/ornamented_purple_wool")));
+        simpleBlockWithItem(OttBlocks.DELICATE_PURPLE_WOOL.get(),     models().getExistingFile(modLoc("block/delicate_purple_wool")));
         simpleBlockWithItem(ModBlocks.ORNAMENTED_PURPLE_CARPET.get(), models().getExistingFile(modLoc("block/ornamented_purple_carpet")));
         simpleBlockWithItem(ModBlocks.DELICATE_PURPLE_CARPET.get(),   models().getExistingFile(modLoc("block/delicate_purple_carpet")));
 
@@ -1459,47 +1459,47 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // Purpur CTM blocks
 
         // Sandstone CTM blocks
-        existingAxisBlock(ModBlocks.CHISELED_PLASTERED_STONE_PILLAR.get(), "block/chiseled_plastered_stone_pillar");
+        existingAxisBlock(OttBlocks.CHISELED_PLASTERED_STONE_PILLAR.get(), "block/chiseled_plastered_stone_pillar");
 
         // --- New plain cube_all stone blocks ---
-        stoneBlock(ModBlocks.CHAOTIC_STONE_BRICKS);
-        stoneBlock(ModBlocks.CHAOTIC_MEDIUM_STONE_BRICKS);
-        stoneBlock(ModBlocks.CHAOTIC_SMALL_STONE_BRICKS);
-        stoneBlock(ModBlocks.DIAMOND_STONE_PAVERS);
-        stoneBlock(ModBlocks.ENCASED_STONE_BRICKS);
-        stoneBlock(ModBlocks.FRENCH_STONE);
-        stoneBlock(ModBlocks.LARGE_ORNATE_STONE);
-        stoneBlock(ModBlocks.LARGE_STONE_TILE);
-        stoneBlock(ModBlocks.MESSY_STONE_TILES);
-        stoneBlock(ModBlocks.MOSAIC_STONE);
-        stoneBlock(ModBlocks.NOTCHED_STONE_BRICKS);
-        stoneBlock(ModBlocks.ORNATE_STONE);
-        stoneBlock(ModBlocks.POISON_STONE);
-        stoneBlock(ModBlocks.POLISHED_CUT_STONE);
-        stoneBlock(ModBlocks.POLISHED_STONE_TILES);
-        stoneBlock(ModBlocks.PRISM_STONE);
-        stoneBlock(ModBlocks.SLANTED_STONE);
-        stoneBlock(ModBlocks.STONE_ARRAY);
-        stoneBlock(ModBlocks.STONE_BRAID);
-        stoneBlock(ModBlocks.STONE_DENT);
-        stoneBlock(ModBlocks.STONE_JELLYBEAN);
-        stoneBlock(ModBlocks.STONE_LAYERS);
-        stoneBlock(ModBlocks.STONE_PANEL);
-        stoneBlock(ModBlocks.STONE_ROAD);
-        stoneBlock(ModBlocks.STONE_ZAG);
-        stoneBlock(ModBlocks.SUNKEN_STONE);
-        stoneBlock(ModBlocks.TRIPLE_STONE_BRICKS);
-        stoneBlock(ModBlocks.WEATHERED_STONE_BRICKS);
-        stoneBlock(ModBlocks.WEATHERED_TILED_STONE);
-        stoneBlock(ModBlocks.WEAVER_STONE);
+        stoneBlock(OttBlocks.CHAOTIC_STONE_BRICKS);
+        stoneBlock(OttBlocks.CHAOTIC_MEDIUM_STONE_BRICKS);
+        stoneBlock(OttBlocks.CHAOTIC_SMALL_STONE_BRICKS);
+        stoneBlock(OttBlocks.DIAMOND_STONE_PAVERS);
+        stoneBlock(OttBlocks.ENCASED_STONE_BRICKS);
+        stoneBlock(OttBlocks.FRENCH_STONE);
+        stoneBlock(OttBlocks.LARGE_ORNATE_STONE);
+        stoneBlock(OttBlocks.LARGE_STONE_TILE);
+        stoneBlock(OttBlocks.MESSY_STONE_TILES);
+        stoneBlock(OttBlocks.MOSAIC_STONE);
+        stoneBlock(OttBlocks.NOTCHED_STONE_BRICKS);
+        stoneBlock(OttBlocks.ORNATE_STONE);
+        stoneBlock(OttBlocks.POISON_STONE);
+        stoneBlock(OttBlocks.POLISHED_CUT_STONE);
+        stoneBlock(OttBlocks.POLISHED_STONE_TILES);
+        stoneBlock(OttBlocks.PRISM_STONE);
+        stoneBlock(OttBlocks.SLANTED_STONE);
+        stoneBlock(OttBlocks.STONE_ARRAY);
+        stoneBlock(OttBlocks.STONE_BRAID);
+        stoneBlock(OttBlocks.STONE_DENT);
+        stoneBlock(OttBlocks.STONE_JELLYBEAN);
+        stoneBlock(OttBlocks.STONE_LAYERS);
+        stoneBlock(OttBlocks.STONE_PANEL);
+        stoneBlock(OttBlocks.STONE_ROAD);
+        stoneBlock(OttBlocks.STONE_ZAG);
+        stoneBlock(OttBlocks.SUNKEN_STONE);
+        stoneBlock(OttBlocks.TRIPLE_STONE_BRICKS);
+        stoneBlock(OttBlocks.WEATHERED_STONE_BRICKS);
+        stoneBlock(OttBlocks.WEATHERED_TILED_STONE);
+        stoneBlock(OttBlocks.WEAVER_STONE);
         // --- Cube-bottom-top stone blocks ---
-        stoneBottomTopBlock(ModBlocks.CUT_STONE,            "block/stone/cut_stone_side",       "block/stone/cut_stone_top", "minecraft:block/stone");
-        stoneBottomTopBlock(ModBlocks.ROUGH_CUT_STONE,      "block/stone/rough_cut_stone_side", "block/stone/rough_cut_stone_top", "block/stone/rough_cut_stone_bottom");
+        stoneBottomTopBlock(OttBlocks.CUT_STONE,            "block/stone/cut_stone_side",       "block/stone/cut_stone_top", "minecraft:block/stone");
+        stoneBottomTopBlock(OttBlocks.ROUGH_CUT_STONE,      "block/stone/rough_cut_stone_side", "block/stone/rough_cut_stone_top", "block/stone/rough_cut_stone_bottom");
         // --- Simple RotatedPillarBlocks ---
-        stoneSimplePillar(ModBlocks.SHEARED_STONE_PILLAR);
-        stoneSimplePillar(ModBlocks.SLATED_STONE);
-        stoneSimplePillar(ModBlocks.STONE_COLUMN);
-        stoneSimplePillar(ModBlocks.STONE_TWISTING_COLUMN);
+        stoneSimplePillar(OttBlocks.SHEARED_STONE_PILLAR);
+        stoneSimplePillar(OttBlocks.SLATED_STONE);
+        stoneSimplePillar(OttBlocks.STONE_COLUMN);
+        stoneSimplePillar(OttBlocks.STONE_TWISTING_COLUMN);
         // --- Chisel pillar blocks ---
         ModBlocks.CHISEL_PILLARS.values().forEach(this::stoneChiselPillar);
         // --- Legend blocks ---
