@@ -818,6 +818,7 @@ public enum OttCreativeCategories {
 
                 // New plain cube_all stone blocks
                 output.accept(ModBlocks.CHAOTIC_STONE_BRICKS);
+                // ===== RECOVERED PURPUR_CTM =====
                 // ===== RECOVERED WAVE4 =====
         output.accept(ModBlocks.RECTANGLE_CYAN_WOOL);
         output.accept(ModBlocks.RECTANGLE_GRAY_WOOL);

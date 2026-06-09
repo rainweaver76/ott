@@ -5031,6 +5031,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.YELLOW_CONCRETE, ModBlocks.YELLOW_CONCRETE_PANEL, "yellow_concrete_panel_engraving");
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, ModBlocks.YELLOW_TERRACOTTA_COLUMN, "yellow_terracotta_column_engraving");
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, ModBlocks.YELLOW_TERRACOTTA_CTM, "yellow_terracotta_pillar_engraving");
+        // --- RECOVERED PURPUR_CTM ---
     }
 
     private void recoveredWindowRecipes(RecipeOutput exporter) {

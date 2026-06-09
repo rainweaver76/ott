@@ -6085,4 +6085,8 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
     public static final DeferredHolder<Item, BlockItem> YELLOW_TERRACOTTA_CTM =
         registerBlockItem("yellow_terracotta_ctm", ModBlocks.YELLOW_TERRACOTTA_CTM);
 
+
+    // ===== RECOVERED PURPUR_CTM =====
+    public static final DeferredHolder<Item, BlockItem> PURPUR_PILLAR_CTM                  = registerBlockItem("purpur_ctm",          ModBlocks.PURPUR_PILLAR_CTM);
+
 }

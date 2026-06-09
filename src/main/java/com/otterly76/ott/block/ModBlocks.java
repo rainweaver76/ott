@@ -7008,4 +7008,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> YELLOW_TERRACOTTA_CTM =
             register("yellow_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
 
+
+    // ===== RECOVERED PURPUR_CTM =====
+    public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+
 }
