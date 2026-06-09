@@ -77,6 +77,8 @@ runs {
         systemProperty 'ott.sourceResources', file('src/main/resources').absolutePath
 
         modSource project.sourceSets.main
+        // Load the sibling ott_blocks mod into the same dev run (one-way dep: ott -> ott_blocks)
+        modSource project(':ott_blocks').sourceSets.main
     }
 
     client {
@@ -126,6 +128,9 @@ dependencies {
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
     // For all intents and purposes: You can treat this dependency as if it is a normal library you would use.
     implementation "net.neoforged:neoforge:${neo_version}"
+
+    // The block-content mod. One-way dependency: ott depends on ott_blocks, never the reverse.
+    implementation project(':ott_blocks')
 
     implementation "software.bernie.geckolib:geckolib-neoforge-1.21.1:4.8.4"
 

@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="GPL3"
+issueTrackerURL="https://github.com/rainweaver76/ott/issues/new/choose"
+
+# A list of mods - how many allowed here is determined by the individual mod loader
+[[mods]]
+modId="ott_blocks"
+version="1.0.0"
+displayName="Otter Blocks"
+displayURL="https://github.com/rainweaver76/ott"
+authors="Otterly76"
+description="Block content library for New Otterhome (OTT). Registers all building/decoration blocks under the shared 'ott' namespace."
+
+[[dependencies."ott_blocks"]]
+modId="neoforge"
+type="required"
+versionRange="[21.0.143,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies."ott_blocks"]]
+modId="minecraft"
+type="required"
+versionRange="[1.21, 1.22)"
+ordering="NONE"
+side="BOTH"

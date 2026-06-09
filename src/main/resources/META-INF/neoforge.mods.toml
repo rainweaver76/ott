@@ -78,6 +78,14 @@ versionRange="[1.21, 1.22)"
 ordering="NONE"
 side="BOTH"
 
+# The block-content mod. Required, and must load before ott so ott can inject its BlockHooks impl.
+[[dependencies."${mod_id}"]]
+modId="ott_blocks"
+type="required"
+versionRange="[1.0,)"
+ordering="AFTER"
+side="BOTH"
+
 # Here's another dependency
 [[dependencies."${mod_id}"]]
 modId="domum_ornamentum"
