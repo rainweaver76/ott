@@ -1832,147 +1832,51 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> PLAIN_LIMESTONE = registerBlockItem("limestone", ModBlocks.PLAIN_LIMESTONE);
     public static final DeferredHolder<Item, BlockItem> MIXED_LIMESTONE_BRICKS = registerBlockItem("mixed_limestone_bricks", ModBlocks.MIXED_LIMESTONE_BRICKS);
 
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE              = registerBlockItem("black_marble",              ModBlocks.BLACK_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_BRICKS       = registerBlockItem("black_marble_bricks",       ModBlocks.BLACK_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_SMALL_BRICKS = registerBlockItem("black_marble_small_bricks", ModBlocks.BLACK_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_TILES        = registerBlockItem("black_marble_tiles",        ModBlocks.BLACK_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> BLACK_POLISHED_MARBLE     = registerBlockItem("black_polished_marble",     ModBlocks.BLACK_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_PILLAR       = registerBlockItem("black_marble_pillar",       ModBlocks.BLACK_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_PILLAR_CAP   = registerBlockItem("black_marble_pillar_cap",   ModBlocks.BLACK_MARBLE_PILLAR_CAP);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE              = registerBlockItem("white_marble",              ModBlocks.WHITE_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_BRICKS       = registerBlockItem("white_marble_bricks",       ModBlocks.WHITE_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_SMALL_BRICKS = registerBlockItem("white_marble_small_bricks", ModBlocks.WHITE_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_TILES        = registerBlockItem("white_marble_tiles",        ModBlocks.WHITE_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> WHITE_POLISHED_MARBLE     = registerBlockItem("white_polished_marble",     ModBlocks.WHITE_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_PILLAR       = registerBlockItem("white_marble_pillar",       ModBlocks.WHITE_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_PILLAR_CAP   = registerBlockItem("white_marble_pillar_cap",   ModBlocks.WHITE_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_FLOOR_TILE   = registerBlockItem("black_marble_floor_tile",   ModBlocks.BLACK_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_FLOOR_TILE   = registerBlockItem("white_marble_floor_tile",   ModBlocks.WHITE_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_FANCY_FENCE = registerBlockItem("white_marble_fancy_fence", ModBlocks.WHITE_MARBLE_FANCY_FENCE);
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_FANCY_FENCE = registerBlockItem("black_marble_fancy_fence", ModBlocks.BLACK_MARBLE_FANCY_FENCE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_DIAMOND_PAVERS = registerBlockItem("white_marble_diamond_pavers", ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_DIAMOND_PAVERS = registerBlockItem("black_marble_diamond_pavers", ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS);
 
     // ── Amethyst Marble ──
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE = registerBlockItem("amethyst_marble", ModBlocks.AMETHYST_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_BRICKS = registerBlockItem("amethyst_marble_bricks", ModBlocks.AMETHYST_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_SMALL_BRICKS = registerBlockItem("amethyst_marble_small_bricks", ModBlocks.AMETHYST_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_TILES = registerBlockItem("amethyst_marble_tiles", ModBlocks.AMETHYST_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_POLISHED_MARBLE = registerBlockItem("amethyst_polished_marble", ModBlocks.AMETHYST_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_PILLAR = registerBlockItem("amethyst_marble_pillar", ModBlocks.AMETHYST_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_PILLAR_CAP = registerBlockItem("amethyst_marble_pillar_cap", ModBlocks.AMETHYST_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_FLOOR_TILE = registerBlockItem("amethyst_marble_floor_tile", ModBlocks.AMETHYST_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_FANCY_FENCE = registerBlockItem("amethyst_marble_fancy_fence", ModBlocks.AMETHYST_MARBLE_FANCY_FENCE);
 
     // ── Blue Marble ──
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE = registerBlockItem("blue_marble", ModBlocks.BLUE_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_BRICKS = registerBlockItem("blue_marble_bricks", ModBlocks.BLUE_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_SMALL_BRICKS = registerBlockItem("blue_marble_small_bricks", ModBlocks.BLUE_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_TILES = registerBlockItem("blue_marble_tiles", ModBlocks.BLUE_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> BLUE_POLISHED_MARBLE = registerBlockItem("blue_polished_marble", ModBlocks.BLUE_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_PILLAR = registerBlockItem("blue_marble_pillar", ModBlocks.BLUE_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_PILLAR_CAP = registerBlockItem("blue_marble_pillar_cap", ModBlocks.BLUE_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_FLOOR_TILE = registerBlockItem("blue_marble_floor_tile", ModBlocks.BLUE_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_FANCY_FENCE = registerBlockItem("blue_marble_fancy_fence", ModBlocks.BLUE_MARBLE_FANCY_FENCE);
 
     // ── Cyan Marble ──
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE = registerBlockItem("cyan_marble", ModBlocks.CYAN_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_BRICKS = registerBlockItem("cyan_marble_bricks", ModBlocks.CYAN_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_SMALL_BRICKS = registerBlockItem("cyan_marble_small_bricks", ModBlocks.CYAN_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_TILES = registerBlockItem("cyan_marble_tiles", ModBlocks.CYAN_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> CYAN_POLISHED_MARBLE = registerBlockItem("cyan_polished_marble", ModBlocks.CYAN_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_PILLAR = registerBlockItem("cyan_marble_pillar", ModBlocks.CYAN_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_PILLAR_CAP = registerBlockItem("cyan_marble_pillar_cap", ModBlocks.CYAN_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_FLOOR_TILE = registerBlockItem("cyan_marble_floor_tile", ModBlocks.CYAN_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_FANCY_FENCE = registerBlockItem("cyan_marble_fancy_fence", ModBlocks.CYAN_MARBLE_FANCY_FENCE);
 
     // ── Green Marble ──
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE = registerBlockItem("green_marble", ModBlocks.GREEN_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_BRICKS = registerBlockItem("green_marble_bricks", ModBlocks.GREEN_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_SMALL_BRICKS = registerBlockItem("green_marble_small_bricks", ModBlocks.GREEN_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_TILES = registerBlockItem("green_marble_tiles", ModBlocks.GREEN_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> GREEN_POLISHED_MARBLE = registerBlockItem("green_polished_marble", ModBlocks.GREEN_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_PILLAR = registerBlockItem("green_marble_pillar", ModBlocks.GREEN_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_PILLAR_CAP = registerBlockItem("green_marble_pillar_cap", ModBlocks.GREEN_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_FLOOR_TILE = registerBlockItem("green_marble_floor_tile", ModBlocks.GREEN_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_FANCY_FENCE = registerBlockItem("green_marble_fancy_fence", ModBlocks.GREEN_MARBLE_FANCY_FENCE);
 
     // ── Lime Marble ──
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE = registerBlockItem("lime_marble", ModBlocks.LIME_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_BRICKS = registerBlockItem("lime_marble_bricks", ModBlocks.LIME_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_SMALL_BRICKS = registerBlockItem("lime_marble_small_bricks", ModBlocks.LIME_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_TILES = registerBlockItem("lime_marble_tiles", ModBlocks.LIME_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> LIME_POLISHED_MARBLE = registerBlockItem("lime_polished_marble", ModBlocks.LIME_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_PILLAR = registerBlockItem("lime_marble_pillar", ModBlocks.LIME_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_PILLAR_CAP = registerBlockItem("lime_marble_pillar_cap", ModBlocks.LIME_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_FLOOR_TILE = registerBlockItem("lime_marble_floor_tile", ModBlocks.LIME_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_FANCY_FENCE = registerBlockItem("lime_marble_fancy_fence", ModBlocks.LIME_MARBLE_FANCY_FENCE);
 
     // ── Orange Marble ──
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE = registerBlockItem("orange_marble", ModBlocks.ORANGE_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_BRICKS = registerBlockItem("orange_marble_bricks", ModBlocks.ORANGE_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_SMALL_BRICKS = registerBlockItem("orange_marble_small_bricks", ModBlocks.ORANGE_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_TILES = registerBlockItem("orange_marble_tiles", ModBlocks.ORANGE_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_POLISHED_MARBLE = registerBlockItem("orange_polished_marble", ModBlocks.ORANGE_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_PILLAR = registerBlockItem("orange_marble_pillar", ModBlocks.ORANGE_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_PILLAR_CAP = registerBlockItem("orange_marble_pillar_cap", ModBlocks.ORANGE_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_FLOOR_TILE = registerBlockItem("orange_marble_floor_tile", ModBlocks.ORANGE_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_FANCY_FENCE = registerBlockItem("orange_marble_fancy_fence", ModBlocks.ORANGE_MARBLE_FANCY_FENCE);
 
     // ── Pink Marble ──
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE = registerBlockItem("pink_marble", ModBlocks.PINK_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_BRICKS = registerBlockItem("pink_marble_bricks", ModBlocks.PINK_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_SMALL_BRICKS = registerBlockItem("pink_marble_small_bricks", ModBlocks.PINK_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_TILES = registerBlockItem("pink_marble_tiles", ModBlocks.PINK_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> PINK_POLISHED_MARBLE = registerBlockItem("pink_polished_marble", ModBlocks.PINK_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_PILLAR = registerBlockItem("pink_marble_pillar", ModBlocks.PINK_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_PILLAR_CAP = registerBlockItem("pink_marble_pillar_cap", ModBlocks.PINK_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_FLOOR_TILE = registerBlockItem("pink_marble_floor_tile", ModBlocks.PINK_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_FANCY_FENCE = registerBlockItem("pink_marble_fancy_fence", ModBlocks.PINK_MARBLE_FANCY_FENCE);
 
     // ── Purple Marble ──
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE = registerBlockItem("purple_marble", ModBlocks.PURPLE_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_BRICKS = registerBlockItem("purple_marble_bricks", ModBlocks.PURPLE_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_SMALL_BRICKS = registerBlockItem("purple_marble_small_bricks", ModBlocks.PURPLE_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_TILES = registerBlockItem("purple_marble_tiles", ModBlocks.PURPLE_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_POLISHED_MARBLE = registerBlockItem("purple_polished_marble", ModBlocks.PURPLE_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_PILLAR = registerBlockItem("purple_marble_pillar", ModBlocks.PURPLE_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_PILLAR_CAP = registerBlockItem("purple_marble_pillar_cap", ModBlocks.PURPLE_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_FLOOR_TILE = registerBlockItem("purple_marble_floor_tile", ModBlocks.PURPLE_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_FANCY_FENCE = registerBlockItem("purple_marble_fancy_fence", ModBlocks.PURPLE_MARBLE_FANCY_FENCE);
 
     // ── Red Marble ──
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE = registerBlockItem("red_marble", ModBlocks.RED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_BRICKS = registerBlockItem("red_marble_bricks", ModBlocks.RED_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_SMALL_BRICKS = registerBlockItem("red_marble_small_bricks", ModBlocks.RED_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_TILES = registerBlockItem("red_marble_tiles", ModBlocks.RED_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> RED_POLISHED_MARBLE = registerBlockItem("red_polished_marble", ModBlocks.RED_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_PILLAR = registerBlockItem("red_marble_pillar", ModBlocks.RED_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_PILLAR_CAP = registerBlockItem("red_marble_pillar_cap", ModBlocks.RED_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> RED_MARBLE_FLOOR_TILE = registerBlockItem("red_marble_floor_tile", ModBlocks.RED_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> RED_MARBLE_FANCY_FENCE = registerBlockItem("red_marble_fancy_fence", ModBlocks.RED_MARBLE_FANCY_FENCE);
 
     // ── Yellow Marble ──
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE = registerBlockItem("yellow_marble", ModBlocks.YELLOW_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_BRICKS = registerBlockItem("yellow_marble_bricks", ModBlocks.YELLOW_MARBLE_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_SMALL_BRICKS = registerBlockItem("yellow_marble_small_bricks", ModBlocks.YELLOW_MARBLE_SMALL_BRICKS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_TILES = registerBlockItem("yellow_marble_tiles", ModBlocks.YELLOW_MARBLE_TILES);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_POLISHED_MARBLE = registerBlockItem("yellow_polished_marble", ModBlocks.YELLOW_POLISHED_MARBLE);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_PILLAR = registerBlockItem("yellow_marble_pillar", ModBlocks.YELLOW_MARBLE_PILLAR);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_PILLAR_CAP = registerBlockItem("yellow_marble_pillar_cap", ModBlocks.YELLOW_MARBLE_PILLAR_CAP);
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FLOOR_TILE = registerBlockItem("yellow_marble_floor_tile", ModBlocks.YELLOW_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FANCY_FENCE = registerBlockItem("yellow_marble_fancy_fence", ModBlocks.YELLOW_MARBLE_FANCY_FENCE);
     // ── Diamond Pavers (10 new colors) ──
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_DIAMOND_PAVERS = registerBlockItem("amethyst_marble_diamond_pavers", ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_DIAMOND_PAVERS     = registerBlockItem("blue_marble_diamond_pavers",     ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_DIAMOND_PAVERS     = registerBlockItem("cyan_marble_diamond_pavers",     ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_DIAMOND_PAVERS    = registerBlockItem("green_marble_diamond_pavers",    ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_DIAMOND_PAVERS     = registerBlockItem("lime_marble_diamond_pavers",     ModBlocks.LIME_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_DIAMOND_PAVERS   = registerBlockItem("orange_marble_diamond_pavers",   ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_DIAMOND_PAVERS     = registerBlockItem("pink_marble_diamond_pavers",     ModBlocks.PINK_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_DIAMOND_PAVERS   = registerBlockItem("purple_marble_diamond_pavers",   ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_DIAMOND_PAVERS      = registerBlockItem("red_marble_diamond_pavers",      ModBlocks.RED_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_DIAMOND_PAVERS   = registerBlockItem("yellow_marble_diamond_pavers",   ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS);
 
     // --- Stone variant block items ---
     public static final DeferredHolder<Item, BlockItem> CHISELED_PLASTERED_STONE_PILLAR    = registerBlockItem("chiseled_plastered_stone_pillar",    ModBlocks.CHISELED_PLASTERED_STONE_PILLAR);

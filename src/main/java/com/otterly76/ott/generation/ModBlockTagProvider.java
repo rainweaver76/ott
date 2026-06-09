@@ -1,5 +1,7 @@
 package com.otterly76.ott.generation;
 
+import com.otterly76.ott_blocks.block.OttBlocks;
+
 import com.otterly76.ott.Constants;
 import com.otterly76.ott.block.*;
 import com.otterly76.ott.block.custom.CtmPaneBlock;
@@ -329,20 +331,20 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.WHEAT_THATCH.get(),
                 ModBlocks.BAMBOO_THATCH.get(),
                 ModBlocks.ROOFING_SLATES.get(),
-                ModBlocks.BLACK_MARBLE.get(),
-                ModBlocks.BLACK_MARBLE_BRICKS.get(),
-                ModBlocks.BLACK_MARBLE_SMALL_BRICKS.get(),
-                ModBlocks.BLACK_MARBLE_TILES.get(),
-                ModBlocks.BLACK_POLISHED_MARBLE.get(),
-                ModBlocks.BLACK_MARBLE_PILLAR.get(),
-                ModBlocks.BLACK_MARBLE_PILLAR_CAP.get(),
-                ModBlocks.WHITE_MARBLE.get(),
-                ModBlocks.WHITE_MARBLE_BRICKS.get(),
-                ModBlocks.WHITE_MARBLE_SMALL_BRICKS.get(),
-                ModBlocks.WHITE_MARBLE_TILES.get(),
-                ModBlocks.WHITE_POLISHED_MARBLE.get(),
-                ModBlocks.WHITE_MARBLE_PILLAR.get(),
-                ModBlocks.WHITE_MARBLE_PILLAR_CAP.get(),
+                OttBlocks.BLACK_MARBLE.get(),
+                OttBlocks.BLACK_MARBLE_BRICKS.get(),
+                OttBlocks.BLACK_MARBLE_SMALL_BRICKS.get(),
+                OttBlocks.BLACK_MARBLE_TILES.get(),
+                OttBlocks.BLACK_POLISHED_MARBLE.get(),
+                OttBlocks.BLACK_MARBLE_PILLAR.get(),
+                OttBlocks.BLACK_MARBLE_PILLAR_CAP.get(),
+                OttBlocks.WHITE_MARBLE.get(),
+                OttBlocks.WHITE_MARBLE_BRICKS.get(),
+                OttBlocks.WHITE_MARBLE_SMALL_BRICKS.get(),
+                OttBlocks.WHITE_MARBLE_TILES.get(),
+                OttBlocks.WHITE_POLISHED_MARBLE.get(),
+                OttBlocks.WHITE_MARBLE_PILLAR.get(),
+                OttBlocks.WHITE_MARBLE_PILLAR_CAP.get(),
                 ModBlocks.SANDSTONE_SLENDER_BRICKS.get(),
                 ModBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(),
                 ModBlocks.STONE_BRICKS_MASONRY.get(),
