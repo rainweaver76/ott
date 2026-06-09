@@ -146,7 +146,7 @@ public class ModBlocks {
     /**
      * Acacia door styles (canonical reference; no {@code barred} variant).
      */
-    public static final List<String> DOOR_STYLES = List.of("paper");
+    public static final List<String> DOOR_STYLES = List.of("beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed");
     public static final Map<String, Map<String, DeferredBlock<DoorBlock>>> WOOD_DOORS = new LinkedHashMap<>();
     /** New-style door blocks not covered by WOOD_DOORS (e.g. oak_bamboo_door, oak_barn_glass_door). */
     public static final Map<String, DeferredBlock<DoorBlock>> EXTRA_DOORS = new LinkedHashMap<>();
@@ -349,22 +349,38 @@ public class ModBlocks {
         }
 
         // Bookshelves — RotatedPillarBlock, OTT namespace, side = bookshelf texture, end = wood planks
-        for (String name : List.of("acacia_bookshelf", "bamboo_bookshelf", "birch_bookshelf", "cherry_bookshelf", "crimson_bookshelf", "dark_oak_bookshelf", "jungle_bookshelf", "mangrove_bookshelf", "spruce_bookshelf", "warped_bookshelf")) {
+        for (String name : List.of(
+                "acacia_bookshelf", "ancient_cubed_oak_bookshelf", "ancient_oak_bookshelf",
+                "ancient_oak_large_bookshelf", "ancient_vertical_oak_bookshelf", "bamboo_bookshelf",
+                "birch_bookshelf", "botanical_oak_bookshelf", "botanical_oak_cubed_bookshelf",
+                "botanical_oak_large_bookshelf", "cherry_bookshelf", "crimson_bookshelf",
+                "cubed_oak_bookshelf", "cubed_oak_empty_bookshelf", "cubed_oak_spaced_bookshelf",
+                "cubed_oak_webbed_bookshelf", "curvy_bookshelf", "dark_oak_bookshelf",
+                "dusty_bookshelf", "full_bookshelf", "historical_oak_bookshelf",
+                "historical_oak_large_bookshelf", "jungle_bookshelf", "mangrove_bookshelf",
+                "mixed_cubed_oak_bookshelf", "mixed_oak_bookshelf", "mixed_oak_large_bookshelf",
+                "oak_bookshelf", "oak_empty_bookshelf", "oak_large_bookshelf",
+                "oak_lighted_bookshelf", "oak_lighted_large_bookshelf", "oak_spaced_bookshelf",
+                "oak_spaced_large_bookshelf", "oak_webbed_bookshelf", "oak_webbed_large_bookshelf",
+                "spruce_bookshelf", "vertical_botanical_oak_bookshelf", "vertical_mixed_oak_bookshelf",
+                "vertical_oak_bookshelf", "vertical_oak_lighted_bookshelf", "vertical_oak_webbed_bookshelf",
+                "warped_bookshelf"
+        )) {
             BOOKSHELVES.put(name, registerBookshelf(name));
         }
 
         // Per-wood style lists (must exactly match available texture files)
-        WOOD_DOOR_STYLES.put("oak", List.of());
-        WOOD_DOOR_STYLES.put("spruce", List.of());
-        WOOD_DOOR_STYLES.put("birch", List.of());
-        WOOD_DOOR_STYLES.put("jungle", List.of());
+        WOOD_DOOR_STYLES.put("oak", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("spruce", List.of("barred", "beach", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("birch", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("jungle", List.of("barred", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
         WOOD_DOOR_STYLES.put("acacia", DOOR_STYLES);
-        WOOD_DOOR_STYLES.put("dark_oak", List.of());
-        WOOD_DOOR_STYLES.put("mangrove", List.of());
-        WOOD_DOOR_STYLES.put("cherry", List.of());
-        WOOD_DOOR_STYLES.put("bamboo", List.of());
-        WOOD_DOOR_STYLES.put("crimson", List.of());
-        WOOD_DOOR_STYLES.put("warped", List.of());
+        WOOD_DOOR_STYLES.put("dark_oak", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("mangrove", List.of("barred", "beach", "boarded", "cut", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "reinforced", "secret", "sliding", "supported", "tile_windowed", "windowed"));
+        WOOD_DOOR_STYLES.put("cherry", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled"));
+        WOOD_DOOR_STYLES.put("bamboo", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled"));
+        WOOD_DOOR_STYLES.put("crimson", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("warped", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
 
         String[] woodDoorNames = {"oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "bamboo", "crimson", "warped"};
         BlockSetType[] woodBSTs = {BlockSetType.OAK, BlockSetType.SPRUCE, BlockSetType.BIRCH, BlockSetType.JUNGLE, BlockSetType.ACACIA, BlockSetType.DARK_OAK, BlockSetType.MANGROVE, BlockSetType.CHERRY, BlockSetType.BAMBOO, BlockSetType.CRIMSON, BlockSetType.WARPED};
@@ -786,6 +802,261 @@ public class ModBlocks {
         WOOD_TRAPDOORS.put("pale_oak_paper_trapdoor", registerTrapdoor("pale_oak_paper_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
         WOOD_TRAPDOORS.put("pale_oak_swamp_trapdoor", registerTrapdoor("pale_oak_swamp_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
         WOOD_TRAPDOORS.put("pale_oak_tropical_trapdoor", registerTrapdoor("pale_oak_tropical_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        // ===== RECOVERED TRAPDOORS =====
+        WOOD_TRAPDOORS.put("airy_birch_trapdoor", registerTrapdoor("airy_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_crimson_trapdoor", registerTrapdoor("airy_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_dark_oak_trapdoor", registerTrapdoor("airy_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_jungle_trapdoor", registerTrapdoor("airy_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_mangrove_trapdoor", registerTrapdoor("airy_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_oak_trapdoor", registerTrapdoor("airy_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_spruce_trapdoor", registerTrapdoor("airy_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("airy_warped_trapdoor", registerTrapdoor("airy_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_acacia_trapdoor", registerTrapdoor("barred_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_bamboo_trapdoor", registerTrapdoor("barred_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_birch_trapdoor", registerTrapdoor("barred_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_cherry_trapdoor", registerTrapdoor("barred_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_crimson_trapdoor", registerTrapdoor("barred_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_dark_oak_trapdoor", registerTrapdoor("barred_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_jungle_trapdoor", registerTrapdoor("barred_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_mangrove_trapdoor", registerTrapdoor("barred_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_oak_trapdoor", registerTrapdoor("barred_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_spruce_trapdoor", registerTrapdoor("barred_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("barred_warped_trapdoor", registerTrapdoor("barred_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_acacia_trapdoor", registerTrapdoor("checkered_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_bamboo_trapdoor", registerTrapdoor("checkered_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_birch_trapdoor", registerTrapdoor("checkered_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_cherry_trapdoor", registerTrapdoor("checkered_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_crimson_trapdoor", registerTrapdoor("checkered_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_dark_oak_trapdoor", registerTrapdoor("checkered_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_jungle_trapdoor", registerTrapdoor("checkered_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_mangrove_trapdoor", registerTrapdoor("checkered_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_oak_trapdoor", registerTrapdoor("checkered_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_spruce_trapdoor", registerTrapdoor("checkered_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("checkered_warped_trapdoor", registerTrapdoor("checkered_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_acacia_trapdoor", registerTrapdoor("classic_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_bamboo_trapdoor", registerTrapdoor("classic_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_birch_trapdoor", registerTrapdoor("classic_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_cherry_trapdoor", registerTrapdoor("classic_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_crimson_trapdoor", registerTrapdoor("classic_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_dark_oak_trapdoor", registerTrapdoor("classic_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_jungle_trapdoor", registerTrapdoor("classic_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_mangrove_trapdoor", registerTrapdoor("classic_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_spruce_trapdoor", registerTrapdoor("classic_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_warped_trapdoor", registerTrapdoor("classic_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_acacia_trapdoor", registerTrapdoor("classic_windowed_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_bamboo_trapdoor", registerTrapdoor("classic_windowed_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_birch_trapdoor", registerTrapdoor("classic_windowed_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_cherry_trapdoor", registerTrapdoor("classic_windowed_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_crimson_trapdoor", registerTrapdoor("classic_windowed_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_dark_oak_trapdoor", registerTrapdoor("classic_windowed_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_jungle_trapdoor", registerTrapdoor("classic_windowed_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_mangrove_trapdoor", registerTrapdoor("classic_windowed_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_oak_trapdoor", registerTrapdoor("classic_windowed_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_spruce_trapdoor", registerTrapdoor("classic_windowed_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("classic_windowed_warped_trapdoor", registerTrapdoor("classic_windowed_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_acacia_trapdoor", registerTrapdoor("cobweb_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_bamboo_trapdoor", registerTrapdoor("cobweb_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_birch_trapdoor", registerTrapdoor("cobweb_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_cherry_trapdoor", registerTrapdoor("cobweb_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_crimson_trapdoor", registerTrapdoor("cobweb_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_dark_oak_trapdoor", registerTrapdoor("cobweb_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_jungle_trapdoor", registerTrapdoor("cobweb_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_mangrove_trapdoor", registerTrapdoor("cobweb_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_oak_trapdoor", registerTrapdoor("cobweb_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_spruce_trapdoor", registerTrapdoor("cobweb_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("cobweb_warped_trapdoor", registerTrapdoor("cobweb_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_acacia_trapdoor", registerTrapdoor("distorted_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_bamboo_trapdoor", registerTrapdoor("distorted_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_birch_trapdoor", registerTrapdoor("distorted_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_cherry_trapdoor", registerTrapdoor("distorted_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_crimson_trapdoor", registerTrapdoor("distorted_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_dark_oak_trapdoor", registerTrapdoor("distorted_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_jungle_trapdoor", registerTrapdoor("distorted_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_oak_trapdoor", registerTrapdoor("distorted_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("distorted_spruce_trapdoor", registerTrapdoor("distorted_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_acacia_trapdoor", registerTrapdoor("fancy_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_bamboo_trapdoor", registerTrapdoor("fancy_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_birch_trapdoor", registerTrapdoor("fancy_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_cherry_trapdoor", registerTrapdoor("fancy_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_crimson_trapdoor", registerTrapdoor("fancy_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_dark_oak_trapdoor", registerTrapdoor("fancy_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_oak_trapdoor", registerTrapdoor("fancy_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("fancy_spruce_trapdoor", registerTrapdoor("fancy_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_acacia_trapdoor", registerTrapdoor("golden_barred_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_bamboo_trapdoor", registerTrapdoor("golden_barred_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_birch_trapdoor", registerTrapdoor("golden_barred_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_cherry_trapdoor", registerTrapdoor("golden_barred_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_crimson_trapdoor", registerTrapdoor("golden_barred_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_dark_oak_trapdoor", registerTrapdoor("golden_barred_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_jungle_trapdoor", registerTrapdoor("golden_barred_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_mangrove_trapdoor", registerTrapdoor("golden_barred_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_oak_trapdoor", registerTrapdoor("golden_barred_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_spruce_trapdoor", registerTrapdoor("golden_barred_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("golden_barred_warped_trapdoor", registerTrapdoor("golden_barred_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_acacia_trapdoor", registerTrapdoor("heavy_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_bamboo_trapdoor", registerTrapdoor("heavy_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_birch_trapdoor", registerTrapdoor("heavy_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_cherry_trapdoor", registerTrapdoor("heavy_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_crimson_trapdoor", registerTrapdoor("heavy_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_dark_oak_trapdoor", registerTrapdoor("heavy_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_jungle_trapdoor", registerTrapdoor("heavy_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_mangrove_trapdoor", registerTrapdoor("heavy_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_oak_trapdoor", registerTrapdoor("heavy_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("heavy_warped_trapdoor", registerTrapdoor("heavy_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_acacia_trapdoor", registerTrapdoor("iron_barred_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_bamboo_trapdoor", registerTrapdoor("iron_barred_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_birch_trapdoor", registerTrapdoor("iron_barred_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_cherry_trapdoor", registerTrapdoor("iron_barred_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_crimson_trapdoor", registerTrapdoor("iron_barred_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_dark_oak_trapdoor", registerTrapdoor("iron_barred_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_jungle_trapdoor", registerTrapdoor("iron_barred_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_mangrove_trapdoor", registerTrapdoor("iron_barred_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_oak_trapdoor", registerTrapdoor("iron_barred_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_spruce_trapdoor", registerTrapdoor("iron_barred_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("iron_barred_warped_trapdoor", registerTrapdoor("iron_barred_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_acacia_trapdoor", registerTrapdoor("leafy_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_bamboo_trapdoor", registerTrapdoor("leafy_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_birch_trapdoor", registerTrapdoor("leafy_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_cherry_trapdoor", registerTrapdoor("leafy_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_crimson_trapdoor", registerTrapdoor("leafy_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_dark_oak_trapdoor", registerTrapdoor("leafy_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_jungle_trapdoor", registerTrapdoor("leafy_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_mangrove_trapdoor", registerTrapdoor("leafy_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_oak_trapdoor", registerTrapdoor("leafy_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_spruce_trapdoor", registerTrapdoor("leafy_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("leafy_warped_trapdoor", registerTrapdoor("leafy_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("mangrove_mangrove_trapdoor", registerTrapdoor("mangrove_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_acacia_trapdoor", registerTrapdoor("meshed_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_bamboo_trapdoor", registerTrapdoor("meshed_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_birch_trapdoor", registerTrapdoor("meshed_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_cherry_trapdoor", registerTrapdoor("meshed_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_crimson_trapdoor", registerTrapdoor("meshed_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_dark_oak_trapdoor", registerTrapdoor("meshed_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_jungle_trapdoor", registerTrapdoor("meshed_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_mangrove_trapdoor", registerTrapdoor("meshed_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_oak_trapdoor", registerTrapdoor("meshed_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_spruce_trapdoor", registerTrapdoor("meshed_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("meshed_warped_trapdoor", registerTrapdoor("meshed_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_acacia_trapdoor", registerTrapdoor("overgrown_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_bamboo_trapdoor", registerTrapdoor("overgrown_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_birch_trapdoor", registerTrapdoor("overgrown_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_cherry_trapdoor", registerTrapdoor("overgrown_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_crimson_trapdoor", registerTrapdoor("overgrown_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_dark_oak_trapdoor", registerTrapdoor("overgrown_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_jungle_trapdoor", registerTrapdoor("overgrown_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_mangrove_trapdoor", registerTrapdoor("overgrown_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_oak_trapdoor", registerTrapdoor("overgrown_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_spruce_trapdoor", registerTrapdoor("overgrown_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("overgrown_warped_trapdoor", registerTrapdoor("overgrown_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_acacia_trapdoor", registerTrapdoor("pointless_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_bamboo_trapdoor", registerTrapdoor("pointless_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_birch_trapdoor", registerTrapdoor("pointless_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_cherry_trapdoor", registerTrapdoor("pointless_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_crimson_trapdoor", registerTrapdoor("pointless_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_dark_oak_trapdoor", registerTrapdoor("pointless_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_jungle_trapdoor", registerTrapdoor("pointless_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_mangrove_trapdoor", registerTrapdoor("pointless_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_oak_trapdoor", registerTrapdoor("pointless_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_spruce_trapdoor", registerTrapdoor("pointless_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pointless_warped_trapdoor", registerTrapdoor("pointless_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_acacia_trapdoor", registerTrapdoor("screened_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_bamboo_trapdoor", registerTrapdoor("screened_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_cherry_trapdoor", registerTrapdoor("screened_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_crimson_trapdoor", registerTrapdoor("screened_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_dark_oak_trapdoor", registerTrapdoor("screened_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_jungle_trapdoor", registerTrapdoor("screened_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_mangrove_trapdoor", registerTrapdoor("screened_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_oak_trapdoor", registerTrapdoor("screened_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_spruce_trapdoor", registerTrapdoor("screened_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("screened_warped_trapdoor", registerTrapdoor("screened_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_acacia_trapdoor", registerTrapdoor("slotted_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_bamboo_trapdoor", registerTrapdoor("slotted_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_birch_trapdoor", registerTrapdoor("slotted_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_cherry_trapdoor", registerTrapdoor("slotted_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_crimson_trapdoor", registerTrapdoor("slotted_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_dark_oak_trapdoor", registerTrapdoor("slotted_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_jungle_trapdoor", registerTrapdoor("slotted_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_mangrove_trapdoor", registerTrapdoor("slotted_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_oak_trapdoor", registerTrapdoor("slotted_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_spruce_trapdoor", registerTrapdoor("slotted_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("slotted_warped_trapdoor", registerTrapdoor("slotted_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_acacia_trapdoor", registerTrapdoor("solid_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_bamboo_trapdoor", registerTrapdoor("solid_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_birch_trapdoor", registerTrapdoor("solid_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_cherry_trapdoor", registerTrapdoor("solid_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_crimson_trapdoor", registerTrapdoor("solid_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_dark_oak_trapdoor", registerTrapdoor("solid_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_jungle_trapdoor", registerTrapdoor("solid_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_mangrove_trapdoor", registerTrapdoor("solid_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_oak_trapdoor", registerTrapdoor("solid_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_spruce_trapdoor", registerTrapdoor("solid_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("solid_warped_trapdoor", registerTrapdoor("solid_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_acacia_trapdoor", registerTrapdoor("suspicious_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_bamboo_trapdoor", registerTrapdoor("suspicious_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_birch_trapdoor", registerTrapdoor("suspicious_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_cherry_trapdoor", registerTrapdoor("suspicious_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_dark_oak_trapdoor", registerTrapdoor("suspicious_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_jungle_trapdoor", registerTrapdoor("suspicious_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_mangrove_trapdoor", registerTrapdoor("suspicious_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_oak_trapdoor", registerTrapdoor("suspicious_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_spruce_trapdoor", registerTrapdoor("suspicious_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("suspicious_warped_trapdoor", registerTrapdoor("suspicious_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_acacia_trapdoor", registerTrapdoor("twisted_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_bamboo_trapdoor", registerTrapdoor("twisted_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_birch_trapdoor", registerTrapdoor("twisted_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_cherry_trapdoor", registerTrapdoor("twisted_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_crimson_trapdoor", registerTrapdoor("twisted_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_dark_oak_trapdoor", registerTrapdoor("twisted_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_jungle_trapdoor", registerTrapdoor("twisted_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_mangrove_trapdoor", registerTrapdoor("twisted_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_oak_trapdoor", registerTrapdoor("twisted_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_spruce_trapdoor", registerTrapdoor("twisted_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("twisted_warped_trapdoor", registerTrapdoor("twisted_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_acacia_trapdoor", registerTrapdoor("vined_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_bamboo_trapdoor", registerTrapdoor("vined_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_birch_trapdoor", registerTrapdoor("vined_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_cherry_trapdoor", registerTrapdoor("vined_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_crimson_trapdoor", registerTrapdoor("vined_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_dark_oak_trapdoor", registerTrapdoor("vined_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_jungle_trapdoor", registerTrapdoor("vined_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_mangrove_trapdoor", registerTrapdoor("vined_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_oak_trapdoor", registerTrapdoor("vined_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_spruce_trapdoor", registerTrapdoor("vined_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("vined_warped_trapdoor", registerTrapdoor("vined_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warped_warped_trapdoor", registerTrapdoor("warped_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_acacia_trapdoor", registerTrapdoor("warted_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_bamboo_trapdoor", registerTrapdoor("warted_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_birch_trapdoor", registerTrapdoor("warted_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_cherry_trapdoor", registerTrapdoor("warted_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_crimson_trapdoor", registerTrapdoor("warted_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_dark_oak_trapdoor", registerTrapdoor("warted_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_jungle_trapdoor", registerTrapdoor("warted_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_mangrove_trapdoor", registerTrapdoor("warted_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_oak_trapdoor", registerTrapdoor("warted_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_spruce_trapdoor", registerTrapdoor("warted_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("warted_warped_trapdoor", registerTrapdoor("warted_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_acacia_trapdoor", registerTrapdoor("windowed_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_bamboo_trapdoor", registerTrapdoor("windowed_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_birch_trapdoor", registerTrapdoor("windowed_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_cherry_trapdoor", registerTrapdoor("windowed_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_crimson_trapdoor", registerTrapdoor("windowed_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_dark_oak_trapdoor", registerTrapdoor("windowed_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_jungle_trapdoor", registerTrapdoor("windowed_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_mangrove_trapdoor", registerTrapdoor("windowed_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_oak_trapdoor", registerTrapdoor("windowed_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_spruce_trapdoor", registerTrapdoor("windowed_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("windowed_warped_trapdoor", registerTrapdoor("windowed_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_acacia_trapdoor", registerTrapdoor("woven_acacia_trapdoor", BlockSetType.ACACIA, Blocks.ACACIA_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_bamboo_trapdoor", registerTrapdoor("woven_bamboo_trapdoor", BlockSetType.BAMBOO, Blocks.BAMBOO_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_birch_trapdoor", registerTrapdoor("woven_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_cherry_trapdoor", registerTrapdoor("woven_cherry_trapdoor", BlockSetType.CHERRY, Blocks.CHERRY_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_crimson_trapdoor", registerTrapdoor("woven_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_dark_oak_trapdoor", registerTrapdoor("woven_dark_oak_trapdoor", BlockSetType.DARK_OAK, Blocks.DARK_OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_jungle_trapdoor", registerTrapdoor("woven_jungle_trapdoor", BlockSetType.JUNGLE, Blocks.JUNGLE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_mangrove_trapdoor", registerTrapdoor("woven_mangrove_trapdoor", BlockSetType.MANGROVE, Blocks.MANGROVE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_oak_trapdoor", registerTrapdoor("woven_oak_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_spruce_trapdoor", registerTrapdoor("woven_spruce_trapdoor", BlockSetType.SPRUCE, Blocks.SPRUCE_TRAPDOOR));
+        WOOD_TRAPDOORS.put("woven_warped_trapdoor", registerTrapdoor("woven_warped_trapdoor", BlockSetType.WARPED, Blocks.WARPED_TRAPDOOR));
 
         String[] copperStates = {"", "exposed_", "weathered_", "oxidized_"};
         WeatheringCopper.WeatherState[] states = {WeatheringCopper.WeatherState.UNAFFECTED, WeatheringCopper.WeatherState.EXPOSED, WeatheringCopper.WeatherState.WEATHERED, WeatheringCopper.WeatherState.OXIDIZED};
