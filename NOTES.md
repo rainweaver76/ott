@@ -13,6 +13,7 @@ copper
 framed_light_center
 glaced_terracotta
 
+update bookshelf modeles to use boards textures on up/down faces
 copper (all) ladder item models
 chipped: cobwebs
 need breaking rules fixed
