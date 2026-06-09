@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "horizontal",
+  "parent": "ott:block/ctm/ctm_cube_all_horizontal",
+  "textures": {
+    "all": "ott:block/oak_planks/ctm/oak_planks_bricks"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

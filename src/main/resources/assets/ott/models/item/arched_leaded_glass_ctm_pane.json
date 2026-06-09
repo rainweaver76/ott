@@ -1,0 +1,8 @@
+{
+  "parent": "ott:item/glass_pane_ctm_vertical",
+  "textures": {
+    "front": "ott:block/glass/ctm/arched_leaded_glass_ctm",
+    "side": "ott:block/glass/leaded_glass_pane_edge"
+  },
+  "render_type": "minecraft:cutout"
+}

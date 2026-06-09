@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "ott:block/crimson_windows/crimson_window_tiles",
+    "end": "minecraft:block/crimson_planks"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

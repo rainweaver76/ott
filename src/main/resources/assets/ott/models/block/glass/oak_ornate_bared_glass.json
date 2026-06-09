@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/oak_planks/oak_ornate_bared_glass"
+  },
+  "render_type": "minecraft:cutout"
+}

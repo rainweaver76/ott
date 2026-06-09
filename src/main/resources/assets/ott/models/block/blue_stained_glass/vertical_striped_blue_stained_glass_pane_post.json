@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "pane": "ott:block/blue_stained_glass/vertical_striped_blue_stained_glass",
+    "edge": "ott:block/glass/leaded_glass_pane_edge"
+  },
+  "render_type": "minecraft:translucent"
+}

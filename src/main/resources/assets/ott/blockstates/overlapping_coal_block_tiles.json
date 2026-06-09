@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/overlapping_coal_block_tiles"
+    }
+  }
+}

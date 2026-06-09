@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/calcite/tiled_calcite_column"
+    }
+  }
+}

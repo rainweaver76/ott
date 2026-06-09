@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/prismarine_bricks/massive_prismarine_bricks"
+  }
+}

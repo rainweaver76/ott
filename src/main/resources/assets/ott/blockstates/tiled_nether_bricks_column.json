@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/nether_bricks/tiled_nether_bricks_column"
+    }
+  }
+}

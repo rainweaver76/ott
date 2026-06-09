@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ancient_debris/overlapping_ancient_debris_tiles"
+    }
+  }
+}

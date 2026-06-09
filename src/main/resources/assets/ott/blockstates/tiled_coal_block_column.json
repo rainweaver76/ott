@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/tiled_coal_block_column"
+    }
+  }
+}

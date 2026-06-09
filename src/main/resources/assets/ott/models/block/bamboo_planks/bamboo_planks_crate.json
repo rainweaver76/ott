@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "compact",
+  "parent": "ott:block/ctm/ctm_cube_all_compact",
+  "textures": {
+    "all": "ott:block/bamboo_planks/ctm/bamboo_planks_crate"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": {"model": "ott:block/stone/carved_stone_writing", "x": 90, "y": 90},
+    "axis=y": {"model": "ott:block/stone/carved_stone_writing"},
+    "axis=z": {"model": "ott:block/stone/carved_stone_writing", "x": 90}
+  }
+}

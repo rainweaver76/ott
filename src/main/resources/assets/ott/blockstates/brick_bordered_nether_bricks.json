@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/nether_bricks/brick_bordered_nether_bricks"
+    }
+  }
+}

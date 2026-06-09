@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/black_stained_glass/ornate_black_stained_glass"
+  },
+  "render_type": "minecraft:translucent"
+}
