@@ -112,8 +112,7 @@ public class ClientModEvents {
     }
 
     public static void onRegisterGeometryLoaders(ModelEvent.RegisterGeometryLoaders event) {
-        event.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "mosaic"),
-                com.otterly76.ott.client.model.ctm.ConnectingModelLoader.INSTANCE);
+        // ott:mosaic (CTM) loader now lives in and is registered by the ott_blocks mod.
         event.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "wildflowers"),
                 com.otterly76.ott.client.model.wildflowers.WildflowersModelLoader.INSTANCE);
         event.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "overlay"),

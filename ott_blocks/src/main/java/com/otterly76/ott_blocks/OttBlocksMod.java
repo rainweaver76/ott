@@ -42,6 +42,9 @@ public class OttBlocksMod {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         modEventBus.addListener(this::addCreative);
+        if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
+            com.otterly76.ott_blocks.client.OttBlocksClient.init(modEventBus);
+        }
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
