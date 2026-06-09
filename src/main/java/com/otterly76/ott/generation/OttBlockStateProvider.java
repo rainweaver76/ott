@@ -66,7 +66,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         itemModels().withExistingParent("soul_glass", modLoc("block/soul_glass"));
 
         // Soul Glass Pane
-        paneBlockWithRenderType(ModBlocks.SOUL_GLASS_PANE.get(), soulGlassTex, soulGlassTex, "minecraft:translucent");
+        paneBlockWithRenderType(OttBlocks.SOUL_GLASS_PANE.get(), soulGlassTex, soulGlassTex, "minecraft:translucent");
         itemModels().withExistingParent("soul_glass_pane", mcLoc("item/glass_pane"))
                 .texture("front", soulGlassTex)
                 .texture("side", soulGlassTex)

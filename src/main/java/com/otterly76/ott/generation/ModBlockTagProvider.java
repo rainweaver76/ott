@@ -785,7 +785,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         hoeTag.add(ModBlocks.PALE_OAK_LEAVES.value());
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(OttBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
-        pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+        pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
                 OttBlocks.SOUL_GLASS_CTM.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
                 ModBlocks.CHISELED_GLASS_CTM_PANE.get(),
@@ -803,8 +803,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         );
         mcStainedGlass.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_CTM.get());
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(
-                ModBlocks.SOUL_GLASS_PANE.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
-        this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+                OttBlocks.SOUL_GLASS_PANE.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
+        this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
                 OttBlocks.SOUL_GLASS_CTM.get());
         this.tag(doDefaultKey).add(OttBlocks.SOUL_GLASS.get());
 
