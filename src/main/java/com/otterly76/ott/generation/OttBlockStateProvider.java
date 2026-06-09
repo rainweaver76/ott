@@ -1227,8 +1227,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlockNoUvLock(ModBlocks.WHITE_MARBLE_FANCY_FENCE.get(), "block/white_marble/white_marble_fancy_fence");
         existingAxisBlock(OttBlocks.WHITE_MARBLE_PILLAR.get(),     "block/white_marble/white_marble_pillar");
         existingAxisBlock(OttBlocks.WHITE_MARBLE_PILLAR_CAP.get(), "block/white_marble/white_marble_pillar_cap");
-        simpleBlockWithItem(OttBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/white_marble/white_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/black_marble/black_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/white_marble/white_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/black_marble/black_marble_diamond_pavers")));
 
         // ── Amethyst Marble ──
         simpleBlockWithItem(OttBlocks.AMETHYST_MARBLE.get(),              models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble")));
@@ -1339,16 +1339,16 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlockNoUvLock(ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(), "block/yellow_marble/yellow_marble_fancy_fence");
         existingAxisBlock(OttBlocks.YELLOW_MARBLE_PILLAR.get(),     "block/yellow_marble/yellow_marble_pillar");
         existingAxisBlock(OttBlocks.YELLOW_MARBLE_PILLAR_CAP.get(), "block/yellow_marble/yellow_marble_pillar_cap");
-        simpleBlockWithItem(OttBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/blue_marble/blue_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),    models().getExistingFile(modLoc("block/green_marble/green_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/lime_marble/lime_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/orange_marble/orange_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/pink_marble/pink_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/purple_marble/purple_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),      models().getExistingFile(modLoc("block/red_marble/red_marble_diamond_pavers")));
-        simpleBlockWithItem(OttBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(), models().getExistingFile(modLoc("block/amethyst_marble/amethyst_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/blue_marble/blue_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/cyan_marble/cyan_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),    models().getExistingFile(modLoc("block/green_marble/green_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/lime_marble/lime_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/orange_marble/orange_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),     models().getExistingFile(modLoc("block/pink_marble/pink_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/purple_marble/purple_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),      models().getExistingFile(modLoc("block/red_marble/red_marble_diamond_pavers")));
+        simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_diamond_pavers")));
 
         // ── Limestone ─────────────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.LIMESTONE_MASONRY.get(),  models().getExistingFile(modLoc("block/limestone/limestone_masonry")));

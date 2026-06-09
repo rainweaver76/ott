@@ -4939,4 +4939,19 @@ public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
 
     // ===== RECOVERED PURPUR_CTM =====
 
+
+    // ===== Reverted diamond paver block-items =====
+    public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_DIAMOND_PAVERS = registerBlockItem("black_marble_diamond_pavers", ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_DIAMOND_PAVERS = registerBlockItem("white_marble_diamond_pavers", ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_DIAMOND_PAVERS = registerBlockItem("amethyst_marble_diamond_pavers", ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_DIAMOND_PAVERS = registerBlockItem("blue_marble_diamond_pavers", ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_DIAMOND_PAVERS = registerBlockItem("cyan_marble_diamond_pavers", ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_DIAMOND_PAVERS = registerBlockItem("green_marble_diamond_pavers", ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> LIME_MARBLE_DIAMOND_PAVERS = registerBlockItem("lime_marble_diamond_pavers", ModBlocks.LIME_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> ORANGE_MARBLE_DIAMOND_PAVERS = registerBlockItem("orange_marble_diamond_pavers", ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> PINK_MARBLE_DIAMOND_PAVERS = registerBlockItem("pink_marble_diamond_pavers", ModBlocks.PINK_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_DIAMOND_PAVERS = registerBlockItem("purple_marble_diamond_pavers", ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> RED_MARBLE_DIAMOND_PAVERS = registerBlockItem("red_marble_diamond_pavers", ModBlocks.RED_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_DIAMOND_PAVERS = registerBlockItem("yellow_marble_diamond_pavers", ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS);
+
 }

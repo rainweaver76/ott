@@ -1907,7 +1907,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), OttBlocks.BLACK_MARBLE_PILLAR_CAP.get(),   "black_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_FANCY_FENCE.get(),  "black_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_FLOOR_TILE.get(), "black_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), OttBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), "black_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS.get(), "black_marble_diamond_pavers_stonecutting");
         // --- White marble stonecutting ---
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), OttBlocks.WHITE_MARBLE_BRICKS.get(),       "white_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), OttBlocks.WHITE_MARBLE_SMALL_BRICKS.get(), "white_marble_small_bricks_stonecutting");
@@ -1916,7 +1916,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), OttBlocks.WHITE_MARBLE_PILLAR_CAP.get(),   "white_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FANCY_FENCE.get(),  "white_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FLOOR_TILE.get(), "white_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), OttBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), "white_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), "white_marble_diamond_pavers_stonecutting");
         // ── Amethyst Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_BRICKS.get(),       "amethyst_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_SMALL_BRICKS.get(), "amethyst_marble_small_bricks_stonecutting");
@@ -1925,7 +1925,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_PILLAR_CAP.get(),   "amethyst_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FANCY_FENCE.get(),  "amethyst_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FLOOR_TILE.get(),   "amethyst_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(),  "amethyst_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(),  "amethyst_marble_diamond_pavers_stonecutting");
         // ── Blue Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_BRICKS.get(),       "blue_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_SMALL_BRICKS.get(), "blue_marble_small_bricks_stonecutting");
@@ -1934,7 +1934,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_PILLAR_CAP.get(),   "blue_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_FANCY_FENCE.get(),  "blue_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_FLOOR_TILE.get(),   "blue_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),  "blue_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS.get(),  "blue_marble_diamond_pavers_stonecutting");
         // ── Cyan Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), OttBlocks.CYAN_MARBLE_BRICKS.get(),       "cyan_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), OttBlocks.CYAN_MARBLE_SMALL_BRICKS.get(), "cyan_marble_small_bricks_stonecutting");
@@ -1943,7 +1943,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), OttBlocks.CYAN_MARBLE_PILLAR_CAP.get(),   "cyan_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_FANCY_FENCE.get(),  "cyan_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_FLOOR_TILE.get(),   "cyan_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), OttBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),  "cyan_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.CYAN_MARBLE.get(), ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS.get(),  "cyan_marble_diamond_pavers_stonecutting");
         // ── Green Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), OttBlocks.GREEN_MARBLE_BRICKS.get(),       "green_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), OttBlocks.GREEN_MARBLE_SMALL_BRICKS.get(), "green_marble_small_bricks_stonecutting");
@@ -1952,7 +1952,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), OttBlocks.GREEN_MARBLE_PILLAR_CAP.get(),   "green_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_FANCY_FENCE.get(),  "green_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_FLOOR_TILE.get(),   "green_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), OttBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),  "green_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GREEN_MARBLE.get(), ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS.get(),  "green_marble_diamond_pavers_stonecutting");
         // ── Lime Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), OttBlocks.LIME_MARBLE_BRICKS.get(),       "lime_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), OttBlocks.LIME_MARBLE_SMALL_BRICKS.get(), "lime_marble_small_bricks_stonecutting");
@@ -1961,7 +1961,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), OttBlocks.LIME_MARBLE_PILLAR_CAP.get(),   "lime_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_FANCY_FENCE.get(),  "lime_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_FLOOR_TILE.get(),   "lime_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), OttBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),  "lime_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIME_MARBLE.get(), ModBlocks.LIME_MARBLE_DIAMOND_PAVERS.get(),  "lime_marble_diamond_pavers_stonecutting");
         // ── Orange Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), OttBlocks.ORANGE_MARBLE_BRICKS.get(),       "orange_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), OttBlocks.ORANGE_MARBLE_SMALL_BRICKS.get(), "orange_marble_small_bricks_stonecutting");
@@ -1970,7 +1970,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), OttBlocks.ORANGE_MARBLE_PILLAR_CAP.get(),   "orange_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_FANCY_FENCE.get(),  "orange_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_FLOOR_TILE.get(),   "orange_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), OttBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),  "orange_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.ORANGE_MARBLE.get(), ModBlocks.ORANGE_MARBLE_DIAMOND_PAVERS.get(),  "orange_marble_diamond_pavers_stonecutting");
         // ── Pink Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), OttBlocks.PINK_MARBLE_BRICKS.get(),       "pink_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), OttBlocks.PINK_MARBLE_SMALL_BRICKS.get(), "pink_marble_small_bricks_stonecutting");
@@ -1979,7 +1979,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), OttBlocks.PINK_MARBLE_PILLAR_CAP.get(),   "pink_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_FANCY_FENCE.get(),  "pink_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_FLOOR_TILE.get(),   "pink_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), OttBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),  "pink_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.PINK_MARBLE.get(), ModBlocks.PINK_MARBLE_DIAMOND_PAVERS.get(),  "pink_marble_diamond_pavers_stonecutting");
         // ── Purple Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), OttBlocks.PURPLE_MARBLE_BRICKS.get(),       "purple_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), OttBlocks.PURPLE_MARBLE_SMALL_BRICKS.get(), "purple_marble_small_bricks_stonecutting");
@@ -1988,7 +1988,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), OttBlocks.PURPLE_MARBLE_PILLAR_CAP.get(),   "purple_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_FANCY_FENCE.get(),  "purple_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_FLOOR_TILE.get(),   "purple_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), OttBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),  "purple_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.PURPLE_MARBLE.get(), ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS.get(),  "purple_marble_diamond_pavers_stonecutting");
         // ── Red Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), OttBlocks.RED_MARBLE_BRICKS.get(),       "red_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), OttBlocks.RED_MARBLE_SMALL_BRICKS.get(), "red_marble_small_bricks_stonecutting");
@@ -1997,7 +1997,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), OttBlocks.RED_MARBLE_PILLAR_CAP.get(),   "red_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_FANCY_FENCE.get(),  "red_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_FLOOR_TILE.get(),   "red_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), OttBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),  "red_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.RED_MARBLE.get(), ModBlocks.RED_MARBLE_DIAMOND_PAVERS.get(),  "red_marble_diamond_pavers_stonecutting");
         // ── Yellow Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), OttBlocks.YELLOW_MARBLE_BRICKS.get(),       "yellow_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), OttBlocks.YELLOW_MARBLE_SMALL_BRICKS.get(), "yellow_marble_small_bricks_stonecutting");
@@ -2006,7 +2006,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), OttBlocks.YELLOW_MARBLE_PILLAR_CAP.get(),   "yellow_marble_pillar_cap_stonecutting");
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(),  "yellow_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FLOOR_TILE.get(),   "yellow_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), OttBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),  "yellow_marble_diamond_pavers_stonecutting");
+        stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),  "yellow_marble_diamond_pavers_stonecutting");
         stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MIXED_LIMESTONE_BRICKS.get(), "mixed_limestone_bricks_from_limestone_stonecutting");
         // --- Chiseled plastered stone from matching plastered stone ---
         ModBlocks.PATTERN_BLOCKS.get("plastered_stone").forEach((color, base) -> {
