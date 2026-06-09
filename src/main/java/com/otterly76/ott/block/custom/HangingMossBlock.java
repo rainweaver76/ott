@@ -2,7 +2,7 @@ package com.otterly76.ott.block.custom;
 
 import com.otterly76.ott.block.ModBlocks;
 import com.otterly76.ott.registry.ModBlockStateProperties;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.ModTags;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -51,7 +51,7 @@ public class HangingMossBlock extends Block implements BonemealableBlock {
         if (random.nextInt(500) == 0) {
             BlockState aboveState = level.getBlockState(pos.above());
             if (aboveState.is(ModTags.Blocks.PALE_OAK_LOGS) || aboveState.is(ModBlocks.PALE_OAK_LEAVES.get())) {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), ModSounds.PALE_HANGING_MOSS_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), OttBlockSounds.PALE_HANGING_MOSS_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
         }
     }

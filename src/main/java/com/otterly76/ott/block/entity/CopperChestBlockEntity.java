@@ -9,19 +9,19 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
 import net.minecraft.world.level.block.entity.ContainerOpenersCounter;
 import net.minecraft.world.level.block.state.BlockState;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import org.jetbrains.annotations.NotNull;
 
 public class CopperChestBlockEntity extends ChestBlockEntity {
     private final ContainerOpenersCounter openersCounter = new ContainerOpenersCounter() {
         @Override
         protected void onOpen(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state) {
-            CopperChestBlockEntity.this.playSound(state, ModSounds.COPPER_CHEST_OPEN.get());
+            CopperChestBlockEntity.this.playSound(state, OttBlockSounds.COPPER_CHEST_OPEN.get());
         }
 
         @Override
         protected void onClose(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state) {
-            CopperChestBlockEntity.this.playSound(state, ModSounds.COPPER_CHEST_CLOSE.get());
+            CopperChestBlockEntity.this.playSound(state, OttBlockSounds.COPPER_CHEST_CLOSE.get());
         }
 
         @Override

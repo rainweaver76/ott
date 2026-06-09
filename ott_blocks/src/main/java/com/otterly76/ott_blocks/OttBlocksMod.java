@@ -41,6 +41,8 @@ public class OttBlocksMod {
     public OttBlocksMod(IEventBus modEventBus) {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+        com.otterly76.ott_blocks.sound.OttBlockSounds.register(modEventBus);
+        com.otterly76.ott_blocks.particle.OttBlockParticles.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         if (net.neoforged.fml.loading.FMLEnvironment.dist.isClient()) {
             com.otterly76.ott_blocks.client.OttBlocksClient.init(modEventBus);

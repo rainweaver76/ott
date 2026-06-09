@@ -8,7 +8,7 @@ import com.otterly76.ott.entity.Creaking;
 import com.otterly76.ott.entity.ModEntities;
 import com.otterly76.ott.particle.ModParticle;
 import com.otterly76.ott.particle.TrailParticleOption;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.ModTags;
 import com.otterly76.ott.util.block.CreakingHeartState;
 import com.otterly76.ott.util.entity.SpawnExtras;
@@ -83,7 +83,7 @@ public class CreakingHeartBlockEntity extends BlockEntity {
                     Vec3 position = center.subtract(heart.emitterTarget).scale(emission).add(heart.emitterTarget);
                     BlockPos target = BlockPos.containing(position);
                     float volume = (float)heart.emitter / 2.0F / 100.0F + 0.5F;
-                    level.playSound(null, target, ModSounds.CREAKING_HEART_HURT.get(), SoundSource.BLOCKS, volume, 1.0F);
+                    level.playSound(null, target, OttBlockSounds.CREAKING_HEART_HURT.get(), SoundSource.BLOCKS, volume, 1.0F);
                 }
 
                 --heart.emitter;
@@ -106,8 +106,8 @@ public class CreakingHeartBlockEntity extends BlockEntity {
                             Creaking creaking = spawnProtector(server, heart);
                             if (creaking != null) {
                                 heart.setCreakingInfo(creaking);
-                                creaking.playSound(ModSounds.CREAKING_SPAWN.get());
-                                level.playSound(null, heart.getBlockPos(), ModSounds.CREAKING_HEART_SPAWN.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+                                creaking.playSound(OttBlockSounds.CREAKING_SPAWN.get());
+                                level.playSound(null, heart.getBlockPos(), OttBlockSounds.CREAKING_HEART_SPAWN.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
                             }
                         }
                     }
@@ -204,7 +204,7 @@ public class CreakingHeartBlockEntity extends BlockEntity {
 
                         for(int j = 0; j < i; ++j) {
                             this.spreadResin().ifPresent((pos) -> {
-                                this.level.playSound(null, pos, ModSounds.RESIN_PLACE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+                                this.level.playSound(null, pos, OttBlockSounds.RESIN_PLACE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
                                 this.level.gameEvent(GameEvent.BLOCK_PLACE, pos, Context.of(this.getBlockState()));
                             });
                         }

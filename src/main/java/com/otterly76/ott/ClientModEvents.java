@@ -1,4 +1,6 @@
 package com.otterly76.ott;
+
+import com.otterly76.ott_blocks.particle.OttBlockParticles;
 import com.otterly76.ott.client.render.entity.*;
 import com.otterly76.ott.block.ModBlocks;
 import com.otterly76.ott.client.NutritionHudOverlay;
@@ -168,7 +170,7 @@ public class ClientModEvents {
     @SuppressWarnings("DuplicatedCode")
     public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ModParticle.WILL_O_WISP.get(), WillOWispParticle.Provider::new);
-        event.registerSpriteSet(ModParticle.FIREFLY.get(), FireflyParticle.Provider::new);
+        event.registerSpriteSet(OttBlockParticles.FIREFLY.get(), FireflyParticle.Provider::new);
 
         event.registerSpriteSet(ModParticle.RAIN.get(), RainParticle.DefaultFactory::new);
         event.registerSpriteSet(ModParticle.SNOW.get(), SnowParticle.DefaultFactory::new);
@@ -187,8 +189,8 @@ public class ClientModEvents {
         event.registerSpriteSet(ModParticle.MIDNIGHT_LEAF.get(), HedgeLeafParticle.Provider::new);
         event.registerSpriteSet(ModParticle.BLOOMING_STARLIGHT_LEAF.get(), HedgeLeafParticle.Provider::new);
         event.registerSpriteSet(ModParticle.BLOOMING_MIDNIGHT_LEAF.get(), HedgeLeafParticle.Provider::new);
-        event.registerSpriteSet(ModParticle.COPPER_FIRE_FLAME.get(), FlameParticle.Provider::new);
-        event.registerSpriteSet(ModParticle.PALE_OAK_LEAVES.get(), FallingLeavesParticle.PaleOakProvider::new);
+        event.registerSpriteSet(OttBlockParticles.COPPER_FIRE_FLAME.get(), FlameParticle.Provider::new);
+        event.registerSpriteSet(OttBlockParticles.PALE_OAK_LEAVES.get(), FallingLeavesParticle.PaleOakProvider::new);
         event.registerSpriteSet(ModParticle.TINTED_LEAVES.get(), FallingLeavesParticle.TintedLeavesProvider::new);
         event.registerSpriteSet(ModParticle.TINTED_NEEDLES.get(), FallingLeavesParticle.TintedLeavesProvider::new);
         event.registerSpriteSet(ModParticle.TRAIL.get(), TrailParticle.Provider::new);

@@ -2,7 +2,7 @@ package com.otterly76.ott.block.custom;
 
 import com.otterly76.ott.entity.custom.Tortoise;
 import com.otterly76.ott.entity.ModEntities;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
@@ -64,10 +64,10 @@ public class TortoiseEggBlock extends TurtleEggBlock {
         }
         int hatchStage = state.getValue(HATCH);
         if (hatchStage < 2) {
-            level.playSound(null, pos, ModSounds.TORTOISE_EGG_CRACK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
+            level.playSound(null, pos, OttBlockSounds.TORTOISE_EGG_CRACK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
             level.setBlock(pos, state.setValue(HATCH, hatchStage + 1), 2);
         } else {
-            level.playSound(null, pos, ModSounds.TORTOISE_EGG_HATCH.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
+            level.playSound(null, pos, OttBlockSounds.TORTOISE_EGG_HATCH.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
             int eggCount = state.getValue(EGGS);
             int variant = state.getValue(VARIANT);
             level.removeBlock(pos, false);
@@ -129,7 +129,7 @@ public class TortoiseEggBlock extends TurtleEggBlock {
         if (!level.isClientSide && stack.getItem() == Items.COMMAND_BLOCK) {
             int variant = state.getValue(VARIANT);
             int eggCount = state.getValue(EGGS);
-            level.playSound(null, pos, ModSounds.TORTOISE_EGG_HATCH.get(),
+            level.playSound(null, pos, OttBlockSounds.TORTOISE_EGG_HATCH.get(),
                     SoundSource.BLOCKS, 0.7f, 0.9f + level.random.nextFloat() * 0.2f);
             level.levelEvent(2001, pos, Block.getId(state));
             level.removeBlock(pos, false);
@@ -161,7 +161,7 @@ public class TortoiseEggBlock extends TurtleEggBlock {
     }
 
     private void decreaseEggs(Level level, BlockPos pos, BlockState state) {
-        level.playSound(null, pos, ModSounds.TORTOISE_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + level.random.nextFloat() * 0.2f);
+        level.playSound(null, pos, OttBlockSounds.TORTOISE_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + level.random.nextFloat() * 0.2f);
         int i = state.getValue(EGGS);
         if (i <= 1) {
             level.destroyBlock(pos, false);

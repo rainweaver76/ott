@@ -236,7 +236,7 @@ public class ShelfBlock extends BaseEntityBlock implements SelectableSlotContain
                     newState = newState.setValue(SIDE_CHAIN_PART, SideChainPart.UNCONNECTED);
                 }
                 level.setBlock(pos, newState, 3);
-                level.playSound(null, pos, isPowered ? com.otterly76.ott.sound.ModSounds.SHELF_ACTIVATE.get() : com.otterly76.ott.sound.ModSounds.SHELF_DEACTIVATE.get(), net.minecraft.sounds.SoundSource.BLOCKS, 1.0F, 1.0F);
+                level.playSound(null, pos, isPowered ? com.otterly76.ott_blocks.sound.OttBlockSounds.SHELF_ACTIVATE.get() : com.otterly76.ott_blocks.sound.OttBlockSounds.SHELF_DEACTIVATE.get(), net.minecraft.sounds.SoundSource.BLOCKS, 1.0F, 1.0F);
                 
                 // Notify neighbors to update their side chains
                 Direction facing = state.getValue(FACING);

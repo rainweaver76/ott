@@ -2,7 +2,7 @@ package com.otterly76.ott.block.custom;
 
 import com.otterly76.ott.entity.custom.Alligator;
 import com.otterly76.ott.entity.ModEntities;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -30,10 +30,10 @@ public class AlligatorEggBlock extends TurtleEggBlock {
         if (this.shouldUpdateHatchLevel(level)) {
             int i = state.getValue(HATCH);
             if (i < 2) {
-                level.playSound(null, pos, ModSounds.GATOR_EGG_CRACK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
+                level.playSound(null, pos, OttBlockSounds.GATOR_EGG_CRACK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
                 level.setBlock(pos, state.setValue(HATCH, i + 1), 2);
             } else {
-                level.playSound(null, pos, ModSounds.GATOR_EGG_HATCH.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
+                level.playSound(null, pos, OttBlockSounds.GATOR_EGG_HATCH.get(), SoundSource.BLOCKS, 0.7f, 0.9f + random.nextFloat() * 0.2f);
                 level.removeBlock(pos, false);
                 for (int j = 0; j < state.getValue(EGGS); ++j) {
                     level.levelEvent(2001, pos, Block.getId(state));
@@ -97,7 +97,7 @@ public class AlligatorEggBlock extends TurtleEggBlock {
     }
 
     private void decreaseEggs(@NotNull Level level, BlockPos pos, BlockState state) {
-        level.playSound(null, pos, ModSounds.GATOR_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + level.random.nextFloat() * 0.2f);
+        level.playSound(null, pos, OttBlockSounds.GATOR_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7f, 0.9f + level.random.nextFloat() * 0.2f);
         int i = state.getValue(EGGS);
         if (i <= 1) {
             level.destroyBlock(pos, false);

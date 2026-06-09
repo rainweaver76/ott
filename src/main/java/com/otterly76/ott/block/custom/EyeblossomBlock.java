@@ -5,7 +5,7 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.otterly76.ott.block.ModBlocks;
 import com.otterly76.ott.particle.TrailParticleOption;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
@@ -56,7 +56,7 @@ public class EyeblossomBlock extends FlowerBlock {
         if (this.type.emitSounds() && random.nextInt(700) == 0) {
             BlockState floorState = level.getBlockState(pos.below());
             if (floorState.is(ModBlocks.PALE_MOSS_BLOCK.get())) {
-                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), ModSounds.EYEBLOSSOM_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+                level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), OttBlockSounds.EYEBLOSSOM_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
             }
         }
     }
@@ -112,8 +112,8 @@ public class EyeblossomBlock extends FlowerBlock {
     }
 
     public enum Type {
-        OPEN(true, MobEffects.BLINDNESS, 11, ModSounds.EYEBLOSSOM_OPEN_LONG, ModSounds.EYEBLOSSOM_OPEN, 16545810),
-        CLOSED(false, MobEffects.CONFUSION, 7, ModSounds.EYEBLOSSOM_CLOSE_LONG, ModSounds.EYEBLOSSOM_CLOSE, 6250335);
+        OPEN(true, MobEffects.BLINDNESS, 11, OttBlockSounds.EYEBLOSSOM_OPEN_LONG, OttBlockSounds.EYEBLOSSOM_OPEN, 16545810),
+        CLOSED(false, MobEffects.CONFUSION, 7, OttBlockSounds.EYEBLOSSOM_CLOSE_LONG, OttBlockSounds.EYEBLOSSOM_CLOSE, 6250335);
 
         final boolean open;
         final Holder<MobEffect> effect;

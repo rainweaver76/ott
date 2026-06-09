@@ -4,7 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.otterly76.ott.entity.ModEntities;
 import com.otterly76.ott.entity.custom.HappyGhast;
 import com.otterly76.ott.registry.ModBlockStateProperties;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -101,7 +101,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
 
     private void tickWaterlogged(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (!this.isReadyToSpawn(state)) {
-            level.playSound(null, pos, ModSounds.DRIED_GHAST_TRANSITION.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound(null, pos, OttBlockSounds.DRIED_GHAST_TRANSITION.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
             level.setBlock(pos, state.setValue(HYDRATION_LEVEL, this.getHydrationLevel(state) + 1), 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(state));
         } else {
@@ -124,7 +124,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
         ghast.setOldPosAndRot();
         ghast.setPos(ghast.getX(), ghast.getY(), ghast.getZ());
         level.addFreshEntity(ghast);
-        level.playSound(null, ghast.getX(), ghast.getY(), ghast.getZ(), ModSounds.GHASTLING_SPAWN.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.playSound(null, ghast.getX(), ghast.getY(), ghast.getZ(), OttBlockSounds.GHASTLING_SPAWN.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 
     public static float getYRot(Direction direction) {
@@ -144,7 +144,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
 
         if (state.getValue(WATERLOGGED)) {
             if (random.nextInt(40) == 0) {
-                level.playLocalSound(x, y, z, ModSounds.DRIED_GHAST_AMBIENT_WATER.get(), SoundSource.AMBIENT, 1.0F, 1.0F, false);
+                level.playLocalSound(x, y, z, OttBlockSounds.DRIED_GHAST_AMBIENT_WATER.get(), SoundSource.AMBIENT, 1.0F, 1.0F, false);
             }
 
             if (random.nextInt(6) == 0) {
@@ -154,7 +154,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
             }
         } else {
             if (random.nextInt(40) == 0 && level.getBlockState(pos.below()).is(ModTags.Blocks.TRIGGERS_AMBIENT_DRIED_GHAST_BLOCK_SOUNDS)) {
-                level.playLocalSound(x, y, z, ModSounds.DRIED_GHAST_AMBIENT.get(), SoundSource.AMBIENT, 1.0F, 1.0F, false);
+                level.playLocalSound(x, y, z, OttBlockSounds.DRIED_GHAST_AMBIENT.get(), SoundSource.AMBIENT, 1.0F, 1.0F, false);
             }
 
             if (random.nextInt(6) == 0) {
@@ -193,7 +193,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
         if (!level.isClientSide()) {
             level.setBlock(pos, state.setValue(WATERLOGGED, true), 3);
             level.scheduleTick(pos, fluidState.getType(), fluidState.getType().getTickDelay(level));
-            level.playSound(null, pos, ModSounds.DRIED_GHAST_PLACE_IN_WATER.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+            level.playSound(null, pos, OttBlockSounds.DRIED_GHAST_PLACE_IN_WATER.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
         }
         return true;
     }
@@ -201,7 +201,7 @@ public class DriedGhastBlock extends HorizontalDirectionalBlock implements Simpl
     @Override
     public void setPlacedBy(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @Nullable LivingEntity placer, @NotNull ItemStack stack) {
         super.setPlacedBy(level, pos, state, placer, stack);
-        level.playSound(null, pos, state.getValue(WATERLOGGED) ? ModSounds.DRIED_GHAST_PLACE_IN_WATER.get() : ModSounds.DRIED_GHAST_PLACE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
+        level.playSound(null, pos, state.getValue(WATERLOGGED) ? OttBlockSounds.DRIED_GHAST_PLACE_IN_WATER.get() : OttBlockSounds.DRIED_GHAST_PLACE.get(), SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 
     @Override

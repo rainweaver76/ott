@@ -37,7 +37,6 @@ public class ModParticle {
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> STUN = PARTICLE_TYPES.register("stun", () -> new SimpleParticleType(true));
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> WILL_O_WISP = PARTICLE_TYPES.register("will_o_wisp", () -> new SimpleParticleType(true));
-    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> FIREFLY = MINECRAFT_PARTICLE_TYPES.register("firefly", () -> new SimpleParticleType(true));
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> STARLIGHT_LEAF = PARTICLE_TYPES.register("starlight_leaf", () -> new SimpleParticleType(true));
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> MIDNIGHT_LEAF = PARTICLE_TYPES.register("midnight_leaf", () -> new SimpleParticleType(true));
@@ -55,8 +54,6 @@ public class ModParticle {
     public static final DeferredHolder<SoundEvent, SoundEvent> WEATHER_SANDSTORM = SOUND_EVENTS.register("weather.sandstorm", () -> SoundEvent.createVariableRangeEvent(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(com.otterly76.ott.Constants.MOD_ID, "weather.sandstorm")));
     public static final DeferredHolder<SoundEvent, SoundEvent> WEATHER_SANDSTORM_ABOVE = SOUND_EVENTS.register("weather.sandstorm.above", () -> SoundEvent.createVariableRangeEvent(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(com.otterly76.ott.Constants.MOD_ID, "weather.sandstorm.above")));
 
-    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> COPPER_FIRE_FLAME = MINECRAFT_PARTICLE_TYPES.register("copper_fire_flame", () -> new SimpleParticleType(true));
-    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> PALE_OAK_LEAVES = MINECRAFT_PARTICLE_TYPES.register("pale_oak_leaves", () -> new SimpleParticleType(true));
     public static final DeferredHolder<ParticleType<?>, ParticleType<ColorParticleOption>> TINTED_LEAVES = MINECRAFT_PARTICLE_TYPES.register("tinted_leaves", ModParticle::createColorParticleType);
     public static final DeferredHolder<ParticleType<?>, ParticleType<ColorParticleOption>> TINTED_NEEDLES = MINECRAFT_PARTICLE_TYPES.register("tinted_needles", ModParticle::createColorParticleType);
 

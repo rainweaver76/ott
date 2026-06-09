@@ -3,7 +3,7 @@ package com.otterly76.ott.block.custom;
 import com.otterly76.ott.block.entity.CreakingHeartBlockEntity;
 import com.otterly76.ott.block.entity.ModBlockEntities;
 import com.otterly76.ott.registry.ModBlockStateProperties;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import com.otterly76.ott.util.block.CreakingHeartState;
 import com.otterly76.ott.util.worldgen.LevelUtils;
 import com.otterly76.ott.util.ModTags;
@@ -73,7 +73,7 @@ public class CreakingHeartBlock extends BaseEntityBlock {
     @Override
     public void animateTick(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull RandomSource random) {
         if (isNaturalNight(level) && state.getValue(STATE) != CreakingHeartState.UPROOTED && random.nextInt(16) == 0) {
-            level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), ModSounds.CREAKING_HEART_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
+            level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), OttBlockSounds.CREAKING_HEART_IDLE.get(), SoundSource.BLOCKS, 1.0F, 1.0F, false);
         }
     }
 

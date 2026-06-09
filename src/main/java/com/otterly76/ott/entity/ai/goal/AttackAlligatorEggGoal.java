@@ -1,7 +1,7 @@
 package com.otterly76.ott.entity.ai.goal;
 
 import com.otterly76.ott.block.ModBlocks;
-import com.otterly76.ott.sound.ModSounds;
+import com.otterly76.ott_blocks.sound.OttBlockSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -23,7 +23,7 @@ public class AttackAlligatorEggGoal extends RemoveBlockGoal {
 
     @Override
     public void playBreakSound(@NotNull Level level, @NotNull BlockPos pos) {
-        level.playSound(null, pos, ModSounds.GATOR_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7F, 0.9F + level.random.nextFloat() * 0.2F);
+        level.playSound(null, pos, OttBlockSounds.GATOR_EGG_BREAK.get(), SoundSource.BLOCKS, 0.7F, 0.9F + level.random.nextFloat() * 0.2F);
     }
 
     @Override
