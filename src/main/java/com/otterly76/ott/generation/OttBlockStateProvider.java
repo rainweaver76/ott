@@ -62,7 +62,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         ModelFile soulGlassModel = models().withExistingParent("block/soul_glass", mcLoc("block/cube_all"))
                 .texture("all", soulGlassTex)
                 .renderType(mcLoc("translucent"));
-        simpleBlock(ModBlocks.SOUL_GLASS.get(), soulGlassModel);
+        simpleBlock(OttBlocks.SOUL_GLASS.get(), soulGlassModel);
         itemModels().withExistingParent("soul_glass", modLoc("block/soul_glass"));
 
         // Soul Glass Pane
@@ -77,7 +77,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         ModBlocks.SEAGLASS_SETS.forEach(this::registerSeaglassColor);
         itemModels().withExistingParent("mixed_limestone_bricks", modLoc("block/limestone/mixed/limestone_00"));
-        simpleBlockWithItem(ModBlocks.PLAIN_LIMESTONE.get(), models().cubeAll("block/limestone/limestone", modLoc("block/limestone/limestone")));
+        simpleBlockWithItem(OttBlocks.PLAIN_LIMESTONE.get(), models().cubeAll("block/limestone/limestone", modLoc("block/limestone/limestone")));
         
         ModBlocks.TESTBLOCK.forEach(block -> {
             ModelFile model = models().getExistingFile(modLoc("block/testblock/" + block.getId().getPath()));
@@ -1351,8 +1351,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),   models().getExistingFile(modLoc("block/yellow_marble/yellow_marble_diamond_pavers")));
 
         // ── Limestone ─────────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.LIMESTONE_MASONRY.get(),  models().getExistingFile(modLoc("block/limestone/limestone_masonry")));
-        simpleBlockWithItem(ModBlocks.COBBLED_LIMESTONE.get(), models().getExistingFile(modLoc("block/limestone/cobbled_limestone")));
+        simpleBlockWithItem(OttBlocks.LIMESTONE_MASONRY.get(),  models().getExistingFile(modLoc("block/limestone/limestone_masonry")));
+        simpleBlockWithItem(OttBlocks.COBBLED_LIMESTONE.get(), models().getExistingFile(modLoc("block/limestone/cobbled_limestone")));
         existingEdgeBlock(ModBlocks.LIMESTONE_MASONRY_EDGE.get(),            "block/limestone/limestone_masonry_edge");
         existingFacingShapeBlock(ModBlocks.LIMESTONE_MASONRY_PLATE.get(),    "block/limestone/limestone_masonry_plate");
 
@@ -1364,15 +1364,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
 
         // ── Roofing slates ────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.ROOFING_SLATES.get(),      models().getExistingFile(modLoc("block/roofing_slates")));
+        simpleBlockWithItem(OttBlocks.ROOFING_SLATES.get(),      models().getExistingFile(modLoc("block/roofing_slates")));
 
         // ── Wheat thatch ──────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.WHEAT_THATCH.get(),        models().getExistingFile(modLoc("block/wheat_thatch/wheat_thatch")));
+        simpleBlockWithItem(OttBlocks.WHEAT_THATCH.get(),        models().getExistingFile(modLoc("block/wheat_thatch/wheat_thatch")));
         existingEdgeBlock(ModBlocks.WHEAT_THATCH_EDGE.get(),          "block/wheat_thatch/wheat_thatch_edge");
         existingFacingShapeBlock(ModBlocks.WHEAT_THATCH_PLATE.get(),  "block/wheat_thatch/wheat_thatch_plate");
 
         // ── Bamboo thatch ─────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.BAMBOO_THATCH.get(),       models().getExistingFile(modLoc("block/bamboo_planks/bamboo_thatch")));
+        simpleBlockWithItem(OttBlocks.BAMBOO_THATCH.get(),       models().getExistingFile(modLoc("block/bamboo_planks/bamboo_thatch")));
         existingEdgeBlock(ModBlocks.BAMBOO_THATCH_EDGE.get(),         "block/bamboo_planks/bamboo_thatch_edge");
         existingFacingShapeBlock(ModBlocks.BAMBOO_THATCH_PLATE.get(), "block/bamboo_planks/bamboo_thatch_plate");
 
@@ -1389,8 +1389,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(), models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_turquoise_pattern")));
 
         // ── Mosaic floors ─────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.MOSAIC_FLOOR.get(),         models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor")));
-        simpleBlockWithItem(ModBlocks.MOSAIC_FLOOR_DELICATE.get(), models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor_delicate")));
+        simpleBlockWithItem(OttBlocks.MOSAIC_FLOOR.get(),         models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor")));
+        simpleBlockWithItem(OttBlocks.MOSAIC_FLOOR_DELICATE.get(), models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor_delicate")));
         // Rosette: 4 random model variants
         ConfiguredModel[] rosetteModels = new ConfiguredModel[4];
         for (int i = 1; i <= 4; i++) {
@@ -1398,7 +1398,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                     .modelFile(models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor_rosette_" + i)))
                     .build()[0];
         }
-        simpleBlock(ModBlocks.MOSAIC_FLOOR_ROSETTE.get(), rosetteModels);
+        simpleBlock(OttBlocks.MOSAIC_FLOOR_ROSETTE.get(), rosetteModels);
         itemModels().withExistingParent("mosaic_floor_rosette", modLoc("block/mosaic_floor/mosaic_floor_rosette_1"));
 
         // ── Elemental mosaics (border/geometric/pattern/delicate/traditional) ─
@@ -1420,8 +1420,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         }
 
         // ── Roman fresco ──────────────────────────────────────────────────────
-        simpleBlockWithItem(ModBlocks.ROMAN_FRESCO_RED.get(),   models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_red")));
-        simpleBlockWithItem(ModBlocks.ROMAN_FRESCO_BLACK.get(), models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_black")));
+        simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_RED.get(),   models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_red")));
+        simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_BLACK.get(), models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_black")));
 
         // ── Ornamented / delicate wool & carpet ───────────────────────────────
         simpleBlockWithItem(OttBlocks.ORNAMENTED_RED_WOOL.get(),      models().getExistingFile(modLoc("block/ornamented_red_wool")));
@@ -1550,35 +1550,35 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
     /** Convenience: look up the elemental mosaic block by element name + type suffix. */
     private Block elementalMosaicBlock(String element, String type) {
         return switch (element + "_" + type) {
-            case "water_border"      -> ModBlocks.WATER_MOSAIC_BORDER.get();
-            case "water_geometric"   -> ModBlocks.WATER_MOSAIC_GEOMETRIC.get();
-            case "water_pattern"     -> ModBlocks.WATER_MOSAIC_PATTERN.get();
-            case "water_delicate"    -> ModBlocks.WATER_MOSAIC_DELICATE.get();
-            case "water_traditional" -> ModBlocks.WATER_MOSAIC_TRADITIONAL.get();
+            case "water_border"      -> OttBlocks.WATER_MOSAIC_BORDER.get();
+            case "water_geometric"   -> OttBlocks.WATER_MOSAIC_GEOMETRIC.get();
+            case "water_pattern"     -> OttBlocks.WATER_MOSAIC_PATTERN.get();
+            case "water_delicate"    -> OttBlocks.WATER_MOSAIC_DELICATE.get();
+            case "water_traditional" -> OttBlocks.WATER_MOSAIC_TRADITIONAL.get();
             case "water_recess"      -> ModBlocks.WATER_MOSAIC_RECESS.get();
-            case "earth_border"      -> ModBlocks.EARTH_MOSAIC_BORDER.get();
-            case "earth_geometric"   -> ModBlocks.EARTH_MOSAIC_GEOMETRIC.get();
-            case "earth_pattern"     -> ModBlocks.EARTH_MOSAIC_PATTERN.get();
-            case "earth_delicate"    -> ModBlocks.EARTH_MOSAIC_DELICATE.get();
-            case "earth_traditional" -> ModBlocks.EARTH_MOSAIC_TRADITIONAL.get();
+            case "earth_border"      -> OttBlocks.EARTH_MOSAIC_BORDER.get();
+            case "earth_geometric"   -> OttBlocks.EARTH_MOSAIC_GEOMETRIC.get();
+            case "earth_pattern"     -> OttBlocks.EARTH_MOSAIC_PATTERN.get();
+            case "earth_delicate"    -> OttBlocks.EARTH_MOSAIC_DELICATE.get();
+            case "earth_traditional" -> OttBlocks.EARTH_MOSAIC_TRADITIONAL.get();
             case "earth_recess"      -> ModBlocks.EARTH_MOSAIC_RECESS.get();
-            case "fire_border"       -> ModBlocks.FIRE_MOSAIC_BORDER.get();
-            case "fire_geometric"    -> ModBlocks.FIRE_MOSAIC_GEOMETRIC.get();
-            case "fire_pattern"      -> ModBlocks.FIRE_MOSAIC_PATTERN.get();
-            case "fire_delicate"     -> ModBlocks.FIRE_MOSAIC_DELICATE.get();
-            case "fire_traditional"  -> ModBlocks.FIRE_MOSAIC_TRADITIONAL.get();
+            case "fire_border"       -> OttBlocks.FIRE_MOSAIC_BORDER.get();
+            case "fire_geometric"    -> OttBlocks.FIRE_MOSAIC_GEOMETRIC.get();
+            case "fire_pattern"      -> OttBlocks.FIRE_MOSAIC_PATTERN.get();
+            case "fire_delicate"     -> OttBlocks.FIRE_MOSAIC_DELICATE.get();
+            case "fire_traditional"  -> OttBlocks.FIRE_MOSAIC_TRADITIONAL.get();
             case "fire_recess"       -> ModBlocks.FIRE_MOSAIC_RECESS.get();
-            case "spirit_border"     -> ModBlocks.SPIRIT_MOSAIC_BORDER.get();
-            case "spirit_geometric"  -> ModBlocks.SPIRIT_MOSAIC_GEOMETRIC.get();
-            case "spirit_pattern"    -> ModBlocks.SPIRIT_MOSAIC_PATTERN.get();
-            case "spirit_delicate"   -> ModBlocks.SPIRIT_MOSAIC_DELICATE.get();
-            case "spirit_traditional"-> ModBlocks.SPIRIT_MOSAIC_TRADITIONAL.get();
+            case "spirit_border"     -> OttBlocks.SPIRIT_MOSAIC_BORDER.get();
+            case "spirit_geometric"  -> OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get();
+            case "spirit_pattern"    -> OttBlocks.SPIRIT_MOSAIC_PATTERN.get();
+            case "spirit_delicate"   -> OttBlocks.SPIRIT_MOSAIC_DELICATE.get();
+            case "spirit_traditional"-> OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get();
             case "spirit_recess"     -> ModBlocks.SPIRIT_MOSAIC_RECESS.get();
-            case "air_border"        -> ModBlocks.AIR_MOSAIC_BORDER.get();
-            case "air_geometric"     -> ModBlocks.AIR_MOSAIC_GEOMETRIC.get();
-            case "air_pattern"       -> ModBlocks.AIR_MOSAIC_PATTERN.get();
-            case "air_delicate"      -> ModBlocks.AIR_MOSAIC_DELICATE.get();
-            case "air_traditional"   -> ModBlocks.AIR_MOSAIC_TRADITIONAL.get();
+            case "air_border"        -> OttBlocks.AIR_MOSAIC_BORDER.get();
+            case "air_geometric"     -> OttBlocks.AIR_MOSAIC_GEOMETRIC.get();
+            case "air_pattern"       -> OttBlocks.AIR_MOSAIC_PATTERN.get();
+            case "air_delicate"      -> OttBlocks.AIR_MOSAIC_DELICATE.get();
+            case "air_traditional"   -> OttBlocks.AIR_MOSAIC_TRADITIONAL.get();
             case "air_recess"        -> ModBlocks.AIR_MOSAIC_RECESS.get();
             default -> throw new IllegalArgumentException("Unknown mosaic: " + element + "_" + type);
         };

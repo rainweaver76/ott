@@ -1174,6 +1174,94 @@ public class OttBlocks {
     public static final DeferredBlock<Block> WARPED_WINDOW_TILES_CTM = register("warped_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
 
+    // ===== WAVE 2b (multi-line full cubes) =====
+        public static final DeferredBlock<Block> SOUL_GLASS = register("soul_glass",
+                () -> new TransparentBlock(Properties.of().strength(0.3F).sound(SoundType.GLASS).noOcclusion()
+                        .isValidSpawn((state, level, pos, type) -> false)
+                        .isRedstoneConductor((state, level, pos) -> false)
+                        .isSuffocating((state, level, pos) -> false)
+                        .isViewBlocking((state, level, pos) -> false)));
+        public static final DeferredBlock<Block> SOUL_GLASS_CTM = register("soul_glass_ctm",
+                () -> new TransparentBlock(Properties.of().strength(0.3F).sound(SoundType.GLASS).noOcclusion()
+                        .isValidSpawn((state, level, pos, type) -> false)
+                        .isRedstoneConductor((state, level, pos) -> false)
+                        .isSuffocating((state, level, pos) -> false)
+                        .isViewBlocking((state, level, pos) -> false)));
+        public static final DeferredBlock<Block> WATER_MOSAIC_BORDER = register("water_mosaic_border",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> WATER_MOSAIC_GEOMETRIC = register("water_mosaic_geometric",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> WATER_MOSAIC_PATTERN = register("water_mosaic_pattern",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> WATER_MOSAIC_DELICATE = register("water_mosaic_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> WATER_MOSAIC_TRADITIONAL = register("water_mosaic_traditional",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> EARTH_MOSAIC_BORDER = register("earth_mosaic_border",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> EARTH_MOSAIC_GEOMETRIC = register("earth_mosaic_geometric",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> EARTH_MOSAIC_PATTERN = register("earth_mosaic_pattern",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> EARTH_MOSAIC_DELICATE = register("earth_mosaic_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> EARTH_MOSAIC_TRADITIONAL = register("earth_mosaic_traditional",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> FIRE_MOSAIC_BORDER = register("fire_mosaic_border",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> FIRE_MOSAIC_GEOMETRIC = register("fire_mosaic_geometric",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> FIRE_MOSAIC_PATTERN = register("fire_mosaic_pattern",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> FIRE_MOSAIC_DELICATE = register("fire_mosaic_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> FIRE_MOSAIC_TRADITIONAL = register("fire_mosaic_traditional",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> SPIRIT_MOSAIC_BORDER = register("spirit_mosaic_border",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> SPIRIT_MOSAIC_GEOMETRIC = register("spirit_mosaic_geometric",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> SPIRIT_MOSAIC_PATTERN = register("spirit_mosaic_pattern",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> SPIRIT_MOSAIC_DELICATE = register("spirit_mosaic_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> SPIRIT_MOSAIC_TRADITIONAL = register("spirit_mosaic_traditional",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> AIR_MOSAIC_BORDER = register("air_mosaic_border",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> AIR_MOSAIC_GEOMETRIC = register("air_mosaic_geometric",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> AIR_MOSAIC_PATTERN = register("air_mosaic_pattern",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> AIR_MOSAIC_DELICATE = register("air_mosaic_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> AIR_MOSAIC_TRADITIONAL = register("air_mosaic_traditional",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> MOSAIC_FLOOR = register("mosaic_floor",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> MOSAIC_FLOOR_DELICATE = register("mosaic_floor_delicate",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> MOSAIC_FLOOR_ROSETTE = register("mosaic_floor_rosette",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> ROMAN_FRESCO_RED = register("roman_fresco_red",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> ROMAN_FRESCO_BLACK = register("roman_fresco_black",
+                () -> new Block(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+        public static final DeferredBlock<Block> LIMESTONE_MASONRY = register("limestone_masonry",
+                () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+        public static final DeferredBlock<Block> COBBLED_LIMESTONE = register("cobbled_limestone",
+                () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+        public static final DeferredBlock<Block> PLAIN_LIMESTONE = register("limestone",
+                () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+        public static final DeferredBlock<Block> MIXED_LIMESTONE_BRICKS = register("mixed_limestone_bricks",
+                () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+        public static final DeferredBlock<Block> ROOFING_SLATES = register("roofing_slates",
+                () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+        public static final DeferredBlock<Block> WHEAT_THATCH = register("wheat_thatch",
+                () -> new Block(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+        public static final DeferredBlock<Block> BAMBOO_THATCH = register("bamboo_thatch",
+                () -> new Block(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);

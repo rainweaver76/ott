@@ -516,28 +516,28 @@ public enum OttCreativeCategories {
      }),
 
     MOSAIC("mosaic",
-            () -> ModBlocks.WATER_MOSAIC_TRADITIONAL.get().asItem(),
+            () -> OttBlocks.WATER_MOSAIC_TRADITIONAL.get().asItem(),
             (params, output) -> {
-                output.accept(ModBlocks.WATER_MOSAIC_BORDER);
-                output.accept(ModBlocks.WATER_MOSAIC_GEOMETRIC);
-                output.accept(ModBlocks.WATER_MOSAIC_PATTERN);
-                output.accept(ModBlocks.WATER_MOSAIC_DELICATE);
-                output.accept(ModBlocks.EARTH_MOSAIC_BORDER);
-                output.accept(ModBlocks.EARTH_MOSAIC_GEOMETRIC);
-                output.accept(ModBlocks.EARTH_MOSAIC_PATTERN);
-                output.accept(ModBlocks.EARTH_MOSAIC_DELICATE);
-                output.accept(ModBlocks.FIRE_MOSAIC_BORDER);
-                output.accept(ModBlocks.FIRE_MOSAIC_GEOMETRIC);
-                output.accept(ModBlocks.FIRE_MOSAIC_PATTERN);
-                output.accept(ModBlocks.FIRE_MOSAIC_DELICATE);
-                output.accept(ModBlocks.SPIRIT_MOSAIC_BORDER);
-                output.accept(ModBlocks.SPIRIT_MOSAIC_GEOMETRIC);
-                output.accept(ModBlocks.SPIRIT_MOSAIC_PATTERN);
-                output.accept(ModBlocks.SPIRIT_MOSAIC_DELICATE);
-                output.accept(ModBlocks.AIR_MOSAIC_BORDER);
-                output.accept(ModBlocks.AIR_MOSAIC_GEOMETRIC);
-                output.accept(ModBlocks.AIR_MOSAIC_PATTERN);
-                output.accept(ModBlocks.AIR_MOSAIC_DELICATE);
+                output.accept(OttBlocks.WATER_MOSAIC_BORDER);
+                output.accept(OttBlocks.WATER_MOSAIC_GEOMETRIC);
+                output.accept(OttBlocks.WATER_MOSAIC_PATTERN);
+                output.accept(OttBlocks.WATER_MOSAIC_DELICATE);
+                output.accept(OttBlocks.EARTH_MOSAIC_BORDER);
+                output.accept(OttBlocks.EARTH_MOSAIC_GEOMETRIC);
+                output.accept(OttBlocks.EARTH_MOSAIC_PATTERN);
+                output.accept(OttBlocks.EARTH_MOSAIC_DELICATE);
+                output.accept(OttBlocks.FIRE_MOSAIC_BORDER);
+                output.accept(OttBlocks.FIRE_MOSAIC_GEOMETRIC);
+                output.accept(OttBlocks.FIRE_MOSAIC_PATTERN);
+                output.accept(OttBlocks.FIRE_MOSAIC_DELICATE);
+                output.accept(OttBlocks.SPIRIT_MOSAIC_BORDER);
+                output.accept(OttBlocks.SPIRIT_MOSAIC_GEOMETRIC);
+                output.accept(OttBlocks.SPIRIT_MOSAIC_PATTERN);
+                output.accept(OttBlocks.SPIRIT_MOSAIC_DELICATE);
+                output.accept(OttBlocks.AIR_MOSAIC_BORDER);
+                output.accept(OttBlocks.AIR_MOSAIC_GEOMETRIC);
+                output.accept(OttBlocks.AIR_MOSAIC_PATTERN);
+                output.accept(OttBlocks.AIR_MOSAIC_DELICATE);
 
                 // Mosaic traditional base blocks + stone-set shapes
                 java.util.function.BiConsumer<net.neoforged.neoforge.registries.DeferredBlock<?>, String> mosaicEmit =
@@ -554,19 +554,19 @@ public enum OttCreativeCategories {
                     output.accept(set.supportSlab());
                     output.accept(set.supportBeam());
                 };
-                mosaicEmit.accept(ModBlocks.WATER_MOSAIC_TRADITIONAL,  "water_mosaic_traditional");
-                mosaicEmit.accept(ModBlocks.EARTH_MOSAIC_TRADITIONAL,  "earth_mosaic_traditional");
-                mosaicEmit.accept(ModBlocks.FIRE_MOSAIC_TRADITIONAL,   "fire_mosaic_traditional");
-                mosaicEmit.accept(ModBlocks.SPIRIT_MOSAIC_TRADITIONAL, "spirit_mosaic_traditional");
-                mosaicEmit.accept(ModBlocks.AIR_MOSAIC_TRADITIONAL,    "air_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.WATER_MOSAIC_TRADITIONAL,  "water_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.EARTH_MOSAIC_TRADITIONAL,  "earth_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.FIRE_MOSAIC_TRADITIONAL,   "fire_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.SPIRIT_MOSAIC_TRADITIONAL, "spirit_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.AIR_MOSAIC_TRADITIONAL,    "air_mosaic_traditional");
 
-                output.accept(ModBlocks.MOSAIC_FLOOR);
-                output.accept(ModBlocks.MOSAIC_FLOOR_DELICATE);
-                output.accept(ModBlocks.MOSAIC_FLOOR_ROSETTE);
-                output.accept(ModBlocks.ROMAN_FRESCO_RED);
-                output.accept(ModBlocks.ROMAN_FRESCO_BLACK);
+                output.accept(OttBlocks.MOSAIC_FLOOR);
+                output.accept(OttBlocks.MOSAIC_FLOOR_DELICATE);
+                output.accept(OttBlocks.MOSAIC_FLOOR_ROSETTE);
+                output.accept(OttBlocks.ROMAN_FRESCO_RED);
+                output.accept(OttBlocks.ROMAN_FRESCO_BLACK);
 
-                output.accept(ModBlocks.LIMESTONE_MASONRY);
+                output.accept(OttBlocks.LIMESTONE_MASONRY);
                 output.accept(ModBlocks.LIMESTONE_MASONRY_EDGE);
                 output.accept(ModBlocks.LIMESTONE_MASONRY_PLATE);
 
@@ -624,7 +624,7 @@ public enum OttCreativeCategories {
 
     // ── Custom OTT Stone Sets ─────────────────────────────────────────────────
     STONE_CUSTOM("stone_custom",
-            () -> ModBlocks.PLAIN_LIMESTONE.get().asItem(),
+            () -> OttBlocks.PLAIN_LIMESTONE.get().asItem(),
             (params, output) -> {
                 // Helper: emit base block then its 8 stone-set shapes
                 java.util.function.Consumer<String> emit = name -> {
@@ -640,10 +640,10 @@ public enum OttCreativeCategories {
                     output.accept(set.supportBeam());
                 };
 
-                output.accept(ModBlocks.PLAIN_LIMESTONE);      emit.accept("limestone");
-                output.accept(ModBlocks.COBBLED_LIMESTONE);    emit.accept("cobbled_limestone");
+                output.accept(OttBlocks.PLAIN_LIMESTONE);      emit.accept("limestone");
+                output.accept(OttBlocks.COBBLED_LIMESTONE);    emit.accept("cobbled_limestone");
                 output.accept(OttBlocks.REFINED_GLOWSTONE);    emit.accept("refined_glowstone");
-                output.accept(ModBlocks.ROOFING_SLATES);       emit.accept("roofing_slates");
+                output.accept(OttBlocks.ROOFING_SLATES);       emit.accept("roofing_slates");
 
                 output.accept(OttBlocks.BLACK_MARBLE);                emit.accept("black_marble");
                 output.accept(OttBlocks.BLACK_MARBLE_BRICKS);         emit.accept("black_marble_bricks");
@@ -782,23 +782,23 @@ public enum OttCreativeCategories {
             }),
 
     BLOCKS("blocks",
-            () -> ModBlocks.MIXED_LIMESTONE_BRICKS.get().asItem(),
+            () -> OttBlocks.MIXED_LIMESTONE_BRICKS.get().asItem(),
             (params, output) -> {
-                output.accept(ModBlocks.MIXED_LIMESTONE_BRICKS);
+                output.accept(OttBlocks.MIXED_LIMESTONE_BRICKS);
                 ModBlocks.SEAGLASS.forEach(output::accept);  // ethereal seaglass only
                 ModBlocks.TESTBLOCK.forEach(output::accept);
 
-                output.accept(ModBlocks.WHEAT_THATCH);
+                output.accept(OttBlocks.WHEAT_THATCH);
                 output.accept(ModBlocks.WHEAT_THATCH_EDGE);
                 output.accept(ModBlocks.WHEAT_THATCH_PLATE);
 
-                output.accept(ModBlocks.BAMBOO_THATCH);
+                output.accept(OttBlocks.BAMBOO_THATCH);
                 output.accept(ModBlocks.BAMBOO_THATCH_EDGE);
                 output.accept(ModBlocks.BAMBOO_THATCH_PLATE);
 
-                output.accept(ModBlocks.SOUL_GLASS);
+                output.accept(OttBlocks.SOUL_GLASS);
                 output.accept(ModBlocks.SOUL_GLASS_PANE);
-                output.accept(ModBlocks.SOUL_GLASS_CTM);
+                output.accept(OttBlocks.SOUL_GLASS_CTM);
                 output.accept(ModBlocks.SOUL_GLASS_CTM_PANE);
 
                 // Opal crystal sets — raw stone blocks only; buds/crystals are in MISC, decorative in ENGRAVED

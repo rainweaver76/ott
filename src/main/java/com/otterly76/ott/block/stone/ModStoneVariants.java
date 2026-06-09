@@ -208,10 +208,10 @@ public class ModStoneVariants {
     // ── Group 8: OTT Custom Stone ────────────────────────────────────────────────
 
     public static final List<StoneVariant> CUSTOM = List.of(
-            of("limestone",                         ModBlocks.PLAIN_LIMESTONE,                        "ott:block/limestone/limestone"),
-            of("cobbled_limestone",                 ModBlocks.COBBLED_LIMESTONE,                      "ott:block/limestone/cobbled_limestone"),
+            of("limestone",                         OttBlocks.PLAIN_LIMESTONE,                        "ott:block/limestone/limestone"),
+            of("cobbled_limestone",                 OttBlocks.COBBLED_LIMESTONE,                      "ott:block/limestone/cobbled_limestone"),
             of("refined_glowstone",                 OttBlocks.REFINED_GLOWSTONE,                      "ott:block/glowstone/refined_glowstone"),
-            of("roofing_slates",                    ModBlocks.ROOFING_SLATES,                         "ott:block/misc/roofing_slates"),
+            of("roofing_slates",                    OttBlocks.ROOFING_SLATES,                         "ott:block/misc/roofing_slates"),
             of("black_marble",                      OttBlocks.BLACK_MARBLE,                           "ott:block/black_marble/black_marble"),
             of("black_marble_bricks",               OttBlocks.BLACK_MARBLE_BRICKS,                    "ott:block/black_marble/black_marble_bricks"),
             of("black_marble_small_bricks",         OttBlocks.BLACK_MARBLE_SMALL_BRICKS,              "ott:block/black_marble/black_marble_small_bricks"),
@@ -289,11 +289,11 @@ public class ModStoneVariants {
     // ── Group 9: Traditional Mosaic ──────────────────────────────────────────────
 
     public static final List<StoneVariant> MOSAIC_TRADITIONAL = List.of(
-            of("water_mosaic_traditional",   ModBlocks.WATER_MOSAIC_TRADITIONAL,  "ott:block/water_mosaic/water_mosaic_traditional"),
-            of("earth_mosaic_traditional",   ModBlocks.EARTH_MOSAIC_TRADITIONAL,  "ott:block/earth_mosaic/earth_mosaic_traditional"),
-            of("fire_mosaic_traditional",    ModBlocks.FIRE_MOSAIC_TRADITIONAL,   "ott:block/fire_mosaic/fire_mosaic_traditional"),
-            of("spirit_mosaic_traditional",  ModBlocks.SPIRIT_MOSAIC_TRADITIONAL, "ott:block/spirit_mosaic/spirit_mosaic_traditional"),
-            of("air_mosaic_traditional",     ModBlocks.AIR_MOSAIC_TRADITIONAL,    "ott:block/air_mosaic/air_mosaic_traditional")
+            of("water_mosaic_traditional",   OttBlocks.WATER_MOSAIC_TRADITIONAL,  "ott:block/water_mosaic/water_mosaic_traditional"),
+            of("earth_mosaic_traditional",   OttBlocks.EARTH_MOSAIC_TRADITIONAL,  "ott:block/earth_mosaic/earth_mosaic_traditional"),
+            of("fire_mosaic_traditional",    OttBlocks.FIRE_MOSAIC_TRADITIONAL,   "ott:block/fire_mosaic/fire_mosaic_traditional"),
+            of("spirit_mosaic_traditional",  OttBlocks.SPIRIT_MOSAIC_TRADITIONAL, "ott:block/spirit_mosaic/spirit_mosaic_traditional"),
+            of("air_mosaic_traditional",     OttBlocks.AIR_MOSAIC_TRADITIONAL,    "ott:block/air_mosaic/air_mosaic_traditional")
     );
 
     // ── Combined list ───────────────────────────────────────────────────────────

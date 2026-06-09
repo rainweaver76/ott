@@ -57,9 +57,7 @@ public class ModItems {
     public static final DeferredItem<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PHEASANT_FEATHER = ITEMS.register("pheasant_feather", () -> new Item(new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> SOUL_GLASS = registerBlockItem("soul_glass", ModBlocks.SOUL_GLASS);
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_PANE = registerBlockItem("soul_glass_pane", ModBlocks.SOUL_GLASS_PANE);
-    public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM = registerBlockItem("soul_glass_ctm", ModBlocks.SOUL_GLASS_CTM);
     public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM_PANE = registerBlockItem("soul_glass_ctm_pane", ModBlocks.SOUL_GLASS_CTM_PANE);
 
     // Opal crystal drop items
@@ -1566,41 +1564,11 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> WILDFIRE_CROWN = ITEMS.register("wildfire_crown", () -> new ArmorItem(ModArmorMaterials.WILDFIRE_CROWN, ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).durability(481).fireResistant()));
     public static final DeferredItem<Item> WILDFIRE_CROWN_FRAGMENT = ITEMS.register("wildfire_crown_fragment", () -> new Item(new Item.Properties().fireResistant()));
 
-    public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_BORDER = registerBlockItem("water_mosaic_border", ModBlocks.WATER_MOSAIC_BORDER);
-    public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_GEOMETRIC = registerBlockItem("water_mosaic_geometric", ModBlocks.WATER_MOSAIC_GEOMETRIC);
-    public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_PATTERN = registerBlockItem("water_mosaic_pattern", ModBlocks.WATER_MOSAIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_DELICATE = registerBlockItem("water_mosaic_delicate", ModBlocks.WATER_MOSAIC_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_TRADITIONAL = registerBlockItem("water_mosaic_traditional", ModBlocks.WATER_MOSAIC_TRADITIONAL);
     public static final DeferredHolder<Item, BlockItem> WATER_MOSAIC_RECESS = registerBlockItem("water_mosaic_recess", ModBlocks.WATER_MOSAIC_RECESS);
     public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_RECESS = registerBlockItem("spirit_mosaic_recess", ModBlocks.SPIRIT_MOSAIC_RECESS);
     public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_RECESS = registerBlockItem("air_mosaic_recess", ModBlocks.AIR_MOSAIC_RECESS);
     public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_RECESS = registerBlockItem("earth_mosaic_recess", ModBlocks.EARTH_MOSAIC_RECESS);
     public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_RECESS = registerBlockItem("fire_mosaic_recess", ModBlocks.FIRE_MOSAIC_RECESS);
-    public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_BORDER = registerBlockItem("earth_mosaic_border", ModBlocks.EARTH_MOSAIC_BORDER);
-    public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_GEOMETRIC = registerBlockItem("earth_mosaic_geometric", ModBlocks.EARTH_MOSAIC_GEOMETRIC);
-    public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_PATTERN = registerBlockItem("earth_mosaic_pattern", ModBlocks.EARTH_MOSAIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_DELICATE = registerBlockItem("earth_mosaic_delicate", ModBlocks.EARTH_MOSAIC_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> EARTH_MOSAIC_TRADITIONAL = registerBlockItem("earth_mosaic_traditional", ModBlocks.EARTH_MOSAIC_TRADITIONAL);
-    public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_BORDER = registerBlockItem("fire_mosaic_border", ModBlocks.FIRE_MOSAIC_BORDER);
-    public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_GEOMETRIC = registerBlockItem("fire_mosaic_geometric", ModBlocks.FIRE_MOSAIC_GEOMETRIC);
-    public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_PATTERN = registerBlockItem("fire_mosaic_pattern", ModBlocks.FIRE_MOSAIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_DELICATE = registerBlockItem("fire_mosaic_delicate", ModBlocks.FIRE_MOSAIC_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> FIRE_MOSAIC_TRADITIONAL = registerBlockItem("fire_mosaic_traditional", ModBlocks.FIRE_MOSAIC_TRADITIONAL);
-    public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_BORDER = registerBlockItem("spirit_mosaic_border", ModBlocks.SPIRIT_MOSAIC_BORDER);
-    public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_GEOMETRIC = registerBlockItem("spirit_mosaic_geometric", ModBlocks.SPIRIT_MOSAIC_GEOMETRIC);
-    public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_PATTERN = registerBlockItem("spirit_mosaic_pattern", ModBlocks.SPIRIT_MOSAIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_DELICATE = registerBlockItem("spirit_mosaic_delicate", ModBlocks.SPIRIT_MOSAIC_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> SPIRIT_MOSAIC_TRADITIONAL = registerBlockItem("spirit_mosaic_traditional", ModBlocks.SPIRIT_MOSAIC_TRADITIONAL);
-    public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_BORDER = registerBlockItem("air_mosaic_border", ModBlocks.AIR_MOSAIC_BORDER);
-    public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_GEOMETRIC = registerBlockItem("air_mosaic_geometric", ModBlocks.AIR_MOSAIC_GEOMETRIC);
-    public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_PATTERN = registerBlockItem("air_mosaic_pattern", ModBlocks.AIR_MOSAIC_PATTERN);
-    public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_DELICATE = registerBlockItem("air_mosaic_delicate", ModBlocks.AIR_MOSAIC_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> AIR_MOSAIC_TRADITIONAL = registerBlockItem("air_mosaic_traditional", ModBlocks.AIR_MOSAIC_TRADITIONAL);
-    public static final DeferredHolder<Item, BlockItem> MOSAIC_FLOOR = registerBlockItem("mosaic_floor", ModBlocks.MOSAIC_FLOOR);
-    public static final DeferredHolder<Item, BlockItem> MOSAIC_FLOOR_DELICATE = registerBlockItem("mosaic_floor_delicate", ModBlocks.MOSAIC_FLOOR_DELICATE);
-    public static final DeferredHolder<Item, BlockItem> MOSAIC_FLOOR_ROSETTE = registerBlockItem("mosaic_floor_rosette", ModBlocks.MOSAIC_FLOOR_ROSETTE);
-    public static final DeferredHolder<Item, BlockItem> ROMAN_FRESCO_RED = registerBlockItem("roman_fresco_red", ModBlocks.ROMAN_FRESCO_RED);
-    public static final DeferredHolder<Item, BlockItem> ROMAN_FRESCO_BLACK = registerBlockItem("roman_fresco_black", ModBlocks.ROMAN_FRESCO_BLACK);
 
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_ARROWSLIT = registerBlockItem("stone_bricks_arrowslit", ModBlocks.STONE_BRICKS_ARROWSLIT);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MACHICOLATION = registerBlockItem("stone_bricks_machicolation", ModBlocks.STONE_BRICKS_MACHICOLATION);
@@ -1610,12 +1578,8 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_SMALL_POOL = registerBlockItem("stone_bricks_small_pool", ModBlocks.STONE_BRICKS_SMALL_POOL);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_WATER_JET = registerBlockItem("stone_bricks_water_jet", ModBlocks.STONE_BRICKS_WATER_JET);
 
-    public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY = registerBlockItem("limestone_masonry", ModBlocks.LIMESTONE_MASONRY);
     public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_EDGE = registerBlockItem("limestone_masonry_edge", ModBlocks.LIMESTONE_MASONRY_EDGE);
     public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_PLATE = registerBlockItem("limestone_masonry_plate", ModBlocks.LIMESTONE_MASONRY_PLATE);
-    public static final DeferredHolder<Item, BlockItem> COBBLED_LIMESTONE = registerBlockItem("cobbled_limestone", ModBlocks.COBBLED_LIMESTONE);
-    public static final DeferredHolder<Item, BlockItem> PLAIN_LIMESTONE = registerBlockItem("limestone", ModBlocks.PLAIN_LIMESTONE);
-    public static final DeferredHolder<Item, BlockItem> MIXED_LIMESTONE_BRICKS = registerBlockItem("mixed_limestone_bricks", ModBlocks.MIXED_LIMESTONE_BRICKS);
 
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_FLOOR_TILE   = registerBlockItem("black_marble_floor_tile",   ModBlocks.BLACK_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_FLOOR_TILE   = registerBlockItem("white_marble_floor_tile",   ModBlocks.WHITE_MARBLE_FLOOR_TILE);
@@ -1668,12 +1632,9 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_CRENELATION = registerBlockItem("sandstone_crenelation", ModBlocks.SANDSTONE_CRENELATION);
 
-    public static final DeferredHolder<Item, BlockItem> ROOFING_SLATES = registerBlockItem("roofing_slates", ModBlocks.ROOFING_SLATES);
 
-    public static final DeferredHolder<Item, BlockItem> WHEAT_THATCH = registerBlockItem("wheat_thatch", ModBlocks.WHEAT_THATCH);
     public static final DeferredHolder<Item, BlockItem> WHEAT_THATCH_EDGE = registerBlockItem("wheat_thatch_edge", ModBlocks.WHEAT_THATCH_EDGE);
     public static final DeferredHolder<Item, BlockItem> WHEAT_THATCH_PLATE = registerBlockItem("wheat_thatch_plate", ModBlocks.WHEAT_THATCH_PLATE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_THATCH = registerBlockItem("bamboo_thatch", ModBlocks.BAMBOO_THATCH);
     public static final DeferredHolder<Item, BlockItem> BAMBOO_THATCH_EDGE = registerBlockItem("bamboo_thatch_edge", ModBlocks.BAMBOO_THATCH_EDGE);
     public static final DeferredHolder<Item, BlockItem> BAMBOO_THATCH_PLATE = registerBlockItem("bamboo_thatch_plate", ModBlocks.BAMBOO_THATCH_PLATE);
 

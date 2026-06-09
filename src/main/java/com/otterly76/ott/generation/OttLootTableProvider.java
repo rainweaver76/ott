@@ -3,6 +3,7 @@ package com.otterly76.ott.generation;
 import com.otterly76.ott.block.BigLilyPadBlock;
 import com.otterly76.ott.block.GradientStainedGlassBlock;
 import com.otterly76.ott.block.ModBlocks;
+import com.otterly76.ott_blocks.block.OttBlocks;
 import com.otterly76.ott.block.custom.CopperChestBlock;
 import com.otterly76.ott.block.custom.CopperGolemStatueBlock;
 import com.otterly76.ott.block.custom.RakedGravelBlock;
@@ -99,8 +100,8 @@ public class OttLootTableProvider extends BlockLootSubProvider {
                 this.add(block, (b) -> this.createPotFlowerItemTable(potted.getPotted()));
             } else if (block instanceof RakedGravelBlock) {
                 this.dropOther(block, Blocks.GRAVEL);
-            } else if (block == ModBlocks.PLAIN_LIMESTONE.get()) {
-                this.add(block, createSingleItemTableWithSilkTouch(block, ModBlocks.COBBLED_LIMESTONE.get()));
+            } else if (block == OttBlocks.PLAIN_LIMESTONE.get()) {
+                this.add(block, createSingleItemTableWithSilkTouch(block, OttBlocks.COBBLED_LIMESTONE.get()));
             } else if (opalCrystalBlocks.containsKey(block)) {
                 net.minecraft.world.item.Item crystal = opalCrystalBlocks.get(block);
                 this.add(block, b -> this.createSilkTouchDispatchTable(b,

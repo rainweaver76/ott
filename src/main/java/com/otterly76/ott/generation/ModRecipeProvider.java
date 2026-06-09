@@ -226,7 +226,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SimpleCookingRecipeBuilder.smelting(
                         Ingredient.of(Items.SOUL_SAND),
                         RecipeCategory.BUILDING_BLOCKS,
-                        ModBlocks.SOUL_GLASS.get(),
+                        OttBlocks.SOUL_GLASS.get(),
                         0.1F,
                         200
                 )
@@ -634,7 +634,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         // --- Wheat thatch: 6 wheat (2 rows) → 1 wheat_thatch ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHEAT_THATCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.WHEAT_THATCH.get())
                 .define('W', Items.WHEAT)
                 .pattern("WWW")
                 .pattern("WWW")
@@ -642,7 +642,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(exporter, getRecipePath("ott", "wheat_thatch"));
 
         // --- Bamboo thatch: 6 bamboo (2 rows) → 1 bamboo_thatch ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BAMBOO_THATCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.BAMBOO_THATCH.get())
                 .define('B', Items.BAMBOO)
                 .pattern("BBB")
                 .pattern("BBB")
@@ -650,9 +650,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(exporter, getRecipePath("ott", "bamboo_thatch"));
 
         // --- Cobbled limestone smelting → limestone ---
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(ModBlocks.COBBLED_LIMESTONE.get()),
-                        RecipeCategory.BUILDING_BLOCKS, ModBlocks.PLAIN_LIMESTONE.get(), 0.1F, 200)
-                .unlockedBy("has_cobbled_limestone", has(ModBlocks.COBBLED_LIMESTONE.get()))
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(OttBlocks.COBBLED_LIMESTONE.get()),
+                        RecipeCategory.BUILDING_BLOCKS, OttBlocks.PLAIN_LIMESTONE.get(), 0.1F, 200)
+                .unlockedBy("has_cobbled_limestone", has(OttBlocks.COBBLED_LIMESTONE.get()))
                 .save(exporter, getRecipePath("ott", "limestone_from_cobbled_limestone_smelting"));
 
         // --- Ornamented red wool: red_wool center + 4 gold nuggets at corners → 8 ---
@@ -1841,12 +1841,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         });
 
         // --- Static blocks with known shape variants ---
-        stonecutOne(exporter, ModBlocks.LIMESTONE_MASONRY.get(),                         ModBlocks.LIMESTONE_MASONRY_EDGE.get(),                        "limestone_masonry_edge_stonecutting");
-        stonecutOne(exporter, ModBlocks.LIMESTONE_MASONRY.get(),                         ModBlocks.LIMESTONE_MASONRY_PLATE.get(),                       "limestone_masonry_plate_stonecutting");
-        woodcutOne(exporter, ModBlocks.WHEAT_THATCH.get(),                              ModBlocks.WHEAT_THATCH_EDGE.get(),                             "wheat_thatch_edge_woodcutting");
-        woodcutOne(exporter, ModBlocks.WHEAT_THATCH.get(),                              ModBlocks.WHEAT_THATCH_PLATE.get(),                            "wheat_thatch_plate_woodcutting");
-        woodcutOne(exporter, ModBlocks.BAMBOO_THATCH.get(),                             ModBlocks.BAMBOO_THATCH_EDGE.get(),                            "bamboo_thatch_edge_woodcutting");
-        woodcutOne(exporter, ModBlocks.BAMBOO_THATCH.get(),                             ModBlocks.BAMBOO_THATCH_PLATE.get(),                           "bamboo_thatch_plate_woodcutting");
+        stonecutOne(exporter, OttBlocks.LIMESTONE_MASONRY.get(),                         ModBlocks.LIMESTONE_MASONRY_EDGE.get(),                        "limestone_masonry_edge_stonecutting");
+        stonecutOne(exporter, OttBlocks.LIMESTONE_MASONRY.get(),                         ModBlocks.LIMESTONE_MASONRY_PLATE.get(),                       "limestone_masonry_plate_stonecutting");
+        woodcutOne(exporter, OttBlocks.WHEAT_THATCH.get(),                              ModBlocks.WHEAT_THATCH_EDGE.get(),                             "wheat_thatch_edge_woodcutting");
+        woodcutOne(exporter, OttBlocks.WHEAT_THATCH.get(),                              ModBlocks.WHEAT_THATCH_PLATE.get(),                            "wheat_thatch_plate_woodcutting");
+        woodcutOne(exporter, OttBlocks.BAMBOO_THATCH.get(),                             ModBlocks.BAMBOO_THATCH_EDGE.get(),                            "bamboo_thatch_edge_woodcutting");
+        woodcutOne(exporter, OttBlocks.BAMBOO_THATCH.get(),                             ModBlocks.BAMBOO_THATCH_PLATE.get(),                           "bamboo_thatch_plate_woodcutting");
         // --- Sandstone slender from smooth sandstone (base blocks only; all shapes via stone set) ---
         stonecutOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_BRICKS.get(),            "sandstone_slender_bricks_from_smooth_sandstone_stonecutting");
         stonecutOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(), "sandstone_slender_turquoise_pattern_from_smooth_sandstone_stonecutting");
@@ -1862,43 +1862,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_POOL.get(),         "stone_bricks_pool_stonecutting");
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_SMALL_POOL.get(),   "stone_bricks_small_pool_stonecutting");
         // --- Limestone stonecutter source ---
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_TRADITIONAL.get(), "water_mosaic_traditional_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_BORDER.get(),      "water_mosaic_border_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_GEOMETRIC.get(),   "water_mosaic_geometric_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_PATTERN.get(),     "water_mosaic_pattern_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_DELICATE.get(),    "water_mosaic_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_RECESS.get(),      "water_mosaic_recess_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_RECESS.get(),     "spirit_mosaic_recess_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_RECESS.get(),      "earth_mosaic_recess_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_RECESS.get(),       "fire_mosaic_recess_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_TRADITIONAL.get(), "earth_mosaic_traditional_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_BORDER.get(),      "earth_mosaic_border_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_GEOMETRIC.get(),   "earth_mosaic_geometric_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_PATTERN.get(),     "earth_mosaic_pattern_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_DELICATE.get(),    "earth_mosaic_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_TRADITIONAL.get(),  "fire_mosaic_traditional_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_BORDER.get(),       "fire_mosaic_border_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_GEOMETRIC.get(),    "fire_mosaic_geometric_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_PATTERN.get(),      "fire_mosaic_pattern_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_DELICATE.get(),     "fire_mosaic_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_TRADITIONAL.get(), "spirit_mosaic_traditional_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_BORDER.get(),     "spirit_mosaic_border_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),  "spirit_mosaic_geometric_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_PATTERN.get(),    "spirit_mosaic_pattern_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_DELICATE.get(),   "spirit_mosaic_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_RECESS.get(),        "air_mosaic_recess_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_TRADITIONAL.get(),   "air_mosaic_traditional_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_BORDER.get(),        "air_mosaic_border_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_GEOMETRIC.get(),     "air_mosaic_geometric_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_PATTERN.get(),       "air_mosaic_pattern_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_DELICATE.get(),      "air_mosaic_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MOSAIC_FLOOR.get(),             "mosaic_floor_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MOSAIC_FLOOR_DELICATE.get(),    "mosaic_floor_delicate_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MOSAIC_FLOOR_ROSETTE.get(),     "mosaic_floor_rosette_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.ROMAN_FRESCO_RED.get(),         "roman_fresco_red_from_limestone_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.ROMAN_FRESCO_BLACK.get(),       "roman_fresco_black_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_TRADITIONAL.get(), "water_mosaic_traditional_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_BORDER.get(),      "water_mosaic_border_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),   "water_mosaic_geometric_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_PATTERN.get(),     "water_mosaic_pattern_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_DELICATE.get(),    "water_mosaic_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), ModBlocks.WATER_MOSAIC_RECESS.get(),      "water_mosaic_recess_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), ModBlocks.SPIRIT_MOSAIC_RECESS.get(),     "spirit_mosaic_recess_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), ModBlocks.EARTH_MOSAIC_RECESS.get(),      "earth_mosaic_recess_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), ModBlocks.FIRE_MOSAIC_RECESS.get(),       "fire_mosaic_recess_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.EARTH_MOSAIC_TRADITIONAL.get(), "earth_mosaic_traditional_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.EARTH_MOSAIC_BORDER.get(),      "earth_mosaic_border_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.EARTH_MOSAIC_GEOMETRIC.get(),   "earth_mosaic_geometric_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.EARTH_MOSAIC_PATTERN.get(),     "earth_mosaic_pattern_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.EARTH_MOSAIC_DELICATE.get(),    "earth_mosaic_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.FIRE_MOSAIC_TRADITIONAL.get(),  "fire_mosaic_traditional_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.FIRE_MOSAIC_BORDER.get(),       "fire_mosaic_border_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.FIRE_MOSAIC_GEOMETRIC.get(),    "fire_mosaic_geometric_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.FIRE_MOSAIC_PATTERN.get(),      "fire_mosaic_pattern_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.FIRE_MOSAIC_DELICATE.get(),     "fire_mosaic_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get(), "spirit_mosaic_traditional_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.SPIRIT_MOSAIC_BORDER.get(),     "spirit_mosaic_border_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),  "spirit_mosaic_geometric_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.SPIRIT_MOSAIC_PATTERN.get(),    "spirit_mosaic_pattern_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.SPIRIT_MOSAIC_DELICATE.get(),   "spirit_mosaic_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), ModBlocks.AIR_MOSAIC_RECESS.get(),        "air_mosaic_recess_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.AIR_MOSAIC_TRADITIONAL.get(),   "air_mosaic_traditional_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.AIR_MOSAIC_BORDER.get(),        "air_mosaic_border_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.AIR_MOSAIC_GEOMETRIC.get(),     "air_mosaic_geometric_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.AIR_MOSAIC_PATTERN.get(),       "air_mosaic_pattern_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.AIR_MOSAIC_DELICATE.get(),      "air_mosaic_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.MOSAIC_FLOOR.get(),             "mosaic_floor_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.MOSAIC_FLOOR_DELICATE.get(),    "mosaic_floor_delicate_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.MOSAIC_FLOOR_ROSETTE.get(),     "mosaic_floor_rosette_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.ROMAN_FRESCO_RED.get(),         "roman_fresco_red_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.ROMAN_FRESCO_BLACK.get(),       "roman_fresco_black_from_limestone_stonecutting");
         // --- Limestone masonry from limestone ---
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.LIMESTONE_MASONRY.get(), "limestone_masonry_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.LIMESTONE_MASONRY.get(), "limestone_masonry_from_limestone_stonecutting");
         // --- Black marble stonecutting ---
         stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), OttBlocks.BLACK_MARBLE_BRICKS.get(),       "black_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.BLACK_MARBLE.get(), OttBlocks.BLACK_MARBLE_SMALL_BRICKS.get(), "black_marble_small_bricks_stonecutting");
@@ -2007,7 +2007,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(),  "yellow_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FLOOR_TILE.get(),   "yellow_marble_floor_tile_stonecutting");
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),  "yellow_marble_diamond_pavers_stonecutting");
-        stonecutOne(exporter, ModBlocks.PLAIN_LIMESTONE.get(), ModBlocks.MIXED_LIMESTONE_BRICKS.get(), "mixed_limestone_bricks_from_limestone_stonecutting");
+        stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.MIXED_LIMESTONE_BRICKS.get(), "mixed_limestone_bricks_from_limestone_stonecutting");
         // --- Chiseled plastered stone from matching plastered stone ---
         ModBlocks.PATTERN_BLOCKS.get("plastered_stone").forEach((color, base) -> {
             var chiseled = ModBlocks.PATTERN_BLOCKS.get("chiseled_plastered_stone");
@@ -2241,42 +2241,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.STONE_BRICKS, OttBlocks.STONE_BRICKS_MASONRY,          "stone_bricks_masonry_engraving");
 
         // ── Limestone → variants ──────────────────────────────────────────────────
-        engraveOne(exporter, ModBlocks.PLAIN_LIMESTONE, ModBlocks.MIXED_LIMESTONE_BRICKS,  "mixed_limestone_bricks_engraving");
-        engraveOne(exporter, ModBlocks.PLAIN_LIMESTONE, ModBlocks.LIMESTONE_MASONRY,       "limestone_masonry_engraving");
+        engraveOne(exporter, OttBlocks.PLAIN_LIMESTONE, OttBlocks.MIXED_LIMESTONE_BRICKS,  "mixed_limestone_bricks_engraving");
+        engraveOne(exporter, OttBlocks.PLAIN_LIMESTONE, OttBlocks.LIMESTONE_MASONRY,       "limestone_masonry_engraving");
 
         // ── Smooth sandstone → mosaic + decorative ───────────────────────────────
         engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_BRICKS,          "sandstone_slender_bricks_engraving");
         engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,"sandstone_slender_turquoise_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.AIR_MOSAIC_BORDER,                  "air_mosaic_border_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.AIR_MOSAIC_GEOMETRIC,               "air_mosaic_geometric_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.AIR_MOSAIC_PATTERN,                 "air_mosaic_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.AIR_MOSAIC_DELICATE,                "air_mosaic_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.AIR_MOSAIC_TRADITIONAL,             "air_mosaic_traditional_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.EARTH_MOSAIC_BORDER,                "earth_mosaic_border_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.EARTH_MOSAIC_GEOMETRIC,             "earth_mosaic_geometric_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.EARTH_MOSAIC_PATTERN,               "earth_mosaic_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.EARTH_MOSAIC_DELICATE,              "earth_mosaic_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.EARTH_MOSAIC_TRADITIONAL,           "earth_mosaic_traditional_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.FIRE_MOSAIC_BORDER,                 "fire_mosaic_border_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.FIRE_MOSAIC_GEOMETRIC,              "fire_mosaic_geometric_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.FIRE_MOSAIC_PATTERN,                "fire_mosaic_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.FIRE_MOSAIC_DELICATE,               "fire_mosaic_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.FIRE_MOSAIC_TRADITIONAL,            "fire_mosaic_traditional_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.WATER_MOSAIC_BORDER,                "water_mosaic_border_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.WATER_MOSAIC_GEOMETRIC,             "water_mosaic_geometric_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.WATER_MOSAIC_PATTERN,               "water_mosaic_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.WATER_MOSAIC_DELICATE,              "water_mosaic_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.WATER_MOSAIC_TRADITIONAL,           "water_mosaic_traditional_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.SPIRIT_MOSAIC_BORDER,               "spirit_mosaic_border_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.SPIRIT_MOSAIC_GEOMETRIC,            "spirit_mosaic_geometric_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.SPIRIT_MOSAIC_PATTERN,              "spirit_mosaic_pattern_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.SPIRIT_MOSAIC_DELICATE,             "spirit_mosaic_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.SPIRIT_MOSAIC_TRADITIONAL,          "spirit_mosaic_traditional_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.MOSAIC_FLOOR,                       "mosaic_floor_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.MOSAIC_FLOOR_DELICATE,              "mosaic_floor_delicate_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.MOSAIC_FLOOR_ROSETTE,               "mosaic_floor_rosette_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.ROMAN_FRESCO_RED,                   "roman_fresco_red_engraving");
-        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, ModBlocks.ROMAN_FRESCO_BLACK,                 "roman_fresco_black_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_BORDER,                  "air_mosaic_border_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_GEOMETRIC,               "air_mosaic_geometric_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_PATTERN,                 "air_mosaic_pattern_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_DELICATE,                "air_mosaic_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_TRADITIONAL,             "air_mosaic_traditional_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_BORDER,                "earth_mosaic_border_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_GEOMETRIC,             "earth_mosaic_geometric_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_PATTERN,               "earth_mosaic_pattern_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_DELICATE,              "earth_mosaic_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_TRADITIONAL,           "earth_mosaic_traditional_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_BORDER,                 "fire_mosaic_border_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_GEOMETRIC,              "fire_mosaic_geometric_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_PATTERN,                "fire_mosaic_pattern_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_DELICATE,               "fire_mosaic_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_TRADITIONAL,            "fire_mosaic_traditional_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_BORDER,                "water_mosaic_border_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_GEOMETRIC,             "water_mosaic_geometric_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_PATTERN,               "water_mosaic_pattern_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_DELICATE,              "water_mosaic_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_TRADITIONAL,           "water_mosaic_traditional_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_BORDER,               "spirit_mosaic_border_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_GEOMETRIC,            "spirit_mosaic_geometric_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_PATTERN,              "spirit_mosaic_pattern_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_DELICATE,             "spirit_mosaic_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_TRADITIONAL,          "spirit_mosaic_traditional_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR,                       "mosaic_floor_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR_DELICATE,              "mosaic_floor_delicate_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR_ROSETTE,               "mosaic_floor_rosette_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.ROMAN_FRESCO_RED,                   "roman_fresco_red_engraving");
+        engraveOne(exporter, Blocks.SMOOTH_SANDSTONE, OttBlocks.ROMAN_FRESCO_BLACK,                 "roman_fresco_black_engraving");
 
         // ── Vanilla CTM blocks (one CTM variant each) ────────────────────────────
 
@@ -3282,7 +3282,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Blocks.LAPIS_BLOCK
 
 
-        // ModBlocks.MIXED_LIMESTONE_BRICKS
+        // OttBlocks.MIXED_LIMESTONE_BRICKS
 
         // Blocks.MANGROVE_PLANKS
 
@@ -4192,8 +4192,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.LIME_CONCRETE, ModBlocks.LIME_CONCRETE_PANEL, "lime_concrete_panel_engraving");
         engraveOne(exporter, Blocks.LIME_TERRACOTTA, ModBlocks.LIME_TERRACOTTA_COLUMN, "lime_terracotta_column_engraving");
         engraveOne(exporter, Blocks.LIME_TERRACOTTA, ModBlocks.LIME_TERRACOTTA_CTM, "lime_terracotta_pillar_engraving");
-        engraveOne(exporter, ModBlocks.MIXED_LIMESTONE_BRICKS, OttBlocks.LIMESTONE_CUT_POLISHED.get(), "limestone_cut_polished_engraving");
-        engraveOne(exporter, ModBlocks.MIXED_LIMESTONE_BRICKS, OttBlocks.LIMESTONE_CUT_SMALL_BRICK.get(), "limestone_cut_small_brick_engraving");
+        engraveOne(exporter, OttBlocks.MIXED_LIMESTONE_BRICKS, OttBlocks.LIMESTONE_CUT_POLISHED.get(), "limestone_cut_polished_engraving");
+        engraveOne(exporter, OttBlocks.MIXED_LIMESTONE_BRICKS, OttBlocks.LIMESTONE_CUT_SMALL_BRICK.get(), "limestone_cut_small_brick_engraving");
         engraveOne(exporter, Blocks.MUD, ModBlocks.LOREFUL_MUD, "loreful_mud_engraving");
         engraveOne(exporter, Blocks.MUD_BRICKS, ModBlocks.LOREFUL_MUD_BRICKS, "loreful_mud_bricks_engraving");
         engraveOne(exporter, Blocks.PACKED_MUD, ModBlocks.LOREFUL_PACKED_MUD, "loreful_packed_mud_engraving");

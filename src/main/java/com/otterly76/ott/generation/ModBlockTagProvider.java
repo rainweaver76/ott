@@ -290,9 +290,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "logs"))).addTag(BlockTags.LOGS);
 
         // --- 5. STATIC & INDIVIDUAL ADDITIONS ---
-        pickaxeTag.add(ModBlocks.MIXED_LIMESTONE_BRICKS.value()); this.tag(doDefaultKey).add(ModBlocks.MIXED_LIMESTONE_BRICKS.value());
-        pickaxeTag.add(ModBlocks.PLAIN_LIMESTONE.value());
-        needsStoneToolTag.add(ModBlocks.PLAIN_LIMESTONE.value());
+        pickaxeTag.add(OttBlocks.MIXED_LIMESTONE_BRICKS.value()); this.tag(doDefaultKey).add(OttBlocks.MIXED_LIMESTONE_BRICKS.value());
+        pickaxeTag.add(OttBlocks.PLAIN_LIMESTONE.value());
+        needsStoneToolTag.add(OttBlocks.PLAIN_LIMESTONE.value());
         ModBlocks.SEAGLASS.forEach(d -> {
             this.tag(BlockTags.IMPERMEABLE).add(d.value());
             pickaxeTag.add(d.value());
@@ -312,11 +312,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         });
         ModBlocks.TESTBLOCK.forEach(d -> this.tag(doDefaultKey).add(d.value()));
         this.tag(doDefaultKey).add(OttBlocks.PINK_SALT_BLOCK.get(), OttBlocks.POLISHED_PINK_SALT_BLOCK.get());
-        this.tag(doDefaultKey).add(ModBlocks.WATER_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(ModBlocks.EARTH_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(ModBlocks.FIRE_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(ModBlocks.SPIRIT_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(ModBlocks.AIR_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(OttBlocks.WATER_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(OttBlocks.EARTH_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(OttBlocks.FIRE_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(OttBlocks.AIR_MOSAIC_TRADITIONAL.get());
         ModBlocks.PARTICLE_HEDGES.values().forEach(h -> this.tag(doDefaultKey).add(h.value()));
         ModBlocks.PATTERN_BLOCKS.values().forEach(colorMap -> colorMap.values().forEach(d -> this.tag(doDefaultKey).add(d.value())));
         ModBlocks.FUTONS.values().forEach(d -> {
@@ -325,12 +325,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         });
 
         this.tag(doDefaultKey).add(
-                ModBlocks.PLAIN_LIMESTONE.get(),
-                ModBlocks.COBBLED_LIMESTONE.get(),
+                OttBlocks.PLAIN_LIMESTONE.get(),
+                OttBlocks.COBBLED_LIMESTONE.get(),
                 OttBlocks.REFINED_GLOWSTONE.get(),
-                ModBlocks.WHEAT_THATCH.get(),
-                ModBlocks.BAMBOO_THATCH.get(),
-                ModBlocks.ROOFING_SLATES.get(),
+                OttBlocks.WHEAT_THATCH.get(),
+                OttBlocks.BAMBOO_THATCH.get(),
+                OttBlocks.ROOFING_SLATES.get(),
                 OttBlocks.BLACK_MARBLE.get(),
                 OttBlocks.BLACK_MARBLE_BRICKS.get(),
                 OttBlocks.BLACK_MARBLE_SMALL_BRICKS.get(),
@@ -356,32 +356,32 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.DELICATE_GREEN_WOOL.get(),
                 OttBlocks.ORNAMENTED_PURPLE_WOOL.get(),
                 OttBlocks.DELICATE_PURPLE_WOOL.get(),
-                ModBlocks.WATER_MOSAIC_BORDER.get(),
-                ModBlocks.WATER_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.WATER_MOSAIC_PATTERN.get(),
-                ModBlocks.WATER_MOSAIC_DELICATE.get(),
-                ModBlocks.EARTH_MOSAIC_BORDER.get(),
-                ModBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.EARTH_MOSAIC_PATTERN.get(),
-                ModBlocks.EARTH_MOSAIC_DELICATE.get(),
-                ModBlocks.FIRE_MOSAIC_BORDER.get(),
-                ModBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.FIRE_MOSAIC_PATTERN.get(),
-                ModBlocks.FIRE_MOSAIC_DELICATE.get(),
-                ModBlocks.SPIRIT_MOSAIC_BORDER.get(),
-                ModBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.SPIRIT_MOSAIC_PATTERN.get(),
-                ModBlocks.SPIRIT_MOSAIC_DELICATE.get(),
-                ModBlocks.AIR_MOSAIC_BORDER.get(),
-                ModBlocks.AIR_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.AIR_MOSAIC_PATTERN.get(),
-                ModBlocks.AIR_MOSAIC_DELICATE.get(),
-                ModBlocks.MOSAIC_FLOOR.get(),
-                ModBlocks.MOSAIC_FLOOR_DELICATE.get(),
-                ModBlocks.MOSAIC_FLOOR_ROSETTE.get(),
-                ModBlocks.ROMAN_FRESCO_RED.get(),
-                ModBlocks.ROMAN_FRESCO_BLACK.get(),
-                ModBlocks.LIMESTONE_MASONRY.get()
+                OttBlocks.WATER_MOSAIC_BORDER.get(),
+                OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.WATER_MOSAIC_PATTERN.get(),
+                OttBlocks.WATER_MOSAIC_DELICATE.get(),
+                OttBlocks.EARTH_MOSAIC_BORDER.get(),
+                OttBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.EARTH_MOSAIC_PATTERN.get(),
+                OttBlocks.EARTH_MOSAIC_DELICATE.get(),
+                OttBlocks.FIRE_MOSAIC_BORDER.get(),
+                OttBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.FIRE_MOSAIC_PATTERN.get(),
+                OttBlocks.FIRE_MOSAIC_DELICATE.get(),
+                OttBlocks.SPIRIT_MOSAIC_BORDER.get(),
+                OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.SPIRIT_MOSAIC_PATTERN.get(),
+                OttBlocks.SPIRIT_MOSAIC_DELICATE.get(),
+                OttBlocks.AIR_MOSAIC_BORDER.get(),
+                OttBlocks.AIR_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.AIR_MOSAIC_PATTERN.get(),
+                OttBlocks.AIR_MOSAIC_DELICATE.get(),
+                OttBlocks.MOSAIC_FLOOR.get(),
+                OttBlocks.MOSAIC_FLOOR_DELICATE.get(),
+                OttBlocks.MOSAIC_FLOOR_ROSETTE.get(),
+                OttBlocks.ROMAN_FRESCO_RED.get(),
+                OttBlocks.ROMAN_FRESCO_BLACK.get(),
+                OttBlocks.LIMESTONE_MASONRY.get()
         );
 
         // Stone variant blocks (plain cube_all + pillar only — CTM blocks excluded from DO)
@@ -535,34 +535,34 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         // CTM / Connecting blocks — drives the "Connecting" tooltip in TooltipHandler
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
                 // Elemental mosaics
-                ModBlocks.WATER_MOSAIC_BORDER.get(),
-                ModBlocks.WATER_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.WATER_MOSAIC_PATTERN.get(),
-                ModBlocks.WATER_MOSAIC_DELICATE.get(),
-                ModBlocks.EARTH_MOSAIC_BORDER.get(),
-                ModBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.EARTH_MOSAIC_PATTERN.get(),
-                ModBlocks.EARTH_MOSAIC_DELICATE.get(),
-                ModBlocks.FIRE_MOSAIC_BORDER.get(),
-                ModBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.FIRE_MOSAIC_PATTERN.get(),
-                ModBlocks.FIRE_MOSAIC_DELICATE.get(),
-                ModBlocks.AIR_MOSAIC_BORDER.get(),
-                ModBlocks.AIR_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.AIR_MOSAIC_PATTERN.get(),
-                ModBlocks.AIR_MOSAIC_DELICATE.get(),
-                ModBlocks.SPIRIT_MOSAIC_BORDER.get(),
-                ModBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
-                ModBlocks.SPIRIT_MOSAIC_PATTERN.get(),
-                ModBlocks.SPIRIT_MOSAIC_DELICATE.get(),
+                OttBlocks.WATER_MOSAIC_BORDER.get(),
+                OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.WATER_MOSAIC_PATTERN.get(),
+                OttBlocks.WATER_MOSAIC_DELICATE.get(),
+                OttBlocks.EARTH_MOSAIC_BORDER.get(),
+                OttBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.EARTH_MOSAIC_PATTERN.get(),
+                OttBlocks.EARTH_MOSAIC_DELICATE.get(),
+                OttBlocks.FIRE_MOSAIC_BORDER.get(),
+                OttBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.FIRE_MOSAIC_PATTERN.get(),
+                OttBlocks.FIRE_MOSAIC_DELICATE.get(),
+                OttBlocks.AIR_MOSAIC_BORDER.get(),
+                OttBlocks.AIR_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.AIR_MOSAIC_PATTERN.get(),
+                OttBlocks.AIR_MOSAIC_DELICATE.get(),
+                OttBlocks.SPIRIT_MOSAIC_BORDER.get(),
+                OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
+                OttBlocks.SPIRIT_MOSAIC_PATTERN.get(),
+                OttBlocks.SPIRIT_MOSAIC_DELICATE.get(),
                 // Mosaic floor
-                ModBlocks.MOSAIC_FLOOR.get(),
-                ModBlocks.MOSAIC_FLOOR_DELICATE.get(),
-                ModBlocks.MOSAIC_FLOOR_ROSETTE.get(),
+                OttBlocks.MOSAIC_FLOOR.get(),
+                OttBlocks.MOSAIC_FLOOR_DELICATE.get(),
+                OttBlocks.MOSAIC_FLOOR_ROSETTE.get(),
                 // Decorative stone
-                ModBlocks.ROMAN_FRESCO_RED.get(),
-                ModBlocks.ROMAN_FRESCO_BLACK.get(),
-                ModBlocks.LIMESTONE_MASONRY.get(),
+                OttBlocks.ROMAN_FRESCO_RED.get(),
+                OttBlocks.ROMAN_FRESCO_BLACK.get(),
+                OttBlocks.LIMESTONE_MASONRY.get(),
                 OttBlocks.STONE_BRICKS_MASONRY.get(),
                 // CTM polished/vanilla variants
                 // Ornamented / delicate wool & carpet
@@ -785,8 +785,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         hoeTag.add(ModBlocks.PALE_OAK_LEAVES.value());
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(OttBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
-        pickaxeTag.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
-                ModBlocks.SOUL_GLASS_CTM.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
+        pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+                OttBlocks.SOUL_GLASS_CTM.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
                 ModBlocks.CHISELED_GLASS_CTM_PANE.get(),
                 ModBlocks.CLEAR_GLASS_CTM_PANE.get(),
@@ -801,12 +801,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.TINTED_GLASS_CTM_PANE.get(),
                 ModBlocks.SOUL_GLASS_CTM_PANE.get()
         );
-        mcStainedGlass.add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_CTM.get());
+        mcStainedGlass.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_CTM.get());
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(
                 ModBlocks.SOUL_GLASS_PANE.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
-        this.tag(BlockTags.IMPERMEABLE).add(ModBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
-                ModBlocks.SOUL_GLASS_CTM.get());
-        this.tag(doDefaultKey).add(ModBlocks.SOUL_GLASS.get());
+        this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), ModBlocks.SOUL_GLASS_PANE.get(),
+                OttBlocks.SOUL_GLASS_CTM.get());
+        this.tag(doDefaultKey).add(OttBlocks.SOUL_GLASS.get());
 
         // Opal sets — pickaxe mineable + DO default for all 18 blocks × 3 types
         ModBlocks.OPAL_SETS.values().forEach(set -> {
