@@ -3603,8 +3603,6 @@ public enum OttCreativeCategories {
         // Yellow Wool
 
         // ── New CTM batch blocks ────────────────────────────────────────────
-        output.accept(OttBlocks.BAMBOO_WINDOW_TILES_CTM);
-        output.accept(OttBlocks.CHERRY_WINDOW_TILES_CTM);
         output.accept(OttBlocks.BLACK_FRAMED_GLASS);
         output.accept(OttBlocks.BLACK_STAINED_CLEAR_GLASS);
         output.accept(OttBlocks.BLUE_FRAMED_GLASS);
@@ -4486,8 +4484,6 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.CURVED_RAKED_GRAVEL);
                 output.accept(ModBlocks.STRAIGHT_RAKED_GRAVEL);
 
-                output.accept(ModBlocks.WHITE_MARBLE_FANCY_FENCE);
-                output.accept(ModBlocks.BLACK_MARBLE_FANCY_FENCE);
                 output.accept(ModBlocks.SANDSTONE_CRENELATION);
 
                 output.accept(ModBlocks.WATER_MOSAIC_RECESS);
