@@ -57,7 +57,6 @@ public class ModItems {
     public static final DeferredItem<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PHEASANT_FEATHER = ITEMS.register("pheasant_feather", () -> new Item(new Item.Properties()));
-    public static final DeferredHolder<Item, BlockItem> SOUL_GLASS_CTM_PANE = registerBlockItem("soul_glass_ctm_pane", ModBlocks.SOUL_GLASS_CTM_PANE);
 
     // Opal crystal drop items
     public static final DeferredItem<Item> WHITE_OPAL_CRYSTAL = ITEMS.register("white_opal_crystal", () -> new Item(new Item.Properties()));
@@ -1198,212 +1197,9 @@ public class ModItems {
     // ── Pane items ────────────────────────────────────────────────────────────────
     // ── Bamboo Window Panes ──
     // ── Cherry Window Panes ──
-    public static final DeferredHolder<Item, BlockItem> CHISELED_GLASS_CTM_PANE = registerBlockItem("chiseled_glass_ctm_pane", ModBlocks.CHISELED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_GLASS_CTM_PANE = registerBlockItem("clear_glass_ctm_pane", ModBlocks.CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DIRTY_GLASS_CTM_PANE = registerBlockItem("dirty_glass_ctm_pane", ModBlocks.DIRTY_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FROSTED_GLASS_CTM_PANE = registerBlockItem("frosted_glass_ctm_pane", ModBlocks.FROSTED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ICE_GLASS_CTM_PANE = registerBlockItem("ice_glass_ctm_pane", ModBlocks.ICE_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OBSIDIAN_FRAMED_GLASS_CTM_PANE = registerBlockItem("obsidian_framed_glass_ctm_pane", ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> REINFORCED_GLASS_CTM_PANE = registerBlockItem("reinforced_glass_ctm_pane", ModBlocks.REINFORCED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SANDSTONE_FRAMED_GLASS_CTM_PANE = registerBlockItem("sandstone_framed_glass_ctm_pane", ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> STONE_FRAMED_GLASS_CTM_PANE = registerBlockItem("stone_framed_glass_ctm_pane", ModBlocks.STONE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_CLEAR_GLASS_CTM_PANE = registerBlockItem("tinted_clear_glass_ctm_pane", ModBlocks.TINTED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_GLASS_CTM_PANE = registerBlockItem("tinted_glass_ctm_pane", ModBlocks.TINTED_GLASS_CTM_PANE);
     // -- CTM connecting window panes -- wood types
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("cherry_window_swirling_ctm_pane", ModBlocks.CHERRY_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_BARS_CTM_PANE = registerBlockItem("cherry_window_bars_ctm_pane", ModBlocks.CHERRY_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_COVERED_CTM_PANE = registerBlockItem("cherry_window_covered_ctm_pane", ModBlocks.CHERRY_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("cherry_window_diagonal_ctm_pane", ModBlocks.CHERRY_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_LARGE_CTM_PANE = registerBlockItem("cherry_window_large_ctm_pane", ModBlocks.CHERRY_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_PANES_CTM_PANE = registerBlockItem("cherry_window_panes_ctm_pane", ModBlocks.CHERRY_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("cherry_window_rounded_ctm_pane", ModBlocks.CHERRY_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_SLIM_CTM_PANE = registerBlockItem("cherry_window_slim_ctm_pane", ModBlocks.CHERRY_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CHERRY_WINDOW_TILES_CTM_PANE = registerBlockItem("cherry_window_tiles_ctm_pane", ModBlocks.CHERRY_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("bamboo_window_swirling_ctm_pane", ModBlocks.BAMBOO_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_BARS_CTM_PANE = registerBlockItem("bamboo_window_bars_ctm_pane", ModBlocks.BAMBOO_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_COVERED_CTM_PANE = registerBlockItem("bamboo_window_covered_ctm_pane", ModBlocks.BAMBOO_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("bamboo_window_diagonal_ctm_pane", ModBlocks.BAMBOO_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_LARGE_CTM_PANE = registerBlockItem("bamboo_window_large_ctm_pane", ModBlocks.BAMBOO_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_PANES_CTM_PANE = registerBlockItem("bamboo_window_panes_ctm_pane", ModBlocks.BAMBOO_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("bamboo_window_rounded_ctm_pane", ModBlocks.BAMBOO_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_SLIM_CTM_PANE = registerBlockItem("bamboo_window_slim_ctm_pane", ModBlocks.BAMBOO_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BAMBOO_WINDOW_TILES_CTM_PANE = registerBlockItem("bamboo_window_tiles_ctm_pane", ModBlocks.BAMBOO_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("pale_oak_window_swirling_ctm_pane", ModBlocks.PALE_OAK_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_BARS_CTM_PANE = registerBlockItem("pale_oak_window_bars_ctm_pane", ModBlocks.PALE_OAK_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_COVERED_CTM_PANE = registerBlockItem("pale_oak_window_covered_ctm_pane", ModBlocks.PALE_OAK_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("pale_oak_window_diagonal_ctm_pane", ModBlocks.PALE_OAK_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_LARGE_CTM_PANE = registerBlockItem("pale_oak_window_large_ctm_pane", ModBlocks.PALE_OAK_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_PANES_CTM_PANE = registerBlockItem("pale_oak_window_panes_ctm_pane", ModBlocks.PALE_OAK_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("pale_oak_window_rounded_ctm_pane", ModBlocks.PALE_OAK_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_SLIM_CTM_PANE = registerBlockItem("pale_oak_window_slim_ctm_pane", ModBlocks.PALE_OAK_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PALE_OAK_WINDOW_TILES_CTM_PANE = registerBlockItem("pale_oak_window_tiles_ctm_pane", ModBlocks.PALE_OAK_WINDOW_TILES_CTM_PANE);
     // -- CTM connecting panes -- stained glass patterns
-    public static final DeferredHolder<Item, BlockItem> WHITE_FRAMED_GLASS_CTM_PANE = registerBlockItem("white_framed_glass_ctm_pane", ModBlocks.WHITE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("white_stained_glass_ctm_pane", ModBlocks.WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_white_stained_glass_ctm_pane", ModBlocks.FANCY_WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_white_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_white_stained_glass_ctm_pane", ModBlocks.ORNATE_WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_white_stained_glass_ctm_pane", ModBlocks.RASTER_WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_WHITE_CTM_PANE = registerBlockItem("scratched_glass_white_ctm_pane", ModBlocks.SCRATCHED_GLASS_WHITE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_WHITE_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_white_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_WHITE_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_white_stained_glass_ctm_pane", ModBlocks.TILED_WHITE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_WHITE_CTM_PANE = registerBlockItem("tinted_borderless_glass_white_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_WHITE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_WHITE_CTM_PANE = registerBlockItem("borderless_glass_white_ctm_pane", ModBlocks.BORDERLESS_GLASS_WHITE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_FRAMED_GLASS_CTM_PANE = registerBlockItem("orange_framed_glass_ctm_pane", ModBlocks.ORANGE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("orange_stained_glass_ctm_pane", ModBlocks.ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_orange_stained_glass_ctm_pane", ModBlocks.FANCY_ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_orange_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_orange_stained_glass_ctm_pane", ModBlocks.ORNATE_ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_orange_stained_glass_ctm_pane", ModBlocks.RASTER_ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_ORANGE_CTM_PANE = registerBlockItem("scratched_glass_orange_ctm_pane", ModBlocks.SCRATCHED_GLASS_ORANGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_ORANGE_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_orange_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_ORANGE_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_orange_stained_glass_ctm_pane", ModBlocks.TILED_ORANGE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_ORANGE_CTM_PANE = registerBlockItem("tinted_borderless_glass_orange_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_ORANGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_ORANGE_CTM_PANE = registerBlockItem("borderless_glass_orange_ctm_pane", ModBlocks.BORDERLESS_GLASS_ORANGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_FRAMED_GLASS_CTM_PANE = registerBlockItem("magenta_framed_glass_ctm_pane", ModBlocks.MAGENTA_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("magenta_stained_glass_ctm_pane", ModBlocks.MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_magenta_stained_glass_ctm_pane", ModBlocks.FANCY_MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_magenta_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_magenta_stained_glass_ctm_pane", ModBlocks.ORNATE_MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_magenta_stained_glass_ctm_pane", ModBlocks.RASTER_MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_MAGENTA_CTM_PANE = registerBlockItem("scratched_glass_magenta_ctm_pane", ModBlocks.SCRATCHED_GLASS_MAGENTA_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_MAGENTA_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_magenta_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_MAGENTA_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_magenta_stained_glass_ctm_pane", ModBlocks.TILED_MAGENTA_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_MAGENTA_CTM_PANE = registerBlockItem("tinted_borderless_glass_magenta_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_MAGENTA_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_MAGENTA_CTM_PANE = registerBlockItem("borderless_glass_magenta_ctm_pane", ModBlocks.BORDERLESS_GLASS_MAGENTA_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_FRAMED_GLASS_CTM_PANE = registerBlockItem("light_blue_framed_glass_ctm_pane", ModBlocks.LIGHT_BLUE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("light_blue_stained_glass_ctm_pane", ModBlocks.LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_light_blue_stained_glass_ctm_pane", ModBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_light_blue_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_light_blue_stained_glass_ctm_pane", ModBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_light_blue_stained_glass_ctm_pane", ModBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIGHT_BLUE_CTM_PANE = registerBlockItem("scratched_glass_light_blue_ctm_pane", ModBlocks.SCRATCHED_GLASS_LIGHT_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_light_blue_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_light_blue_stained_glass_ctm_pane", ModBlocks.TILED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE = registerBlockItem("tinted_borderless_glass_light_blue_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE = registerBlockItem("borderless_glass_light_blue_ctm_pane", ModBlocks.BORDERLESS_GLASS_LIGHT_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_FRAMED_GLASS_CTM_PANE = registerBlockItem("yellow_framed_glass_ctm_pane", ModBlocks.YELLOW_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("yellow_stained_glass_ctm_pane", ModBlocks.YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_yellow_stained_glass_ctm_pane", ModBlocks.FANCY_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_yellow_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_yellow_stained_glass_ctm_pane", ModBlocks.ORNATE_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_yellow_stained_glass_ctm_pane", ModBlocks.RASTER_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_YELLOW_CTM_PANE = registerBlockItem("scratched_glass_yellow_ctm_pane", ModBlocks.SCRATCHED_GLASS_YELLOW_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_YELLOW_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_yellow_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_YELLOW_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_yellow_stained_glass_ctm_pane", ModBlocks.TILED_YELLOW_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_YELLOW_CTM_PANE = registerBlockItem("tinted_borderless_glass_yellow_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_YELLOW_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_YELLOW_CTM_PANE = registerBlockItem("borderless_glass_yellow_ctm_pane", ModBlocks.BORDERLESS_GLASS_YELLOW_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIME_FRAMED_GLASS_CTM_PANE = registerBlockItem("lime_framed_glass_ctm_pane", ModBlocks.LIME_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("lime_stained_glass_ctm_pane", ModBlocks.LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_lime_stained_glass_ctm_pane", ModBlocks.FANCY_LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_lime_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_lime_stained_glass_ctm_pane", ModBlocks.ORNATE_LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_lime_stained_glass_ctm_pane", ModBlocks.RASTER_LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIME_CTM_PANE = registerBlockItem("scratched_glass_lime_ctm_pane", ModBlocks.SCRATCHED_GLASS_LIME_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_LIME_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_lime_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_LIME_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_lime_stained_glass_ctm_pane", ModBlocks.TILED_LIME_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIME_CTM_PANE = registerBlockItem("tinted_borderless_glass_lime_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_LIME_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIME_CTM_PANE = registerBlockItem("borderless_glass_lime_ctm_pane", ModBlocks.BORDERLESS_GLASS_LIME_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PINK_FRAMED_GLASS_CTM_PANE = registerBlockItem("pink_framed_glass_ctm_pane", ModBlocks.PINK_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("pink_stained_glass_ctm_pane", ModBlocks.PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_pink_stained_glass_ctm_pane", ModBlocks.FANCY_PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_pink_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_pink_stained_glass_ctm_pane", ModBlocks.ORNATE_PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_pink_stained_glass_ctm_pane", ModBlocks.RASTER_PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_PINK_CTM_PANE = registerBlockItem("scratched_glass_pink_ctm_pane", ModBlocks.SCRATCHED_GLASS_PINK_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_PINK_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_pink_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_PINK_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_pink_stained_glass_ctm_pane", ModBlocks.TILED_PINK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_PINK_CTM_PANE = registerBlockItem("tinted_borderless_glass_pink_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_PINK_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_PINK_CTM_PANE = registerBlockItem("borderless_glass_pink_ctm_pane", ModBlocks.BORDERLESS_GLASS_PINK_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GRAY_FRAMED_GLASS_CTM_PANE = registerBlockItem("gray_framed_glass_ctm_pane", ModBlocks.GRAY_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("gray_stained_glass_ctm_pane", ModBlocks.GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_gray_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_GRAY_CTM_PANE = registerBlockItem("scratched_glass_gray_ctm_pane", ModBlocks.SCRATCHED_GLASS_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_GRAY_CTM_PANE = registerBlockItem("tinted_borderless_glass_gray_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_GRAY_CTM_PANE = registerBlockItem("borderless_glass_gray_ctm_pane", ModBlocks.BORDERLESS_GLASS_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_FRAMED_GLASS_CTM_PANE = registerBlockItem("light_gray_framed_glass_ctm_pane", ModBlocks.LIGHT_GRAY_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("light_gray_stained_glass_ctm_pane", ModBlocks.LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_light_gray_stained_glass_ctm_pane", ModBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_light_gray_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_light_gray_stained_glass_ctm_pane", ModBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_light_gray_stained_glass_ctm_pane", ModBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_LIGHT_GRAY_CTM_PANE = registerBlockItem("scratched_glass_light_gray_ctm_pane", ModBlocks.SCRATCHED_GLASS_LIGHT_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_light_gray_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_light_gray_stained_glass_ctm_pane", ModBlocks.TILED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE = registerBlockItem("tinted_borderless_glass_light_gray_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE = registerBlockItem("borderless_glass_light_gray_ctm_pane", ModBlocks.BORDERLESS_GLASS_LIGHT_GRAY_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_FRAMED_GLASS_CTM_PANE = registerBlockItem("cyan_framed_glass_ctm_pane", ModBlocks.CYAN_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("cyan_stained_glass_ctm_pane", ModBlocks.CYAN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_cyan_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_CYAN_CTM_PANE = registerBlockItem("scratched_glass_cyan_ctm_pane", ModBlocks.SCRATCHED_GLASS_CYAN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_CYAN_CTM_PANE = registerBlockItem("tinted_borderless_glass_cyan_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_CYAN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_CYAN_CTM_PANE = registerBlockItem("borderless_glass_cyan_ctm_pane", ModBlocks.BORDERLESS_GLASS_CYAN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_FRAMED_GLASS_CTM_PANE = registerBlockItem("purple_framed_glass_ctm_pane", ModBlocks.PURPLE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("purple_stained_glass_ctm_pane", ModBlocks.PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_purple_stained_glass_ctm_pane", ModBlocks.FANCY_PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_purple_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_purple_stained_glass_ctm_pane", ModBlocks.ORNATE_PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_purple_stained_glass_ctm_pane", ModBlocks.RASTER_PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_PURPLE_CTM_PANE = registerBlockItem("scratched_glass_purple_ctm_pane", ModBlocks.SCRATCHED_GLASS_PURPLE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_PURPLE_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_purple_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_PURPLE_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_purple_stained_glass_ctm_pane", ModBlocks.TILED_PURPLE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_PURPLE_CTM_PANE = registerBlockItem("tinted_borderless_glass_purple_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_PURPLE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_PURPLE_CTM_PANE = registerBlockItem("borderless_glass_purple_ctm_pane", ModBlocks.BORDERLESS_GLASS_PURPLE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLUE_FRAMED_GLASS_CTM_PANE = registerBlockItem("blue_framed_glass_ctm_pane", ModBlocks.BLUE_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("blue_stained_glass_ctm_pane", ModBlocks.BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_blue_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_BLUE_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BLUE_CTM_PANE = registerBlockItem("scratched_glass_blue_ctm_pane", ModBlocks.SCRATCHED_GLASS_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BLUE_CTM_PANE = registerBlockItem("tinted_borderless_glass_blue_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLUE_CTM_PANE = registerBlockItem("borderless_glass_blue_ctm_pane", ModBlocks.BORDERLESS_GLASS_BLUE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BROWN_FRAMED_GLASS_CTM_PANE = registerBlockItem("brown_framed_glass_ctm_pane", ModBlocks.BROWN_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("brown_stained_glass_ctm_pane", ModBlocks.BROWN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_brown_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_BROWN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BROWN_CTM_PANE = registerBlockItem("scratched_glass_brown_ctm_pane", ModBlocks.SCRATCHED_GLASS_BROWN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BROWN_CTM_PANE = registerBlockItem("tinted_borderless_glass_brown_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_BROWN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BROWN_CTM_PANE = registerBlockItem("borderless_glass_brown_ctm_pane", ModBlocks.BORDERLESS_GLASS_BROWN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GREEN_FRAMED_GLASS_CTM_PANE = registerBlockItem("green_framed_glass_ctm_pane", ModBlocks.GREEN_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("green_stained_glass_ctm_pane", ModBlocks.GREEN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_green_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_GREEN_CTM_PANE = registerBlockItem("scratched_glass_green_ctm_pane", ModBlocks.SCRATCHED_GLASS_GREEN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_GREEN_CTM_PANE = registerBlockItem("tinted_borderless_glass_green_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_GREEN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_GREEN_CTM_PANE = registerBlockItem("borderless_glass_green_ctm_pane", ModBlocks.BORDERLESS_GLASS_GREEN_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RED_FRAMED_GLASS_CTM_PANE = registerBlockItem("red_framed_glass_ctm_pane", ModBlocks.RED_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RED_STAINED_GLASS_CTM_PANE = registerBlockItem("red_stained_glass_ctm_pane", ModBlocks.RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> FANCY_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_red_stained_glass_ctm_pane", ModBlocks.FANCY_RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_red_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_red_stained_glass_ctm_pane", ModBlocks.ORNATE_RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RASTER_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_red_stained_glass_ctm_pane", ModBlocks.RASTER_RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_RED_CTM_PANE = registerBlockItem("scratched_glass_red_ctm_pane", ModBlocks.SCRATCHED_GLASS_RED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SMALL_RED_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_red_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_RED_DIAMOND_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TILED_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_red_stained_glass_ctm_pane", ModBlocks.TILED_RED_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_RED_CTM_PANE = registerBlockItem("tinted_borderless_glass_red_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_RED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_RED_CTM_PANE = registerBlockItem("borderless_glass_red_ctm_pane", ModBlocks.BORDERLESS_GLASS_RED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLACK_FRAMED_GLASS_CTM_PANE = registerBlockItem("black_framed_glass_ctm_pane", ModBlocks.BLACK_FRAMED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("black_stained_glass_ctm_pane", ModBlocks.BLACK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GOLDEN_FRAMED_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("golden_framed_black_stained_glass_ctm_pane", ModBlocks.GOLDEN_FRAMED_BLACK_STAINED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_BLACK_CTM_PANE = registerBlockItem("scratched_glass_black_ctm_pane", ModBlocks.SCRATCHED_GLASS_BLACK_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_BLACK_CTM_PANE = registerBlockItem("tinted_borderless_glass_black_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_BLACK_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_BLACK_CTM_PANE = registerBlockItem("borderless_glass_black_ctm_pane", ModBlocks.BORDERLESS_GLASS_BLACK_CTM_PANE);
     // -- CTM connecting panes -- plain variants
-    public static final DeferredHolder<Item, BlockItem> SCRATCHED_GLASS_CTM_PANE = registerBlockItem("scratched_glass_ctm_pane", ModBlocks.SCRATCHED_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> TINTED_BORDERLESS_GLASS_CTM_PANE = registerBlockItem("tinted_borderless_glass_ctm_pane", ModBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BORDERLESS_GLASS_CTM_PANE = registerBlockItem("borderless_glass_ctm_pane", ModBlocks.BORDERLESS_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WHITE_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("white_stained_clear_glass_ctm_pane", ModBlocks.WHITE_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ORANGE_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("orange_stained_clear_glass_ctm_pane", ModBlocks.ORANGE_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MAGENTA_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("magenta_stained_clear_glass_ctm_pane", ModBlocks.MAGENTA_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("light_blue_stained_clear_glass_ctm_pane", ModBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> YELLOW_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("yellow_stained_clear_glass_ctm_pane", ModBlocks.YELLOW_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIME_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("lime_stained_clear_glass_ctm_pane", ModBlocks.LIME_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PINK_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("pink_stained_clear_glass_ctm_pane", ModBlocks.PINK_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GRAY_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("gray_stained_clear_glass_ctm_pane", ModBlocks.GRAY_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("light_gray_stained_clear_glass_ctm_pane", ModBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CYAN_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("cyan_stained_clear_glass_ctm_pane", ModBlocks.CYAN_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> PURPLE_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("purple_stained_clear_glass_ctm_pane", ModBlocks.PURPLE_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLUE_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("blue_stained_clear_glass_ctm_pane", ModBlocks.BLUE_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BROWN_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("brown_stained_clear_glass_ctm_pane", ModBlocks.BROWN_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> GREEN_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("green_stained_clear_glass_ctm_pane", ModBlocks.GREEN_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> RED_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("red_stained_clear_glass_ctm_pane", ModBlocks.RED_STAINED_CLEAR_GLASS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BLACK_STAINED_CLEAR_GLASS_CTM_PANE = registerBlockItem("black_stained_clear_glass_ctm_pane", ModBlocks.BLACK_STAINED_CLEAR_GLASS_CTM_PANE);    public static final DeferredHolder<Item, BlockItem> GLASS_OCHRE_FROGLIGHT_PANE = registerBlockItem("glass_ochre_froglight_pane", ModBlocks.GLASS_OCHRE_FROGLIGHT_PANE);
 
 
 
@@ -1843,79 +1639,6 @@ public class ModItems {
 
 
     // ===== RECOVERED WINDOW ITEMS =====
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_COVERED_CTM_PANE = registerBlockItem("acacia_window_covered_ctm_pane", ModBlocks.ACACIA_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("acacia_window_diagonal_ctm_pane", ModBlocks.ACACIA_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_LARGE_CTM_PANE = registerBlockItem("acacia_window_large_ctm_pane", ModBlocks.ACACIA_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_PANES_CTM_PANE = registerBlockItem("acacia_window_panes_ctm_pane", ModBlocks.ACACIA_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("acacia_window_rounded_ctm_pane", ModBlocks.ACACIA_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SLIM_CTM_PANE = registerBlockItem("acacia_window_slim_ctm_pane", ModBlocks.ACACIA_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("acacia_window_swirling_ctm_pane", ModBlocks.ACACIA_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_TILES_CTM_PANE = registerBlockItem("acacia_window_tiles_ctm_pane", ModBlocks.ACACIA_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_BARS_CTM_PANE = registerBlockItem("birch_window_bars_ctm_pane", ModBlocks.BIRCH_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("birch_window_diagonal_ctm_pane", ModBlocks.BIRCH_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_LARGE_CTM_PANE = registerBlockItem("birch_window_large_ctm_pane", ModBlocks.BIRCH_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_PANES_CTM_PANE = registerBlockItem("birch_window_panes_ctm_pane", ModBlocks.BIRCH_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("birch_window_rounded_ctm_pane", ModBlocks.BIRCH_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SLIM_CTM_PANE = registerBlockItem("birch_window_slim_ctm_pane", ModBlocks.BIRCH_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("birch_window_swirling_ctm_pane", ModBlocks.BIRCH_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_TILES_CTM_PANE = registerBlockItem("birch_window_tiles_ctm_pane", ModBlocks.BIRCH_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_BARS_CTM_PANE = registerBlockItem("crimson_window_bars_ctm_pane", ModBlocks.CRIMSON_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_COVERED_CTM_PANE = registerBlockItem("crimson_window_covered_ctm_pane", ModBlocks.CRIMSON_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_LARGE_CTM_PANE = registerBlockItem("crimson_window_large_ctm_pane", ModBlocks.CRIMSON_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_PANES_CTM_PANE = registerBlockItem("crimson_window_panes_ctm_pane", ModBlocks.CRIMSON_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("crimson_window_rounded_ctm_pane", ModBlocks.CRIMSON_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SLIM_CTM_PANE = registerBlockItem("crimson_window_slim_ctm_pane", ModBlocks.CRIMSON_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("crimson_window_swirling_ctm_pane", ModBlocks.CRIMSON_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_TILES_CTM_PANE = registerBlockItem("crimson_window_tiles_ctm_pane", ModBlocks.CRIMSON_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_BARS_CTM_PANE = registerBlockItem("dark_oak_window_bars_ctm_pane", ModBlocks.DARK_OAK_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_COVERED_CTM_PANE = registerBlockItem("dark_oak_window_covered_ctm_pane", ModBlocks.DARK_OAK_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("dark_oak_window_diagonal_ctm_pane", ModBlocks.DARK_OAK_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_LARGE_CTM_PANE = registerBlockItem("dark_oak_window_large_ctm_pane", ModBlocks.DARK_OAK_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_PANES_CTM_PANE = registerBlockItem("dark_oak_window_panes_ctm_pane", ModBlocks.DARK_OAK_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("dark_oak_window_rounded_ctm_pane", ModBlocks.DARK_OAK_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SLIM_CTM_PANE = registerBlockItem("dark_oak_window_slim_ctm_pane", ModBlocks.DARK_OAK_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("dark_oak_window_swirling_ctm_pane", ModBlocks.DARK_OAK_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> DARK_OAK_WINDOW_TILES_CTM_PANE = registerBlockItem("dark_oak_window_tiles_ctm_pane", ModBlocks.DARK_OAK_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_BARS_CTM_PANE = registerBlockItem("jungle_window_bars_ctm_pane", ModBlocks.JUNGLE_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_COVERED_CTM_PANE = registerBlockItem("jungle_window_covered_ctm_pane", ModBlocks.JUNGLE_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("jungle_window_diagonal_ctm_pane", ModBlocks.JUNGLE_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_LARGE_CTM_PANE = registerBlockItem("jungle_window_large_ctm_pane", ModBlocks.JUNGLE_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_PANES_CTM_PANE = registerBlockItem("jungle_window_panes_ctm_pane", ModBlocks.JUNGLE_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("jungle_window_rounded_ctm_pane", ModBlocks.JUNGLE_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("jungle_window_swirling_ctm_pane", ModBlocks.JUNGLE_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_TILES_CTM_PANE = registerBlockItem("jungle_window_tiles_ctm_pane", ModBlocks.JUNGLE_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_BARS_CTM_PANE = registerBlockItem("mangrove_window_bars_ctm_pane", ModBlocks.MANGROVE_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_COVERED_CTM_PANE = registerBlockItem("mangrove_window_covered_ctm_pane", ModBlocks.MANGROVE_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("mangrove_window_diagonal_ctm_pane", ModBlocks.MANGROVE_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_LARGE_CTM_PANE = registerBlockItem("mangrove_window_large_ctm_pane", ModBlocks.MANGROVE_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_PANES_CTM_PANE = registerBlockItem("mangrove_window_panes_ctm_pane", ModBlocks.MANGROVE_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SLIM_CTM_PANE = registerBlockItem("mangrove_window_slim_ctm_pane", ModBlocks.MANGROVE_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("mangrove_window_swirling_ctm_pane", ModBlocks.MANGROVE_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_TILES_CTM_PANE = registerBlockItem("mangrove_window_tiles_ctm_pane", ModBlocks.MANGROVE_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_BARS_CTM_PANE = registerBlockItem("oak_window_bars_ctm_pane", ModBlocks.OAK_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_COVERED_CTM_PANE = registerBlockItem("oak_window_covered_ctm_pane", ModBlocks.OAK_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("oak_window_diagonal_ctm_pane", ModBlocks.OAK_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_LARGE_CTM_PANE = registerBlockItem("oak_window_large_ctm_pane", ModBlocks.OAK_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("oak_window_rounded_ctm_pane", ModBlocks.OAK_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SLIM_CTM_PANE = registerBlockItem("oak_window_slim_ctm_pane", ModBlocks.OAK_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("oak_window_swirling_ctm_pane", ModBlocks.OAK_WINDOW_SWIRLING_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_TILES_CTM_PANE = registerBlockItem("oak_window_tiles_ctm_pane", ModBlocks.OAK_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_BARS_CTM_PANE = registerBlockItem("spruce_window_bars_ctm_pane", ModBlocks.SPRUCE_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_COVERED_CTM_PANE = registerBlockItem("spruce_window_covered_ctm_pane", ModBlocks.SPRUCE_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("spruce_window_diagonal_ctm_pane", ModBlocks.SPRUCE_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_LARGE_CTM_PANE = registerBlockItem("spruce_window_large_ctm_pane", ModBlocks.SPRUCE_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_PANES_CTM_PANE = registerBlockItem("spruce_window_panes_ctm_pane", ModBlocks.SPRUCE_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("spruce_window_rounded_ctm_pane", ModBlocks.SPRUCE_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SLIM_CTM_PANE = registerBlockItem("spruce_window_slim_ctm_pane", ModBlocks.SPRUCE_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_TILES_CTM_PANE = registerBlockItem("spruce_window_tiles_ctm_pane", ModBlocks.SPRUCE_WINDOW_TILES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_BARS_CTM_PANE = registerBlockItem("warped_window_bars_ctm_pane", ModBlocks.WARPED_WINDOW_BARS_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_COVERED_CTM_PANE = registerBlockItem("warped_window_covered_ctm_pane", ModBlocks.WARPED_WINDOW_COVERED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("warped_window_diagonal_ctm_pane", ModBlocks.WARPED_WINDOW_DIAGONAL_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_LARGE_CTM_PANE = registerBlockItem("warped_window_large_ctm_pane", ModBlocks.WARPED_WINDOW_LARGE_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_PANES_CTM_PANE = registerBlockItem("warped_window_panes_ctm_pane", ModBlocks.WARPED_WINDOW_PANES_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("warped_window_rounded_ctm_pane", ModBlocks.WARPED_WINDOW_ROUNDED_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SLIM_CTM_PANE = registerBlockItem("warped_window_slim_ctm_pane", ModBlocks.WARPED_WINDOW_SLIM_CTM_PANE);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_TILES_CTM_PANE = registerBlockItem("warped_window_tiles_ctm_pane", ModBlocks.WARPED_WINDOW_TILES_CTM_PANE);
 
 
     // ===== RECOVERED GRANITE =====
@@ -1956,7 +1679,6 @@ public class ModItems {
     // ===== RECOVERED WAVE1 =====
     public static final DeferredHolder<Item, BlockItem> ACACIA_PLANKS_PANEL =
         registerBlockItem("acacia_planks_panel", ModBlocks.ACACIA_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> ACACIA_WINDOW_BARS_CTM_PANE = registerBlockItem("acacia_window_bars_ctm_pane", ModBlocks.ACACIA_WINDOW_BARS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> APPLE_ACACIA_LEAVES =
         registerBlockItem("apple_acacia_leaves", ModBlocks.APPLE_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> APPLE_BIRCH_LEAVES =
@@ -1971,60 +1693,42 @@ public class ModItems {
         registerBlockItem("apple_spruce_leaves", ModBlocks.APPLE_SPRUCE_LEAVES);
     public static final DeferredHolder<Item, BlockItem> ARCHED_BLACK_STAINED_GLASS_CTM =
         registerBlockItem("arched_black_stained_glass_ctm", ModBlocks.ARCHED_BLACK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_black_stained_glass_ctm_pane", ModBlocks.ARCHED_BLACK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("arched_blue_stained_glass_ctm", ModBlocks.ARCHED_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_blue_stained_glass_ctm_pane", ModBlocks.ARCHED_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_BROWN_STAINED_GLASS_CTM =
         registerBlockItem("arched_brown_stained_glass_ctm", ModBlocks.ARCHED_BROWN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_brown_stained_glass_ctm_pane", ModBlocks.ARCHED_BROWN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_CYAN_STAINED_GLASS_CTM =
         registerBlockItem("arched_cyan_stained_glass_ctm", ModBlocks.ARCHED_CYAN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_cyan_stained_glass_ctm_pane", ModBlocks.ARCHED_CYAN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("arched_gray_stained_glass_ctm", ModBlocks.ARCHED_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_gray_stained_glass_ctm_pane", ModBlocks.ARCHED_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_GREEN_STAINED_GLASS_CTM =
         registerBlockItem("arched_green_stained_glass_ctm", ModBlocks.ARCHED_GREEN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_green_stained_glass_ctm_pane", ModBlocks.ARCHED_GREEN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_LEADED_GLASS_CTM =
         registerBlockItem("arched_leaded_glass_ctm", ModBlocks.ARCHED_LEADED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_LEADED_GLASS_CTM_PANE = registerBlockItem("arched_leaded_glass_ctm_pane", ModBlocks.ARCHED_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("arched_light_blue_stained_glass_ctm", ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_light_blue_stained_glass_ctm_pane", ModBlocks.ARCHED_LIGHT_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("arched_light_gray_stained_glass_ctm", ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_light_gray_stained_glass_ctm_pane", ModBlocks.ARCHED_LIGHT_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_LIME_STAINED_GLASS_CTM =
         registerBlockItem("arched_lime_stained_glass_ctm", ModBlocks.ARCHED_LIME_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_LIME_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_lime_stained_glass_ctm_pane", ModBlocks.ARCHED_LIME_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_MAGENTA_STAINED_GLASS_CTM =
         registerBlockItem("arched_magenta_stained_glass_ctm", ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_MAGENTA_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_magenta_stained_glass_ctm_pane", ModBlocks.ARCHED_MAGENTA_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_ORANGE_STAINED_GLASS_CTM =
         registerBlockItem("arched_orange_stained_glass_ctm", ModBlocks.ARCHED_ORANGE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_ORANGE_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_orange_stained_glass_ctm_pane", ModBlocks.ARCHED_ORANGE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_PINK_STAINED_GLASS_CTM =
         registerBlockItem("arched_pink_stained_glass_ctm", ModBlocks.ARCHED_PINK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_PINK_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_pink_stained_glass_ctm_pane", ModBlocks.ARCHED_PINK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_PURPLE_STAINED_GLASS_CTM =
         registerBlockItem("arched_purple_stained_glass_ctm", ModBlocks.ARCHED_PURPLE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_PURPLE_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_purple_stained_glass_ctm_pane", ModBlocks.ARCHED_PURPLE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_RED_STAINED_GLASS_CTM =
         registerBlockItem("arched_red_stained_glass_ctm", ModBlocks.ARCHED_RED_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_RED_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_red_stained_glass_ctm_pane", ModBlocks.ARCHED_RED_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_WHITE_STAINED_GLASS_CTM =
         registerBlockItem("arched_white_stained_glass_ctm", ModBlocks.ARCHED_WHITE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_WHITE_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_white_stained_glass_ctm_pane", ModBlocks.ARCHED_WHITE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ARCHED_YELLOW_STAINED_GLASS_CTM =
         registerBlockItem("arched_yellow_stained_glass_ctm", ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ARCHED_YELLOW_STAINED_GLASS_CTM_PANE = registerBlockItem("arched_yellow_stained_glass_ctm_pane", ModBlocks.ARCHED_YELLOW_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> BAMBOO_PLANKS_PANEL =
         registerBlockItem("bamboo_planks_panel", ModBlocks.BAMBOO_PLANKS_PANEL);
     public static final DeferredHolder<Item, BlockItem> BIRCH_PLANKS_PANEL =
         registerBlockItem("birch_planks_panel", ModBlocks.BIRCH_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> BIRCH_WINDOW_COVERED_CTM_PANE = registerBlockItem("birch_window_covered_ctm_pane", ModBlocks.BIRCH_WINDOW_COVERED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_CTM =
         registerBlockItem("black_concrete_ctm", ModBlocks.BLACK_CONCRETE_CTM);
     public static final DeferredHolder<Item, BlockItem> BLACK_CONCRETE_PANEL =
@@ -2304,7 +2008,6 @@ public class ModItems {
         registerBlockItem("clear_leaded_glass", ModBlocks.CLEAR_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS_CTM =
         registerBlockItem("clear_leaded_glass_ctm", ModBlocks.CLEAR_LEADED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> CLEAR_LEADED_GLASS_CTM_PANE = registerBlockItem("clear_leaded_glass_ctm_pane", ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> CORNERED_ACACIA_PLANKS =
         registerBlockItem("cornered_acacia_planks", ModBlocks.CORNERED_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> CORNERED_BAMBOO_PLANKS =
@@ -2387,7 +2090,6 @@ public class ModItems {
         registerBlockItem("crated_oak_planks", ModBlocks.CRATED_OAK_PLANKS);
     public static final DeferredHolder<Item, BlockItem> CRIMSON_PLANKS_PANEL =
         registerBlockItem("crimson_planks_panel", ModBlocks.CRIMSON_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> CRIMSON_WINDOW_DIAGONAL_CTM_PANE = registerBlockItem("crimson_window_diagonal_ctm_pane", ModBlocks.CRIMSON_WINDOW_DIAGONAL_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> CURLED_BLACK_TERRACOTTA =
         registerBlockItem("curled_black_terracotta", ModBlocks.CURLED_BLACK_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> CURLED_BLUE_TERRACOTTA =
@@ -2726,37 +2428,30 @@ public class ModItems {
         registerBlockItem("fancy_black_stained_glass", ModBlocks.FANCY_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_BLACK_STAINED_GLASS_CTM =
         registerBlockItem("fancy_black_stained_glass_ctm", ModBlocks.FANCY_BLACK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_black_stained_glass_ctm_pane", ModBlocks.FANCY_BLACK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_BLUE_STAINED_GLASS =
         registerBlockItem("fancy_blue_stained_glass", ModBlocks.FANCY_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("fancy_blue_stained_glass_ctm", ModBlocks.FANCY_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_blue_stained_glass_ctm_pane", ModBlocks.FANCY_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_BROWN_STAINED_GLASS =
         registerBlockItem("fancy_brown_stained_glass", ModBlocks.FANCY_BROWN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_BROWN_STAINED_GLASS_CTM =
         registerBlockItem("fancy_brown_stained_glass_ctm", ModBlocks.FANCY_BROWN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_brown_stained_glass_ctm_pane", ModBlocks.FANCY_BROWN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_CYAN_STAINED_GLASS =
         registerBlockItem("fancy_cyan_stained_glass", ModBlocks.FANCY_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_CYAN_STAINED_GLASS_CTM =
         registerBlockItem("fancy_cyan_stained_glass_ctm", ModBlocks.FANCY_CYAN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_cyan_stained_glass_ctm_pane", ModBlocks.FANCY_CYAN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_GRAY_STAINED_GLASS =
         registerBlockItem("fancy_gray_stained_glass", ModBlocks.FANCY_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("fancy_gray_stained_glass_ctm", ModBlocks.FANCY_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_gray_stained_glass_ctm_pane", ModBlocks.FANCY_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_GREEN_STAINED_GLASS =
         registerBlockItem("fancy_green_stained_glass", ModBlocks.FANCY_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_GREEN_STAINED_GLASS_CTM =
         registerBlockItem("fancy_green_stained_glass_ctm", ModBlocks.FANCY_GREEN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("fancy_green_stained_glass_ctm_pane", ModBlocks.FANCY_GREEN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS =
         registerBlockItem("fancy_leaded_glass", ModBlocks.FANCY_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS_CTM =
         registerBlockItem("fancy_leaded_glass_ctm", ModBlocks.FANCY_LEADED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> FANCY_LEADED_GLASS_CTM_PANE = registerBlockItem("fancy_leaded_glass_ctm_pane", ModBlocks.FANCY_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> FANCY_MUD_BRICKS_CTM =
         registerBlockItem("fancy_mud_bricks_ctm", ModBlocks.FANCY_MUD_BRICKS_CTM);
     public static final DeferredHolder<Item, BlockItem> FANCY_MUD_CTM =
@@ -3068,7 +2763,6 @@ public class ModItems {
         registerBlockItem("inscribed_white_terracotta", ModBlocks.INSCRIBED_WHITE_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> INSCRIBED_YELLOW_TERRACOTTA =
         registerBlockItem("inscribed_yellow_terracotta", ModBlocks.INSCRIBED_YELLOW_TERRACOTTA);
-    public static final DeferredHolder<Item, BlockItem> JUNGLE_WINDOW_SLIM_CTM_PANE = registerBlockItem("jungle_window_slim_ctm_pane", ModBlocks.JUNGLE_WINDOW_SLIM_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> LARGE_DIAMOND_BLACK_STAINED_GLASS =
         registerBlockItem("large_diamond_black_stained_glass", ModBlocks.LARGE_DIAMOND_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> LARGE_DIAMOND_BLUE_STAINED_GLASS =
@@ -3143,7 +2837,6 @@ public class ModItems {
         registerBlockItem("magenta_terracotta_ctm", ModBlocks.MAGENTA_TERRACOTTA_CTM);
     public static final DeferredHolder<Item, BlockItem> MANGROVE_PLANKS_PANEL =
         registerBlockItem("mangrove_planks_panel", ModBlocks.MANGROVE_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> MANGROVE_WINDOW_ROUNDED_CTM_PANE = registerBlockItem("mangrove_window_rounded_ctm_pane", ModBlocks.MANGROVE_WINDOW_ROUNDED_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_AMETHYST_BLOCK_BRICKS =
         registerBlockItem("massive_amethyst_block_bricks", ModBlocks.MASSIVE_AMETHYST_BLOCK_BRICKS);
     public static final DeferredHolder<Item, BlockItem> MASSIVE_ANCIENT_DEBRIS_BRICKS =
@@ -3246,31 +2939,22 @@ public class ModItems {
         registerBlockItem("natural_oak_planks", ModBlocks.NATURAL_OAK_PLANKS);
     public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_CTM =
         registerBlockItem("oak_barred_glass_ctm", ModBlocks.OAK_BARRED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_BARRED_GLASS_CTM_PANE = registerBlockItem("oak_barred_glass_ctm_pane", ModBlocks.OAK_BARRED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS_CTM =
         registerBlockItem("oak_bordered_glass_ctm", ModBlocks.OAK_BORDERED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_BORDERED_GLASS_CTM_PANE = registerBlockItem("oak_bordered_glass_ctm_pane", ModBlocks.OAK_BORDERED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_CTM =
         registerBlockItem("oak_diamond_bordered_glass_ctm", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_DIAMOND_BORDERED_GLASS_CTM_PANE = registerBlockItem("oak_diamond_bordered_glass_ctm_pane", ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_CTM =
         registerBlockItem("oak_horizontal_lined_glass_ctm", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_HORIZONTAL_LINED_GLASS_CTM_PANE = registerBlockItem("oak_horizontal_lined_glass_ctm_pane", ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_CTM =
         registerBlockItem("oak_large_diamond_glass_ctm", ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_LARGE_DIAMOND_GLASS_CTM_PANE = registerBlockItem("oak_large_diamond_glass_ctm_pane", ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_CTM =
         registerBlockItem("oak_line_bared_glass_ctm", ModBlocks.OAK_LINE_BARED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_LINE_BARED_GLASS_CTM_PANE = registerBlockItem("oak_line_bared_glass_ctm_pane", ModBlocks.OAK_LINE_BARED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_CTM =
         registerBlockItem("oak_ornate_bared_glass_ctm", ModBlocks.OAK_ORNATE_BARED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_ORNATE_BARED_GLASS_CTM_PANE = registerBlockItem("oak_ornate_bared_glass_ctm_pane", ModBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_PLANKS_PANEL =
         registerBlockItem("oak_planks_panel", ModBlocks.OAK_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> OAK_WINDOW_PANES_CTM_PANE = registerBlockItem("oak_window_panes_ctm_pane", ModBlocks.OAK_WINDOW_PANES_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_CTM =
         registerBlockItem("oak_woven_glass_ctm", ModBlocks.OAK_WOVEN_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> OAK_WOVEN_GLASS_CTM_PANE = registerBlockItem("oak_woven_glass_ctm_pane", ModBlocks.OAK_WOVEN_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORANGE_ACACIA_LEAVES =
         registerBlockItem("orange_acacia_leaves", ModBlocks.ORANGE_ACACIA_LEAVES);
     public static final DeferredHolder<Item, BlockItem> ORANGE_BIRCH_LEAVES =
@@ -3303,7 +2987,6 @@ public class ModItems {
         registerBlockItem("ornate_black_stained_glass", ModBlocks.ORNATE_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BLACK_STAINED_GLASS_CTM =
         registerBlockItem("ornate_black_stained_glass_ctm", ModBlocks.ORNATE_BLACK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_black_stained_glass_ctm_pane", ModBlocks.ORNATE_BLACK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BLACKSTONE_CTM =
         registerBlockItem("ornate_blackstone_ctm", ModBlocks.ORNATE_BLACKSTONE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BLUE_ICE_CTM =
@@ -3312,7 +2995,6 @@ public class ModItems {
         registerBlockItem("ornate_blue_stained_glass", ModBlocks.ORNATE_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("ornate_blue_stained_glass_ctm", ModBlocks.ORNATE_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_blue_stained_glass_ctm_pane", ModBlocks.ORNATE_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BORDERLESS_BRICKS_CTM =
         registerBlockItem("ornate_borderless_bricks_ctm", ModBlocks.ORNATE_BORDERLESS_BRICKS_CTM);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BRICKS_CTM =
@@ -3321,7 +3003,6 @@ public class ModItems {
         registerBlockItem("ornate_brown_stained_glass", ModBlocks.ORNATE_BROWN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_BROWN_STAINED_GLASS_CTM =
         registerBlockItem("ornate_brown_stained_glass_ctm", ModBlocks.ORNATE_BROWN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_brown_stained_glass_ctm_pane", ModBlocks.ORNATE_BROWN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_CALCITE_CTM =
         registerBlockItem("ornate_calcite_ctm", ModBlocks.ORNATE_CALCITE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORNATE_CLAY_CTM =
@@ -3336,7 +3017,6 @@ public class ModItems {
         registerBlockItem("ornate_cyan_stained_glass", ModBlocks.ORNATE_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_CYAN_STAINED_GLASS_CTM =
         registerBlockItem("ornate_cyan_stained_glass_ctm", ModBlocks.ORNATE_CYAN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_cyan_stained_glass_ctm_pane", ModBlocks.ORNATE_CYAN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_DARK_PRISMARINE_CTM =
         registerBlockItem("ornate_dark_prismarine_ctm", ModBlocks.ORNATE_DARK_PRISMARINE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORNATE_DEEPSLATE_CTM =
@@ -3355,12 +3035,10 @@ public class ModItems {
         registerBlockItem("ornate_gray_stained_glass", ModBlocks.ORNATE_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("ornate_gray_stained_glass_ctm", ModBlocks.ORNATE_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_gray_stained_glass_ctm_pane", ModBlocks.ORNATE_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_GREEN_STAINED_GLASS =
         registerBlockItem("ornate_green_stained_glass", ModBlocks.ORNATE_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> ORNATE_GREEN_STAINED_GLASS_CTM =
         registerBlockItem("ornate_green_stained_glass_ctm", ModBlocks.ORNATE_GREEN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> ORNATE_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("ornate_green_stained_glass_ctm_pane", ModBlocks.ORNATE_GREEN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> ORNATE_ICE_CTM =
         registerBlockItem("ornate_ice_ctm", ModBlocks.ORNATE_ICE_CTM);
     public static final DeferredHolder<Item, BlockItem> ORNATE_LAPIS_BLOCK_CTM =
@@ -3649,37 +3327,30 @@ public class ModItems {
         registerBlockItem("raster_black_stained_glass", ModBlocks.RASTER_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_BLACK_STAINED_GLASS_CTM =
         registerBlockItem("raster_black_stained_glass_ctm", ModBlocks.RASTER_BLACK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_black_stained_glass_ctm_pane", ModBlocks.RASTER_BLACK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_BLUE_STAINED_GLASS =
         registerBlockItem("raster_blue_stained_glass", ModBlocks.RASTER_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("raster_blue_stained_glass_ctm", ModBlocks.RASTER_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_blue_stained_glass_ctm_pane", ModBlocks.RASTER_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_BROWN_STAINED_GLASS =
         registerBlockItem("raster_brown_stained_glass", ModBlocks.RASTER_BROWN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_BROWN_STAINED_GLASS_CTM =
         registerBlockItem("raster_brown_stained_glass_ctm", ModBlocks.RASTER_BROWN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_brown_stained_glass_ctm_pane", ModBlocks.RASTER_BROWN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_CYAN_STAINED_GLASS =
         registerBlockItem("raster_cyan_stained_glass", ModBlocks.RASTER_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_CYAN_STAINED_GLASS_CTM =
         registerBlockItem("raster_cyan_stained_glass_ctm", ModBlocks.RASTER_CYAN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_cyan_stained_glass_ctm_pane", ModBlocks.RASTER_CYAN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_GRAY_STAINED_GLASS =
         registerBlockItem("raster_gray_stained_glass", ModBlocks.RASTER_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("raster_gray_stained_glass_ctm", ModBlocks.RASTER_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_gray_stained_glass_ctm_pane", ModBlocks.RASTER_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_GREEN_STAINED_GLASS =
         registerBlockItem("raster_green_stained_glass", ModBlocks.RASTER_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_GREEN_STAINED_GLASS_CTM =
         registerBlockItem("raster_green_stained_glass_ctm", ModBlocks.RASTER_GREEN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("raster_green_stained_glass_ctm_pane", ModBlocks.RASTER_GREEN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS =
         registerBlockItem("raster_leaded_glass", ModBlocks.RASTER_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS_CTM =
         registerBlockItem("raster_leaded_glass_ctm", ModBlocks.RASTER_LEADED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> RASTER_LEADED_GLASS_CTM_PANE = registerBlockItem("raster_leaded_glass_ctm_pane", ModBlocks.RASTER_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> RECTANGLE_BLACK_WOOL =
         registerBlockItem("rectangle_black_wool", ModBlocks.RECTANGLE_BLACK_WOOL);
     public static final DeferredHolder<Item, BlockItem> RECTANGLE_BLUE_WOOL =
@@ -3833,28 +3504,24 @@ public class ModItems {
         registerBlockItem("simple_tuff_ctm", ModBlocks.SIMPLE_TUFF_CTM);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_black_diamond_stained_glass", ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_black_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_BLACK_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_STAINED_GLASS =
         registerBlockItem("small_black_stained_glass", ModBlocks.SMALL_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLACK_TERRACOTTA_TILES =
         registerBlockItem("small_black_terracotta_tiles", ModBlocks.SMALL_BLACK_TERRACOTTA_TILES);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_blue_diamond_stained_glass", ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_blue_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_BLUE_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_STAINED_GLASS =
         registerBlockItem("small_blue_stained_glass", ModBlocks.SMALL_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_BLUE_TERRACOTTA_TILES =
         registerBlockItem("small_blue_terracotta_tiles", ModBlocks.SMALL_BLUE_TERRACOTTA_TILES);
     public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_brown_diamond_stained_glass", ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_brown_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_BROWN_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_STAINED_GLASS =
         registerBlockItem("small_brown_stained_glass", ModBlocks.SMALL_BROWN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_BROWN_TERRACOTTA_TILES =
         registerBlockItem("small_brown_terracotta_tiles", ModBlocks.SMALL_BROWN_TERRACOTTA_TILES);
     public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_cyan_diamond_stained_glass", ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_cyan_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_CYAN_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_STAINED_GLASS =
         registerBlockItem("small_cyan_stained_glass", ModBlocks.SMALL_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_CYAN_TERRACOTTA_TILES =
@@ -3863,17 +3530,14 @@ public class ModItems {
         registerBlockItem("small_diamond_leaded_glass", ModBlocks.SMALL_DIAMOND_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS_CTM =
         registerBlockItem("small_diamond_leaded_glass_ctm", ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> SMALL_DIAMOND_LEADED_GLASS_CTM_PANE = registerBlockItem("small_diamond_leaded_glass_ctm_pane", ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_gray_diamond_stained_glass", ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_gray_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_GRAY_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_STAINED_GLASS =
         registerBlockItem("small_gray_stained_glass", ModBlocks.SMALL_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_GRAY_TERRACOTTA_TILES =
         registerBlockItem("small_gray_terracotta_tiles", ModBlocks.SMALL_GRAY_TERRACOTTA_TILES);
     public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_DIAMOND_STAINED_GLASS =
         registerBlockItem("small_green_diamond_stained_glass", ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS);
-    public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_DIAMOND_STAINED_GLASS_CTM_PANE = registerBlockItem("small_green_diamond_stained_glass_ctm_pane", ModBlocks.SMALL_GREEN_DIAMOND_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_STAINED_GLASS =
         registerBlockItem("small_green_stained_glass", ModBlocks.SMALL_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SMALL_GREEN_TERRACOTTA_TILES =
@@ -4020,7 +3684,6 @@ public class ModItems {
         registerBlockItem("smooth_yellow_concrete", ModBlocks.SMOOTH_YELLOW_CONCRETE);
     public static final DeferredHolder<Item, BlockItem> SPRUCE_PLANKS_PANEL =
         registerBlockItem("spruce_planks_panel", ModBlocks.SPRUCE_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> SPRUCE_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("spruce_window_swirling_ctm_pane", ModBlocks.SPRUCE_WINDOW_SWIRLING_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> SQUARE_BLACK_STAINED_GLASS =
         registerBlockItem("square_black_stained_glass", ModBlocks.SQUARE_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SQUARE_BLUE_STAINED_GLASS =
@@ -4037,7 +3700,6 @@ public class ModItems {
         registerBlockItem("square_leaded_glass", ModBlocks.SQUARE_LEADED_GLASS);
     public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS_CTM =
         registerBlockItem("square_oak_glass_ctm", ModBlocks.SQUARE_OAK_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> SQUARE_OAK_GLASS_CTM_PANE = registerBlockItem("square_oak_glass_ctm_pane", ModBlocks.SQUARE_OAK_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> STARRY_BLACK_TERRACOTTA =
         registerBlockItem("starry_black_terracotta", ModBlocks.STARRY_BLACK_TERRACOTTA);
     public static final DeferredHolder<Item, BlockItem> STARRY_BLUE_TERRACOTTA =
@@ -4208,7 +3870,6 @@ public class ModItems {
         registerBlockItem("tiled_black_stained_glass", ModBlocks.TILED_BLACK_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_BLACK_STAINED_GLASS_CTM =
         registerBlockItem("tiled_black_stained_glass_ctm", ModBlocks.TILED_BLACK_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_BLACK_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_black_stained_glass_ctm_pane", ModBlocks.TILED_BLACK_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_BLACKSTONE_COLUMN =
         registerBlockItem("tiled_blackstone_column", ModBlocks.TILED_BLACKSTONE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> TILED_BLUE_ICE_COLUMN =
@@ -4217,7 +3878,6 @@ public class ModItems {
         registerBlockItem("tiled_blue_stained_glass", ModBlocks.TILED_BLUE_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_BLUE_STAINED_GLASS_CTM =
         registerBlockItem("tiled_blue_stained_glass_ctm", ModBlocks.TILED_BLUE_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_BLUE_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_blue_stained_glass_ctm_pane", ModBlocks.TILED_BLUE_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_AMETHYST_BLOCK =
         registerBlockItem("tiled_bordered_amethyst_block", ModBlocks.TILED_BORDERED_AMETHYST_BLOCK);
     public static final DeferredHolder<Item, BlockItem> TILED_BORDERED_ANCIENT_DEBRIS =
@@ -4318,7 +3978,6 @@ public class ModItems {
         registerBlockItem("tiled_brown_stained_glass", ModBlocks.TILED_BROWN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_BROWN_STAINED_GLASS_CTM =
         registerBlockItem("tiled_brown_stained_glass_ctm", ModBlocks.TILED_BROWN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_BROWN_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_brown_stained_glass_ctm_pane", ModBlocks.TILED_BROWN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_CALCITE_COLUMN =
         registerBlockItem("tiled_calcite_column", ModBlocks.TILED_CALCITE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> TILED_CLAY_COLUMN =
@@ -4333,7 +3992,6 @@ public class ModItems {
         registerBlockItem("tiled_cyan_stained_glass", ModBlocks.TILED_CYAN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_CYAN_STAINED_GLASS_CTM =
         registerBlockItem("tiled_cyan_stained_glass_ctm", ModBlocks.TILED_CYAN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_CYAN_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_cyan_stained_glass_ctm_pane", ModBlocks.TILED_CYAN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_DARK_PRISMARINE_COLUMN =
         registerBlockItem("tiled_dark_prismarine_column", ModBlocks.TILED_DARK_PRISMARINE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> TILED_DEEPSLATE_COLUMN =
@@ -4352,12 +4010,10 @@ public class ModItems {
         registerBlockItem("tiled_gray_stained_glass", ModBlocks.TILED_GRAY_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_GRAY_STAINED_GLASS_CTM =
         registerBlockItem("tiled_gray_stained_glass_ctm", ModBlocks.TILED_GRAY_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_GRAY_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_gray_stained_glass_ctm_pane", ModBlocks.TILED_GRAY_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_GREEN_STAINED_GLASS =
         registerBlockItem("tiled_green_stained_glass", ModBlocks.TILED_GREEN_STAINED_GLASS);
     public static final DeferredHolder<Item, BlockItem> TILED_GREEN_STAINED_GLASS_CTM =
         registerBlockItem("tiled_green_stained_glass_ctm", ModBlocks.TILED_GREEN_STAINED_GLASS_CTM);
-    public static final DeferredHolder<Item, BlockItem> TILED_GREEN_STAINED_GLASS_CTM_PANE = registerBlockItem("tiled_green_stained_glass_ctm_pane", ModBlocks.TILED_GREEN_STAINED_GLASS_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> TILED_ICE_COLUMN =
         registerBlockItem("tiled_ice_column", ModBlocks.TILED_ICE_COLUMN);
     public static final DeferredHolder<Item, BlockItem> TILED_LAPIS_BLOCK_COLUMN =
@@ -4512,7 +4168,6 @@ public class ModItems {
         registerBlockItem("vertical_striped_green_stained_glass", ModBlocks.VERTICAL_STRIPED_GREEN_STAINED_GLASS);
 public static final DeferredHolder<Item, BlockItem> WARPED_PLANKS_PANEL =
         registerBlockItem("warped_planks_panel", ModBlocks.WARPED_PLANKS_PANEL);
-    public static final DeferredHolder<Item, BlockItem> WARPED_WINDOW_SWIRLING_CTM_PANE = registerBlockItem("warped_window_swirling_ctm_pane", ModBlocks.WARPED_WINDOW_SWIRLING_CTM_PANE);
     public static final DeferredHolder<Item, BlockItem> WHIRLWIND_ACACIA_PLANKS =
         registerBlockItem("whirlwind_acacia_planks", ModBlocks.WHIRLWIND_ACACIA_PLANKS);
     public static final DeferredHolder<Item, BlockItem> WHIRLWIND_BAMBOO_PLANKS =

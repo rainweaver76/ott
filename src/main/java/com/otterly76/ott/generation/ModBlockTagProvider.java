@@ -4,7 +4,7 @@ import com.otterly76.ott_blocks.block.OttBlocks;
 
 import com.otterly76.ott.Constants;
 import com.otterly76.ott.block.*;
-import com.otterly76.ott.block.custom.CtmPaneBlock;
+import com.otterly76.ott_blocks.block.CtmPaneBlock;
 import com.otterly76.ott.block.custom.TileBlock;
 import com.otterly76.ott.util.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -114,7 +114,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(Blocks.STONE, Blocks.ANDESITE, Blocks.DIORITE, Blocks.GRANITE, Blocks.DEEPSLATE, Blocks.TUFF);
 
         // --- 3. REGISTRY LOOP (Populate ott: and behavior tags) ---
-        ModBlocks.BLOCKS.getEntries().forEach(deferredBlock -> {
+        java.util.stream.Stream.concat(ModBlocks.BLOCKS.getEntries().stream(), com.otterly76.ott_blocks.block.OttBlocks.BLOCKS.getEntries().stream()).forEach(deferredBlock -> {
             Block block = deferredBlock.value();
 
             switch (block) {
@@ -786,24 +786,24 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(OttBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
         pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
-                OttBlocks.SOUL_GLASS_CTM.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
+                OttBlocks.SOUL_GLASS_CTM.get(), OttBlocks.SOUL_GLASS_CTM_PANE.get());
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
-                ModBlocks.CHISELED_GLASS_CTM_PANE.get(),
-                ModBlocks.CLEAR_GLASS_CTM_PANE.get(),
-                ModBlocks.DIRTY_GLASS_CTM_PANE.get(),
-                ModBlocks.FROSTED_GLASS_CTM_PANE.get(),
-                ModBlocks.ICE_GLASS_CTM_PANE.get(),
-                ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(),
-                ModBlocks.REINFORCED_GLASS_CTM_PANE.get(),
-                ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(),
-                ModBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(),
-                ModBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(),
-                ModBlocks.TINTED_GLASS_CTM_PANE.get(),
-                ModBlocks.SOUL_GLASS_CTM_PANE.get()
+                OttBlocks.CHISELED_GLASS_CTM_PANE.get(),
+                OttBlocks.CLEAR_GLASS_CTM_PANE.get(),
+                OttBlocks.DIRTY_GLASS_CTM_PANE.get(),
+                OttBlocks.FROSTED_GLASS_CTM_PANE.get(),
+                OttBlocks.ICE_GLASS_CTM_PANE.get(),
+                OttBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(),
+                OttBlocks.REINFORCED_GLASS_CTM_PANE.get(),
+                OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(),
+                OttBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(),
+                OttBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(),
+                OttBlocks.TINTED_GLASS_CTM_PANE.get(),
+                OttBlocks.SOUL_GLASS_CTM_PANE.get()
         );
         mcStainedGlass.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_CTM.get());
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(
-                OttBlocks.SOUL_GLASS_PANE.get(), ModBlocks.SOUL_GLASS_CTM_PANE.get());
+                OttBlocks.SOUL_GLASS_PANE.get(), OttBlocks.SOUL_GLASS_CTM_PANE.get());
         this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
                 OttBlocks.SOUL_GLASS_CTM.get());
         this.tag(doDefaultKey).add(OttBlocks.SOUL_GLASS.get());

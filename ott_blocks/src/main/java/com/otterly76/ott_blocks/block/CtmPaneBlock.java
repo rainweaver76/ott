@@ -1,4 +1,4 @@
-package com.otterly76.ott.block.custom;
+package com.otterly76.ott_blocks.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;

@@ -3104,17 +3104,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Oak Glass
         // Oak Glass Panes
-        engraveOne(exporter, OttBlocks.CHISELED_GLASS.get(), ModBlocks.CHISELED_GLASS_CTM_PANE.get(), "chiseled_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.CLEAR_GLASS.get(), ModBlocks.CLEAR_GLASS_CTM_PANE.get(), "clear_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.DIRTY_GLASS.get(), ModBlocks.DIRTY_GLASS_CTM_PANE.get(), "dirty_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.FROSTED_GLASS.get(), ModBlocks.FROSTED_GLASS_CTM_PANE.get(), "frosted_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.ICE_GLASS.get(), ModBlocks.ICE_GLASS_CTM_PANE.get(), "ice_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.OBSIDIAN_FRAMED_GLASS.get(), ModBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(), "obsidian_framed_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.REINFORCED_GLASS.get(), ModBlocks.REINFORCED_GLASS_CTM_PANE.get(), "reinforced_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.SANDSTONE_FRAMED_GLASS.get(), ModBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "sandstone_framed_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.STONE_FRAMED_GLASS.get(), ModBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(), "stone_framed_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.TINTED_CLEAR_GLASS.get(), ModBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(), "tinted_clear_glass_ctm_pane_engraving");
-        engraveOne(exporter, OttBlocks.TINTED_GLASS.get(), ModBlocks.TINTED_GLASS_CTM_PANE.get(), "tinted_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.CHISELED_GLASS.get(), OttBlocks.CHISELED_GLASS_CTM_PANE.get(), "chiseled_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.CLEAR_GLASS.get(), OttBlocks.CLEAR_GLASS_CTM_PANE.get(), "clear_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.DIRTY_GLASS.get(), OttBlocks.DIRTY_GLASS_CTM_PANE.get(), "dirty_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.FROSTED_GLASS.get(), OttBlocks.FROSTED_GLASS_CTM_PANE.get(), "frosted_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.ICE_GLASS.get(), OttBlocks.ICE_GLASS_CTM_PANE.get(), "ice_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.OBSIDIAN_FRAMED_GLASS.get(), OttBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(), "obsidian_framed_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.REINFORCED_GLASS.get(), OttBlocks.REINFORCED_GLASS_CTM_PANE.get(), "reinforced_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.SANDSTONE_FRAMED_GLASS.get(), OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "sandstone_framed_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.STONE_FRAMED_GLASS.get(), OttBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(), "stone_framed_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.TINTED_CLEAR_GLASS.get(), OttBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(), "tinted_clear_glass_ctm_pane_engraving");
+        engraveOne(exporter, OttBlocks.TINTED_GLASS.get(), OttBlocks.TINTED_GLASS_CTM_PANE.get(), "tinted_glass_ctm_pane_engraving");
 
         // Oak Planks
 
@@ -3342,14 +3342,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     // ── CTM Pane recipes (new batch) ──────────────────────────────────────────
     private void ctmPaneRecipes(RecipeOutput exporter) {
         // 1. Plain glass CTM panes (engraved from vanilla glass)
-        engraveOne(exporter, Blocks.GLASS, ModBlocks.SCRATCHED_GLASS_CTM_PANE,         "scratched_glass_ctm_pane_engraving");
-        engraveOne(exporter, Blocks.GLASS, ModBlocks.BORDERLESS_GLASS_CTM_PANE,        "borderless_glass_ctm_pane_engraving");
-        paneFrom6(exporter, OttBlocks.SCRATCHED_GLASS,       ModBlocks.SCRATCHED_GLASS_CTM_PANE,        "scratched_glass_ctm_pane_from_block");
-        paneFrom6(exporter, OttBlocks.BORDERLESS_GLASS,      ModBlocks.BORDERLESS_GLASS_CTM_PANE,       "borderless_glass_ctm_pane_from_block");
+        engraveOne(exporter, Blocks.GLASS, OttBlocks.SCRATCHED_GLASS_CTM_PANE,         "scratched_glass_ctm_pane_engraving");
+        engraveOne(exporter, Blocks.GLASS, OttBlocks.BORDERLESS_GLASS_CTM_PANE,        "borderless_glass_ctm_pane_engraving");
+        paneFrom6(exporter, OttBlocks.SCRATCHED_GLASS,       OttBlocks.SCRATCHED_GLASS_CTM_PANE,        "scratched_glass_ctm_pane_from_block");
+        paneFrom6(exporter, OttBlocks.BORDERLESS_GLASS,      OttBlocks.BORDERLESS_GLASS_CTM_PANE,       "borderless_glass_ctm_pane_from_block");
 
         // 2. Tinted borderless CTM pane (engraved from vanilla tinted glass)
-        engraveOne(exporter, Blocks.TINTED_GLASS, ModBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_engraving");
-        paneFrom6(exporter, OttBlocks.TINTED_BORDERLESS_GLASS, ModBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_from_block");
+        engraveOne(exporter, Blocks.TINTED_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_engraving");
+        paneFrom6(exporter, OttBlocks.TINTED_BORDERLESS_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_from_block");
 
         // 3. Per-color stained glass CTM panes are now handled inside stainedGlassGroupRecipes().
         // 3.5 Tinted-coloured CTM panes (separate from stained glass group — base is tinted glass)
@@ -3451,7 +3451,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.ANDESITE, OttBlocks.ANDESITE_TILES.get(), "andesite_tiles_engraving");
         engraveOne(exporter, Blocks.ANDESITE, OttBlocks.ANDESITE_WAVY.get(), "andesite_wavy_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.ARCHED_LEADED_GLASS_CTM, "arched_leaded_glass_pillar_engraving");
-        engraveOne(exporter, ModBlocks.ARCHED_LEADED_GLASS_CTM.get(), ModBlocks.ARCHED_LEADED_GLASS_CTM_PANE.get(), "arched_leaded_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.ARCHED_LEADED_GLASS_CTM.get(), OttBlocks.ARCHED_LEADED_GLASS_CTM_PANE.get(), "arched_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.BAMBOO_PLANKS, OttBlocks.BAMBOO_PLANKS_BEAMS.get(), "bamboo_planks_beams_engraving");
         engraveOne(exporter, Blocks.BAMBOO_PLANKS, OttBlocks.BAMBOO_PLANKS_BRICK_PATTERN.get(), "bamboo_planks_brick_pattern_engraving");
         engraveOne(exporter, Blocks.BAMBOO_PLANKS, OttBlocks.BAMBOO_PLANKS_BRICK_PAVING.get(), "bamboo_planks_brick_paving_engraving");
@@ -3664,7 +3664,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, ModBlocks.CIRCULAR_YELLOW_TERRACOTTA, "circular_yellow_terracotta_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.CLEAR_LEADED_GLASS_CTM, "clear_leaded_glass_pillar_engraving");
-        engraveOne(exporter, ModBlocks.CLEAR_LEADED_GLASS_CTM.get(), ModBlocks.CLEAR_LEADED_GLASS_CTM_PANE.get(), "clear_leaded_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.CLEAR_LEADED_GLASS_CTM.get(), OttBlocks.CLEAR_LEADED_GLASS_CTM_PANE.get(), "clear_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, OttBlocks.COAL_BLOCK_CARVED.get(), "coal_block_carved_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, OttBlocks.COAL_BLOCK_CHISELED.get(), "coal_block_chiseled_engraving");
         engraveOne(exporter, Blocks.COAL_BLOCK, OttBlocks.COAL_BLOCK_CIRCLES.get(), "coal_block_circles_engraving");
@@ -4308,30 +4308,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.NETHERRACK, OttBlocks.NETHERRACK_SMALL_TILES.get(), "netherrack_small_tiles_engraving");
         engraveOne(exporter, Blocks.NETHERRACK, OttBlocks.NETHERRACK_STRIPES.get(), "netherrack_stripes_engraving");
         engraveOne(exporter, Blocks.NETHERRACK, OttBlocks.NETHERRACK_TILES.get(), "netherrack_tiles_engraving");
-        engraveOne(exporter, ModBlocks.OAK_BARRED_GLASS_CTM.get(), ModBlocks.OAK_BARRED_GLASS_CTM_PANE.get(), "oak_barred_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_BARRED_GLASS_CTM.get(), OttBlocks.OAK_BARRED_GLASS_CTM_PANE.get(), "oak_barred_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_BORDERED_GLASS, "oak_bordered_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_BORDERED_GLASS_CTM, "oak_bordered_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_BORDERED_GLASS_CTM.get(), ModBlocks.OAK_BORDERED_GLASS_CTM_PANE.get(), "oak_bordered_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_BORDERED_GLASS_CTM.get(), OttBlocks.OAK_BORDERED_GLASS_CTM_PANE.get(), "oak_bordered_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_DIAMOND_BORDERED_GLASS, "oak_diamond_bordered_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_DIAMOND_BORDERED_GLASS.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE.get(), "oak_diamond_bordered_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM, "oak_diamond_bordered_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM.get(), ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE.get(), "oak_diamond_bordered_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE.get(), "oak_diamond_bordered_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_HORIZONTAL_LINED_GLASS, "oak_horizontal_lined_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_HORIZONTAL_LINED_GLASS.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE.get(), "oak_horizontal_lined_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM, "oak_horizontal_lined_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM.get(), ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE.get(), "oak_horizontal_lined_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE.get(), "oak_horizontal_lined_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_LARGE_DIAMOND_GLASS, "oak_large_diamond_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_LARGE_DIAMOND_GLASS.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_PANE.get(), "oak_large_diamond_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM, "oak_large_diamond_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM.get(), ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE.get(), "oak_large_diamond_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_LARGE_DIAMOND_GLASS_CTM.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE.get(), "oak_large_diamond_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_LINE_BARED_GLASS, "oak_line_bared_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_LINE_BARED_GLASS.get(), OttBlocks.OAK_LINE_BARED_GLASS_PANE.get(), "oak_line_bared_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_LINE_BARED_GLASS_CTM, "oak_line_bared_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_LINE_BARED_GLASS_CTM.get(), ModBlocks.OAK_LINE_BARED_GLASS_CTM_PANE.get(), "oak_line_bared_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_LINE_BARED_GLASS_CTM.get(), OttBlocks.OAK_LINE_BARED_GLASS_CTM_PANE.get(), "oak_line_bared_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_ORNATE_BARED_GLASS, "oak_ornate_bared_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_ORNATE_BARED_GLASS.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_PANE.get(), "oak_ornate_bared_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_ORNATE_BARED_GLASS_CTM, "oak_ornate_bared_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_ORNATE_BARED_GLASS_CTM.get(), ModBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE.get(), "oak_ornate_bared_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_ORNATE_BARED_GLASS_CTM.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE.get(), "oak_ornate_bared_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.OAK_PLANKS, OttBlocks.OAK_PLANKS_BEAMS.get(), "oak_planks_beams_engraving");
         engraveOne(exporter, Blocks.OAK_PLANKS, OttBlocks.OAK_PLANKS_BRICK_PATTERN.get(), "oak_planks_brick_pattern_engraving");
         engraveOne(exporter, Blocks.OAK_PLANKS, OttBlocks.OAK_PLANKS_BRICK_PAVING.get(), "oak_planks_brick_paving_engraving");
@@ -4354,7 +4354,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.GLASS, OttBlocks.OAK_WOVEN_GLASS, "oak_woven_glass_engraving");
         engraveOne(exporter, OttBlocks.OAK_WOVEN_GLASS.get(), OttBlocks.OAK_WOVEN_GLASS_PANE.get(), "oak_woven_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.OAK_WOVEN_GLASS_CTM, "oak_woven_glass_ctm_engraving");
-        engraveOne(exporter, ModBlocks.OAK_WOVEN_GLASS_CTM.get(), ModBlocks.OAK_WOVEN_GLASS_CTM_PANE.get(), "oak_woven_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.OAK_WOVEN_GLASS_CTM.get(), OttBlocks.OAK_WOVEN_GLASS_CTM_PANE.get(), "oak_woven_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.OBSIDIAN, OttBlocks.OBSIDIAN_BORDERED.get(), "obsidian_bordered_engraving");
         engraveOne(exporter, Blocks.OBSIDIAN, OttBlocks.OBSIDIAN_BRICK_PATTERN.get(), "obsidian_brick_pattern_engraving");
         engraveOne(exporter, Blocks.OBSIDIAN, OttBlocks.OBSIDIAN_BRICK_PAVING.get(), "obsidian_brick_paving_engraving");
@@ -4550,7 +4550,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.QUARTZ_BLOCK, OttBlocks.QUARTZ_BLOCK_TILES.get(), "quartz_block_tiles_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.RASTER_LEADED_GLASS_CTM, "raster_leaded_glass_pillar_engraving");
-        engraveOne(exporter, ModBlocks.RASTER_LEADED_GLASS_CTM.get(), ModBlocks.RASTER_LEADED_GLASS_CTM_PANE.get(), "raster_leaded_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.RASTER_LEADED_GLASS_CTM.get(), OttBlocks.RASTER_LEADED_GLASS_CTM_PANE.get(), "raster_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.BLACK_WOOL, ModBlocks.RECTANGLE_BLACK_WOOL, "rectangle_black_wool_engraving");
         engraveOne(exporter, Blocks.BLUE_WOOL, ModBlocks.RECTANGLE_BLUE_WOOL, "rectangle_blue_wool_engraving");
         engraveOne(exporter, Blocks.BROWN_WOOL, ModBlocks.RECTANGLE_BROWN_WOOL, "rectangle_brown_wool_engraving");
@@ -4654,7 +4654,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.CYAN_TERRACOTTA, ModBlocks.SMALL_CYAN_TERRACOTTA_TILES, "small_cyan_terracotta_tiles_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS, "small_diamond_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM, "small_diamond_leaded_glass_pillar_engraving");
-        engraveOne(exporter, ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM.get(), ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM_PANE.get(), "small_diamond_leaded_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM.get(), OttBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM_PANE.get(), "small_diamond_leaded_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GRAY_TERRACOTTA, ModBlocks.SMALL_GRAY_TERRACOTTA_TILES, "small_gray_terracotta_tiles_engraving");
         engraveOne(exporter, Blocks.GREEN_TERRACOTTA, ModBlocks.SMALL_GREEN_TERRACOTTA_TILES, "small_green_terracotta_tiles_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_TERRACOTTA, ModBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES, "small_light_blue_terracotta_tiles_engraving");
@@ -4748,7 +4748,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.SPRUCE_PLANKS, OttBlocks.SPRUCE_PLANKS_WOVEN.get(), "spruce_planks_woven_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SQUARE_LEADED_GLASS, "square_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.SQUARE_OAK_GLASS, "square_oak_glass_engraving");
-        engraveOne(exporter, ModBlocks.SQUARE_OAK_GLASS_CTM.get(), ModBlocks.SQUARE_OAK_GLASS_CTM_PANE.get(), "square_oak_glass_ctm_pane_engraving");
+        engraveOne(exporter, ModBlocks.SQUARE_OAK_GLASS_CTM.get(), OttBlocks.SQUARE_OAK_GLASS_CTM_PANE.get(), "square_oak_glass_ctm_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, ModBlocks.SQUARE_OAK_GLASS_CTM, "square_oak_glass_ctm_engraving");
         engraveOne(exporter, Blocks.BLACK_TERRACOTTA, ModBlocks.STARRY_BLACK_TERRACOTTA, "starry_black_terracotta_engraving");
         engraveOne(exporter, Blocks.BLUE_TERRACOTTA, ModBlocks.STARRY_BLUE_TERRACOTTA, "starry_blue_terracotta_engraving");

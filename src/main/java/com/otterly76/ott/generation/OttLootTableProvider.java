@@ -57,7 +57,7 @@ public class OttLootTableProvider extends BlockLootSubProvider {
         });
 
         Stream.concat(
-                ModBlocks.BLOCKS.getEntries().stream(),
+                Stream.concat(ModBlocks.BLOCKS.getEntries().stream(), com.otterly76.ott_blocks.block.OttBlocks.BLOCKS.getEntries().stream()),
                 ModBlocks.MINECRAFT_BLOCKS.getEntries().stream()
         ).map(Supplier::get).forEach(block -> {
             if (block instanceof GradientStainedGlassBlock) {
@@ -137,6 +137,7 @@ public class OttLootTableProvider extends BlockLootSubProvider {
     protected @NotNull Iterable<Block> getKnownBlocks() {
         List<Block> knownBlocks = new ArrayList<>();
         knownBlocks.addAll(ModBlocks.BLOCKS.getEntries().stream().map(Supplier::get).toList());
+        knownBlocks.addAll(com.otterly76.ott_blocks.block.OttBlocks.BLOCKS.getEntries().stream().map(Supplier::get).toList());
         knownBlocks.addAll(ModBlocks.MINECRAFT_BLOCKS.getEntries().stream()
                 .map(Supplier::get).toList());
         return knownBlocks;
