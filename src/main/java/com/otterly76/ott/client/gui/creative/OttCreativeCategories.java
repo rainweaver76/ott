@@ -4019,8 +4019,10 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.YELLOW_STAINED_GLASS_CTM_PANE);
                 output.accept(OttBlocks.YELLOW_TERRACOTTA_COLUMN);
                 output.accept(OttBlocks.YELLOW_TERRACOTTA_CTM);
+
                 // Chisel pillar blocks
                 ModBlocks.CHISEL_PILLARS.values().forEach(output::accept);
+
                 // Legend blocks
                 ModBlocks.CHISEL_LEGEND.values().forEach(output::accept);
 
