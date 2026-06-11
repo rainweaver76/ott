@@ -33,4 +33,4 @@ repo
 /logs/*
 /scripts/*
 /src/to_be_added/*
-/ott_blocks/logs/*
+/ott_blocks/logs/
