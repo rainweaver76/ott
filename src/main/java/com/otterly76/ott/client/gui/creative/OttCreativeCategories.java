@@ -788,6 +788,9 @@ public enum OttCreativeCategories {
                 ModBlocks.SEAGLASS.forEach(output::accept);  // ethereal seaglass only
                 ModBlocks.TESTBLOCK.forEach(output::accept);
 
+                output.accept(OttBlocks.PINK_SALT_BLOCK);
+                output.accept(OttBlocks.POLISHED_PINK_SALT_BLOCK);
+
                 output.accept(OttBlocks.WHEAT_THATCH);
                 output.accept(ModBlocks.WHEAT_THATCH_EDGE);
                 output.accept(ModBlocks.WHEAT_THATCH_PLATE);
@@ -4216,6 +4219,19 @@ public enum OttCreativeCategories {
                 output.accept(ModItems.WHITE_OPAL_CRYSTAL);
                 output.accept(ModItems.BLACK_OPAL_CRYSTAL);
                 output.accept(ModItems.FIRE_OPAL_CRYSTAL);
+            }),
+
+    TOOLS("tools",
+            () -> ModItems.DIAMOND_SHEARS.get(),
+            (params, output) -> {
+                // Shears
+                output.accept(ModItems.COPPER_SHEARS);
+                output.accept(ModItems.EXPOSED_COPPER_SHEARS);
+                output.accept(ModItems.WEATHERED_COPPER_SHEARS);
+                output.accept(ModItems.OXIDIZED_COPPER_SHEARS);
+                output.accept(ModItems.GOLDEN_SHEARS);
+                output.accept(ModItems.DIAMOND_SHEARS);
+                output.accept(ModItems.NETHERITE_SHEARS);
 
                 // Paxels
                 output.accept(ModItems.WOOD_PAXEL);
@@ -4240,7 +4256,7 @@ public enum OttCreativeCategories {
 
     // --- Display order (top to bottom in the button list) ---
     public static final java.util.List<OttCreativeCategories> DISPLAY_ORDER =
-            java.util.List.of(MISC, COLORS, DYES, GRADIENTS, WOOD_SETS, VANPLUS,
+            java.util.List.of(MISC, TOOLS, COLORS, DYES, GRADIENTS, WOOD_SETS, VANPLUS,
                     STONE_CUSTOM, STONE_VANILLA,
                     BACKPORT, COPPER_CHAOS, ENGRAVED, MOSAIC, BLOCKS,
                     FLORA, FAUNA, FOOD, JARS, CREATURES
