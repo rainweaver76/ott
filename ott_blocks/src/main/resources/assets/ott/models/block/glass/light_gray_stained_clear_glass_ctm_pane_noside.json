@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_pane_noside_full",
+  "textures": {
+    "pane": "ott:block/light_gray_stained_glass/ctm/light_gray_stained_clear_glass",
+    "edge": "ott:block/light_gray_stained_glass/clear_glass_light_gray_edge"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}

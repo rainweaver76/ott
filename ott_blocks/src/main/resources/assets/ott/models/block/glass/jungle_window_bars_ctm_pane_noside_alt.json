@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_pane_noside_alt_vertical",
+  "textures": {
+    "pane": "ott:block/jungle_windows/ctm/jungle_window_bars",
+    "edge": "minecraft:block/jungle_planks"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

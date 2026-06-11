@@ -74,7 +74,8 @@ runs {
         systemProperty 'forge.logging.console.level', 'debug'
 
         // Expose source resources path so ModPatterns can scan the patterns directory
-        systemProperty 'ott.sourceResources', file('src/main/resources').absolutePath
+        // Block assets (incl. textures/block/patterns, scanned by ModPatterns) now live in ott_blocks.
+        systemProperty 'ott.sourceResources', project(':ott_blocks').file('src/main/resources').absolutePath
 
         modSource project.sourceSets.main
         // Load the sibling ott_blocks mod into the same dev run (one-way dep: ott -> ott_blocks)

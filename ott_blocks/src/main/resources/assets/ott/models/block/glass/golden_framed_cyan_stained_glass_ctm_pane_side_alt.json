@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "textures": {
+    "pane": "ott:block/golden_framed_glass/ctm/golden_framed_cyan_stained_glass",
+    "edge": "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}

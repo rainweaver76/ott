@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "textures": {
+    "pane": "ott:block/glass/ctm/soul_glass",
+    "edge": "ott:block/misc/soul_glass"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}
