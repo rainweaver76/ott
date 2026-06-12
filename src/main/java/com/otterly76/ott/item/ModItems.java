@@ -30,14 +30,12 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Constants.MOD_ID);
     public static final DeferredRegister.Items MINECRAFT_ITEMS = ModBlocks.MINECRAFT_ITEMS;
 
-    public static final Map<String, Map<String, DeferredItem<Item>>> WOOD_DOOR_ITEMS = new LinkedHashMap<>();
     public static final Map<String, DeferredItem<SignItem>> WOOD_SET_SIGNS = new HashMap<>();
     public static final Map<String, DeferredItem<HangingSignItem>> WOOD_SET_HANGING_SIGNS = new HashMap<>();
     public static final Map<String, DeferredItem<ModBoatItem>> WOOD_SET_BOATS = new HashMap<>();
@@ -140,17 +138,6 @@ public class ModItems {
     public static final DeferredItem<Item> SPRUCE_BEEHIVE   = ITEMS.register("spruce_beehive",   () -> new net.minecraft.world.item.BlockItem(ModBlocks.SPRUCE_BEEHIVE.get(),   new Item.Properties()));
     public static final DeferredItem<Item> WARPED_BEEHIVE   = ITEMS.register("warped_beehive",   () -> new net.minecraft.world.item.BlockItem(ModBlocks.WARPED_BEEHIVE.get(),   new Item.Properties()));
 
-    static {
-        ModBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
-            Map<String, DeferredItem<Item>> woodItems = new LinkedHashMap<>();
-            WOOD_DOOR_ITEMS.put(wood, woodItems);
-            styleMap.forEach((style, block) -> {
-                String regName = style + "_" + wood + "_door";
-                woodItems.put(style, ITEMS.register(regName,
-                        () -> new net.minecraft.world.item.BlockItem(block.get(), new Item.Properties())));
-            });
-        });
-    }
     public static final DeferredItem<Item> EMU_EGG = ITEMS.register("emu_egg", () -> new EmuEggItem(new Item.Properties()));
     public static final DeferredItem<Item> HOOPOE_EGG = ITEMS.register("hoopoe_egg", () -> new HoopoeEggItem(new Item.Properties()));
     public static final DeferredItem<Item> PHEASANT_EGG = ITEMS.register("pheasant_egg", () -> new PheasantEggItem(new Item.Properties()));

@@ -828,7 +828,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         axeTag.add(ModBlocks.ACACIA_BEEHIVE.get(), ModBlocks.BAMBOO_BEEHIVE.get(), ModBlocks.BIRCH_BEEHIVE.get(), ModBlocks.CHERRY_BEEHIVE.get(), ModBlocks.CRIMSON_BEEHIVE.get());
         axeTag.add(ModBlocks.DARK_OAK_BEEHIVE.get(), ModBlocks.JUNGLE_BEEHIVE.get(), ModBlocks.MANGROVE_BEEHIVE.get(), ModBlocks.PALE_OAK_BEEHIVE.get(), ModBlocks.SPRUCE_BEEHIVE.get(), ModBlocks.WARPED_BEEHIVE.get());
 
-        ModBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
+        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
             Block vanillaWoodDoor = switch (wood) {
                 case "oak"      -> Blocks.OAK_DOOR;
                 case "spruce"   -> Blocks.SPRUCE_DOOR;

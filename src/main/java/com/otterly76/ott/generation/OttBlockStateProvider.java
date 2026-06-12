@@ -1520,7 +1520,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         beehiveBlock(ModBlocks.SPRUCE_BEEHIVE,    "spruce");
         beehiveBlock(ModBlocks.WARPED_BEEHIVE,    "warped");
 
-        ModBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
+        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
             styleMap.forEach((style, block) -> {
                 ResourceLocation bottom = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_bottom");
                 ResourceLocation top    = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top");

@@ -6,6 +6,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.otterly76.ott.color.ModColorSets;
 import com.otterly76.ott.wood.ModWoodSets;
+import com.otterly76.ott_blocks.block.OttBlocks;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -74,7 +75,7 @@ public class ModLangMergeProvider implements DataProvider {
         }
 
         // Add wood door variant entries
-        com.otterly76.ott.block.ModBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
+        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
             String woodCap = Arrays.stream(wood.split("_"))
                     .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
                     .collect(Collectors.joining(" "));

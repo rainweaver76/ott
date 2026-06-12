@@ -1,7 +1,7 @@
 package com.otterly76.ott.block.wood;
 
 import com.otterly76.ott.block.ModBlocks;
-import com.otterly76.ott.util.block.BlockSetTypeVariant;
+import com.otterly76.ott_blocks.util.block.BlockSetTypeVariant;
 import com.otterly76.ott.util.block.WoodTypeVariant;
 import com.otterly76.ott.worldgen.ModTreeGrowers;
 import net.minecraft.world.level.block.*;

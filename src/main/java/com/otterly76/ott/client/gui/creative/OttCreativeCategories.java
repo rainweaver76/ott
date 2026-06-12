@@ -4048,13 +4048,13 @@ public enum OttCreativeCategories {
                 });
 
                 // Wood door variants
-                ModItems.WOOD_DOOR_ITEMS.values().forEach(woodMap -> woodMap.values().forEach(output::accept));
+                OttBlocks.WOOD_DOORS.values().forEach(woodMap -> woodMap.values().forEach(output::accept));
 
                 // Extra wood doors (new-style naming)
-                ModBlocks.EXTRA_DOORS.values().forEach(output::accept);
+                OttBlocks.EXTRA_DOORS.values().forEach(output::accept);
 
                 // Wood trapdoors
-                ModBlocks.WOOD_TRAPDOORS.values().forEach(output::accept);
+                OttBlocks.WOOD_TRAPDOORS.values().forEach(output::accept);
 
                 // Bookshelves
                 ModBlocks.BOOKSHELVES.values().forEach(output::accept);

@@ -1,6 +1,7 @@
 package com.otterly76.ott.generation;
 
 import com.otterly76.ott.block.ModBlocks;
+import com.otterly76.ott_blocks.block.OttBlocks;
 import com.otterly76.ott.color.ModColorSets;
 import com.otterly76.ott.color.ModPatterns;
 import com.otterly76.ott.item.ModItems;
@@ -100,7 +101,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             parentItemToBlockModel(set.supportSlab().getId().getPath(), "block/" + setName + "/" + set.supportSlab().getId().getPath());
         });
 
-        ModBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
+        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
             styleMap.keySet().forEach(style -> {
                 String itemName = style + "_" + wood + "_door";
                 withExistingParent(itemName, mcLoc("item/door_base"))

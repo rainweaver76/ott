@@ -1,6 +1,7 @@
 package com.otterly76.ott.util.block;
 
 import net.minecraft.world.level.block.state.properties.WoodType;
+import com.otterly76.ott_blocks.util.block.BlockSetTypeVariant;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

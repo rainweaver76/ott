@@ -2,6 +2,7 @@ package com.otterly76.ott.generation;
 
 import com.otterly76.ott.Constants;
 import com.otterly76.ott.block.ModBlocks;
+import com.otterly76.ott_blocks.block.OttBlocks;
 import com.otterly76.ott.color.ModColorSets;
 import com.otterly76.ott.item.ModItems;
 import com.otterly76.ott.util.ModTags;
@@ -73,7 +74,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         this.copy(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/stained_glass")), ottStainedGlassKey);
         this.copy(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/terracotta")), ottTerracottaKey);
 
-        com.otterly76.ott.block.ModBlocks.WOOD_DOORS.keySet().forEach(wood ->
+        OttBlocks.WOOD_DOORS.keySet().forEach(wood ->
             this.copy(
                 TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood)),
                 TagKey.create(Registries.ITEM,  ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood)))
