@@ -1,5 +1,5 @@
 {
-  "parent": "display/block_inside",
+  "parent": "minecraft:block/cube_all",
   "textures": {
     "0": "create:block/deepslate_zinc_ore",
     "particle": "create:block/deepslate_zinc_ore"

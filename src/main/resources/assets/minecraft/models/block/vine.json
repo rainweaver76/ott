@@ -2,7 +2,7 @@
 "render_type": "minecraft:cutout",
 	"parent": "block/block",
 	"textures": {
-		"particle": "item/vine",
+		"particle": "block/vine",
 		"vine": "block/vine",
 		"leaves": "block/vine_leaves"
 	},

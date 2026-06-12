@@ -5024,7 +5024,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.GRAY_CONCRETE, OttBlocks.WIRED_GRAY_CONCRETE, "wired_gray_concrete_engraving");
         engraveOne(exporter, Blocks.GREEN_CONCRETE, OttBlocks.WIRED_GREEN_CONCRETE, "wired_green_concrete_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.WIRED_LIGHT_BLUE_CONCRETE, "wired_light_blue_concrete_engraving");
-        engraveOne(exporter, Blocks.GRAY_CONCRETE, OttBlocks.WIRED_LIGHT_GRAY_CONCRETE, "wired_light_gray_concrete_engraving");
+        engraveOne(exporter, Blocks.LIGHT_GRAY_CONCRETE, OttBlocks.WIRED_LIGHT_GRAY_CONCRETE, "wired_light_gray_concrete_engraving");
         engraveOne(exporter, Blocks.LIME_CONCRETE, OttBlocks.WIRED_LIME_CONCRETE, "wired_lime_concrete_engraving");
         engraveOne(exporter, Blocks.MAGENTA_CONCRETE, OttBlocks.WIRED_MAGENTA_CONCRETE, "wired_magenta_concrete_engraving");
         engraveOne(exporter, Blocks.ORANGE_CONCRETE, OttBlocks.WIRED_ORANGE_CONCRETE, "wired_orange_concrete_engraving");

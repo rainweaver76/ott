@@ -2,7 +2,7 @@
 "render_type": "minecraft:cutout",
 	"ambientocclusion": false,
 	"textures": {
-		"particle": "item/lily_pad",
+		"particle": "block/lily_pad",
 		"texture": "block/lily_pad"
 	},
 	"elements": [
