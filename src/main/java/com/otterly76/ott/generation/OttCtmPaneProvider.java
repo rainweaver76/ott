@@ -187,7 +187,7 @@ public class OttCtmPaneProvider implements DataProvider {
 
         specs.add(new PaneSpec("borderless_glass_ctm_pane",
             "ott:block/glass/ctm/borderless_glass",
-            "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
+            "ott:block/transparent", "minecraft:cutout_mipped", false));
 
         // framed glass (colourless) — uses the leaded frame edge
         specs.add(new PaneSpec("framed_glass_ctm_pane",

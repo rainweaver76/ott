@@ -1,10 +1,9 @@
 {
   "loader": "ott:mosaic",
   "layout": "vertical",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical_capped",
   "textures": {
-    "side": "ott:block/light_gray_concrete/ctm/light_gray_concrete_ctm",
-    "top": "minecraft:block/light_gray_concrete"
+    "side": "ott:block/light_gray_concrete/ctm/light_gray_concrete_ctm"
   },
   "connections": {
     "side": [

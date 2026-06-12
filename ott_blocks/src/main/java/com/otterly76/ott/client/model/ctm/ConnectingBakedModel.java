@@ -326,6 +326,13 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         int mask = masks[ruleIdx][faceOrdinal];
         if (FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
         CtmLayout l = spriteLayouts.getOrDefault(sprite, layout);
+        // Vertical CTM connects only along the column's 4 side faces. The up/down caps are
+        // perpendicular to the connection axis, so they must never connect — pin them to the
+        // base tile [0,0] (the atlas's top section = the pillar cap design).
+        if (l == CtmLayout.VERTICAL
+                && (faceOrdinal == Direction.UP.ordinal() || faceOrdinal == Direction.DOWN.ordinal())) {
+            mask = 0;
+        }
         int[] tile = l.tile(mask);
         int tileX = tile[0];
         int tileY = tile[1];

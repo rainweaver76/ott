@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_side_alt_full",
   "textures": {
     "pane": "ott:block/glass/ctm/borderless_glass",
-    "edge": "minecraft:block/glass_pane_top"
+    "edge": "ott:block/transparent"
   },
   "connections": {
     "pane": [
