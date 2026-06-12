@@ -23,6 +23,14 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 // No run configs here on purpose: ott_blocks is a dependency mod, never launched standalone.
 // It is loaded into ott's runs via `modSource project(':ott_blocks').sourceSets.main` (see root build.gradle),
 // and its datagen is produced by ott's runData (ott_blocks resources are on ott's --existing path).
+//
+// NeoGradle's userdev plugin auto-creates default run tasks (runClient/runServer/runData/runGameTestServer)
+// for every project it is applied to, even without a `runs {}` block. Disable them here so an unqualified
+// `./gradlew runClient` / `runData` only triggers the root `ott` run (which loads BOTH mods) instead of
+// also launching a broken standalone ott_blocks client. Use `:runClient` on the root for the real run.
+tasks.matching { it.name ==~ /run(Client|Server|Data|GameTestServer)/ }.configureEach {
+    enabled = false
+}
 
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
