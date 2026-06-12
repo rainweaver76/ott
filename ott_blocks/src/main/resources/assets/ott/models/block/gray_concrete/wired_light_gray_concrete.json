@@ -1,6 +1,15 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "loader": "ott:mosaic",
+  "layout": "full",
+  "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott:block/gray_concrete/wired_light_gray_concrete"
+    "all": "ott:block/light_gray_concrete/ctm/wired_light_gray_concrete"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
   }
 }

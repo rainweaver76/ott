@@ -4915,7 +4915,7 @@ public class OttBlocks {
         public static final DeferredBlock<Block> WIRED_LIGHT_BLUE_CONCRETE =
                 register("wired_light_blue_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_CONCRETE)));
         public static final DeferredBlock<Block> WIRED_LIGHT_GRAY_CONCRETE =
-                register("wired_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_CONCRETE)));
+                register("wired_light_gray_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_CONCRETE)));
         public static final DeferredBlock<Block> WIRED_LIME_CONCRETE =
                 register("wired_lime_concrete", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_CONCRETE)));
         public static final DeferredBlock<Block> WIRED_MAGENTA_CONCRETE =
