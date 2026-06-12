@@ -2121,14 +2121,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             {"fancy_{c}_stained_glass_ctm",           "fancy_{c}_stained_glass_pillar_engraving"},
             {"ornate_{c}_stained_glass_ctm",          "ornate_{c}_stained_glass_pillar_engraving"},
             {"raster_{c}_stained_glass_ctm",          "raster_{c}_stained_glass_pillar_engraving"},
-            {"small_{c}_diamond_stained_glass",       "small_{c}_diamond_stained_glass_engraving"},
+            {"small_{c}_diamond_stained_glass_ctm",       "small_{c}_diamond_stained_glass_ctm_engraving"},
             {"tiled_{c}_stained_glass_ctm",           "tiled_{c}_stained_glass_pillar_engraving"},
             {"{c}_leaded_stained_glass",              "{c}_leaded_stained_glass_engraving"},
             {"fancy_{c}_stained_glass",               "fancy_{c}_stained_glass_engraving"},
             {"large_diamond_{c}_stained_glass",       "large_diamond_{c}_stained_glass_engraving"},
             {"ornate_{c}_stained_glass",              "ornate_{c}_stained_glass_engraving"},
             {"raster_{c}_stained_glass",              "raster_{c}_stained_glass_engraving"},
-            {"small_{c}_stained_glass",               "small_{c}_stained_glass_engraving"},
+            {"small_{c}_diamond_stained_glass",               "small_{c}_diamond_stained_glass_engraving"},
             {"square_{c}_stained_glass",              "square_{c}_stained_glass_engraving"},
             {"tiled_{c}_stained_glass",               "tiled_{c}_stained_glass_engraving"},
             {"vertical_striped_{c}_stained_glass",    "vertical_striped_{c}_stained_glass_engraving"},
@@ -3347,6 +3347,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         paneFrom6(exporter, OttBlocks.SCRATCHED_GLASS,       OttBlocks.SCRATCHED_GLASS_CTM_PANE,        "scratched_glass_ctm_pane_from_block");
         paneFrom6(exporter, OttBlocks.BORDERLESS_GLASS,      OttBlocks.BORDERLESS_GLASS_CTM_PANE,       "borderless_glass_ctm_pane_from_block");
 
+        // Colourless framed/ornate CTM panes (from their parent blocks)
+        paneFrom6(exporter, OttBlocks.FRAMED_GLASS,                OttBlocks.FRAMED_GLASS_CTM_PANE,                "framed_glass_ctm_pane_from_block");
+        paneFrom6(exporter, OttBlocks.GOLDEN_FRAMED_STAINED_GLASS, OttBlocks.GOLDEN_FRAMED_STAINED_GLASS_CTM_PANE, "golden_framed_stained_glass_ctm_pane_from_block");
+        paneFrom6(exporter, OttBlocks.ORNATE_LEADED_GLASS,         OttBlocks.ORNATE_LEADED_GLASS_CTM_PANE,         "ornate_leaded_glass_ctm_pane_from_block");
+
         // 2. Tinted borderless CTM pane (engraved from vanilla tinted glass)
         engraveOne(exporter, Blocks.TINTED_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_engraving");
         paneFrom6(exporter, OttBlocks.TINTED_BORDERLESS_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_from_block");
@@ -4179,7 +4184,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.MUD_BRICKS, OttBlocks.LARGE_MUD_BRICKS_SIGIL, "large_mud_bricks_sigil_engraving");
         engraveOne(exporter, Blocks.MUD, OttBlocks.LARGE_MUD_SIGIL, "large_mud_sigil_engraving");
         engraveOne(exporter, Blocks.PACKED_MUD, OttBlocks.LARGE_PACKED_MUD_SIGIL, "large_packed_mud_sigil_engraving");
-        engraveOne(exporter, Blocks.GLASS, OttBlocks.LEAD_WOVEN_GLASS, "lead_woven_glass_engraving");
+        engraveOne(exporter, Blocks.GLASS, OttBlocks.LEADED_WOVEN_GLASS, "leaded_woven_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.LIGHT_BLUE_CONCRETE_CTM, "light_blue_concrete_pillar_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.LIGHT_BLUE_CONCRETE_PANEL, "light_blue_concrete_panel_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_TERRACOTTA, OttBlocks.LIGHT_BLUE_TERRACOTTA_COLUMN, "light_blue_terracotta_column_engraving");

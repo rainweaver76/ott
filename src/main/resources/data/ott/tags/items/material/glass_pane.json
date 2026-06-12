@@ -13,10 +13,12 @@
     "ott:sandstone_framed_glass_ctm_pane",
     "ott:stone_framed_glass_ctm_pane",
     "ott:scratched_glass_ctm_pane",
-    "ott:leaded_glass_pane",
+    "ott:leaded_framed_glass_pane",
     "ott:ornate_leaded_glass_ctm_pane",
     "ott:circular_leaded_stained_glass_pane",
     "ott:soul_glass_ctm_pane",
-    "ott:soul_glass_pane"
+    "ott:soul_glass_pane",
+    "ott:framed_glass_ctm_pane",
+    "ott:golden_framed_stained_glass_ctm_pane"
   ]
 }

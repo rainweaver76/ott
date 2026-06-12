@@ -2,16 +2,28 @@
   "replace": false,
   "values": [
     "minecraft:light_gray_stained_glass_pane",
-    "ott:light_gray_framed_glass_ctm_pane",
-    "ott:light_gray_stained_glass_ctm_pane",
+    "ott:borderless_glass_light_gray_ctm_pane",
+    "ott:circular_light_gray_stained_glass_pane",
     "ott:fancy_light_gray_stained_glass_ctm_pane",
+    "ott:fancy_light_gray_stained_glass_pane",
     "ott:golden_framed_light_gray_stained_glass_ctm_pane",
+    "ott:large_diamond_light_gray_stained_glass_pane",
+    "ott:light_gray_framed_glass_ctm_pane",
+    "ott:light_gray_leaded_stained_glass_pane",
+    "ott:light_gray_stained_clear_glass_ctm_pane",
+    "ott:light_gray_stained_glass_ctm_pane",
     "ott:ornate_light_gray_stained_glass_ctm_pane",
+    "ott:ornate_light_gray_stained_glass_pane",
     "ott:raster_light_gray_stained_glass_ctm_pane",
+    "ott:raster_light_gray_stained_glass_pane",
     "ott:scratched_glass_light_gray_ctm_pane",
     "ott:small_light_gray_diamond_stained_glass_ctm_pane",
+    "ott:small_light_gray_diamond_stained_glass_pane",
+    "ott:square_light_gray_stained_glass_pane",
     "ott:tiled_light_gray_stained_glass_ctm_pane",
-    "ott:borderless_glass_light_gray_ctm_pane",
-    "ott:light_gray_stained_clear_glass_ctm_pane"
+    "ott:tiled_light_gray_stained_glass_pane",
+    "ott:tinted_borderless_glass_light_gray_ctm_pane",
+    "ott:vertical_striped_light_gray_stained_glass_pane",
+    "ott:woven_light_gray_stained_glass_pane"
   ]
 }

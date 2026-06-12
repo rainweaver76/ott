@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_compact",
+  "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/ice/ctm/ice_glass",
     "side": "ott:block/ice/ctm/ice_glass_edge"

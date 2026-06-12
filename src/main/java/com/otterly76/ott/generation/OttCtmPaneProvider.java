@@ -187,6 +187,21 @@ public class OttCtmPaneProvider implements DataProvider {
             "ott:block/glass/ctm/borderless_glass",
             "minecraft:block/glass_pane_top", "minecraft:cutout_mipped", false));
 
+        // framed glass (colourless) — uses the leaded frame edge
+        specs.add(new PaneSpec("framed_glass_ctm_pane",
+            "ott:block/glass/ctm/framed_glass",
+            "ott:block/glass/leaded_glass_pane_edge", "minecraft:translucent", false));
+
+        // golden framed stained glass (colourless) — golden frame edge
+        specs.add(new PaneSpec("golden_framed_stained_glass_ctm_pane",
+            "ott:block/golden_framed_glass/ctm/golden_framed_stained_glass",
+            "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge", "minecraft:translucent", false));
+
+        // ornate leaded glass (colourless) — leaded frame edge, cutout like its parent block
+        specs.add(new PaneSpec("ornate_leaded_glass_ctm_pane",
+            "ott:block/glass/ctm/ornate_leaded_glass_ctm",
+            "ott:block/glass/leaded_glass_pane_edge", "minecraft:cutout", false));
+
         return specs;
     }
 

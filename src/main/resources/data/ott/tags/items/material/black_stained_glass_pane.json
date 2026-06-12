@@ -9,6 +9,8 @@
     "ott:borderless_glass_black_ctm_pane",
     "ott:black_stained_clear_glass_ctm_pane",
     "ott:black_leaded_stained_glass_pane",
-    "ott:tinted_borderless_glass_black_ctm_pane"
+    "ott:tinted_borderless_glass_black_ctm_pane",
+    "ott:small_black_diamond_stained_glass_pane",
+    "ott:small_black_diamond_stained_glass_ctm_pane"
   ]
 }

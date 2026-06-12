@@ -1,16 +1,7 @@
 {
-  "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/light_blue_stained_glass/ctm/small_light_blue_diamond_stained_glass"
-  },
-  "connections": {
-    "all": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "all": "ott:block/light_blue_stained_glass/small_light_blue_diamond_stained_glass"
   },
   "render_type": "minecraft:translucent"
 }
