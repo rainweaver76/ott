@@ -1,12 +1,13 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical",
   "textures": {
-    "all": "ott:block/cyan_concrete/ctm/cyan_concrete_ctm"
+    "side": "ott:block/cyan_concrete/ctm/cyan_concrete_ctm",
+    "top": "minecraft:block/cyan_concrete"
   },
   "connections": {
-    "all": [
+    "side": [
       {
         "type": "is_same_block"
       }
