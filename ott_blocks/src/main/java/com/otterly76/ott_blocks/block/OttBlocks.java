@@ -3638,6 +3638,8 @@ public class OttBlocks {
                 register("massive_smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
         public static final DeferredBlock<Block> MASSIVE_SNOW_BLOCK_BRICKS =
                 register("massive_snow_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+        public static final DeferredBlock<Block> MASSIVE_STONE_BRICKS =
+                register("massive_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
         public static final DeferredBlock<Block> MASSIVE_TUFF_BRICKS =
                 register("massive_tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
         public static final DeferredBlock<Block> NATURAL_ACACIA_PLANKS =
@@ -4948,6 +4950,10 @@ public class OttBlocks {
                 register("yellow_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
         public static final DeferredBlock<Block> YELLOW_CONCRETE_PANEL =
                 register("yellow_concrete_panel", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_CONCRETE)));
+        public static final DeferredBlock<Block> WHITE_TERRACOTTA_COLUMN =
+                register("white_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA)));
+        public static final DeferredBlock<Block> WHITE_TERRACOTTA_CTM =
+                register("white_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_TERRACOTTA)));
         public static final DeferredBlock<Block> YELLOW_TERRACOTTA_COLUMN =
                 register("yellow_terracotta_column", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
         public static final DeferredBlock<Block> YELLOW_TERRACOTTA_CTM =

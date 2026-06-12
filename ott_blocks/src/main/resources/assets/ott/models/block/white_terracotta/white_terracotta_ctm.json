@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical_capped",
+  "textures": {
+    "side": "ott:block/white_terracotta/ctm/white_terracotta_ctm"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

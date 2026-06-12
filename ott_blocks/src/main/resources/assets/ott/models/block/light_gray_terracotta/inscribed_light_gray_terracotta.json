@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "giant",
+  "parent": "ott:block/ctm/ctm_cube_all_giant",
   "textures": {
     "all": "ott:block/light_gray_terracotta/ctm/inscribed_light_gray_terracotta"
   },

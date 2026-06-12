@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "minecraft:light_gray_terracotta"
+    "minecraft:light_gray_terracotta",
+    "ott:light_gray_terracotta_column",
+    "ott:light_gray_terracotta_ctm"
   ]
 }

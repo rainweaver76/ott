@@ -176,10 +176,13 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         int numRules = ruleList.size();
         if (numRules == 0) return existing;
 
+        boolean giant = this.layout == CtmLayout.GIANT;
         int[][] masks = new int[numRules][6];
         for (int ri = 0; ri < numRules; ri++) {
             for (Direction face : Direction.values()) {
-                masks[ri][face.ordinal()] = computeMask(level, pos, state, face, ruleList.get(ri));
+                masks[ri][face.ordinal()] = giant
+                        ? giantTileIndex(pos, face)
+                        : computeMask(level, pos, state, face, ruleList.get(ri));
             }
         }
 
@@ -203,6 +206,31 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
 
         return (t ? 1 : 0) | (tr ? 2 : 0) | (r ? 4 : 0) | (br ? 8 : 0)
              | (b ? 16 : 0) | (bl ? 32 : 0) | (l ? 64 : 0) | (tl ? 128 : 0);
+    }
+
+    /**
+     * Position-based tile index (0–3) for the GIANT 2×2 layout: a 2×2×2 image
+     * spread across blocks. Ports Athena's GiantBlockModel formula for width=height=2.
+     * Returns a linear tile index that {@code CtmLayout.GIANT.tile} decodes to [x,y].
+     */
+    private static int giantTileIndex(BlockPos pos, Direction face) {
+        int x = Math.abs(pos.getX());
+        int y = Math.abs(pos.getY());
+        int z = Math.abs(pos.getZ());
+        return switch (face.getAxis()) {
+            case X -> {
+                if (face.getAxisDirection() == Direction.AxisDirection.POSITIVE) z = Math.abs(z - 3);
+                yield (z % 2) + (y % 2) * 2;
+            }
+            case Z -> {
+                if (face.getAxisDirection() == Direction.AxisDirection.NEGATIVE) x = Math.abs(x - 3);
+                yield (x % 2) + (y % 2) * 2;
+            }
+            default -> { // Y (up/down)
+                if (face.getAxisDirection() == Direction.AxisDirection.NEGATIVE) z = Math.abs(z - 3);
+                yield (x % 2) + (z % 2) * 2;
+            }
+        };
     }
 
     // ---- getQuads (UV remapping) -----------------------------------------------
@@ -323,9 +351,10 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
                     : quad;
         }
 
-        int mask = masks[ruleIdx][faceOrdinal];
-        if (FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
         CtmLayout l = spriteLayouts.getOrDefault(sprite, layout);
+        int mask = masks[ruleIdx][faceOrdinal];
+        // GIANT stores a position-derived tile index, not a neighbour mask — never flip it.
+        if (l != CtmLayout.GIANT && FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
         // Vertical CTM connects only along the column's 4 side faces. The up/down caps are
         // perpendicular to the connection axis, so they must never connect — pin them to the
         // base tile [0,0] (the atlas's top section = the pillar cap design).

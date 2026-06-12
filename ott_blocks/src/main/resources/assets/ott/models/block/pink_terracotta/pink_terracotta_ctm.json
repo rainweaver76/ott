@@ -1,12 +1,12 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_vertical_capped",
   "textures": {
-    "all": "ott:block/pink_terracotta/ctm/pink_terracotta_ctm"
+    "side": "ott:block/pink_terracotta/ctm/pink_terracotta_ctm"
   },
   "connections": {
-    "all": [
+    "side": [
       {
         "type": "is_same_block"
       }

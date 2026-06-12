@@ -4270,6 +4270,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.MASSIVE_SANDSTONE_BRICKS, "massive_sandstone_bricks_engraving");
         engraveOne(exporter, Blocks.SMOOTH_STONE, OttBlocks.MASSIVE_SMOOTH_STONE_BRICKS, "massive_smooth_stone_bricks_engraving");
         engraveOne(exporter, Blocks.SNOW_BLOCK, OttBlocks.MASSIVE_SNOW_BLOCK_BRICKS, "massive_snow_block_bricks_engraving");
+        engraveOne(exporter, Blocks.STONE, OttBlocks.MASSIVE_STONE_BRICKS, "massive_stone_bricks_engraving");
         engraveOne(exporter, Blocks.TUFF, OttBlocks.MASSIVE_TUFF_BRICKS, "massive_tuff_bricks_engraving");
         engraveOne(exporter, Blocks.MOSSY_COBBLESTONE, OttBlocks.MOSSY_COBBLESTONE_BEAMS.get(), "mossy_cobblestone_beams_engraving");
         engraveOne(exporter, Blocks.MOSSY_COBBLESTONE, OttBlocks.MOSSY_COBBLESTONE_DENTED.get(), "mossy_cobblestone_dented_engraving");
@@ -5035,6 +5036,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.YELLOW_CONCRETE, OttBlocks.WIRED_YELLOW_CONCRETE, "wired_yellow_concrete_engraving");
         engraveOne(exporter, Blocks.YELLOW_CONCRETE, OttBlocks.YELLOW_CONCRETE_CTM, "yellow_concrete_pillar_engraving");
         engraveOne(exporter, Blocks.YELLOW_CONCRETE, OttBlocks.YELLOW_CONCRETE_PANEL, "yellow_concrete_panel_engraving");
+        engraveOne(exporter, Blocks.WHITE_TERRACOTTA, OttBlocks.WHITE_TERRACOTTA_COLUMN, "white_terracotta_column_engraving");
+        engraveOne(exporter, Blocks.WHITE_TERRACOTTA, OttBlocks.WHITE_TERRACOTTA_CTM, "white_terracotta_pillar_engraving");
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, OttBlocks.YELLOW_TERRACOTTA_COLUMN, "yellow_terracotta_column_engraving");
         engraveOne(exporter, Blocks.YELLOW_TERRACOTTA, OttBlocks.YELLOW_TERRACOTTA_CTM, "yellow_terracotta_pillar_engraving");
         // --- RECOVERED PURPUR_CTM ---

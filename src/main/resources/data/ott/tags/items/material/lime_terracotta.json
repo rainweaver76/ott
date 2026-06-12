@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "minecraft:lime_terracotta"
+    "minecraft:lime_terracotta",
+    "ott:lime_terracotta_column",
+    "ott:lime_terracotta_ctm"
   ]
 }

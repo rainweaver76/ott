@@ -1,7 +1,16 @@
 {
-  "parent": "minecraft:block/cube_all",
+  "loader": "ott:mosaic",
+  "layout": "giant",
+  "parent": "ott:block/ctm/ctm_cube_all_giant",
   "textures": {
     "all": "ott:block/ice/massive_ice_bricks"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
   },
   "render_type": "minecraft:translucent"
 }

@@ -100,6 +100,19 @@ public enum CtmLayout {
             }
             return new int[]{ x, 0 };
         }
+    },
+
+    /**
+     * 2×2 atlas (e.g. 32×32 px). Position-based "giant" layout: a 2×2×2 image spread
+     * across a region of blocks. The tile is chosen from the block's world position + face
+     * axis in {@code ConnectingBakedModel.giantTileIndex}, so here {@code idx} arrives already
+     * as the linear tile index (0–3), not a neighbour mask.
+     */
+    GIANT(2, 2) {
+        @Override public int[] tile(int idx) {
+            int m = idx & 3;
+            return new int[]{ m % 2, m / 2 };
+        }
     };
 
     // ---- dimensions -----------------------------------------------------------
@@ -153,6 +166,7 @@ public enum CtmLayout {
             case "horizontal" -> HORIZONTAL;
             case "vertical"   -> VERTICAL;
             case "compact"    -> COMPACT;
+            case "giant"      -> GIANT;
             default           -> FULL;
         };
     }
