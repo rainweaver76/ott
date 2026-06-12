@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott_block:block/gray_concrete/wired_light_gray_concrete"
+      "model": "ott_blocks:block/light_gray_concrete/wired_light_gray_concrete"
     }
   }
 }

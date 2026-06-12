@@ -3,7 +3,7 @@
   "layout": "full",
   "parent": "ott:block/ctm/ctm_cube_all",
   "textures": {
-    "all": "ott_block:block/light_gray_concrete/ctm/wired_light_gray_concrete"
+    "all": "ott_blocks:block/light_gray_concrete/ctm/wired_light_gray_concrete"
   },
   "connections": {
     "all": [
