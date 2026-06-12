@@ -2,7 +2,7 @@
   "loader": "ott:mosaic",
   "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
   "textures": {
-    "pane": "ott:block/green_stained_glass/ctm/small_green_diamond_stained_glass",
+    "pane": "ott:block/green_stained_glass/ctm/small_green_diamond_stained_glass_ctm",
     "edge": "ott:block/glass/leaded_glass_pane_edge"
   },
   "connections": {

@@ -53,7 +53,9 @@ public class OttCtmPaneProvider implements DataProvider {
     @Override
     @NotNull
     public CompletableFuture<?> run(@NotNull CachedOutput cache) {
-        Path mainPath      = packOutput.getOutputFolder().resolve("../../main/resources/assets/ott").normalize();
+        // CTM panes are block content, so they belong in the ott_blocks mod (single source of truth).
+        // packOutput is ott/src/generated/resources → climb to the project root, then into ott_blocks.
+        Path mainPath      = packOutput.getOutputFolder().resolve("../../../ott_blocks/src/main/resources/assets/ott").normalize();
         Path bsDir         = mainPath.resolve("blockstates");
         Path blockModelDir = mainPath.resolve("models/block/glass");
         Path itemModelDir  = mainPath.resolve("models/item");
@@ -144,7 +146,7 @@ public class OttCtmPaneProvider implements DataProvider {
 
             // small diamond
             specs.add(new PaneSpec("small_" + c + "_diamond_stained_glass_ctm_pane",
-                sg + "small_" + c + "_diamond_stained_glass", leadedEdge, "minecraft:translucent", false));
+                sg + "small_" + c + "_diamond_stained_glass_ctm", leadedEdge, "minecraft:translucent", false));
 
             // tiled
             specs.add(new PaneSpec("tiled_" + c + "_stained_glass_ctm_pane",
