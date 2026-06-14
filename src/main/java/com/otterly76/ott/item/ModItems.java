@@ -468,295 +468,6 @@ public class ModItems {
     public static final DeferredItem<Item> CRAB_CLAW = ITEMS.register("crab_claw", () -> new Item(new Item.Properties()));
     public static final DeferredItem<BlockItem> CRAB_EGG = ITEMS.register("crab_egg", () -> new BlockItem(ModBlocks.CRAB_EGG.get(), new Item.Properties()));
 
-    // ── Batch CTM blocks ─────────────────────────────────────────────────────
-    // ── Acacia Planks ──
-
-    // ── Acacia Leaves ──
-
-    // ── Birch Leaves ──
-
-    // ── Dark Oak Leaves ──
-
-    // ── Jungle Leaves ──
-
-    // ── Oak Leaves ──
-
-    // ── Spruce Leaves ──
-
-    // ── Amethyst Block ──
-
-    // ── Ancient Debris ──
-
-    // ── Andesite ──
-
-    // ── Bamboo Planks ──
-
-    // ── Basalt ──
-
-    // ── Birch Planks ──
-
-    // ── Blackstone ──
-
-    // ── Black Concrete ──
-
-    // ── Black Stained Glass ──
-
-    // ── Black Terracotta ──
-
-    // ── Black Wool ──
-
-    // ── Blue Concrete ──
-
-    // ── Blue Ice ──
-
-    // ── Blue Stained Glass ──
-
-    // ── Blue Terracotta ──
-
-    // ── Blue Wool ──
-
-    // ── Borderless Bricks ──
-
-    // ── Bricks ──
-
-    // ── Brown Concrete ──
-
-    // ── Brown Stained Glass ──
-
-    // ── Brown Terracotta ──
-
-    // ── Brown Wool ──
-
-    // ── Calcite ──
-
-    // ── Cherry Planks ──
-
-    // ── Clay ──
-
-    // ── Coal Block ──
-
-    // ── Cobblestone ──
-
-    // ── Crimson Planks ──
-
-    // ── Crying Obsidian ──
-
-    // ── Cyan Concrete ──
-
-    // ── Cyan Stained Glass ──
-
-    // ── Cyan Terracotta ──
-
-    // ── Cyan Wool ──
-
-    // ── Dark Oak Planks ──
-
-    // ── Dark Prismarine ──
-
-    // ── Deepslate ──
-
-    // ── Diorite ──
-
-    // ── Dirt ──
-
-    // ── Dripstone ──
-
-    // ── End Stone ──
-
-    // ── Gilded Blackston ──
-
-    // ── Granite ──
-
-    // ── Gray Concrete ──
-
-    // ── Gray Stained Glass ──
-
-    // ── Gray Terracotta ──
-
-    // ── Gray Wool ──
-
-    // ── Green Concrete ──
-
-    // ── Green Stained Glass ──
-
-    // ── Green Terracotta ──
-
-    // ── Green Wool ──
-
-    // ── Ice ──
-
-    // ── Jungle Planks ──
-
-    // ── Lapis Block ──
-
-    // ── Leaded Glass ──
-
-    // ── Light Blue Concrete ──
-
-    // ── Light Blue Stained Glass ──
-
-    // ── Light Blue Terracotta ──
-
-    // ── Light Blue Wool ──
-
-    // ── Light Gray Concrete ──
-
-    // ── Light Gray Stained Glass ──
-
-    // ── Light Gray Terracotta ──
-
-    // ── Light Gray Wool ──
-
-    // ── Lime Concrete ──
-
-    // ── Lime Stained Glass ──
-
-    // ── Lime Terracotta ──
-
-    // ── Lime Wool ──
-
-    // ── Lodestone ──
-
-    // ── Magenta Concrete ──
-
-    // ── Magenta Stained Glass ──
-
-    // ── Magenta Terracotta ──
-
-    // ── Magenta Wool ──
-
-    // ── Magma Block ──
-
-    // ── Mangrove Planks ──
-
-    // ── Mossy Cobblestone ──
-
-    // ── Mossy Stone ──
-
-    // ── Mud ──
-
-    // ── Mud Bricks ──
-
-    // ── Netherrack ──
-
-    // ── Nether Bricks ──
-
-    // ── Oak Glass ──
-
-    // ── Oak Planks ──
-
-    // ── Obsidian ──
-
-    // ── Orange Concrete ──
-
-    // ── Orange Stained Glass ──
-
-    // ── Orange Terracotta ──
-
-    // ── Orange Wool ──
-
-    // ── Packed Ice ──
-
-    // ── Packed Mud ──
-
-    // ── Pink Concrete ──
-
-    // ── Pink Stained Glass ──
-
-    // ── Pink Terracotta ──
-
-    // ── Pink Wool ──
-
-    // ── Prismarine ──
-
-    // ── Purple Concrete ──
-
-    // ── Purple Stained Glass ──
-
-    // ── Purple Terracotta ──
-
-    // ── Purple Wool ──
-
-    // ── Purpur Block ──
-
-    // ── Quartz Block ──
-
-    // ── Raw Copper Block ──
-
-    // ── Raw Gold Block ──
-
-    // ── Raw Iron Block ──
-
-    // ── Redstone Block ──
-
-    // ── Red Concrete ──
-
-    // ── Red Nether Bricks ──
-
-    // ── Red Sandstone ──
-
-    // ── Red Stained Glass ──
-
-    // ── Red Terracotta ──
-
-    // ── Red Wool ──
-
-    // ── Sandstone ──
-
-    // ── Smooth Stone ──
-
-    // ── Snow Block ──
-
-    // ── Spruce Planks ──
-
-    // ── Terracotta ──
-
-    // ── Tuff ──
-
-    // ── Warped Planks ──
-
-    // ── White Concrete ──
-
-    // ── White Stained Glass ──
-
-    // ── White Terracotta ──
-
-    // ── White Wool ──
-
-    // ── Yellow Concrete ──
-
-    // ── Yellow Stained Glass ──
-
-    // ── Yellow Terracotta ──
-
-    // ── Yellow Wool ──
-
-    // ── New CTM batch blocks ──────────────────────────────────────────────
-
-
-
-
-
-
-
-
-    // ── Bamboo Windows CTM ──
-    // ── Cherry Windows CTM ──
-    // ── Bamboo Windows ──
-    // ── Cherry Windows ──
-
-    // ── Glass/ plain block items ──────────────────────────────────────────────────
-
-    // ── Pane items ────────────────────────────────────────────────────────────────
-    // ── Bamboo Window Panes ──
-    // ── Cherry Window Panes ──
-    // -- CTM connecting window panes -- wood types
-    // -- CTM connecting panes -- stained glass patterns
-    // -- CTM connecting panes -- plain variants
-
-
-
-
     public static final DeferredItem<Item> UNFIRED_CLAY_ROOF_TILE = ITEMS.register("unfired_clay_roof_tile",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> PLASTER_BUCKET = ITEMS.register("plaster_bucket",
@@ -826,13 +537,8 @@ public class ModItems {
     // ── Yellow Marble ──
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FLOOR_TILE = registerBlockItem("yellow_marble_floor_tile", ModBlocks.YELLOW_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FANCY_FENCE = registerBlockItem("yellow_marble_fancy_fence", ModBlocks.YELLOW_MARBLE_FANCY_FENCE);
-    // ── Diamond Pavers (10 new colors) ──
-
-    // --- Stone variant block items ---
-    // CTM vertical pillars
 
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_CRENELATION = registerBlockItem("sandstone_crenelation", ModBlocks.SANDSTONE_CRENELATION);
-
 
     public static final DeferredHolder<Item, BlockItem> WHEAT_THATCH_EDGE = registerBlockItem("wheat_thatch_edge", ModBlocks.WHEAT_THATCH_EDGE);
     public static final DeferredHolder<Item, BlockItem> WHEAT_THATCH_PLATE = registerBlockItem("wheat_thatch_plate", ModBlocks.WHEAT_THATCH_PLATE);
@@ -844,7 +550,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> CURVED_RAKED_GRAVEL = registerBlockItem("curved_raked_gravel", ModBlocks.CURVED_RAKED_GRAVEL);
     public static final DeferredHolder<Item, BlockItem> STRAIGHT_RAKED_GRAVEL = registerBlockItem("straight_raked_gravel", ModBlocks.STRAIGHT_RAKED_GRAVEL);
 
-
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_RED_CARPET = registerBlockItem("ornamented_red_carpet", ModBlocks.ORNAMENTED_RED_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_RED_CARPET = registerBlockItem("delicate_red_carpet", ModBlocks.DELICATE_RED_CARPET);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_BLUE_CARPET = registerBlockItem("ornamented_blue_carpet", ModBlocks.ORNAMENTED_BLUE_CARPET);
@@ -853,7 +558,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> DELICATE_GREEN_CARPET = registerBlockItem("delicate_green_carpet", ModBlocks.DELICATE_GREEN_CARPET);
     public static final DeferredHolder<Item, BlockItem> ORNAMENTED_PURPLE_CARPET = registerBlockItem("ornamented_purple_carpet", ModBlocks.ORNAMENTED_PURPLE_CARPET);
     public static final DeferredHolder<Item, BlockItem> DELICATE_PURPLE_CARPET = registerBlockItem("delicate_purple_carpet", ModBlocks.DELICATE_PURPLE_CARPET);
-
 
     public static final DeferredHolder<Item, BlockItem> OAK_PERGOLA = registerBlockItem("oak_pergola", ModBlocks.OAK_PERGOLA);
     public static final DeferredHolder<Item, BlockItem> OAK_BEAM = registerBlockItem("oak_beam", ModBlocks.OAK_BEAM);
@@ -1152,13 +856,9 @@ public class ModItems {
         registerBlockItem(ModBlocks.STARLIGHT_LAMP);
         ModBlocks.FUTONS.values().forEach(ModItems::registerBlockItem);
 
-        // New stone blocks (plain cube-all)
-        // New stone blocks (cube-bottom-top)
-        // New stone pillars (RotatedPillarBlock)
         // Chisel pillar blocks and legend blocks
         ModBlocks.CHISEL_PILLARS.values().forEach(ModItems::registerBlockItem);
         ModBlocks.CHISEL_LEGEND.values().forEach(ModItems::registerBlockItem);
-
     }
 
     private static DeferredHolder<Item, BlockItem> registerBlockItem(String name, DeferredBlock<? extends Block> block) {
@@ -1189,25 +889,6 @@ public class ModItems {
         return MINECRAFT_ITEMS.register("pale_oak_hanging_sign", () -> new HangingSignItem(ModBlocks.PALE_OAK_HANGING_SIGN.get(), ModBlocks.PALE_OAK_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
     }
 
-
-
-    // ===== RECOVERED WINDOW ITEMS =====
-
-
-
-
-
-
-
-
-
-
-
-
-    // ===== RECOVERED PURPUR_CTM =====
-
-
-    // ===== Reverted diamond paver block-items =====
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_DIAMOND_PAVERS = registerBlockItem("black_marble_diamond_pavers", ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_DIAMOND_PAVERS = registerBlockItem("white_marble_diamond_pavers", ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_DIAMOND_PAVERS = registerBlockItem("amethyst_marble_diamond_pavers", ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS);

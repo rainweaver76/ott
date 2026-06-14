@@ -13,6 +13,7 @@ copper
 framed_light_center
 glaced_terracotta
 
+make Engraving its own creative tab, split submenu by material type
 update bookshelf modeles to use boards textures on up/down faces
 copper (all) ladder item models
 chipped: cobwebs
@@ -490,6 +491,8 @@ Torn Ancient Tome
 Structures Nonsense:
 =====
 REMAKE the various structures in DO style!
+
+Ghost Ships
 
 Manannán's Mansion
 - underwater fae themed dungeon

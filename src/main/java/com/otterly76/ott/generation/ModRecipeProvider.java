@@ -2101,6 +2101,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(exporter, getRecipePath("ott", id));
     }
 
+    /** Builds the {@code ott:material/<name>} item tag key used to group engraving inputs (e.g. waxed + unwaxed copper). */
+    private static TagKey<Item> materialTag(String name) {
+        return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + name));
+    }
+
     /** Engraving recipe using a compound ingredient (group) — any member of the ingredient can be used as input. */
     private void engraveGroup(RecipeOutput exporter, Ingredient ingredient, ItemLike output, String id) {
         new SingleItemRecipeBuilder(RecipeCategory.BUILDING_BLOCKS, EngravingRecipe::new, ingredient, output, 1)
@@ -3247,11 +3252,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // Blocks.COBBLESTONE
 
 
-        // Blocks.COPPER_BLOCK
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK.get(), "copper_block_engraving");
+        // Blocks.COPPER_BLOCK (waxed + unwaxed share the ott:material/copper_block group)
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK.get(), "copper_block_engraving");
 
-        // Blocks.COPPER_GRATE
-        engraveOne(exporter, Blocks.COPPER_GRATE, OttBlocks.COPPER_GRATE.get(), "copper_grate_engraving");
+        // Blocks.COPPER_GRATE (waxed + unwaxed share the ott:material/copper_grate group)
+        engraveTagged(exporter, materialTag("copper_grate"), OttBlocks.COPPER_GRATE.get(), "copper_grate_engraving");
 
         // Blocks.CRIMSON_PLANKS
 
@@ -3265,11 +3270,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Blocks.END_STONE
 
-        // Blocks.EXPOSED_COPPER
-        engraveOne(exporter, Blocks.EXPOSED_COPPER, OttBlocks.EXPOSED_COPPER_BLOCK.get(), "exposed_copper_block_engraving");
+        // Blocks.EXPOSED_COPPER (waxed + unwaxed share the ott:material/exposed_copper group)
+        engraveTagged(exporter, materialTag("exposed_copper"), OttBlocks.EXPOSED_COPPER_BLOCK.get(), "exposed_copper_block_engraving");
 
-        // Blocks.EXPOSED_COPPER_GRATE
-        engraveOne(exporter, Blocks.EXPOSED_COPPER_GRATE, OttBlocks.EXPOSED_COPPER_GRATE.get(), "exposed_copper_grate_engraving");
+        // Blocks.EXPOSED_COPPER_GRATE (waxed + unwaxed share the ott:material/exposed_copper_grate group)
+        engraveTagged(exporter, materialTag("exposed_copper_grate"), OttBlocks.EXPOSED_COPPER_GRATE.get(), "exposed_copper_grate_engraving");
 
         // Blocks.GOLD_BLOCK
 
@@ -3299,11 +3304,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Blocks.OBSIDIAN
 
-        // Blocks.OXIDIZED_COPPER
-        engraveOne(exporter, Blocks.OXIDIZED_COPPER, OttBlocks.OXIDIZED_COPPER_BLOCK.get(), "oxidized_copper_block_engraving");
+        // Blocks.OXIDIZED_COPPER (waxed + unwaxed share the ott:material/oxidized_copper group)
+        engraveTagged(exporter, materialTag("oxidized_copper"), OttBlocks.OXIDIZED_COPPER_BLOCK.get(), "oxidized_copper_block_engraving");
 
-        // Blocks.OXIDIZED_COPPER_GRATE
-        engraveOne(exporter, Blocks.OXIDIZED_COPPER_GRATE, OttBlocks.OXIDIZED_COPPER_GRATE.get(), "oxidized_copper_grate_engraving");
+        // Blocks.OXIDIZED_COPPER_GRATE (waxed + unwaxed share the ott:material/oxidized_copper_grate group)
+        engraveTagged(exporter, materialTag("oxidized_copper_grate"), OttBlocks.OXIDIZED_COPPER_GRATE.get(), "oxidized_copper_grate_engraving");
 
         // Blocks.POLISHED_BASALT
 
@@ -3325,11 +3330,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         // Blocks.WARPED_PLANKS
 
-        // Blocks.WEATHERED_COPPER
-        engraveOne(exporter, Blocks.WEATHERED_COPPER, OttBlocks.WEATHERED_COPPER_BLOCK.get(), "weathered_copper_block_engraving");
+        // Blocks.WEATHERED_COPPER (waxed + unwaxed share the ott:material/weathered_copper group)
+        engraveTagged(exporter, materialTag("weathered_copper"), OttBlocks.WEATHERED_COPPER_BLOCK.get(), "weathered_copper_block_engraving");
 
-        // Blocks.WEATHERED_COPPER_GRATE
-        engraveOne(exporter, Blocks.WEATHERED_COPPER_GRATE, OttBlocks.WEATHERED_COPPER_GRATE.get(), "weathered_copper_grate_engraving");
+        // Blocks.WEATHERED_COPPER_GRATE (waxed + unwaxed share the ott:material/weathered_copper_grate group)
+        engraveTagged(exporter, materialTag("weathered_copper_grate"), OttBlocks.WEATHERED_COPPER_GRATE.get(), "weathered_copper_grate_engraving");
 
         // ── Bookshelves (1:1 exchange group — any bookshelf ↔ any bookshelf) ──────
         engraveTagged(exporter, ModTags.ItemTags.BOOKSHELVES, net.minecraft.world.item.Items.BOOKSHELF, "bookshelf_engraving");
@@ -3707,14 +3712,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.COBBLESTONE, OttBlocks.COBBLESTONE_STRIPES.get(), "cobblestone_stripes_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, OttBlocks.COBBLESTONE_TILES.get(), "cobblestone_tiles_engraving");
         engraveOne(exporter, Blocks.COBBLESTONE, OttBlocks.COBBLESTONE_WORN_STRIPES.get(), "cobblestone_worn_stripes_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_BARS.get(), "copper_block_bars_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_CIRCLES.get(), "copper_block_circles_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_GEARS.get(), "copper_block_gears_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_LINES.get(), "copper_block_lines_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_PATTERN.get(), "copper_block_pattern_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_POLISHED.get(), "copper_block_polished_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_SHAFTS.get(), "copper_block_shafts_engraving");
-        engraveOne(exporter, Blocks.COPPER_BLOCK, OttBlocks.COPPER_BLOCK_SMALL_BRICKS.get(), "copper_block_small_bricks_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_BARS.get(), "copper_block_bars_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_CIRCLES.get(), "copper_block_circles_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_GEARS.get(), "copper_block_gears_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_LINES.get(), "copper_block_lines_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_PATTERN.get(), "copper_block_pattern_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_POLISHED.get(), "copper_block_polished_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_SHAFTS.get(), "copper_block_shafts_engraving");
+        engraveTagged(exporter, materialTag("copper_block"), OttBlocks.COPPER_BLOCK_SMALL_BRICKS.get(), "copper_block_small_bricks_engraving");
         engraveOne(exporter, Blocks.ACACIA_PLANKS, OttBlocks.CORNERED_ACACIA_PLANKS, "cornered_acacia_planks_engraving");
         engraveOne(exporter, Blocks.BAMBOO_PLANKS, OttBlocks.CORNERED_BAMBOO_PLANKS, "cornered_bamboo_planks_engraving");
         engraveOne(exporter, Blocks.BIRCH_PLANKS, OttBlocks.CORNERED_BIRCH_PLANKS, "cornered_birch_planks_engraving");

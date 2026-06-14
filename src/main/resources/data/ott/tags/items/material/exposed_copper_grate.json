@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:exposed_copper_grate",
+    "minecraft:waxed_exposed_copper_grate",
     "ott:exposed_copper_grate"
   ]
 }
