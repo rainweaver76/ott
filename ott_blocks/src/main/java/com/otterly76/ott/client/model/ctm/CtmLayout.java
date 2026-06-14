@@ -113,6 +113,55 @@ public enum CtmLayout {
             int m = idx & 3;
             return new int[]{ m % 2, m / 2 };
         }
+    },
+
+    /**
+     * 5×1 strip (80×16 px), Athena-style piece composition. Each block face is split into
+     * four 8×8 corner quadrants; each quadrant independently picks one of the 5 type-tiles
+     * (solo / full / vertical-edge / horizontal-edge / inner-corner) and samples that tile's
+     * matching corner-quarter. Unlike the other layouts, this one does NOT use the UV-shift
+     * {@link #tile} path — {@link ConnectingBakedModel} routes it through a dedicated
+     * 4-quadrant compositor. {@code tile()} is unused here.
+     *
+     * <p>Strip columns (each a 16×16 type-tile): 0=solo, 1=full, 2=vertical-edge,
+     * 3=horizontal-edge, 4=inner-corner. See {@link ConnectingBakedModel} for the
+     * {@code (vertical, horizontal, diagonal) → column} selection rule.
+     *
+     * <p>Model id: {@code "pieces_full"} (alias {@code "pieces"}).
+     */
+    PIECES(5, 1) {
+        @Override public int[] tile(int mask) {
+            return new int[]{ 0, 0 };
+        }
+    },
+
+    /**
+     * 4×1 strip (64×16 px), whole-tile selection for vertical pillars. Tiles left→right:
+     * 0=cap/isolated, 1=top (connects down), 2=middle (connects both), 3=bottom (connects up).
+     * Selected by the top/bottom neighbours only; the cap tile (0) also covers the up/down end
+     * faces (pinned in {@link ConnectingBakedModel#remapQuad}). NOT quarter-composed.
+     */
+    PIECES_VERTICAL(4, 1) {
+        @Override public int[] tile(int mask) {
+            boolean up   = (mask &  1) != 0; // T
+            boolean down = (mask & 16) != 0; // B
+            int x = (up && down) ? 2 : down ? 1 : up ? 3 : 0;
+            return new int[]{ x, 0 };
+        }
+    },
+
+    /**
+     * 4×1 strip (64×16 px), whole-tile selection for horizontal connecting bricks. Tiles
+     * left→right: 0=cap/isolated, 1=left-end (connects right), 2=middle (connects both),
+     * 3=right-end (connects left). Selected by the left/right neighbours only. NOT quarter-composed.
+     */
+    PIECES_HORIZONTAL(4, 1) {
+        @Override public int[] tile(int mask) {
+            boolean left  = (mask & 64) != 0; // L
+            boolean right = (mask &  4) != 0; // R
+            int x = (left && right) ? 2 : right ? 1 : left ? 3 : 0;
+            return new int[]{ x, 0 };
+        }
     };
 
     // ---- dimensions -----------------------------------------------------------
@@ -167,6 +216,9 @@ public enum CtmLayout {
             case "vertical"   -> VERTICAL;
             case "compact"    -> COMPACT;
             case "giant"      -> GIANT;
+            case "pieces_full", "pieces" -> PIECES; // "pieces" kept as a hidden alias
+            case "pieces_vertical"   -> PIECES_VERTICAL;
+            case "pieces_horizontal" -> PIECES_HORIZONTAL;
             default           -> FULL;
         };
     }

@@ -1,6 +1,6 @@
 {
   "loader": "ott:mosaic",
-  "layout": "horizontal",
+  "layout": "pieces_horizontal",
   "parent": "ott:block/ctm/ctm_cube_all_horizontal",
   "textures": {
     "all": "ott:block/dark_oak_planks/ctm/dark_oak_planks_bricks"

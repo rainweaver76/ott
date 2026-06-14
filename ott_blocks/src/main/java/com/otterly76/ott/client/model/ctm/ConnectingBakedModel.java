@@ -235,6 +235,18 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
 
     // ---- getQuads (UV remapping) -----------------------------------------------
 
+    /**
+     * Vanilla 3-arg path (used by {@code ItemRenderer} for item display). {@link BakedModelWrapper}
+     * would otherwise delegate straight to the wrapped model, bypassing CTM — so route it through
+     * the 5-arg override with empty model data. For PIECES this yields the solo tile (mask 0);
+     * for legacy layouts the empty data falls back to the base quads exactly as before.
+     */
+    @Override
+    public @NotNull List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side,
+                                             @NotNull RandomSource rand) {
+        return getQuads(state, side, rand, ModelData.EMPTY, null);
+    }
+
     @Override
     public @NotNull List<BakedQuad> getQuads(@Nullable BlockState state, @Nullable Direction side,
                                              @NotNull RandomSource rand, @NotNull ModelData data, @Nullable RenderType renderType) {
@@ -301,7 +313,12 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
 
         int[][] masks = data.get(CTM_MASKS);
         if (masks == null) masks = MASKS_FALLBACK.get(); // fallback for multipart models
-        if (masks == null) return base;
+        // PIECES blocks must still render when there's no connection data — item rendering
+        // (state == null) and any missing-mask case fall back to the solo tile (mask 0) via the
+        // compositor, rather than the raw full-strip base model.
+        boolean piecesActive = isPieces(layout)
+                || spriteLayouts.values().stream().anyMatch(ConnectingBakedModel::isPieces);
+        if (masks == null && !piecesActive) return base;
 
         List<BakedQuad> result = new ArrayList<>(base.size());
         for (BakedQuad quad : base) {
@@ -309,7 +326,23 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
             // Unculled quads (e.g. glass pane faces that lack cullface): fall back to
             // the quad's own facing direction so CTM still fires for thin blocks.
             Direction quadFace = (side != null) ? side : quad.getDirection();
-            result.add(remapQuad(quad, masks, quadFace.ordinal(), stripAO));
+            int faceOrdinal = quadFace.ordinal();
+            CtmLayout l = spriteLayouts.getOrDefault(quad.getSprite(), layout);
+            if (isPieces(l)) {
+                // state == null is item rendering: no neighbours, so show the solo tile.
+                int mask;
+                if (state == null || masks == null) {
+                    mask = 0;
+                } else {
+                    int ruleIdx = spriteToRuleIndex.getOrDefault(quad.getSprite(), catchAllRuleIndex);
+                    mask = (ruleIdx < 0 || ruleIdx >= masks.length) ? 0 : masks[ruleIdx][faceOrdinal];
+                }
+                addPieceQuads(result, quad, mask, faceOrdinal, stripAO);
+            } else if (masks != null) {
+                result.add(remapQuad(quad, masks, faceOrdinal, stripAO));
+            } else {
+                result.add(withAo(quad, !stripAO && quad.hasAmbientOcclusion()));
+            }
         }
         return result;
     }
@@ -358,7 +391,7 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         // Vertical CTM connects only along the column's 4 side faces. The up/down caps are
         // perpendicular to the connection axis, so they must never connect — pin them to the
         // base tile [0,0] (the atlas's top section = the pillar cap design).
-        if (l == CtmLayout.VERTICAL
+        if ((l == CtmLayout.VERTICAL || l == CtmLayout.PIECES_VERTICAL)
                 && (faceOrdinal == Direction.UP.ordinal() || faceOrdinal == Direction.DOWN.ordinal())) {
             mask = 0;
         }
@@ -380,6 +413,132 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
 
         return new BakedQuad(newVerts, quad.getTintIndex(), quad.getDirection(),
                 sprite, quad.isShade(), aoFlag);
+    }
+
+    // ---- PIECES layout: Athena-style 4-quadrant composition ---------------------
+
+    /**
+     * Athena piece-type for one corner, from its two cardinal neighbours and the diagonal.
+     * <pre>
+     *   both cardinals connect  → diagonal ? 1 (full interior) : 2 (inner corner)
+     *   vertical cardinal only  → 3 (vertical edge)
+     *   horizontal cardinal only→ 4 (horizontal edge)
+     *   neither                 → 0 (solo / outer corner)
+     * </pre>
+     */
+    private static int pieceType(boolean vert, boolean horiz, boolean diag) {
+        if (vert && horiz) return diag ? 1 : 2;
+        return vert ? 3 : horiz ? 4 : 0;
+    }
+
+    /** Athena type code → strip column index in the 80×16 (5×1 tile) texture. */
+    private static final int[] TYPE_TO_COL = { 0, 1, 4, 2, 3 };
+
+    /**
+     * True only for the quarter-composition layout. PIECES_VERTICAL/PIECES_HORIZONTAL are
+     * whole-tile (UV-shift) layouts and go through {@link #remapQuad}, not the compositor.
+     */
+    private static boolean isPieces(CtmLayout l) {
+        return l == CtmLayout.PIECES;
+    }
+
+    /**
+     * Returns a copy of {@code quad} with only its ambient-occlusion flag adjusted.
+     */
+    private static BakedQuad withAo(BakedQuad q, boolean aoFlag) {
+        if (aoFlag == q.hasAmbientOcclusion()) return q;
+        return new BakedQuad(q.getVertices(), q.getTintIndex(), q.getDirection(), q.getSprite(), q.isShade(), aoFlag);
+    }
+
+    /**
+     * Splits a full-face quad into four 8×8 corner quadrants (PIECES layout). Each quadrant
+     * independently selects a type-tile from the 80×16 strip via {@link #pieceType} and samples
+     * that tile's matching corner-quarter. Geometry is bilinearly interpolated from the source
+     * quad's four corners, so winding/normals/shade are preserved. If the source quad isn't a
+     * clean 4-corner face (e.g. partial pane faces), it is emitted unchanged.
+     */
+    private void addPieceQuads(List<BakedQuad> out, BakedQuad quad, int mask, int faceOrdinal, boolean stripAO) {
+        TextureAtlasSprite sprite = quad.getSprite();
+        boolean aoFlag = !stripAO && quad.hasAmbientOcclusion();
+
+        int[] sv = quad.getVertices();
+        int stride = IQuadTransformer.STRIDE;
+        if (sv.length < 4 * stride) { out.add(withAo(quad, aoFlag)); return; }
+
+        float u0 = sprite.getU0(), u1 = sprite.getU1(), v0 = sprite.getV0(), v1 = sprite.getV1();
+
+        // Map each source vertex to its texture corner (fu,fv ∈ {0,1}); fu=0 is the strip's left.
+        int[] fuArr = new int[4], fvArr = new int[4];
+        int[] cornerVert = { -1, -1, -1, -1 }; // index = fu + fv*2
+        for (int i = 0; i < 4; i++) {
+            int bp = i * stride;
+            float u = Float.intBitsToFloat(sv[bp + IQuadTransformer.UV0]);
+            float v = Float.intBitsToFloat(sv[bp + IQuadTransformer.UV0 + 1]);
+            int fu = Math.abs(u - u0) <= Math.abs(u - u1) ? 0 : 1;
+            int fv = Math.abs(v - v0) <= Math.abs(v - v1) ? 0 : 1;
+            fuArr[i] = fu; fvArr[i] = fv;
+            cornerVert[fu + fv * 2] = i;
+        }
+        for (int c = 0; c < 4; c++) {
+            if (cornerVert[c] < 0) { out.add(withAo(quad, aoFlag)); return; } // not a clean quad
+        }
+
+        // Source corner positions for bilinear interpolation: [fu + fv*2][xyz]
+        float[][] pos = new float[4][3];
+        for (int c = 0; c < 4; c++) {
+            int bp = cornerVert[c] * stride + IQuadTransformer.POSITION;
+            pos[c][0] = Float.intBitsToFloat(sv[bp]);
+            pos[c][1] = Float.intBitsToFloat(sv[bp + 1]);
+            pos[c][2] = Float.intBitsToFloat(sv[bp + 2]);
+        }
+
+        // Connectivity → per-corner column. N/S faces flip L↔R to match texture U orientation.
+        if (FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
+        boolean t  = (mask &   1) != 0, tr = (mask &   2) != 0, r  = (mask & 4) != 0, br = (mask & 8) != 0;
+        boolean b  = (mask &  16) != 0, bl = (mask &  32) != 0, lf = (mask & 64) != 0, tl = (mask & 128) != 0;
+
+        // regionX: 0=left,1=right ; regionY: 0=top,1=bottom
+        out.add(buildCornerQuad(quad, sv, stride, sprite, aoFlag, fuArr, fvArr, pos, 0, 0, TYPE_TO_COL[pieceType(t, lf, tl)]));
+        out.add(buildCornerQuad(quad, sv, stride, sprite, aoFlag, fuArr, fvArr, pos, 1, 0, TYPE_TO_COL[pieceType(t, r,  tr)]));
+        out.add(buildCornerQuad(quad, sv, stride, sprite, aoFlag, fuArr, fvArr, pos, 0, 1, TYPE_TO_COL[pieceType(b, lf, bl)]));
+        out.add(buildCornerQuad(quad, sv, stride, sprite, aoFlag, fuArr, fvArr, pos, 1, 1, TYPE_TO_COL[pieceType(b, r,  br)]));
+    }
+
+    /**
+     * Builds one corner sub-quad. {@code regionX/regionY} select which face quadrant (and which
+     * quarter of the {@code col} type-tile) this quad covers; vertex order matches the source so
+     * winding is preserved.
+     */
+    private BakedQuad buildCornerQuad(BakedQuad src, int[] sv, int stride, TextureAtlasSprite sprite,
+                                      boolean aoFlag, int[] fuArr, int[] fvArr, float[][] pos,
+                                      int regionX, int regionY, int col) {
+        float u0 = sprite.getU0(), v0 = sprite.getV0();
+        float stripW = sprite.getU1() - u0, stripH = sprite.getV1() - v0;
+        float tileW = stripW / 5f;     // one 16×16 type-tile
+        float pieceW = tileW / 2f;     // one 8×8 piece (corner-quarter)
+        float halfH = stripH / 2f;
+        float qU0 = u0 + col * tileW + (regionX == 1 ? pieceW : 0f);
+        float qV0 = v0 + (regionY == 1 ? halfH : 0f);
+
+        int[] verts = sv.clone(); // preserves COLOR/UV2/NORMAL of each source vertex
+        for (int i = 0; i < 4; i++) {
+            int bp = i * stride;
+            int fu = fuArr[i], fv = fvArr[i];
+            float sfu = regionX * 0.5f + fu * 0.5f;
+            float sfv = regionY * 0.5f + fv * 0.5f;
+            verts[bp + IQuadTransformer.POSITION]     = Float.floatToRawIntBits(bilerp(pos, 0, sfu, sfv));
+            verts[bp + IQuadTransformer.POSITION + 1] = Float.floatToRawIntBits(bilerp(pos, 1, sfu, sfv));
+            verts[bp + IQuadTransformer.POSITION + 2] = Float.floatToRawIntBits(bilerp(pos, 2, sfu, sfv));
+            verts[bp + IQuadTransformer.UV0]     = Float.floatToRawIntBits(qU0 + fu * pieceW);
+            verts[bp + IQuadTransformer.UV0 + 1] = Float.floatToRawIntBits(qV0 + fv * halfH);
+        }
+        return new BakedQuad(verts, src.getTintIndex(), src.getDirection(), sprite, src.isShade(), aoFlag);
+    }
+
+    /** Bilinear interpolation of position component {@code comp} over the 4 face corners. */
+    private static float bilerp(float[][] p, int comp, float fu, float fv) {
+        return p[0][comp] * (1 - fu) * (1 - fv) + p[1][comp] * fu * (1 - fv)
+             + p[2][comp] * (1 - fu) * fv       + p[3][comp] * fu * fv;
     }
 
     /**
