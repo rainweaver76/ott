@@ -14,10 +14,10 @@ framed_light_center
 glaced_terracotta
 
 make Engraving its own creative tab, split submenu by material type
-update bookshelf modeles to use boards textures on up/down faces
+update bookshelf models to use boards textures on up/down faces
 copper (all) ladder item models
 chipped: cobwebs
-need breaking rules fixed
+  need breaking rules fixed
 chipped lanterns item models
 chipped pointed dripstone models
 chipped iron bars models

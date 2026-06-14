@@ -3444,7 +3444,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_CTM.get(), "amethyst_block_pillar_engraving");
         engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_CUT.get(), "amethyst_block_cut_engraving");
         engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_EDGED.get(), "amethyst_block_edged_engraving");
-        engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_POLISHED.get(), "amethyst_block_polished_engraving");
         engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_SHINY.get(), "amethyst_block_shiny_engraving");
         engraveOne(exporter, Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_TILES.get(), "amethyst_block_tiles_engraving");
         engraveOne(exporter, Blocks.ANDESITE, OttBlocks.ANDESITE_BRICK_PATTERN.get(), "andesite_brick_pattern_engraving");
@@ -3992,7 +3991,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_DIAGONAL_BRICKS.get(), "end_stone_diagonal_bricks_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_MESH.get(), "end_stone_mesh_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_PAVING.get(), "end_stone_paving_engraving");
-        engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_POLISHED.get(), "end_stone_polished_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_ROTATED_BRICKS.get(), "end_stone_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_SCALES.get(), "end_stone_scales_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.END_STONE_SMALL_TILES.get(), "end_stone_small_tiles_engraving");
@@ -4180,7 +4178,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_INVERTED_TILES.get(), "lapis_block_inverted_tiles_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_MOSAIC.get(), "lapis_block_mosaic_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_PATTERN.get(), "lapis_block_pattern_engraving");
-        engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_POLISHED.get(), "lapis_block_polished_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_SCALES.get(), "lapis_block_scales_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_SMALL_TILES.get(), "lapis_block_small_tiles_engraving");
         engraveOne(exporter, Blocks.LAPIS_BLOCK, OttBlocks.LAPIS_BLOCK_STRIPES.get(), "lapis_block_stripes_engraving");
@@ -4514,7 +4511,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.DARK_PRISMARINE, OttBlocks.POLISHED_DARK_PRISMARINE, "polished_dark_prismarine_engraving");
         engraveOne(exporter, Blocks.DEEPSLATE, OttBlocks.POLISHED_DEEPSLATE, "polished_deepslate_engraving");
         engraveOne(exporter, Blocks.DIRT, OttBlocks.POLISHED_DIRT, "polished_dirt_engraving");
-        engraveOne(exporter, Blocks.DRIPSTONE_BLOCK, OttBlocks.POLISHED_DRIPSTONE_BLOCK, "polished_dripstone_block_engraving");
         engraveOne(exporter, Blocks.END_STONE, OttBlocks.POLISHED_END_STONE, "polished_end_stone_engraving");
         engraveOne(exporter, Blocks.GILDED_BLACKSTONE, OttBlocks.POLISHED_GILDED_BLACKSTONE, "polished_gilded_blackstone_engraving");
         engraveOne(exporter, Blocks.ICE, OttBlocks.POLISHED_ICE, "polished_ice_engraving");
@@ -4544,7 +4540,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.PURPLE_CONCRETE, OttBlocks.PURPLE_CONCRETE_PANEL, "purple_concrete_panel_engraving");
         engraveOne(exporter, Blocks.PURPLE_TERRACOTTA, OttBlocks.PURPLE_TERRACOTTA_COLUMN, "purple_terracotta_column_engraving");
         engraveOne(exporter, Blocks.PURPLE_TERRACOTTA, OttBlocks.PURPLE_TERRACOTTA_CTM, "purple_terracotta_pillar_engraving");
-        engraveOne(exporter, Blocks.QUARTZ_BLOCK, OttBlocks.QUARTZ_BLOCK.get(), "quartz_block_engraving");
         engraveOne(exporter, Blocks.QUARTZ_BLOCK, OttBlocks.QUARTZ_BLOCK_BORDERED.get(), "quartz_block_bordered_engraving");
         engraveOne(exporter, Blocks.QUARTZ_BLOCK, OttBlocks.QUARTZ_BLOCK_BRICK_PAVING.get(), "quartz_block_brick_paving_engraving");
         engraveOne(exporter, Blocks.QUARTZ_BLOCK, OttBlocks.QUARTZ_BLOCK_CHISELED_CTM.get(), "quartz_block_chiseled_pillar_engraving");
@@ -4565,7 +4560,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.BLACK_WOOL, OttBlocks.RECTANGLE_BLACK_WOOL, "rectangle_black_wool_engraving");
         engraveOne(exporter, Blocks.BLUE_WOOL, OttBlocks.RECTANGLE_BLUE_WOOL, "rectangle_blue_wool_engraving");
         engraveOne(exporter, Blocks.BROWN_WOOL, OttBlocks.RECTANGLE_BROWN_WOOL, "rectangle_brown_wool_engraving");
-        // --- RECOVERED WAVE4 ---
         engraveOne(exporter, Blocks.CYAN_WOOL, OttBlocks.RECTANGLE_CYAN_WOOL, "rectangle_cyan_wool_engraving");
         engraveOne(exporter, Blocks.GRAY_WOOL, OttBlocks.RECTANGLE_GRAY_WOOL, "rectangle_gray_wool_engraving");
         engraveOne(exporter, Blocks.GREEN_WOOL, OttBlocks.RECTANGLE_GREEN_WOOL, "rectangle_green_wool_engraving");
@@ -4586,7 +4580,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_BRICKS.get(), "red_sandstone_bricks_engraving");
         engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_DIAGONAL_BRICKS.get(), "red_sandstone_diagonal_bricks_engraving");
         engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_LARGE_TILES.get(), "red_sandstone_large_tiles_engraving");
-        engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_POLISHED.get(), "red_sandstone_polished_engraving");
         engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_ROTATED_BRICKS.get(), "red_sandstone_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.RED_SANDSTONE, OttBlocks.RED_SANDSTONE_TILES.get(), "red_sandstone_tiles_engraving");
         engraveOne(exporter, Blocks.RED_TERRACOTTA, OttBlocks.RED_TERRACOTTA_COLUMN, "red_terracotta_column_engraving");
@@ -4600,7 +4593,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_DIAGONAL_TILES.get(), "redstone_block_diagonal_tiles_engraving");
         engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_PATTERNED.get(), "redstone_block_patterned_engraving");
         engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_PAVING.get(), "redstone_block_paving_engraving");
-        engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_POLISHED.get(), "redstone_block_polished_engraving");
         engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_SCALES.get(), "redstone_block_scales_engraving");
         engraveOne(exporter, Blocks.REDSTONE_BLOCK, OttBlocks.REDSTONE_BLOCK_SMALL_TILES.get(), "redstone_block_small_tiles_engraving");
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_BRICK_PATTERN.get(), "sandstone_brick_pattern_engraving");
@@ -4608,7 +4600,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_BRICKS.get(), "sandstone_bricks_engraving");
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_DIAGONAL_BRICKS.get(), "sandstone_diagonal_bricks_engraving");
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_LARGE_TILES.get(), "sandstone_large_tiles_engraving");
-        engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_POLISHED.get(), "sandstone_polished_engraving");
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_ROTATED_BRICKS.get(), "sandstone_rotated_bricks_engraving");
         engraveOne(exporter, Blocks.SANDSTONE, OttBlocks.SANDSTONE_TILES.get(), "sandstone_tiles_engraving");
         engraveOne(exporter, Blocks.MUD, OttBlocks.SCALY_MUD, "scaly_mud_engraving");

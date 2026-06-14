@@ -17,6 +17,7 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.AlternativesEntry;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.CopyBlockState;
 import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
@@ -72,6 +73,8 @@ public class OttLootTableProvider extends BlockLootSubProvider {
                 ));
             } else if (block instanceof DoorBlock) {
                 this.add(block, this::createDoorTable);
+            } else if (block instanceof BeehiveBlock) {
+                this.add(block, this::createBeehiveDrops);
             } else if (block instanceof BigLilyPadBlock) {
                 this.add(block, (b) -> LootTable.lootTable().withPool(this.applyExplosionCondition(b, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0f)).add(LootItem.lootTableItem(b).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BigLilyPadBlock.POSITION, com.otterly76.ott.block.properties.QuadDirection.BOTTOM_LEFT)))))));
             } else if (block instanceof CopperChestBlock) {
@@ -120,6 +123,22 @@ public class OttLootTableProvider extends BlockLootSubProvider {
                 this.dropSelf(block);
             }
         });
+    }
+
+    /**
+     * Beehive drop: with silk touch, keep the contained {@code bees} component and {@code honey_level}
+     * state on the dropped block; otherwise drop a plain (empty) hive. Mirrors vanilla beehive behaviour.
+     */
+    protected LootTable.Builder createBeehiveDrops(Block block) {
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0F))
+                .add(AlternativesEntry.alternatives(
+                        LootItem.lootTableItem(block)
+                                .when(this.hasSilkTouch())
+                                .apply(CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                                        .include(DataComponents.BEES))
+                                .apply(CopyBlockState.copyState(block).copy(BeehiveBlock.HONEY_LEVEL)),
+                        LootItem.lootTableItem(block))));
     }
 
     protected LootTable.Builder createCropDrops(Block cropBlock, net.minecraft.world.item.Item seedItem, net.minecraft.world.item.Item grownItem, LootItemBlockStatePropertyCondition.Builder condition) {

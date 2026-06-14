@@ -879,7 +879,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.AMETHYST_BLOCK_CTM);
                 output.accept(OttBlocks.AMETHYST_BLOCK_CUT);
                 output.accept(OttBlocks.AMETHYST_BLOCK_EDGED);
-                output.accept(OttBlocks.AMETHYST_BLOCK_POLISHED);
                 output.accept(OttBlocks.AMETHYST_BLOCK_SHINY);
                 output.accept(OttBlocks.AMETHYST_BLOCK_TILES);
                 output.accept(OttBlocks.ANDESITE_BRICK_PATTERN);
@@ -1842,7 +1841,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.END_STONE_DIAGONAL_BRICKS);
                 output.accept(OttBlocks.END_STONE_MESH);
                 output.accept(OttBlocks.END_STONE_PAVING);
-                output.accept(OttBlocks.END_STONE_POLISHED);
                 output.accept(OttBlocks.END_STONE_ROTATED_BRICKS);
                 output.accept(OttBlocks.END_STONE_SCALES);
                 output.accept(OttBlocks.END_STONE_SMALL_TILES);
@@ -2252,7 +2250,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.LAPIS_BLOCK_INVERTED_TILES);
                 output.accept(OttBlocks.LAPIS_BLOCK_MOSAIC);
                 output.accept(OttBlocks.LAPIS_BLOCK_PATTERN);
-                output.accept(OttBlocks.LAPIS_BLOCK_POLISHED);
                 output.accept(OttBlocks.LAPIS_BLOCK_SCALES);
                 output.accept(OttBlocks.LAPIS_BLOCK_SMALL_TILES);
                 output.accept(OttBlocks.LAPIS_BLOCK_STRIPES);
@@ -2912,7 +2909,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.POLISHED_DEEPSLATE);
                 output.accept(OttBlocks.POLISHED_DIRT);
                 output.accept(OttBlocks.POLISHED_DRIPSTONE);
-                output.accept(OttBlocks.POLISHED_DRIPSTONE_BLOCK);
                 output.accept(OttBlocks.POLISHED_END_STONE);
                 output.accept(OttBlocks.POLISHED_GILDED_BLACKSTONE);
                 output.accept(OttBlocks.POLISHED_ICE);
@@ -2951,7 +2947,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.PRISMARINE_BRICKS_DIAGONAL_TILES);
                 output.accept(OttBlocks.PRISMARINE_BRICKS_DOTTED);
                 output.accept(OttBlocks.PRISMARINE_BRICKS_PILLARS);
-                output.accept(OttBlocks.PRISMARINE_BRICKS_POLISHED);
                 output.accept(OttBlocks.PRISMARINE_BRICKS_ROTATED_BRICKS);
                 output.accept(OttBlocks.PRISMARINE_BRICKS_ROWS);
                 output.accept(OttBlocks.PRISMARINE_BRICKS_SMALL_TILES);
@@ -2989,7 +2984,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.PURPUR_SQUARES);
                 output.accept(OttBlocks.PURPUR_TILES);
                 output.accept(OttBlocks.PURPUR_WOVEN);
-                output.accept(OttBlocks.QUARTZ_BLOCK);
                 output.accept(OttBlocks.QUARTZ_BLOCK_BORDERED);
                 output.accept(OttBlocks.QUARTZ_BLOCK_BRICK_PAVING);
                 output.accept(OttBlocks.QUARTZ_BLOCK_CHISELED_CTM);
@@ -3116,7 +3110,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.RED_SANDSTONE_BRICKS);
                 output.accept(OttBlocks.RED_SANDSTONE_DIAGONAL_BRICKS);
                 output.accept(OttBlocks.RED_SANDSTONE_LARGE_TILES);
-                output.accept(OttBlocks.RED_SANDSTONE_POLISHED);
                 output.accept(OttBlocks.RED_SANDSTONE_ROTATED_BRICKS);
                 output.accept(OttBlocks.RED_SANDSTONE_TILES);
                 output.accept(OttBlocks.RED_SPRUCE_LEAVES);
@@ -3135,7 +3128,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.REDSTONE_BLOCK_DIAGONAL_TILES);
                 output.accept(OttBlocks.REDSTONE_BLOCK_PATTERNED);
                 output.accept(OttBlocks.REDSTONE_BLOCK_PAVING);
-                output.accept(OttBlocks.REDSTONE_BLOCK_POLISHED);
                 output.accept(OttBlocks.REDSTONE_BLOCK_SCALES);
                 output.accept(OttBlocks.REDSTONE_BLOCK_SMALL_TILES);
                 output.accept(OttBlocks.REINFORCED_GLASS);
@@ -3154,7 +3146,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.SANDSTONE_FRAMED_GLASS);
                 output.accept(OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE);
                 output.accept(OttBlocks.SANDSTONE_LARGE_TILES);
-                output.accept(OttBlocks.SANDSTONE_POLISHED);
                 output.accept(OttBlocks.SANDSTONE_ROTATED_BRICKS);
                 output.accept(OttBlocks.SANDSTONE_TILES);
                 output.accept(OttBlocks.SCALY_MUD);
