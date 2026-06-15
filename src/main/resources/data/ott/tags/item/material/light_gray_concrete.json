@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_gray_concrete",
+    "ott:bolted_light_gray_concrete",
+    "ott:creeper_light_gray_concrete",
+    "ott:grid_light_gray_concrete",
+    "ott:hazard_light_gray_concrete",
+    "ott:light_gray_concrete_bricks",
+    "ott:light_gray_concrete_tiles",
+    "ott:mosaic_light_gray_concrete",
+    "ott:railed_light_gray_concrete",
+    "ott:reinforced_light_gray_concrete",
+    "ott:rusted_light_gray_concrete",
+    "ott:stacked_light_gray_concrete",
+    "ott:stop_light_gray_concrete",
+    "ott:warning_light_gray_concrete",
+    "ott:grill_light_gray_concrete",
+    "ott:light_gray_concrete_panel",
+    "ott:pegged_light_gray_concrete",
+    "ott:smooth_light_gray_concrete",
+    "ott:striped_light_gray_concrete",
+    "ott:wired_light_gray_concrete"
+  ]
+}

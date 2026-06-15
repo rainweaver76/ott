@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_stained_glass",
+    "ott:black_leaded_stained_glass",
+    "ott:black_framed_glass",
+    "ott:black_stained_clear_glass",
+    "ott:borderless_glass_black",
+    "ott:scratched_glass_black",
+    "ott:tinted_borderless_glass_black",
+    "ott:golden_framed_black_stained_glass",
+    "ott:black_stained_glass",
+    "ott:small_black_diamond_stained_glass",
+    "ott:small_black_diamond_stained_glass_ctm"
+  ]
+}

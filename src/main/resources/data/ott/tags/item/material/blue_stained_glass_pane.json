@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:blue_stained_glass_pane",
+    "ott:blue_framed_glass_ctm_pane",
+    "ott:blue_leaded_stained_glass_pane",
+    "ott:blue_stained_clear_glass_ctm_pane",
+    "ott:blue_stained_glass_ctm_pane",
+    "ott:borderless_glass_blue_ctm_pane",
+    "ott:circular_blue_stained_glass_pane",
+    "ott:fancy_blue_stained_glass_ctm_pane",
+    "ott:fancy_blue_stained_glass_pane",
+    "ott:golden_framed_blue_stained_glass_ctm_pane",
+    "ott:large_diamond_blue_stained_glass_pane",
+    "ott:ornate_blue_stained_glass_ctm_pane",
+    "ott:ornate_blue_stained_glass_pane",
+    "ott:raster_blue_stained_glass_ctm_pane",
+    "ott:raster_blue_stained_glass_pane",
+    "ott:scratched_glass_blue_ctm_pane",
+    "ott:small_blue_diamond_stained_glass_ctm_pane",
+    "ott:small_blue_diamond_stained_glass_pane",
+    "ott:square_blue_stained_glass_pane",
+    "ott:tiled_blue_stained_glass_ctm_pane",
+    "ott:tiled_blue_stained_glass_pane",
+    "ott:tinted_borderless_glass_blue_ctm_pane",
+    "ott:vertical_striped_blue_stained_glass_pane",
+    "ott:woven_blue_stained_glass_pane"
+  ]
+}

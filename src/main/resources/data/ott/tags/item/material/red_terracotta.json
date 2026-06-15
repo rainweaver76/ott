@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_terracotta",
+    "ott:red_terracotta_column",
+    "ott:red_terracotta_ctm",
+    "ott:chiseled_red_terracotta",
+    "ott:chiseled_red_terracotta_bricks",
+    "ott:crossed_red_terracotta",
+    "ott:cut_red_terracotta",
+    "ott:decorated_red_terracotta",
+    "ott:layered_red_terracotta",
+    "ott:red_terracotta_bricks",
+    "ott:red_terracotta_small_bricks",
+    "ott:red_terracotta_tile",
+    "ott:red_terracotta_tiles",
+    "ott:triangular_red_terracotta",
+    "ott:circular_red_terracotta",
+    "ott:curled_red_terracotta",
+    "ott:hexagonical_red_terracotta",
+    "ott:inscribed_red_terracotta",
+    "ott:small_red_terracotta_tiles",
+    "ott:starry_red_terracotta"
+  ]
+}

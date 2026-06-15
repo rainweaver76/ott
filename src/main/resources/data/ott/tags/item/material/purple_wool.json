@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:purple_wool",
+    "ott:delicate_purple_wool",
+    "ott:ornamented_purple_wool",
+    "ott:barky_purple_wool",
+    "ott:blocky_purple_wool",
+    "ott:bundled_purple_wool",
+    "ott:cross_haired_purple_wool",
+    "ott:cubed_purple_wool",
+    "ott:knitted_purple_wool",
+    "ott:patched_purple_wool",
+    "ott:ribbled_purple_wool",
+    "ott:scaled_purple_wool",
+    "ott:soft_purple_wool",
+    "ott:stringed_purple_wool",
+    "ott:tiled_purple_wool",
+    "ott:tripped_purple_wool",
+    "ott:wickered_purple_wool",
+    "ott:windmill_purple_wool",
+    "ott:wool_legacy_purple",
+    "ott:wool_llama_purple",
+    "ott:woved_purple_wool",
+    "ott:cornered_purple_wool",
+    "ott:crafted_purple_wool",
+    "ott:harsh_quilted_purple_wool",
+    "ott:rectangle_purple_wool"
+  ]
+}

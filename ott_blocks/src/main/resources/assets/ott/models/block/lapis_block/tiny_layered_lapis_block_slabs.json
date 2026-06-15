@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/lapis_block/tiny_layered_lapis_block_slabs"
+  }
+}

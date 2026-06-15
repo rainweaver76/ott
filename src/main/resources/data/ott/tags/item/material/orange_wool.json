@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:orange_wool",
+    "ott:barky_orange_wool",
+    "ott:blocky_orange_wool",
+    "ott:bundled_orange_wool",
+    "ott:cross_haired_orange_wool",
+    "ott:cubed_orange_wool",
+    "ott:knitted_orange_wool",
+    "ott:patched_orange_wool",
+    "ott:ribbled_orange_wool",
+    "ott:scaled_orange_wool",
+    "ott:soft_orange_wool",
+    "ott:stringed_orange_wool",
+    "ott:tiled_orange_wool",
+    "ott:tripped_orange_wool",
+    "ott:wickered_orange_wool",
+    "ott:windmill_orange_wool",
+    "ott:wool_legacy_orange",
+    "ott:wool_llama_orange",
+    "ott:woved_orange_wool",
+    "ott:cornered_orange_wool",
+    "ott:crafted_orange_wool",
+    "ott:harsh_quilted_orange_wool",
+    "ott:rectangle_orange_wool"
+  ]
+}

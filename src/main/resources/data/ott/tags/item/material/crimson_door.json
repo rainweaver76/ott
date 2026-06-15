@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crimson_door",
+    "ott:crimson_bamboo_door",
+    "ott:crimson_barn_door",
+    "ott:crimson_barn_glass_door",
+    "ott:crimson_beach_door",
+    "ott:crimson_classic_door",
+    "ott:crimson_cottage_door",
+    "ott:crimson_four_panel_door",
+    "ott:crimson_glass_door",
+    "ott:crimson_japanese_door",
+    "ott:crimson_modern_door",
+    "ott:crimson_mystic_door",
+    "ott:crimson_paper_door",
+    "ott:crimson_stable_door",
+    "ott:crimson_stable_head_door",
+    "ott:crimson_swamp_door",
+    "ott:crimson_tropical_door",
+    "ott:crimson_waffle_door",
+    "ott:crimson_western_door",
+    "ott:crimson_whispering_door",
+    "ott:japanese_crimson_door"
+  ]
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/blackstone/blackstone_diagonal_bricks"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/blackstone/ctm/blackstone_diagonal_bricks"
+  }
 }

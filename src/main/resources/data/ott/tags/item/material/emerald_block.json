@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:emerald_block",
+    "ott:ancient_emerald_block",
+    "ott:chipped_emerald_block",
+    "ott:embossed_emerald_block",
+    "ott:emerald_block_crosses",
+    "ott:emerald_block_panels",
+    "ott:emerald_block_plating",
+    "ott:emerald_block_smooth",
+    "ott:engraved_emerald_block",
+    "ott:layered_emerald_block",
+    "ott:plated_emerald_block",
+    "ott:polished_emerald_block",
+    "ott:pressed_emerald_block",
+    "ott:reinforced_emerald_block",
+    "ott:sheet_emerald_block",
+    "ott:shuttered_emerald_block",
+    "ott:stacked_emerald_block",
+    "ott:emerald_block_bordered_crosses",
+    "ott:emerald_block_bordered_plating",
+    "ott:emerald_block_chiseled",
+    "ott:emerald_block_clovers",
+    "ott:emerald_block_crystal",
+    "ott:emerald_block_patterned",
+    "ott:emerald_block_patterned_squares",
+    "ott:emerald_block_polished",
+    "ott:emerald_block_striped",
+    "ott:emerald_block_waxed"
+  ]
+}

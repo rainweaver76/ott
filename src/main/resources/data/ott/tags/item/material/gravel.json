@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gravel",
+    "ott:andesite_gravel",
+    "ott:dirty_gravel",
+    "ott:dusty_gravel",
+    "ott:orange_gravel",
+    "ott:rought_gravel",
+    "ott:sandy_gravel",
+    "ott:sifted_gravel"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/bricks/smooth_ringed_bricks"
+    }
+  }
+}

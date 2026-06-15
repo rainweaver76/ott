@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_wool",
+    "ott:barky_black_wool",
+    "ott:blocky_black_wool",
+    "ott:bundled_black_wool",
+    "ott:cross_haired_black_wool",
+    "ott:cubed_black_wool",
+    "ott:knitted_black_wool",
+    "ott:patched_black_wool",
+    "ott:ribbled_black_wool",
+    "ott:scaled_black_wool",
+    "ott:soft_black_wool",
+    "ott:stringed_black_wool",
+    "ott:tiled_black_wool",
+    "ott:tripped_black_wool",
+    "ott:wickered_black_wool",
+    "ott:windmill_black_wool",
+    "ott:wool_legacy_black",
+    "ott:wool_llama_black",
+    "ott:woved_black_wool",
+    "ott:cornered_black_wool",
+    "ott:crafted_black_wool",
+    "ott:harsh_quilted_black_wool",
+    "ott:rectangle_black_wool"
+  ]
+}

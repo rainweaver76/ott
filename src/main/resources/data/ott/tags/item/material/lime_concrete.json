@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lime_concrete",
+    "ott:bolted_lime_concrete",
+    "ott:creeper_lime_concrete",
+    "ott:grid_lime_concrete",
+    "ott:hazard_lime_concrete",
+    "ott:lime_concrete_bricks",
+    "ott:lime_concrete_tiles",
+    "ott:mosaic_lime_concrete",
+    "ott:railed_lime_concrete",
+    "ott:reinforced_lime_concrete",
+    "ott:rusted_lime_concrete",
+    "ott:stacked_lime_concrete",
+    "ott:stop_lime_concrete",
+    "ott:warning_lime_concrete",
+    "ott:grill_lime_concrete",
+    "ott:lime_concrete_panel",
+    "ott:pegged_lime_concrete",
+    "ott:smooth_lime_concrete",
+    "ott:striped_lime_concrete",
+    "ott:wired_lime_concrete"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warped_wart_block",
+    "ott:bubbling_warped_wart_block",
+    "ott:crumbled_warped_wart_block",
+    "ott:dried_warped_wart_block",
+    "ott:erratic_warped_wart_block",
+    "ott:eyed_warped_wart_block",
+    "ott:patched_warped_wart_block",
+    "ott:porous_warped_wart_block",
+    "ott:rough_warped_wart_block",
+    "ott:scabbed_warped_wart_block",
+    "ott:scaled_warped_wart_block",
+    "ott:seared_warped_wart_block",
+    "ott:semi_spongy_warped_wart_block",
+    "ott:speckled_warped_wart_block",
+    "ott:spongy_warped_wart_block"
+  ]
+}

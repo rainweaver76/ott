@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/basalt/vertical_disordered_basalt_bricks"
+  }
+}

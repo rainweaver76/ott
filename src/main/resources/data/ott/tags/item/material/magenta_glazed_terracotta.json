@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:magenta_glazed_terracotta",
+    "ott:decorated_magenta_glazed_terracotta",
+    "ott:hexagonical_magenta_glazed_terracotta",
+    "ott:magenta_glazed_terracotta_smooth_tiles",
+    "ott:magenta_glazed_terracotta_tiles",
+    "ott:minimized_magenta_glazed_terracotta",
+    "ott:paved_magenta_glazed_terracotta",
+    "ott:shrunken_magenta_glazed_terracotta",
+    "ott:starry_magenta_glazed_terracotta",
+    "ott:waved_magenta_glazed_terracotta"
+  ]
+}

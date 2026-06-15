@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:mushroom_stem",
+    "ott:blooming_mushroom_stem",
+    "ott:broken_mushroom_stem",
+    "ott:grimy_mushroom_stem",
+    "ott:old_mushroom_stem",
+    "ott:poisonous_mushroom_stem",
+    "ott:smooth_mushroom_stem",
+    "ott:warm_mushroom_stem"
+  ]
+}

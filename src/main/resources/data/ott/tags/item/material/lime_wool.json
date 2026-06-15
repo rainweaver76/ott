@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lime_wool",
+    "ott:barky_lime_wool",
+    "ott:blocky_lime_wool",
+    "ott:bundled_lime_wool",
+    "ott:cross_haired_lime_wool",
+    "ott:cubed_lime_wool",
+    "ott:knitted_lime_wool",
+    "ott:patched_lime_wool",
+    "ott:ribbled_lime_wool",
+    "ott:scaled_lime_wool",
+    "ott:soft_lime_wool",
+    "ott:stringed_lime_wool",
+    "ott:tiled_lime_wool",
+    "ott:tripped_lime_wool",
+    "ott:wickered_lime_wool",
+    "ott:windmill_lime_wool",
+    "ott:wool_legacy_lime",
+    "ott:wool_llama_lime",
+    "ott:woved_lime_wool",
+    "ott:cornered_lime_wool",
+    "ott:crafted_lime_wool",
+    "ott:harsh_quilted_lime_wool",
+    "ott:rectangle_lime_wool"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:green_concrete",
+    "ott:bolted_green_concrete",
+    "ott:creeper_green_concrete",
+    "ott:green_concrete_bricks",
+    "ott:green_concrete_tiles",
+    "ott:grid_green_concrete",
+    "ott:hazard_green_concrete",
+    "ott:mosaic_green_concrete",
+    "ott:railed_green_concrete",
+    "ott:reinforced_green_concrete",
+    "ott:rusted_green_concrete",
+    "ott:stacked_green_concrete",
+    "ott:stop_green_concrete",
+    "ott:warning_green_concrete",
+    "ott:green_concrete_panel",
+    "ott:grill_green_concrete",
+    "ott:pegged_green_concrete",
+    "ott:smooth_green_concrete",
+    "ott:striped_green_concrete",
+    "ott:wired_green_concrete"
+  ]
+}

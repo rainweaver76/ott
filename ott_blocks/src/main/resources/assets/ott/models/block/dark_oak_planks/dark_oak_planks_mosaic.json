@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/dark_oak_planks/dark_oak_planks_mosaic"
+  }
+}

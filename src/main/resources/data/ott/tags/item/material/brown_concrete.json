@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_concrete",
+    "ott:bolted_brown_concrete",
+    "ott:brown_concrete_bricks",
+    "ott:brown_concrete_tiles",
+    "ott:creeper_brown_concrete",
+    "ott:grid_brown_concrete",
+    "ott:hazard_brown_concrete",
+    "ott:mosaic_brown_concrete",
+    "ott:railed_brown_concrete",
+    "ott:reinforced_brown_concrete",
+    "ott:rusted_brown_concrete",
+    "ott:stacked_brown_concrete",
+    "ott:stop_brown_concrete",
+    "ott:warning_brown_concrete",
+    "ott:brown_concrete_panel",
+    "ott:grill_brown_concrete",
+    "ott:pegged_brown_concrete",
+    "ott:smooth_brown_concrete",
+    "ott:striped_brown_concrete",
+    "ott:wired_brown_concrete"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:orange_concrete",
+    "ott:bolted_orange_concrete",
+    "ott:creeper_orange_concrete",
+    "ott:grid_orange_concrete",
+    "ott:hazard_orange_concrete",
+    "ott:mosaic_orange_concrete",
+    "ott:orange_concrete_bricks",
+    "ott:orange_concrete_tiles",
+    "ott:railed_orange_concrete",
+    "ott:reinforced_orange_concrete",
+    "ott:rusted_orange_concrete",
+    "ott:stacked_orange_concrete",
+    "ott:stop_orange_concrete",
+    "ott:warning_orange_concrete",
+    "ott:grill_orange_concrete",
+    "ott:orange_concrete_panel",
+    "ott:pegged_orange_concrete",
+    "ott:smooth_orange_concrete",
+    "ott:striped_orange_concrete",
+    "ott:wired_orange_concrete"
+  ]
+}

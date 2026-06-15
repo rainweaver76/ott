@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/cherry_planks/shifted_cherry_planks"
+  }
+}

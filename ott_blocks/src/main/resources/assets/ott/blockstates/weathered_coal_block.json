@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/weathered_coal_block"
+    }
+  }
+}

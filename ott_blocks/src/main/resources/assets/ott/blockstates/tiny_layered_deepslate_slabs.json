@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/deepslate/tiny_layered_deepslate_slabs"
+    }
+  }
+}

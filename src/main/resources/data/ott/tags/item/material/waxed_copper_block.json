@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:waxed_copper_block",
+    "ott:ancient_waxed_copper_block",
+    "ott:chipped_waxed_copper_block",
+    "ott:copper_block_cone",
+    "ott:copper_block_smooth",
+    "ott:embossed_waxed_copper_block",
+    "ott:engraved_waxed_copper_block",
+    "ott:layered_waxed_copper_block",
+    "ott:plated_waxed_copper_block",
+    "ott:pressed_waxed_copper_block",
+    "ott:reinforced_waxed_copper_block",
+    "ott:sheet_waxed_copper_block",
+    "ott:shuttered_waxed_copper_block",
+    "ott:stacked_waxed_copper_block"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/netherite_block/embossed_netherite_block"
+    }
+  }
+}

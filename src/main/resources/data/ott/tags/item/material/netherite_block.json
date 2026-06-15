@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:netherite_block",
+    "ott:ancient_netherite_block",
+    "ott:chipped_netherite_block",
+    "ott:embossed_netherite_block",
+    "ott:engraved_netherite_block",
+    "ott:layered_netherite_block",
+    "ott:netherite_block_meteoric",
+    "ott:netherite_block_panels",
+    "ott:netherite_block_smooth",
+    "ott:plated_netherite_block",
+    "ott:polished_netherite_block",
+    "ott:pressed_netherite_block",
+    "ott:reinforced_netherite_block",
+    "ott:sheet_netherite_block",
+    "ott:shuttered_netherite_block",
+    "ott:stacked_netherite_block",
+    "ott:netherite_block_beams",
+    "ott:netherite_block_bricks",
+    "ott:netherite_block_chiseled",
+    "ott:netherite_block_compacted",
+    "ott:netherite_block_decorated",
+    "ott:netherite_block_diagonal_tiles",
+    "ott:netherite_block_indented",
+    "ott:netherite_block_patterned",
+    "ott:netherite_block_small_tiles"
+  ]
+}

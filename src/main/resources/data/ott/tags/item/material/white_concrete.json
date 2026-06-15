@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_concrete",
+    "ott:bolted_white_concrete",
+    "ott:creeper_white_concrete",
+    "ott:grid_white_concrete",
+    "ott:hazard_white_concrete",
+    "ott:mosaic_white_concrete",
+    "ott:railed_white_concrete",
+    "ott:reinforced_white_concrete",
+    "ott:rusted_white_concrete",
+    "ott:stacked_white_concrete",
+    "ott:stop_white_concrete",
+    "ott:warning_white_concrete",
+    "ott:white_concrete_bricks",
+    "ott:white_concrete_tiles",
+    "ott:grill_white_concrete",
+    "ott:pegged_white_concrete",
+    "ott:smooth_white_concrete",
+    "ott:striped_white_concrete",
+    "ott:white_concrete_panel",
+    "ott:wired_white_concrete"
+  ]
+}

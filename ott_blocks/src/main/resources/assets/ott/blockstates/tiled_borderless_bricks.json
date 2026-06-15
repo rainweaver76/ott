@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/borderless_bricks/tiled_borderless_bricks"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_concrete",
+    "ott:bolted_red_concrete",
+    "ott:creeper_red_concrete",
+    "ott:grid_red_concrete",
+    "ott:hazard_red_concrete",
+    "ott:mosaic_red_concrete",
+    "ott:railed_red_concrete",
+    "ott:red_concrete_bricks",
+    "ott:red_concrete_tiles",
+    "ott:reinforced_red_concrete",
+    "ott:rusted_red_concrete",
+    "ott:stacked_red_concrete",
+    "ott:stop_red_concrete",
+    "ott:warning_red_concrete",
+    "ott:grill_red_concrete",
+    "ott:pegged_red_concrete",
+    "ott:red_concrete_panel",
+    "ott:smooth_red_concrete",
+    "ott:striped_red_concrete",
+    "ott:wired_red_concrete"
+  ]
+}

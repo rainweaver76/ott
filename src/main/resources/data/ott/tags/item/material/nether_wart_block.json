@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:nether_wart_block",
+    "ott:bubbling_nether_wart_block",
+    "ott:crumbled_nether_wart_block",
+    "ott:dried_nether_wart_block",
+    "ott:erratic_nether_wart_block",
+    "ott:eyed_nether_wart_block",
+    "ott:patched_nether_wart_block",
+    "ott:porous_nether_wart_block",
+    "ott:rough_nether_wart_block",
+    "ott:scabbed_nether_wart_block",
+    "ott:scaled_nether_wart_block",
+    "ott:seared_nether_wart_block",
+    "ott:semi_spongy_nether_wart_block",
+    "ott:speckled_nether_wart_block",
+    "ott:spongy_nether_wart_block"
+  ]
+}

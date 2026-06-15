@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/spruce_planks/spruce_planks_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/spruce_planks/ctm/spruce_planks_tiles"
+  }
 }

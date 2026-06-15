@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:moss_block",
+    "ott:blobby_moss_block",
+    "ott:blue_moss_block",
+    "ott:crunchy_moss_block",
+    "ott:lime_moss_block",
+    "ott:old_moss_block",
+    "ott:red_moss_block",
+    "ott:smooth_moss_block",
+    "ott:spongy_moss_block",
+    "ott:sprinkled_moss_block",
+    "ott:yellow_moss_block"
+  ]
+}

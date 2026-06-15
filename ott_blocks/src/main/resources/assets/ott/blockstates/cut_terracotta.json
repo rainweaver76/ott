@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/terracotta/cut_terracotta"
+    }
+  }
+}

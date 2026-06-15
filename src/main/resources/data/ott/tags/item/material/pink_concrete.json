@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_concrete",
+    "ott:bolted_pink_concrete",
+    "ott:creeper_pink_concrete",
+    "ott:grid_pink_concrete",
+    "ott:hazard_pink_concrete",
+    "ott:mosaic_pink_concrete",
+    "ott:pink_concrete_bricks",
+    "ott:pink_concrete_tiles",
+    "ott:railed_pink_concrete",
+    "ott:reinforced_pink_concrete",
+    "ott:rusted_pink_concrete",
+    "ott:stacked_pink_concrete",
+    "ott:stop_pink_concrete",
+    "ott:warning_pink_concrete",
+    "ott:grill_pink_concrete",
+    "ott:pegged_pink_concrete",
+    "ott:pink_concrete_panel",
+    "ott:smooth_pink_concrete",
+    "ott:striped_pink_concrete",
+    "ott:wired_pink_concrete"
+  ]
+}

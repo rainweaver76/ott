@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dripstone_block/checkered_dripstone_block_tiles"
+    }
+  }
+}

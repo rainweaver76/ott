@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dripstone_block/carved_dripstone_block"
+    }
+  }
+}

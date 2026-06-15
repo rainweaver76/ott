@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/magma_block/vertical_disordered_magma_block_bricks"
+    }
+  }
+}

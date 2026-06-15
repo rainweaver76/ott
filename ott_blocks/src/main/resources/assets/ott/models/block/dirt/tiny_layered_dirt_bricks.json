@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/dirt/tiny_layered_dirt_bricks"
+  }
+}

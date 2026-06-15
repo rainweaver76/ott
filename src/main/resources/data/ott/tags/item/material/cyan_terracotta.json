@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_terracotta",
+    "ott:cyan_terracotta_column",
+    "ott:cyan_terracotta_ctm",
+    "ott:chiseled_cyan_terracotta",
+    "ott:chiseled_cyan_terracotta_bricks",
+    "ott:crossed_cyan_terracotta",
+    "ott:cut_cyan_terracotta",
+    "ott:cyan_terracotta_bricks",
+    "ott:cyan_terracotta_small_bricks",
+    "ott:cyan_terracotta_tile",
+    "ott:cyan_terracotta_tiles",
+    "ott:decorated_cyan_terracotta",
+    "ott:layered_cyan_terracotta",
+    "ott:triangular_cyan_terracotta",
+    "ott:circular_cyan_terracotta",
+    "ott:curled_cyan_terracotta",
+    "ott:hexagonical_cyan_terracotta",
+    "ott:inscribed_cyan_terracotta",
+    "ott:small_cyan_terracotta_tiles",
+    "ott:starry_cyan_terracotta"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dripstone_block/offset_dripstone_block_bricks"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_concrete",
+    "ott:bolted_yellow_concrete",
+    "ott:creeper_yellow_concrete",
+    "ott:grid_yellow_concrete",
+    "ott:hazard_yellow_concrete",
+    "ott:mosaic_yellow_concrete",
+    "ott:railed_yellow_concrete",
+    "ott:reinforced_yellow_concrete",
+    "ott:rusted_yellow_concrete",
+    "ott:stacked_yellow_concrete",
+    "ott:stop_yellow_concrete",
+    "ott:warning_yellow_concrete",
+    "ott:yellow_concrete_bricks",
+    "ott:yellow_concrete_tiles",
+    "ott:grill_yellow_concrete",
+    "ott:pegged_yellow_concrete",
+    "ott:smooth_yellow_concrete",
+    "ott:striped_yellow_concrete",
+    "ott:wired_yellow_concrete",
+    "ott:yellow_concrete_panel"
+  ]
+}

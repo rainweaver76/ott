@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/crimsite/smoothed_double_inlayed_crimsite"
+  }
+}

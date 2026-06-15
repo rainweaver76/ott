@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warped_trapdoor",
+    "ott:warped_bamboo_trapdoor",
+    "ott:warped_barn_trapdoor",
+    "ott:warped_barred_trapdoor",
+    "ott:warped_barrel_trapdoor",
+    "ott:warped_beach_trapdoor",
+    "ott:warped_blossom_trapdoor",
+    "ott:warped_classic_trapdoor",
+    "ott:warped_cottage_trapdoor",
+    "ott:warped_four_panel_trapdoor",
+    "ott:warped_glass_trapdoor",
+    "ott:warped_paper_trapdoor",
+    "ott:warped_swamp_trapdoor",
+    "ott:warped_tropical_trapdoor",
+    "ott:warped_whispering_trapdoor"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/netherrack/vertical_disordered_netherrack_bricks"
+  }
+}

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/acacia_planks/acacia_planks_flooring"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/acacia_planks/ctm/acacia_planks_flooring"
+  }
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/snow_block/cut_blank_snow_block"
+    }
+  }
+}

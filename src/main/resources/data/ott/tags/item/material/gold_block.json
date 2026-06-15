@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:gold_block",
+    "ott:ancient_gold_block",
+    "ott:chipped_gold_block",
+    "ott:embossed_gold_block",
+    "ott:engraved_gold_block",
+    "ott:gold_block_panels",
+    "ott:gold_block_smooth",
+    "ott:layered_gold_block",
+    "ott:plated_gold_block",
+    "ott:pressed_gold_block",
+    "ott:reinforced_gold_block",
+    "ott:sheet_gold_block",
+    "ott:shuttered_gold_block",
+    "ott:stacked_gold_block",
+    "ott:gold_block",
+    "ott:gold_block_beams",
+    "ott:gold_block_bordered",
+    "ott:gold_block_lines",
+    "ott:gold_block_pattern",
+    "ott:gold_block_polished",
+    "ott:gold_block_scales",
+    "ott:gold_block_small_bricks",
+    "ott:gold_block_small_tiles",
+    "ott:gold_block_striped",
+    "ott:gold_block_tiles"
+  ]
+}

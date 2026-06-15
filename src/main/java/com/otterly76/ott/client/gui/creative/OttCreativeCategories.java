@@ -818,6 +818,8 @@ public enum OttCreativeCategories {
     ENGRAVED("engraved",
             () -> OttBlocks.CHAOTIC_STONE_BRICKS.get().asItem(),
             (params, output) -> {
+                // Imported cube_all decorative blocks (grouped by material, sorted)
+                com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.values().forEach(output::accept);
                 output.accept(OttBlocks.ACACIA_PLANKS_BEAMS);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PATTERN);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PAVING);

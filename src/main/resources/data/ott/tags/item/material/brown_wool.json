@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_wool",
+    "ott:barky_brown_wool",
+    "ott:blocky_brown_wool",
+    "ott:bundled_brown_wool",
+    "ott:cross_haired_brown_wool",
+    "ott:cubed_brown_wool",
+    "ott:knitted_brown_wool",
+    "ott:patched_brown_wool",
+    "ott:ribbled_brown_wool",
+    "ott:scaled_brown_wool",
+    "ott:soft_brown_wool",
+    "ott:stringed_brown_wool",
+    "ott:tiled_brown_wool",
+    "ott:tripped_brown_wool",
+    "ott:wickered_brown_wool",
+    "ott:windmill_brown_wool",
+    "ott:wool_legacy_brown",
+    "ott:wool_llama_brown",
+    "ott:woved_brown_wool",
+    "ott:cornered_brown_wool",
+    "ott:crafted_brown_wool",
+    "ott:harsh_quilted_brown_wool",
+    "ott:rectangle_brown_wool"
+  ]
+}

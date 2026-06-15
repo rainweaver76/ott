@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_wool",
+    "ott:barky_yellow_wool",
+    "ott:blocky_yellow_wool",
+    "ott:bundled_yellow_wool",
+    "ott:cross_haired_yellow_wool",
+    "ott:cubed_yellow_wool",
+    "ott:knitted_yellow_wool",
+    "ott:patched_yellow_wool",
+    "ott:ribbled_yellow_wool",
+    "ott:scaled_yellow_wool",
+    "ott:soft_yellow_wool",
+    "ott:stringed_yellow_wool",
+    "ott:tiled_yellow_wool",
+    "ott:tripped_yellow_wool",
+    "ott:wickered_yellow_wool",
+    "ott:windmill_yellow_wool",
+    "ott:wool_legacy_yellow",
+    "ott:wool_llama_yellow",
+    "ott:woved_yellow_wool",
+    "ott:cornered_yellow_wool",
+    "ott:crafted_yellow_wool",
+    "ott:harsh_quilted_yellow_wool",
+    "ott:rectangle_yellow_wool"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_mushroom_block",
+    "ott:dark_dusted_brown_mushroom_block",
+    "ott:dark_freckled_brown_mushroom_block",
+    "ott:dark_scaled_brown_mushroom_block",
+    "ott:dark_smooth_brown_mushroom_block",
+    "ott:dark_spotted_brown_mushroom_block",
+    "ott:dark_sprinkled_brown_mushroom_block",
+    "ott:dusted_brown_mushroom_block",
+    "ott:freckled_brown_mushroom_block",
+    "ott:light_dusted_brown_mushroom_block",
+    "ott:light_freckled_brown_mushroom_block",
+    "ott:light_scaled_brown_mushroom_block",
+    "ott:light_smooth_brown_mushroom_block",
+    "ott:light_spotted_brown_mushroom_block",
+    "ott:light_sprinkled_brown_mushroom_block",
+    "ott:scaled_brown_mushroom_block",
+    "ott:smooth_brown_mushroom_block",
+    "ott:spotted_brown_mushroom_block",
+    "ott:sprinkled_brown_mushroom_block",
+    "ott:white_dusted_brown_mushroom_block",
+    "ott:white_freckled_brown_mushroom_block",
+    "ott:white_spotted_brown_mushroom_block",
+    "ott:white_sprinkled_brown_mushroom_block"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/redstone_block/sanded_redstone_block"
+    }
+  }
+}

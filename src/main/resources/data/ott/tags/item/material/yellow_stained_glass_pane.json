@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:yellow_stained_glass_pane",
+    "ott:yellow_framed_glass_ctm_pane",
+    "ott:yellow_stained_glass_ctm_pane",
+    "ott:fancy_yellow_stained_glass_ctm_pane",
+    "ott:golden_framed_yellow_stained_glass_ctm_pane",
+    "ott:ornate_yellow_stained_glass_ctm_pane",
+    "ott:raster_yellow_stained_glass_ctm_pane",
+    "ott:scratched_glass_yellow_ctm_pane",
+    "ott:small_yellow_diamond_stained_glass_ctm_pane",
+    "ott:tiled_yellow_stained_glass_ctm_pane",
+    "ott:borderless_glass_yellow_ctm_pane",
+    "ott:yellow_stained_clear_glass_ctm_pane",
+    "ott:yellow_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_yellow_ctm_pane",
+    "ott:circular_yellow_stained_glass_pane",
+    "ott:fancy_yellow_stained_glass_pane",
+    "ott:large_diamond_yellow_stained_glass_pane",
+    "ott:ornate_yellow_stained_glass_pane",
+    "ott:raster_yellow_stained_glass_pane",
+    "ott:small_yellow_diamond_stained_glass_pane",
+    "ott:square_yellow_stained_glass_pane",
+    "ott:tiled_yellow_stained_glass_pane",
+    "ott:vertical_striped_yellow_stained_glass_pane",
+    "ott:woven_yellow_stained_glass_pane"
+  ]
+}

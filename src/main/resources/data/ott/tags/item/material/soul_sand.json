@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:soul_sand",
+    "ott:faded_soul_sand",
+    "ott:fine_soul_sand",
+    "ott:glowing_soul_sand",
+    "ott:graveled_soul_sand",
+    "ott:happy_soul_sand",
+    "ott:hardened_soul_sand",
+    "ott:lauching_soul_sand",
+    "ott:meming_soul_sand",
+    "ott:reanimated_soul_sand",
+    "ott:scared_soul_sand",
+    "ott:sifted_soul_sand",
+    "ott:smoothed_soul_sand",
+    "ott:trampled_soul_sand"
+  ]
+}

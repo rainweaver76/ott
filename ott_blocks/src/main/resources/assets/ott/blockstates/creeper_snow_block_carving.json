@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/snow_block/creeper_snow_block_carving"
+    }
+  }
+}

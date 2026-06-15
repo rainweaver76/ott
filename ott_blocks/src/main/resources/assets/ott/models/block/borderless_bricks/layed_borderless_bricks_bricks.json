@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/borderless_bricks/layed_borderless_bricks_bricks"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:orange_glazed_terracotta",
+    "ott:decorated_orange_glazed_terracotta",
+    "ott:hexagonical_orange_glazed_terracotta",
+    "ott:minimized_orange_glazed_terracotta",
+    "ott:orange_glazed_terracotta_smooth_tiles",
+    "ott:orange_glazed_terracotta_tiles",
+    "ott:paved_orange_glazed_terracotta",
+    "ott:shrunken_orange_glazed_terracotta",
+    "ott:starry_orange_glazed_terracotta",
+    "ott:waved_orange_glazed_terracotta"
+  ]
+}

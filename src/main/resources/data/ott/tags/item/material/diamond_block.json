@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:diamond_block",
+    "ott:ancient_diamond_block",
+    "ott:chipped_diamond_block",
+    "ott:diamond_block_diagonal_tiles",
+    "ott:diamond_block_panels",
+    "ott:diamond_block_shiny",
+    "ott:diamond_block_smooth",
+    "ott:embossed_diamond_block",
+    "ott:engraved_diamond_block",
+    "ott:layered_diamond_block",
+    "ott:plated_diamond_block",
+    "ott:pressed_diamond_block",
+    "ott:reinforced_diamond_block",
+    "ott:sheet_diamond_block",
+    "ott:shuttered_diamond_block",
+    "ott:stacked_diamond_block"
+  ]
+}

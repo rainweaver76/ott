@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/prismarine_bricks/prismarine_bricks_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/prismarine_bricks/ctm/prismarine_bricks_tiles"
+  }
 }

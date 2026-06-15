@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_wool",
+    "ott:barky_pink_wool",
+    "ott:blocky_pink_wool",
+    "ott:bundled_pink_wool",
+    "ott:cross_haired_pink_wool",
+    "ott:cubed_pink_wool",
+    "ott:knitted_pink_wool",
+    "ott:patched_pink_wool",
+    "ott:ribbled_pink_wool",
+    "ott:scaled_pink_wool",
+    "ott:soft_pink_wool",
+    "ott:stringed_pink_wool",
+    "ott:tiled_pink_wool",
+    "ott:tripped_pink_wool",
+    "ott:wickered_pink_wool",
+    "ott:windmill_pink_wool",
+    "ott:wool_legacy_pink",
+    "ott:wool_llama_pink",
+    "ott:woved_pink_wool",
+    "ott:cornered_pink_wool",
+    "ott:crafted_pink_wool",
+    "ott:harsh_quilted_pink_wool",
+    "ott:rectangle_pink_wool"
+  ]
+}

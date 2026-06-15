@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_wool",
+    "ott:barky_white_wool",
+    "ott:blocky_white_wool",
+    "ott:bundled_white_wool",
+    "ott:cross_haired_white_wool",
+    "ott:cubed_white_wool",
+    "ott:knitted_white_wool",
+    "ott:patched_white_wool",
+    "ott:ribbled_white_wool",
+    "ott:scaled_white_wool",
+    "ott:soft_white_wool",
+    "ott:stringed_white_wool",
+    "ott:tiled_white_wool",
+    "ott:tripped_white_wool",
+    "ott:wickered_white_wool",
+    "ott:windmill_white_wool",
+    "ott:wool_legacy_white",
+    "ott:wool_llama_white",
+    "ott:woved_white_wool",
+    "ott:cornered_white_wool",
+    "ott:crafted_white_wool",
+    "ott:harsh_quilted_white_wool",
+    "ott:rectangle_white_wool"
+  ]
+}

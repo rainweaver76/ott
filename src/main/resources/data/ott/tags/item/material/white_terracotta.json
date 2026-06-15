@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:white_terracotta",
+    "ott:white_terracotta_column",
+    "ott:white_terracotta_ctm",
+    "ott:chiseled_white_terracotta",
+    "ott:chiseled_white_terracotta_bricks",
+    "ott:crossed_white_terracotta",
+    "ott:cut_white_terracotta",
+    "ott:decorated_white_terracotta",
+    "ott:layered_white_terracotta",
+    "ott:triangular_white_terracotta",
+    "ott:white_terracotta_bricks",
+    "ott:white_terracotta_small_bricks",
+    "ott:white_terracotta_tile",
+    "ott:white_terracotta_tiles",
+    "ott:circular_white_terracotta",
+    "ott:curled_white_terracotta",
+    "ott:hexagonical_white_terracotta",
+    "ott:inscribed_white_terracotta",
+    "ott:small_white_terracotta_tiles",
+    "ott:starry_white_terracotta"
+  ]
+}

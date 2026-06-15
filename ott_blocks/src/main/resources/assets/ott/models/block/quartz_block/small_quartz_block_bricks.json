@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/quartz_block/small_quartz_block_bricks"
+  }
+}

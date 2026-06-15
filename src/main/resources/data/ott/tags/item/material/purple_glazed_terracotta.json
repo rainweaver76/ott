@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:purple_glazed_terracotta",
+    "ott:decorated_purple_glazed_terracotta",
+    "ott:hexagonical_purple_glazed_terracotta",
+    "ott:minimized_purple_glazed_terracotta",
+    "ott:paved_purple_glazed_terracotta",
+    "ott:purple_glazed_terracotta_smooth_tiles",
+    "ott:purple_glazed_terracotta_tiles",
+    "ott:shrunken_purple_glazed_terracotta",
+    "ott:starry_purple_glazed_terracotta",
+    "ott:waved_purple_glazed_terracotta"
+  ]
+}

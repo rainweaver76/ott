@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/raw_iron_block/smooth_ringed_raw_iron_block"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_glazed_terracotta",
+    "ott:decorated_pink_glazed_terracotta",
+    "ott:hexagonical_pink_glazed_terracotta",
+    "ott:minimized_pink_glazed_terracotta",
+    "ott:paved_pink_glazed_terracotta",
+    "ott:pink_glazed_terracotta_smooth_tiles",
+    "ott:pink_glazed_terracotta_tiles",
+    "ott:shrunken_pink_glazed_terracotta",
+    "ott:starry_pink_glazed_terracotta",
+    "ott:waved_pink_glazed_terracotta"
+  ]
+}

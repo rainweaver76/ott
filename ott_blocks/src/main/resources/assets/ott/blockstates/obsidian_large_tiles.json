@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/obsidian/obsidian_large_tiles"
+    }
+  }
+}

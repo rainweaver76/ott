@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/amethyst_block/flat_amethyst_block_tiles"
+  }
+}

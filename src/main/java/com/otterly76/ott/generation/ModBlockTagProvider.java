@@ -25,6 +25,15 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends BlockTagsProvider {
 
+    /** Imported-block materials mined with an axe (wood planks, mushroom, wart blocks). */
+    private static final java.util.Set<String> IMPORT_AXE_MATERIALS = java.util.Set.of(
+            "acacia_planks", "bamboo_planks", "birch_planks", "cherry_planks", "crimson_planks",
+            "dark_oak_planks", "jungle_planks", "mangrove_planks", "oak_planks", "spruce_planks", "warped_planks",
+            "mushroom_stem", "brown_mushroom_block", "red_mushroom_block", "nether_wart_block", "warped_wart_block");
+    /** Imported-block materials mined with a shovel (soils). */
+    private static final java.util.Set<String> IMPORT_SHOVEL_MATERIALS = java.util.Set.of(
+            "dirt", "mud", "clay", "sand", "gravel", "soul_sand", "moss_block", "snow_block");
+
     public ModBlockTagProvider(PackOutput output,
                                CompletableFuture<HolderLookup.Provider> lookupProvider,
                                @Nullable ExistingFileHelper existingFileHelper) {
@@ -193,7 +202,26 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 case CarpetBlock carpetBlock -> this.tag(ModTags.Blocks.FLOOR_TILES).add(carpetBlock);
                 default -> {
                     String bPath = BuiltInRegistries.BLOCK.getKey(block).getPath();
-                    if (bPath.endsWith("_ctm") || bPath.endsWith("_connecting")
+                    String importMat = com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.get(bPath);
+                    if (importMat != null) {
+                        // Imported plain cube_all decorative blocks: tool by material, all are DO material cubes.
+                        if (IMPORT_AXE_MATERIALS.contains(importMat)) {
+                            axeTag.add(block);
+                        } else if (IMPORT_SHOVEL_MATERIALS.contains(importMat)) {
+                            shovelTag.add(block);
+                        } else {
+                            pickaxeTag.add(block);
+                        }
+                        this.tag(doDefaultKey).add(block);
+                        if (importMat.endsWith("concrete")) {
+                            ottConcrete.add(block);
+                            mcConcrete.add(block);
+                        } else if (importMat.endsWith("glazed_terracotta")) {
+                            this.tag(doGlacedTerracottaKey).add(block);
+                        } else if (importMat.contains("copper")) {
+                            this.tag(doCopperKey).add(block);
+                        }
+                    } else if (bPath.endsWith("_ctm") || bPath.endsWith("_connecting")
                             || bPath.startsWith("bordered_") || bPath.contains("_bordered_")) {
                         // CTM blocks (including bordered variants that lack the _ctm suffix)
                         this.tag(ModTags.Blocks.CTM_BLOCKS).add(block);

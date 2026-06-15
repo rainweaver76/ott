@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/redstone_block/inscribed_redstone_block"
+    }
+  }
+}

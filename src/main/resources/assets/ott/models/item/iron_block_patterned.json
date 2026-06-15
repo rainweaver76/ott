@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/iron_block/iron_block_patterned"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/iron_block/ctm/iron_block_patterned"
+  }
 }

@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:oak_door",
+    "ott:japanese_oak_door",
+    "ott:oak_bamboo_door",
+    "ott:oak_barn_door",
+    "ott:oak_barn_glass_door",
+    "ott:oak_beach_door",
+    "ott:oak_cottage_door",
+    "ott:oak_four_panel_door",
+    "ott:oak_glass_door",
+    "ott:oak_japanese_door",
+    "ott:oak_modern_door",
+    "ott:oak_mystic_door",
+    "ott:oak_nether_door",
+    "ott:oak_paper_door",
+    "ott:oak_stable_door",
+    "ott:oak_stable_head_door",
+    "ott:oak_swamp_door",
+    "ott:oak_tropical_door",
+    "ott:oak_waffle_door",
+    "ott:oak_western_door",
+    "ott:oak_whispering_door"
+  ]
+}

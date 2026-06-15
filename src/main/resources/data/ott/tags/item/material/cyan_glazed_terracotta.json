@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_glazed_terracotta",
+    "ott:cyan_glazed_terracotta_smooth_tiles",
+    "ott:cyan_glazed_terracotta_tiles",
+    "ott:decorated_cyan_glazed_terracotta",
+    "ott:hexagonical_cyan_glazed_terracotta",
+    "ott:minimized_cyan_glazed_terracotta",
+    "ott:paved_cyan_glazed_terracotta",
+    "ott:shrunken_cyan_glazed_terracotta",
+    "ott:starry_cyan_glazed_terracotta",
+    "ott:waved_cyan_glazed_terracotta"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_terracotta",
+    "ott:brown_terracotta_column",
+    "ott:brown_terracotta_ctm",
+    "ott:brown_terracotta_bricks",
+    "ott:brown_terracotta_small_bricks",
+    "ott:brown_terracotta_tile",
+    "ott:brown_terracotta_tiles",
+    "ott:chiseled_brown_terracotta",
+    "ott:chiseled_brown_terracotta_bricks",
+    "ott:crossed_brown_terracotta",
+    "ott:cut_brown_terracotta",
+    "ott:decorated_brown_terracotta",
+    "ott:layered_brown_terracotta",
+    "ott:triangular_brown_terracotta",
+    "ott:circular_brown_terracotta",
+    "ott:curled_brown_terracotta",
+    "ott:hexagonical_brown_terracotta",
+    "ott:inscribed_brown_terracotta",
+    "ott:small_brown_terracotta_tiles",
+    "ott:starry_brown_terracotta"
+  ]
+}

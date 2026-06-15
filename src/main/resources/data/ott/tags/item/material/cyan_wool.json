@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_wool",
+    "ott:barky_cyan_wool",
+    "ott:blocky_cyan_wool",
+    "ott:bundled_cyan_wool",
+    "ott:cross_haired_cyan_wool",
+    "ott:cubed_cyan_wool",
+    "ott:knitted_cyan_wool",
+    "ott:patched_cyan_wool",
+    "ott:ribbled_cyan_wool",
+    "ott:scaled_cyan_wool",
+    "ott:soft_cyan_wool",
+    "ott:stringed_cyan_wool",
+    "ott:tiled_cyan_wool",
+    "ott:tripped_cyan_wool",
+    "ott:wickered_cyan_wool",
+    "ott:windmill_cyan_wool",
+    "ott:wool_legacy_cyan",
+    "ott:wool_llama_cyan",
+    "ott:woved_cyan_wool",
+    "ott:cornered_cyan_wool",
+    "ott:crafted_cyan_wool",
+    "ott:harsh_quilted_cyan_wool",
+    "ott:rectangle_cyan_wool"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:purple_terracotta",
+    "ott:purple_terracotta_column",
+    "ott:purple_terracotta_ctm",
+    "ott:chiseled_purple_terracotta",
+    "ott:chiseled_purple_terracotta_bricks",
+    "ott:crossed_purple_terracotta",
+    "ott:cut_purple_terracotta",
+    "ott:decorated_purple_terracotta",
+    "ott:layered_purple_terracotta",
+    "ott:purple_terracotta_bricks",
+    "ott:purple_terracotta_small_bricks",
+    "ott:purple_terracotta_tile",
+    "ott:purple_terracotta_tiles",
+    "ott:triangular_purple_terracotta",
+    "ott:circular_purple_terracotta",
+    "ott:curled_purple_terracotta",
+    "ott:hexagonical_purple_terracotta",
+    "ott:inscribed_purple_terracotta",
+    "ott:small_purple_terracotta_tiles",
+    "ott:starry_purple_terracotta"
+  ]
+}

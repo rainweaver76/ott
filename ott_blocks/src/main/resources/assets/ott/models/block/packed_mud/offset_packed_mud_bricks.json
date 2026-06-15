@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/packed_mud/offset_packed_mud_bricks"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:green_terracotta",
+    "ott:green_terracotta_column",
+    "ott:green_terracotta_ctm",
+    "ott:chiseled_green_terracotta",
+    "ott:chiseled_green_terracotta_bricks",
+    "ott:crossed_green_terracotta",
+    "ott:cut_green_terracotta",
+    "ott:decorated_green_terracotta",
+    "ott:green_terracotta_bricks",
+    "ott:green_terracotta_small_bricks",
+    "ott:green_terracotta_tile",
+    "ott:green_terracotta_tiles",
+    "ott:layered_green_terracotta",
+    "ott:triangular_green_terracotta",
+    "ott:circular_green_terracotta",
+    "ott:curled_green_terracotta",
+    "ott:hexagonical_green_terracotta",
+    "ott:inscribed_green_terracotta",
+    "ott:small_green_terracotta_tiles",
+    "ott:starry_green_terracotta"
+  ]
+}

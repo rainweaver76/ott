@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/borderless_bricks/weathered_borderless_bricks"
+  }
+}

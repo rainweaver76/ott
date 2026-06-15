@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_gray_wool",
+    "ott:barky_light_gray_wool",
+    "ott:blocky_light_gray_wool",
+    "ott:bundled_light_gray_wool",
+    "ott:cross_haired_light_gray_wool",
+    "ott:cubed_light_gray_wool",
+    "ott:knitted_light_gray_wool",
+    "ott:patched_light_gray_wool",
+    "ott:ribbled_light_gray_wool",
+    "ott:scaled_light_gray_wool",
+    "ott:soft_light_gray_wool",
+    "ott:stringed_light_gray_wool",
+    "ott:tiled_light_gray_wool",
+    "ott:tripped_light_gray_wool",
+    "ott:wickered_light_gray_wool",
+    "ott:windmill_light_gray_wool",
+    "ott:wool_legacy_light_gray",
+    "ott:wool_llama_light_gray",
+    "ott:woved_light_gray_wool",
+    "ott:cornered_light_gray_wool",
+    "ott:crafted_light_gray_wool",
+    "ott:harsh_quilted_light_gray_wool",
+    "ott:rectangle_light_gray_wool"
+  ]
+}

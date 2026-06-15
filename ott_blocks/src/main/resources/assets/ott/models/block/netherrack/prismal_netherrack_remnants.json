@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/netherrack/prismal_netherrack_remnants"
+  }
+}

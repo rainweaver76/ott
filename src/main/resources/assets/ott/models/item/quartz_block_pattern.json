@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/quartz_block/quartz_block_pattern"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/quartz_block/ctm/quartz_block_pattern"
+  }
 }

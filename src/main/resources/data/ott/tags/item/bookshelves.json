@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bookshelf",
+    "ott:acacia_bookshelf",
+    "ott:bamboo_bookshelf",
+    "ott:birch_bookshelf",
+    "ott:cherry_bookshelf",
+    "ott:crimson_bookshelf",
+    "ott:dark_oak_bookshelf",
+    "ott:jungle_bookshelf",
+    "ott:mangrove_bookshelf",
+    "ott:spruce_bookshelf",
+    "ott:warped_bookshelf"
+  ]
+}

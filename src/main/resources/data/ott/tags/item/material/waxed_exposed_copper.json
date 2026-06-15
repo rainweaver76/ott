@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:waxed_exposed_copper",
+    "ott:ancient_waxed_exposed_copper",
+    "ott:chipped_waxed_exposed_copper",
+    "ott:embossed_waxed_exposed_copper",
+    "ott:engraved_waxed_exposed_copper",
+    "ott:layered_waxed_exposed_copper",
+    "ott:plated_waxed_exposed_copper",
+    "ott:pressed_waxed_exposed_copper",
+    "ott:reinforced_waxed_exposed_copper",
+    "ott:sheet_waxed_exposed_copper",
+    "ott:shuttered_waxed_exposed_copper",
+    "ott:stacked_waxed_exposed_copper"
+  ]
+}

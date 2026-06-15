@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sponge",
+    "ott:bulby_sponge",
+    "ott:fine_sponge",
+    "ott:giant_sponge",
+    "ott:lush_sponge",
+    "ott:old_sponge",
+    "ott:smooth_sponge",
+    "ott:soft_sponge"
+  ]
+}

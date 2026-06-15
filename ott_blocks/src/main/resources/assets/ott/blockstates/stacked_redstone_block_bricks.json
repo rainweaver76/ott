@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/redstone_block/stacked_redstone_block_bricks"
+    }
+  }
+}

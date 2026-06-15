@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_glazed_terracotta",
+    "ott:brown_glazed_terracotta_smooth_tiles",
+    "ott:brown_glazed_terracotta_tiles",
+    "ott:decorated_brown_glazed_terracotta",
+    "ott:hexagonical_brown_glazed_terracotta",
+    "ott:minimized_brown_glazed_terracotta",
+    "ott:paved_brown_glazed_terracotta",
+    "ott:shrunken_brown_glazed_terracotta",
+    "ott:starry_brown_glazed_terracotta",
+    "ott:waved_brown_glazed_terracotta"
+  ]
+}

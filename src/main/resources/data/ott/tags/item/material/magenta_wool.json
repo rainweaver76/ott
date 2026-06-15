@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:magenta_wool",
+    "ott:barky_magenta_wool",
+    "ott:blocky_magenta_wool",
+    "ott:bundled_magenta_wool",
+    "ott:cross_haired_magenta_wool",
+    "ott:cubed_magenta_wool",
+    "ott:knitted_magenta_wool",
+    "ott:patched_magenta_wool",
+    "ott:ribbled_magenta_wool",
+    "ott:scaled_magenta_wool",
+    "ott:soft_magenta_wool",
+    "ott:stringed_magenta_wool",
+    "ott:tiled_magenta_wool",
+    "ott:tripped_magenta_wool",
+    "ott:wickered_magenta_wool",
+    "ott:windmill_magenta_wool",
+    "ott:wool_legacy_magenta",
+    "ott:wool_llama_magenta",
+    "ott:woved_magenta_wool",
+    "ott:cornered_magenta_wool",
+    "ott:crafted_magenta_wool",
+    "ott:harsh_quilted_magenta_wool",
+    "ott:rectangle_magenta_wool"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_blue_wool",
+    "ott:barky_light_blue_wool",
+    "ott:blocky_light_blue_wool",
+    "ott:bundled_light_blue_wool",
+    "ott:cross_haired_light_blue_wool",
+    "ott:cubed_light_blue_wool",
+    "ott:knitted_light_blue_wool",
+    "ott:patched_light_blue_wool",
+    "ott:ribbled_light_blue_wool",
+    "ott:scaled_light_blue_wool",
+    "ott:soft_light_blue_wool",
+    "ott:stringed_light_blue_wool",
+    "ott:tiled_light_blue_wool",
+    "ott:tripped_light_blue_wool",
+    "ott:wickered_light_blue_wool",
+    "ott:windmill_light_blue_wool",
+    "ott:wool_legacy_light_blue",
+    "ott:wool_llama_light_blue",
+    "ott:woved_light_blue_wool",
+    "ott:cornered_light_blue_wool",
+    "ott:crafted_light_blue_wool",
+    "ott:harsh_quilted_light_blue_wool",
+    "ott:rectangle_light_blue_wool"
+  ]
+}

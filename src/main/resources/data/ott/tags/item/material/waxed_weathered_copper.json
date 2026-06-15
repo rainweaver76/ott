@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:waxed_weathered_copper",
+    "ott:ancient_waxed_weathered_copper",
+    "ott:chipped_waxed_weathered_copper",
+    "ott:embossed_waxed_weathered_copper",
+    "ott:engraved_waxed_weathered_copper",
+    "ott:layered_waxed_weathered_copper",
+    "ott:plated_waxed_weathered_copper",
+    "ott:pressed_waxed_weathered_copper",
+    "ott:reinforced_waxed_weathered_copper",
+    "ott:sheet_waxed_weathered_copper",
+    "ott:shuttered_waxed_weathered_copper",
+    "ott:stacked_waxed_weathered_copper"
+  ]
+}

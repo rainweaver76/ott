@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/diamond_block/engraved_diamond_block"
+    }
+  }
+}

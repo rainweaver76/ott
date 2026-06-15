@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_glazed_terracotta",
+    "ott:black_glazed_terracotta_smooth_tiles",
+    "ott:black_glazed_terracotta_tiles",
+    "ott:decorated_black_glazed_terracotta",
+    "ott:hexagonical_black_glazed_terracotta",
+    "ott:minimized_black_glazed_terracotta",
+    "ott:paved_black_glazed_terracotta",
+    "ott:shrunken_black_glazed_terracotta",
+    "ott:starry_black_glazed_terracotta",
+    "ott:waved_black_glazed_terracotta"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/deepslate/layerd_deepslate_bricks"
+    }
+  }
+}

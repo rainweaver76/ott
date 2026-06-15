@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:acacia_door",
+    "ott:acacia_bamboo_door",
+    "ott:acacia_barn_door",
+    "ott:acacia_barn_glass_door",
+    "ott:acacia_beach_door",
+    "ott:acacia_classic_door",
+    "ott:acacia_cottage_door",
+    "ott:acacia_four_panel_door",
+    "ott:acacia_glass_door",
+    "ott:acacia_japanese_door",
+    "ott:acacia_modern_door",
+    "ott:acacia_mystic_door",
+    "ott:acacia_nether_door",
+    "ott:acacia_paper_door",
+    "ott:acacia_stable_door",
+    "ott:acacia_stable_head_door",
+    "ott:acacia_swamp_door",
+    "ott:acacia_waffle_door",
+    "ott:acacia_western_door",
+    "ott:acacia_whispering_door",
+    "ott:japanese_acacia_door",
+    "ott:paper_acacia_door"
+  ]
+}

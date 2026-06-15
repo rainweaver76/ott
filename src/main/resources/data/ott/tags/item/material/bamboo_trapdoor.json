@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bamboo_trapdoor",
+    "ott:bamboo_barn_trapdoor",
+    "ott:bamboo_barred_trapdoor",
+    "ott:bamboo_barrel_trapdoor",
+    "ott:bamboo_beach_trapdoor",
+    "ott:bamboo_blossom_trapdoor",
+    "ott:bamboo_classic_trapdoor",
+    "ott:bamboo_cottage_trapdoor",
+    "ott:bamboo_four_panel_trapdoor",
+    "ott:bamboo_glass_trapdoor",
+    "ott:bamboo_mystic_trapdoor",
+    "ott:bamboo_paper_trapdoor",
+    "ott:bamboo_swamp_trapdoor",
+    "ott:bamboo_tropical_trapdoor",
+    "ott:bamboo_whispering_trapdoor"
+  ]
+}

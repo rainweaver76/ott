@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ice/checkered_ice_tiles"
+    }
+  }
+}

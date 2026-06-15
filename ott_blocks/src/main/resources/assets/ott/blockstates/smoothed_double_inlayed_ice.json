@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ice/smoothed_double_inlayed_ice"
+    }
+  }
+}

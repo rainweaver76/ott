@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/gold_block/gold_block_small_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/gold_block/ctm/gold_block_small_tiles"
+  }
 }

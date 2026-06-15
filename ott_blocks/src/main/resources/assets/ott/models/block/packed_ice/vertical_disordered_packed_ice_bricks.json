@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/packed_ice/vertical_disordered_packed_ice_bricks"
+  }
+}

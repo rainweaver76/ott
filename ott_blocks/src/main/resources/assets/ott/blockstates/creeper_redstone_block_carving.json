@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/redstone_block/creeper_redstone_block_carving"
+    }
+  }
+}

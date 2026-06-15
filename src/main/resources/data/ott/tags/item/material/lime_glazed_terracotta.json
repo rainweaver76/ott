@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:lime_glazed_terracotta",
+    "ott:decorated_lime_glazed_terracotta",
+    "ott:hexagonical_lime_glazed_terracotta",
+    "ott:lime_glazed_terracotta_smooth_tiles",
+    "ott:lime_glazed_terracotta_tiles",
+    "ott:minimized_lime_glazed_terracotta",
+    "ott:paved_lime_glazed_terracotta",
+    "ott:shrunken_lime_glazed_terracotta",
+    "ott:starry_lime_glazed_terracotta",
+    "ott:waved_lime_glazed_terracotta"
+  ]
+}

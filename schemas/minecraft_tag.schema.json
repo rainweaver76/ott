@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://otterly76/ott/minecraft_tag.schema.json",
+  "title": "Minecraft data-pack tag",
+  "description": "data/<namespace>/tags/<registry>/**/*.json — replace + values entries.",
+  "type": "object",
+  "properties": {
+    "replace": {
+      "type": "boolean",
+      "description": "If true, the tag's prior contents are discarded before these values are added."
+    },
+    "values": {
+      "type": "array",
+      "description": "Tag entries: a resource location string, a '#tag' reference, or an object form.",
+      "items": {
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "required": { "type": "boolean" }
+            },
+            "required": ["id"]
+          }
+        ]
+      }
+    }
+  }
+}

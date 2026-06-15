@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/bamboo_planks/crossed_bamboo_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/dark_limestone/smooth_inlayed_dark_limestone"
+  }
+}

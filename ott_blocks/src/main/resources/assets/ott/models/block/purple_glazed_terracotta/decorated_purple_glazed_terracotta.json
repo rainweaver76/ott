@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/purple_glazed_terracotta/decorated_purple_glazed_terracotta"
+  }
+}

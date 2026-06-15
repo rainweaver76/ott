@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/mossy_cobblestone/mossy_cobblestone_dented"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/mossy_cobblestone/ctm/mossy_cobblestone_dented"
+  }
 }

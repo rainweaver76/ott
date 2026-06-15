@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crimson_trapdoor",
+    "ott:crimson_bamboo_trapdoor",
+    "ott:crimson_barn_trapdoor",
+    "ott:crimson_beach_trapdoor",
+    "ott:crimson_blossom_trapdoor",
+    "ott:crimson_classic_trapdoor",
+    "ott:crimson_cottage_trapdoor",
+    "ott:crimson_four_panel_trapdoor",
+    "ott:crimson_glass_trapdoor",
+    "ott:crimson_mystic_trapdoor",
+    "ott:crimson_paper_trapdoor",
+    "ott:crimson_swamp_trapdoor",
+    "ott:crimson_tropical_trapdoor",
+    "ott:crimson_whispering_trapdoor"
+  ]
+}

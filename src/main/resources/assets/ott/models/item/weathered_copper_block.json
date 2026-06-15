@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/weathered_copper/weathered_copper_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/weathered_copper/ctm/weathered_copper_block"
+  }
 }

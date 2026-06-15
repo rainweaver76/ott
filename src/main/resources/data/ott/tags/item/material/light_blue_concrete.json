@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:light_blue_concrete",
+    "ott:bolted_light_blue_concrete",
+    "ott:creeper_light_blue_concrete",
+    "ott:grid_light_blue_concrete",
+    "ott:hazard_light_blue_concrete",
+    "ott:light_blue_concrete_bricks",
+    "ott:light_blue_concrete_tiles",
+    "ott:mosaic_light_blue_concrete",
+    "ott:railed_light_blue_concrete",
+    "ott:reinforced_light_blue_concrete",
+    "ott:rusted_light_blue_concrete",
+    "ott:stacked_light_blue_concrete",
+    "ott:stop_light_blue_concrete",
+    "ott:warning_light_blue_concrete",
+    "ott:grill_light_blue_concrete",
+    "ott:light_blue_concrete_panel",
+    "ott:pegged_light_blue_concrete",
+    "ott:smooth_light_blue_concrete",
+    "ott:striped_light_blue_concrete",
+    "ott:wired_light_blue_concrete"
+  ]
+}

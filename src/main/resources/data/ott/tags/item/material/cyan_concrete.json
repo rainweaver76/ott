@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:cyan_concrete",
+    "ott:bolted_cyan_concrete",
+    "ott:creeper_cyan_concrete",
+    "ott:cyan_concrete_bricks",
+    "ott:cyan_concrete_tiles",
+    "ott:grid_cyan_concrete",
+    "ott:hazard_cyan_concrete",
+    "ott:mosaic_cyan_concrete",
+    "ott:railed_cyan_concrete",
+    "ott:reinforced_cyan_concrete",
+    "ott:rusted_cyan_concrete",
+    "ott:stacked_cyan_concrete",
+    "ott:stop_cyan_concrete",
+    "ott:warning_cyan_concrete",
+    "ott:cyan_concrete_panel",
+    "ott:grill_cyan_concrete",
+    "ott:pegged_cyan_concrete",
+    "ott:smooth_cyan_concrete",
+    "ott:striped_cyan_concrete",
+    "ott:wired_cyan_concrete"
+  ]
+}

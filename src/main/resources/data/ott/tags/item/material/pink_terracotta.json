@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:pink_terracotta",
+    "ott:pink_terracotta_column",
+    "ott:pink_terracotta_ctm",
+    "ott:chiseled_pink_terracotta",
+    "ott:chiseled_pink_terracotta_bricks",
+    "ott:crossed_pink_terracotta",
+    "ott:cut_pink_terracotta",
+    "ott:decorated_pink_terracotta",
+    "ott:layered_pink_terracotta",
+    "ott:pink_terracotta_bricks",
+    "ott:pink_terracotta_small_bricks",
+    "ott:pink_terracotta_tile",
+    "ott:pink_terracotta_tiles",
+    "ott:triangular_pink_terracotta",
+    "ott:circular_pink_terracotta",
+    "ott:curled_pink_terracotta",
+    "ott:hexagonical_pink_terracotta",
+    "ott:inscribed_pink_terracotta",
+    "ott:small_pink_terracotta_tiles",
+    "ott:starry_pink_terracotta"
+  ]
+}

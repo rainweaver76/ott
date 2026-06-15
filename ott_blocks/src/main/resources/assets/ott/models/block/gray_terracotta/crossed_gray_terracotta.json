@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/gray_terracotta/crossed_gray_terracotta"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/raw_iron_block/raw_iron_block_mini_tiles"
+  }
+}

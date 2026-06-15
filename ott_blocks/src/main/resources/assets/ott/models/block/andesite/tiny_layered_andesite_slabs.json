@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/andesite/tiny_layered_andesite_slabs"
+  }
+}

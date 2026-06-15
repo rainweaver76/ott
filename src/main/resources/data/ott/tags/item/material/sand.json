@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sand",
+    "ott:ash_sand",
+    "ott:coarse_sand",
+    "ott:desert_sand",
+    "ott:kelp_sand",
+    "ott:lush_red_sand",
+    "ott:overgrown_sand",
+    "ott:pearl_sand",
+    "ott:soft_sand",
+    "ott:tar_sand",
+    "ott:wet_red_sand",
+    "ott:wet_sand",
+    "ott:white_sand"
+  ]
+}

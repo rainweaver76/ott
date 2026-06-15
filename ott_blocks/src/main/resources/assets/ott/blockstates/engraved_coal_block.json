@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/engraved_coal_block"
+    }
+  }
+}

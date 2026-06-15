@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_stained_glass_pane",
+    "ott:brown_framed_glass_ctm_pane",
+    "ott:brown_stained_glass_ctm_pane",
+    "ott:golden_framed_brown_stained_glass_ctm_pane",
+    "ott:scratched_glass_brown_ctm_pane",
+    "ott:borderless_glass_brown_ctm_pane",
+    "ott:brown_stained_clear_glass_ctm_pane",
+    "ott:brown_leaded_stained_glass_pane",
+    "ott:tinted_borderless_glass_brown_ctm_pane",
+    "ott:small_brown_diamond_stained_glass_pane",
+    "ott:small_brown_diamond_stained_glass_ctm_pane"
+  ]
+}

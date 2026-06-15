@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_wool",
+    "ott:delicate_red_wool",
+    "ott:ornamented_red_wool",
+    "ott:barky_red_wool",
+    "ott:blocky_red_wool",
+    "ott:bundled_red_wool",
+    "ott:cross_haired_red_wool",
+    "ott:cubed_red_wool",
+    "ott:knitted_red_wool",
+    "ott:patched_red_wool",
+    "ott:ribbled_red_wool",
+    "ott:scaled_red_wool",
+    "ott:soft_red_wool",
+    "ott:stringed_red_wool",
+    "ott:tiled_red_wool",
+    "ott:tripped_red_wool",
+    "ott:wickered_red_wool",
+    "ott:windmill_red_wool",
+    "ott:wool_legacy_red",
+    "ott:wool_llama_red",
+    "ott:woved_red_wool",
+    "ott:cornered_red_wool",
+    "ott:crafted_red_wool",
+    "ott:harsh_quilted_red_wool",
+    "ott:rectangle_red_wool"
+  ]
+}

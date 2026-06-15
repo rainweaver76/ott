@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_stained_glass",
+    "ott:circular_red_stained_glass",
+    "ott:fancy_red_stained_glass_ctm",
+    "ott:ornate_red_stained_glass_ctm",
+    "ott:raster_red_stained_glass_ctm",
+    "ott:small_red_diamond_stained_glass_ctm",
+    "ott:tiled_red_stained_glass_ctm",
+    "ott:red_leaded_stained_glass",
+    "ott:fancy_red_stained_glass",
+    "ott:large_diamond_red_stained_glass",
+    "ott:ornate_red_stained_glass",
+    "ott:raster_red_stained_glass",
+    "ott:small_red_diamond_stained_glass",
+    "ott:square_red_stained_glass",
+    "ott:tiled_red_stained_glass",
+    "ott:vertical_striped_red_stained_glass",
+    "ott:woven_red_stained_glass",
+    "ott:red_framed_glass",
+    "ott:red_stained_clear_glass",
+    "ott:borderless_glass_red",
+    "ott:scratched_glass_red",
+    "ott:tinted_borderless_glass_red",
+    "ott:golden_framed_red_stained_glass",
+    "ott:red_stained_glass"
+  ]
+}

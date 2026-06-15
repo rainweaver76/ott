@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/scorchia/cracked_flat_scorchia_tiles"
+  }
+}

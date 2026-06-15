@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_mushroom_block",
+    "ott:dark_dotted_red_mushroom_block",
+    "ott:dark_dusted_red_mushroom_block",
+    "ott:dark_freckled_red_mushroom_block",
+    "ott:dark_smooth_red_mushroom_block",
+    "ott:dark_spotted_red_mushroom_block",
+    "ott:dotted_red_mushroom_block",
+    "ott:dusted_red_mushroom_block",
+    "ott:freckled_red_mushroom_block",
+    "ott:light_dotted_red_mushroom_block",
+    "ott:light_dusted_red_mushroom_block",
+    "ott:light_freckled_red_mushroom_block",
+    "ott:light_smooth_red_mushroom_block",
+    "ott:light_spotted_red_mushroom_block",
+    "ott:smooth_red_mushroom_block",
+    "ott:spotted_red_mushroom_block"
+  ]
+}

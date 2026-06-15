@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/gilded_blackstone/special_gilded_blackstone"
+  }
+}

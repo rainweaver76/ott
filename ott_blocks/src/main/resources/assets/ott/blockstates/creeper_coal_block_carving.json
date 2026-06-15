@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/coal_block/creeper_coal_block_carving"
+    }
+  }
+}

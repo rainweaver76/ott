@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/deepslate/cut_blank_deepslate"
+    }
+  }
+}

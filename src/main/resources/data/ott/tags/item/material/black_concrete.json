@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:black_concrete",
+    "ott:black_concrete_bricks",
+    "ott:black_concrete_tiles",
+    "ott:bolted_black_concrete",
+    "ott:creeper_black_concrete",
+    "ott:grid_black_concrete",
+    "ott:hazard_black_concrete",
+    "ott:mosaic_black_concrete",
+    "ott:railed_black_concrete",
+    "ott:reinforced_black_concrete",
+    "ott:rusted_black_concrete",
+    "ott:stacked_black_concrete",
+    "ott:stop_black_concrete",
+    "ott:warning_black_concrete",
+    "ott:black_concrete_panel",
+    "ott:grill_black_concrete",
+    "ott:pegged_black_concrete",
+    "ott:smooth_black_concrete",
+    "ott:striped_black_concrete",
+    "ott:wired_black_concrete"
+  ]
+}

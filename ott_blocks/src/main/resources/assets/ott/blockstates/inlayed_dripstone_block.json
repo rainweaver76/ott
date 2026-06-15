@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dripstone_block/inlayed_dripstone_block"
+    }
+  }
+}

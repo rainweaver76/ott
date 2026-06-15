@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/diamond/diamond_block_jewel_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/diamond/ctm/diamond_block_jewel_block"
+  }
 }
