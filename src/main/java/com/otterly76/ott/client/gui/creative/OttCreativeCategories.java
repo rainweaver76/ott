@@ -804,11 +804,22 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.SOUL_GLASS_CTM);
                 output.accept(OttBlocks.SOUL_GLASS_CTM_PANE);
 
-                // Opal crystal sets — raw stone blocks only; buds/crystals are in MISC, decorative in ENGRAVED
+                // Opal crystal sets — raw + decorative blocks grouped per type; loose buds/crystals are in MISC
                 ModBlocks.OPAL_SETS.values().forEach(set -> {
                     output.accept(set.base());
                     output.accept(set.crystalBlock());
                     output.accept(set.budding());
+                    output.accept(set.polished());
+                    output.accept(set.cut());
+                    output.accept(set.bricks());
+                    output.accept(set.smallBricks());
+                    output.accept(set.chiseled());
+                    output.accept(set.pillar());
+                    output.accept(set.tiles());
+                    output.accept(set.smallTiles());
+                    output.accept(set.glass());
+                    output.accept(set.glassPane());
+                    output.accept(set.tiling());
                 });
 
                 output.accept(OttBlocks.CHISELED_PLASTERED_STONE_PILLAR);
@@ -2295,10 +2306,10 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.LARGE_ORNATE_STONE);
                 output.accept(OttBlocks.LARGE_PACKED_MUD_SIGIL);
                 output.accept(OttBlocks.LARGE_STONE_TILE);
+                output.accept(OttBlocks.LEADED_GLASS);
+                output.accept(OttBlocks.LEADED_GLASS_PANE);
                 output.accept(OttBlocks.LEADED_WOVEN_GLASS);
                 output.accept(OttBlocks.LEADED_WOVEN_GLASS_PANE);
-                output.accept(OttBlocks.LEADED_FRAMED_GLASS);
-                output.accept(OttBlocks.LEADED_FRAMED_GLASS_PANE);
                 output.accept(OttBlocks.LIGHT_BLUE_CONCRETE_CTM);
                 output.accept(OttBlocks.LIGHT_BLUE_CONCRETE_PANEL);
                 output.accept(OttBlocks.LIGHT_BLUE_FRAMED_GLASS);
@@ -4025,20 +4036,6 @@ public enum OttCreativeCategories {
                 // Legend blocks
                 ModBlocks.CHISEL_LEGEND.values().forEach(output::accept);
 
-                // Opal decorative variants
-                ModBlocks.OPAL_SETS.values().forEach(set -> {
-                    output.accept(set.polished());
-                    output.accept(set.cut());
-                    output.accept(set.bricks());
-                    output.accept(set.smallBricks());
-                    output.accept(set.chiseled());
-                    output.accept(set.pillar());
-                    output.accept(set.tiles());
-                    output.accept(set.smallTiles());
-                    output.accept(set.glass());
-                    output.accept(set.glassPane());
-                    output.accept(set.tiling());
-                });
 
                 // Wood door variants
                 OttBlocks.WOOD_DOORS.values().forEach(woodMap -> woodMap.values().forEach(output::accept));

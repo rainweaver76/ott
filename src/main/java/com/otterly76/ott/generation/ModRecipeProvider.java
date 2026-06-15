@@ -95,6 +95,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         this.copperRecipes(noAdv);
         this.copperToolArmorRecipes(noAdv);
 
+        // Paxels (shapeless: pickaxe + axe + shovel of the same tier)
+        this.paxelRecipes(noAdv);
+
         // Shelves
         this.shelfRecipes(noAdv);
 
@@ -1417,6 +1420,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('#', Items.COPPER_INGOT).define('S', Items.LEATHER)
                 .pattern("# #").pattern("#S#").pattern("# #")
                 .unlockedBy("impossible", impossible()).save(noAdv, getRecipePath("minecraft", "copper_horse_armor"));
+    }
+
+    private void paxelRecipes(RecipeOutput noAdv) {
+        // A paxel is crafted by combining a pickaxe, axe and shovel of the same tier.
+        paxel(noAdv, ModItems.WOOD_PAXEL.get(),     Items.WOODEN_PICKAXE,    Items.WOODEN_AXE,    Items.WOODEN_SHOVEL,    "wood_paxel");
+        paxel(noAdv, ModItems.STONE_PAXEL.get(),    Items.STONE_PICKAXE,     Items.STONE_AXE,     Items.STONE_SHOVEL,     "stone_paxel");
+        paxel(noAdv, ModItems.IRON_PAXEL.get(),     Items.IRON_PICKAXE,      Items.IRON_AXE,      Items.IRON_SHOVEL,      "iron_paxel");
+        paxel(noAdv, ModItems.GOLDEN_PAXEL.get(),   Items.GOLDEN_PICKAXE,    Items.GOLDEN_AXE,    Items.GOLDEN_SHOVEL,    "golden_paxel");
+        paxel(noAdv, ModItems.DIAMOND_PAXEL.get(),  Items.DIAMOND_PICKAXE,   Items.DIAMOND_AXE,   Items.DIAMOND_SHOVEL,   "diamond_paxel");
+        paxel(noAdv, ModItems.NETHERITE_PAXEL.get(), Items.NETHERITE_PICKAXE, Items.NETHERITE_AXE, Items.NETHERITE_SHOVEL, "netherite_paxel");
+
+        paxel(noAdv, ModItems.COPPER_PAXEL.get(),
+                ModItems.COPPER_PICKAXE.get(), ModItems.COPPER_AXE.get(), ModItems.COPPER_SHOVEL.get(), "copper_paxel");
+        paxel(noAdv, ModItems.EXPOSED_COPPER_PAXEL.get(),
+                ModItems.EXPOSED_COPPER_PICKAXE.get(), ModItems.EXPOSED_COPPER_AXE.get(), ModItems.EXPOSED_COPPER_SHOVEL.get(), "exposed_copper_paxel");
+        paxel(noAdv, ModItems.WEATHERED_COPPER_PAXEL.get(),
+                ModItems.WEATHERED_COPPER_PICKAXE.get(), ModItems.WEATHERED_COPPER_AXE.get(), ModItems.WEATHERED_COPPER_SHOVEL.get(), "weathered_copper_paxel");
+        paxel(noAdv, ModItems.OXIDIZED_COPPER_PAXEL.get(),
+                ModItems.OXIDIZED_COPPER_PICKAXE.get(), ModItems.OXIDIZED_COPPER_AXE.get(), ModItems.OXIDIZED_COPPER_SHOVEL.get(), "oxidized_copper_paxel");
+        paxel(noAdv, ModItems.REINFORCED_OBSIDIAN_PAXEL.get(),
+                ModItems.REINFORCED_OBSIDIAN_PICKAXE.get(), ModItems.REINFORCED_OBSIDIAN_AXE.get(), ModItems.REINFORCED_OBSIDIAN_SHOVEL.get(), "reinforced_obsidian_paxel");
+    }
+
+    private void paxel(RecipeOutput noAdv, ItemLike result, ItemLike pickaxe, ItemLike axe, ItemLike shovel, String name) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.TOOLS, result)
+                .requires(pickaxe).requires(axe).requires(shovel)
+                .unlockedBy("impossible", impossible())
+                .save(noAdv, getRecipePath(Constants.MOD_ID, name));
     }
 
     private void woodRecipes(RecipeOutput noAdv) {
@@ -4192,6 +4223,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveTagged(exporter, materialTag("mud_bricks"), OttBlocks.LARGE_MUD_BRICKS_SIGIL, "large_mud_bricks_sigil_engraving");
         engraveTagged(exporter, materialTag("mud"), OttBlocks.LARGE_MUD_SIGIL, "large_mud_sigil_engraving");
         engraveTagged(exporter, materialTag("packed_mud"), OttBlocks.LARGE_PACKED_MUD_SIGIL, "large_packed_mud_sigil_engraving");
+        engraveOne(exporter, Blocks.GLASS, OttBlocks.LEADED_GLASS, "leaded_glass_engraving");
+        engraveOne(exporter, OttBlocks.LEADED_GLASS.get(), OttBlocks.LEADED_GLASS_PANE.get(), "leaded_glass_pane_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.LEADED_WOVEN_GLASS, "leaded_woven_glass_engraving");
         engraveOne(exporter, Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.LIGHT_BLUE_CONCRETE_CTM, "light_blue_concrete_pillar_engraving");
         engraveTagged(exporter, materialTag("light_blue_concrete"), OttBlocks.LIGHT_BLUE_CONCRETE_PANEL, "light_blue_concrete_panel_engraving");
