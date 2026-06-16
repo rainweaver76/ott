@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "giant",
+  "parent": "ott:block/ctm/ctm_cube_all_giant",
+  "textures": {
+    "all": "ott:block/prismarine/massive_prismarine_bricks"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

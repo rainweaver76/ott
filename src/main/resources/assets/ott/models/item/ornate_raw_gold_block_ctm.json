@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/raw_gold_block/ornate_raw_gold_block_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/raw_gold_block/ctm/ornate_raw_gold_block_ctm"
+  }
 }

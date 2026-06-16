@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lime_concrete/grill_lime_concrete"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lime_concrete/ctm/grill_lime_concrete"
+  }
 }

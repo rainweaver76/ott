@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/blackstone/tiled_bordered_blackstone"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/blackstone/ctm/tiled_bordered_blackstone"
+  }
 }

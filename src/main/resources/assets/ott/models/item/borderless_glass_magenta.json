@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/borderless/borderless_glass_magenta"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/magenta_stained_glass/ctm/borderless_glass_magenta"
+  }
 }

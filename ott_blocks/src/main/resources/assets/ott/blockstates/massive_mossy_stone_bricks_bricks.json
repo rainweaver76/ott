@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/mossy_stone/massive_mossy_stone_bricks_bricks"
+      "model": "ott:block/mossy_stone_bricks/massive_mossy_stone_bricks_bricks"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/prismarine_bricks/prismarine_bricks_brick_paving"
+      "model": "ott:block/prismarine/prismarine_bricks_brick_paving"
     }
   }
 }

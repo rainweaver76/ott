@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/obsidian/ctm/obsidian_framed_glass",
-    "side": "ott:block/obsidian/ctm/obsidian_framed_glass_edge"
+    "side": "ott:block/obsidian/obsidian_framed_glass_edge"
   },
   "render_type": "minecraft:cutout"
 }

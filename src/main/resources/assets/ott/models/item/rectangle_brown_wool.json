@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/brown_wool/rectangle_brown_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/brown_wool/ctm/rectangle_brown_wool"
+  }
 }

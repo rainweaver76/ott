@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lodestone/curly_lodestone_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lodestone/ctm/curly_lodestone_ctm"
+  }
 }

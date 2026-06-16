@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/diorite/smooth_diorite_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/diorite/ctm/smooth_diorite_column"
+  }
 }

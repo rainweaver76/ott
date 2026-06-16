@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/raw_iron_block/curly_raw_iron_block_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/raw_iron_block/ctm/curly_raw_iron_block_ctm"
+  }
 }

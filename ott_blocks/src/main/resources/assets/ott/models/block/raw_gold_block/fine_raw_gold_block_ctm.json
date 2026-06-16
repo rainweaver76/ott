@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
   "textures": {
     "all": "ott:block/raw_gold_block/ctm/fine_raw_gold_block_ctm"
   },

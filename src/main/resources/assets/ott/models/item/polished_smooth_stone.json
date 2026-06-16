@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/smooth_stone/polished_smooth_stone"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/smooth_stone/ctm/polished_smooth_stone"
+  }
 }

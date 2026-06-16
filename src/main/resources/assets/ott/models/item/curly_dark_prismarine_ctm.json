@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/dark_prismarine/curly_dark_prismarine_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/dark_prismarine/ctm/curly_dark_prismarine_ctm"
+  }
 }

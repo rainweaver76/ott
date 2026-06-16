@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/white_terracotta/curled_white_terracotta"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/white_terracotta/ctm/curled_white_terracotta"
+  }
 }

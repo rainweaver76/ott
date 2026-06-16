@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/granite/thick_inlayed_granite"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/granite/ctm/thick_inlayed_granite"
+  }
 }

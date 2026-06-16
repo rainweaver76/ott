@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/raw_copper_block/polished_raw_copper_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/raw_copper_block/ctm/polished_raw_copper_block"
+  }
 }

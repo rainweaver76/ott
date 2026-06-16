@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lime_terracotta/curled_lime_terracotta"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lime_terracotta/ctm/curled_lime_terracotta"
+  }
 }

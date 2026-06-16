@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/diorite/brick_bordered_diorite"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/diorite/ctm/brick_bordered_diorite"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/polished_dripstone"
+      "model": "ott:block/dripstone_block/polished_dripstone"
     }
   }
 }

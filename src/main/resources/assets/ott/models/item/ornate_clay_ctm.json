@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/clay/ornate_clay_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/clay/ctm/ornate_clay_ctm"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lapis_block/fine_lapis_block_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lapis_block/ctm/fine_lapis_block_ctm"
+  }
 }

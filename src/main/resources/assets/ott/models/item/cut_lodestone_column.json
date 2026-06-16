@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lodestone/cut_lodestone_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lodestone/ctm/cut_lodestone_column"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/gray_concrete/striped_gray_concrete"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/gray_concrete/ctm/striped_gray_concrete"
+  }
 }

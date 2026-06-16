@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/cobblestone/cut_cobblestone_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/cobblestone/ctm/cut_cobblestone_column"
+  }
 }

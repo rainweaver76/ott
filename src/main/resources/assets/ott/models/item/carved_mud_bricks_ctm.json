@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/mud_bricks/carved_mud_bricks_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/mud_bricks/ctm/carved_mud_bricks_ctm"
+  }
 }

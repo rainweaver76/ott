@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/sea_lantern/sea_lantern"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/sea_lantern/ctm/sea_lantern"
+  }
 }

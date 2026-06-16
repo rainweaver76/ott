@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/smooth_dripstone_block_column"
+      "model": "ott:block/dripstone_block/smooth_dripstone_block_column"
     }
   }
 }

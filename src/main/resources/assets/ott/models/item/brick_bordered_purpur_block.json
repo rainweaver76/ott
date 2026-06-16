@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/purpur_block/brick_bordered_purpur_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/purpur_block/ctm/brick_bordered_purpur_block"
+  }
 }

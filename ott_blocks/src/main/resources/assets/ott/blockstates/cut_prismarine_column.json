@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/prismarine_bricks/cut_prismarine_column"
+      "model": "ott:block/prismarine/cut_prismarine_column"
     }
   }
 }

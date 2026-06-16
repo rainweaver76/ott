@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/bordered_dripstone_block"
+      "model": "ott:block/dripstone_block/bordered_dripstone_block"
     }
   }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/light_blue_wool/crafted_light_blue_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/light_blue_wool/ctm/crafted_light_blue_wool"
+  }
 }

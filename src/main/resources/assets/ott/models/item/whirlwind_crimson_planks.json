@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/crimson_planks/whirlwind_crimson_planks"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/crimson_planks/ctm/whirlwind_crimson_planks"
+  }
 }

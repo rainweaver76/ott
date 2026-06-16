@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/curly_dripstone_block_ctm"
+      "model": "ott:block/dripstone_block/curly_dripstone_block_ctm"
     }
   }
 }

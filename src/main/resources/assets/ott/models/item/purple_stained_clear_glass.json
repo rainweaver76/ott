@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/purple_stained_glass/purple_stained_clear_glass"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/purple_stained_glass/ctm/purple_stained_clear_glass"
+  }
 }

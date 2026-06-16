@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "textures": {
+    "all": "ott:block/prismarine/ctm/prismarine_bricks_rows"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

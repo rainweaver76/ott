@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/tinted/tinted_borderless_glass_light_gray"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/light_gray_stained_glass/ctm/tinted_borderless_glass_light_gray"
+  }
 }

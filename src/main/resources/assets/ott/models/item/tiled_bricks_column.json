@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/bricks/tiled_bricks_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/bricks/ctm/tiled_bricks_column"
+  }
 }

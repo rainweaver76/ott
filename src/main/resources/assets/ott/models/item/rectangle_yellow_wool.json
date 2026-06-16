@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/yellow_wool/rectangle_yellow_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/yellow_wool/ctm/rectangle_yellow_wool"
+  }
 }

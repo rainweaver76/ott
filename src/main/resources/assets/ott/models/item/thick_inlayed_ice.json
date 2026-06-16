@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/ice/thick_inlayed_ice"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/ice/ctm/thick_inlayed_ice"
+  }
 }

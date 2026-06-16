@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/tinted/tinted_borderless_glass_green"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/green_stained_glass/ctm/tinted_borderless_glass_green"
+  }
 }

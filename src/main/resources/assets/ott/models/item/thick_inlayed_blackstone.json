@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/blackstone/thick_inlayed_blackstone"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/blackstone/ctm/thick_inlayed_blackstone"
+  }
 }

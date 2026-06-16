@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/dripstone_cut_small_brick"
+      "model": "ott:block/dripstone_block/dripstone_cut_small_brick"
     }
   }
 }

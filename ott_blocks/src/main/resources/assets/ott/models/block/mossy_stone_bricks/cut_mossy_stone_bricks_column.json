@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "textures": {
+    "all": "ott:block/mossy_stone_bricks/ctm/cut_mossy_stone_bricks_column"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

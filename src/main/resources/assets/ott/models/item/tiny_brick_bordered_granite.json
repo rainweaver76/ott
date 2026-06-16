@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/granite/tiny_brick_bordered_granite"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/granite/ctm/tiny_brick_bordered_granite"
+  }
 }

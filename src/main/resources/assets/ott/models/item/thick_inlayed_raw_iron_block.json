@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/raw_iron_block/thick_inlayed_raw_iron_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/raw_iron_block/ctm/thick_inlayed_raw_iron_block"
+  }
 }

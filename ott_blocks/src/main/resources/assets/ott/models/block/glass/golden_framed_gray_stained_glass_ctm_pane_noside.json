@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_noside_full",
   "textures": {
     "pane": "ott:block/golden_framed_glass/ctm/golden_framed_gray_stained_glass",
-    "edge": "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge"
+    "edge": "ott:block/golden_framed_glass/golden_framed_glass_edge"
   },
   "connections": {
     "pane": [

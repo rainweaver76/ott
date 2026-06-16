@@ -128,7 +128,7 @@ public class OttCtmPaneProvider implements DataProvider {
                     : "golden_framed_" + c + "_stained_glass";
             specs.add(new PaneSpec("golden_framed_" + c + "_stained_glass_ctm_pane",
                 "ott:block/golden_framed_glass/ctm/" + goldenFile,
-                "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge",
+                "ott:block/golden_framed_glass/golden_framed_glass_edge",
                 "minecraft:translucent", false));
 
             // ornate
@@ -142,7 +142,7 @@ public class OttCtmPaneProvider implements DataProvider {
             // scratched — lives in scratched/ctm/
             specs.add(new PaneSpec("scratched_glass_" + c + "_ctm_pane",
                 "ott:block/" + c + "_stained_glass/ctm/scratched_glass_" + c,
-                "ott:block/" + c + "_stained_glass/ctm/scratched_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/scratched_glass_" + c + "_edge", "minecraft:translucent", false));
 
             // small diamond
             specs.add(new PaneSpec("small_" + c + "_diamond_stained_glass_ctm_pane",
@@ -155,12 +155,12 @@ public class OttCtmPaneProvider implements DataProvider {
             // tinted borderless — lives in tinted/ctm/
             specs.add(new PaneSpec("tinted_borderless_glass_" + c + "_ctm_pane",
                 "ott:block/" + c + "_stained_glass/ctm/tinted_borderless_glass_" + c,
-                "ott:block/" + c + "_stained_glass/ctm/tinted_borderless_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/tinted_borderless_glass_" + c + "_edge", "minecraft:translucent", false));
 
             // borderless — lives in borderless/ctm/
             specs.add(new PaneSpec("borderless_glass_" + c + "_ctm_pane",
                 "ott:block/" + c + "_stained_glass/ctm/borderless_glass_" + c,
-                "ott:block/" + c + "_stained_glass/ctm/borderless_glass_" + c + "_edge", "minecraft:translucent", false));
+                "ott:block/" + c + "_stained_glass/borderless_glass_" + c + "_edge", "minecraft:translucent", false));
         }
 
         // ── stained clear glass ───────────────────────────────────────────────
@@ -179,7 +179,7 @@ public class OttCtmPaneProvider implements DataProvider {
 
         specs.add(new PaneSpec("tinted_borderless_glass_ctm_pane",
             "ott:block/glass/ctm/tinted_borderless_glass",
-            "ott:block/glass/ctm/tinted_glass_edge", "minecraft:translucent", false));
+            "ott:block/glass/tinted_glass_edge", "minecraft:translucent", false));
 
         specs.add(new PaneSpec("soul_glass_ctm_pane",
             "ott:block/glass/ctm/soul_glass",
@@ -197,7 +197,7 @@ public class OttCtmPaneProvider implements DataProvider {
         // golden framed stained glass (colourless) — golden frame edge
         specs.add(new PaneSpec("golden_framed_stained_glass_ctm_pane",
             "ott:block/golden_framed_glass/ctm/golden_framed_stained_glass",
-            "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge", "minecraft:translucent", false));
+            "ott:block/golden_framed_glass/golden_framed_glass_edge", "minecraft:translucent", false));
 
         // ornate leaded glass (colourless) — leaded frame edge, cutout like its parent block
         specs.add(new PaneSpec("ornate_leaded_glass_ctm_pane",

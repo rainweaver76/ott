@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/dripstone/thick_inlayed_dripstone_block"
+      "model": "ott:block/dripstone_block/thick_inlayed_dripstone_block"
     }
   }
 }

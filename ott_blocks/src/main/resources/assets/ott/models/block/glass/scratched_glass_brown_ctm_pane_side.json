@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_side_full",
   "textures": {
     "pane": "ott:block/brown_stained_glass/ctm/scratched_glass_brown",
-    "edge": "ott:block/brown_stained_glass/ctm/scratched_glass_brown_edge"
+    "edge": "ott:block/brown_stained_glass/scratched_glass_brown_edge"
   },
   "connections": {
     "pane": [

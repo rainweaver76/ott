@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/tuff/overlapping_tuff_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/tuff/ctm/overlapping_tuff_tiles"
+  }
 }

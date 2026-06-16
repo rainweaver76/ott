@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/gray_wool/harsh_quilted_gray_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/gray_wool/ctm/harsh_quilted_gray_wool"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/cobblestone/fine_cobblestone_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/cobblestone/ctm/fine_cobblestone_ctm"
+  }
 }

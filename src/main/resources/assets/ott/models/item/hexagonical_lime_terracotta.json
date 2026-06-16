@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lime_terracotta/hexagonical_lime_terracotta"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lime_terracotta/ctm/hexagonical_lime_terracotta"
+  }
 }

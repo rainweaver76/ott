@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/bamboo_planks/crated_bamboo_planks"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/bamboo_planks/ctm/crated_bamboo_planks"
+  }
 }

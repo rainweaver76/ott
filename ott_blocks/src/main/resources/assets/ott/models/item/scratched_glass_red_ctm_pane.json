@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/red_stained_glass/ctm/scratched_glass_red",
-    "side": "ott:block/red_stained_glass/ctm/scratched_glass_red_edge"
+    "side": "ott:block/red_stained_glass/scratched_glass_red_edge"
   },
   "render_type": "minecraft:translucent"
 }

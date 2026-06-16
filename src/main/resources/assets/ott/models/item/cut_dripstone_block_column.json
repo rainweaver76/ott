@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/dripstone/cut_dripstone_block_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/dripstone_block/ctm/cut_dripstone_block_column"
+  }
 }

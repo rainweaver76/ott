@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/borderless_bricks/tiled_borderless_bricks_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/borderless_bricks/ctm/tiled_borderless_bricks_column"
+  }
 }

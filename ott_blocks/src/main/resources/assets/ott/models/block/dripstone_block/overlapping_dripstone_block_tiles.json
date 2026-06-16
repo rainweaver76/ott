@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "textures": {
+    "all": "ott:block/dripstone_block/ctm/overlapping_dripstone_block_tiles"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

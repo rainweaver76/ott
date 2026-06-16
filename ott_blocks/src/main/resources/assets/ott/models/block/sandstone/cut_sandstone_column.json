@@ -1,12 +1,12 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_column_full_compact_flat_top",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_flat_caps",
   "textures": {
-    "side": "ott:block/sandstone/ctm/cut_sandstone_column",
-    "top":  "minecraft:block/sandstone_top"
+    "side":   "ott:block/sandstone/ctm/cut_sandstone_column",
+    "top":    "minecraft:block/sandstone_top",
+    "bottom": "minecraft:block/sandstone_bottom"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}]
+    "side": { "layout": "pieces_full", "rules": [{"type": "is_same_block"}] }
   }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/redstone_block/smooth_redstone_block_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/redstone_block/ctm/smooth_redstone_block_column"
+  }
 }

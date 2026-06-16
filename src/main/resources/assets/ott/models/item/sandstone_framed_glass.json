@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/sandstone/sandstone_framed_glass"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/sandstone/ctm/sandstone_framed_glass"
+  }
 }

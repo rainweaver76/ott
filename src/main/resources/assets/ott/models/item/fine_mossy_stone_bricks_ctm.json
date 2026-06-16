@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/mossy_stone/fine_mossy_stone_bricks_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/mossy_stone_bricks/ctm/fine_mossy_stone_bricks_ctm"
+  }
 }

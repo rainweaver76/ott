@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/tuff/fine_tuff_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/tuff/ctm/fine_tuff_ctm"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/blue_concrete/blue_concrete_panel"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/blue_concrete/ctm/blue_concrete_panel"
+  }
 }

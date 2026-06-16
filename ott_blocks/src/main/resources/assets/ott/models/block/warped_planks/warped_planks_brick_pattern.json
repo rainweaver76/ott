@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
   "textures": {
     "all": "ott:block/warped_planks/ctm/warped_planks_brick_pattern"
   },

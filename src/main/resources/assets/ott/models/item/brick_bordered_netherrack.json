@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/netherrack/brick_bordered_netherrack"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/netherrack/ctm/brick_bordered_netherrack"
+  }
 }

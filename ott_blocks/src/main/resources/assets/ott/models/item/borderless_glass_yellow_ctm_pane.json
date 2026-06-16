@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/yellow_stained_glass/ctm/borderless_glass_yellow",
-    "side": "ott:block/yellow_stained_glass/ctm/borderless_glass_yellow_edge"
+    "side": "ott:block/yellow_stained_glass/borderless_glass_yellow_edge"
   },
   "render_type": "minecraft:translucent"
 }

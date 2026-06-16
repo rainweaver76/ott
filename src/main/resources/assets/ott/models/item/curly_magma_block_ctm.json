@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/magma_block/curly_magma_block_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/magma_block/ctm/curly_magma_block_ctm"
+  }
 }

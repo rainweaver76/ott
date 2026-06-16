@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "ott:block/prismarine_bricks/thick_inlayed_prismarine"
+      "model": "ott:block/prismarine/thick_inlayed_prismarine"
     }
   }
 }

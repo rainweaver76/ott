@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/snow_block/tiny_brick_bordered_snow_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/snow_block/ctm/tiny_brick_bordered_snow_block"
+  }
 }

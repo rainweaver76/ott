@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/orange_wool/crafted_orange_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/orange_wool/ctm/crafted_orange_wool"
+  }
 }

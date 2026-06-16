@@ -3,7 +3,7 @@
   "parent": "ott:block/ctm/ctm_pane_side_full",
   "textures": {
     "pane": "ott:block/sandstone/ctm/sandstone_framed_glass",
-    "edge": "ott:block/sandstone/ctm/sandstone_framed_glass_edge"
+    "edge": "ott:block/sandstone/sandstone_framed_glass_edge"
   },
   "connections": {
     "pane": [

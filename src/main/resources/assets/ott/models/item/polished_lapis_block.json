@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/lapis_block/polished_lapis_block"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/lapis_block/ctm/polished_lapis_block"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/red_wool/crafted_red_wool"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/red_wool/ctm/crafted_red_wool"
+  }
 }

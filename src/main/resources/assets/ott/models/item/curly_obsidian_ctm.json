@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/obsidian/curly_obsidian_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/obsidian/ctm/curly_obsidian_ctm"
+  }
 }

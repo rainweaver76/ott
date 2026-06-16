@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/packed_mud/overlapping_packed_mud_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/packed_mud/ctm/overlapping_packed_mud_tiles"
+  }
 }

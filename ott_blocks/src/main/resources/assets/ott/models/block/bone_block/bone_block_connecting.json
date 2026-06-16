@@ -1,12 +1,12 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column_full_full",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces",
   "textures": {
     "side": "ott:block/bone_block/ctm/bone_block_connecting",
     "top":  "ott:block/bone_block/ctm/bone_block_connecting_end"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}],
-    "top":  [{"type": "is_same_block"}]
+    "side": { "layout": "pieces_full", "rules": [{"type": "is_same_block"}] },
+    "top":  { "layout": "pieces_full", "rules": [{"type": "is_same_block"}] }
   }
 }

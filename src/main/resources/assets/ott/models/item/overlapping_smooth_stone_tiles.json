@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/smooth_stone/overlapping_smooth_stone_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/smooth_stone/ctm/overlapping_smooth_stone_tiles"
+  }
 }

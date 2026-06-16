@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/deepslate/curly_deepslate_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/deepslate/ctm/curly_deepslate_ctm"
+  }
 }

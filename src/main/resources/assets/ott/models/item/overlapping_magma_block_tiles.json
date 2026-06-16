@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/magma_block/overlapping_magma_block_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/magma_block/ctm/overlapping_magma_block_tiles"
+  }
 }

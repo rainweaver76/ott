@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/mossy_cobblestone/smooth_mossy_cobblestone_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/mossy_cobblestone/ctm/smooth_mossy_cobblestone_column"
+  }
 }

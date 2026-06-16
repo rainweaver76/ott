@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/packed_ice/smooth_packed_ice_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/packed_ice/ctm/smooth_packed_ice_column"
+  }
 }

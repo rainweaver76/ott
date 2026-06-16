@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/andesite/simple_andesite_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/andesite/ctm/simple_andesite_ctm"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/dark_oak_planks/dark_oak_planks_brick_pattern"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/dark_oak_planks/ctm/dark_oak_planks_brick_pattern"
+  }
 }

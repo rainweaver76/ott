@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/red_terracotta/small_red_terracotta_tiles"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/red_terracotta/ctm/small_red_terracotta_tiles"
+  }
 }

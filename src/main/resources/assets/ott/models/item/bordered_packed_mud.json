@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/packed_mud/bordered_packed_mud"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/packed_mud/ctm/bordered_packed_mud"
+  }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/dirt/fine_dirt_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/dirt/ctm/fine_dirt_ctm"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "full",
-  "parent": "ott:block/ctm/ctm_cube_all",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
   "textures": {
     "all": "ott:block/acacia_planks/ctm/whirlwind_acacia_planks"
   },

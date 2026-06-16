@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/end_stone/thick_inlayed_end_stone"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/end_stone/ctm/thick_inlayed_end_stone"
+  }
 }

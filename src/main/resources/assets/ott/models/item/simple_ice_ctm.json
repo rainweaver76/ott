@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/ice/simple_ice_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/ice/ctm/simple_ice_ctm"
+  }
 }

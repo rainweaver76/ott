@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/obsidian/cut_obsidian_column"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/obsidian/ctm/cut_obsidian_column"
+  }
 }

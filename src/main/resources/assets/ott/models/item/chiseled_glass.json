@@ -1,3 +1,6 @@
 {
-  "parent": "ott:block/glass/chiseled_glass"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/glass/ctm/chiseled_glass"
+  }
 }

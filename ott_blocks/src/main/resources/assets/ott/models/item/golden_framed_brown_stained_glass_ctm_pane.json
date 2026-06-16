@@ -2,7 +2,7 @@
   "parent": "ott:item/glass_pane_ctm_full",
   "textures": {
     "front": "ott:block/golden_framed_glass/ctm/golden_framed_brown_stained_glass",
-    "side": "ott:block/golden_framed_glass/ctm/golden_framed_glass_edge"
+    "side": "ott:block/golden_framed_glass/golden_framed_glass_edge"
   },
   "render_type": "minecraft:translucent"
 }
