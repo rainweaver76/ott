@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_compact",
   "textures": {
     "pane": "ott:block/glass/ctm/framed_glass",
     "edge": "ott:block/glass/leaded_glass_pane_edge"

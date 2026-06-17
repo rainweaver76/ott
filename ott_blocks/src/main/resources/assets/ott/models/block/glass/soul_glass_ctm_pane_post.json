@@ -1,9 +1,10 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_post_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_post_compact",
   "textures": {
     "pane": "ott:block/glass/ctm/soul_glass",
-    "edge": "ott:block/misc/soul_glass"
+    "edge": "ott:block/glass/soul_glass_edge"
   },
   "connections": {
     "pane": [

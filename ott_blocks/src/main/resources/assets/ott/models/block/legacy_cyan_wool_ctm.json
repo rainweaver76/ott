@@ -1,0 +1,19 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "all": "ott:block/legacy_carpet/legacy_cyan_carpet-ctm"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "isolated": {
+    "all": "ott:block/legacy_carpet/legacy_cyan_carpet_static"
+  }
+}

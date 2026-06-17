@@ -1,3 +1,7 @@
 {
-  "parent": "ott:block/oak_planks/square_oak_glass_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/oak_planks/ctm/square_oak_glass"
+  },
+  "render_type": "minecraft:cutout"
 }

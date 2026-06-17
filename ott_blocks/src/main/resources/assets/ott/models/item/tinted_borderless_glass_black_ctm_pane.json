@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_full",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
     "front": "ott:block/black_stained_glass/ctm/tinted_borderless_glass_black",
     "side": "ott:block/black_stained_glass/tinted_borderless_glass_black_edge"

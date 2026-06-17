@@ -848,14 +848,8 @@ public class OttBlocks {
     public static final DeferredBlock<Block> STONE_BRICKS_MASONRY = register("stone_bricks_masonry", () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
     public static final DeferredBlock<Block> SANDSTONE_SLENDER_BRICKS = register("sandstone_slender_bricks", () -> new Block(Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> SANDSTONE_SLENDER_TURQUOISE_PATTERN = register("sandstone_slender_turquoise_pattern", () -> new Block(Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> ORNAMENTED_RED_WOOL = register("ornamented_red_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> DELICATE_RED_WOOL = register("delicate_red_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> ORNAMENTED_BLUE_WOOL = register("ornamented_blue_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> DELICATE_BLUE_WOOL = register("delicate_blue_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> ORNAMENTED_GREEN_WOOL = register("ornamented_green_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> DELICATE_GREEN_WOOL = register("delicate_green_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> ORNAMENTED_PURPLE_WOOL = register("ornamented_purple_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<Block> DELICATE_PURPLE_WOOL = register("delicate_purple_wool", () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL)));
+    // Decorative wool family (delicate/ornamented/legacy/llama × 16 colors × {wool, wool_ctm, carpet, carpet_ctm})
+    // is registered programmatically — see registerDecoWoolFamily() + DECO_WOOL / DECO_CARPET maps below.
     public static final DeferredBlock<RotatedPillarBlock> CHISELED_PLASTERED_STONE_PILLAR = register("chiseled_plastered_stone_pillar", () -> new RotatedPillarBlock(ST));
     public static final DeferredBlock<Block> CHAOTIC_STONE_BRICKS = register("chaotic_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> CHAOTIC_MEDIUM_STONE_BRICKS = register("chaotic_medium_stone_bricks", () -> new Block(ST));
@@ -3442,72 +3436,8 @@ public class OttBlocks {
                 register("cornered_bamboo_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
         public static final DeferredBlock<Block> CORNERED_BIRCH_PLANKS =
                 register("cornered_birch_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
-        public static final DeferredBlock<Block> CORNERED_BLACK_WOOL =
-                register("cornered_black_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_BLUE_WOOL =
-                register("cornered_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_BROWN_WOOL =
-                register("cornered_brown_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_CYAN_WOOL =
-                register("cornered_cyan_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_GRAY_WOOL =
-                register("cornered_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_GREEN_WOOL =
-                register("cornered_green_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_LIGHT_BLUE_WOOL =
-                register("cornered_light_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_LIGHT_GRAY_WOOL =
-                register("cornered_light_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_LIME_WOOL =
-                register("cornered_lime_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_MAGENTA_WOOL =
-                register("cornered_magenta_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)));
         public static final DeferredBlock<Block> CORNERED_OAK_PLANKS =
                 register("cornered_oak_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
-        public static final DeferredBlock<Block> CORNERED_ORANGE_WOOL =
-                register("cornered_orange_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_PINK_WOOL =
-                register("cornered_pink_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_PURPLE_WOOL =
-                register("cornered_purple_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_RED_WOOL =
-                register("cornered_red_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_WHITE_WOOL =
-                register("cornered_white_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
-        public static final DeferredBlock<Block> CORNERED_YELLOW_WOOL =
-                register("cornered_yellow_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_BLACK_WOOL =
-                register("crafted_black_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_BLUE_WOOL =
-                register("crafted_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_BROWN_WOOL =
-                register("crafted_brown_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_CYAN_WOOL =
-                register("crafted_cyan_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_GRAY_WOOL =
-                register("crafted_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_GREEN_WOOL =
-                register("crafted_green_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_LIGHT_BLUE_WOOL =
-                register("crafted_light_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_LIGHT_GRAY_WOOL =
-                register("crafted_light_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_LIME_WOOL =
-                register("crafted_lime_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_MAGENTA_WOOL =
-                register("crafted_magenta_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_ORANGE_WOOL =
-                register("crafted_orange_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_PINK_WOOL =
-                register("crafted_pink_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_PURPLE_WOOL =
-                register("crafted_purple_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_RED_WOOL =
-                register("crafted_red_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_WHITE_WOOL =
-                register("crafted_white_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
-        public static final DeferredBlock<Block> CRAFTED_YELLOW_WOOL =
-                register("crafted_yellow_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
         public static final DeferredBlock<Block> CRATED_ACACIA_PLANKS =
                 register("crated_acacia_planks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)));
         public static final DeferredBlock<Block> CRATED_BAMBOO_PLANKS =
@@ -4088,38 +4018,6 @@ public class OttBlocks {
                 register("hard_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
         public static final DeferredBlock<Block> HARD_PACKED_MUD =
                 register("hard_packed_mud", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_BLACK_WOOL =
-                register("harsh_quilted_black_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_BLUE_WOOL =
-                register("harsh_quilted_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_BROWN_WOOL =
-                register("harsh_quilted_brown_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_CYAN_WOOL =
-                register("harsh_quilted_cyan_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_GRAY_WOOL =
-                register("harsh_quilted_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_GREEN_WOOL =
-                register("harsh_quilted_green_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_LIGHT_BLUE_WOOL =
-                register("harsh_quilted_light_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_LIGHT_GRAY_WOOL =
-                register("harsh_quilted_light_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_LIME_WOOL =
-                register("harsh_quilted_lime_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_MAGENTA_WOOL =
-                register("harsh_quilted_magenta_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_ORANGE_WOOL =
-                register("harsh_quilted_orange_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_PINK_WOOL =
-                register("harsh_quilted_pink_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_PURPLE_WOOL =
-                register("harsh_quilted_purple_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_RED_WOOL =
-                register("harsh_quilted_red_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_WHITE_WOOL =
-                register("harsh_quilted_white_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
-        public static final DeferredBlock<Block> HARSH_QUILTED_YELLOW_WOOL =
-                register("harsh_quilted_yellow_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
         public static final DeferredBlock<Block> HEXAGONICAL_BLACK_TERRACOTTA =
                 register("hexagonical_black_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_TERRACOTTA)));
         public static final DeferredBlock<Block> HEXAGONICAL_BLUE_TERRACOTTA =
@@ -4778,38 +4676,6 @@ public class OttBlocks {
                 register("raster_leaded_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
         public static final DeferredBlock<Block> RASTER_LEADED_GLASS_CTM =
                 register("raster_leaded_glass_ctm", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS).noOcclusion()));
-        public static final DeferredBlock<Block> RECTANGLE_BLACK_WOOL =
-                register("rectangle_black_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_BLUE_WOOL =
-                register("rectangle_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_BROWN_WOOL =
-                register("rectangle_brown_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BROWN_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_CYAN_WOOL =
-                register("rectangle_cyan_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CYAN_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_GRAY_WOOL =
-                register("rectangle_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRAY_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_GREEN_WOOL =
-                register("rectangle_green_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GREEN_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_LIGHT_BLUE_WOOL =
-                register("rectangle_light_blue_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_BLUE_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_LIGHT_GRAY_WOOL =
-                register("rectangle_light_gray_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHT_GRAY_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_LIME_WOOL =
-                register("rectangle_lime_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LIME_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_MAGENTA_WOOL =
-                register("rectangle_magenta_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_ORANGE_WOOL =
-                register("rectangle_orange_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ORANGE_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_PINK_WOOL =
-                register("rectangle_pink_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PINK_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_PURPLE_WOOL =
-                register("rectangle_purple_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPLE_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_RED_WOOL =
-                register("rectangle_red_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_WHITE_WOOL =
-                register("rectangle_white_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
-        public static final DeferredBlock<Block> RECTANGLE_YELLOW_WOOL =
-                register("rectangle_yellow_wool", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_WOOL)));
         public static final DeferredBlock<LeavesBlock> RED_ACACIA_LEAVES =
                 register("red_acacia_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LEAVES)));
         public static final DeferredBlock<LeavesBlock> RED_BIRCH_LEAVES =
@@ -5673,8 +5539,90 @@ public class OttBlocks {
         public static final DeferredBlock<Block> YELLOW_TERRACOTTA_CTM =
                 register("yellow_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.YELLOW_TERRACOTTA)));
 
+    /**
+     * Patterned-wool families (cornered / crafted / harsh_quilted / rectangle × 16 colors), each with
+     * a solo non-CTM block and a connecting (pieces_full) {@code _ctm} block, plus matching carpets.
+     * Keyed by full block name (e.g. {@code "cornered_white_wool"}, {@code "cornered_white_wool_ctm"}).
+     * {@code STYLED_WOOL} holds the wool cubes (solo + ctm); {@link #STYLED_CARPET} the carpets.
+     * Populated by {@link #registerStyledWoolFamily()} just before the registry flush.
+     */
+    public static final Map<String, DeferredBlock<Block>> STYLED_WOOL = new LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<CarpetBlock>> STYLED_CARPET = new LinkedHashMap<>();
+
+    /** The four patterned-wool styles. */
+    public static final List<String> STYLED_CARPET_STYLES = List.of("cornered", "crafted", "harsh_quilted", "rectangle");
+    /** The 16 vanilla dye colors, in vanilla ordinal order. */
+    public static final List<String> STYLED_CARPET_COLORS = List.of(
+            "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+            "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black");
+
+    private static void registerStyledWoolFamily() {
+        for (String style : STYLED_CARPET_STYLES) {
+            for (String color : STYLED_CARPET_COLORS) {
+                String base = style + "_" + color;
+                // Wool full-cubes (solo + ctm) copy the matching vanilla wool (mapColor/strength/sound).
+                java.util.function.Supplier<Block> wool = () -> new Block(Properties.ofFullCopy(
+                        net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                                net.minecraft.resources.ResourceLocation.withDefaultNamespace(color + "_wool"))));
+                STYLED_WOOL.put(base + "_wool", register(base + "_wool", wool));
+                STYLED_WOOL.put(base + "_wool_ctm", register(base + "_wool_ctm", wool));
+                STYLED_CARPET.put(base + "_carpet", register(base + "_carpet",
+                        () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL))));
+                STYLED_CARPET.put(base + "_carpet_ctm", register(base + "_carpet_ctm",
+                        () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL))));
+            }
+        }
+    }
+
+    /**
+     * Plain (non-CTM) carpets for every imported 16×16 wool variant (barky/blocky/…/woved × 16 colors).
+     * Derived from {@link OttImportedBlocks#BY_NAME} {@code *_wool} entries (so it auto-tracks the CSV),
+     * keyed by carpet block name (e.g. {@code "barky_black_carpet"}). Must run AFTER
+     * {@link OttImportedBlocks#init()} (which populates BY_NAME) and before the registry flush.
+     */
+    public static final Map<String, DeferredBlock<CarpetBlock>> IMPORTED_WOOL_CARPETS = new LinkedHashMap<>();
+
+    private static void registerImportedWoolCarpets() {
+        for (String woolName : OttImportedBlocks.BY_NAME.keySet()) {
+            if (!woolName.endsWith("_wool")) continue;
+            String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
+            IMPORTED_WOOL_CARPETS.put(carpetName, register(carpetName,
+                    () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL))));
+        }
+    }
+
+    /**
+     * Decorative connecting-wool family: 4 styles × 16 colors × 4 variants = 256 blocks.
+     * Variants per (style,color): {@code <style>_<color>_wool} (solo, non-CTM 16×16),
+     * {@code _wool_ctm} (connecting CTM), {@code _carpet} (solo), {@code _carpet_ctm} (connecting CTM).
+     * Wool blocks (solo + ctm) land in {@link #DECO_WOOL}; carpets in {@link #DECO_CARPET}; both keyed
+     * by full block name. Connecting block models use the 80×16 pieces strip; solo use the 16×16 static.
+     */
+    public static final List<String> DECO_STYLES = List.of("delicate", "ornamented", "legacy", "llama");
+    public static final Map<String, DeferredBlock<Block>> DECO_WOOL = new LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<CarpetBlock>> DECO_CARPET = new LinkedHashMap<>();
+
+    private static void registerDecoWoolFamily() {
+        for (String style : DECO_STYLES) {
+            for (String color : STYLED_CARPET_COLORS) {
+                String base = style + "_" + color;
+                DECO_WOOL.put(base + "_wool", register(base + "_wool",
+                        () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL))));
+                DECO_WOOL.put(base + "_wool_ctm", register(base + "_wool_ctm",
+                        () -> new Block(Properties.of().strength(0.8F).sound(SoundType.WOOL))));
+                DECO_CARPET.put(base + "_carpet", register(base + "_carpet",
+                        () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL))));
+                DECO_CARPET.put(base + "_carpet_ctm", register(base + "_carpet_ctm",
+                        () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL))));
+            }
+        }
+    }
+
     public static void register(IEventBus eventBus) {
-        OttImportedBlocks.init();   // queue imported cube_all blocks before the registry flush
+        OttImportedBlocks.init();          // queue imported cube_all blocks before the registry flush
+        registerImportedWoolCarpets();     // queue plain carpets for imported wools (needs BY_NAME populated)
+        registerStyledWoolFamily();        // queue patterned-wool family (solo + ctm wool & carpet)
+        registerDecoWoolFamily();          // queue decorative wool family (delicate/ornamented/legacy/llama)
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
     }

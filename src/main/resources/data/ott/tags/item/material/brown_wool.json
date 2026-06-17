@@ -17,12 +17,22 @@
     "ott:tripped_brown_wool",
     "ott:wickered_brown_wool",
     "ott:windmill_brown_wool",
-    "ott:wool_legacy_brown",
-    "ott:wool_llama_brown",
     "ott:woved_brown_wool",
     "ott:cornered_brown_wool",
     "ott:crafted_brown_wool",
     "ott:harsh_quilted_brown_wool",
-    "ott:rectangle_brown_wool"
+    "ott:rectangle_brown_wool",
+    "ott:delicate_brown_wool",
+    "ott:delicate_brown_wool_ctm",
+    "ott:ornamented_brown_wool",
+    "ott:ornamented_brown_wool_ctm",
+    "ott:legacy_brown_wool",
+    "ott:legacy_brown_wool_ctm",
+    "ott:llama_brown_wool",
+    "ott:llama_brown_wool_ctm",
+    "ott:cornered_brown_wool_ctm",
+    "ott:crafted_brown_wool_ctm",
+    "ott:harsh_quilted_brown_wool_ctm",
+    "ott:rectangle_brown_wool_ctm"
   ]
 }

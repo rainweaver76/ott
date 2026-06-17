@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_noside_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_compact",
   "textures": {
     "pane": "ott:block/acacia_windows/ctm/acacia_window_tiles",
     "edge": "minecraft:block/acacia_planks"

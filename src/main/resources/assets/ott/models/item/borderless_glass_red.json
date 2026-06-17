@@ -2,5 +2,6 @@
   "parent": "ott:block/ctm/item_pieces_solo",
   "textures": {
     "all": "ott:block/red_stained_glass/ctm/borderless_glass_red"
-  }
+  },
+  "render_type": "minecraft:translucent"
 }

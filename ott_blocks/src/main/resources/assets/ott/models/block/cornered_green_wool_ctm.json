@@ -1,0 +1,19 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "all": "ott:block/green_wool/ctm/cornered_green_wool"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "isolated": {
+    "all": "ott:block/green_wool/cornered_green_wool_static"
+  }
+}

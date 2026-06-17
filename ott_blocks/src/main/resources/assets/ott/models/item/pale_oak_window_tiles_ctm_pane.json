@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_full",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
     "front": "ott:block/pale_oak_windows/ctm/pale_oak_window_tiles",
     "side": "minecraft:block/pale_oak_planks"

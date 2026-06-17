@@ -1,19 +1,7 @@
 {
-    "parent": "ott:block/ctm/ctm_carpet",
-    "textures": {
-        "all": "ott:block/delicate_carpet/delicate_green_carpet-ctm"
-    },
-    "loader": "ott:mosaic",
-    "render_type": "minecraft:cutout_mipped",
-    "connections": {
-        "all": [
-            {"type": "is_same_block"},
-            {"type": "match_block", "block": "ott:ornamented_green_carpet"},
-            {"type": "match_block", "block": "ott:delicate_green_wool"},
-            {"type": "match_block", "block": "ott:ornamented_green_wool"}
-        ]
-    },
-    "isolated": {
-        "all": "ott:block/delicate_carpet/delicate_green_carpet_static"
-    }
+  "parent": "minecraft:block/carpet",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "wool": "ott:block/delicate_carpet/delicate_green_carpet_static"
+  }
 }

@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_alt_compact",
   "textures": {
     "pane": "ott:block/green_stained_glass/ctm/tinted_borderless_glass_green",
     "edge": "ott:block/green_stained_glass/tinted_borderless_glass_green_edge"

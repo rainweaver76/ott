@@ -2,5 +2,6 @@
   "parent": "ott:block/ctm/item_pieces_solo",
   "textures": {
     "all": "ott:block/golden_framed_glass/ctm/golden_framed_pink_stained_glass"
-  }
+  },
+  "render_type": "minecraft:translucent"
 }

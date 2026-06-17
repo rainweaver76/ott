@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_noside_alt_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_alt_compact",
   "textures": {
     "pane": "ott:block/sandstone/ctm/sandstone_framed_glass",
     "edge": "ott:block/sandstone/sandstone_framed_glass_edge"

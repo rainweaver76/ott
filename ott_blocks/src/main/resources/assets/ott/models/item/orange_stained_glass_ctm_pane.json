@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_full",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
     "front": "ott:block/orange_stained_glass/ctm/orange_stained_glass",
     "side": "minecraft:block/orange_stained_glass_pane_top"

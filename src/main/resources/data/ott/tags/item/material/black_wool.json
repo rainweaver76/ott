@@ -17,12 +17,22 @@
     "ott:tripped_black_wool",
     "ott:wickered_black_wool",
     "ott:windmill_black_wool",
-    "ott:wool_legacy_black",
-    "ott:wool_llama_black",
     "ott:woved_black_wool",
     "ott:cornered_black_wool",
     "ott:crafted_black_wool",
     "ott:harsh_quilted_black_wool",
-    "ott:rectangle_black_wool"
+    "ott:rectangle_black_wool",
+    "ott:delicate_black_wool",
+    "ott:delicate_black_wool_ctm",
+    "ott:ornamented_black_wool",
+    "ott:ornamented_black_wool_ctm",
+    "ott:legacy_black_wool",
+    "ott:legacy_black_wool_ctm",
+    "ott:llama_black_wool",
+    "ott:llama_black_wool_ctm",
+    "ott:cornered_black_wool_ctm",
+    "ott:crafted_black_wool_ctm",
+    "ott:harsh_quilted_black_wool_ctm",
+    "ott:rectangle_black_wool_ctm"
   ]
 }

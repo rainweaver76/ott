@@ -658,134 +658,50 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cobbled_limestone", has(OttBlocks.COBBLED_LIMESTONE.get()))
                 .save(exporter, getRecipePath("ott", "limestone_from_cobbled_limestone_smelting"));
 
-        // --- Ornamented red wool: red_wool center + 4 gold nuggets at corners → 8 ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.ORNAMENTED_RED_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.RED_WOOL)
-                .pattern("N N")
-                .pattern("NRN")
-                .pattern("N N")
-                .unlockedBy("has_red_wool", has(Items.RED_WOOL))
-                .save(exporter, getRecipePath("ott", "ornamented_red_wool"));
+        // --- Decorative wool family carpets (delicate/ornamented/legacy/llama × 16 × {solo, ctm}):
+        //     standard 2 wool → 3 carpet (solo carpet ← solo wool, ctm carpet ← ctm wool) ---
+        for (String style : OttBlocks.DECO_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                for (String suf : new String[]{"", "_ctm"}) {
+                    String carpet = style + "_" + color + "_carpet" + suf;
+                    String wool = style + "_" + color + "_wool" + suf;
+                    ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, OttBlocks.DECO_CARPET.get(carpet).get(), 3)
+                            .define('W', OttBlocks.DECO_WOOL.get(wool).get())
+                            .pattern("WW")
+                            .unlockedBy("has_" + wool, has(OttBlocks.DECO_WOOL.get(wool).get()))
+                            .save(exporter, getRecipePath("ott", carpet));
+                }
+            }
+        }
 
-        // --- Delicate red wool: red_wool center + 4 gold nuggets in + shape → 8 ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.DELICATE_RED_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.RED_WOOL)
-                .pattern(" N ")
-                .pattern("NRN")
-                .pattern(" N ")
-                .unlockedBy("has_red_wool", has(Items.RED_WOOL))
-                .save(exporter, getRecipePath("ott", "delicate_red_wool"));
+        // --- Patterned-wool family carpets (cornered/crafted/harsh_quilted/rectangle × 16 × {solo, ctm}):
+        //     standard 2 wool → 3 carpet (solo carpet ← solo wool, ctm carpet ← ctm wool) ---
+        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                for (String suf : new String[]{"", "_ctm"}) {
+                    String carpetName = style + "_" + color + "_carpet" + suf;
+                    String woolName = style + "_" + color + "_wool" + suf;
+                    Block wool = OttBlocks.STYLED_WOOL.get(woolName).get();
+                    ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, OttBlocks.STYLED_CARPET.get(carpetName).get(), 3)
+                            .define('W', wool)
+                            .pattern("WW")
+                            .unlockedBy("has_" + woolName, has(wool))
+                            .save(exporter, getRecipePath("ott", carpetName));
+                }
+            }
+        }
 
-        // --- Ornamented / Delicate red carpet: 2 wool → 3 carpet ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORNAMENTED_RED_CARPET.get(), 3)
-                .define('W', OttBlocks.ORNAMENTED_RED_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_ornamented_red_wool", has(OttBlocks.ORNAMENTED_RED_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "ornamented_red_carpet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DELICATE_RED_CARPET.get(), 3)
-                .define('W', OttBlocks.DELICATE_RED_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_delicate_red_wool", has(OttBlocks.DELICATE_RED_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "delicate_red_carpet"));
-
-        // --- Ornamented blue wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.ORNAMENTED_BLUE_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.BLUE_WOOL)
-                .pattern("N N")
-                .pattern("NRN")
-                .pattern("N N")
-                .unlockedBy("has_blue_wool", has(Items.BLUE_WOOL))
-                .save(exporter, getRecipePath("ott", "ornamented_blue_wool"));
-
-        // --- Delicate blue wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.DELICATE_BLUE_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.BLUE_WOOL)
-                .pattern(" N ")
-                .pattern("NRN")
-                .pattern(" N ")
-                .unlockedBy("has_blue_wool", has(Items.BLUE_WOOL))
-                .save(exporter, getRecipePath("ott", "delicate_blue_wool"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORNAMENTED_BLUE_CARPET.get(), 3)
-                .define('W', OttBlocks.ORNAMENTED_BLUE_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_ornamented_blue_wool", has(OttBlocks.ORNAMENTED_BLUE_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "ornamented_blue_carpet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DELICATE_BLUE_CARPET.get(), 3)
-                .define('W', OttBlocks.DELICATE_BLUE_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_delicate_blue_wool", has(OttBlocks.DELICATE_BLUE_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "delicate_blue_carpet"));
-
-        // --- Ornamented green wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.ORNAMENTED_GREEN_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.GREEN_WOOL)
-                .pattern("N N")
-                .pattern("NRN")
-                .pattern("N N")
-                .unlockedBy("has_green_wool", has(Items.GREEN_WOOL))
-                .save(exporter, getRecipePath("ott", "ornamented_green_wool"));
-
-        // --- Delicate green wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.DELICATE_GREEN_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.GREEN_WOOL)
-                .pattern(" N ")
-                .pattern("NRN")
-                .pattern(" N ")
-                .unlockedBy("has_green_wool", has(Items.GREEN_WOOL))
-                .save(exporter, getRecipePath("ott", "delicate_green_wool"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORNAMENTED_GREEN_CARPET.get(), 3)
-                .define('W', OttBlocks.ORNAMENTED_GREEN_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_ornamented_green_wool", has(OttBlocks.ORNAMENTED_GREEN_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "ornamented_green_carpet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DELICATE_GREEN_CARPET.get(), 3)
-                .define('W', OttBlocks.DELICATE_GREEN_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_delicate_green_wool", has(OttBlocks.DELICATE_GREEN_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "delicate_green_carpet"));
-
-        // --- Ornamented purple wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.ORNAMENTED_PURPLE_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.PURPLE_WOOL)
-                .pattern("N N")
-                .pattern("NRN")
-                .pattern("N N")
-                .unlockedBy("has_purple_wool", has(Items.PURPLE_WOOL))
-                .save(exporter, getRecipePath("ott", "ornamented_purple_wool"));
-
-        // --- Delicate purple wool ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.DELICATE_PURPLE_WOOL.get(), 8)
-                .define('N', Items.GOLD_NUGGET)
-                .define('R', Items.PURPLE_WOOL)
-                .pattern(" N ")
-                .pattern("NRN")
-                .pattern(" N ")
-                .unlockedBy("has_purple_wool", has(Items.PURPLE_WOOL))
-                .save(exporter, getRecipePath("ott", "delicate_purple_wool"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORNAMENTED_PURPLE_CARPET.get(), 3)
-                .define('W', OttBlocks.ORNAMENTED_PURPLE_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_ornamented_purple_wool", has(OttBlocks.ORNAMENTED_PURPLE_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "ornamented_purple_carpet"));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.DELICATE_PURPLE_CARPET.get(), 3)
-                .define('W', OttBlocks.DELICATE_PURPLE_WOOL.get())
-                .pattern("WW")
-                .unlockedBy("has_delicate_purple_wool", has(OttBlocks.DELICATE_PURPLE_WOOL.get()))
-                .save(exporter, getRecipePath("ott", "delicate_purple_carpet"));
+        // --- Plain carpets for imported wool variants (barky/…/woved × 16): 2 wool → 3 carpet ---
+        com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.forEach((woolName, woolBlock) -> {
+            if (!woolName.endsWith("_wool")) return;
+            String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
+            Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, carpet, 3)
+                    .define('W', woolBlock.get())
+                    .pattern("WW")
+                    .unlockedBy("has_" + woolName, has(woolBlock.get()))
+                    .save(exporter, getRecipePath("ott", carpetName));
+        });
 
         // --- Glazed terracotta smelting (16 custom colors) ---
         ModBlocks.COLOR_SETS.forEach((color, set) ->
@@ -2483,15 +2399,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, whitePlastered,
                 OttBlocks.CHISELED_PLASTERED_STONE_PILLAR,                                   "chiseled_plastered_stone_pillar_engraving");
 
-        // ── Wool → ornamented / delicate variants ─────────────────────────────────
-        engraveOne(exporter, Blocks.RED_WOOL,    OttBlocks.ORNAMENTED_RED_WOOL,    "ornamented_red_wool_engraving");
-        engraveOne(exporter, Blocks.RED_WOOL,    OttBlocks.DELICATE_RED_WOOL,      "delicate_red_wool_engraving");
-        engraveOne(exporter, Blocks.BLUE_WOOL,   OttBlocks.ORNAMENTED_BLUE_WOOL,   "ornamented_blue_wool_engraving");
-        engraveOne(exporter, Blocks.BLUE_WOOL,   OttBlocks.DELICATE_BLUE_WOOL,     "delicate_blue_wool_engraving");
-        engraveOne(exporter, Blocks.GREEN_WOOL,  OttBlocks.ORNAMENTED_GREEN_WOOL,  "ornamented_green_wool_engraving");
-        engraveOne(exporter, Blocks.GREEN_WOOL,  OttBlocks.DELICATE_GREEN_WOOL,    "delicate_green_wool_engraving");
-        engraveOne(exporter, Blocks.PURPLE_WOOL, OttBlocks.ORNAMENTED_PURPLE_WOOL, "ornamented_purple_wool_engraving");
-        engraveOne(exporter, Blocks.PURPLE_WOOL, OttBlocks.DELICATE_PURPLE_WOOL,   "delicate_purple_wool_engraving");
+        // ── Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm}) ──
+        // Engraved 1:1 from their colour's material tag (any same-colour wool → this variant),
+        // matching the imported/styled wool engraving pattern. Replaces the old bespoke recipes.
+        for (String style : OttBlocks.DECO_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                for (String suf : new String[]{"_wool", "_wool_ctm"}) {
+                    String wn = style + "_" + color + suf;
+                    engraveTagged(exporter, materialTag(color + "_wool"),
+                            OttBlocks.DECO_WOOL.get(wn).get(), wn + "_engraving");
+                }
+            }
+        }
+
+        // ── Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm}) ──
+        // Engraved 1:1 from their colour's material tag (solo + connecting variants).
+        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                for (String suf : new String[]{"_wool", "_wool_ctm"}) {
+                    String wn = style + "_" + color + suf;
+                    engraveTagged(exporter, materialTag(color + "_wool"),
+                            OttBlocks.STYLED_WOOL.get(wn).get(), wn + "_engraving");
+                }
+            }
+        }
 
         // ── Wood door variants ────────────────────────────────────────────────────
         OttBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
@@ -3759,39 +3690,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveTagged(exporter, materialTag("acacia_planks"), OttBlocks.CORNERED_ACACIA_PLANKS, "cornered_acacia_planks_engraving");
         engraveTagged(exporter, materialTag("bamboo_planks"), OttBlocks.CORNERED_BAMBOO_PLANKS, "cornered_bamboo_planks_engraving");
         engraveTagged(exporter, materialTag("birch_planks"), OttBlocks.CORNERED_BIRCH_PLANKS, "cornered_birch_planks_engraving");
-        engraveTagged(exporter, materialTag("black_wool"), OttBlocks.CORNERED_BLACK_WOOL, "cornered_black_wool_engraving");
-        engraveTagged(exporter, materialTag("blue_wool"), OttBlocks.CORNERED_BLUE_WOOL, "cornered_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("brown_wool"), OttBlocks.CORNERED_BROWN_WOOL, "cornered_brown_wool_engraving");
-        engraveTagged(exporter, materialTag("cyan_wool"), OttBlocks.CORNERED_CYAN_WOOL, "cornered_cyan_wool_engraving");
-        engraveTagged(exporter, materialTag("gray_wool"), OttBlocks.CORNERED_GRAY_WOOL, "cornered_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("green_wool"), OttBlocks.CORNERED_GREEN_WOOL, "cornered_green_wool_engraving");
-        engraveTagged(exporter, materialTag("light_blue_wool"), OttBlocks.CORNERED_LIGHT_BLUE_WOOL, "cornered_light_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("light_gray_wool"), OttBlocks.CORNERED_LIGHT_GRAY_WOOL, "cornered_light_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("lime_wool"), OttBlocks.CORNERED_LIME_WOOL, "cornered_lime_wool_engraving");
-        engraveTagged(exporter, materialTag("magenta_wool"), OttBlocks.CORNERED_MAGENTA_WOOL, "cornered_magenta_wool_engraving");
         engraveTagged(exporter, materialTag("oak_planks"), OttBlocks.CORNERED_OAK_PLANKS, "cornered_oak_planks_engraving");
-        engraveTagged(exporter, materialTag("orange_wool"), OttBlocks.CORNERED_ORANGE_WOOL, "cornered_orange_wool_engraving");
-        engraveTagged(exporter, materialTag("pink_wool"), OttBlocks.CORNERED_PINK_WOOL, "cornered_pink_wool_engraving");
-        engraveTagged(exporter, materialTag("purple_wool"), OttBlocks.CORNERED_PURPLE_WOOL, "cornered_purple_wool_engraving");
-        engraveTagged(exporter, materialTag("red_wool"), OttBlocks.CORNERED_RED_WOOL, "cornered_red_wool_engraving");
-        engraveTagged(exporter, materialTag("white_wool"), OttBlocks.CORNERED_WHITE_WOOL, "cornered_white_wool_engraving");
-        engraveTagged(exporter, materialTag("yellow_wool"), OttBlocks.CORNERED_YELLOW_WOOL, "cornered_yellow_wool_engraving");
-        engraveTagged(exporter, materialTag("black_wool"), OttBlocks.CRAFTED_BLACK_WOOL, "crafted_black_wool_engraving");
-        engraveTagged(exporter, materialTag("blue_wool"), OttBlocks.CRAFTED_BLUE_WOOL, "crafted_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("brown_wool"), OttBlocks.CRAFTED_BROWN_WOOL, "crafted_brown_wool_engraving");
-        engraveTagged(exporter, materialTag("cyan_wool"), OttBlocks.CRAFTED_CYAN_WOOL, "crafted_cyan_wool_engraving");
-        engraveTagged(exporter, materialTag("gray_wool"), OttBlocks.CRAFTED_GRAY_WOOL, "crafted_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("green_wool"), OttBlocks.CRAFTED_GREEN_WOOL, "crafted_green_wool_engraving");
-        engraveTagged(exporter, materialTag("light_blue_wool"), OttBlocks.CRAFTED_LIGHT_BLUE_WOOL, "crafted_light_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("light_gray_wool"), OttBlocks.CRAFTED_LIGHT_GRAY_WOOL, "crafted_light_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("lime_wool"), OttBlocks.CRAFTED_LIME_WOOL, "crafted_lime_wool_engraving");
-        engraveTagged(exporter, materialTag("magenta_wool"), OttBlocks.CRAFTED_MAGENTA_WOOL, "crafted_magenta_wool_engraving");
-        engraveTagged(exporter, materialTag("orange_wool"), OttBlocks.CRAFTED_ORANGE_WOOL, "crafted_orange_wool_engraving");
-        engraveTagged(exporter, materialTag("pink_wool"), OttBlocks.CRAFTED_PINK_WOOL, "crafted_pink_wool_engraving");
-        engraveTagged(exporter, materialTag("purple_wool"), OttBlocks.CRAFTED_PURPLE_WOOL, "crafted_purple_wool_engraving");
-        engraveTagged(exporter, materialTag("red_wool"), OttBlocks.CRAFTED_RED_WOOL, "crafted_red_wool_engraving");
-        engraveTagged(exporter, materialTag("white_wool"), OttBlocks.CRAFTED_WHITE_WOOL, "crafted_white_wool_engraving");
-        engraveTagged(exporter, materialTag("yellow_wool"), OttBlocks.CRAFTED_YELLOW_WOOL, "crafted_yellow_wool_engraving");
         engraveTagged(exporter, materialTag("acacia_planks"), OttBlocks.CRATED_ACACIA_PLANKS, "crated_acacia_planks_engraving");
         engraveTagged(exporter, materialTag("bamboo_planks"), OttBlocks.CRATED_BAMBOO_PLANKS, "crated_bamboo_planks_engraving");
         engraveTagged(exporter, materialTag("birch_planks"), OttBlocks.CRATED_BIRCH_PLANKS, "crated_birch_planks_engraving");
@@ -4127,22 +4026,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveTagged(exporter, materialTag("mud"), OttBlocks.HARD_MUD, "hard_mud_engraving");
         engraveTagged(exporter, materialTag("mud_bricks"), OttBlocks.HARD_MUD_BRICKS, "hard_mud_bricks_engraving");
         engraveTagged(exporter, materialTag("packed_mud"), OttBlocks.HARD_PACKED_MUD, "hard_packed_mud_engraving");
-        engraveTagged(exporter, materialTag("black_wool"), OttBlocks.HARSH_QUILTED_BLACK_WOOL, "harsh_quilted_black_wool_engraving");
-        engraveTagged(exporter, materialTag("blue_wool"), OttBlocks.HARSH_QUILTED_BLUE_WOOL, "harsh_quilted_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("brown_wool"), OttBlocks.HARSH_QUILTED_BROWN_WOOL, "harsh_quilted_brown_wool_engraving");
-        engraveTagged(exporter, materialTag("cyan_wool"), OttBlocks.HARSH_QUILTED_CYAN_WOOL, "harsh_quilted_cyan_wool_engraving");
-        engraveTagged(exporter, materialTag("gray_wool"), OttBlocks.HARSH_QUILTED_GRAY_WOOL, "harsh_quilted_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("green_wool"), OttBlocks.HARSH_QUILTED_GREEN_WOOL, "harsh_quilted_green_wool_engraving");
-        engraveTagged(exporter, materialTag("light_blue_wool"), OttBlocks.HARSH_QUILTED_LIGHT_BLUE_WOOL, "harsh_quilted_light_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("light_gray_wool"), OttBlocks.HARSH_QUILTED_LIGHT_GRAY_WOOL, "harsh_quilted_light_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("lime_wool"), OttBlocks.HARSH_QUILTED_LIME_WOOL, "harsh_quilted_lime_wool_engraving");
-        engraveTagged(exporter, materialTag("magenta_wool"), OttBlocks.HARSH_QUILTED_MAGENTA_WOOL, "harsh_quilted_magenta_wool_engraving");
-        engraveTagged(exporter, materialTag("orange_wool"), OttBlocks.HARSH_QUILTED_ORANGE_WOOL, "harsh_quilted_orange_wool_engraving");
-        engraveTagged(exporter, materialTag("pink_wool"), OttBlocks.HARSH_QUILTED_PINK_WOOL, "harsh_quilted_pink_wool_engraving");
-        engraveTagged(exporter, materialTag("purple_wool"), OttBlocks.HARSH_QUILTED_PURPLE_WOOL, "harsh_quilted_purple_wool_engraving");
-        engraveTagged(exporter, materialTag("red_wool"), OttBlocks.HARSH_QUILTED_RED_WOOL, "harsh_quilted_red_wool_engraving");
-        engraveTagged(exporter, materialTag("white_wool"), OttBlocks.HARSH_QUILTED_WHITE_WOOL, "harsh_quilted_white_wool_engraving");
-        engraveTagged(exporter, materialTag("yellow_wool"), OttBlocks.HARSH_QUILTED_YELLOW_WOOL, "harsh_quilted_yellow_wool_engraving");
         engraveTagged(exporter, materialTag("black_terracotta"), OttBlocks.HEXAGONICAL_BLACK_TERRACOTTA, "hexagonical_black_terracotta_engraving");
         engraveTagged(exporter, materialTag("blue_terracotta"), OttBlocks.HEXAGONICAL_BLUE_TERRACOTTA, "hexagonical_blue_terracotta_engraving");
         engraveTagged(exporter, materialTag("brown_terracotta"), OttBlocks.HEXAGONICAL_BROWN_TERRACOTTA, "hexagonical_brown_terracotta_engraving");
@@ -4596,22 +4479,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_engraving");
         engraveOne(exporter, Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS_CTM, "raster_leaded_glass_pillar_engraving");
         engraveOne(exporter, OttBlocks.RASTER_LEADED_GLASS_CTM.get(), OttBlocks.RASTER_LEADED_GLASS_CTM_PANE.get(), "raster_leaded_glass_ctm_pane_engraving");
-        engraveTagged(exporter, materialTag("black_wool"), OttBlocks.RECTANGLE_BLACK_WOOL, "rectangle_black_wool_engraving");
-        engraveTagged(exporter, materialTag("blue_wool"), OttBlocks.RECTANGLE_BLUE_WOOL, "rectangle_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("brown_wool"), OttBlocks.RECTANGLE_BROWN_WOOL, "rectangle_brown_wool_engraving");
-        engraveTagged(exporter, materialTag("cyan_wool"), OttBlocks.RECTANGLE_CYAN_WOOL, "rectangle_cyan_wool_engraving");
-        engraveTagged(exporter, materialTag("gray_wool"), OttBlocks.RECTANGLE_GRAY_WOOL, "rectangle_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("green_wool"), OttBlocks.RECTANGLE_GREEN_WOOL, "rectangle_green_wool_engraving");
-        engraveTagged(exporter, materialTag("light_blue_wool"), OttBlocks.RECTANGLE_LIGHT_BLUE_WOOL, "rectangle_light_blue_wool_engraving");
-        engraveTagged(exporter, materialTag("light_gray_wool"), OttBlocks.RECTANGLE_LIGHT_GRAY_WOOL, "rectangle_light_gray_wool_engraving");
-        engraveTagged(exporter, materialTag("lime_wool"), OttBlocks.RECTANGLE_LIME_WOOL, "rectangle_lime_wool_engraving");
-        engraveTagged(exporter, materialTag("magenta_wool"), OttBlocks.RECTANGLE_MAGENTA_WOOL, "rectangle_magenta_wool_engraving");
-        engraveTagged(exporter, materialTag("orange_wool"), OttBlocks.RECTANGLE_ORANGE_WOOL, "rectangle_orange_wool_engraving");
-        engraveTagged(exporter, materialTag("pink_wool"), OttBlocks.RECTANGLE_PINK_WOOL, "rectangle_pink_wool_engraving");
-        engraveTagged(exporter, materialTag("purple_wool"), OttBlocks.RECTANGLE_PURPLE_WOOL, "rectangle_purple_wool_engraving");
-        engraveTagged(exporter, materialTag("red_wool"), OttBlocks.RECTANGLE_RED_WOOL, "rectangle_red_wool_engraving");
-        engraveTagged(exporter, materialTag("white_wool"), OttBlocks.RECTANGLE_WHITE_WOOL, "rectangle_white_wool_engraving");
-        engraveTagged(exporter, materialTag("yellow_wool"), OttBlocks.RECTANGLE_YELLOW_WOOL, "rectangle_yellow_wool_engraving");
         engraveOne(exporter, Blocks.RED_CONCRETE, OttBlocks.RED_CONCRETE_CTM, "red_concrete_pillar_engraving");
         engraveTagged(exporter, materialTag("red_concrete"), OttBlocks.RED_CONCRETE_PANEL, "red_concrete_panel_engraving");
         engraveTagged(exporter, materialTag("red_sandstone"), OttBlocks.RED_SANDSTONE_BRICK_PATTERN.get(), "red_sandstone_brick_pattern_engraving");

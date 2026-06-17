@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "all": "ott:block/orange_wool/rectangle_orange_wool_static"
+  }
+}

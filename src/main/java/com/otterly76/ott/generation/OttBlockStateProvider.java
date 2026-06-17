@@ -57,19 +57,17 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             itemModels().withExistingParent(path, modLoc("block/seaglass/" + path));
         });
 
-        // Soul Glass — full block
+        // Soul Glass — full block is now a hand-authored pieces_full CTM block (blockstate/model/item
+        // live in ott_blocks resources). Do NOT generate a cube_all blockstate/model/item here — it
+        // would override the connecting setup. (soulGlassTex retained for the pane below.)
         ResourceLocation soulGlassTex = modLoc("block/misc/soul_glass");
-        ModelFile soulGlassModel = models().withExistingParent("block/soul_glass", mcLoc("block/cube_all"))
-                .texture("all", soulGlassTex)
-                .renderType(mcLoc("translucent"));
-        simpleBlock(OttBlocks.SOUL_GLASS.get(), soulGlassModel);
-        itemModels().withExistingParent("soul_glass", modLoc("block/soul_glass"));
+        ResourceLocation soulGlassEdge = modLoc("block/glass/soul_glass_edge");
 
-        // Soul Glass Pane
-        paneBlockWithRenderType(OttBlocks.SOUL_GLASS_PANE.get(), soulGlassTex, soulGlassTex, "minecraft:translucent");
+        // Soul Glass Pane (non-connecting) — edge uses the dedicated soul_glass_edge texture
+        paneBlockWithRenderType(OttBlocks.SOUL_GLASS_PANE.get(), soulGlassTex, soulGlassEdge, "minecraft:translucent");
         itemModels().withExistingParent("soul_glass_pane", mcLoc("item/glass_pane"))
                 .texture("front", soulGlassTex)
-                .texture("side", soulGlassTex)
+                .texture("side", soulGlassEdge)
                 .renderType("minecraft:translucent");
 
         // Opal crystal sets
@@ -583,6 +581,54 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlock(block, models().withExistingParent(dir + blockPath(block), mcLoc("block/cube_all"))
                 .texture("all", texture)
                 .renderType(mcLoc(renderType)));
+    }
+
+    /**
+     * Decorative wool family (delicate/ornamented/legacy/llama × 16 colors × 4 variants).
+     * Blockstate → the hand-authored model; item always shows the 16×16 static (wool→cube, carpet→flat carpet),
+     * never the 80×16 strip (no smoosh).
+     */
+    private void decoWoolFamily() {
+        for (String style : OttBlocks.DECO_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                String base = style + "_" + color;
+                ResourceLocation staticTex = modLoc("block/" + style + "_carpet/" + style + "_" + color + "_carpet_static");
+                for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
+                    simpleBlock(OttBlocks.DECO_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + wn)));
+                    itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
+                            .texture("all", staticTex).renderType("minecraft:cutout_mipped");
+                }
+                for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
+                    simpleBlock(OttBlocks.DECO_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + cn)));
+                    itemModels().withExistingParent(cn, mcLoc("block/carpet"))
+                            .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
+                }
+            }
+        }
+    }
+
+    /**
+     * Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × 4 variants).
+     * Blockstate → hand-authored model; item shows the 16×16 static (wool→cube, carpet→flat carpet),
+     * never the 80×16 strip. Static path: block/&lt;color&gt;_wool/&lt;style&gt;_&lt;color&gt;_wool_static.
+     */
+    private void styledWoolFamily() {
+        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
+            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+                String base = style + "_" + color;
+                ResourceLocation staticTex = modLoc("block/" + color + "_wool/" + base + "_wool_static");
+                for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
+                    simpleBlock(OttBlocks.STYLED_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + wn)));
+                    itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
+                            .texture("all", staticTex).renderType("minecraft:cutout_mipped");
+                }
+                for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
+                    simpleBlock(OttBlocks.STYLED_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + cn)));
+                    itemModels().withExistingParent(cn, mcLoc("block/carpet"))
+                            .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
+                }
+            }
+        }
     }
 
     private void colorSetCarpet(Block block, String color, String dir) {
@@ -1423,23 +1469,22 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_RED.get(),   models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_red")));
         simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_BLACK.get(), models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_black")));
 
-        // ── Ornamented / delicate wool & carpet ───────────────────────────────
-        simpleBlockWithItem(OttBlocks.ORNAMENTED_RED_WOOL.get(),      models().getExistingFile(modLoc("block/ornamented_red_wool")));
-        simpleBlockWithItem(OttBlocks.DELICATE_RED_WOOL.get(),        models().getExistingFile(modLoc("block/delicate_red_wool")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_RED_CARPET.get(),    models().getExistingFile(modLoc("block/ornamented_red_carpet")));
-        simpleBlockWithItem(ModBlocks.DELICATE_RED_CARPET.get(),      models().getExistingFile(modLoc("block/delicate_red_carpet")));
-        simpleBlockWithItem(OttBlocks.ORNAMENTED_BLUE_WOOL.get(),     models().getExistingFile(modLoc("block/ornamented_blue_wool")));
-        simpleBlockWithItem(OttBlocks.DELICATE_BLUE_WOOL.get(),       models().getExistingFile(modLoc("block/delicate_blue_wool")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_BLUE_CARPET.get(),   models().getExistingFile(modLoc("block/ornamented_blue_carpet")));
-        simpleBlockWithItem(ModBlocks.DELICATE_BLUE_CARPET.get(),     models().getExistingFile(modLoc("block/delicate_blue_carpet")));
-        simpleBlockWithItem(OttBlocks.ORNAMENTED_GREEN_WOOL.get(),    models().getExistingFile(modLoc("block/ornamented_green_wool")));
-        simpleBlockWithItem(OttBlocks.DELICATE_GREEN_WOOL.get(),      models().getExistingFile(modLoc("block/delicate_green_wool")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_GREEN_CARPET.get(),  models().getExistingFile(modLoc("block/ornamented_green_carpet")));
-        simpleBlockWithItem(ModBlocks.DELICATE_GREEN_CARPET.get(),    models().getExistingFile(modLoc("block/delicate_green_carpet")));
-        simpleBlockWithItem(OttBlocks.ORNAMENTED_PURPLE_WOOL.get(),   models().getExistingFile(modLoc("block/ornamented_purple_wool")));
-        simpleBlockWithItem(OttBlocks.DELICATE_PURPLE_WOOL.get(),     models().getExistingFile(modLoc("block/delicate_purple_wool")));
-        simpleBlockWithItem(ModBlocks.ORNAMENTED_PURPLE_CARPET.get(), models().getExistingFile(modLoc("block/ornamented_purple_carpet")));
-        simpleBlockWithItem(ModBlocks.DELICATE_PURPLE_CARPET.get(),   models().getExistingFile(modLoc("block/delicate_purple_carpet")));
+        // ── Decorative wool family: delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm} ──
+        decoWoolFamily();
+
+        // ── Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm}) ──
+        styledWoolFamily();
+
+        // ── Plain carpets for imported 16×16 wool variants (barky/…/woved × 16) ──
+        com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.forEach((woolName, material) -> {
+            if (!woolName.endsWith("_wool")) return;
+            String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
+            Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
+            ModelFile model = models().withExistingParent("block/" + material + "/" + carpetName, mcLoc("block/carpet"))
+                    .texture("wool", modLoc("block/" + material + "/" + woolName));
+            simpleBlock(carpet, model);
+            itemModels().withExistingParent(carpetName, model.getLocation());
+        });
 
         // ── Caterpillar jar ───────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.CATERPILLAR_JAR.get(), models().getExistingFile(modLoc("block/caterpillar_jar")));

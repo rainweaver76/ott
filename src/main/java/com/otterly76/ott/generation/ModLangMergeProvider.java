@@ -95,6 +95,42 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + name, pretty);
         }
 
+        // Plain carpets for imported wool variants (barky/…/woved × 16 colors)
+        for (String name : com.otterly76.ott_blocks.block.OttBlocks.IMPORTED_WOOL_CARPETS.keySet()) {
+            String pretty = Arrays.stream(name.split("_"))
+                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                    .collect(Collectors.joining(" "));
+            ottBase.addProperty("block.ott." + name, pretty);
+        }
+
+        // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm});
+        // connecting (_ctm) variants get a trailing " (Connecting)".
+        java.util.stream.Stream.concat(
+                com.otterly76.ott_blocks.block.OttBlocks.DECO_WOOL.keySet().stream(),
+                com.otterly76.ott_blocks.block.OttBlocks.DECO_CARPET.keySet().stream()
+        ).forEach(name -> {
+            boolean ctm = name.endsWith("_ctm");
+            String core = ctm ? name.substring(0, name.length() - "_ctm".length()) : name;
+            String pretty = Arrays.stream(core.split("_"))
+                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                    .collect(Collectors.joining(" "));
+            ottBase.addProperty("block.ott." + name, pretty + (ctm ? " (Connecting)" : ""));
+        });
+
+        // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm});
+        // connecting (_ctm) variants get a trailing " (Connecting)".
+        java.util.stream.Stream.concat(
+                com.otterly76.ott_blocks.block.OttBlocks.STYLED_WOOL.keySet().stream(),
+                com.otterly76.ott_blocks.block.OttBlocks.STYLED_CARPET.keySet().stream()
+        ).forEach(name -> {
+            boolean ctm = name.endsWith("_ctm");
+            String core = ctm ? name.substring(0, name.length() - "_ctm".length()) : name;
+            String pretty = Arrays.stream(core.split("_"))
+                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                    .collect(Collectors.joining(" "));
+            ottBase.addProperty("block.ott." + name, pretty + (ctm ? " (Connecting)" : ""));
+        });
+
         // Add creative tab titles
         ottBase.addProperty("itemGroup.ott.blocks", "New Otterhome Blocks");
         ottBase.addProperty("itemGroup.ott.color_sets", "New Otterhome Color Sets");

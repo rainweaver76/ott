@@ -1,3 +1,7 @@
 {
-  "parent": "ott:block/glass/clear_leaded_glass_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/glass/ctm/clear_leaded_glass"
+  },
+  "render_type": "minecraft:cutout"
 }

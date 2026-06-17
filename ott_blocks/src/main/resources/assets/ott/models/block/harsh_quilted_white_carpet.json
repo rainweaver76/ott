@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/carpet",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "wool": "ott:block/white_wool/harsh_quilted_white_wool_static"
+  }
+}

@@ -19,12 +19,20 @@
     "ott:tripped_green_wool",
     "ott:wickered_green_wool",
     "ott:windmill_green_wool",
-    "ott:wool_legacy_green",
-    "ott:wool_llama_green",
     "ott:woved_green_wool",
     "ott:cornered_green_wool",
     "ott:crafted_green_wool",
     "ott:harsh_quilted_green_wool",
-    "ott:rectangle_green_wool"
+    "ott:rectangle_green_wool",
+    "ott:delicate_green_wool_ctm",
+    "ott:ornamented_green_wool_ctm",
+    "ott:legacy_green_wool",
+    "ott:legacy_green_wool_ctm",
+    "ott:llama_green_wool",
+    "ott:llama_green_wool_ctm",
+    "ott:cornered_green_wool_ctm",
+    "ott:crafted_green_wool_ctm",
+    "ott:harsh_quilted_green_wool_ctm",
+    "ott:rectangle_green_wool_ctm"
   ]
 }

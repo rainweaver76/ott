@@ -573,23 +573,7 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.STONE_BRICKS_MASONRY);
                 output.accept(ModBlocks.STONE_BRICKS_MASONRY_EDGE);
                 output.accept(ModBlocks.STONE_BRICKS_MASONRY_PLATE);
-
-                output.accept(OttBlocks.ORNAMENTED_RED_WOOL);
-                output.accept(ModBlocks.ORNAMENTED_RED_CARPET);
-                output.accept(OttBlocks.DELICATE_RED_WOOL);
-                output.accept(ModBlocks.DELICATE_RED_CARPET);
-                output.accept(OttBlocks.ORNAMENTED_BLUE_WOOL);
-                output.accept(ModBlocks.ORNAMENTED_BLUE_CARPET);
-                output.accept(OttBlocks.DELICATE_BLUE_WOOL);
-                output.accept(ModBlocks.DELICATE_BLUE_CARPET);
-                output.accept(OttBlocks.ORNAMENTED_GREEN_WOOL);
-                output.accept(ModBlocks.ORNAMENTED_GREEN_CARPET);
-                output.accept(OttBlocks.DELICATE_GREEN_WOOL);
-                output.accept(ModBlocks.DELICATE_GREEN_CARPET);
-                output.accept(OttBlocks.ORNAMENTED_PURPLE_WOOL);
-                output.accept(ModBlocks.ORNAMENTED_PURPLE_CARPET);
-                output.accept(OttBlocks.DELICATE_PURPLE_WOOL);
-                output.accept(ModBlocks.DELICATE_PURPLE_CARPET);
+                // (Decorative wool family moved to the ENGRAVED tab — they're engraving-system blocks.)
             }),
 
     // ── Vanilla Plus: Stone ───────────────────────────────────────────────────
@@ -831,6 +815,8 @@ public enum OttCreativeCategories {
             (params, output) -> {
                 // Imported cube_all decorative blocks (grouped by material, sorted)
                 com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.values().forEach(output::accept);
+                // Plain carpets for imported wool variants
+                OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(output::accept);
                 output.accept(OttBlocks.ACACIA_PLANKS_BEAMS);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PATTERN);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PAVING);
@@ -1428,46 +1414,14 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.CORNERED_ACACIA_PLANKS);
                 output.accept(OttBlocks.CORNERED_BAMBOO_PLANKS);
                 output.accept(OttBlocks.CORNERED_BIRCH_PLANKS);
-                output.accept(OttBlocks.CORNERED_BLACK_WOOL);
-                output.accept(OttBlocks.CORNERED_BLUE_WOOL);
-                output.accept(OttBlocks.CORNERED_BROWN_WOOL);
                 output.accept(OttBlocks.CORNERED_CHERRY_PLANKS);
                 output.accept(OttBlocks.CORNERED_CRIMSON_PLANKS);
-                output.accept(OttBlocks.CORNERED_CYAN_WOOL);
                 output.accept(OttBlocks.CORNERED_DARK_OAK_PLANKS);
-                output.accept(OttBlocks.CORNERED_GRAY_WOOL);
-                output.accept(OttBlocks.CORNERED_GREEN_WOOL);
                 output.accept(OttBlocks.CORNERED_JUNGLE_PLANKS);
-                output.accept(OttBlocks.CORNERED_LIGHT_BLUE_WOOL);
-                output.accept(OttBlocks.CORNERED_LIGHT_GRAY_WOOL);
-                output.accept(OttBlocks.CORNERED_LIME_WOOL);
-                output.accept(OttBlocks.CORNERED_MAGENTA_WOOL);
                 output.accept(OttBlocks.CORNERED_MANGROVE_PLANKS);
                 output.accept(OttBlocks.CORNERED_OAK_PLANKS);
-                output.accept(OttBlocks.CORNERED_ORANGE_WOOL);
-                output.accept(OttBlocks.CORNERED_PINK_WOOL);
-                output.accept(OttBlocks.CORNERED_PURPLE_WOOL);
-                output.accept(OttBlocks.CORNERED_RED_WOOL);
                 output.accept(OttBlocks.CORNERED_SPRUCE_PLANKS);
                 output.accept(OttBlocks.CORNERED_WARPED_PLANKS);
-                output.accept(OttBlocks.CORNERED_WHITE_WOOL);
-                output.accept(OttBlocks.CORNERED_YELLOW_WOOL);
-                output.accept(OttBlocks.CRAFTED_BLACK_WOOL);
-                output.accept(OttBlocks.CRAFTED_BLUE_WOOL);
-                output.accept(OttBlocks.CRAFTED_BROWN_WOOL);
-                output.accept(OttBlocks.CRAFTED_CYAN_WOOL);
-                output.accept(OttBlocks.CRAFTED_GRAY_WOOL);
-                output.accept(OttBlocks.CRAFTED_GREEN_WOOL);
-                output.accept(OttBlocks.CRAFTED_LIGHT_BLUE_WOOL);
-                output.accept(OttBlocks.CRAFTED_LIGHT_GRAY_WOOL);
-                output.accept(OttBlocks.CRAFTED_LIME_WOOL);
-                output.accept(OttBlocks.CRAFTED_MAGENTA_WOOL);
-                output.accept(OttBlocks.CRAFTED_ORANGE_WOOL);
-                output.accept(OttBlocks.CRAFTED_PINK_WOOL);
-                output.accept(OttBlocks.CRAFTED_PURPLE_WOOL);
-                output.accept(OttBlocks.CRAFTED_RED_WOOL);
-                output.accept(OttBlocks.CRAFTED_WHITE_WOOL);
-                output.accept(OttBlocks.CRAFTED_YELLOW_WOOL);
                 output.accept(OttBlocks.CRATED_ACACIA_PLANKS);
                 output.accept(OttBlocks.CRATED_BAMBOO_PLANKS);
                 output.accept(OttBlocks.CRATED_BIRCH_PLANKS);
@@ -2137,22 +2091,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.HARD_MUD);
                 output.accept(OttBlocks.HARD_MUD_BRICKS);
                 output.accept(OttBlocks.HARD_PACKED_MUD);
-                output.accept(OttBlocks.HARSH_QUILTED_BLACK_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_BLUE_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_BROWN_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_CYAN_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_GRAY_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_GREEN_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_LIGHT_BLUE_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_LIGHT_GRAY_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_LIME_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_MAGENTA_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_ORANGE_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_PINK_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_PURPLE_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_RED_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_WHITE_WOOL);
-                output.accept(OttBlocks.HARSH_QUILTED_YELLOW_WOOL);
                 output.accept(OttBlocks.HEXAGONICAL_BLACK_TERRACOTTA);
                 output.accept(OttBlocks.HEXAGONICAL_BLUE_TERRACOTTA);
                 output.accept(OttBlocks.HEXAGONICAL_BROWN_TERRACOTTA);
@@ -3079,22 +3017,13 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_CTM);
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_CTM_PANE);
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_PANE);
-                output.accept(OttBlocks.RECTANGLE_BLACK_WOOL);
-                output.accept(OttBlocks.RECTANGLE_BLUE_WOOL);
-                output.accept(OttBlocks.RECTANGLE_BROWN_WOOL);
-                output.accept(OttBlocks.RECTANGLE_CYAN_WOOL);
-                output.accept(OttBlocks.RECTANGLE_GRAY_WOOL);
-                output.accept(OttBlocks.RECTANGLE_GREEN_WOOL);
-                output.accept(OttBlocks.RECTANGLE_LIGHT_BLUE_WOOL);
-                output.accept(OttBlocks.RECTANGLE_LIGHT_GRAY_WOOL);
-                output.accept(OttBlocks.RECTANGLE_LIME_WOOL);
-                output.accept(OttBlocks.RECTANGLE_MAGENTA_WOOL);
-                output.accept(OttBlocks.RECTANGLE_ORANGE_WOOL);
-                output.accept(OttBlocks.RECTANGLE_PINK_WOOL);
-                output.accept(OttBlocks.RECTANGLE_PURPLE_WOOL);
-                output.accept(OttBlocks.RECTANGLE_RED_WOOL);
-                output.accept(OttBlocks.RECTANGLE_WHITE_WOOL);
-                output.accept(OttBlocks.RECTANGLE_YELLOW_WOOL);
+                // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm})
+                OttBlocks.STYLED_WOOL.values().forEach(output::accept);
+                OttBlocks.STYLED_CARPET.values().forEach(output::accept);
+                // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm}) —
+                // engraving-system blocks, grouped here with the other decorative wools.
+                OttBlocks.DECO_WOOL.values().forEach(output::accept);
+                OttBlocks.DECO_CARPET.values().forEach(output::accept);
                 output.accept(OttBlocks.RED_ACACIA_LEAVES);
                 output.accept(OttBlocks.RED_BIRCH_LEAVES);
                 output.accept(OttBlocks.RED_CONCRETE_CTM);

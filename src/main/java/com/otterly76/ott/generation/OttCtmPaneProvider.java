@@ -183,7 +183,7 @@ public class OttCtmPaneProvider implements DataProvider {
 
         specs.add(new PaneSpec("soul_glass_ctm_pane",
             "ott:block/glass/ctm/soul_glass",
-            "ott:block/misc/soul_glass", "minecraft:translucent", false));
+            "ott:block/glass/soul_glass_edge", "minecraft:translucent", false));
 
         specs.add(new PaneSpec("borderless_glass_ctm_pane",
             "ott:block/glass/ctm/borderless_glass",
@@ -203,6 +203,14 @@ public class OttCtmPaneProvider implements DataProvider {
         specs.add(new PaneSpec("ornate_leaded_glass_ctm_pane",
             "ott:block/glass/ctm/ornate_leaded_glass_ctm",
             "ott:block/glass/leaded_glass_pane_edge", "minecraft:cutout", false));
+
+        // remaining colourless leaded glass oddballs — leaded frame edge, cutout
+        for (String leaded : new String[]{"clear_leaded_glass", "fancy_leaded_glass",
+                                          "raster_leaded_glass", "small_diamond_leaded_glass"}) {
+            specs.add(new PaneSpec(leaded + "_ctm_pane",
+                "ott:block/glass/ctm/" + leaded,
+                "ott:block/glass/leaded_glass_pane_edge", "minecraft:cutout", false));
+        }
 
         return specs;
     }
@@ -253,7 +261,9 @@ public class OttCtmPaneProvider implements DataProvider {
     // ── block model writer ────────────────────────────────────────────────────
 
     private void writeBlockPaneModels(CachedOutput cache, Path dir, PaneSpec spec) {
-        String suf = spec.vertical() ? "_vertical" : "_full";
+        // Vertical panes use the vertical pane parents; everything else now uses the compact
+        // pane geometry driven by the pieces_pane layout (shares the block's 80×16 pieces strip).
+        String suf = spec.vertical() ? "_vertical" : "_compact";
         writeBlockModel(cache, dir.resolve(spec.name() + "_post.json"),
             "ott:block/ctm/ctm_pane_post" + suf, spec);
         writeBlockModel(cache, dir.resolve(spec.name() + "_side.json"),
@@ -280,7 +290,7 @@ public class OttCtmPaneProvider implements DataProvider {
 
         JsonObject json = new JsonObject();
         json.addProperty("loader", "ott:mosaic");
-        if (spec.vertical()) json.addProperty("layout", "vertical");
+        json.addProperty("layout", spec.vertical() ? "vertical" : "pieces_pane");
         json.addProperty("parent", parent);
         json.add("textures", textures);
         json.add("connections", connections);
@@ -295,7 +305,7 @@ public class OttCtmPaneProvider implements DataProvider {
         JsonObject textures = new JsonObject();
         textures.addProperty("front", spec.paneTexture());
         textures.addProperty("side", spec.edgeTexture());
-        String parent = "ott:item/glass_pane_ctm_" + (spec.vertical() ? "vertical" : "full");
+        String parent = "ott:item/glass_pane_ctm_" + (spec.vertical() ? "vertical" : "compact");
         JsonObject json = new JsonObject();
         json.addProperty("parent", parent);
         json.add("textures", textures);

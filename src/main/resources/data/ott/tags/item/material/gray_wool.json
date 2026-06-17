@@ -17,12 +17,22 @@
     "ott:tripped_gray_wool",
     "ott:wickered_gray_wool",
     "ott:windmill_gray_wool",
-    "ott:wool_legacy_gray",
-    "ott:wool_llama_gray",
     "ott:woved_gray_wool",
     "ott:cornered_gray_wool",
     "ott:crafted_gray_wool",
     "ott:harsh_quilted_gray_wool",
-    "ott:rectangle_gray_wool"
+    "ott:rectangle_gray_wool",
+    "ott:delicate_gray_wool",
+    "ott:delicate_gray_wool_ctm",
+    "ott:ornamented_gray_wool",
+    "ott:ornamented_gray_wool_ctm",
+    "ott:legacy_gray_wool",
+    "ott:legacy_gray_wool_ctm",
+    "ott:llama_gray_wool",
+    "ott:llama_gray_wool_ctm",
+    "ott:cornered_gray_wool_ctm",
+    "ott:crafted_gray_wool_ctm",
+    "ott:harsh_quilted_gray_wool_ctm",
+    "ott:rectangle_gray_wool_ctm"
   ]
 }

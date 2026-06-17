@@ -17,12 +17,22 @@
     "ott:tripped_yellow_wool",
     "ott:wickered_yellow_wool",
     "ott:windmill_yellow_wool",
-    "ott:wool_legacy_yellow",
-    "ott:wool_llama_yellow",
     "ott:woved_yellow_wool",
     "ott:cornered_yellow_wool",
     "ott:crafted_yellow_wool",
     "ott:harsh_quilted_yellow_wool",
-    "ott:rectangle_yellow_wool"
+    "ott:rectangle_yellow_wool",
+    "ott:delicate_yellow_wool",
+    "ott:delicate_yellow_wool_ctm",
+    "ott:ornamented_yellow_wool",
+    "ott:ornamented_yellow_wool_ctm",
+    "ott:legacy_yellow_wool",
+    "ott:legacy_yellow_wool_ctm",
+    "ott:llama_yellow_wool",
+    "ott:llama_yellow_wool_ctm",
+    "ott:cornered_yellow_wool_ctm",
+    "ott:crafted_yellow_wool_ctm",
+    "ott:harsh_quilted_yellow_wool_ctm",
+    "ott:rectangle_yellow_wool_ctm"
   ]
 }

@@ -17,12 +17,22 @@
     "ott:tripped_orange_wool",
     "ott:wickered_orange_wool",
     "ott:windmill_orange_wool",
-    "ott:wool_legacy_orange",
-    "ott:wool_llama_orange",
     "ott:woved_orange_wool",
     "ott:cornered_orange_wool",
     "ott:crafted_orange_wool",
     "ott:harsh_quilted_orange_wool",
-    "ott:rectangle_orange_wool"
+    "ott:rectangle_orange_wool",
+    "ott:delicate_orange_wool",
+    "ott:delicate_orange_wool_ctm",
+    "ott:ornamented_orange_wool",
+    "ott:ornamented_orange_wool_ctm",
+    "ott:legacy_orange_wool",
+    "ott:legacy_orange_wool_ctm",
+    "ott:llama_orange_wool",
+    "ott:llama_orange_wool_ctm",
+    "ott:cornered_orange_wool_ctm",
+    "ott:crafted_orange_wool_ctm",
+    "ott:harsh_quilted_orange_wool_ctm",
+    "ott:rectangle_orange_wool_ctm"
   ]
 }

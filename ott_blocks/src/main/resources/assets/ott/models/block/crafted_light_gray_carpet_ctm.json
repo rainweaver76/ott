@@ -1,0 +1,19 @@
+{
+  "parent": "ott:block/ctm/ctm_carpet_pieces",
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "all": "ott:block/light_gray_wool/ctm/crafted_light_gray_wool"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "isolated": {
+    "all": "ott:block/light_gray_wool/crafted_light_gray_wool_static"
+  }
+}

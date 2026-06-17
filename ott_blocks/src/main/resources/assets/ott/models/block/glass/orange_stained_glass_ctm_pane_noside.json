@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_noside_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_compact",
   "textures": {
     "pane": "ott:block/orange_stained_glass/ctm/orange_stained_glass",
     "edge": "minecraft:block/orange_stained_glass_pane_top"

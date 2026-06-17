@@ -268,24 +268,24 @@ public class ModItems {
     public static final DeferredItem<Item> PSYCHO_JELLY_BUCKET = ITEMS.register("psycho_jelly_bucket", () -> new net.minecraft.world.item.MobBucketItem(ModEntities.PSYCHO_JELLY.get(), net.minecraft.world.level.material.Fluids.WATER, net.minecraft.sounds.SoundEvents.BUCKET_EMPTY_FISH, new Item.Properties().stacksTo(1)));
 
     // --- Paxels ---
-    public static final DeferredItem<PaxelItem> WOOD_PAXEL = ITEMS.register("wood_paxel", () -> new PaxelItem(Tiers.WOOD, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.WOOD, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> STONE_PAXEL = ITEMS.register("stone_paxel", () -> new PaxelItem(Tiers.STONE, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.STONE, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> IRON_PAXEL = ITEMS.register("iron_paxel", () -> new PaxelItem(Tiers.IRON, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.IRON, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> GOLDEN_PAXEL = ITEMS.register("golden_paxel", () -> new PaxelItem(Tiers.GOLD, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.GOLD, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> DIAMOND_PAXEL = ITEMS.register("diamond_paxel", () -> new PaxelItem(Tiers.DIAMOND, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> NETHERITE_PAXEL = ITEMS.register("netherite_paxel", () -> new PaxelItem(Tiers.NETHERITE, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 4.0F, -2.4F)).fireResistant()));
-    public static final DeferredItem<PaxelItem> COPPER_PAXEL = ITEMS.register("copper_paxel", () -> new PaxelItem(ModToolMaterials.COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.COPPER, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> EXPOSED_COPPER_PAXEL = ITEMS.register("exposed_copper_paxel", () -> new PaxelItem(ModToolMaterials.EXPOSED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.EXPOSED_COPPER, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> WEATHERED_COPPER_PAXEL = ITEMS.register("weathered_copper_paxel", () -> new PaxelItem(ModToolMaterials.WEATHERED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.WEATHERED_COPPER, 4.0F, -2.4F))));
-    public static final DeferredItem<PaxelItem> OXIDIZED_COPPER_PAXEL = ITEMS.register("oxidized_copper_paxel", () -> new PaxelItem(ModToolMaterials.OXIDIZED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.OXIDIZED_COPPER, 4.0F, -2.4F))));
+    public static final DeferredItem<PaxelItem> WOOD_PAXEL = ITEMS.register("wood_paxel", () -> new PaxelItem(Tiers.WOOD, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.WOOD, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> STONE_PAXEL = ITEMS.register("stone_paxel", () -> new PaxelItem(Tiers.STONE, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.STONE, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> IRON_PAXEL = ITEMS.register("iron_paxel", () -> new PaxelItem(Tiers.IRON, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.IRON, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> GOLDEN_PAXEL = ITEMS.register("golden_paxel", () -> new PaxelItem(Tiers.GOLD, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.GOLD, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> DIAMOND_PAXEL = ITEMS.register("diamond_paxel", () -> new PaxelItem(Tiers.DIAMOND, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> NETHERITE_PAXEL = ITEMS.register("netherite_paxel", () -> new PaxelItem(Tiers.NETHERITE, new Item.Properties().attributes(PickaxeItem.createAttributes(Tiers.NETHERITE, 7.0F, -2.8F)).fireResistant()));
+    public static final DeferredItem<PaxelItem> COPPER_PAXEL = ITEMS.register("copper_paxel", () -> new PaxelItem(ModToolMaterials.COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.COPPER, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> EXPOSED_COPPER_PAXEL = ITEMS.register("exposed_copper_paxel", () -> new PaxelItem(ModToolMaterials.EXPOSED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.EXPOSED_COPPER, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> WEATHERED_COPPER_PAXEL = ITEMS.register("weathered_copper_paxel", () -> new PaxelItem(ModToolMaterials.WEATHERED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.WEATHERED_COPPER, 7.0F, -2.8F))));
+    public static final DeferredItem<PaxelItem> OXIDIZED_COPPER_PAXEL = ITEMS.register("oxidized_copper_paxel", () -> new PaxelItem(ModToolMaterials.OXIDIZED_COPPER, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.OXIDIZED_COPPER, 7.0F, -2.8F))));
 
     // --- Reinforced Obsidian Tools ---
-    public static final DeferredItem<SwordItem> REINFORCED_OBSIDIAN_SWORD = ITEMS.register("reinforced_obsidian_sword", () -> new SwordItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(SwordItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 3, -2.4F))));
-    public static final DeferredItem<ShovelItem> REINFORCED_OBSIDIAN_SHOVEL = ITEMS.register("reinforced_obsidian_shovel", () -> new ShovelItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 1.5F, -3.0F))));
-    public static final DeferredItem<PickaxeItem> REINFORCED_OBSIDIAN_PICKAXE = ITEMS.register("reinforced_obsidian_pickaxe", () -> new PickaxeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 1.0F, -2.4F))));
-    public static final DeferredItem<AxeItem> REINFORCED_OBSIDIAN_AXE = ITEMS.register("reinforced_obsidian_axe", () -> new AxeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(AxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 6.0F, -3.1F))));
-    public static final DeferredItem<HoeItem> REINFORCED_OBSIDIAN_HOE = ITEMS.register("reinforced_obsidian_hoe", () -> new HoeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(HoeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, -3.0F, 0.0F))));
-    public static final DeferredItem<PaxelItem> REINFORCED_OBSIDIAN_PAXEL = ITEMS.register("reinforced_obsidian_paxel", () -> new PaxelItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 4.0F, -2.4F))));
+    public static final DeferredItem<SwordItem> REINFORCED_OBSIDIAN_SWORD = ITEMS.register("reinforced_obsidian_sword", () -> new SwordItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(SwordItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 6, -2.2F)).fireResistant()));
+    public static final DeferredItem<ShovelItem> REINFORCED_OBSIDIAN_SHOVEL = ITEMS.register("reinforced_obsidian_shovel", () -> new ShovelItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(ShovelItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 4.5F, -2.8F)).fireResistant()));
+    public static final DeferredItem<PickaxeItem> REINFORCED_OBSIDIAN_PICKAXE = ITEMS.register("reinforced_obsidian_pickaxe", () -> new PickaxeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 4F, -2.6F)).fireResistant()));
+    public static final DeferredItem<AxeItem> REINFORCED_OBSIDIAN_AXE = ITEMS.register("reinforced_obsidian_axe", () -> new AxeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(AxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 8F, -2.8F)).fireResistant()));
+    public static final DeferredItem<HoeItem> REINFORCED_OBSIDIAN_HOE = ITEMS.register("reinforced_obsidian_hoe", () -> new HoeItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(HoeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, -1F, 0.2F)).fireResistant()));
+    public static final DeferredItem<PaxelItem> REINFORCED_OBSIDIAN_PAXEL = ITEMS.register("reinforced_obsidian_paxel", () -> new PaxelItem(ModToolMaterials.REINFORCED_OBSIDIAN, new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolMaterials.REINFORCED_OBSIDIAN, 10.0F, -2.6F)).fireResistant()));
 
     public static DeferredItem<Item> PALE_OAK_SAPLING;
 
@@ -550,14 +550,8 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> CURVED_RAKED_GRAVEL = registerBlockItem("curved_raked_gravel", ModBlocks.CURVED_RAKED_GRAVEL);
     public static final DeferredHolder<Item, BlockItem> STRAIGHT_RAKED_GRAVEL = registerBlockItem("straight_raked_gravel", ModBlocks.STRAIGHT_RAKED_GRAVEL);
 
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_RED_CARPET = registerBlockItem("ornamented_red_carpet", ModBlocks.ORNAMENTED_RED_CARPET);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_RED_CARPET = registerBlockItem("delicate_red_carpet", ModBlocks.DELICATE_RED_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_BLUE_CARPET = registerBlockItem("ornamented_blue_carpet", ModBlocks.ORNAMENTED_BLUE_CARPET);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_BLUE_CARPET = registerBlockItem("delicate_blue_carpet", ModBlocks.DELICATE_BLUE_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_GREEN_CARPET = registerBlockItem("ornamented_green_carpet", ModBlocks.ORNAMENTED_GREEN_CARPET);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_GREEN_CARPET = registerBlockItem("delicate_green_carpet", ModBlocks.DELICATE_GREEN_CARPET);
-    public static final DeferredHolder<Item, BlockItem> ORNAMENTED_PURPLE_CARPET = registerBlockItem("ornamented_purple_carpet", ModBlocks.ORNAMENTED_PURPLE_CARPET);
-    public static final DeferredHolder<Item, BlockItem> DELICATE_PURPLE_CARPET = registerBlockItem("delicate_purple_carpet", ModBlocks.DELICATE_PURPLE_CARPET);
+    // Delicate/ornamented carpet items now auto-registered with their blocks in OttBlocks
+    // (DECO_CARPET via OttBlocks.register → ITEMS.registerSimpleBlockItem).
 
     public static final DeferredHolder<Item, BlockItem> OAK_PERGOLA = registerBlockItem("oak_pergola", ModBlocks.OAK_PERGOLA);
     public static final DeferredHolder<Item, BlockItem> OAK_BEAM = registerBlockItem("oak_beam", ModBlocks.OAK_BEAM);

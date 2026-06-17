@@ -17,12 +17,22 @@
     "ott:tripped_white_wool",
     "ott:wickered_white_wool",
     "ott:windmill_white_wool",
-    "ott:wool_legacy_white",
-    "ott:wool_llama_white",
     "ott:woved_white_wool",
     "ott:cornered_white_wool",
     "ott:crafted_white_wool",
     "ott:harsh_quilted_white_wool",
-    "ott:rectangle_white_wool"
+    "ott:rectangle_white_wool",
+    "ott:delicate_white_wool",
+    "ott:delicate_white_wool_ctm",
+    "ott:ornamented_white_wool",
+    "ott:ornamented_white_wool_ctm",
+    "ott:legacy_white_wool",
+    "ott:legacy_white_wool_ctm",
+    "ott:llama_white_wool",
+    "ott:llama_white_wool_ctm",
+    "ott:cornered_white_wool_ctm",
+    "ott:crafted_white_wool_ctm",
+    "ott:harsh_quilted_white_wool_ctm",
+    "ott:rectangle_white_wool_ctm"
   ]
 }

@@ -17,12 +17,22 @@
     "ott:tripped_magenta_wool",
     "ott:wickered_magenta_wool",
     "ott:windmill_magenta_wool",
-    "ott:wool_legacy_magenta",
-    "ott:wool_llama_magenta",
     "ott:woved_magenta_wool",
     "ott:cornered_magenta_wool",
     "ott:crafted_magenta_wool",
     "ott:harsh_quilted_magenta_wool",
-    "ott:rectangle_magenta_wool"
+    "ott:rectangle_magenta_wool",
+    "ott:delicate_magenta_wool",
+    "ott:delicate_magenta_wool_ctm",
+    "ott:ornamented_magenta_wool",
+    "ott:ornamented_magenta_wool_ctm",
+    "ott:legacy_magenta_wool",
+    "ott:legacy_magenta_wool_ctm",
+    "ott:llama_magenta_wool",
+    "ott:llama_magenta_wool_ctm",
+    "ott:cornered_magenta_wool_ctm",
+    "ott:crafted_magenta_wool_ctm",
+    "ott:harsh_quilted_magenta_wool_ctm",
+    "ott:rectangle_magenta_wool_ctm"
   ]
 }

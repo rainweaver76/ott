@@ -17,12 +17,22 @@
     "ott:tripped_light_blue_wool",
     "ott:wickered_light_blue_wool",
     "ott:windmill_light_blue_wool",
-    "ott:wool_legacy_light_blue",
-    "ott:wool_llama_light_blue",
     "ott:woved_light_blue_wool",
     "ott:cornered_light_blue_wool",
     "ott:crafted_light_blue_wool",
     "ott:harsh_quilted_light_blue_wool",
-    "ott:rectangle_light_blue_wool"
+    "ott:rectangle_light_blue_wool",
+    "ott:delicate_light_blue_wool",
+    "ott:delicate_light_blue_wool_ctm",
+    "ott:ornamented_light_blue_wool",
+    "ott:ornamented_light_blue_wool_ctm",
+    "ott:legacy_light_blue_wool",
+    "ott:legacy_light_blue_wool_ctm",
+    "ott:llama_light_blue_wool",
+    "ott:llama_light_blue_wool_ctm",
+    "ott:cornered_light_blue_wool_ctm",
+    "ott:crafted_light_blue_wool_ctm",
+    "ott:harsh_quilted_light_blue_wool_ctm",
+    "ott:rectangle_light_blue_wool_ctm"
   ]
 }

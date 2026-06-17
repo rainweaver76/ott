@@ -391,8 +391,6 @@ tiled_black_wool,black_wool
 tripped_black_wool,black_wool
 wickered_black_wool,black_wool
 windmill_black_wool,black_wool
-wool_legacy_black,black_wool
-wool_llama_black,black_wool
 woved_black_wool,black_wool
 angry_blackstone,blackstone
 blackstone_bricks,blackstone
@@ -542,8 +540,6 @@ tiled_blue_wool,blue_wool
 tripped_blue_wool,blue_wool
 wickered_blue_wool,blue_wool
 windmill_blue_wool,blue_wool
-wool_legacy_blue,blue_wool
-wool_llama_blue,blue_wool
 woved_blue_wool,blue_wool
 angry_borderless_bricks,borderless_bricks
 borderless_bricks_bricks,borderless_bricks
@@ -706,8 +702,6 @@ tiled_brown_wool,brown_wool
 tripped_brown_wool,brown_wool
 wickered_brown_wool,brown_wool
 windmill_brown_wool,brown_wool
-wool_legacy_brown,brown_wool
-wool_llama_brown,brown_wool
 woved_brown_wool,brown_wool
 angry_calcite,calcite
 calcite_bricks,calcite
@@ -1108,8 +1102,6 @@ tiled_cyan_wool,cyan_wool
 tripped_cyan_wool,cyan_wool
 wickered_cyan_wool,cyan_wool
 windmill_cyan_wool,cyan_wool
-wool_legacy_cyan,cyan_wool
-wool_llama_cyan,cyan_wool
 woved_cyan_wool,cyan_wool
 angry_dark_limestone,dark_limestone
 bordered_dark_limestone,dark_limestone
@@ -1690,8 +1682,6 @@ tiled_gray_wool,gray_wool
 tripped_gray_wool,gray_wool
 wickered_gray_wool,gray_wool
 windmill_gray_wool,gray_wool
-wool_legacy_gray,gray_wool
-wool_llama_gray,gray_wool
 woved_gray_wool,gray_wool
 bolted_green_concrete,green_concrete
 creeper_green_concrete,green_concrete
@@ -1741,8 +1731,6 @@ tiled_green_wool,green_wool
 tripped_green_wool,green_wool
 wickered_green_wool,green_wool
 windmill_green_wool,green_wool
-wool_legacy_green,green_wool
-wool_llama_green,green_wool
 woved_green_wool,green_wool
 angry_ice,ice
 carved_ice,ice
@@ -1935,8 +1923,6 @@ tiled_light_blue_wool,light_blue_wool
 tripped_light_blue_wool,light_blue_wool
 wickered_light_blue_wool,light_blue_wool
 windmill_light_blue_wool,light_blue_wool
-wool_legacy_light_blue,light_blue_wool
-wool_llama_light_blue,light_blue_wool
 woved_light_blue_wool,light_blue_wool
 bolted_light_gray_concrete,light_gray_concrete
 creeper_light_gray_concrete,light_gray_concrete
@@ -1986,8 +1972,6 @@ tiled_light_gray_wool,light_gray_wool
 tripped_light_gray_wool,light_gray_wool
 wickered_light_gray_wool,light_gray_wool
 windmill_light_gray_wool,light_gray_wool
-wool_legacy_light_gray,light_gray_wool
-wool_llama_light_gray,light_gray_wool
 woved_light_gray_wool,light_gray_wool
 bolted_lime_concrete,lime_concrete
 creeper_lime_concrete,lime_concrete
@@ -2037,8 +2021,6 @@ tiled_lime_wool,lime_wool
 tripped_lime_wool,lime_wool
 wickered_lime_wool,lime_wool
 windmill_lime_wool,lime_wool
-wool_legacy_lime,lime_wool
-wool_llama_lime,lime_wool
 woved_lime_wool,lime_wool
 angry_limestone,limestone
 bordered_limestone,limestone
@@ -2192,8 +2174,6 @@ tiled_magenta_wool,magenta_wool
 tripped_magenta_wool,magenta_wool
 wickered_magenta_wool,magenta_wool
 windmill_magenta_wool,magenta_wool
-wool_legacy_magenta,magenta_wool
-wool_llama_magenta,magenta_wool
 woved_magenta_wool,magenta_wool
 angry_magma_block,magma_block
 carved_magma_block,magma_block
@@ -2800,8 +2780,6 @@ tiled_orange_wool,orange_wool
 tripped_orange_wool,orange_wool
 wickered_orange_wool,orange_wool
 windmill_orange_wool,orange_wool
-wool_legacy_orange,orange_wool
-wool_llama_orange,orange_wool
 woved_orange_wool,orange_wool
 angry_packed_ice,packed_ice
 carved_packed_ice,packed_ice
@@ -2952,8 +2930,6 @@ tiled_pink_wool,pink_wool
 tripped_pink_wool,pink_wool
 wickered_pink_wool,pink_wool
 windmill_pink_wool,pink_wool
-wool_legacy_pink,pink_wool
-wool_llama_pink,pink_wool
 woved_pink_wool,pink_wool
 angry_prismarine,prismarine
 carved_prismarine,prismarine
@@ -3055,8 +3031,6 @@ tiled_purple_wool,purple_wool
 tripped_purple_wool,purple_wool
 wickered_purple_wool,purple_wool
 windmill_purple_wool,purple_wool
-wool_legacy_purple,purple_wool
-wool_llama_purple,purple_wool
 woved_purple_wool,purple_wool
 angry_purpur_block,purpur_block
 carved_purpur_block,purpur_block
@@ -3446,8 +3420,6 @@ tiled_red_wool,red_wool
 tripped_red_wool,red_wool
 wickered_red_wool,red_wool
 windmill_red_wool,red_wool
-wool_legacy_red,red_wool
-wool_llama_red,red_wool
 woved_red_wool,red_wool
 angry_redstone_block,redstone_block
 carved_redstone_block,redstone_block
@@ -4158,8 +4130,6 @@ tiled_white_wool,white_wool
 tripped_white_wool,white_wool
 wickered_white_wool,white_wool
 windmill_white_wool,white_wool
-wool_legacy_white,white_wool
-wool_llama_white,white_wool
 woved_white_wool,white_wool
 bolted_yellow_concrete,yellow_concrete
 creeper_yellow_concrete,yellow_concrete
@@ -4209,6 +4179,4 @@ tiled_yellow_wool,yellow_wool
 tripped_yellow_wool,yellow_wool
 wickered_yellow_wool,yellow_wool
 windmill_yellow_wool,yellow_wool
-wool_legacy_yellow,yellow_wool
-wool_llama_yellow,yellow_wool
 woved_yellow_wool,yellow_wool

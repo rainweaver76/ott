@@ -316,8 +316,8 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         // PIECES blocks must still render when there's no connection data — item rendering
         // (state == null) and any missing-mask case fall back to the solo tile (mask 0) via the
         // compositor, rather than the raw full-strip base model.
-        boolean piecesActive = isPieces(layout)
-                || spriteLayouts.values().stream().anyMatch(ConnectingBakedModel::isPieces);
+        boolean piecesActive = isPiecesItem(layout)
+                || spriteLayouts.values().stream().anyMatch(ConnectingBakedModel::isPiecesItem);
         if (masks == null && !piecesActive) return base;
 
         List<BakedQuad> result = new ArrayList<>(base.size());
@@ -338,6 +338,16 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
                     mask = (ruleIdx < 0 || ruleIdx >= masks.length) ? 0 : masks[ruleIdx][faceOrdinal];
                 }
                 addPieceQuads(result, quad, mask, faceOrdinal, stripAO);
+            } else if (l == CtmLayout.PIECES_PANE) {
+                // state == null is item rendering: no neighbours, so show the solo tile.
+                int mask;
+                if (state == null || masks == null) {
+                    mask = 0;
+                } else {
+                    int ruleIdx = spriteToRuleIndex.getOrDefault(quad.getSprite(), catchAllRuleIndex);
+                    mask = (ruleIdx < 0 || ruleIdx >= masks.length) ? 0 : masks[ruleIdx][faceOrdinal];
+                }
+                addPiecePaneQuads(result, quad, mask, faceOrdinal, stripAO);
             } else if (masks != null) {
                 result.add(remapQuad(quad, masks, faceOrdinal, stripAO));
             } else {
@@ -442,6 +452,11 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         return l == CtmLayout.PIECES;
     }
 
+    /** Layouts whose item (state==null) rendering must still composite the solo tile. */
+    private static boolean isPiecesItem(CtmLayout l) {
+        return l == CtmLayout.PIECES || l == CtmLayout.PIECES_PANE;
+    }
+
     /**
      * Returns a copy of {@code quad} with only its ambient-occlusion flag adjusted.
      */
@@ -539,6 +554,114 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
     private static float bilerp(float[][] p, int comp, float fu, float fv) {
         return p[0][comp] * (1 - fu) * (1 - fv) + p[1][comp] * fu * (1 - fv)
              + p[2][comp] * (1 - fu) * fv       + p[3][comp] * fu * fv;
+    }
+
+    // ---- PIECES_PANE: quarter composition clipped to a pane arm/post sub-strip ---------
+
+    /** Faces whose pane-strip horizontal (texture U) axis runs opposite world+; tune vs. in-game. */
+    private static final boolean[] PANE_FLIP_X = new boolean[6];
+    static {
+        PANE_FLIP_X[Direction.NORTH.ordinal()] = true;
+        PANE_FLIP_X[Direction.EAST.ordinal()]  = true;
+    }
+
+    /**
+     * Composes the pieces appearance for a glass/window PANE broad face. A pane is thin, so each
+     * arm/post broad face only covers a vertical sub-strip of the full 16×16 block face. We derive
+     * that sub-strip from the quad's baked GEOMETRY (robust to the blockstate's 90° arm rotations),
+     * then emit the quarter-pieces that overlap it, clipped — so a row/grid of panes composes the
+     * same corner/edge/interior pieces a full block would. Up/down edge faces and non-rectangular
+     * quads pass through unchanged.
+     */
+    private void addPiecePaneQuads(List<BakedQuad> out, BakedQuad quad, int mask, int faceOrdinal, boolean stripAO) {
+        boolean aoFlag = !stripAO && quad.hasAmbientOcclusion();
+        Direction dir = quad.getDirection();
+        if (dir.getAxis() == Direction.Axis.Y) { out.add(withAo(quad, aoFlag)); return; } // edge/cap faces
+
+        TextureAtlasSprite sprite = quad.getSprite();
+        int[] sv = quad.getVertices();
+        int stride = IQuadTransformer.STRIDE;
+        if (sv.length < 4 * stride) { out.add(withAo(quad, aoFlag)); return; }
+
+        // In-plane horizontal axis: N/S faces (normal Z) use X; E/W faces (normal X) use Z.
+        int hAxis = (dir.getAxis() == Direction.Axis.Z) ? 0 : 2;
+        boolean flipX = PANE_FLIP_X[faceOrdinal];
+
+        // Source positions (block-local 0..1) and per-vertex face coords (0..16, V top-down).
+        float[][] p = new float[4][3];
+        float[] fx = new float[4], fy = new float[4];
+        for (int i = 0; i < 4; i++) {
+            int bp = i * stride + IQuadTransformer.POSITION;
+            p[i][0] = Float.intBitsToFloat(sv[bp]);
+            p[i][1] = Float.intBitsToFloat(sv[bp + 1]);
+            p[i][2] = Float.intBitsToFloat(sv[bp + 2]);
+            float h = p[i][hAxis] * 16f;
+            fx[i] = flipX ? (16f - h) : h;
+            fy[i] = 16f - p[i][1] * 16f;
+        }
+        float fx0 = Math.min(Math.min(fx[0], fx[1]), Math.min(fx[2], fx[3]));
+        float fx1 = Math.max(Math.max(fx[0], fx[1]), Math.max(fx[2], fx[3]));
+        float fy0 = Math.min(Math.min(fy[0], fy[1]), Math.min(fy[2], fy[3]));
+        float fy1 = Math.max(Math.max(fy[0], fy[1]), Math.max(fy[2], fy[3]));
+        if (fx1 - fx0 < 1e-4f || fy1 - fy0 < 1e-4f) { out.add(withAo(quad, aoFlag)); return; }
+
+        // Map each source vertex to a rect corner (cx,cy) so winding is preserved.
+        int[] role = new int[4];
+        for (int i = 0; i < 4; i++) {
+            int cx = Math.abs(fx[i] - fx0) <= Math.abs(fx[i] - fx1) ? 0 : 1;
+            int cy = Math.abs(fy[i] - fy0) <= Math.abs(fy[i] - fy1) ? 0 : 1;
+            role[i] = cx + cy * 2;
+        }
+
+        if (FLIP_H[faceOrdinal]) mask = flipMaskH(mask);
+        boolean t  = (mask &   1) != 0, tr = (mask &   2) != 0, r  = (mask & 4) != 0, br = (mask & 8) != 0;
+        boolean b  = (mask &  16) != 0, bl = (mask &  32) != 0, lf = (mask & 64) != 0, tl = (mask & 128) != 0;
+
+        float u0 = sprite.getU0(), v0 = sprite.getV0();
+        float stripW = sprite.getU1() - u0, stripH = sprite.getV1() - v0;
+        float tileW = stripW / 5f, pieceW = tileW / 2f, halfH = stripH / 2f;
+
+        // [regionX, regionY, strip-column] for the 4 face quadrants.
+        int[][] qd = {
+            {0, 0, TYPE_TO_COL[pieceType(t, lf, tl)]},
+            {1, 0, TYPE_TO_COL[pieceType(t, r,  tr)]},
+            {0, 1, TYPE_TO_COL[pieceType(b, lf, bl)]},
+            {1, 1, TYPE_TO_COL[pieceType(b, r,  br)]},
+        };
+        for (int[] q : qd) {
+            int rx = q[0], ry = q[1], col = q[2];
+            float qx0 = rx * 8f, qy0 = ry * 8f;
+            float cx0 = Math.max(qx0, fx0), cx1 = Math.min(qx0 + 8f, fx1);
+            float cy0 = Math.max(qy0, fy0), cy1 = Math.min(qy0 + 8f, fy1);
+            if (cx1 - cx0 <= 1e-4f || cy1 - cy0 <= 1e-4f) continue; // quadrant not in this strip
+
+            int[] verts = sv.clone();
+            for (int i = 0; i < 4; i++) {
+                int cx = role[i] & 1, cy = role[i] >> 1;
+                float ax = (cx == 0) ? cx0 : cx1;
+                float ay = (cy == 0) ? cy0 : cy1;
+                // geometry: position within the source face-rect → bilerp source corners
+                float gfu = (ax - fx0) / (fx1 - fx0);
+                float gfv = (ay - fy0) / (fy1 - fy0);
+                int bp = i * stride;
+                verts[bp + IQuadTransformer.POSITION]     = Float.floatToRawIntBits(bilerpRole(p, 0, gfu, gfv, role));
+                verts[bp + IQuadTransformer.POSITION + 1] = Float.floatToRawIntBits(bilerpRole(p, 1, gfu, gfv, role));
+                verts[bp + IQuadTransformer.POSITION + 2] = Float.floatToRawIntBits(bilerpRole(p, 2, gfu, gfv, role));
+                // texture: position within the quadrant → that quarter of the strip tile
+                float tfu = (ax - qx0) / 8f, tfv = (ay - qy0) / 8f;
+                verts[bp + IQuadTransformer.UV0]     = Float.floatToRawIntBits(u0 + col * tileW + (rx + tfu) * pieceW);
+                verts[bp + IQuadTransformer.UV0 + 1] = Float.floatToRawIntBits(v0 + (ry + tfv) * halfH);
+            }
+            out.add(new BakedQuad(verts, quad.getTintIndex(), dir, sprite, quad.isShade(), aoFlag));
+        }
+    }
+
+    /** Bilerp of component {@code comp} using the per-vertex corner {@code role} (cx + cy*2). */
+    private static float bilerpRole(float[][] p, int comp, float fu, float fv, int[] role) {
+        float[] c = new float[4]; // c[cx + cy*2]
+        for (int i = 0; i < 4; i++) c[role[i]] = p[i][comp];
+        return c[0] * (1 - fu) * (1 - fv) + c[1] * fu * (1 - fv)
+             + c[2] * (1 - fu) * fv       + c[3] * fu * fv;
     }
 
     /**

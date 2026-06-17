@@ -376,14 +376,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.SANDSTONE_SLENDER_BRICKS.get(),
                 OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(),
                 OttBlocks.STONE_BRICKS_MASONRY.get(),
-                OttBlocks.ORNAMENTED_RED_WOOL.get(),
-                OttBlocks.DELICATE_RED_WOOL.get(),
-                OttBlocks.ORNAMENTED_BLUE_WOOL.get(),
-                OttBlocks.DELICATE_BLUE_WOOL.get(),
-                OttBlocks.ORNAMENTED_GREEN_WOOL.get(),
-                OttBlocks.DELICATE_GREEN_WOOL.get(),
-                OttBlocks.ORNAMENTED_PURPLE_WOOL.get(),
-                OttBlocks.DELICATE_PURPLE_WOOL.get(),
+                // (delicate/ornamented wool DO-materials now added via the deco-family loop below)
                 OttBlocks.WATER_MOSAIC_BORDER.get(),
                 OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),
                 OttBlocks.WATER_MOSAIC_PATTERN.get(),
@@ -591,27 +584,30 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.ROMAN_FRESCO_RED.get(),
                 OttBlocks.ROMAN_FRESCO_BLACK.get(),
                 OttBlocks.LIMESTONE_MASONRY.get(),
-                OttBlocks.STONE_BRICKS_MASONRY.get(),
+                OttBlocks.STONE_BRICKS_MASONRY.get()
                 // CTM polished/vanilla variants
-                // Ornamented / delicate wool & carpet
-                OttBlocks.ORNAMENTED_RED_WOOL.get(),
-                OttBlocks.DELICATE_RED_WOOL.get(),
-                ModBlocks.ORNAMENTED_RED_CARPET.get(),
-                ModBlocks.DELICATE_RED_CARPET.get(),
-                OttBlocks.ORNAMENTED_BLUE_WOOL.get(),
-                OttBlocks.DELICATE_BLUE_WOOL.get(),
-                ModBlocks.ORNAMENTED_BLUE_CARPET.get(),
-                ModBlocks.DELICATE_BLUE_CARPET.get(),
-                OttBlocks.ORNAMENTED_GREEN_WOOL.get(),
-                OttBlocks.DELICATE_GREEN_WOOL.get(),
-                ModBlocks.ORNAMENTED_GREEN_CARPET.get(),
-                ModBlocks.DELICATE_GREEN_CARPET.get(),
-                OttBlocks.ORNAMENTED_PURPLE_WOOL.get(),
-                OttBlocks.DELICATE_PURPLE_WOOL.get(),
-                ModBlocks.ORNAMENTED_PURPLE_CARPET.get(),
-                ModBlocks.DELICATE_PURPLE_CARPET.get()
+                // (delicate/ornamented wool & carpet now handled by the deco-family loop below)
                 // CTM vertical pillars
         );
+
+        // Patterned-wool family: every wool full-cube (solo + ctm) is a DO material; connecting
+        // (_ctm) wool + carpet also get the CTM_BLOCKS tooltip. Carpets auto-tag to FLOOR_TILES.
+        for (var e : OttBlocks.STYLED_WOOL.entrySet()) {
+            this.tag(doDefaultKey).add(e.getValue().get());
+            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
+        }
+        for (var e : OttBlocks.STYLED_CARPET.entrySet())
+            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
+
+        // Decorative wool family. Every wool full-cube (solo + ctm) is a DO material; connecting
+        // (_ctm) wool + carpet also go in CTM_BLOCKS (tooltip). Carpets auto-tag to FLOOR_TILES
+        // via the CarpetBlock case in the registry loop above.
+        for (var e : OttBlocks.DECO_WOOL.entrySet()) {
+            this.tag(doDefaultKey).add(e.getValue().get());
+            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
+        }
+        for (var e : OttBlocks.DECO_CARPET.entrySet())
+            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
 
         // Stone CTM connecting blocks
 

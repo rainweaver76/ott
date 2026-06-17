@@ -1,6 +1,0 @@
-{
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "ott:block/blue_wool/ctm/harsh_quilted_blue_wool"
-  }
-}

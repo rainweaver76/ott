@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_full",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
     "front": "ott:block/lime_stained_glass/ctm/small_lime_diamond_stained_glass_ctm",
     "side": "ott:block/glass/leaded_glass_pane_edge"

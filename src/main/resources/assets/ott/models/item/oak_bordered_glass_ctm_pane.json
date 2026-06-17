@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:item/glass_pane",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
-    "front": "ott:block/oak_planks/oak_bordered_glass",
+    "front": "ott:block/oak_planks/ctm/oak_bordered_glass",
     "side": "ott:block/oak_planks/oak_glass_pane_edge"
   },
   "render_type": "minecraft:cutout"

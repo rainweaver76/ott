@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_side_alt_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_side_alt_compact",
   "textures": {
     "pane": "ott:block/oak_planks/ctm/oak_line_bared_glass",
     "edge": "ott:block/oak_planks/oak_glass_pane_edge"

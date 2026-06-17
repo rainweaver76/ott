@@ -1,6 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_pane_noside_full",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_compact",
   "textures": {
     "pane": "ott:block/black_stained_glass/ctm/tiled_black_stained_glass_ctm",
     "edge": "ott:block/glass/leaded_glass_pane_edge"

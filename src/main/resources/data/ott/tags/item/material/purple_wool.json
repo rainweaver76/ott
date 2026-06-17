@@ -19,12 +19,20 @@
     "ott:tripped_purple_wool",
     "ott:wickered_purple_wool",
     "ott:windmill_purple_wool",
-    "ott:wool_legacy_purple",
-    "ott:wool_llama_purple",
     "ott:woved_purple_wool",
     "ott:cornered_purple_wool",
     "ott:crafted_purple_wool",
     "ott:harsh_quilted_purple_wool",
-    "ott:rectangle_purple_wool"
+    "ott:rectangle_purple_wool",
+    "ott:delicate_purple_wool_ctm",
+    "ott:ornamented_purple_wool_ctm",
+    "ott:legacy_purple_wool",
+    "ott:legacy_purple_wool_ctm",
+    "ott:llama_purple_wool",
+    "ott:llama_purple_wool_ctm",
+    "ott:cornered_purple_wool_ctm",
+    "ott:crafted_purple_wool_ctm",
+    "ott:harsh_quilted_purple_wool_ctm",
+    "ott:rectangle_purple_wool_ctm"
   ]
 }

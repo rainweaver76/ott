@@ -17,12 +17,22 @@
     "ott:tripped_cyan_wool",
     "ott:wickered_cyan_wool",
     "ott:windmill_cyan_wool",
-    "ott:wool_legacy_cyan",
-    "ott:wool_llama_cyan",
     "ott:woved_cyan_wool",
     "ott:cornered_cyan_wool",
     "ott:crafted_cyan_wool",
     "ott:harsh_quilted_cyan_wool",
-    "ott:rectangle_cyan_wool"
+    "ott:rectangle_cyan_wool",
+    "ott:delicate_cyan_wool",
+    "ott:delicate_cyan_wool_ctm",
+    "ott:ornamented_cyan_wool",
+    "ott:ornamented_cyan_wool_ctm",
+    "ott:legacy_cyan_wool",
+    "ott:legacy_cyan_wool_ctm",
+    "ott:llama_cyan_wool",
+    "ott:llama_cyan_wool_ctm",
+    "ott:cornered_cyan_wool_ctm",
+    "ott:crafted_cyan_wool_ctm",
+    "ott:harsh_quilted_cyan_wool_ctm",
+    "ott:rectangle_cyan_wool_ctm"
   ]
 }

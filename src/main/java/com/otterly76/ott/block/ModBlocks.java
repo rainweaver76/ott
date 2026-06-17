@@ -872,14 +872,8 @@ public class ModBlocks {
     public static final DeferredBlock<RakedGravelBlock> CURVED_RAKED_GRAVEL = register("curved_raked_gravel", () -> new RakedGravelBlock(true, Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<RakedGravelBlock> STRAIGHT_RAKED_GRAVEL = register("straight_raked_gravel", () -> new RakedGravelBlock(false, Properties.ofFullCopy(Blocks.GRAVEL)));
 
-    public static final DeferredBlock<CarpetBlock> ORNAMENTED_RED_CARPET = register("ornamented_red_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> DELICATE_RED_CARPET = register("delicate_red_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> ORNAMENTED_BLUE_CARPET = register("ornamented_blue_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> DELICATE_BLUE_CARPET = register("delicate_blue_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> ORNAMENTED_GREEN_CARPET = register("ornamented_green_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> DELICATE_GREEN_CARPET = register("delicate_green_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> ORNAMENTED_PURPLE_CARPET = register("ornamented_purple_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
-    public static final DeferredBlock<CarpetBlock> DELICATE_PURPLE_CARPET = register("delicate_purple_carpet", () -> new CarpetBlock(Properties.of().strength(0.1F).sound(SoundType.WOOL)));
+    // Delicate/ornamented carpets moved to the unified decorative-wool family in
+    // OttBlocks.DECO_CARPET (4 styles × 16 colors × {solo, _ctm}). See OttBlocks.registerDecoWoolFamily().
 
     public static final DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> OAK_PERGOLA = register("oak_pergola",
             () -> new com.otterly76.ott.block.custom.PergolaBlock(

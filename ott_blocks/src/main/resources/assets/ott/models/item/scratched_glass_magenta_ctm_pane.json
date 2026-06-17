@@ -1,5 +1,5 @@
 {
-  "parent": "ott:item/glass_pane_ctm_full",
+  "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
     "front": "ott:block/magenta_stained_glass/ctm/scratched_glass_magenta",
     "side": "ott:block/magenta_stained_glass/scratched_glass_magenta_edge"

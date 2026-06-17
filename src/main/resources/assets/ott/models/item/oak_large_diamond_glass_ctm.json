@@ -1,3 +1,7 @@
 {
-  "parent": "ott:block/oak_planks/oak_large_diamond_glass_ctm"
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/oak_planks/ctm/oak_large_diamond_glass"
+  },
+  "render_type": "minecraft:cutout"
 }

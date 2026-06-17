@@ -1,0 +1,19 @@
+{
+  "parent": "ott:block/ctm/ctm_carpet_pieces",
+  "loader": "ott:mosaic",
+  "layout": "pieces_full",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "all": "ott:block/ornamented_carpet/ornamented_pink_carpet-ctm"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "isolated": {
+    "all": "ott:block/ornamented_carpet/ornamented_pink_carpet_static"
+  }
+}
