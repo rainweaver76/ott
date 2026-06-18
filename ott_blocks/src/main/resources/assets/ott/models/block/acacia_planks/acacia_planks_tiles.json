@@ -1,6 +1,6 @@
 {
-  "parent": "ott:block/ctm/ctm_cube_all_pieces_static",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "ott:block/acacia_planks/ctm/acacia_planks_tiles"
+    "all": "ott:block/acacia_planks/acacia_planks_tiles"
   }
 }

@@ -6,8 +6,6 @@
       "required": false
     },
     "ott:angry_ochrum",
-    "ott:bordered_ochrum",
-    "ott:brick_bordered_ochrum",
     "ott:carved_ochrum",
     "ott:checkered_ochrum_tiles",
     "ott:cobbled_ochrum",
@@ -47,9 +45,7 @@
     "ott:spiraled_ochrum",
     "ott:stacked_ochrum_bricks",
     "ott:thick_inlayed_ochrum",
-    "ott:tiled_bordered_ochrum",
     "ott:tiled_ochrum",
-    "ott:tiny_brick_bordered_ochrum",
     "ott:tiny_layered_ochrum_bricks",
     "ott:tiny_layered_ochrum_slabs",
     "ott:tiny_ochrum_bricks",

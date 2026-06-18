@@ -221,9 +221,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         } else if (importMat.contains("copper")) {
                             this.tag(doCopperKey).add(block);
                         }
-                    } else if (bPath.endsWith("_ctm") || bPath.endsWith("_connecting")
-                            || bPath.startsWith("bordered_") || bPath.contains("_bordered_")) {
-                        // CTM blocks (including bordered variants that lack the _ctm suffix)
+                    } else if (bPath.endsWith("_ctm")) {
+                        // CTM (connecting) blocks — uniform _ctm suffix
                         this.tag(ModTags.Blocks.CTM_BLOCKS).add(block);
                         pickaxeTag.add(block);
                     } else if (bPath.contains("_marble")) {

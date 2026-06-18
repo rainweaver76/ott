@@ -6,8 +6,6 @@
       "required": false
     },
     "ott:angry_dark_limestone",
-    "ott:bordered_dark_limestone",
-    "ott:brick_bordered_dark_limestone",
     "ott:carved_dark_limestone",
     "ott:checkered_dark_limestone_tiles",
     "ott:cobbled_dark_limestone",
@@ -48,9 +46,7 @@
     "ott:spiraled_dark_limestone",
     "ott:stacked_dark_limestone_bricks",
     "ott:thick_inlayed_dark_limestone",
-    "ott:tiled_bordered_dark_limestone",
     "ott:tiled_dark_limestone",
-    "ott:tiny_brick_bordered_dark_limestone",
     "ott:tiny_dark_limestone_bricks",
     "ott:tiny_layered_dark_limestone_bricks",
     "ott:tiny_layered_dark_limestone_slabs",

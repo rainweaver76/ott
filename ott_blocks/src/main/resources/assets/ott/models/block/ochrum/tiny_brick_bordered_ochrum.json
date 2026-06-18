@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/ochrum/tiny_brick_bordered_ochrum"
-  }
-}

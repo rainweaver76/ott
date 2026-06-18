@@ -6,8 +6,6 @@
       "required": false
     },
     "ott:angry_rose_quartz",
-    "ott:bordered_rose_quartz",
-    "ott:brick_bordered_rose_quartz",
     "ott:carved_rose_quartz",
     "ott:checkered_rose_quartz_tiles",
     "ott:cobbled_rose_quartz",
@@ -46,9 +44,7 @@
     "ott:spiraled_rose_quartz",
     "ott:stacked_rose_quartz_bricks",
     "ott:thick_inlayed_rose_quartz",
-    "ott:tiled_bordered_rose_quartz",
     "ott:tiled_rose_quartz",
-    "ott:tiny_brick_bordered_rose_quartz",
     "ott:tiny_layered_rose_quartz_bricks",
     "ott:tiny_layered_rose_quartz_slabs",
     "ott:tiny_rose_quartz_bricks",
