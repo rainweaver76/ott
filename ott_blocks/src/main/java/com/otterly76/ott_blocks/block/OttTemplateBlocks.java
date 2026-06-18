@@ -202,6 +202,25 @@ public final class OttTemplateBlocks {
         BASE.put("glowstone", Blocks.GLOWSTONE);
         BASE.put("bone_block", Blocks.BONE_BLOCK);
         BASE.put("sea_lantern", Blocks.SEA_LANTERN);
+        // glass materials (Wave 1c) — registered via the `glass` template (TransparentBlock)
+        BASE.put("glass", Blocks.GLASS);
+        BASE.put("golden_framed_glass", Blocks.GLASS); // OTT material; copy glass props
+        BASE.put("white_stained_glass", Blocks.WHITE_STAINED_GLASS);
+        BASE.put("orange_stained_glass", Blocks.ORANGE_STAINED_GLASS);
+        BASE.put("magenta_stained_glass", Blocks.MAGENTA_STAINED_GLASS);
+        BASE.put("light_blue_stained_glass", Blocks.LIGHT_BLUE_STAINED_GLASS);
+        BASE.put("yellow_stained_glass", Blocks.YELLOW_STAINED_GLASS);
+        BASE.put("lime_stained_glass", Blocks.LIME_STAINED_GLASS);
+        BASE.put("pink_stained_glass", Blocks.PINK_STAINED_GLASS);
+        BASE.put("gray_stained_glass", Blocks.GRAY_STAINED_GLASS);
+        BASE.put("light_gray_stained_glass", Blocks.LIGHT_GRAY_STAINED_GLASS);
+        BASE.put("cyan_stained_glass", Blocks.CYAN_STAINED_GLASS);
+        BASE.put("purple_stained_glass", Blocks.PURPLE_STAINED_GLASS);
+        BASE.put("blue_stained_glass", Blocks.BLUE_STAINED_GLASS);
+        BASE.put("brown_stained_glass", Blocks.BROWN_STAINED_GLASS);
+        BASE.put("green_stained_glass", Blocks.GREEN_STAINED_GLASS);
+        BASE.put("red_stained_glass", Blocks.RED_STAINED_GLASS);
+        BASE.put("black_stained_glass", Blocks.BLACK_STAINED_GLASS);
     }
 
     private OttTemplateBlocks() {}
