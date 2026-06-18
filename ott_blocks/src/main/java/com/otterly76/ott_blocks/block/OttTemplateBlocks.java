@@ -191,6 +191,17 @@ public final class OttTemplateBlocks {
         BASE.put("yellow_glazed_terracotta", Blocks.YELLOW_GLAZED_TERRACOTTA);
         BASE.put("yellow_terracotta", Blocks.YELLOW_TERRACOTTA);
         BASE.put("yellow_wool", Blocks.YELLOW_WOOL);
+        // static-twin materials (Wave 1b)
+        BASE.put("pale_oak_planks", Blocks.OAK_PLANKS); // pale oak is backported (no vanilla 1.21.1 const); copy oak planks props
+        BASE.put("cobbled_deepslate", Blocks.COBBLED_DEEPSLATE);
+        BASE.put("diamond", Blocks.DIAMOND_BLOCK);
+        BASE.put("copper_block", Blocks.COPPER_BLOCK);
+        BASE.put("exposed_copper", Blocks.EXPOSED_COPPER);
+        BASE.put("oxidized_copper", Blocks.OXIDIZED_COPPER);
+        BASE.put("weathered_copper", Blocks.WEATHERED_COPPER);
+        BASE.put("glowstone", Blocks.GLOWSTONE);
+        BASE.put("bone_block", Blocks.BONE_BLOCK);
+        BASE.put("sea_lantern", Blocks.SEA_LANTERN);
     }
 
     private OttTemplateBlocks() {}
