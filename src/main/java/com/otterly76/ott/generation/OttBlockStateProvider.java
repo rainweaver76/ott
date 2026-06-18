@@ -1530,6 +1530,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             itemModels().withExistingParent(carpetName, model.getLocation());
         });
 
+        // ── Imported cube_all decorative blocks (from imported_blocks.csv) ──
+        // Source of truth = the CSV. Blockstate + cube_all model + item model are ALL
+        // generated here; only the textures (block/<material>/<name>.png) are committed.
+        com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.forEach((name, material) -> {
+            ModelFile model = models().cubeAll("block/" + material + "/" + name, modLoc("block/" + material + "/" + name));
+            simpleBlock(com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.get(name).get(), model);
+            itemModels().withExistingParent(name, model.getLocation());
+        });
+
         // ── Caterpillar jar ───────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.CATERPILLAR_JAR.get(), models().getExistingFile(modLoc("block/caterpillar_jar")));
 
