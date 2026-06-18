@@ -319,6 +319,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         // --- 5. STATIC & INDIVIDUAL ADDITIONS ---
         pickaxeTag.add(OttBlocks.MIXED_LIMESTONE_BRICKS.value()); this.tag(doDefaultKey).add(OttBlocks.MIXED_LIMESTONE_BRICKS.value());
+        // PILOT: static pieces twin — DO-craftable to test tile-0 UV vs atlas smoosh
+        pickaxeTag.add(OttBlocks.ACACIA_PLANKS_TILES_STATIC.value()); this.tag(doDefaultKey).add(OttBlocks.ACACIA_PLANKS_TILES_STATIC.value());
         pickaxeTag.add(OttBlocks.PLAIN_LIMESTONE.value());
         needsStoneToolTag.add(OttBlocks.PLAIN_LIMESTONE.value());
         ModBlocks.SEAGLASS.forEach(d -> {

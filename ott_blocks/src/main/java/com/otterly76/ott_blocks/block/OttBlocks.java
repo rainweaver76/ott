@@ -1163,6 +1163,8 @@ public class OttBlocks {
     public static final DeferredBlock<Block> ACACIA_PLANKS_SMALL_TILES = register("acacia_planks_small_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_SQUARES = register("acacia_planks_squares_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_TILES = register("acacia_planks_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    // PILOT: static (non-connecting) twin reusing the 80x16 atlas, tile-0 UV (DO test)
+    public static final DeferredBlock<Block> ACACIA_PLANKS_TILES_STATIC = register("acacia_planks_tiles", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_WAVY = register("acacia_planks_wavy_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_PLANKS_WOVEN = register("acacia_planks_woven_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> ACACIA_WINDOW_BARS_CTM = register("acacia_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
