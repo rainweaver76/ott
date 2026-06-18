@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/white_terracotta/ctm/small_white_terracotta_tiles"
+  }
+}

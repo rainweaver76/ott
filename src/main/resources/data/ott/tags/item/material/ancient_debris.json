@@ -47,17 +47,17 @@
     "ott:vertical_cut_ancient_debris",
     "ott:vertical_disordered_ancient_debris_bricks",
     "ott:weathered_ancient_debris",
-    "ott:bordered_ancient_debris",
-    "ott:brick_bordered_ancient_debris",
-    "ott:cut_ancient_debris_column",
-    "ott:edged_ancient_debris_bricks",
+    "ott:bordered_ancient_debris_ctm",
+    "ott:brick_bordered_ancient_debris_ctm",
+    "ott:cut_ancient_debris_column_ctm",
+    "ott:edged_ancient_debris_bricks_ctm",
     "ott:massive_ancient_debris_bricks",
-    "ott:overlapping_ancient_debris_tiles",
-    "ott:polished_ancient_debris",
-    "ott:smooth_ancient_debris_column",
-    "ott:thick_inlayed_ancient_debris",
-    "ott:tiled_ancient_debris_column",
-    "ott:tiled_bordered_ancient_debris",
-    "ott:tiny_brick_bordered_ancient_debris"
+    "ott:overlapping_ancient_debris_tiles_ctm",
+    "ott:polished_ancient_debris_ctm",
+    "ott:smooth_ancient_debris_column_ctm",
+    "ott:thick_inlayed_ancient_debris_ctm",
+    "ott:tiled_ancient_debris_column_ctm",
+    "ott:tiled_bordered_ancient_debris_ctm",
+    "ott:tiny_brick_bordered_ancient_debris_ctm"
   ]
 }

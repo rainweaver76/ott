@@ -15,11 +15,11 @@
     "ott:stacked_gray_concrete",
     "ott:stop_gray_concrete",
     "ott:warning_gray_concrete",
-    "ott:gray_concrete_panel",
-    "ott:grill_gray_concrete",
-    "ott:pegged_gray_concrete",
-    "ott:smooth_gray_concrete",
-    "ott:striped_gray_concrete",
-    "ott:wired_gray_concrete"
+    "ott:gray_concrete_panel_ctm",
+    "ott:grill_gray_concrete_ctm",
+    "ott:pegged_gray_concrete_ctm",
+    "ott:smooth_gray_concrete_ctm",
+    "ott:striped_gray_concrete_ctm",
+    "ott:wired_gray_concrete_ctm"
   ]
 }

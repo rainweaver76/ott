@@ -15,11 +15,11 @@
     "ott:warning_yellow_concrete",
     "ott:yellow_concrete_bricks",
     "ott:yellow_concrete_tiles",
-    "ott:grill_yellow_concrete",
-    "ott:pegged_yellow_concrete",
-    "ott:smooth_yellow_concrete",
-    "ott:striped_yellow_concrete",
-    "ott:wired_yellow_concrete",
-    "ott:yellow_concrete_panel"
+    "ott:grill_yellow_concrete_ctm",
+    "ott:pegged_yellow_concrete_ctm",
+    "ott:smooth_yellow_concrete_ctm",
+    "ott:striped_yellow_concrete_ctm",
+    "ott:wired_yellow_concrete_ctm",
+    "ott:yellow_concrete_panel_ctm"
   ]
 }

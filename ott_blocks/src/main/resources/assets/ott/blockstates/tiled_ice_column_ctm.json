@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ice/tiled_ice_column_ctm"
+    }
+  }
+}

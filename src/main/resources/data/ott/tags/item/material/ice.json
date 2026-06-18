@@ -47,17 +47,17 @@
     "ott:vertical_cut_ice",
     "ott:vertical_disordered_ice_bricks",
     "ott:weathered_ice",
-    "ott:bordered_ice",
-    "ott:brick_bordered_ice",
-    "ott:cut_ice_column",
-    "ott:edged_ice_bricks",
+    "ott:bordered_ice_ctm",
+    "ott:brick_bordered_ice_ctm",
+    "ott:cut_ice_column_ctm",
+    "ott:edged_ice_bricks_ctm",
     "ott:massive_ice_bricks",
-    "ott:overlapping_ice_tiles",
-    "ott:polished_ice",
-    "ott:smooth_ice_column",
-    "ott:thick_inlayed_ice",
-    "ott:tiled_bordered_ice",
-    "ott:tiled_ice_column",
-    "ott:tiny_brick_bordered_ice"
+    "ott:overlapping_ice_tiles_ctm",
+    "ott:polished_ice_ctm",
+    "ott:smooth_ice_column_ctm",
+    "ott:thick_inlayed_ice_ctm",
+    "ott:tiled_bordered_ice_ctm",
+    "ott:tiled_ice_column_ctm",
+    "ott:tiny_brick_bordered_ice_ctm"
   ]
 }

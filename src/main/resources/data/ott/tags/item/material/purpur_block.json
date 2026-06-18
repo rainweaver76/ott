@@ -51,17 +51,17 @@
     "ott:vertical_cut_purpur_block",
     "ott:vertical_disordered_purpur_block_bricks",
     "ott:weathered_purpur_block",
-    "ott:bordered_purpur_block",
-    "ott:brick_bordered_purpur_block",
-    "ott:cut_purpur_block_column",
-    "ott:edged_purpur_block_bricks",
+    "ott:bordered_purpur_block_ctm",
+    "ott:brick_bordered_purpur_block_ctm",
+    "ott:cut_purpur_block_column_ctm",
+    "ott:edged_purpur_block_bricks_ctm",
     "ott:massive_purpur_block_bricks",
-    "ott:overlapping_purpur_block_tiles",
-    "ott:polished_purpur_block",
-    "ott:smooth_purpur_block_column",
-    "ott:thick_inlayed_purpur_block",
-    "ott:tiled_bordered_purpur_block",
-    "ott:tiled_purpur_block_column",
-    "ott:tiny_brick_bordered_purpur_block"
+    "ott:overlapping_purpur_block_tiles_ctm",
+    "ott:polished_purpur_block_ctm",
+    "ott:smooth_purpur_block_column_ctm",
+    "ott:thick_inlayed_purpur_block_ctm",
+    "ott:tiled_bordered_purpur_block_ctm",
+    "ott:tiled_purpur_block_column_ctm",
+    "ott:tiny_brick_bordered_purpur_block_ctm"
   ]
 }

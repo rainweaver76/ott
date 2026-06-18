@@ -18,12 +18,12 @@
     "ott:tiled_red_stained_glass",
     "ott:vertical_striped_red_stained_glass",
     "ott:woven_red_stained_glass",
-    "ott:red_framed_glass",
-    "ott:red_stained_clear_glass",
-    "ott:borderless_glass_red",
-    "ott:scratched_glass_red",
-    "ott:tinted_borderless_glass_red",
-    "ott:golden_framed_red_stained_glass",
-    "ott:red_stained_glass"
+    "ott:red_framed_glass_ctm",
+    "ott:red_stained_clear_glass_ctm",
+    "ott:borderless_glass_red_ctm",
+    "ott:scratched_glass_red_ctm",
+    "ott:tinted_borderless_glass_red_ctm",
+    "ott:golden_framed_red_stained_glass_ctm",
+    "ott:red_stained_glass_ctm"
   ]
 }

@@ -15,11 +15,11 @@
     "ott:stacked_lime_concrete",
     "ott:stop_lime_concrete",
     "ott:warning_lime_concrete",
-    "ott:grill_lime_concrete",
-    "ott:lime_concrete_panel",
-    "ott:pegged_lime_concrete",
-    "ott:smooth_lime_concrete",
-    "ott:striped_lime_concrete",
-    "ott:wired_lime_concrete"
+    "ott:grill_lime_concrete_ctm",
+    "ott:lime_concrete_panel_ctm",
+    "ott:pegged_lime_concrete_ctm",
+    "ott:smooth_lime_concrete_ctm",
+    "ott:striped_lime_concrete_ctm",
+    "ott:wired_lime_concrete_ctm"
   ]
 }

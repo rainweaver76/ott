@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/snow_block/overlapping_snow_block_tiles_ctm"
+    }
+  }
+}

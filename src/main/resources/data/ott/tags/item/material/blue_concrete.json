@@ -15,11 +15,11 @@
     "ott:stacked_blue_concrete",
     "ott:stop_blue_concrete",
     "ott:warning_blue_concrete",
-    "ott:blue_concrete_panel",
-    "ott:grill_blue_concrete",
-    "ott:pegged_blue_concrete",
-    "ott:smooth_blue_concrete",
-    "ott:striped_blue_concrete",
-    "ott:wired_blue_concrete"
+    "ott:blue_concrete_panel_ctm",
+    "ott:grill_blue_concrete_ctm",
+    "ott:pegged_blue_concrete_ctm",
+    "ott:smooth_blue_concrete_ctm",
+    "ott:striped_blue_concrete_ctm",
+    "ott:wired_blue_concrete_ctm"
   ]
 }

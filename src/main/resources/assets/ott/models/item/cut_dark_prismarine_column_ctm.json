@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/dark_prismarine/ctm/cut_dark_prismarine_column"
+  }
+}

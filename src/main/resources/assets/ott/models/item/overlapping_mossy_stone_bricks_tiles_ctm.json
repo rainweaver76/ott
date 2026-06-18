@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/mossy_stone_bricks/ctm/overlapping_mossy_stone_bricks_tiles"
+  }
+}

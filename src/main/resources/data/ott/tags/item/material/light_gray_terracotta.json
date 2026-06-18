@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:light_gray_terracotta",
-    "ott:light_gray_terracotta_column",
+    "ott:light_gray_terracotta_column_ctm",
     "ott:light_gray_terracotta_ctm",
     "ott:chiseled_light_gray_terracotta",
     "ott:chiseled_light_gray_terracotta_bricks",
@@ -16,10 +16,10 @@
     "ott:light_gray_terracotta_tiles",
     "ott:triangular_light_gray_terracotta",
     "ott:circular_light_gray_terracotta",
-    "ott:curled_light_gray_terracotta",
-    "ott:hexagonical_light_gray_terracotta",
+    "ott:curled_light_gray_terracotta_ctm",
+    "ott:hexagonical_light_gray_terracotta_ctm",
     "ott:inscribed_light_gray_terracotta",
-    "ott:small_light_gray_terracotta_tiles",
+    "ott:small_light_gray_terracotta_tiles_ctm",
     "ott:starry_light_gray_terracotta"
   ]
 }

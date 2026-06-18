@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/packed_mud/overlapping_packed_mud_tiles_ctm"
+    }
+  }
+}

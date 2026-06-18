@@ -15,11 +15,11 @@
     "ott:stacked_light_gray_concrete",
     "ott:stop_light_gray_concrete",
     "ott:warning_light_gray_concrete",
-    "ott:grill_light_gray_concrete",
-    "ott:light_gray_concrete_panel",
-    "ott:pegged_light_gray_concrete",
-    "ott:smooth_light_gray_concrete",
-    "ott:striped_light_gray_concrete",
-    "ott:wired_light_gray_concrete"
+    "ott:grill_light_gray_concrete_ctm",
+    "ott:light_gray_concrete_panel_ctm",
+    "ott:pegged_light_gray_concrete_ctm",
+    "ott:smooth_light_gray_concrete_ctm",
+    "ott:striped_light_gray_concrete_ctm",
+    "ott:wired_light_gray_concrete_ctm"
   ]
 }

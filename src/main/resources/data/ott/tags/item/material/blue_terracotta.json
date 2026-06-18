@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:blue_terracotta",
-    "ott:blue_terracotta_column",
+    "ott:blue_terracotta_column_ctm",
     "ott:blue_terracotta_ctm",
     "ott:blue_terracotta_bricks",
     "ott:blue_terracotta_small_bricks",
@@ -16,10 +16,10 @@
     "ott:layered_blue_terracotta",
     "ott:triangular_blue_terracotta",
     "ott:circular_blue_terracotta",
-    "ott:curled_blue_terracotta",
-    "ott:hexagonical_blue_terracotta",
+    "ott:curled_blue_terracotta_ctm",
+    "ott:hexagonical_blue_terracotta_ctm",
     "ott:inscribed_blue_terracotta",
-    "ott:small_blue_terracotta_tiles",
+    "ott:small_blue_terracotta_tiles_ctm",
     "ott:starry_blue_terracotta"
   ]
 }

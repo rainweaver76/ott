@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:yellow_terracotta",
-    "ott:yellow_terracotta_column",
+    "ott:yellow_terracotta_column_ctm",
     "ott:yellow_terracotta_ctm",
     "ott:chiseled_yellow_terracotta",
     "ott:chiseled_yellow_terracotta_bricks",
@@ -16,10 +16,10 @@
     "ott:yellow_terracotta_tile",
     "ott:yellow_terracotta_tiles",
     "ott:circular_yellow_terracotta",
-    "ott:curled_yellow_terracotta",
-    "ott:hexagonical_yellow_terracotta",
+    "ott:curled_yellow_terracotta_ctm",
+    "ott:hexagonical_yellow_terracotta_ctm",
     "ott:inscribed_yellow_terracotta",
-    "ott:small_yellow_terracotta_tiles",
+    "ott:small_yellow_terracotta_tiles_ctm",
     "ott:starry_yellow_terracotta"
   ]
 }

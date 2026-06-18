@@ -47,17 +47,17 @@
     "ott:vertical_cut_smooth_stone",
     "ott:vertical_disordered_smooth_stone_bricks",
     "ott:weathered_smooth_stone",
-    "ott:bordered_smooth_stone",
-    "ott:brick_bordered_smooth_stone",
-    "ott:cut_smooth_stone_column",
-    "ott:edged_smooth_stone_bricks",
+    "ott:bordered_smooth_stone_ctm",
+    "ott:brick_bordered_smooth_stone_ctm",
+    "ott:cut_smooth_stone_column_ctm",
+    "ott:edged_smooth_stone_bricks_ctm",
     "ott:massive_smooth_stone_bricks",
-    "ott:overlapping_smooth_stone_tiles",
-    "ott:polished_smooth_stone",
-    "ott:smooth_smooth_stone_column",
-    "ott:thick_inlayed_smooth_stone",
-    "ott:tiled_bordered_smooth_stone",
-    "ott:tiled_smooth_stone_column",
-    "ott:tiny_brick_bordered_smooth_stone"
+    "ott:overlapping_smooth_stone_tiles_ctm",
+    "ott:polished_smooth_stone_ctm",
+    "ott:smooth_smooth_stone_column_ctm",
+    "ott:thick_inlayed_smooth_stone_ctm",
+    "ott:tiled_bordered_smooth_stone_ctm",
+    "ott:tiled_smooth_stone_column_ctm",
+    "ott:tiny_brick_bordered_smooth_stone_ctm"
   ]
 }

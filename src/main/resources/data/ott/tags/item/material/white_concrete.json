@@ -15,11 +15,11 @@
     "ott:warning_white_concrete",
     "ott:white_concrete_bricks",
     "ott:white_concrete_tiles",
-    "ott:grill_white_concrete",
-    "ott:pegged_white_concrete",
-    "ott:smooth_white_concrete",
-    "ott:striped_white_concrete",
-    "ott:white_concrete_panel",
-    "ott:wired_white_concrete"
+    "ott:grill_white_concrete_ctm",
+    "ott:pegged_white_concrete_ctm",
+    "ott:smooth_white_concrete_ctm",
+    "ott:striped_white_concrete_ctm",
+    "ott:white_concrete_panel_ctm",
+    "ott:wired_white_concrete_ctm"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/packed_mud/tiled_packed_mud_column_ctm"
+    }
+  }
+}

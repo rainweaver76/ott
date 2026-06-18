@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/crimsite/ctm/crimsite_cut_small_brick"
+  }
+}

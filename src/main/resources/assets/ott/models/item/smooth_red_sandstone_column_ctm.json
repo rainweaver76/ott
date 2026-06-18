@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/red_sandstone/ctm/smooth_red_sandstone_column"
+  }
+}

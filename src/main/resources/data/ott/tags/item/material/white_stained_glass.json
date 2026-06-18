@@ -18,12 +18,12 @@
     "ott:tiled_white_stained_glass",
     "ott:vertical_striped_white_stained_glass",
     "ott:woven_white_stained_glass",
-    "ott:white_framed_glass",
-    "ott:white_stained_clear_glass",
-    "ott:borderless_glass_white",
-    "ott:scratched_glass_white",
-    "ott:tinted_borderless_glass_white",
-    "ott:golden_framed_white_stained_glass",
-    "ott:white_stained_glass"
+    "ott:white_framed_glass_ctm",
+    "ott:white_stained_clear_glass_ctm",
+    "ott:borderless_glass_white_ctm",
+    "ott:scratched_glass_white_ctm",
+    "ott:tinted_borderless_glass_white_ctm",
+    "ott:golden_framed_white_stained_glass_ctm",
+    "ott:white_stained_glass_ctm"
   ]
 }

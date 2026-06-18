@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/gilded_blackstone/ctm/thick_inlayed_gilded_blackstone"
+  }
+}

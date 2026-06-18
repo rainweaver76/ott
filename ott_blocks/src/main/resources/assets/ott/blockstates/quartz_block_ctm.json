@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/quartz_block/quartz_block_ctm"
+    }
+  }
+}

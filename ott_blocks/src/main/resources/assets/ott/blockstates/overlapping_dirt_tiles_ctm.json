@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/dirt/overlapping_dirt_tiles_ctm"
+    }
+  }
+}

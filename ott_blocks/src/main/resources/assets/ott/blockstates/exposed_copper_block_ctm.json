@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/exposed_copper/exposed_copper_block_ctm"
+    }
+  }
+}

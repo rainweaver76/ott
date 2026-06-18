@@ -47,17 +47,17 @@
     "ott:vertical_cut_clay",
     "ott:vertical_disordered_clay_bricks",
     "ott:weathered_clay",
-    "ott:bordered_clay",
-    "ott:brick_bordered_clay",
-    "ott:cut_clay_column",
-    "ott:edged_clay_bricks",
+    "ott:bordered_clay_ctm",
+    "ott:brick_bordered_clay_ctm",
+    "ott:cut_clay_column_ctm",
+    "ott:edged_clay_bricks_ctm",
     "ott:massive_clay_bricks",
-    "ott:overlapping_clay_tiles",
-    "ott:polished_clay",
-    "ott:smooth_clay_column",
-    "ott:thick_inlayed_clay",
-    "ott:tiled_bordered_clay",
-    "ott:tiled_clay_column",
-    "ott:tiny_brick_bordered_clay"
+    "ott:overlapping_clay_tiles_ctm",
+    "ott:polished_clay_ctm",
+    "ott:smooth_clay_column_ctm",
+    "ott:thick_inlayed_clay_ctm",
+    "ott:tiled_bordered_clay_ctm",
+    "ott:tiled_clay_column_ctm",
+    "ott:tiny_brick_bordered_clay_ctm"
   ]
 }

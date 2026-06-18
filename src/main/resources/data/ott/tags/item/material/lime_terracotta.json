@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:lime_terracotta",
-    "ott:lime_terracotta_column",
+    "ott:lime_terracotta_column_ctm",
     "ott:lime_terracotta_ctm",
     "ott:chiseled_lime_terracotta",
     "ott:chiseled_lime_terracotta_bricks",
@@ -16,10 +16,10 @@
     "ott:lime_terracotta_tiles",
     "ott:triangular_lime_terracotta",
     "ott:circular_lime_terracotta",
-    "ott:curled_lime_terracotta",
-    "ott:hexagonical_lime_terracotta",
+    "ott:curled_lime_terracotta_ctm",
+    "ott:hexagonical_lime_terracotta_ctm",
     "ott:inscribed_lime_terracotta",
-    "ott:small_lime_terracotta_tiles",
+    "ott:small_lime_terracotta_tiles_ctm",
     "ott:starry_lime_terracotta"
   ]
 }

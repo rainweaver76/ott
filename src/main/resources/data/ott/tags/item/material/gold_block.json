@@ -15,16 +15,16 @@
     "ott:sheet_gold_block",
     "ott:shuttered_gold_block",
     "ott:stacked_gold_block",
-    "ott:gold_block",
-    "ott:gold_block_beams",
-    "ott:gold_block_bordered",
-    "ott:gold_block_lines",
-    "ott:gold_block_pattern",
-    "ott:gold_block_polished",
-    "ott:gold_block_scales",
-    "ott:gold_block_small_bricks",
-    "ott:gold_block_small_tiles",
-    "ott:gold_block_striped",
-    "ott:gold_block_tiles"
+    "ott:gold_block_ctm",
+    "ott:gold_block_beams_ctm",
+    "ott:gold_block_bordered_ctm",
+    "ott:gold_block_lines_ctm",
+    "ott:gold_block_pattern_ctm",
+    "ott:gold_block_polished_ctm",
+    "ott:gold_block_scales_ctm",
+    "ott:gold_block_small_bricks_ctm",
+    "ott:gold_block_small_tiles_ctm",
+    "ott:gold_block_striped_ctm",
+    "ott:gold_block_tiles_ctm"
   ]
 }

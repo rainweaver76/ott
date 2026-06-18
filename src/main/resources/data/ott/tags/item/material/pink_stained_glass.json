@@ -18,12 +18,12 @@
     "ott:tiled_pink_stained_glass",
     "ott:vertical_striped_pink_stained_glass",
     "ott:woven_pink_stained_glass",
-    "ott:pink_framed_glass",
-    "ott:pink_stained_clear_glass",
-    "ott:borderless_glass_pink",
-    "ott:scratched_glass_pink",
-    "ott:tinted_borderless_glass_pink",
-    "ott:golden_framed_pink_stained_glass",
-    "ott:pink_stained_glass"
+    "ott:pink_framed_glass_ctm",
+    "ott:pink_stained_clear_glass_ctm",
+    "ott:borderless_glass_pink_ctm",
+    "ott:scratched_glass_pink_ctm",
+    "ott:tinted_borderless_glass_pink_ctm",
+    "ott:golden_framed_pink_stained_glass_ctm",
+    "ott:pink_stained_glass_ctm"
   ]
 }

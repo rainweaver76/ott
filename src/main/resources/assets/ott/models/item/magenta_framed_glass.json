@@ -1,7 +1,0 @@
-{
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "ott:block/magenta_stained_glass/ctm/magenta_framed_glass"
-  },
-  "render_type": "minecraft:translucent"
-}

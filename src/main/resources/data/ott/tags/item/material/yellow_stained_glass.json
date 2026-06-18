@@ -18,12 +18,12 @@
     "ott:tiled_yellow_stained_glass",
     "ott:vertical_striped_yellow_stained_glass",
     "ott:woven_yellow_stained_glass",
-    "ott:yellow_framed_glass",
-    "ott:yellow_stained_clear_glass",
-    "ott:borderless_glass_yellow",
-    "ott:scratched_glass_yellow",
-    "ott:tinted_borderless_glass_yellow",
-    "ott:golden_framed_yellow_stained_glass",
-    "ott:yellow_stained_glass"
+    "ott:yellow_framed_glass_ctm",
+    "ott:yellow_stained_clear_glass_ctm",
+    "ott:borderless_glass_yellow_ctm",
+    "ott:scratched_glass_yellow_ctm",
+    "ott:tinted_borderless_glass_yellow_ctm",
+    "ott:golden_framed_yellow_stained_glass_ctm",
+    "ott:yellow_stained_glass_ctm"
   ]
 }

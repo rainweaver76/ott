@@ -1,6 +1,0 @@
-{
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "ott:block/packed_ice/ctm/polished_packed_ice"
-  }
-}

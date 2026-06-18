@@ -49,17 +49,17 @@
     "ott:vertical_cut_dirt",
     "ott:vertical_disordered_dirt_bricks",
     "ott:weathered_dirt",
-    "ott:bordered_dirt",
-    "ott:brick_bordered_dirt",
-    "ott:cut_dirt_column",
-    "ott:edged_dirt_bricks",
+    "ott:bordered_dirt_ctm",
+    "ott:brick_bordered_dirt_ctm",
+    "ott:cut_dirt_column_ctm",
+    "ott:edged_dirt_bricks_ctm",
     "ott:massive_dirt_bricks",
-    "ott:overlapping_dirt_tiles",
-    "ott:polished_dirt",
-    "ott:smooth_dirt_column",
-    "ott:thick_inlayed_dirt",
-    "ott:tiled_bordered_dirt",
-    "ott:tiled_dirt_column",
-    "ott:tiny_brick_bordered_dirt"
+    "ott:overlapping_dirt_tiles_ctm",
+    "ott:polished_dirt_ctm",
+    "ott:smooth_dirt_column_ctm",
+    "ott:thick_inlayed_dirt_ctm",
+    "ott:tiled_bordered_dirt_ctm",
+    "ott:tiled_dirt_column_ctm",
+    "ott:tiny_brick_bordered_dirt_ctm"
   ]
 }

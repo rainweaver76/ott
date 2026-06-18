@@ -47,17 +47,17 @@
     "ott:vertical_cut_magma_block",
     "ott:vertical_disordered_magma_block_bricks",
     "ott:weathered_magma_block",
-    "ott:bordered_magma_block",
-    "ott:brick_bordered_magma_block",
-    "ott:cut_magma_block_column",
-    "ott:edged_magma_block_bricks",
+    "ott:bordered_magma_block_ctm",
+    "ott:brick_bordered_magma_block_ctm",
+    "ott:cut_magma_block_column_ctm",
+    "ott:edged_magma_block_bricks_ctm",
     "ott:massive_magma_block_bricks",
-    "ott:overlapping_magma_block_tiles",
-    "ott:polished_magma_block",
-    "ott:smooth_magma_block_column",
-    "ott:thick_inlayed_magma_block",
-    "ott:tiled_bordered_magma_block",
-    "ott:tiled_magma_block_column",
-    "ott:tiny_brick_bordered_magma_block"
+    "ott:overlapping_magma_block_tiles_ctm",
+    "ott:polished_magma_block_ctm",
+    "ott:smooth_magma_block_column_ctm",
+    "ott:thick_inlayed_magma_block_ctm",
+    "ott:tiled_bordered_magma_block_ctm",
+    "ott:tiled_magma_block_column_ctm",
+    "ott:tiny_brick_bordered_magma_block_ctm"
   ]
 }

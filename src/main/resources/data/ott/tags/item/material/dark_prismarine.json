@@ -55,17 +55,17 @@
     "ott:vertical_cut_dark_prismarine",
     "ott:vertical_disordered_dark_prismarine_bricks",
     "ott:weathered_dark_prismarine",
-    "ott:bordered_dark_prismarine",
-    "ott:brick_bordered_dark_prismarine",
-    "ott:cut_dark_prismarine_column",
-    "ott:edged_dark_prismarine_bricks",
+    "ott:bordered_dark_prismarine_ctm",
+    "ott:brick_bordered_dark_prismarine_ctm",
+    "ott:cut_dark_prismarine_column_ctm",
+    "ott:edged_dark_prismarine_bricks_ctm",
     "ott:massive_dark_prismarine_bricks",
-    "ott:overlapping_dark_prismarine_tiles",
-    "ott:polished_dark_prismarine",
-    "ott:smooth_dark_prismarine_column",
-    "ott:thick_inlayed_dark_prismarine",
-    "ott:tiled_bordered_dark_prismarine",
-    "ott:tiled_dark_prismarine_column",
-    "ott:tiny_brick_bordered_dark_prismarine"
+    "ott:overlapping_dark_prismarine_tiles_ctm",
+    "ott:polished_dark_prismarine_ctm",
+    "ott:smooth_dark_prismarine_column_ctm",
+    "ott:thick_inlayed_dark_prismarine_ctm",
+    "ott:tiled_bordered_dark_prismarine_ctm",
+    "ott:tiled_dark_prismarine_column_ctm",
+    "ott:tiny_brick_bordered_dark_prismarine_ctm"
   ]
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "ott:block/redstone_block/ctm/polished_redstone_block"
-  }
-}

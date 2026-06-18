@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:black_terracotta",
-    "ott:black_terracotta_column",
+    "ott:black_terracotta_column_ctm",
     "ott:black_terracotta_ctm",
     "ott:black_terracotta_bricks",
     "ott:black_terracotta_small_bricks",
@@ -16,10 +16,10 @@
     "ott:layered_black_terracotta",
     "ott:triangular_black_terracotta",
     "ott:circular_black_terracotta",
-    "ott:curled_black_terracotta",
-    "ott:hexagonical_black_terracotta",
+    "ott:curled_black_terracotta_ctm",
+    "ott:hexagonical_black_terracotta_ctm",
     "ott:inscribed_black_terracotta",
-    "ott:small_black_terracotta_tiles",
+    "ott:small_black_terracotta_tiles_ctm",
     "ott:starry_black_terracotta"
   ]
 }

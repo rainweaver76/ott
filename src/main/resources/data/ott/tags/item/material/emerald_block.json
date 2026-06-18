@@ -18,15 +18,15 @@
     "ott:sheet_emerald_block",
     "ott:shuttered_emerald_block",
     "ott:stacked_emerald_block",
-    "ott:emerald_block_bordered_crosses",
-    "ott:emerald_block_bordered_plating",
-    "ott:emerald_block_chiseled",
-    "ott:emerald_block_clovers",
-    "ott:emerald_block_crystal",
-    "ott:emerald_block_patterned",
-    "ott:emerald_block_patterned_squares",
-    "ott:emerald_block_polished",
-    "ott:emerald_block_striped",
-    "ott:emerald_block_waxed"
+    "ott:emerald_block_bordered_crosses_ctm",
+    "ott:emerald_block_bordered_plating_ctm",
+    "ott:emerald_block_chiseled_ctm",
+    "ott:emerald_block_clovers_ctm",
+    "ott:emerald_block_crystal_ctm",
+    "ott:emerald_block_patterned_ctm",
+    "ott:emerald_block_patterned_squares_ctm",
+    "ott:emerald_block_polished_ctm",
+    "ott:emerald_block_striped_ctm",
+    "ott:emerald_block_waxed_ctm"
   ]
 }

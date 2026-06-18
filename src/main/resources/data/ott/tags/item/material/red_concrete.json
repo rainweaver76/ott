@@ -15,11 +15,11 @@
     "ott:stacked_red_concrete",
     "ott:stop_red_concrete",
     "ott:warning_red_concrete",
-    "ott:grill_red_concrete",
-    "ott:pegged_red_concrete",
-    "ott:red_concrete_panel",
-    "ott:smooth_red_concrete",
-    "ott:striped_red_concrete",
-    "ott:wired_red_concrete"
+    "ott:grill_red_concrete_ctm",
+    "ott:pegged_red_concrete_ctm",
+    "ott:red_concrete_panel_ctm",
+    "ott:smooth_red_concrete_ctm",
+    "ott:striped_red_concrete_ctm",
+    "ott:wired_red_concrete_ctm"
   ]
 }

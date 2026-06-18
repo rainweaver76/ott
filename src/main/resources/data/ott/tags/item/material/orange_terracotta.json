@@ -2,7 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:orange_terracotta",
-    "ott:orange_terracotta_column",
+    "ott:orange_terracotta_column_ctm",
     "ott:orange_terracotta_ctm",
     "ott:chiseled_orange_terracotta",
     "ott:chiseled_orange_terracotta_bricks",
@@ -16,10 +16,10 @@
     "ott:orange_terracotta_tiles",
     "ott:triangular_orange_terracotta",
     "ott:circular_orange_terracotta",
-    "ott:curled_orange_terracotta",
-    "ott:hexagonical_orange_terracotta",
+    "ott:curled_orange_terracotta_ctm",
+    "ott:hexagonical_orange_terracotta_ctm",
     "ott:inscribed_orange_terracotta",
-    "ott:small_orange_terracotta_tiles",
+    "ott:small_orange_terracotta_tiles_ctm",
     "ott:starry_orange_terracotta"
   ]
 }

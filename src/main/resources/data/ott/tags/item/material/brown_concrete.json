@@ -15,11 +15,11 @@
     "ott:stacked_brown_concrete",
     "ott:stop_brown_concrete",
     "ott:warning_brown_concrete",
-    "ott:brown_concrete_panel",
-    "ott:grill_brown_concrete",
-    "ott:pegged_brown_concrete",
-    "ott:smooth_brown_concrete",
-    "ott:striped_brown_concrete",
-    "ott:wired_brown_concrete"
+    "ott:brown_concrete_panel_ctm",
+    "ott:grill_brown_concrete_ctm",
+    "ott:pegged_brown_concrete_ctm",
+    "ott:smooth_brown_concrete_ctm",
+    "ott:striped_brown_concrete_ctm",
+    "ott:wired_brown_concrete_ctm"
   ]
 }

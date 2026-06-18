@@ -55,17 +55,17 @@
     "ott:wider_diamond_lodestone",
     "ott:wider_ring_lodestone",
     "ott:wider_watching_lodestone",
-    "ott:bordered_lodestone",
-    "ott:brick_bordered_lodestone",
-    "ott:cut_lodestone_column",
-    "ott:edged_lodestone_bricks",
+    "ott:bordered_lodestone_ctm",
+    "ott:brick_bordered_lodestone_ctm",
+    "ott:cut_lodestone_column_ctm",
+    "ott:edged_lodestone_bricks_ctm",
     "ott:massive_lodestone_bricks",
-    "ott:overlapping_lodestone_tiles",
-    "ott:polished_lodestone",
-    "ott:smooth_lodestone_column",
-    "ott:thick_inlayed_lodestone",
-    "ott:tiled_bordered_lodestone",
-    "ott:tiled_lodestone_column",
-    "ott:tiny_brick_bordered_lodestone"
+    "ott:overlapping_lodestone_tiles_ctm",
+    "ott:polished_lodestone_ctm",
+    "ott:smooth_lodestone_column_ctm",
+    "ott:thick_inlayed_lodestone_ctm",
+    "ott:tiled_bordered_lodestone_ctm",
+    "ott:tiled_lodestone_column_ctm",
+    "ott:tiny_brick_bordered_lodestone_ctm"
   ]
 }

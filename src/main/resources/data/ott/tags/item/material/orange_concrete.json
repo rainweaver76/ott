@@ -15,11 +15,11 @@
     "ott:stacked_orange_concrete",
     "ott:stop_orange_concrete",
     "ott:warning_orange_concrete",
-    "ott:grill_orange_concrete",
-    "ott:orange_concrete_panel",
-    "ott:pegged_orange_concrete",
-    "ott:smooth_orange_concrete",
-    "ott:striped_orange_concrete",
-    "ott:wired_orange_concrete"
+    "ott:grill_orange_concrete_ctm",
+    "ott:orange_concrete_panel_ctm",
+    "ott:pegged_orange_concrete_ctm",
+    "ott:smooth_orange_concrete_ctm",
+    "ott:striped_orange_concrete_ctm",
+    "ott:wired_orange_concrete_ctm"
   ]
 }

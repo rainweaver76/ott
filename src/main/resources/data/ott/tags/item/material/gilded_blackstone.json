@@ -52,17 +52,17 @@
     "ott:vertical_cut_gilded_blackstone",
     "ott:vertical_disordered_gilded_blackstone_bricks",
     "ott:weathered_gilded_blackstone",
-    "ott:bordered_gilded_blackstone",
-    "ott:brick_bordered_gilded_blackstone",
-    "ott:cut_gilded_blackstone_column",
-    "ott:edged_gilded_blackstone_bricks",
+    "ott:bordered_gilded_blackstone_ctm",
+    "ott:brick_bordered_gilded_blackstone_ctm",
+    "ott:cut_gilded_blackstone_column_ctm",
+    "ott:edged_gilded_blackstone_bricks_ctm",
     "ott:massive_gilded_blackstone_bricks",
-    "ott:overlapping_gilded_blackstone_tiles",
-    "ott:polished_gilded_blackstone",
-    "ott:smooth_gilded_blackstone_column",
-    "ott:thick_inlayed_gilded_blackstone",
-    "ott:tiled_bordered_gilded_blackstone",
-    "ott:tiled_gilded_blackstone_column",
-    "ott:tiny_brick_bordered_gilded_blackstone"
+    "ott:overlapping_gilded_blackstone_tiles_ctm",
+    "ott:polished_gilded_blackstone_ctm",
+    "ott:smooth_gilded_blackstone_column_ctm",
+    "ott:thick_inlayed_gilded_blackstone_ctm",
+    "ott:tiled_bordered_gilded_blackstone_ctm",
+    "ott:tiled_gilded_blackstone_column_ctm",
+    "ott:tiny_brick_bordered_gilded_blackstone_ctm"
   ]
 }

@@ -47,17 +47,17 @@
     "ott:vertical_cut_snow_block",
     "ott:vertical_disordered_snow_block_bricks",
     "ott:weathered_snow_block",
-    "ott:bordered_snow_block",
-    "ott:brick_bordered_snow_block",
-    "ott:cut_snow_block_column",
-    "ott:edged_snow_block_bricks",
+    "ott:bordered_snow_block_ctm",
+    "ott:brick_bordered_snow_block_ctm",
+    "ott:cut_snow_block_column_ctm",
+    "ott:edged_snow_block_bricks_ctm",
     "ott:massive_snow_block_bricks",
-    "ott:overlapping_snow_block_tiles",
-    "ott:polished_snow_block",
-    "ott:smooth_snow_block_column",
-    "ott:thick_inlayed_snow_block",
-    "ott:tiled_bordered_snow_block",
-    "ott:tiled_snow_block_column",
-    "ott:tiny_brick_bordered_snow_block"
+    "ott:overlapping_snow_block_tiles_ctm",
+    "ott:polished_snow_block_ctm",
+    "ott:smooth_snow_block_column_ctm",
+    "ott:thick_inlayed_snow_block_ctm",
+    "ott:tiled_bordered_snow_block_ctm",
+    "ott:tiled_snow_block_column_ctm",
+    "ott:tiny_brick_bordered_snow_block_ctm"
   ]
 }

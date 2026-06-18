@@ -47,17 +47,17 @@
     "ott:vertical_cut_crying_obsidian",
     "ott:vertical_disordered_crying_obsidian_bricks",
     "ott:weathered_crying_obsidian",
-    "ott:bordered_crying_obsidian",
-    "ott:brick_bordered_crying_obsidian",
-    "ott:cut_crying_obsidian_column",
-    "ott:edged_crying_obsidian_bricks",
+    "ott:bordered_crying_obsidian_ctm",
+    "ott:brick_bordered_crying_obsidian_ctm",
+    "ott:cut_crying_obsidian_column_ctm",
+    "ott:edged_crying_obsidian_bricks_ctm",
     "ott:massive_crying_obsidian_bricks",
-    "ott:overlapping_crying_obsidian_tiles",
-    "ott:polished_crying_obsidian",
-    "ott:smooth_crying_obsidian_column",
-    "ott:thick_inlayed_crying_obsidian",
-    "ott:tiled_bordered_crying_obsidian",
-    "ott:tiled_crying_obsidian_column",
-    "ott:tiny_brick_bordered_crying_obsidian"
+    "ott:overlapping_crying_obsidian_tiles_ctm",
+    "ott:polished_crying_obsidian_ctm",
+    "ott:smooth_crying_obsidian_column_ctm",
+    "ott:thick_inlayed_crying_obsidian_ctm",
+    "ott:tiled_bordered_crying_obsidian_ctm",
+    "ott:tiled_crying_obsidian_column_ctm",
+    "ott:tiny_brick_bordered_crying_obsidian_ctm"
   ]
 }

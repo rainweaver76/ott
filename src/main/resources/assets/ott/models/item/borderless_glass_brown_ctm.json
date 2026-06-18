@@ -1,0 +1,7 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/brown_stained_glass/ctm/borderless_glass_brown"
+  },
+  "render_type": "minecraft:translucent"
+}

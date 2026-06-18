@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/cobblestone/overlapping_cobblestone_tiles_ctm"
+    }
+  }
+}

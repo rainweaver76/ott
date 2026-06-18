@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/bricks/overlapping_bricks_tiles_ctm"
+    }
+  }
+}

@@ -18,12 +18,12 @@
     "ott:tiled_magenta_stained_glass",
     "ott:vertical_striped_magenta_stained_glass",
     "ott:woven_magenta_stained_glass",
-    "ott:magenta_framed_glass",
-    "ott:magenta_stained_clear_glass",
-    "ott:borderless_glass_magenta",
-    "ott:scratched_glass_magenta",
-    "ott:tinted_borderless_glass_magenta",
-    "ott:golden_framed_magenta_stained_glass",
-    "ott:magenta_stained_glass"
+    "ott:magenta_framed_glass_ctm",
+    "ott:magenta_stained_clear_glass_ctm",
+    "ott:borderless_glass_magenta_ctm",
+    "ott:scratched_glass_magenta_ctm",
+    "ott:tinted_borderless_glass_magenta_ctm",
+    "ott:golden_framed_magenta_stained_glass_ctm",
+    "ott:magenta_stained_glass_ctm"
   ]
 }

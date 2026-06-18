@@ -15,11 +15,11 @@
     "ott:stacked_black_concrete",
     "ott:stop_black_concrete",
     "ott:warning_black_concrete",
-    "ott:black_concrete_panel",
-    "ott:grill_black_concrete",
-    "ott:pegged_black_concrete",
-    "ott:smooth_black_concrete",
-    "ott:striped_black_concrete",
-    "ott:wired_black_concrete"
+    "ott:black_concrete_panel_ctm",
+    "ott:grill_black_concrete_ctm",
+    "ott:pegged_black_concrete_ctm",
+    "ott:smooth_black_concrete_ctm",
+    "ott:striped_black_concrete_ctm",
+    "ott:wired_black_concrete_ctm"
   ]
 }

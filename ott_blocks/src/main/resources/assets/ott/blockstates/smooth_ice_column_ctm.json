@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/ice/smooth_ice_column_ctm"
+    }
+  }
+}

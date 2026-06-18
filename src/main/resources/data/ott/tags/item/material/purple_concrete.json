@@ -15,11 +15,11 @@
     "ott:stacked_purple_concrete",
     "ott:stop_purple_concrete",
     "ott:warning_purple_concrete",
-    "ott:grill_purple_concrete",
-    "ott:pegged_purple_concrete",
-    "ott:purple_concrete_panel",
-    "ott:smooth_purple_concrete",
-    "ott:striped_purple_concrete",
-    "ott:wired_purple_concrete"
+    "ott:grill_purple_concrete_ctm",
+    "ott:pegged_purple_concrete_ctm",
+    "ott:purple_concrete_panel_ctm",
+    "ott:smooth_purple_concrete_ctm",
+    "ott:striped_purple_concrete_ctm",
+    "ott:wired_purple_concrete_ctm"
   ]
 }

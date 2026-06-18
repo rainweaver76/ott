@@ -59,15 +59,15 @@
     "ott:unamused_mud_bricks",
     "ott:vertical_cut_mud_bricks",
     "ott:vertical_disordered_mud_bricks_bricks",
-    "ott:bordered_mud_bricks",
-    "ott:brick_bordered_mud_bricks",
-    "ott:edged_mud_bricks_bricks",
-    "ott:hard_mud_bricks",
+    "ott:bordered_mud_bricks_ctm",
+    "ott:brick_bordered_mud_bricks_ctm",
+    "ott:edged_mud_bricks_bricks_ctm",
+    "ott:hard_mud_bricks_ctm",
     "ott:large_mud_bricks_sigil",
     "ott:loreful_mud_bricks",
     "ott:massive_mud_bricks_bricks",
-    "ott:overlapping_mud_bricks_tiles",
-    "ott:tiled_bordered_mud_bricks",
-    "ott:tiled_mud_bricks_column"
+    "ott:overlapping_mud_bricks_tiles_ctm",
+    "ott:tiled_bordered_mud_bricks_ctm",
+    "ott:tiled_mud_bricks_column_ctm"
   ]
 }

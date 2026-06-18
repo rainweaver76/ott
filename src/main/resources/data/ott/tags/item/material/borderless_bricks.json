@@ -47,17 +47,17 @@
     "ott:vertical_cut_borderless_bricks",
     "ott:vertical_disordered_borderless_bricks_bricks",
     "ott:weathered_borderless_bricks",
-    "ott:bordered_borderless_bricks",
-    "ott:brick_bordered_borderless_bricks",
-    "ott:cut_borderless_bricks_column",
-    "ott:edged_borderless_bricks_bricks",
+    "ott:bordered_borderless_bricks_ctm",
+    "ott:brick_bordered_borderless_bricks_ctm",
+    "ott:cut_borderless_bricks_column_ctm",
+    "ott:edged_borderless_bricks_bricks_ctm",
     "ott:massive_borderless_bricks_bricks",
-    "ott:overlapping_borderless_bricks_tiles",
-    "ott:polished_borderless_bricks",
-    "ott:smooth_borderless_bricks_column",
-    "ott:thick_inlayed_borderless_bricks",
-    "ott:tiled_bordered_borderless_bricks",
-    "ott:tiled_borderless_bricks_column",
-    "ott:tiny_brick_bordered_borderless_bricks"
+    "ott:overlapping_borderless_bricks_tiles_ctm",
+    "ott:polished_borderless_bricks_ctm",
+    "ott:smooth_borderless_bricks_column_ctm",
+    "ott:thick_inlayed_borderless_bricks_ctm",
+    "ott:tiled_bordered_borderless_bricks_ctm",
+    "ott:tiled_borderless_bricks_column_ctm",
+    "ott:tiny_brick_bordered_borderless_bricks_ctm"
   ]
 }
