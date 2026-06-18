@@ -1554,6 +1554,24 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             itemModels().withExistingParent(name, model.getLocation());
         });
 
+        // ── Auto-derived static (non-connecting) glass panes ──────────────────
+        // One per template=glass block. Pane face = the block's own texture (tile-0 solo frame);
+        // edge reuses the same texture. Render type inherits the parent glass block's hint.
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.PANE_PARENT.forEach((paneName, parent) -> {
+            String material = com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(parent);
+            String render = com.otterly76.ott_blocks.block.OttTemplateBlocks.RENDER_BY_NAME.get(parent);
+            String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
+                    : (render.contains(":") ? render : "minecraft:" + render);
+            ResourceLocation tex = modLoc("block/" + material + "/" + parent);
+            net.minecraft.world.level.block.IronBarsBlock pane =
+                    (net.minecraft.world.level.block.IronBarsBlock) com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.get(paneName).get();
+            paneBlockWithRenderType(pane, tex, tex, rt);
+            itemModels().withExistingParent(paneName, mcLoc("item/glass_pane"))
+                    .texture("front", tex)
+                    .texture("side", tex)
+                    .renderType(rt);
+        });
+
         // ── Caterpillar jar ───────────────────────────────────────────────────
         simpleBlockWithItem(ModBlocks.CATERPILLAR_JAR.get(), models().getExistingFile(modLoc("block/caterpillar_jar")));
 

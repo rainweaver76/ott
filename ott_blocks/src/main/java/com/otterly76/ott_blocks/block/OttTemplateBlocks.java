@@ -3,6 +3,7 @@ package com.otterly76.ott_blocks.block;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CryingObsidianBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.TransparentBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -35,6 +36,19 @@ public final class OttTemplateBlocks {
     public static final Map<String, String> TEMPLATE_BY_NAME = new LinkedHashMap<>();
     /** name -> render hint ("", solid, cutout, cutout_mipped, translucent). */
     public static final Map<String, String> RENDER_BY_NAME = new LinkedHashMap<>();
+
+    /**
+     * Auto-derived static (non-connecting) panes — one per {@code template=glass} row, named
+     * {@code <glass>_pane}. Kept OUT of {@link #BY_NAME}/{@link #MATERIAL_BY_NAME}/{@link #TEMPLATE_BY_NAME}
+     * so the cube datagen + material-tag classifier never treat a pane as a full cube. Material/render/texture
+     * are derived from the parent via {@link #PANE_PARENT} + the parent's entries.
+     */
+    public static final Map<String, DeferredBlock<Block>> GLASS_PANES = new LinkedHashMap<>();
+    /** pane name -> parent glass block name. */
+    public static final Map<String, String> PANE_PARENT = new LinkedHashMap<>();
+
+    /** Glass blocks whose {@code _pane} partner is already registered elsewhere (don't auto-derive). */
+    private static final java.util.Set<String> PANE_SKIP = java.util.Set.of("glass"); // glass_pane pre-exists
 
     /** material folder -> vanilla base block whose properties are copied. */
     private static final Map<String, Block> BASE = new HashMap<>();
@@ -244,6 +258,15 @@ public final class OttTemplateBlocks {
                 MATERIAL_BY_NAME.put(name, material);
                 TEMPLATE_BY_NAME.put(name, template);
                 RENDER_BY_NAME.put(name, render);
+
+                // Every glass block gets a static (non-connecting) pane partner: <glass>_pane.
+                if ("glass".equals(template) && !PANE_SKIP.contains(name)) {
+                    String paneName = name + "_pane";
+                    DeferredBlock<Block> pane = OttBlocks.register(paneName,
+                            () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
+                    GLASS_PANES.put(paneName, pane);
+                    PANE_PARENT.put(paneName, name);
+                }
             }
         } catch (Exception e) {
             throw new IllegalStateException("Failed to load block_templates.csv", e);

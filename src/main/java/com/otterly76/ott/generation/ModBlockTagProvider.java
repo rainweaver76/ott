@@ -242,6 +242,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
             }
         });
 
+        // Auto-derived static (non-connecting) glass panes: glass tags only, mirroring the CtmPaneBlock
+        // case minus CTM_BLOCKS (no "Connecting" tooltip). No mineable tag — glass breaks instantly by hand.
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.values().forEach(db -> {
+            Block pane = db.get();
+            this.tag(cGlassKey).add(pane);
+            this.tag(cGlassPanesKey).add(pane);
+        });
+
         // --- 3.1 POPULATE minecraft: tags for backported blocks ---
         ModBlocks.MINECRAFT_BLOCKS.getEntries().forEach(deferredBlock -> {
             Block block = deferredBlock.value();

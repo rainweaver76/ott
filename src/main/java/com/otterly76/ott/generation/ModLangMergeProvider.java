@@ -95,6 +95,19 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + name, pretty);
         }
 
+        // Glass static twins inherit their connecting parent's curated name (so e.g. black_framed_glass
+        // reads "Framed Black Stained Glass" like its _ctm sibling, not the ID title-case). Each glass
+        // block's auto-derived static pane gets that resolved name + " Pane". Families with no _ctm
+        // parent keep the title-case name (deferred to the full naming pass).
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.PANE_PARENT.forEach((paneName, parent) -> {
+            String ctmKey = "block.ott." + parent + "_ctm";
+            if (ottBase.has(ctmKey)) {
+                ottBase.addProperty("block.ott." + parent, ottBase.get(ctmKey).getAsString());
+            }
+            String parentName = ottBase.get("block.ott." + parent).getAsString();
+            ottBase.addProperty("block.ott." + paneName, parentName + " Pane");
+        });
+
         // Plain carpets for imported wool variants (barky/…/woved × 16 colors)
         for (String name : com.otterly76.ott_blocks.block.OttBlocks.IMPORTED_WOOL_CARPETS.keySet()) {
             String pretty = Arrays.stream(name.split("_"))
@@ -103,32 +116,30 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + name, pretty);
         }
 
-        // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm});
-        // connecting (_ctm) variants get a trailing " (Connecting)".
+        // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm}).
+        // Connecting (_ctm) variants share the base name; the "Connecting" hint comes from the CTM_BLOCKS tooltip.
         java.util.stream.Stream.concat(
                 com.otterly76.ott_blocks.block.OttBlocks.DECO_WOOL.keySet().stream(),
                 com.otterly76.ott_blocks.block.OttBlocks.DECO_CARPET.keySet().stream()
         ).forEach(name -> {
-            boolean ctm = name.endsWith("_ctm");
-            String core = ctm ? name.substring(0, name.length() - "_ctm".length()) : name;
+            String core = name.endsWith("_ctm") ? name.substring(0, name.length() - "_ctm".length()) : name;
             String pretty = Arrays.stream(core.split("_"))
                     .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
                     .collect(Collectors.joining(" "));
-            ottBase.addProperty("block.ott." + name, pretty + (ctm ? " (Connecting)" : ""));
+            ottBase.addProperty("block.ott." + name, pretty);
         });
 
-        // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm});
-        // connecting (_ctm) variants get a trailing " (Connecting)".
+        // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm}).
+        // Connecting (_ctm) variants share the base name; the "Connecting" hint comes from the CTM_BLOCKS tooltip.
         java.util.stream.Stream.concat(
                 com.otterly76.ott_blocks.block.OttBlocks.STYLED_WOOL.keySet().stream(),
                 com.otterly76.ott_blocks.block.OttBlocks.STYLED_CARPET.keySet().stream()
         ).forEach(name -> {
-            boolean ctm = name.endsWith("_ctm");
-            String core = ctm ? name.substring(0, name.length() - "_ctm".length()) : name;
+            String core = name.endsWith("_ctm") ? name.substring(0, name.length() - "_ctm".length()) : name;
             String pretty = Arrays.stream(core.split("_"))
                     .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
                     .collect(Collectors.joining(" "));
-            ottBase.addProperty("block.ott." + name, pretty + (ctm ? " (Connecting)" : ""));
+            ottBase.addProperty("block.ott." + name, pretty);
         });
 
         // Add creative tab titles

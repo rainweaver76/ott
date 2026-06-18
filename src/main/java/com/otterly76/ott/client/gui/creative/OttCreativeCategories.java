@@ -860,6 +860,8 @@ public enum OttCreativeCategories {
             (params, output) -> {
                 // Imported cube_all decorative blocks (grouped by material, sorted)
                 com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.values().forEach(output::accept);
+                // Auto-derived static glass panes (one per template=glass block)
+                com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.values().forEach(output::accept);
                 // Plain carpets for imported wool variants
                 OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(output::accept);
                 output.accept(OttBlocks.ACACIA_PLANKS_BEAMS);

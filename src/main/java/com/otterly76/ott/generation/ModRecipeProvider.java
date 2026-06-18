@@ -131,6 +131,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         this.engraveRecipes(noAdv);
         this.ctmPaneRecipes(noAdv);
+        this.templateGlassPaneRecipes(noAdv);
         this.recoveredWindowRecipes(noAdv);
         this.recoveredWaveRecipes(noAdv);
         this.stainedGlassGroupRecipes(noAdv);
@@ -5070,6 +5071,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         if (pane == Blocks.AIR) return;
         engraveOne(exporter, material, pane, paneName + "_engraving");
         paneFrom6(exporter, material, pane, paneName + "_from_block");
+    }
+
+    /** Auto-derived static glass panes (one per template=glass block): 6 block → 16 pane, plus 1:1 engraving. */
+    private void templateGlassPaneRecipes(RecipeOutput exporter) {
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.PANE_PARENT.forEach((paneName, parent) -> {
+            Block pane = com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.get(paneName).get();
+            Block glass = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(parent).get();
+            paneFrom6(exporter, glass, pane, paneName + "_from_block");
+            engraveOne(exporter, glass, pane, paneName + "_engraving");
+        });
     }
 
     /** Shaped recipe: 6 of block (2×3) → 16 panes. */
