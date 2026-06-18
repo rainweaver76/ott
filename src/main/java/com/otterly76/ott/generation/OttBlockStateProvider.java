@@ -594,12 +594,12 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 String base = style + "_" + color;
                 ResourceLocation staticTex = modLoc("block/" + style + "_carpet/" + style + "_" + color + "_carpet_static");
                 for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
-                    simpleBlock(OttBlocks.DECO_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + wn)));
+                    simpleBlock(OttBlocks.DECO_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + wn)));
                     itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
                             .texture("all", staticTex).renderType("minecraft:cutout_mipped");
                 }
                 for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
-                    simpleBlock(OttBlocks.DECO_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + cn)));
+                    simpleBlock(OttBlocks.DECO_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + cn)));
                     itemModels().withExistingParent(cn, mcLoc("block/carpet"))
                             .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
                 }
@@ -618,12 +618,12 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 String base = style + "_" + color;
                 ResourceLocation staticTex = modLoc("block/" + color + "_wool/" + base + "_wool_static");
                 for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
-                    simpleBlock(OttBlocks.STYLED_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + wn)));
+                    simpleBlock(OttBlocks.STYLED_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + wn)));
                     itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
                             .texture("all", staticTex).renderType("minecraft:cutout_mipped");
                 }
                 for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
-                    simpleBlock(OttBlocks.STYLED_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + cn)));
+                    simpleBlock(OttBlocks.STYLED_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + cn)));
                     itemModels().withExistingParent(cn, mcLoc("block/carpet"))
                             .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
                 }
