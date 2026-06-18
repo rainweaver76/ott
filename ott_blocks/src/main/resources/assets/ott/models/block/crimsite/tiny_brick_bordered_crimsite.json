@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/crimsite/tiny_brick_bordered_crimsite"
+  }
+}

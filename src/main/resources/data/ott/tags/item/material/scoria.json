@@ -6,6 +6,8 @@
       "required": false
     },
     "ott:angry_scoria",
+    "ott:bordered_scoria",
+    "ott:brick_bordered_scoria",
     "ott:carved_scoria",
     "ott:checkered_scoria_tiles",
     "ott:cobbled_scoria",
@@ -45,7 +47,9 @@
     "ott:spiraled_scoria",
     "ott:stacked_scoria_bricks",
     "ott:thick_inlayed_scoria",
+    "ott:tiled_bordered_scoria",
     "ott:tiled_scoria",
+    "ott:tiny_brick_bordered_scoria",
     "ott:tiny_layered_scoria_bricks",
     "ott:tiny_layered_scoria_slabs",
     "ott:tiny_scoria_bricks",

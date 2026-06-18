@@ -6,6 +6,8 @@
       "required": false
     },
     "ott:angry_veridium",
+    "ott:bordered_veridium",
+    "ott:brick_bordered_veridium",
     "ott:carved_veridium",
     "ott:checkered_veridium_tiles",
     "ott:cobbled_veridium",
@@ -42,7 +44,9 @@
     "ott:spiraled_veridium",
     "ott:stacked_veridium_bricks",
     "ott:thick_inlayed_veridium",
+    "ott:tiled_bordered_veridium",
     "ott:tiled_veridium",
+    "ott:tiny_brick_bordered_veridium",
     "ott:tiny_layered_veridium_bricks",
     "ott:tiny_layered_veridium_slabs",
     "ott:tiny_veridium_bricks",

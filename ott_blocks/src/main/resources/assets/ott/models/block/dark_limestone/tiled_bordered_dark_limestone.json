@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/dark_limestone/tiled_bordered_dark_limestone"
+  }
+}

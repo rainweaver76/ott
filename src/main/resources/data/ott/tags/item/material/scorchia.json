@@ -6,6 +6,8 @@
       "required": false
     },
     "ott:angry_scorchia",
+    "ott:bordered_scorchia",
+    "ott:brick_bordered_scorchia",
     "ott:carved_scorchia",
     "ott:checkered_scorchia_tiles",
     "ott:cobbled_scorchia",
@@ -45,7 +47,9 @@
     "ott:spiraled_scorchia",
     "ott:stacked_scorchia_bricks",
     "ott:thick_inlayed_scorchia",
+    "ott:tiled_bordered_scorchia",
     "ott:tiled_scorchia",
+    "ott:tiny_brick_bordered_scorchia",
     "ott:tiny_layered_scorchia_bricks",
     "ott:tiny_layered_scorchia_slabs",
     "ott:tiny_scorchia_bricks",

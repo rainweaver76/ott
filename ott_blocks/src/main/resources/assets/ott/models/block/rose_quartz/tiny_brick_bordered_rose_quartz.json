@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/rose_quartz/tiny_brick_bordered_rose_quartz"
+  }
+}

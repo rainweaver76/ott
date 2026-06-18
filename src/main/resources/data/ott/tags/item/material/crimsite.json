@@ -6,6 +6,8 @@
       "required": false
     },
     "ott:angry_crimsite",
+    "ott:bordered_crimsite",
+    "ott:brick_bordered_crimsite",
     "ott:carved_crimsite",
     "ott:checkered_crimsite_tiles",
     "ott:cobbled_crimsite",
@@ -45,7 +47,9 @@
     "ott:spiraled_crimsite",
     "ott:stacked_crimsite_bricks",
     "ott:thick_inlayed_crimsite",
+    "ott:tiled_bordered_crimsite",
     "ott:tiled_crimsite",
+    "ott:tiny_brick_bordered_crimsite",
     "ott:tiny_crimsite_bricks",
     "ott:tiny_layered_crimsite_bricks",
     "ott:tiny_layered_crimsite_slabs",
