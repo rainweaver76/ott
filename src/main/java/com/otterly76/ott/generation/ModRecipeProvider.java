@@ -692,7 +692,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         }
 
         // --- Plain carpets for imported wool variants (barky/…/woved × 16): 2 wool → 3 carpet ---
-        com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.forEach((woolName, woolBlock) -> {
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.forEach((woolName, woolBlock) -> {
             if (!woolName.endsWith("_wool")) return;
             String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
             Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
@@ -2179,9 +2179,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private void engraveRecipes(RecipeOutput exporter) {
         // ── Imported cube_all decorative blocks: 1:1 engraving from their material tag ──
-        com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.forEach((name, block) ->
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.forEach((name, block) ->
                 engraveTagged(exporter,
-                        materialTag(com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.get(name)),
+                        materialTag(com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(name)),
                         block, name + "_engraving"));
 
         // ── Stone → engraved stone variants ──────────────────────────────────────

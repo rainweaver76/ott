@@ -202,7 +202,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 case CarpetBlock carpetBlock -> this.tag(ModTags.Blocks.FLOOR_TILES).add(carpetBlock);
                 default -> {
                     String bPath = BuiltInRegistries.BLOCK.getKey(block).getPath();
-                    String importMat = com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.get(bPath);
+                    String importMat = com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(bPath);
                     if (importMat != null) {
                         // Imported plain cube_all decorative blocks: tool by material, all are DO material cubes.
                         if (IMPORT_AXE_MATERIALS.contains(importMat)) {

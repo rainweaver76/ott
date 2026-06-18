@@ -1520,7 +1520,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         styledWoolFamily();
 
         // ── Plain carpets for imported 16×16 wool variants (barky/…/woved × 16) ──
-        com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.forEach((woolName, material) -> {
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.forEach((woolName, material) -> {
             if (!woolName.endsWith("_wool")) return;
             String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
             Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
@@ -1530,12 +1530,27 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             itemModels().withExistingParent(carpetName, model.getLocation());
         });
 
-        // ── Imported cube_all decorative blocks (from imported_blocks.csv) ──
-        // Source of truth = the CSV. Blockstate + cube_all model + item model are ALL
-        // generated here; only the textures (block/<material>/<name>.png) are committed.
-        com.otterly76.ott_blocks.block.OttImportedBlocks.MATERIAL_BY_NAME.forEach((name, material) -> {
-            ModelFile model = models().cubeAll("block/" + material + "/" + name, modLoc("block/" + material + "/" + name));
-            simpleBlock(com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.get(name).get(), model);
+        // ── Template-driven blocks (from block_templates.csv) ──
+        // Source of truth = the CSV. Blockstate + model + item are ALL generated here, dispatched
+        // by template; only the textures are committed. See OttTemplateBlocks.
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.TEMPLATE_BY_NAME.forEach((name, template) -> {
+            String material = com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(name);
+            String render = com.otterly76.ott_blocks.block.OttTemplateBlocks.RENDER_BY_NAME.get(name);
+            net.minecraft.world.level.block.Block block = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(name).get();
+            String base = "block/" + material + "/" + name;
+            ModelFile model;
+            switch (template) {
+                case "cube_column" -> // side = NAME, end = NAME_top (tile-2 / tile-0 extracted)
+                        model = models().cubeColumn(base, modLoc(base), modLoc(base + "_top"));
+                case "glass" -> {
+                    String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
+                            : (render.contains(":") ? render : "minecraft:" + render);
+                    model = models().cubeAll(base, modLoc(base)).renderType(rt);
+                }
+                default -> // cube_all
+                        model = models().cubeAll(base, modLoc(base));
+            }
+            simpleBlock(block, model);
             itemModels().withExistingParent(name, model.getLocation());
         });
 

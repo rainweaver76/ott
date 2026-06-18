@@ -5606,14 +5606,14 @@ public class OttBlocks {
 
     /**
      * Plain (non-CTM) carpets for every imported 16×16 wool variant (barky/blocky/…/woved × 16 colors).
-     * Derived from {@link OttImportedBlocks#BY_NAME} {@code *_wool} entries (so it auto-tracks the CSV),
+     * Derived from {@link OttTemplateBlocks#BY_NAME} {@code *_wool} entries (so it auto-tracks the CSV),
      * keyed by carpet block name (e.g. {@code "barky_black_carpet"}). Must run AFTER
-     * {@link OttImportedBlocks#init()} (which populates BY_NAME) and before the registry flush.
+     * {@link OttTemplateBlocks#init()} (which populates BY_NAME) and before the registry flush.
      */
     public static final Map<String, DeferredBlock<CarpetBlock>> IMPORTED_WOOL_CARPETS = new LinkedHashMap<>();
 
     private static void registerImportedWoolCarpets() {
-        for (String woolName : OttImportedBlocks.BY_NAME.keySet()) {
+        for (String woolName : OttTemplateBlocks.BY_NAME.keySet()) {
             if (!woolName.endsWith("_wool")) continue;
             String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
             IMPORTED_WOOL_CARPETS.put(carpetName, register(carpetName,
@@ -5649,7 +5649,7 @@ public class OttBlocks {
     }
 
     public static void register(IEventBus eventBus) {
-        OttImportedBlocks.init();          // queue imported cube_all blocks before the registry flush
+        OttTemplateBlocks.init();          // queue imported cube_all blocks before the registry flush
         registerImportedWoolCarpets();     // queue plain carpets for imported wools (needs BY_NAME populated)
         registerStyledWoolFamily();        // queue patterned-wool family (solo + ctm wool & carpet)
         registerDecoWoolFamily();          // queue decorative wool family (delicate/ornamented/legacy/llama)

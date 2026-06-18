@@ -3,6 +3,7 @@ package com.otterly76.ott_blocks.block;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.CryingObsidianBlock;
+import net.minecraft.world.level.block.TransparentBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -14,17 +15,26 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Loop-driven registrar for the large cube_all decorative-block import.
- * Reads {@code assets/ott/imported_blocks.csv} and registers each block into
- * {@link OttBlocks#BLOCKS}/{@link OttBlocks#ITEMS}. Keeping registration in a loop
- * (rather than thousands of static field initializers) avoids the 64KB {@code <clinit>}
- * bytecode limit on {@link OttBlocks}.
+ * Unified, data-driven registrar for template-based blocks.
+ * Reads {@code assets/ott/block_templates.csv} (header: {@code name,material,template,render})
+ * and registers each block into {@link OttBlocks#BLOCKS}/{@link OttBlocks#ITEMS}, choosing the
+ * block class by {@code template}. Loop-driven (not thousands of static fields) to avoid the
+ * 64KB {@code <clinit>} bytecode limit on {@link OttBlocks}.
+ *
+ * <p>Templates are also rendered by {@code OttBlockStateProvider} (model/blockstate) by reading
+ * {@link #TEMPLATE_BY_NAME}/{@link #RENDER_BY_NAME}. Current templates: {@code cube_all},
+ * {@code cube_column}, {@code glass}. Future (framework-ready): {@code leaves}, {@code iron_bars},
+ * {@code plant}, {@code door}, {@code trapdoor}, {@code wool} (+ carpet), {@code pane}.
  */
-public final class OttImportedBlocks {
-    /** name -> registered block (insertion order = sorted by material then name). */
+public final class OttTemplateBlocks {
+    /** name -> registered block (insertion order = CSV order = sorted by material then name). */
     public static final Map<String, DeferredBlock<Block>> BY_NAME = new LinkedHashMap<>();
-    /** name -> material folder. */
+    /** name -> material folder (texture dir + property source). */
     public static final Map<String, String> MATERIAL_BY_NAME = new LinkedHashMap<>();
+    /** name -> template id (cube_all/cube_column/glass/...). */
+    public static final Map<String, String> TEMPLATE_BY_NAME = new LinkedHashMap<>();
+    /** name -> render hint ("", solid, cutout, cutout_mipped, translucent). */
+    public static final Map<String, String> RENDER_BY_NAME = new LinkedHashMap<>();
 
     /** material folder -> vanilla base block whose properties are copied. */
     private static final Map<String, Block> BASE = new HashMap<>();
@@ -183,36 +193,49 @@ public final class OttImportedBlocks {
         BASE.put("yellow_wool", Blocks.YELLOW_WOOL);
     }
 
-    private OttImportedBlocks() {}
+    private OttTemplateBlocks() {}
 
     public static void init() {
         if (!BY_NAME.isEmpty()) return;
-        var stream = OttImportedBlocks.class.getClassLoader().getResourceAsStream("assets/ott/imported_blocks.csv");
-        if (stream == null) throw new IllegalStateException("Missing assets/ott/imported_blocks.csv on classpath");
+        var stream = OttTemplateBlocks.class.getClassLoader().getResourceAsStream("assets/ott/block_templates.csv");
+        if (stream == null) throw new IllegalStateException("Missing assets/ott/block_templates.csv on classpath");
         try (BufferedReader r = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
             String line;
             while ((line = r.readLine()) != null) {
                 line = line.trim();
-                if (line.isEmpty() || line.startsWith("#")) continue;
-                int comma = line.indexOf(',');
-                String name = line.substring(0, comma);
-                String material = line.substring(comma + 1);
-                DeferredBlock<Block> db = register(name, material);
+                if (line.isEmpty() || line.startsWith("#") || line.startsWith("name,")) continue; // skip blanks/comments/header
+                String[] p = line.split(",", -1);
+                String name = p[0].trim();
+                String material = p[1].trim();
+                String template = p.length > 2 && !p[2].trim().isEmpty() ? p[2].trim() : "cube_all";
+                String render = p.length > 3 ? p[3].trim() : "";
+                DeferredBlock<Block> db = register(name, material, template);
                 BY_NAME.put(name, db);
                 MATERIAL_BY_NAME.put(name, material);
+                TEMPLATE_BY_NAME.put(name, template);
+                RENDER_BY_NAME.put(name, render);
             }
         } catch (Exception e) {
-            throw new IllegalStateException("Failed to load imported_blocks.csv", e);
+            throw new IllegalStateException("Failed to load block_templates.csv", e);
         }
     }
 
-    private static DeferredBlock<Block> register(String name, String material) {
+    private static Block base(String material) {
+        Block b = BASE.get(material);
+        if (b == null) throw new IllegalStateException("No base block for material: " + material);
+        return b;
+    }
+
+    private static DeferredBlock<Block> register(String name, String material, String template) {
+        if ("glass".equals(template)) {
+            return OttBlocks.register(name,
+                    () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(base(material)).noOcclusion()));
+        }
+        // cube_all, cube_column, and anything else: plain Block (crying_obsidian gets its drip-particle class)
         if ("crying_obsidian".equals(material)) {
             return OttBlocks.register(name,
                     () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
         }
-        Block base = BASE.get(material);
-        if (base == null) throw new IllegalStateException("No base block for material: " + material);
-        return OttBlocks.register(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
+        return OttBlocks.register(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(base(material))));
     }
 }

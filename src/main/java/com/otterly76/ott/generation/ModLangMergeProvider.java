@@ -88,7 +88,7 @@ public class ModLangMergeProvider implements DataProvider {
         });
 
         // Add auto-generated imported cube_all block entries to OTT base
-        for (String name : com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.keySet()) {
+        for (String name : com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.keySet()) {
             String pretty = Arrays.stream(name.split("_"))
                     .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
                     .collect(Collectors.joining(" "));

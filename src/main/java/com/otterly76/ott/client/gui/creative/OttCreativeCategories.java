@@ -859,7 +859,7 @@ public enum OttCreativeCategories {
             () -> OttBlocks.CHAOTIC_STONE_BRICKS.get().asItem(),
             (params, output) -> {
                 // Imported cube_all decorative blocks (grouped by material, sorted)
-                com.otterly76.ott_blocks.block.OttImportedBlocks.BY_NAME.values().forEach(output::accept);
+                com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.values().forEach(output::accept);
                 // Plain carpets for imported wool variants
                 OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(output::accept);
                 output.accept(OttBlocks.ACACIA_PLANKS_BEAMS);
