@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/cherry_planks/boxed_cherry_planks"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/magenta_concrete/warning_magenta_concrete"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/mossy_stone_bricks/tiny_layered_mossy_stone_bricks_bricks"
-  }
-}

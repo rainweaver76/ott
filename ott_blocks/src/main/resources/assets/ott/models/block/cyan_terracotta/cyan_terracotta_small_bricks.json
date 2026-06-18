@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/cyan_terracotta/cyan_terracotta_small_bricks"
-  }
-}

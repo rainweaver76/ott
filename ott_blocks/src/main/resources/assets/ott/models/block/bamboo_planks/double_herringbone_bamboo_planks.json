@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/bamboo_planks/double_herringbone_bamboo_planks"
-  }
-}

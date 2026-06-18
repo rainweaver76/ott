@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/end_stone/smooth_ringed_end_stone"
-  }
-}

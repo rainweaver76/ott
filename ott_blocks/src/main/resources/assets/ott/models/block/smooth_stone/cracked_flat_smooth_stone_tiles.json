@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/smooth_stone/cracked_flat_smooth_stone_tiles"
-  }
-}

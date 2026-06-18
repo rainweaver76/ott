@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/scoria/cracked_disordered_scoria_bricks"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/blue_glazed_terracotta/hexagonical_blue_glazed_terracotta"
-  }
-}

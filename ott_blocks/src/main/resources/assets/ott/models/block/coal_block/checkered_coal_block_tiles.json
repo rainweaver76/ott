@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/coal_block/checkered_coal_block_tiles"
-  }
-}

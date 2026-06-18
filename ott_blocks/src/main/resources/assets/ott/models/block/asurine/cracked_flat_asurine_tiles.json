@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/asurine/cracked_flat_asurine_tiles"
-  }
-}

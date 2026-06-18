@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/mangrove_planks/stacked_mangrove_planks"
-  }
-}

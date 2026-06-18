@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/red_mushroom_block/dark_freckled_red_mushroom_block"
-  }
-}

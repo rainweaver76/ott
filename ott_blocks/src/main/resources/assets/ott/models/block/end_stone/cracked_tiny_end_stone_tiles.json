@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/end_stone/cracked_tiny_end_stone_tiles"
-  }
-}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/redstone_block/creeper_redstone_block_carving"
-  }
-}

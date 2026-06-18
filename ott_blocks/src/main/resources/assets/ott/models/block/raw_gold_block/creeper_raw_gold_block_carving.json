@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/raw_gold_block/creeper_raw_gold_block_carving"
-  }
-}
