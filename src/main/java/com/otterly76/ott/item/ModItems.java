@@ -498,9 +498,6 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_FANCY_FENCE = registerBlockItem("white_marble_fancy_fence", ModBlocks.WHITE_MARBLE_FANCY_FENCE);
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_FANCY_FENCE = registerBlockItem("black_marble_fancy_fence", ModBlocks.BLACK_MARBLE_FANCY_FENCE);
 
-    // ── Amethyst Marble ──
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_FLOOR_TILE = registerBlockItem("amethyst_marble_floor_tile", ModBlocks.AMETHYST_MARBLE_FLOOR_TILE);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_FANCY_FENCE = registerBlockItem("amethyst_marble_fancy_fence", ModBlocks.AMETHYST_MARBLE_FANCY_FENCE);
 
     // ── Blue Marble ──
     public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_FLOOR_TILE = registerBlockItem("blue_marble_floor_tile", ModBlocks.BLUE_MARBLE_FLOOR_TILE);
@@ -537,6 +534,21 @@ public class ModItems {
     // ── Yellow Marble ──
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FLOOR_TILE = registerBlockItem("yellow_marble_floor_tile", ModBlocks.YELLOW_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_FANCY_FENCE = registerBlockItem("yellow_marble_fancy_fence", ModBlocks.YELLOW_MARBLE_FANCY_FENCE);
+    // ── Light Gray Marble ──
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_MARBLE_FLOOR_TILE = registerBlockItem("light_gray_marble_floor_tile", ModBlocks.LIGHT_GRAY_MARBLE_FLOOR_TILE);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_MARBLE_FANCY_FENCE = registerBlockItem("light_gray_marble_fancy_fence", ModBlocks.LIGHT_GRAY_MARBLE_FANCY_FENCE);
+    // ── Gray Marble ──
+    public static final DeferredHolder<Item, BlockItem> GRAY_MARBLE_FLOOR_TILE = registerBlockItem("gray_marble_floor_tile", ModBlocks.GRAY_MARBLE_FLOOR_TILE);
+    public static final DeferredHolder<Item, BlockItem> GRAY_MARBLE_FANCY_FENCE = registerBlockItem("gray_marble_fancy_fence", ModBlocks.GRAY_MARBLE_FANCY_FENCE);
+    // ── Brown Marble ──
+    public static final DeferredHolder<Item, BlockItem> BROWN_MARBLE_FLOOR_TILE = registerBlockItem("brown_marble_floor_tile", ModBlocks.BROWN_MARBLE_FLOOR_TILE);
+    public static final DeferredHolder<Item, BlockItem> BROWN_MARBLE_FANCY_FENCE = registerBlockItem("brown_marble_fancy_fence", ModBlocks.BROWN_MARBLE_FANCY_FENCE);
+    // ── Light Blue Marble ──
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_MARBLE_FLOOR_TILE = registerBlockItem("light_blue_marble_floor_tile", ModBlocks.LIGHT_BLUE_MARBLE_FLOOR_TILE);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_MARBLE_FANCY_FENCE = registerBlockItem("light_blue_marble_fancy_fence", ModBlocks.LIGHT_BLUE_MARBLE_FANCY_FENCE);
+    // ── Magenta Marble ──
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_MARBLE_FLOOR_TILE = registerBlockItem("magenta_marble_floor_tile", ModBlocks.MAGENTA_MARBLE_FLOOR_TILE);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_MARBLE_FANCY_FENCE = registerBlockItem("magenta_marble_fancy_fence", ModBlocks.MAGENTA_MARBLE_FANCY_FENCE);
 
     public static final DeferredHolder<Item, BlockItem> SANDSTONE_CRENELATION = registerBlockItem("sandstone_crenelation", ModBlocks.SANDSTONE_CRENELATION);
 
@@ -885,7 +897,6 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_DIAMOND_PAVERS = registerBlockItem("black_marble_diamond_pavers", ModBlocks.BLACK_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_DIAMOND_PAVERS = registerBlockItem("white_marble_diamond_pavers", ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS);
-    public static final DeferredHolder<Item, BlockItem> AMETHYST_MARBLE_DIAMOND_PAVERS = registerBlockItem("amethyst_marble_diamond_pavers", ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> BLUE_MARBLE_DIAMOND_PAVERS = registerBlockItem("blue_marble_diamond_pavers", ModBlocks.BLUE_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> CYAN_MARBLE_DIAMOND_PAVERS = registerBlockItem("cyan_marble_diamond_pavers", ModBlocks.CYAN_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> GREEN_MARBLE_DIAMOND_PAVERS = registerBlockItem("green_marble_diamond_pavers", ModBlocks.GREEN_MARBLE_DIAMOND_PAVERS);
@@ -895,5 +906,10 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> PURPLE_MARBLE_DIAMOND_PAVERS = registerBlockItem("purple_marble_diamond_pavers", ModBlocks.PURPLE_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> RED_MARBLE_DIAMOND_PAVERS = registerBlockItem("red_marble_diamond_pavers", ModBlocks.RED_MARBLE_DIAMOND_PAVERS);
     public static final DeferredHolder<Item, BlockItem> YELLOW_MARBLE_DIAMOND_PAVERS = registerBlockItem("yellow_marble_diamond_pavers", ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_GRAY_MARBLE_DIAMOND_PAVERS = registerBlockItem("light_gray_marble_diamond_pavers", ModBlocks.LIGHT_GRAY_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> GRAY_MARBLE_DIAMOND_PAVERS = registerBlockItem("gray_marble_diamond_pavers", ModBlocks.GRAY_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> BROWN_MARBLE_DIAMOND_PAVERS = registerBlockItem("brown_marble_diamond_pavers", ModBlocks.BROWN_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> LIGHT_BLUE_MARBLE_DIAMOND_PAVERS = registerBlockItem("light_blue_marble_diamond_pavers", ModBlocks.LIGHT_BLUE_MARBLE_DIAMOND_PAVERS);
+    public static final DeferredHolder<Item, BlockItem> MAGENTA_MARBLE_DIAMOND_PAVERS = registerBlockItem("magenta_marble_diamond_pavers", ModBlocks.MAGENTA_MARBLE_DIAMOND_PAVERS);
 
 }

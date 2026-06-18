@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:magenta_marble",
+    "ott:magenta_marble_bricks",
+    "ott:magenta_marble_diamond_pavers",
+    "ott:magenta_marble_fancy_fence",
+    "ott:magenta_marble_floor_tile",
+    "ott:magenta_marble_pillar",
+    "ott:magenta_marble_pillar_cap",
+    "ott:magenta_marble_small_bricks",
+    "ott:magenta_marble_tiles",
+    "ott:magenta_polished_marble"
+  ]
+}

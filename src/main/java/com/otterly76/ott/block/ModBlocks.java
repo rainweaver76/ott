@@ -823,9 +823,6 @@ public class ModBlocks {
     public static final DeferredBlock<PlateBlock> BLACK_MARBLE_FANCY_FENCE = register("black_marble_fancy_fence",
             () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
 
-    // ── Amethyst Marble ──
-    public static final DeferredBlock<TileBlock> AMETHYST_MARBLE_FLOOR_TILE = register("amethyst_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<PlateBlock> AMETHYST_MARBLE_FANCY_FENCE = register("amethyst_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
     // ── Blue Marble ──
     public static final DeferredBlock<TileBlock> BLUE_MARBLE_FLOOR_TILE = register("blue_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> BLUE_MARBLE_FANCY_FENCE = register("blue_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
@@ -853,6 +850,21 @@ public class ModBlocks {
     // ── Yellow Marble ──
     public static final DeferredBlock<TileBlock> YELLOW_MARBLE_FLOOR_TILE = register("yellow_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> YELLOW_MARBLE_FANCY_FENCE = register("yellow_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    // ── Light Gray Marble ──
+    public static final DeferredBlock<TileBlock> LIGHT_GRAY_MARBLE_FLOOR_TILE = register("light_gray_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<PlateBlock> LIGHT_GRAY_MARBLE_FANCY_FENCE = register("light_gray_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    // ── Gray Marble ──
+    public static final DeferredBlock<TileBlock> GRAY_MARBLE_FLOOR_TILE = register("gray_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<PlateBlock> GRAY_MARBLE_FANCY_FENCE = register("gray_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    // ── Brown Marble ──
+    public static final DeferredBlock<TileBlock> BROWN_MARBLE_FLOOR_TILE = register("brown_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<PlateBlock> BROWN_MARBLE_FANCY_FENCE = register("brown_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    // ── Light Blue Marble ──
+    public static final DeferredBlock<TileBlock> LIGHT_BLUE_MARBLE_FLOOR_TILE = register("light_blue_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<PlateBlock> LIGHT_BLUE_MARBLE_FANCY_FENCE = register("light_blue_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    // ── Magenta Marble ──
+    public static final DeferredBlock<TileBlock> MAGENTA_MARBLE_FLOOR_TILE = register("magenta_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<PlateBlock> MAGENTA_MARBLE_FANCY_FENCE = register("magenta_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
     // ── Diamond Pavers (10 new colors) ──
 
     public static final DeferredBlock<PlateBlock> SANDSTONE_CRENELATION = register("sandstone_crenelation",
@@ -1066,7 +1078,6 @@ public class ModBlocks {
     // ===== Reverted stonecutter-only diamond pavers (kept in ott) =====
     public static final DeferredBlock<Block> BLACK_MARBLE_DIAMOND_PAVERS = register("black_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WHITE_MARBLE_DIAMOND_PAVERS = register("white_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> AMETHYST_MARBLE_DIAMOND_PAVERS = register("amethyst_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> BLUE_MARBLE_DIAMOND_PAVERS = register("blue_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> CYAN_MARBLE_DIAMOND_PAVERS = register("cyan_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GREEN_MARBLE_DIAMOND_PAVERS = register("green_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -1076,5 +1087,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PURPLE_MARBLE_DIAMOND_PAVERS = register("purple_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> RED_MARBLE_DIAMOND_PAVERS = register("red_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> YELLOW_MARBLE_DIAMOND_PAVERS = register("yellow_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> LIGHT_GRAY_MARBLE_DIAMOND_PAVERS = register("light_gray_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> GRAY_MARBLE_DIAMOND_PAVERS = register("gray_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> BROWN_MARBLE_DIAMOND_PAVERS = register("brown_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> LIGHT_BLUE_MARBLE_DIAMOND_PAVERS = register("light_blue_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> MAGENTA_MARBLE_DIAMOND_PAVERS = register("magenta_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
 
 }

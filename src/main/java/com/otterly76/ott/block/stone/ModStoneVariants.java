@@ -222,12 +222,6 @@ public class ModStoneVariants {
             of("white_marble_small_bricks",         OttBlocks.WHITE_MARBLE_SMALL_BRICKS,              "ott:block/white_marble/white_marble_small_bricks"),
             of("white_marble_tiles",                OttBlocks.WHITE_MARBLE_TILES,                     "ott:block/white_marble/white_marble_tiles"),
             of("white_polished_marble",             OttBlocks.WHITE_POLISHED_MARBLE,                  "ott:block/white_marble/white_polished_marble"),
-            // ── Amethyst Marble ──
-            of("amethyst_marble", OttBlocks.AMETHYST_MARBLE, "ott:block/amethyst_marble/amethyst_marble"),
-            of("amethyst_marble_bricks", OttBlocks.AMETHYST_MARBLE_BRICKS, "ott:block/amethyst_marble/amethyst_marble_bricks"),
-            of("amethyst_marble_small_bricks", OttBlocks.AMETHYST_MARBLE_SMALL_BRICKS, "ott:block/amethyst_marble/amethyst_marble_small_bricks"),
-            of("amethyst_marble_tiles", OttBlocks.AMETHYST_MARBLE_TILES, "ott:block/amethyst_marble/amethyst_marble_tiles"),
-            of("amethyst_polished_marble", OttBlocks.AMETHYST_POLISHED_MARBLE, "ott:block/amethyst_marble/amethyst_polished_marble"),
             // ── Blue Marble ──
             of("blue_marble", OttBlocks.BLUE_MARBLE, "ott:block/blue_marble/blue_marble"),
             of("blue_marble_bricks", OttBlocks.BLUE_MARBLE_BRICKS, "ott:block/blue_marble/blue_marble_bricks"),
@@ -282,6 +276,36 @@ public class ModStoneVariants {
             of("yellow_marble_small_bricks", OttBlocks.YELLOW_MARBLE_SMALL_BRICKS, "ott:block/yellow_marble/yellow_marble_small_bricks"),
             of("yellow_marble_tiles", OttBlocks.YELLOW_MARBLE_TILES, "ott:block/yellow_marble/yellow_marble_tiles"),
             of("yellow_polished_marble", OttBlocks.YELLOW_POLISHED_MARBLE, "ott:block/yellow_marble/yellow_polished_marble"),
+            // ── Light Gray Marble ──
+            of("light_gray_marble", OttBlocks.LIGHT_GRAY_MARBLE, "ott:block/light_gray_marble/light_gray_marble"),
+            of("light_gray_marble_bricks", OttBlocks.LIGHT_GRAY_MARBLE_BRICKS, "ott:block/light_gray_marble/light_gray_marble_bricks"),
+            of("light_gray_marble_small_bricks", OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS, "ott:block/light_gray_marble/light_gray_marble_small_bricks"),
+            of("light_gray_marble_tiles", OttBlocks.LIGHT_GRAY_MARBLE_TILES, "ott:block/light_gray_marble/light_gray_marble_tiles"),
+            of("light_gray_polished_marble", OttBlocks.LIGHT_GRAY_POLISHED_MARBLE, "ott:block/light_gray_marble/light_gray_polished_marble"),
+            // ── Gray Marble ──
+            of("gray_marble", OttBlocks.GRAY_MARBLE, "ott:block/gray_marble/gray_marble"),
+            of("gray_marble_bricks", OttBlocks.GRAY_MARBLE_BRICKS, "ott:block/gray_marble/gray_marble_bricks"),
+            of("gray_marble_small_bricks", OttBlocks.GRAY_MARBLE_SMALL_BRICKS, "ott:block/gray_marble/gray_marble_small_bricks"),
+            of("gray_marble_tiles", OttBlocks.GRAY_MARBLE_TILES, "ott:block/gray_marble/gray_marble_tiles"),
+            of("gray_polished_marble", OttBlocks.GRAY_POLISHED_MARBLE, "ott:block/gray_marble/gray_polished_marble"),
+            // ── Brown Marble ──
+            of("brown_marble", OttBlocks.BROWN_MARBLE, "ott:block/brown_marble/brown_marble"),
+            of("brown_marble_bricks", OttBlocks.BROWN_MARBLE_BRICKS, "ott:block/brown_marble/brown_marble_bricks"),
+            of("brown_marble_small_bricks", OttBlocks.BROWN_MARBLE_SMALL_BRICKS, "ott:block/brown_marble/brown_marble_small_bricks"),
+            of("brown_marble_tiles", OttBlocks.BROWN_MARBLE_TILES, "ott:block/brown_marble/brown_marble_tiles"),
+            of("brown_polished_marble", OttBlocks.BROWN_POLISHED_MARBLE, "ott:block/brown_marble/brown_polished_marble"),
+            // ── Light Blue Marble ──
+            of("light_blue_marble", OttBlocks.LIGHT_BLUE_MARBLE, "ott:block/light_blue_marble/light_blue_marble"),
+            of("light_blue_marble_bricks", OttBlocks.LIGHT_BLUE_MARBLE_BRICKS, "ott:block/light_blue_marble/light_blue_marble_bricks"),
+            of("light_blue_marble_small_bricks", OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS, "ott:block/light_blue_marble/light_blue_marble_small_bricks"),
+            of("light_blue_marble_tiles", OttBlocks.LIGHT_BLUE_MARBLE_TILES, "ott:block/light_blue_marble/light_blue_marble_tiles"),
+            of("light_blue_polished_marble", OttBlocks.LIGHT_BLUE_POLISHED_MARBLE, "ott:block/light_blue_marble/light_blue_polished_marble"),
+            // ── Magenta Marble ──
+            of("magenta_marble", OttBlocks.MAGENTA_MARBLE, "ott:block/magenta_marble/magenta_marble"),
+            of("magenta_marble_bricks", OttBlocks.MAGENTA_MARBLE_BRICKS, "ott:block/magenta_marble/magenta_marble_bricks"),
+            of("magenta_marble_small_bricks", OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "ott:block/magenta_marble/magenta_marble_small_bricks"),
+            of("magenta_marble_tiles", OttBlocks.MAGENTA_MARBLE_TILES, "ott:block/magenta_marble/magenta_marble_tiles"),
+            of("magenta_polished_marble", OttBlocks.MAGENTA_POLISHED_MARBLE, "ott:block/magenta_marble/magenta_polished_marble"),
             of("sandstone_slender_bricks",          OttBlocks.SANDSTONE_SLENDER_BRICKS,               "ott:block/sandstone/sandstone_slender_bricks"),
             of("sandstone_slender_turquoise_pattern", OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
     );

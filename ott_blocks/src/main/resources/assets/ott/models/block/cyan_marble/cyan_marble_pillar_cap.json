@@ -1,7 +1,1 @@
-{
-	"parent": "block/cube_column",
-	"textures": {
-		"end": "ott:block/cyan_marble/cyan_marble_pillar_top",
-		"side": "ott:block/cyan_marble/cyan_marble_pillar_cap"
-	}
-}
+{ "parent": "block/cube_column", "textures": { "end": "ott:block/cyan_marble/cyan_marble_pillar_top", "side": "ott:block/cyan_marble/cyan_marble_pillar_cap" } }

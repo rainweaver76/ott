@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ott:light_blue_marble",
+    "ott:light_blue_marble_bricks",
+    "ott:light_blue_marble_diamond_pavers",
+    "ott:light_blue_marble_fancy_fence",
+    "ott:light_blue_marble_floor_tile",
+    "ott:light_blue_marble_pillar",
+    "ott:light_blue_marble_pillar_cap",
+    "ott:light_blue_marble_small_bricks",
+    "ott:light_blue_marble_tiles",
+    "ott:light_blue_polished_marble"
+  ]
+}

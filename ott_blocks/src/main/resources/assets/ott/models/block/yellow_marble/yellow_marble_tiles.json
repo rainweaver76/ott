@@ -1,6 +1,1 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "ott:block/yellow_marble/yellow_marble_tiles"
-	}
-}
+{ "parent": "block/cube_all", "textures": { "all": "ott:block/yellow_marble/yellow_marble_tiles" } }

@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "ott:block/amethyst_marble/amethyst_marble_diamond_pavers"
-  }
-}

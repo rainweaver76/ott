@@ -1,6 +1,1 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "ott:block/pink_marble/pink_polished_marble"
-	}
-}
+{ "parent": "block/cube_all", "textures": { "all": "ott:block/pink_marble/pink_polished_marble" } }

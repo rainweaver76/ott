@@ -651,16 +651,6 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.WHITE_MARBLE_FANCY_FENCE);
                 output.accept(ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS);
 
-                output.accept(OttBlocks.AMETHYST_MARBLE);                emit.accept("amethyst_marble");
-                output.accept(OttBlocks.AMETHYST_MARBLE_BRICKS);         emit.accept("amethyst_marble_bricks");
-                output.accept(OttBlocks.AMETHYST_MARBLE_SMALL_BRICKS);   emit.accept("amethyst_marble_small_bricks");
-                output.accept(OttBlocks.AMETHYST_MARBLE_TILES);          emit.accept("amethyst_marble_tiles");
-                output.accept(OttBlocks.AMETHYST_POLISHED_MARBLE);       emit.accept("amethyst_polished_marble");
-                output.accept(OttBlocks.AMETHYST_MARBLE_PILLAR);
-                output.accept(OttBlocks.AMETHYST_MARBLE_PILLAR_CAP);
-                output.accept(ModBlocks.AMETHYST_MARBLE_FLOOR_TILE);
-                output.accept(ModBlocks.AMETHYST_MARBLE_FANCY_FENCE);
-                output.accept(ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS);
 
                 output.accept(OttBlocks.BLUE_MARBLE);                emit.accept("blue_marble");
                 output.accept(OttBlocks.BLUE_MARBLE_BRICKS);         emit.accept("blue_marble_bricks");
@@ -760,6 +750,61 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.YELLOW_MARBLE_FLOOR_TILE);
                 output.accept(ModBlocks.YELLOW_MARBLE_FANCY_FENCE);
                 output.accept(ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS);
+
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE);                emit.accept("light_gray_marble");
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE_BRICKS);         emit.accept("light_gray_marble_bricks");
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS);   emit.accept("light_gray_marble_small_bricks");
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE_TILES);          emit.accept("light_gray_marble_tiles");
+                output.accept(OttBlocks.LIGHT_GRAY_POLISHED_MARBLE);       emit.accept("light_gray_polished_marble");
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE_PILLAR);
+                output.accept(OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP);
+                output.accept(ModBlocks.LIGHT_GRAY_MARBLE_FLOOR_TILE);
+                output.accept(ModBlocks.LIGHT_GRAY_MARBLE_FANCY_FENCE);
+                output.accept(ModBlocks.LIGHT_GRAY_MARBLE_DIAMOND_PAVERS);
+
+                output.accept(OttBlocks.GRAY_MARBLE);                emit.accept("gray_marble");
+                output.accept(OttBlocks.GRAY_MARBLE_BRICKS);         emit.accept("gray_marble_bricks");
+                output.accept(OttBlocks.GRAY_MARBLE_SMALL_BRICKS);   emit.accept("gray_marble_small_bricks");
+                output.accept(OttBlocks.GRAY_MARBLE_TILES);          emit.accept("gray_marble_tiles");
+                output.accept(OttBlocks.GRAY_POLISHED_MARBLE);       emit.accept("gray_polished_marble");
+                output.accept(OttBlocks.GRAY_MARBLE_PILLAR);
+                output.accept(OttBlocks.GRAY_MARBLE_PILLAR_CAP);
+                output.accept(ModBlocks.GRAY_MARBLE_FLOOR_TILE);
+                output.accept(ModBlocks.GRAY_MARBLE_FANCY_FENCE);
+                output.accept(ModBlocks.GRAY_MARBLE_DIAMOND_PAVERS);
+
+                output.accept(OttBlocks.BROWN_MARBLE);                emit.accept("brown_marble");
+                output.accept(OttBlocks.BROWN_MARBLE_BRICKS);         emit.accept("brown_marble_bricks");
+                output.accept(OttBlocks.BROWN_MARBLE_SMALL_BRICKS);   emit.accept("brown_marble_small_bricks");
+                output.accept(OttBlocks.BROWN_MARBLE_TILES);          emit.accept("brown_marble_tiles");
+                output.accept(OttBlocks.BROWN_POLISHED_MARBLE);       emit.accept("brown_polished_marble");
+                output.accept(OttBlocks.BROWN_MARBLE_PILLAR);
+                output.accept(OttBlocks.BROWN_MARBLE_PILLAR_CAP);
+                output.accept(ModBlocks.BROWN_MARBLE_FLOOR_TILE);
+                output.accept(ModBlocks.BROWN_MARBLE_FANCY_FENCE);
+                output.accept(ModBlocks.BROWN_MARBLE_DIAMOND_PAVERS);
+
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE);                emit.accept("light_blue_marble");
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE_BRICKS);         emit.accept("light_blue_marble_bricks");
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS);   emit.accept("light_blue_marble_small_bricks");
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE_TILES);          emit.accept("light_blue_marble_tiles");
+                output.accept(OttBlocks.LIGHT_BLUE_POLISHED_MARBLE);       emit.accept("light_blue_polished_marble");
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE_PILLAR);
+                output.accept(OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP);
+                output.accept(ModBlocks.LIGHT_BLUE_MARBLE_FLOOR_TILE);
+                output.accept(ModBlocks.LIGHT_BLUE_MARBLE_FANCY_FENCE);
+                output.accept(ModBlocks.LIGHT_BLUE_MARBLE_DIAMOND_PAVERS);
+
+                output.accept(OttBlocks.MAGENTA_MARBLE);                emit.accept("magenta_marble");
+                output.accept(OttBlocks.MAGENTA_MARBLE_BRICKS);         emit.accept("magenta_marble_bricks");
+                output.accept(OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS);   emit.accept("magenta_marble_small_bricks");
+                output.accept(OttBlocks.MAGENTA_MARBLE_TILES);          emit.accept("magenta_marble_tiles");
+                output.accept(OttBlocks.MAGENTA_POLISHED_MARBLE);       emit.accept("magenta_polished_marble");
+                output.accept(OttBlocks.MAGENTA_MARBLE_PILLAR);
+                output.accept(OttBlocks.MAGENTA_MARBLE_PILLAR_CAP);
+                output.accept(ModBlocks.MAGENTA_MARBLE_FLOOR_TILE);
+                output.accept(ModBlocks.MAGENTA_MARBLE_FANCY_FENCE);
+                output.accept(ModBlocks.MAGENTA_MARBLE_DIAMOND_PAVERS);
 
                 output.accept(OttBlocks.SANDSTONE_SLENDER_BRICKS);          emit.accept("sandstone_slender_bricks");
                 output.accept(OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN); emit.accept("sandstone_slender_turquoise_pattern");

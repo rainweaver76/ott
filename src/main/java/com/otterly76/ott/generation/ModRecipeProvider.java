@@ -1864,15 +1864,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FANCY_FENCE.get(),  "white_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_FLOOR_TILE.get(), "white_marble_floor_tile_stonecutting");
         stonecutOne(exporter,  OttBlocks.WHITE_MARBLE.get(), ModBlocks.WHITE_MARBLE_DIAMOND_PAVERS.get(), "white_marble_diamond_pavers_stonecutting");
-        // ── Amethyst Marble stonecutting ──
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_BRICKS.get(),       "amethyst_marble_bricks_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_SMALL_BRICKS.get(), "amethyst_marble_small_bricks_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_TILES.get(),        "amethyst_marble_tiles_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_PILLAR.get(),       "amethyst_marble_pillar_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), OttBlocks.AMETHYST_MARBLE_PILLAR_CAP.get(),   "amethyst_marble_pillar_cap_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FANCY_FENCE.get(),  "amethyst_marble_fancy_fence_stonecutting");
-        stonecutMany(exporter, OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_FLOOR_TILE.get(),   "amethyst_marble_floor_tile_stonecutting");
-        stonecutOne(exporter,  OttBlocks.AMETHYST_MARBLE.get(), ModBlocks.AMETHYST_MARBLE_DIAMOND_PAVERS.get(),  "amethyst_marble_diamond_pavers_stonecutting");
         // ── Blue Marble stonecutting ──
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_BRICKS.get(),       "blue_marble_bricks_stonecutting");
         stonecutOne(exporter,  OttBlocks.BLUE_MARBLE.get(), OttBlocks.BLUE_MARBLE_SMALL_BRICKS.get(), "blue_marble_small_bricks_stonecutting");
@@ -1954,6 +1945,51 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FANCY_FENCE.get(),  "yellow_marble_fancy_fence_stonecutting");
         stonecutMany(exporter, OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_FLOOR_TILE.get(),   "yellow_marble_floor_tile_stonecutting");
         stonecutOne(exporter,  OttBlocks.YELLOW_MARBLE.get(), ModBlocks.YELLOW_MARBLE_DIAMOND_PAVERS.get(),  "yellow_marble_diamond_pavers_stonecutting");
+        // --- Light Gray marble stonecutting ---
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), OttBlocks.LIGHT_GRAY_MARBLE_BRICKS.get(),       "light_gray_marble_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS.get(), "light_gray_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), OttBlocks.LIGHT_GRAY_MARBLE_TILES.get(),        "light_gray_marble_tiles_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), OttBlocks.LIGHT_GRAY_MARBLE_PILLAR.get(),       "light_gray_marble_pillar_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP.get(),   "light_gray_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), ModBlocks.LIGHT_GRAY_MARBLE_FANCY_FENCE.get(),  "light_gray_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, OttBlocks.LIGHT_GRAY_MARBLE.get(), ModBlocks.LIGHT_GRAY_MARBLE_FLOOR_TILE.get(),   "light_gray_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_GRAY_MARBLE.get(), ModBlocks.LIGHT_GRAY_MARBLE_DIAMOND_PAVERS.get(), "light_gray_marble_diamond_pavers_stonecutting");
+        // --- Gray marble stonecutting ---
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), OttBlocks.GRAY_MARBLE_BRICKS.get(),       "gray_marble_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), OttBlocks.GRAY_MARBLE_SMALL_BRICKS.get(), "gray_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), OttBlocks.GRAY_MARBLE_TILES.get(),        "gray_marble_tiles_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), OttBlocks.GRAY_MARBLE_PILLAR.get(),       "gray_marble_pillar_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), OttBlocks.GRAY_MARBLE_PILLAR_CAP.get(),   "gray_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), ModBlocks.GRAY_MARBLE_FANCY_FENCE.get(),  "gray_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, OttBlocks.GRAY_MARBLE.get(), ModBlocks.GRAY_MARBLE_FLOOR_TILE.get(),   "gray_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  OttBlocks.GRAY_MARBLE.get(), ModBlocks.GRAY_MARBLE_DIAMOND_PAVERS.get(), "gray_marble_diamond_pavers_stonecutting");
+        // --- Brown marble stonecutting ---
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), OttBlocks.BROWN_MARBLE_BRICKS.get(),       "brown_marble_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), OttBlocks.BROWN_MARBLE_SMALL_BRICKS.get(), "brown_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), OttBlocks.BROWN_MARBLE_TILES.get(),        "brown_marble_tiles_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), OttBlocks.BROWN_MARBLE_PILLAR.get(),       "brown_marble_pillar_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), OttBlocks.BROWN_MARBLE_PILLAR_CAP.get(),   "brown_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), ModBlocks.BROWN_MARBLE_FANCY_FENCE.get(),  "brown_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, OttBlocks.BROWN_MARBLE.get(), ModBlocks.BROWN_MARBLE_FLOOR_TILE.get(),   "brown_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  OttBlocks.BROWN_MARBLE.get(), ModBlocks.BROWN_MARBLE_DIAMOND_PAVERS.get(), "brown_marble_diamond_pavers_stonecutting");
+        // --- Light Blue marble stonecutting ---
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), OttBlocks.LIGHT_BLUE_MARBLE_BRICKS.get(),       "light_blue_marble_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS.get(), "light_blue_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), OttBlocks.LIGHT_BLUE_MARBLE_TILES.get(),        "light_blue_marble_tiles_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), OttBlocks.LIGHT_BLUE_MARBLE_PILLAR.get(),       "light_blue_marble_pillar_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP.get(),   "light_blue_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), ModBlocks.LIGHT_BLUE_MARBLE_FANCY_FENCE.get(),  "light_blue_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, OttBlocks.LIGHT_BLUE_MARBLE.get(), ModBlocks.LIGHT_BLUE_MARBLE_FLOOR_TILE.get(),   "light_blue_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  OttBlocks.LIGHT_BLUE_MARBLE.get(), ModBlocks.LIGHT_BLUE_MARBLE_DIAMOND_PAVERS.get(), "light_blue_marble_diamond_pavers_stonecutting");
+        // --- Magenta marble stonecutting ---
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), OttBlocks.MAGENTA_MARBLE_BRICKS.get(),       "magenta_marble_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS.get(), "magenta_marble_small_bricks_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), OttBlocks.MAGENTA_MARBLE_TILES.get(),        "magenta_marble_tiles_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), OttBlocks.MAGENTA_MARBLE_PILLAR.get(),       "magenta_marble_pillar_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), OttBlocks.MAGENTA_MARBLE_PILLAR_CAP.get(),   "magenta_marble_pillar_cap_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), ModBlocks.MAGENTA_MARBLE_FANCY_FENCE.get(),  "magenta_marble_fancy_fence_stonecutting");
+        stonecutMany(exporter, OttBlocks.MAGENTA_MARBLE.get(), ModBlocks.MAGENTA_MARBLE_FLOOR_TILE.get(),   "magenta_marble_floor_tile_stonecutting");
+        stonecutOne(exporter,  OttBlocks.MAGENTA_MARBLE.get(), ModBlocks.MAGENTA_MARBLE_DIAMOND_PAVERS.get(), "magenta_marble_diamond_pavers_stonecutting");
         stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.MIXED_LIMESTONE_BRICKS.get(), "mixed_limestone_bricks_from_limestone_stonecutting");
         // --- Chiseled plastered stone from matching plastered stone ---
         ModBlocks.PATTERN_BLOCKS.get("plastered_stone").forEach((color, base) -> {
@@ -2247,13 +2283,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_POLISHED_MARBLE,     "white_polished_marble_engraving");
         engraveOne(exporter, OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR,       "white_marble_pillar_engraving");
         engraveOne(exporter, OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR_CAP,   "white_marble_pillar_cap_engraving");
-        // ── Amethyst Marble engraving ──
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_MARBLE_BRICKS,       "amethyst_marble_bricks_engraving");
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_MARBLE_SMALL_BRICKS, "amethyst_marble_small_bricks_engraving");
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_MARBLE_TILES,        "amethyst_marble_tiles_engraving");
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_POLISHED_MARBLE,     "amethyst_polished_marble_engraving");
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_MARBLE_PILLAR,       "amethyst_marble_pillar_engraving");
-        engraveOne(exporter, OttBlocks.AMETHYST_MARBLE, OttBlocks.AMETHYST_MARBLE_PILLAR_CAP,   "amethyst_marble_pillar_cap_engraving");
         // ── Blue Marble engraving ──
         engraveOne(exporter, OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_BRICKS,       "blue_marble_bricks_engraving");
         engraveOne(exporter, OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_SMALL_BRICKS, "blue_marble_small_bricks_engraving");
@@ -2317,14 +2346,43 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_POLISHED_MARBLE,     "yellow_polished_marble_engraving");
         engraveOne(exporter, OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR,       "yellow_marble_pillar_engraving");
         engraveOne(exporter, OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR_CAP,   "yellow_marble_pillar_cap_engraving");
+        // ── Light Gray Marble engraving ──
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_BRICKS,       "light_gray_marble_bricks_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS, "light_gray_marble_small_bricks_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_TILES,        "light_gray_marble_tiles_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_POLISHED_MARBLE,     "light_gray_polished_marble_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR,       "light_gray_marble_pillar_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP,   "light_gray_marble_pillar_cap_engraving");
+        // ── Gray Marble engraving ──
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_BRICKS,       "gray_marble_bricks_engraving");
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_SMALL_BRICKS, "gray_marble_small_bricks_engraving");
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_TILES,        "gray_marble_tiles_engraving");
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_POLISHED_MARBLE,     "gray_polished_marble_engraving");
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR,       "gray_marble_pillar_engraving");
+        engraveOne(exporter, OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR_CAP,   "gray_marble_pillar_cap_engraving");
+        // ── Brown Marble engraving ──
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_BRICKS,       "brown_marble_bricks_engraving");
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_SMALL_BRICKS, "brown_marble_small_bricks_engraving");
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_TILES,        "brown_marble_tiles_engraving");
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_POLISHED_MARBLE,     "brown_polished_marble_engraving");
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR,       "brown_marble_pillar_engraving");
+        engraveOne(exporter, OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR_CAP,   "brown_marble_pillar_cap_engraving");
+        // ── Light Blue Marble engraving ──
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_BRICKS,       "light_blue_marble_bricks_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS, "light_blue_marble_small_bricks_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_TILES,        "light_blue_marble_tiles_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_POLISHED_MARBLE,     "light_blue_polished_marble_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR,       "light_blue_marble_pillar_engraving");
+        engraveOne(exporter, OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP,   "light_blue_marble_pillar_cap_engraving");
+        // ── Magenta Marble engraving ──
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_BRICKS,       "magenta_marble_bricks_engraving");
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "magenta_marble_small_bricks_engraving");
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_TILES,        "magenta_marble_tiles_engraving");
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_POLISHED_MARBLE,     "magenta_polished_marble_engraving");
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR,       "magenta_marble_pillar_engraving");
+        engraveOne(exporter, OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR_CAP,   "magenta_marble_pillar_cap_engraving");
 
         // ── Colored marble dye recipes (8 white marble + 1 dye → 8 colored marble) ──
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.AMETHYST_MARBLE.get(), 8)
-                .pattern("WWW").pattern("WDW").pattern("WWW")
-                .define('W', OttBlocks.WHITE_MARBLE.get())
-                .define('D', Items.AMETHYST_SHARD)
-                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
-                .save(exporter, getRecipePath("ott", "amethyst_marble_from_dye"));
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.BLUE_MARBLE.get(), 8)
                 .pattern("WWW").pattern("WDW").pattern("WWW")
                 .define('W', OttBlocks.WHITE_MARBLE.get())
@@ -2379,6 +2437,36 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('D', Items.YELLOW_DYE)
                 .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
                 .save(exporter, getRecipePath("ott", "yellow_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.LIGHT_GRAY_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', OttBlocks.WHITE_MARBLE.get())
+                .define('D', Items.LIGHT_GRAY_DYE)
+                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "light_gray_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.GRAY_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', OttBlocks.WHITE_MARBLE.get())
+                .define('D', Items.GRAY_DYE)
+                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "gray_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.BROWN_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', OttBlocks.WHITE_MARBLE.get())
+                .define('D', Items.BROWN_DYE)
+                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "brown_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.LIGHT_BLUE_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', OttBlocks.WHITE_MARBLE.get())
+                .define('D', Items.LIGHT_BLUE_DYE)
+                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "light_blue_marble_from_dye"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, OttBlocks.MAGENTA_MARBLE.get(), 8)
+                .pattern("WWW").pattern("WDW").pattern("WWW")
+                .define('W', OttBlocks.WHITE_MARBLE.get())
+                .define('D', Items.MAGENTA_DYE)
+                .unlockedBy("has_white_marble", has(OttBlocks.WHITE_MARBLE.get()))
+                .save(exporter, getRecipePath("ott", "magenta_marble_from_dye"));
 
         // ── Black marble → variants ───────────────────────────────────────────────
         engraveOne(exporter, OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_BRICKS,       "black_marble_bricks_engraving");
