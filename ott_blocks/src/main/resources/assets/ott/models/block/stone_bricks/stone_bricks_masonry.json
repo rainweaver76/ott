@@ -1,7 +1,7 @@
 {
     "parent": "ott:block/ctm/ctm_cube_all",
     "textures": {
-        "all": "ott:block/stone_bricks_masonry/stone_bricks_masonry-ctm"
+        "all": "ott:block/stone_bricks_masonry/stone_bricks_masonry_ctm"
     },
     "loader": "ott:mosaic",
     "connections": [{"type": "is_same_block"}],
