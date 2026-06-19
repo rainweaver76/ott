@@ -752,6 +752,29 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         getVariantBuilder(wallBanner).forAllStates(state -> ConfiguredModel.builder().modelFile(model).build());
     }
 
+    /**
+     * Edge texture used by the connecting pane {@code <parent>_ctm_pane} (read from its committed
+     * {@code _post} model on the classpath), so the auto-derived static pane matches it. Falls back to
+     * vanilla {@code block/glass_pane_top} for glass families that have no CTM pane.
+     */
+    private ResourceLocation ctmPaneEdge(String parent) {
+        String res = "assets/ott/models/block/glass/" + parent + "_ctm_pane_post.json";
+        try (var in = getClass().getClassLoader().getResourceAsStream(res)) {
+            if (in != null) {
+                com.google.gson.JsonObject o = com.google.gson.JsonParser
+                        .parseReader(new java.io.InputStreamReader(in, java.nio.charset.StandardCharsets.UTF_8))
+                        .getAsJsonObject();
+                com.google.gson.JsonObject tex = o.getAsJsonObject("textures");
+                if (tex != null && tex.has("edge")) {
+                    return ResourceLocation.parse(tex.get("edge").getAsString());
+                }
+            }
+        } catch (RuntimeException | java.io.IOException ignored) {
+            // fall through to default
+        }
+        return mcLoc("block/glass_pane_top");
+    }
+
     public void paneBlockWithRenderType(net.minecraft.world.level.block.@NotNull IronBarsBlock block, @NotNull ResourceLocation side, @NotNull ResourceLocation edge, @NotNull String renderType) {
         paneBlock(block, side, edge);
         // The above helper doesn't let us set render type easily on all generated models, but we can try to find them
@@ -1556,19 +1579,21 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         // ── Auto-derived static (non-connecting) glass panes ──────────────────
         // One per template=glass block. Pane face = the block's own texture (tile-0 solo frame);
-        // edge reuses the same texture. Render type inherits the parent glass block's hint.
+        // edge reuses the matching CTM pane's edge texture (read from {parent}_ctm_pane_post.json),
+        // falling back to vanilla glass_pane_top. Render type inherits the parent glass block's hint.
         com.otterly76.ott_blocks.block.OttTemplateBlocks.PANE_PARENT.forEach((paneName, parent) -> {
             String material = com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(parent);
             String render = com.otterly76.ott_blocks.block.OttTemplateBlocks.RENDER_BY_NAME.get(parent);
             String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
                     : (render.contains(":") ? render : "minecraft:" + render);
             ResourceLocation tex = modLoc("block/" + material + "/" + parent);
+            ResourceLocation edge = ctmPaneEdge(parent);
             net.minecraft.world.level.block.IronBarsBlock pane =
                     (net.minecraft.world.level.block.IronBarsBlock) com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.get(paneName).get();
-            paneBlockWithRenderType(pane, tex, tex, rt);
+            paneBlockWithRenderType(pane, tex, edge, rt);
             itemModels().withExistingParent(paneName, mcLoc("item/glass_pane"))
                     .texture("front", tex)
-                    .texture("side", tex)
+                    .texture("side", edge)
                     .renderType(rt);
         });
 
