@@ -32,6 +32,5 @@ repo
 /config/ott.json
 /logs/*
 /scripts/*
-/src/to_be_added/*
 /ott_blocks/logs/
-/catalog_matrix.csv
+/to_be_added/
