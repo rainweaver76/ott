@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "pieces_horizontal",
   "parent": "ott:block/ctm/ctm_cube_all_horizontal",
+  "layout": "pieces_horizontal",
   "textures": {
     "all": "ott:block/red_nether_bricks/ctm/red_nether_bricks_large_bricks"
   },

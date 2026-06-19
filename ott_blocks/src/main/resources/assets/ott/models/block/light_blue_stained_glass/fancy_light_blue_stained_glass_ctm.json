@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "pieces_full",
   "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
   "textures": {
     "all": "ott:block/light_blue_stained_glass/ctm/fancy_light_blue_stained_glass_ctm"
   },

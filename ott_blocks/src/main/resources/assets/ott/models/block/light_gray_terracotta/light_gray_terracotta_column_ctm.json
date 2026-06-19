@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical_capped",
+  "layout": "vertical",
   "textures": {
     "side": "ott:block/light_gray_terracotta/ctm/light_gray_terracotta_column"
   },

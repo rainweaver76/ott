@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "pieces_full",
   "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
   "textures": {
     "all": "ott:block/purple_stained_glass/ctm/raster_purple_stained_glass_ctm"
   },

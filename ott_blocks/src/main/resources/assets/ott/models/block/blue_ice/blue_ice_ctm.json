@@ -1,13 +1,17 @@
 {
   "loader": "ott:mosaic",
-  "layout": "pieces_vertical",
   "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical_capped",
+  "layout": "pieces_vertical",
   "textures": {
-    "side":   "ott:block/blue_ice/ctm/blue_ice_ctm_side",
-    "top":    "ott:block/blue_ice/blue_ice_end",
-    "bottom": "ott:block/blue_ice/blue_ice_end"
+    "bottom": "ott:block/blue_ice/blue_ice_end",
+    "side": "ott:block/blue_ice/ctm/blue_ice_ctm_side",
+    "top": "ott:block/blue_ice/blue_ice_end"
   },
   "connections": {
-    "side": [{"type": "is_same_block"}]
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "layout": "vertical",
   "textures": {
     "side": "ott:block/warped_windows/ctm/warped_window_rounded",
     "top": "minecraft:block/warped_planks"

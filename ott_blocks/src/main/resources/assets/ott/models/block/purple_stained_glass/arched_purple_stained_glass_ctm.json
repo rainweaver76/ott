@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "layout": "vertical",
   "parent": "ott:block/ctm/ctm_cube_column_vertical",
+  "layout": "vertical",
   "textures": {
     "side": "ott:block/purple_stained_glass/ctm/arched_purple_stained_glass_ctm",
     "top": "ott:block/purple_stained_glass/circular_purple_stained_glass"
