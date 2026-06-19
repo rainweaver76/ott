@@ -53,8 +53,10 @@ public class ColorSetTextureProvider implements DataProvider {
     @Override
     @NotNull
     public CompletableFuture<?> run(@NotNull CachedOutput cache) {
-        // We save to src/main/resources instead of src/generated/resources so OttBlockStateProvider can find them during the same run.
-        java.nio.file.Path mainPath = packOutput.getOutputFolder().resolve("../../main/resources/assets/ott").normalize();
+        // Color-set textures are block content -> write committed into the ott_blocks module (single source).
+        // Committed (not src/generated) so OttBlockStateProvider's existingFileHelper finds them during the run;
+        // ott_blocks resources are on that path (template/cube_all textures live there and validate fine).
+        java.nio.file.Path mainPath = packOutput.getOutputFolder().resolve("../../../ott_blocks/src/main/resources/assets/ott").normalize();
         
         for (ModColorSets.ColorSet colorSet : ModColorSets.ALL) {
             String colorName = colorSet.name();
