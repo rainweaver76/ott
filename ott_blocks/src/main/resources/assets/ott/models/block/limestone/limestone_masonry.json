@@ -1,5 +1,5 @@
 {
-    "parent": "ott:block/ctm/ctm_cube_all",
+    "parent": "ott:block/ctm/ctm_full_detailed",
     "textures": {
         "all": "ott:block/limestone_masonry/limestone_masonry_ctm"
     },

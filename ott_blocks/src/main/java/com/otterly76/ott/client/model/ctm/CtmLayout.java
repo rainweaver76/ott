@@ -12,8 +12,8 @@ public enum CtmLayout {
 
     // ---- layout types ---------------------------------------------------------
 
-    /** 8×8 atlas (128×128 px), all 8 neighbours, 256 combinations. Default. */
-    FULL(8, 8) {
+    /** 12×4 atlas (192×64 px), all 8 neighbours, 256 combinations. Default. (Compact OptiFine layout.) */
+    FULL(12, 4) {
         @Override public int[] tile(int mask) {
             int m = mask & 0xFF;
             return new int[]{ FullLayoutLookup.TILE_X[m], FullLayoutLookup.TILE_Y[m] };
@@ -239,6 +239,7 @@ public enum CtmLayout {
     /** Parses a layout id string; defaults to {@link #FULL} for unknown/absent values. */
     public static CtmLayout fromId(String id) {
         return switch (id.toLowerCase()) {
+            case "full", "full_detailed" -> FULL; // "full_detailed" = self-documenting alias for the 12×4 atlas
             case "simple"     -> SIMPLE;
             case "horizontal" -> HORIZONTAL;
             case "vertical"   -> VERTICAL;
