@@ -1531,9 +1531,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         }) {
             String element = pair[0], dir = pair[1];
             String d = "block/" + dir + "/";
-            // border/delicate/pattern migrated to ctm_blocks.tsv (OttCtmModelProvider). geometric = Tier 2 (still here).
-            simpleBlockWithItem(elementalMosaicBlock(element, "geometric"),   models().getExistingFile(modLoc(d + dir + "_geometric")));
-            simpleBlockWithItem(elementalMosaicBlock(element, "traditional"), models().getExistingFile(modLoc(d + dir + "_traditional")));
+            // border/delicate/pattern/geometric migrated to ctm_blocks.tsv (OttCtmModelProvider).
+            simpleBlockWithItem(traditionalMosaicBlock(element), models().getExistingFile(modLoc(d + dir + "_traditional")));
             // recess: manual blockstate kept — complex geometry needs hand-tuned x/y rotations
         }
 
@@ -1734,40 +1733,15 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockItem(block.get(), normal);
     }
 
-    /** Convenience: look up the elemental mosaic block by element name + type suffix. */
-    private Block elementalMosaicBlock(String element, String type) {
-        return switch (element + "_" + type) {
-            case "water_border"      -> OttBlocks.WATER_MOSAIC_BORDER.get();
-            case "water_geometric"   -> OttBlocks.WATER_MOSAIC_GEOMETRIC.get();
-            case "water_pattern"     -> OttBlocks.WATER_MOSAIC_PATTERN.get();
-            case "water_delicate"    -> OttBlocks.WATER_MOSAIC_DELICATE.get();
-            case "water_traditional" -> OttBlocks.WATER_MOSAIC_TRADITIONAL.get();
-            case "water_recess"      -> ModBlocks.WATER_MOSAIC_RECESS.get();
-            case "earth_border"      -> OttBlocks.EARTH_MOSAIC_BORDER.get();
-            case "earth_geometric"   -> OttBlocks.EARTH_MOSAIC_GEOMETRIC.get();
-            case "earth_pattern"     -> OttBlocks.EARTH_MOSAIC_PATTERN.get();
-            case "earth_delicate"    -> OttBlocks.EARTH_MOSAIC_DELICATE.get();
-            case "earth_traditional" -> OttBlocks.EARTH_MOSAIC_TRADITIONAL.get();
-            case "earth_recess"      -> ModBlocks.EARTH_MOSAIC_RECESS.get();
-            case "fire_border"       -> OttBlocks.FIRE_MOSAIC_BORDER.get();
-            case "fire_geometric"    -> OttBlocks.FIRE_MOSAIC_GEOMETRIC.get();
-            case "fire_pattern"      -> OttBlocks.FIRE_MOSAIC_PATTERN.get();
-            case "fire_delicate"     -> OttBlocks.FIRE_MOSAIC_DELICATE.get();
-            case "fire_traditional"  -> OttBlocks.FIRE_MOSAIC_TRADITIONAL.get();
-            case "fire_recess"       -> ModBlocks.FIRE_MOSAIC_RECESS.get();
-            case "spirit_border"     -> OttBlocks.SPIRIT_MOSAIC_BORDER.get();
-            case "spirit_geometric"  -> OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get();
-            case "spirit_pattern"    -> OttBlocks.SPIRIT_MOSAIC_PATTERN.get();
-            case "spirit_delicate"   -> OttBlocks.SPIRIT_MOSAIC_DELICATE.get();
-            case "spirit_traditional"-> OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get();
-            case "spirit_recess"     -> ModBlocks.SPIRIT_MOSAIC_RECESS.get();
-            case "air_border"        -> OttBlocks.AIR_MOSAIC_BORDER.get();
-            case "air_geometric"     -> OttBlocks.AIR_MOSAIC_GEOMETRIC.get();
-            case "air_pattern"       -> OttBlocks.AIR_MOSAIC_PATTERN.get();
-            case "air_delicate"      -> OttBlocks.AIR_MOSAIC_DELICATE.get();
-            case "air_traditional"   -> OttBlocks.AIR_MOSAIC_TRADITIONAL.get();
-            case "air_recess"        -> ModBlocks.AIR_MOSAIC_RECESS.get();
-            default -> throw new IllegalArgumentException("Unknown mosaic: " + element + "_" + type);
+    /** Traditional elemental-mosaic block by element (border/delicate/pattern/geometric now via ctm_blocks.tsv). */
+    private Block traditionalMosaicBlock(String element) {
+        return switch (element) {
+            case "water"  -> OttBlocks.WATER_MOSAIC_TRADITIONAL.get();
+            case "earth"  -> OttBlocks.EARTH_MOSAIC_TRADITIONAL.get();
+            case "fire"   -> OttBlocks.FIRE_MOSAIC_TRADITIONAL.get();
+            case "spirit" -> OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get();
+            case "air"    -> OttBlocks.AIR_MOSAIC_TRADITIONAL.get();
+            default -> throw new IllegalArgumentException("Unknown mosaic element: " + element);
         };
     }
 
