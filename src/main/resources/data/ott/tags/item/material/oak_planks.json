@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "minecraft:oak_planks",
+    "ott:circle_oak_glass",
+    "ott:oak_barred_glass",
+    "ott:oak_snowflake_glass",
     "ott:oak_barred_glass_ctm",
     "ott:oak_bordered_glass_ctm",
     "ott:oak_diamond_bordered_glass_ctm",

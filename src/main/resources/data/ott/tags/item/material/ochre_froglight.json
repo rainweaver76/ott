@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:ochre_froglight",
     "ott:glass_ochre_froglight",
     "ott:glass_ochre_froglight_pane"
   ]

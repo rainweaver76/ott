@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:pearlescent_froglight",
     "ott:glass_pearlescent_froglight",
     "ott:glass_pearlescent_froglight_pane"
   ]

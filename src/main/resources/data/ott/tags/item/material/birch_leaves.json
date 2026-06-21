@@ -1,6 +1,17 @@
 {
   "replace": false,
   "values": [
-    "minecraft:birch_leaves"
+    "minecraft:birch_leaves",
+    "ott:apple_birch_leaves",
+    "ott:cherry_birch_leaves",
+    "ott:dead_birch_leaves",
+    "ott:frosted_birch_leaves",
+    "ott:golden_birch_leaves",
+    "ott:golden_apple_birch_leaves",
+    "ott:golden_cherry_birch_leaves",
+    "ott:magenta_flower_birch_leaves",
+    "ott:orange_birch_leaves",
+    "ott:red_birch_leaves",
+    "ott:white_flower_birch_leaves"
   ]
 }
