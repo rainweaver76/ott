@@ -545,8 +545,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.SHEARED_STONE_PILLAR.get(), OttBlocks.SLATED_STONE.get(),
                 OttBlocks.STONE_COLUMN.get(), OttBlocks.STONE_TWISTING_COLUMN.get()
         );
-        ModBlocks.CHISEL_PILLARS.values().forEach(d -> this.tag(doDefaultKey).add(d.get()));
-        ModBlocks.CHISEL_LEGEND.values().forEach(d -> this.tag(doDefaultKey).add(d.get()));
+        java.util.stream.Stream.of(
+                ModBlocks.CHISEL_PILLARS.values(), ModBlocks.CHISEL_PILLARS_RS.values(),
+                ModBlocks.CHISEL_LEGEND.values(), ModBlocks.CHISEL_LEGEND_RS.values()
+        ).flatMap(java.util.Collection::stream).forEach(d -> { pickaxeTag.add(d.get()); this.tag(doDefaultKey).add(d.get()); });
+        // Chisels Chaos: all new pillars + legends (incl. redstone) — pickaxe-mineable + DO material.
+        java.util.stream.Stream.of(
+                ModBlocks.CHISEL_CHAOS_PILLARS.values(), ModBlocks.CHISEL_CHAOS_PILLARS_RS.values(),
+                ModBlocks.CHISEL_CHAOS_LEGENDS.values(), ModBlocks.CHISEL_CHAOS_LEGENDS_RS.values()
+        ).flatMap(java.util.Collection::stream).forEach(d -> { pickaxeTag.add(d.get()); this.tag(doDefaultKey).add(d.get()); });
 
         // New stone variant blocks — pickaxe
 

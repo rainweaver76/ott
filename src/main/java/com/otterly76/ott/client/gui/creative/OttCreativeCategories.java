@@ -16,8 +16,6 @@ import java.util.function.Supplier;
 
 public enum OttCreativeCategories {
 
-    // ── Sea Creatures ─────────────────────────────────────────────────────────
-    // ── Creatures: all spawn eggs + aquatic buckets ───────────────────────────
     CREATURES("creatures",
             ModItems.OTTER_SPAWN_EGG,
             (params, output) -> {
@@ -225,12 +223,12 @@ public enum OttCreativeCategories {
             (params, output) -> {
                 // ── OTT custom color groups (palette order) ──────────────────
                 ModBlocks.COLOR_SETS.forEach((name, set) -> {
-                    output.accept(set.wool());
-                    output.accept(set.carpet());
-                    output.accept(set.terracotta());
-                    output.accept(set.glazedTerracotta());
                     output.accept(set.concrete());
                     output.accept(set.concretePowder());
+                    output.accept(set.terracotta());
+                    output.accept(set.glazedTerracotta());
+                    output.accept(set.wool());
+                    output.accept(set.carpet());
                     output.accept(set.stainedGlass());
                     output.accept(set.stainedGlassPane());
                     output.accept(set.shulkerBox());
@@ -576,7 +574,6 @@ public enum OttCreativeCategories {
                 // (Decorative wool family moved to the ENGRAVED tab — they're engraving-system blocks.)
             }),
 
-    // ── Vanilla Plus: Stone ───────────────────────────────────────────────────
     STONE_VANILLA("stone_vanilla",
             () -> ModBlocks.STONE_SETS.get("stone").plate().get().asItem(),
             (params, output) -> {
@@ -606,7 +603,6 @@ public enum OttCreativeCategories {
                 }
             }),
 
-    // ── Custom OTT Stone Sets ─────────────────────────────────────────────────
     STONE_CUSTOM("stone_custom",
             () -> OttBlocks.PLAIN_LIMESTONE.get().asItem(),
             (params, output) -> {
@@ -854,16 +850,13 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.CHISELED_PLASTERED_STONE_PILLAR);
             }),
 
-    // ── Engraved / Connecting Blocks ──────────────────────────────────────────
     ENGRAVED("engraved",
             () -> OttBlocks.CHAOTIC_STONE_BRICKS.get().asItem(),
             (params, output) -> {
-                // Imported cube_all decorative blocks (grouped by material, sorted)
                 com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.values().forEach(output::accept);
-                // Auto-derived static glass panes (one per template=glass block)
+
                 com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.values().forEach(output::accept);
-                // Plain carpets for imported wool variants
-                OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(output::accept);
+
                 output.accept(OttBlocks.ACACIA_PLANKS_BEAMS);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PATTERN);
                 output.accept(OttBlocks.ACACIA_PLANKS_BRICK_PAVING);
@@ -3064,13 +3057,6 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_CTM);
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_CTM_PANE);
                 output.accept(OttBlocks.RASTER_YELLOW_STAINED_GLASS_PANE);
-                // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm})
-                OttBlocks.STYLED_WOOL.values().forEach(output::accept);
-                OttBlocks.STYLED_CARPET.values().forEach(output::accept);
-                // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm}) —
-                // engraving-system blocks, grouped here with the other decorative wools.
-                OttBlocks.DECO_WOOL.values().forEach(output::accept);
-                OttBlocks.DECO_CARPET.values().forEach(output::accept);
                 output.accept(OttBlocks.RED_ACACIA_LEAVES);
                 output.accept(OttBlocks.RED_BIRCH_LEAVES);
                 output.accept(OttBlocks.RED_CONCRETE_CTM);
@@ -4006,12 +3992,20 @@ public enum OttCreativeCategories {
                 output.accept(OttBlocks.YELLOW_TERRACOTTA_COLUMN);
                 output.accept(OttBlocks.YELLOW_TERRACOTTA_CTM);
 
-                // Chisel pillar blocks
-                ModBlocks.CHISEL_PILLARS.values().forEach(output::accept);
+                // Chisels: every stone set grouped together (stone first, then the 11 Chisels Chaos sets;
+                // each group = that stone's pillars + legends + redstone). See ModBlocks.CHISEL_GROUP.
+                ModBlocks.CHISEL_GROUP.values().forEach(group -> group.forEach(output::accept));
 
-                // Legend blocks
-                ModBlocks.CHISEL_LEGEND.values().forEach(output::accept);
+                OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(output::accept);
 
+                // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm})
+                OttBlocks.STYLED_WOOL.values().forEach(output::accept);
+                OttBlocks.STYLED_CARPET.values().forEach(output::accept);
+
+                // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm}) —
+                // engraving-system blocks, grouped here with the other decorative wools.
+                OttBlocks.DECO_WOOL.values().forEach(output::accept);
+                OttBlocks.DECO_CARPET.values().forEach(output::accept);
 
                 // Wood door variants
                 OttBlocks.WOOD_DOORS.values().forEach(woodMap -> woodMap.values().forEach(output::accept));
@@ -4228,7 +4222,6 @@ public enum OttCreativeCategories {
                 output.accept(ModItems.REINFORCED_OBSIDIAN_PAXEL);
             });
 
-    // --- Display order (top to bottom in the button list) ---
     public static final java.util.List<OttCreativeCategories> DISPLAY_ORDER =
             java.util.List.of(MISC, TOOLS, COLORS, DYES, GRADIENTS, WOOD_SETS, VANPLUS,
                     STONE_CUSTOM, STONE_VANILLA,
@@ -4236,7 +4229,6 @@ public enum OttCreativeCategories {
                     FLORA, FAUNA, FOOD, JARS, CREATURES
             );
 
-    // --- State ---
     @Nullable
     private static OttCreativeCategories selected = MISC;
 
@@ -4248,7 +4240,6 @@ public enum OttCreativeCategories {
         selected = cat;
     }
 
-    // --- Enum fields ---
     private final String id;
     private final Supplier<Item> iconItem;
     private final BiConsumer<CreativeModeTab.ItemDisplayParameters, CreativeModeTab.Output> populator;
@@ -4269,9 +4260,6 @@ public enum OttCreativeCategories {
         return iconItem.get();
     }
 
-    /**
-     * Populate items into output. Accepts null params — none of the current populators use them.
-     */
     public void populateItems(@Nullable CreativeModeTab.ItemDisplayParameters params,
                               @NotNull CreativeModeTab.Output output) {
         populator.accept(params, output);

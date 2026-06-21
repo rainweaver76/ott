@@ -109,7 +109,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("oak_swamp_door", registerDoor("oak_swamp_door", BlockSetType.OAK, Blocks.OAK_DOOR));
         EXTRA_DOORS.put("oak_tropical_door", registerDoor("oak_tropical_door", BlockSetType.OAK, Blocks.OAK_DOOR));
         EXTRA_DOORS.put("oak_waffle_door", registerDoor("oak_waffle_door", BlockSetType.OAK, Blocks.OAK_DOOR));
-        EXTRA_DOORS.put("oak_western_door", registerDoor("oak_western_door", BlockSetType.OAK, Blocks.OAK_DOOR));
         EXTRA_DOORS.put("oak_whispering_door", registerDoor("oak_whispering_door", BlockSetType.OAK, Blocks.OAK_DOOR));
         EXTRA_DOORS.put("oak_barn_glass_door", registerDoor("oak_barn_glass_door", BlockSetType.OAK, Blocks.OAK_DOOR));
         EXTRA_DOORS.put("oak_stable_head_door", registerDoor("oak_stable_head_door", BlockSetType.OAK, Blocks.OAK_DOOR));
@@ -129,7 +128,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("spruce_swamp_door", registerDoor("spruce_swamp_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
         EXTRA_DOORS.put("spruce_tropical_door", registerDoor("spruce_tropical_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
         EXTRA_DOORS.put("spruce_waffle_door", registerDoor("spruce_waffle_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
-        EXTRA_DOORS.put("spruce_western_door", registerDoor("spruce_western_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
         EXTRA_DOORS.put("spruce_whispering_door", registerDoor("spruce_whispering_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
         EXTRA_DOORS.put("spruce_barn_glass_door", registerDoor("spruce_barn_glass_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
         EXTRA_DOORS.put("spruce_stable_head_door", registerDoor("spruce_stable_head_door", BlockSetType.SPRUCE, Blocks.SPRUCE_DOOR));
@@ -148,7 +146,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("birch_swamp_door", registerDoor("birch_swamp_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
         EXTRA_DOORS.put("birch_tropical_door", registerDoor("birch_tropical_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
         EXTRA_DOORS.put("birch_waffle_door", registerDoor("birch_waffle_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
-        EXTRA_DOORS.put("birch_western_door", registerDoor("birch_western_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
         EXTRA_DOORS.put("birch_whispering_door", registerDoor("birch_whispering_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
         EXTRA_DOORS.put("japanese_birch_door", registerDoor("japanese_birch_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
         EXTRA_DOORS.put("birch_barn_glass_door", registerDoor("birch_barn_glass_door", BlockSetType.BIRCH, Blocks.BIRCH_DOOR));
@@ -169,7 +166,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("jungle_swamp_door", registerDoor("jungle_swamp_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
         EXTRA_DOORS.put("jungle_tropical_door", registerDoor("jungle_tropical_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
         EXTRA_DOORS.put("jungle_waffle_door", registerDoor("jungle_waffle_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
-        EXTRA_DOORS.put("jungle_western_door", registerDoor("jungle_western_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
         EXTRA_DOORS.put("jungle_whispering_door", registerDoor("jungle_whispering_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
         EXTRA_DOORS.put("jungle_barn_glass_door", registerDoor("jungle_barn_glass_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
         EXTRA_DOORS.put("jungle_stable_head_door", registerDoor("jungle_stable_head_door", BlockSetType.JUNGLE, Blocks.JUNGLE_DOOR));
@@ -188,7 +184,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("acacia_stable_door", registerDoor("acacia_stable_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
         EXTRA_DOORS.put("acacia_swamp_door", registerDoor("acacia_swamp_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
         EXTRA_DOORS.put("acacia_waffle_door", registerDoor("acacia_waffle_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
-        EXTRA_DOORS.put("acacia_western_door", registerDoor("acacia_western_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
         EXTRA_DOORS.put("acacia_whispering_door", registerDoor("acacia_whispering_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
         EXTRA_DOORS.put("japanese_acacia_door", registerDoor("japanese_acacia_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
         EXTRA_DOORS.put("acacia_barn_glass_door", registerDoor("acacia_barn_glass_door", BlockSetType.ACACIA, Blocks.ACACIA_DOOR));
@@ -208,7 +203,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("dark_oak_swamp_door", registerDoor("dark_oak_swamp_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
         EXTRA_DOORS.put("dark_oak_tropical_door", registerDoor("dark_oak_tropical_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
         EXTRA_DOORS.put("dark_oak_waffle_door", registerDoor("dark_oak_waffle_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
-        EXTRA_DOORS.put("dark_oak_western_door", registerDoor("dark_oak_western_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
         EXTRA_DOORS.put("dark_oak_whispering_door", registerDoor("dark_oak_whispering_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
         EXTRA_DOORS.put("japanese_dark_oak_door", registerDoor("japanese_dark_oak_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
         EXTRA_DOORS.put("dark_oak_barn_glass_door", registerDoor("dark_oak_barn_glass_door", BlockSetType.DARK_OAK, Blocks.DARK_OAK_DOOR));
@@ -229,7 +223,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("mangrove_stable_door", registerDoor("mangrove_stable_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
         EXTRA_DOORS.put("mangrove_tropical_door", registerDoor("mangrove_tropical_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
         EXTRA_DOORS.put("mangrove_waffle_door", registerDoor("mangrove_waffle_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
-        EXTRA_DOORS.put("mangrove_western_door", registerDoor("mangrove_western_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
         EXTRA_DOORS.put("mangrove_whispering_door", registerDoor("mangrove_whispering_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
         EXTRA_DOORS.put("mangrove_barn_glass_door", registerDoor("mangrove_barn_glass_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
         EXTRA_DOORS.put("mangrove_stable_head_door", registerDoor("mangrove_stable_head_door", BlockSetType.MANGROVE, Blocks.MANGROVE_DOOR));
@@ -248,7 +241,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("cherry_stable_door", registerDoor("cherry_stable_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
         EXTRA_DOORS.put("cherry_swamp_door", registerDoor("cherry_swamp_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
         EXTRA_DOORS.put("cherry_tropical_door", registerDoor("cherry_tropical_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
-        EXTRA_DOORS.put("cherry_western_door", registerDoor("cherry_western_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
         EXTRA_DOORS.put("cherry_whispering_door", registerDoor("cherry_whispering_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
         EXTRA_DOORS.put("japanese_cherry_door", registerDoor("japanese_cherry_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
         EXTRA_DOORS.put("cherry_barn_glass_door", registerDoor("cherry_barn_glass_door", BlockSetType.CHERRY, Blocks.CHERRY_DOOR));
@@ -268,7 +260,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("bamboo_swamp_door", registerDoor("bamboo_swamp_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
         EXTRA_DOORS.put("bamboo_tropical_door", registerDoor("bamboo_tropical_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
         EXTRA_DOORS.put("bamboo_waffle_door", registerDoor("bamboo_waffle_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
-        EXTRA_DOORS.put("bamboo_western_door", registerDoor("bamboo_western_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
         EXTRA_DOORS.put("bamboo_whispering_door", registerDoor("bamboo_whispering_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
         EXTRA_DOORS.put("japanese_bamboo_door", registerDoor("japanese_bamboo_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
         EXTRA_DOORS.put("bamboo_barn_glass_door", registerDoor("bamboo_barn_glass_door", BlockSetType.BAMBOO, Blocks.BAMBOO_DOOR));
@@ -288,7 +279,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("crimson_swamp_door", registerDoor("crimson_swamp_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
         EXTRA_DOORS.put("crimson_tropical_door", registerDoor("crimson_tropical_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
         EXTRA_DOORS.put("crimson_waffle_door", registerDoor("crimson_waffle_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
-        EXTRA_DOORS.put("crimson_western_door", registerDoor("crimson_western_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
         EXTRA_DOORS.put("crimson_whispering_door", registerDoor("crimson_whispering_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
         EXTRA_DOORS.put("japanese_crimson_door", registerDoor("japanese_crimson_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
         EXTRA_DOORS.put("crimson_barn_glass_door", registerDoor("crimson_barn_glass_door", BlockSetType.CRIMSON, Blocks.CRIMSON_DOOR));
@@ -309,7 +299,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("warped_swamp_door", registerDoor("warped_swamp_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
         EXTRA_DOORS.put("warped_tropical_door", registerDoor("warped_tropical_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
         EXTRA_DOORS.put("warped_waffle_door", registerDoor("warped_waffle_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
-        EXTRA_DOORS.put("warped_western_door", registerDoor("warped_western_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
         EXTRA_DOORS.put("warped_whispering_door", registerDoor("warped_whispering_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
         EXTRA_DOORS.put("warped_barn_glass_door", registerDoor("warped_barn_glass_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
         EXTRA_DOORS.put("warped_stable_head_door", registerDoor("warped_stable_head_door", BlockSetType.WARPED, Blocks.WARPED_DOOR));
@@ -330,7 +319,6 @@ public class OttBlocks {
         EXTRA_DOORS.put("pale_oak_swamp_door", registerDoor("pale_oak_swamp_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_tropical_door", registerDoor("pale_oak_tropical_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_waffle_door", registerDoor("pale_oak_waffle_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
-        EXTRA_DOORS.put("pale_oak_western_door", registerDoor("pale_oak_western_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_barn_glass_door", registerDoor("pale_oak_barn_glass_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_stable_head_door", registerDoor("pale_oak_stable_head_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
 

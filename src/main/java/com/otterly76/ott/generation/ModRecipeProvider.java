@@ -2225,12 +2225,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         engraveOne(exporter, Blocks.STONE, OttBlocks.SLATED_STONE,                       "slated_stone_engraving");
         engraveOne(exporter, Blocks.STONE, OttBlocks.STONE_COLUMN,                       "stone_column_engraving");
         engraveOne(exporter, Blocks.STONE, OttBlocks.STONE_TWISTING_COLUMN,              "stone_twisting_column_engraving");
-        // ── Chisel pillar blocks ──────────────────────────────────────────────────
-        ModBlocks.CHISEL_PILLARS.forEach((name, block) ->
-                engraveOne(exporter, Blocks.STONE, block, name + "_engraving"));
-        // ── Legend blocks ─────────────────────────────────────────────────────────
-        ModBlocks.CHISEL_LEGEND.forEach((name, block) ->
-                engraveOne(exporter, Blocks.STONE, block, name + "_engraving"));
+        // ── Legacy stone chisel pillars + legends (incl. reactive redstone) — engrave from stone ──
+        java.util.stream.Stream.of(
+                ModBlocks.CHISEL_PILLARS, ModBlocks.CHISEL_PILLARS_RS,
+                ModBlocks.CHISEL_LEGEND, ModBlocks.CHISEL_LEGEND_RS
+        ).forEach(map -> map.forEach((name, block) ->
+                engraveOne(exporter, Blocks.STONE, block, name + "_engraving")));
+        // ── Chisels Chaos: 11 stone sets — engrave each from its own stone base ────
+        for (ModBlocks.ChiselStone cs : ModBlocks.CHISEL_CHAOS) {
+            for (String v : ModBlocks.CHISEL_VARIANTS) {
+                for (String inlay : ModBlocks.CHISEL_INLAYS) {
+                    String n = "chiseled_" + cs.prefix() + "_" + v + (inlay.isEmpty() ? "" : "_" + inlay);
+                    engraveOne(exporter, cs.base(), ModBlocks.CHISEL_CHAOS_PILLARS.get(n), n + "_engraving");
+                }
+                String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
+                engraveOne(exporter, cs.base(), ModBlocks.CHISEL_CHAOS_PILLARS_RS.get(rn), rn + "_engraving");
+            }
+            for (String inlay : ModBlocks.CHISEL_INLAYS) {
+                String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
+                engraveOne(exporter, cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS.get(ln), ln + "_engraving");
+            }
+            String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
+            engraveOne(exporter, cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS_RS.get(lrn), lrn + "_engraving");
+        }
 
         // ── Stone bricks → masonry ────────────────────────────────────────────────
         engraveOne(exporter, Blocks.STONE_BRICKS, OttBlocks.STONE_BRICKS_MASONRY,          "stone_bricks_masonry_engraving");
@@ -2544,7 +2561,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_swamp_door").get(), "oak_swamp_door_engraving");
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_tropical_door").get(), "oak_tropical_door_engraving");
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_waffle_door").get(), "oak_waffle_door_engraving");
-            engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_western_door").get(), "oak_western_door_engraving");
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_whispering_door").get(), "oak_whispering_door_engraving");
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_barn_glass_door").get(), "oak_barn_glass_door_engraving");
             engraveTagged(exporter, oakTag, OttBlocks.EXTRA_DOORS.get("oak_stable_head_door").get(), "oak_stable_head_door_engraving");
@@ -2581,7 +2597,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_swamp_door").get(), "spruce_swamp_door_engraving");
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_tropical_door").get(), "spruce_tropical_door_engraving");
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_waffle_door").get(), "spruce_waffle_door_engraving");
-            engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_western_door").get(), "spruce_western_door_engraving");
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_whispering_door").get(), "spruce_whispering_door_engraving");
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_barn_glass_door").get(), "spruce_barn_glass_door_engraving");
             engraveTagged(exporter, spruceTag, OttBlocks.EXTRA_DOORS.get("spruce_stable_head_door").get(), "spruce_stable_head_door_engraving");
@@ -2618,7 +2633,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_swamp_door").get(), "birch_swamp_door_engraving");
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_tropical_door").get(), "birch_tropical_door_engraving");
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_waffle_door").get(), "birch_waffle_door_engraving");
-            engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_western_door").get(), "birch_western_door_engraving");
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_whispering_door").get(), "birch_whispering_door_engraving");
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("japanese_birch_door").get(), "japanese_birch_door_engraving");
             engraveTagged(exporter, birchTag, OttBlocks.EXTRA_DOORS.get("birch_barn_glass_door").get(), "birch_barn_glass_door_engraving");
@@ -2657,7 +2671,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_swamp_door").get(), "jungle_swamp_door_engraving");
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_tropical_door").get(), "jungle_tropical_door_engraving");
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_waffle_door").get(), "jungle_waffle_door_engraving");
-            engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_western_door").get(), "jungle_western_door_engraving");
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_whispering_door").get(), "jungle_whispering_door_engraving");
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_barn_glass_door").get(), "jungle_barn_glass_door_engraving");
             engraveTagged(exporter, jungleTag, OttBlocks.EXTRA_DOORS.get("jungle_stable_head_door").get(), "jungle_stable_head_door_engraving");
@@ -2693,7 +2706,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_stable_door").get(), "acacia_stable_door_engraving");
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_swamp_door").get(), "acacia_swamp_door_engraving");
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_waffle_door").get(), "acacia_waffle_door_engraving");
-            engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_western_door").get(), "acacia_western_door_engraving");
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_whispering_door").get(), "acacia_whispering_door_engraving");
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("japanese_acacia_door").get(), "japanese_acacia_door_engraving");
             engraveTagged(exporter, acaciaTag, OttBlocks.EXTRA_DOORS.get("acacia_barn_glass_door").get(), "acacia_barn_glass_door_engraving");
@@ -2731,7 +2743,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_swamp_door").get(), "dark_oak_swamp_door_engraving");
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_tropical_door").get(), "dark_oak_tropical_door_engraving");
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_waffle_door").get(), "dark_oak_waffle_door_engraving");
-            engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_western_door").get(), "dark_oak_western_door_engraving");
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_whispering_door").get(), "dark_oak_whispering_door_engraving");
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("japanese_dark_oak_door").get(), "japanese_dark_oak_door_engraving");
             engraveTagged(exporter, dark_oakTag, OttBlocks.EXTRA_DOORS.get("dark_oak_barn_glass_door").get(), "dark_oak_barn_glass_door_engraving");
@@ -2769,7 +2780,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_stable_door").get(), "mangrove_stable_door_engraving");
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_tropical_door").get(), "mangrove_tropical_door_engraving");
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_waffle_door").get(), "mangrove_waffle_door_engraving");
-            engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_western_door").get(), "mangrove_western_door_engraving");
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_whispering_door").get(), "mangrove_whispering_door_engraving");
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_barn_glass_door").get(), "mangrove_barn_glass_door_engraving");
             engraveTagged(exporter, mangroveTag, OttBlocks.EXTRA_DOORS.get("mangrove_stable_head_door").get(), "mangrove_stable_head_door_engraving");
@@ -2805,7 +2815,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_stable_door").get(), "cherry_stable_door_engraving");
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_swamp_door").get(), "cherry_swamp_door_engraving");
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_tropical_door").get(), "cherry_tropical_door_engraving");
-            engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_western_door").get(), "cherry_western_door_engraving");
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_whispering_door").get(), "cherry_whispering_door_engraving");
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("japanese_cherry_door").get(), "japanese_cherry_door_engraving");
             engraveTagged(exporter, cherryTag, OttBlocks.EXTRA_DOORS.get("cherry_barn_glass_door").get(), "cherry_barn_glass_door_engraving");
@@ -2843,7 +2852,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_swamp_door").get(), "bamboo_swamp_door_engraving");
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_tropical_door").get(), "bamboo_tropical_door_engraving");
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_waffle_door").get(), "bamboo_waffle_door_engraving");
-            engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_western_door").get(), "bamboo_western_door_engraving");
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_whispering_door").get(), "bamboo_whispering_door_engraving");
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("japanese_bamboo_door").get(), "japanese_bamboo_door_engraving");
             engraveTagged(exporter, bambooTag, OttBlocks.EXTRA_DOORS.get("bamboo_barn_glass_door").get(), "bamboo_barn_glass_door_engraving");
@@ -2881,7 +2889,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_swamp_door").get(), "crimson_swamp_door_engraving");
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_tropical_door").get(), "crimson_tropical_door_engraving");
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_waffle_door").get(), "crimson_waffle_door_engraving");
-            engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_western_door").get(), "crimson_western_door_engraving");
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_whispering_door").get(), "crimson_whispering_door_engraving");
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("japanese_crimson_door").get(), "japanese_crimson_door_engraving");
             engraveTagged(exporter, crimsonTag, OttBlocks.EXTRA_DOORS.get("crimson_barn_glass_door").get(), "crimson_barn_glass_door_engraving");
@@ -2919,7 +2926,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_swamp_door").get(), "warped_swamp_door_engraving");
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_tropical_door").get(), "warped_tropical_door_engraving");
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_waffle_door").get(), "warped_waffle_door_engraving");
-            engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_western_door").get(), "warped_western_door_engraving");
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_whispering_door").get(), "warped_whispering_door_engraving");
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_barn_glass_door").get(), "warped_barn_glass_door_engraving");
             engraveTagged(exporter, warpedTag, OttBlocks.EXTRA_DOORS.get("warped_stable_head_door").get(), "warped_stable_head_door_engraving");
@@ -2958,7 +2964,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_swamp_door").get(), "pale_oak_swamp_door_engraving");
             engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_tropical_door").get(), "pale_oak_tropical_door_engraving");
             engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_waffle_door").get(), "pale_oak_waffle_door_engraving");
-            engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_western_door").get(), "pale_oak_western_door_engraving");
             engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_barn_glass_door").get(), "pale_oak_barn_glass_door_engraving");
             engraveTagged(exporter, pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_stable_head_door").get(), "pale_oak_stable_head_door_engraving");
             engraveTagged(exporter, pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_bamboo_trapdoor").get(), "pale_oak_bamboo_trapdoor_engraving");

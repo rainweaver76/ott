@@ -862,9 +862,9 @@ public class ModItems {
         registerBlockItem(ModBlocks.STARLIGHT_LAMP);
         ModBlocks.FUTONS.values().forEach(ModItems::registerBlockItem);
 
-        // Chisel pillar blocks and legend blocks
-        ModBlocks.CHISEL_PILLARS.values().forEach(ModItems::registerBlockItem);
-        ModBlocks.CHISEL_LEGEND.values().forEach(ModItems::registerBlockItem);
+        // Chisel block items: legacy stone + Chisels Chaos, all stones/variants/legends/redstone.
+        // CHISEL_GROUP is the single source of truth covering every chisel block (see ModBlocks).
+        ModBlocks.CHISEL_GROUP.values().forEach(group -> group.forEach(ModItems::registerBlockItem));
     }
 
     private static DeferredHolder<Item, BlockItem> registerBlockItem(String name, DeferredBlock<? extends Block> block) {

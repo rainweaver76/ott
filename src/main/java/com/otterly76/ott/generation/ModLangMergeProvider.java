@@ -142,6 +142,19 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + name, pretty);
         });
 
+        // Chisels Chaos: title-case names for all new chisel pillars + legends (incl. redstone).
+        java.util.stream.Stream.of(
+                com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_PILLARS.keySet(),
+                com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_PILLARS_RS.keySet(),
+                com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_LEGENDS.keySet(),
+                com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_LEGENDS_RS.keySet()
+        ).flatMap(java.util.Collection::stream).forEach(name -> {
+            String pretty = Arrays.stream(name.split("_"))
+                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                    .collect(Collectors.joining(" "));
+            ottBase.addProperty("block.ott." + name, pretty);
+        });
+
         // Add creative tab titles
         ottBase.addProperty("itemGroup.ott.blocks", "New Otterhome Blocks");
         ottBase.addProperty("itemGroup.ott.color_sets", "New Otterhome Color Sets");
