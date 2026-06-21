@@ -47,7 +47,8 @@ public class OttCtmModelProvider implements DataProvider {
     private static final String MANIFEST = "assets/ott/ctm_blocks.tsv";
 
     private record Row(String name, String material, String template, String render,
-                       String layout, String textures, String connections, String item, String itemRender) {}
+                       String layout, String textures, String connections, String item, String itemRender,
+                       String isolated) {}
 
     private final PackOutput packOutput;
 
@@ -126,27 +127,61 @@ public class OttCtmModelProvider implements DataProvider {
         }
         m.add("textures", textures);
 
-        if (!r.connections().isEmpty()) {
+        String conns = r.connections();
+        if (conns.startsWith("*=") && !conns.contains("|")) {
+            // Global rules shared by all textures → top-level array form (e.g. "*=same;match:ott:foo").
+            JsonArray arr = new JsonArray();
+            for (String rule : conns.substring(2).split(";")) arr.add(buildRule(rule));
+            m.add("connections", arr);
+        } else if (!conns.isEmpty()) {
             JsonObject conn = new JsonObject();
-            for (String entry : r.connections().split("\\|")) {
-                int c = entry.indexOf(':');
-                JsonArray rules = new JsonArray();
-                JsonObject isSame = new JsonObject();
-                isSame.addProperty("type", "is_same_block");
-                rules.add(isSame);
-                if (c < 0) {
-                    conn.add(entry, rules);
+            for (String entry : conns.split("\\|")) {
+                int eq = entry.indexOf('=');
+                if (eq >= 0) {
+                    // "texvar=rule;rule" — rule is "same" or "match:<blockid>"
+                    JsonArray rules = new JsonArray();
+                    for (String rule : entry.substring(eq + 1).split(";")) rules.add(buildRule(rule));
+                    conn.add(entry.substring(0, eq), rules);
                 } else {
-                    JsonObject nested = new JsonObject();
-                    nested.addProperty("layout", entry.substring(c + 1));
-                    nested.add("rules", rules);
-                    conn.add(entry.substring(0, c), nested);
+                    // bare "texvar" or "texvar:layout" → single is_same_block rule (back-compat)
+                    int c = entry.indexOf(':');
+                    JsonArray rules = new JsonArray();
+                    rules.add(buildRule("same"));
+                    if (c < 0) {
+                        conn.add(entry, rules);
+                    } else {
+                        JsonObject nested = new JsonObject();
+                        nested.addProperty("layout", entry.substring(c + 1));
+                        nested.add("rules", rules);
+                        conn.add(entry.substring(0, c), nested);
+                    }
                 }
             }
             m.add("connections", conn);
         }
+        if (!r.isolated().isEmpty()) {
+            JsonObject iso = new JsonObject();
+            for (Map.Entry<String, String> e : parseTextures(r.isolated()).entrySet()) {
+                iso.addProperty(e.getKey(), e.getValue());
+            }
+            m.add("isolated", iso);
+        }
         if (!r.render().isEmpty()) m.addProperty("render_type", r.render());
         return m;
+    }
+
+    /** Builds a single CTM connection rule from a spec: "same" or "match:&lt;blockid&gt;". */
+    private static JsonObject buildRule(String spec) {
+        JsonObject o = new JsonObject();
+        if (spec.equals("same")) {
+            o.addProperty("type", "is_same_block");
+        } else if (spec.startsWith("match:")) {
+            o.addProperty("type", "match_block");
+            o.addProperty("block", spec.substring("match:".length()));
+        } else {
+            throw new IllegalStateException("Unknown CTM connection rule spec: " + spec);
+        }
+        return o;
     }
 
     private JsonObject itemModel(Row r) {
@@ -189,7 +224,8 @@ public class OttCtmModelProvider implements DataProvider {
                 if (line.isEmpty()) continue;
                 String[] p = line.split("\t", -1);
                 if (p.length < 9) throw new IllegalStateException("Bad ctm_blocks.tsv row: " + line);
-                rows.add(new Row(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8]));
+                String iso = p.length >= 10 ? p[9] : ""; // optional 10th column (back-compat with 9-col rows)
+                rows.add(new Row(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], iso));
             }
         } catch (IOException e) {
             throw new IllegalStateException("Failed reading " + MANIFEST, e);

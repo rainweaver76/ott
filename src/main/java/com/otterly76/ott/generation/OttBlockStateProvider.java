@@ -1472,7 +1472,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(ModBlocks.MAGENTA_MARBLE_DIAMOND_PAVERS.get(),    models().getExistingFile(modLoc("block/magenta_marble/magenta_marble_diamond_pavers")));
 
         // ── Limestone ─────────────────────────────────────────────────────────
-        simpleBlockWithItem(OttBlocks.LIMESTONE_MASONRY.get(),  models().getExistingFile(modLoc("block/limestone/limestone_masonry")));
+        // limestone_masonry migrated to ctm_blocks.tsv (OttCtmModelProvider).
         simpleBlockWithItem(OttBlocks.COBBLED_LIMESTONE.get(), models().getExistingFile(modLoc("block/limestone/cobbled_limestone")));
         existingEdgeBlock(ModBlocks.LIMESTONE_MASONRY_EDGE.get(),            "block/limestone/limestone_masonry_edge");
         existingFacingShapeBlock(ModBlocks.LIMESTONE_MASONRY_PLATE.get(),    "block/limestone/limestone_masonry_plate");
@@ -1501,7 +1501,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         existingFacingShapeBlockNoUvLock(ModBlocks.SANDSTONE_CRENELATION.get(), "block/sandstone/sandstone_crenelation");
 
         // ── Stone bricks masonry ──────────────────────────────────────────────
-        simpleBlockWithItem(OttBlocks.STONE_BRICKS_MASONRY.get(),      models().getExistingFile(modLoc("block/stone_bricks/stone_bricks_masonry")));
+        // stone_bricks_masonry migrated to ctm_blocks.tsv (OttCtmModelProvider).
         existingEdgeBlock(ModBlocks.STONE_BRICKS_MASONRY_EDGE.get(),          "block/stone_bricks/stone_bricks_masonry_edge");
         existingFacingShapeBlock(ModBlocks.STONE_BRICKS_MASONRY_PLATE.get(),  "block/stone_bricks/stone_bricks_masonry_plate");
 
@@ -1510,8 +1510,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockWithItem(OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(), models().getExistingFile(modLoc("block/sandstone_slender/sandstone_slender_turquoise_pattern")));
 
         // ── Mosaic floors ─────────────────────────────────────────────────────
-        simpleBlockWithItem(OttBlocks.MOSAIC_FLOOR.get(),         models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor")));
-        simpleBlockWithItem(OttBlocks.MOSAIC_FLOOR_DELICATE.get(), models().getExistingFile(modLoc("block/mosaic_floor/mosaic_floor_delicate")));
+        // mosaic_floor + mosaic_floor_delicate migrated to ctm_blocks.tsv (OttCtmModelProvider).
         // Rosette: 4 random model variants
         ConfiguredModel[] rosetteModels = new ConfiguredModel[4];
         for (int i = 1; i <= 4; i++) {
@@ -1532,17 +1531,13 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         }) {
             String element = pair[0], dir = pair[1];
             String d = "block/" + dir + "/";
-            simpleBlockWithItem(elementalMosaicBlock(element, "border"),      models().getExistingFile(modLoc(d + dir + "_border")));
+            // border/delicate/pattern migrated to ctm_blocks.tsv (OttCtmModelProvider). geometric = Tier 2 (still here).
             simpleBlockWithItem(elementalMosaicBlock(element, "geometric"),   models().getExistingFile(modLoc(d + dir + "_geometric")));
-            simpleBlockWithItem(elementalMosaicBlock(element, "pattern"),     models().getExistingFile(modLoc(d + dir + "_pattern")));
-            simpleBlockWithItem(elementalMosaicBlock(element, "delicate"),    models().getExistingFile(modLoc(d + dir + "_delicate")));
             simpleBlockWithItem(elementalMosaicBlock(element, "traditional"), models().getExistingFile(modLoc(d + dir + "_traditional")));
             // recess: manual blockstate kept — complex geometry needs hand-tuned x/y rotations
         }
 
-        // ── Roman fresco ──────────────────────────────────────────────────────
-        simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_RED.get(),   models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_red")));
-        simpleBlockWithItem(OttBlocks.ROMAN_FRESCO_BLACK.get(), models().getExistingFile(modLoc("block/roman_fresco/roman_fresco_black")));
+        // ── Roman fresco: black/red migrated to ctm_blocks.tsv (OttCtmModelProvider) ──
 
         // ── Decorative wool family: delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm} ──
         decoWoolFamily();

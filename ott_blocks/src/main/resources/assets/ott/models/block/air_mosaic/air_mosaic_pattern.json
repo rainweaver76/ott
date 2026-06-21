@@ -1,19 +1,19 @@
 {
-    "parent": "ott:block/ctm/ctm_full_detailed",
-    "textures": {
-        "all": "ott:block/air_mosaic/air_mosaic_pattern"
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_full_detailed",
+  "textures": {
+    "all": "ott:block/air_mosaic/air_mosaic_pattern"
+  },
+  "connections": [
+    {
+      "type": "is_same_block"
     },
-    "loader": "ott:mosaic",
-    "connections": [
-        {
-            "type": "is_same_block"
-        },
-        {
-            "type": "match_block",
-            "block": "ott:air_mosaic_geometric"
-        }
-    ],
-    "isolated": {
-        "all": "ott:block/air_mosaic/air_mosaic_pattern_static"
+    {
+      "type": "match_block",
+      "block": "ott:air_mosaic_geometric"
     }
+  ],
+  "isolated": {
+    "all": "ott:block/air_mosaic/air_mosaic_pattern_static"
+  }
 }

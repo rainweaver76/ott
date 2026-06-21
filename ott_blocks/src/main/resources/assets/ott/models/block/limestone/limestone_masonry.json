@@ -1,11 +1,15 @@
 {
-    "parent": "ott:block/ctm/ctm_full_detailed",
-    "textures": {
-        "all": "ott:block/limestone_masonry/limestone_masonry_ctm"
-    },
-    "loader": "ott:mosaic",
-    "connections": [{"type": "is_same_block"}],
-    "isolated": {
-        "all": "ott:block/limestone_masonry/limestone_masonry"
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_full_detailed",
+  "textures": {
+    "all": "ott:block/limestone_masonry/limestone_masonry_ctm"
+  },
+  "connections": [
+    {
+      "type": "is_same_block"
     }
+  ],
+  "isolated": {
+    "all": "ott:block/limestone_masonry/limestone_masonry"
+  }
 }

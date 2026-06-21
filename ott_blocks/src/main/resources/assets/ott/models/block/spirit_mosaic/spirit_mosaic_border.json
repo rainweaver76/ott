@@ -1,19 +1,19 @@
 {
-    "parent": "ott:block/ctm/ctm_full_detailed",
-    "textures": {
-        "all": "ott:block/spirit_mosaic/spirit_mosaic_border"
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_full_detailed",
+  "textures": {
+    "all": "ott:block/spirit_mosaic/spirit_mosaic_border"
+  },
+  "connections": [
+    {
+      "type": "is_same_block"
     },
-    "loader": "ott:mosaic",
-    "connections": [
-        {
-            "type": "is_same_block"
-        },
-        {
-            "type": "match_block",
-            "block": "ott:spirit_mosaic_delicate"
-        }
-    ],
-    "isolated": {
-        "all": "ott:block/spirit_mosaic/spirit_mosaic_border_static"
+    {
+      "type": "match_block",
+      "block": "ott:spirit_mosaic_delicate"
     }
+  ],
+  "isolated": {
+    "all": "ott:block/spirit_mosaic/spirit_mosaic_border_static"
+  }
 }
