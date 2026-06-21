@@ -134,6 +134,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         this.ctmPaneRecipes(noAdv);
         this.templateGlassPaneRecipes(noAdv);
         this.recoveredWindowRecipes(noAdv);
+        this.allPaneCrafting(noAdv);   // fill 6→16 crafting for every remaining pane (runs last)
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GLASS_JAR.get())
                 .define('G', Items.GLASS_PANE)
@@ -2287,14 +2288,34 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         });
     }
 
+    /** Recipe ids already emitted by paneFrom6 this run, so allPaneCrafting only fills genuine gaps. */
+    private final java.util.Set<String> craftedPaneIds = new java.util.HashSet<>();
+
     /** Shaped recipe: 6 of block (2×3) → 16 panes. */
     private void paneFrom6(RecipeOutput exporter, ItemLike block, ItemLike pane, String id) {
+        if (!craftedPaneIds.add(id)) return;   // a curated recipe already claimed this id — keep it
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, pane, 16)
                 .define('G', block)
                 .pattern("GGG")
                 .pattern("GGG")
                 .unlockedBy(getHasName(block), has(block))
                 .save(exporter, getRecipePath("ott", id));
+    }
+
+    /**
+     * Vanilla-style 6→16 crafting for EVERY registered ott {@code *_pane} that doesn't already have one,
+     * sourced from its own block (the pane name minus {@code _pane}). Run LAST so curated recipes win.
+     * Panes whose block doesn't exist (WIP cubeless panes) are skipped.
+     */
+    private void allPaneCrafting(RecipeOutput exporter) {
+        for (var e : BuiltInRegistries.BLOCK.entrySet()) {
+            ResourceLocation rl = e.getKey().location();
+            if (!rl.getNamespace().equals("ott") || !rl.getPath().endsWith("_pane")) continue;
+            String cubeName = rl.getPath().substring(0, rl.getPath().length() - "_pane".length());
+            Block cube = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", cubeName));
+            if (cube == Blocks.AIR) continue;
+            paneFrom6(exporter, cube, e.getValue(), rl.getPath() + "_from_block");
+        }
     }
 
     private void woodcutStructural(RecipeOutput exporter, ItemLike input, String prefix, ModBlocks.WoodSetBlocks set) {

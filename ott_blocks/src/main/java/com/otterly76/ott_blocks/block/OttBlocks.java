@@ -1068,6 +1068,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> BAMBOO_WINDOW_SLIM_CTM = register("bamboo_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> BAMBOO_WINDOW_SWIRLING_CTM = register("bamboo_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> BAMBOO_WINDOW_TILES_CTM = register("bamboo_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> BAMBOO_WINDOW_TILES = register("bamboo_window_tiles", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CHERRY_WINDOW_BARS_CTM = register("cherry_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CHERRY_WINDOW_COVERED_CTM = register("cherry_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CHERRY_WINDOW_DIAGONAL_CTM = register("cherry_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
@@ -1077,6 +1078,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CHERRY_WINDOW_SLIM_CTM = register("cherry_window_slim_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CHERRY_WINDOW_SWIRLING_CTM = register("cherry_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> CHERRY_WINDOW_TILES_CTM = register("cherry_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
+    public static final DeferredBlock<Block> CHERRY_WINDOW_TILES = register("cherry_window_tiles", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_BARS_CTM = register("pale_oak_window_bars_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_COVERED_CTM = register("pale_oak_window_covered_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> PALE_OAK_WINDOW_DIAGONAL_CTM = register("pale_oak_window_diagonal_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
@@ -5500,6 +5502,29 @@ public class OttBlocks {
                 register("white_flower_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
         public static final DeferredBlock<LeavesBlock> WHITE_FLOWER_SPRUCE_LEAVES =
                 register("white_flower_spruce_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_LEAVES)));
+        // --- Pale oak decorative leaves set (11 variants) ---
+        public static final DeferredBlock<LeavesBlock> APPLE_PALE_OAK_LEAVES =
+                register("apple_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> CHERRY_PALE_OAK_LEAVES =
+                register("cherry_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> DEAD_PALE_OAK_LEAVES =
+                register("dead_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> FROSTED_PALE_OAK_LEAVES =
+                register("frosted_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> GOLDEN_PALE_OAK_LEAVES =
+                register("golden_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> GOLDEN_APPLE_PALE_OAK_LEAVES =
+                register("golden_apple_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> GOLDEN_CHERRY_PALE_OAK_LEAVES =
+                register("golden_cherry_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> MAGENTA_FLOWER_PALE_OAK_LEAVES =
+                register("magenta_flower_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> ORANGE_PALE_OAK_LEAVES =
+                register("orange_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> RED_PALE_OAK_LEAVES =
+                register("red_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+        public static final DeferredBlock<LeavesBlock> WHITE_FLOWER_PALE_OAK_LEAVES =
+                register("white_flower_pale_oak_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
         public static final DeferredBlock<Block> WIRED_BLACK_CONCRETE =
                 register("wired_black_concrete_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACK_CONCRETE)));
         public static final DeferredBlock<Block> WIRED_BLUE_CONCRETE =

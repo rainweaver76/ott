@@ -2884,10 +2884,14 @@ public final class EngravingEntries {
     public static synchronized java.util.List<ItemLike> tabItems() {
         if (tabItems == null) {
             java.util.LinkedHashMap<Item, ItemLike> byItem = new java.util.LinkedHashMap<>();
+            // Only ott-namespace outputs belong in the OTT tab (engraving can also yield vanilla glass/doors).
+            java.util.function.Consumer<ItemLike> add = o -> {
+                if (BuiltInRegistries.ITEM.getKey(o.asItem()).getNamespace().equals("ott")) byItem.putIfAbsent(o.asItem(), o);
+            };
             Sink collect = new Sink() {
-                @Override public void one(ItemLike i, ItemLike o, String id)    { byItem.putIfAbsent(o.asItem(), o); }
-                @Override public void tagged(TagKey<Item> t, ItemLike o, String id) { byItem.putIfAbsent(o.asItem(), o); }
-                @Override public void group(Ingredient g, ItemLike o, String id)   { byItem.putIfAbsent(o.asItem(), o); }
+                @Override public void one(ItemLike i, ItemLike o, String id)    { add.accept(o); }
+                @Override public void tagged(TagKey<Item> t, ItemLike o, String id) { add.accept(o); }
+                @Override public void group(Ingredient g, ItemLike o, String id)   { add.accept(o); }
             };
             enumerate(collect);
             tabItems = java.util.List.copyOf(byItem.values());
