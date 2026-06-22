@@ -470,7 +470,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.RASTER_MAGENTA_STAINED_GLASS_CTM.get(),
                 OttBlocks.SMALL_MAGENTA_DIAMOND_STAINED_GLASS_CTM.get(),
                 OttBlocks.TILED_MAGENTA_STAINED_GLASS_CTM.get(),
-                OttBlocks.BRICKED_MANGROVE_PLANKS.get(),
                 OttBlocks.CORNERED_MANGROVE_PLANKS.get(),
                 OttBlocks.CRATED_MANGROVE_PLANKS.get(),
                 OttBlocks.ENCLOSED_MANGROVE_PLANKS.get(),

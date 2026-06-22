@@ -2856,8 +2856,6 @@ public class OttBlocks {
                 register("vertical_striped_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
         public static final DeferredBlock<Block> WOVEN_MAGENTA_STAINED_GLASS =
                 register("woven_magenta_stained_glass", () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGENTA_STAINED_GLASS)));
-        public static final DeferredBlock<Block> BRICKED_MANGROVE_PLANKS =
-                register("bricked_mangrove_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
         public static final DeferredBlock<Block> CORNERED_MANGROVE_PLANKS =
                 register("cornered_mangrove_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
         public static final DeferredBlock<Block> CRATED_MANGROVE_PLANKS =

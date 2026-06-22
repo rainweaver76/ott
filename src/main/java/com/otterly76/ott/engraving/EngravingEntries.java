@@ -928,9 +928,7 @@ public final class EngravingEntries {
 
         // Magma Block
 
-        // Mangrove Planks
-        s.tagged( materialTag("mangrove_planks"), OttBlocks.BRICKED_MANGROVE_PLANKS, "bricked_mangrove_planks_ctm_engraving");
-        s.tagged( materialTag("mangrove_planks"), OttBlocks.CORNERED_MANGROVE_PLANKS, "cornered_mangrove_planks_ctm_engraving");
+        // Mangrove Planks        s.tagged( materialTag("mangrove_planks"), OttBlocks.CORNERED_MANGROVE_PLANKS, "cornered_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.CRATED_MANGROVE_PLANKS, "crated_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.ENCLOSED_MANGROVE_PLANKS, "enclosed_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.FRAMED_MANGROVE_PLANKS, "framed_mangrove_planks_ctm_engraving");

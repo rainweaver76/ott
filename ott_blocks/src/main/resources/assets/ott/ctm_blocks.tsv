@@ -1114,7 +1114,6 @@ thick_inlayed_magma_block_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=o
 tiled_bordered_magma_block_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=ott:block/magma_block/ctm/tiled_bordered_magma_block	all	solo	
 tiled_magma_block_column_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=ott:block/magma_block/ctm/tiled_magma_block_column	all	solo	
 tiny_brick_bordered_magma_block_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=ott:block/magma_block/ctm/tiny_brick_bordered_magma_block	all	solo	
-bricked_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/bricked_mangrove_planks	all	solo	
 cornered_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/cornered_mangrove_planks	all	solo	
 crated_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/crated_mangrove_planks	all	solo	
 enclosed_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/enclosed_mangrove_planks	all	solo	
