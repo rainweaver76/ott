@@ -1,16 +1,26 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
-  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical_full_caps",
   "textures": {
     "side": "ott:block/purpur_block/ctm/purpur_column_ctm",
-    "top": "ott:block/purpur_block/ctm/purpur_column_ctm_top"
+    "top": "ott:block/purpur_block/ctm/purpur_column_top_ctm"
   },
   "connections": {
-    "side": [
-      {
-        "type": "is_same_block"
-      }
-    ]
+    "side": {
+      "layout": "pieces_vertical",
+      "rules": [
+        {
+          "type": "is_same_block"
+        }
+      ]
+    },
+    "top": {
+      "layout": "pieces_full",
+      "rules": [
+        {
+          "type": "is_same_block"
+        }
+      ]
+    }
   }
 }

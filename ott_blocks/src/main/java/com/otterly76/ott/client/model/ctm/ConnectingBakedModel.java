@@ -401,7 +401,7 @@ public class ConnectingBakedModel extends BakedModelWrapper<net.minecraft.client
         // Vertical CTM connects only along the column's 4 side faces. The up/down caps are
         // perpendicular to the connection axis, so they must never connect — pin them to the
         // base tile [0,0] (the atlas's top section = the pillar cap design).
-        if ((l == CtmLayout.VERTICAL || l == CtmLayout.PIECES_VERTICAL)
+        if (l == CtmLayout.PIECES_VERTICAL
                 && (faceOrdinal == Direction.UP.ordinal() || faceOrdinal == Direction.DOWN.ordinal())) {
             mask = 0;
         }

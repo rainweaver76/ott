@@ -58,11 +58,11 @@
     "ott:massive_purpur_block_bricks",
     "ott:overlapping_purpur_block_tiles_ctm",
     "ott:polished_purpur_block_ctm",
+    "ott:purpur_column_ctm",
     "ott:smooth_purpur_block_column_ctm",
     "ott:thick_inlayed_purpur_block_ctm",
     "ott:tiled_bordered_purpur_block_ctm",
     "ott:tiled_purpur_block_column_ctm",
-    "ott:tiny_brick_bordered_purpur_block_ctm",
-    "ott:purpur_column_ctm"
+    "ott:tiny_brick_bordered_purpur_block_ctm"
   ]
 }

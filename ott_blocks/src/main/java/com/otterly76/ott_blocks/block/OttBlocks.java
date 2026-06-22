@@ -1728,7 +1728,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> PURPUR_BRICK_PATTERN = register("purpur_brick_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PURPUR_BRICK_PAVING = register("purpur_brick_paving_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PURPUR_BRICKS = register("purpur_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> PURPUR_COLUMN_CTM = register("purpur_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> PURPUR_COLUMN_CTM = register("purpur_column_ctm", () -> new Block(Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> PURPUR_DIAGONAL_BRICKS = register("purpur_diagonal_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PURPUR_DIAGONAL_TILES = register("purpur_diagonal_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PURPUR_DOTTED = register("purpur_dotted_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -1900,7 +1900,6 @@ public class OttBlocks {
     public static final DeferredBlock<Block> WARPED_WINDOW_SWIRLING_CTM = register("warped_window_swirling_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> WARPED_WINDOW_TILES = register("warped_window_tiles", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
     public static final DeferredBlock<Block> WARPED_WINDOW_TILES_CTM = register("warped_window_tiles_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.STONE).noOcclusion()));
-    public static final DeferredBlock<Block> PURPUR_PILLAR_CTM = register("purpur_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
 
     // ===== WAVE 2b (multi-line full cubes) =====
         public static final DeferredBlock<Block> SOUL_GLASS = register("soul_glass",

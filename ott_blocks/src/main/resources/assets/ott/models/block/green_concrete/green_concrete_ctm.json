@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical_capped",
-  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical_capped",
+  "layout": "pieces_vertical",
   "textures": {
     "side": "ott:block/green_concrete/ctm/green_concrete_ctm"
   },

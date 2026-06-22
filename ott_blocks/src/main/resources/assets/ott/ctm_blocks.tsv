@@ -18,14 +18,14 @@ acacia_planks_squares_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott
 acacia_planks_tiles_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/acacia_planks/ctm/acacia_planks_tiles	all	solo	
 acacia_planks_wavy_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/acacia_planks/ctm/acacia_planks_wavy	all	solo	
 acacia_planks_woven_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/acacia_planks/ctm/acacia_planks_woven	all	solo	
-acacia_window_bars_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_bars|top=minecraft:block/acacia_planks	side	self	
-acacia_window_covered_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_covered|top=minecraft:block/acacia_planks	side	self	
-acacia_window_diagonal_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_diagonal|top=minecraft:block/acacia_planks	side	self	
-acacia_window_large_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_large|top=minecraft:block/acacia_planks	side	self	
-acacia_window_panes_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_panes|top=minecraft:block/acacia_planks	side	self	
-acacia_window_rounded_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_rounded|top=minecraft:block/acacia_planks	side	self	
-acacia_window_slim_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_slim|top=minecraft:block/acacia_planks	side	self	
-acacia_window_swirling_ctm	acacia_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/acacia_windows/ctm/acacia_window_swirling|top=minecraft:block/acacia_planks	side	self	
+acacia_window_bars_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_bars|top=minecraft:block/acacia_planks	side	self	
+acacia_window_covered_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_covered|top=minecraft:block/acacia_planks	side	self	
+acacia_window_diagonal_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_diagonal|top=minecraft:block/acacia_planks	side	self	
+acacia_window_large_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_large|top=minecraft:block/acacia_planks	side	self	
+acacia_window_panes_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_panes|top=minecraft:block/acacia_planks	side	self	
+acacia_window_rounded_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_rounded|top=minecraft:block/acacia_planks	side	self	
+acacia_window_slim_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_slim|top=minecraft:block/acacia_planks	side	self	
+acacia_window_swirling_ctm	acacia_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/acacia_windows/ctm/acacia_window_swirling|top=minecraft:block/acacia_planks	side	self	
 acacia_window_tiles_ctm	acacia_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/acacia_windows/ctm/acacia_window_tiles|up=minecraft:block/acacia_planks	side:pieces_full	solo	minecraft:cutout_mipped
 cornered_acacia_planks_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/acacia_planks/ctm/cornered_acacia_planks	all	solo	
 crated_acacia_planks_ctm	acacia_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/acacia_planks/ctm/crated_acacia_planks	all	solo	
@@ -119,14 +119,14 @@ bamboo_planks_squares_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott
 bamboo_planks_tiles_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/bamboo_planks/ctm/bamboo_planks_tiles	all	solo	
 bamboo_planks_wavy_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/bamboo_planks/ctm/bamboo_planks_wavy	all	solo	
 bamboo_planks_woven_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/bamboo_planks/ctm/bamboo_planks_woven	all	solo	
-bamboo_window_bars_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_bars|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_covered_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_covered|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_diagonal_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_diagonal|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_large_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_large|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_panes_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_panes|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_rounded_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_rounded|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_slim_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_slim|top=minecraft:block/bamboo_planks	side	self	
-bamboo_window_swirling_ctm	bamboo_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_swirling|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_bars_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_bars|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_covered_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_covered|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_diagonal_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_diagonal|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_large_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_large|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_panes_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_panes|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_rounded_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_rounded|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_slim_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_slim|top=minecraft:block/bamboo_planks	side	self	
+bamboo_window_swirling_ctm	bamboo_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/bamboo_windows/ctm/bamboo_window_swirling|top=minecraft:block/bamboo_planks	side	self	
 bamboo_window_tiles_ctm	bamboo_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/bamboo_windows/ctm/bamboo_window_tiles|up=minecraft:block/bamboo_planks	side:pieces_full	solo	minecraft:cutout_mipped
 cornered_bamboo_planks_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/bamboo_planks/ctm/cornered_bamboo_planks	all	solo	
 crated_bamboo_planks_ctm	bamboo_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/bamboo_planks/ctm/crated_bamboo_planks	all	solo	
@@ -177,14 +177,14 @@ birch_planks_squares_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:b
 birch_planks_tiles_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/birch_planks_tiles	all	solo	
 birch_planks_wavy_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/birch_planks_wavy	all	solo	
 birch_planks_woven_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/birch_planks_woven	all	solo	
-birch_window_bars_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_bars|top=minecraft:block/birch_planks	side	self	
-birch_window_covered_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_covered|top=minecraft:block/birch_planks	side	self	
-birch_window_diagonal_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_diagonal|top=minecraft:block/birch_planks	side	self	
-birch_window_large_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_large|top=minecraft:block/birch_planks	side	self	
-birch_window_panes_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_panes|top=minecraft:block/birch_planks	side	self	
-birch_window_rounded_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_rounded|top=minecraft:block/birch_planks	side	self	
-birch_window_slim_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_slim|top=minecraft:block/birch_planks	side	self	
-birch_window_swirling_ctm	birch_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/birch_windows/ctm/birch_window_swirling|top=minecraft:block/birch_planks	side	self	
+birch_window_bars_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_bars|top=minecraft:block/birch_planks	side	self	
+birch_window_covered_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_covered|top=minecraft:block/birch_planks	side	self	
+birch_window_diagonal_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_diagonal|top=minecraft:block/birch_planks	side	self	
+birch_window_large_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_large|top=minecraft:block/birch_planks	side	self	
+birch_window_panes_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_panes|top=minecraft:block/birch_planks	side	self	
+birch_window_rounded_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_rounded|top=minecraft:block/birch_planks	side	self	
+birch_window_slim_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_slim|top=minecraft:block/birch_planks	side	self	
+birch_window_swirling_ctm	birch_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/birch_windows/ctm/birch_window_swirling|top=minecraft:block/birch_planks	side	self	
 birch_window_tiles_ctm	birch_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/birch_windows/ctm/birch_window_tiles|up=minecraft:block/birch_planks	side:pieces_full	solo	minecraft:cutout_mipped
 cornered_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/cornered_birch_planks	all	solo	
 crated_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/crated_birch_planks	all	solo	
@@ -193,14 +193,14 @@ framed_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:bl
 natural_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/natural_birch_planks	all	solo	
 pegged_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/pegged_birch_planks	all	solo	
 whirlwind_birch_planks_ctm	birch_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/birch_planks/ctm/whirlwind_birch_planks	all	solo	
-black_concrete_ctm	black_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/black_concrete/ctm/black_concrete_ctm	side	self	
+black_concrete_ctm	black_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/black_concrete/ctm/black_concrete_ctm	side	self	
 black_concrete_panel_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/black_concrete_panel	all	solo	
 grill_black_concrete_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/grill_black_concrete	all	solo	
 pegged_black_concrete_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/pegged_black_concrete	all	solo	
 smooth_black_concrete_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/smooth_black_concrete	all	solo	
 striped_black_concrete_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/striped_black_concrete	all	solo	
 wired_black_concrete_ctm	black_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/black_concrete/ctm/wired_black_concrete	all	solo	
-arched_black_stained_glass_ctm	black_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/black_stained_glass/ctm/arched_black_stained_glass_ctm|top=ott:block/black_stained_glass/circular_black_stained_glass	side	self	
+arched_black_stained_glass_ctm	black_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/black_stained_glass/ctm/arched_black_stained_glass_ctm|top=ott:block/black_stained_glass/circular_black_stained_glass	side	self	
 black_framed_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/black_framed_glass	all	solo	minecraft:translucent
 black_stained_clear_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/black_stained_clear_glass	all	solo	minecraft:translucent
 black_stained_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/black_stained_glass	all	solo	minecraft:translucent
@@ -209,8 +209,8 @@ ornate_black_stained_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft
 raster_black_stained_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/raster_black_stained_glass_ctm	all	solo	minecraft:translucent
 small_black_diamond_stained_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/small_black_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_black_stained_glass_ctm	black_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/tiled_black_stained_glass_ctm	all	solo	minecraft:translucent
-black_terracotta_column_ctm	black_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/black_terracotta/ctm/black_terracotta_column	side	self	
-black_terracotta_ctm	black_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/black_terracotta/ctm/black_terracotta_ctm	side	self	
+black_terracotta_column_ctm	black_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/black_terracotta/ctm/black_terracotta_column	side	self	
+black_terracotta_ctm	black_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/black_terracotta/ctm/black_terracotta_ctm	side	self	
 curled_black_terracotta_ctm	black_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/black_terracotta/ctm/curled_black_terracotta	all	solo	
 hexagonical_black_terracotta_ctm	black_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/black_terracotta/ctm/hexagonical_black_terracotta	all	solo	
 small_black_terracotta_tiles_ctm	black_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/black_terracotta/ctm/small_black_terracotta_tiles	all	solo	
@@ -234,7 +234,7 @@ thick_inlayed_blackstone_ctm	blackstone	ctm_cube_all_pieces		pieces_full	all=ott
 tiled_blackstone_column_ctm	blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/blackstone/ctm/tiled_blackstone_column	all	solo	
 tiled_bordered_blackstone_ctm	blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/blackstone/ctm/tiled_bordered_blackstone	all	solo	
 tiny_brick_bordered_blackstone_ctm	blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/blackstone/ctm/tiny_brick_bordered_blackstone	all	solo	
-blue_concrete_ctm	blue_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/blue_concrete/ctm/blue_concrete_ctm	side	self	
+blue_concrete_ctm	blue_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/blue_concrete/ctm/blue_concrete_ctm	side	self	
 blue_concrete_panel_ctm	blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_concrete/ctm/blue_concrete_panel	all	solo	
 grill_blue_concrete_ctm	blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_concrete/ctm/grill_blue_concrete	all	solo	
 pegged_blue_concrete_ctm	blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_concrete/ctm/pegged_blue_concrete	all	solo	
@@ -263,7 +263,7 @@ thick_inlayed_blue_ice_ctm	blue_ice	ctm_cube_all_pieces		pieces_full	all=ott:blo
 tiled_blue_ice_column_ctm	blue_ice	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_ice/ctm/tiled_blue_ice_column	all	solo	
 tiled_bordered_blue_ice_ctm	blue_ice	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_ice/ctm/tiled_bordered_blue_ice	all	solo	
 tiny_brick_bordered_blue_ice_ctm	blue_ice	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_ice/ctm/tiny_brick_bordered_blue_ice	all	solo	
-arched_blue_stained_glass_ctm	blue_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/blue_stained_glass/ctm/arched_blue_stained_glass_ctm|top=ott:block/blue_stained_glass/circular_blue_stained_glass	side	self	
+arched_blue_stained_glass_ctm	blue_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/blue_stained_glass/ctm/arched_blue_stained_glass_ctm|top=ott:block/blue_stained_glass/circular_blue_stained_glass	side	self	
 blue_framed_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/blue_framed_glass	all	solo	minecraft:translucent
 blue_stained_clear_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/blue_stained_clear_glass	all	solo	minecraft:translucent
 blue_stained_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/blue_stained_glass	all	solo	minecraft:translucent
@@ -272,8 +272,8 @@ ornate_blue_stained_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:t
 raster_blue_stained_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/raster_blue_stained_glass_ctm	all	solo	minecraft:translucent
 small_blue_diamond_stained_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/small_blue_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_blue_stained_glass_ctm	blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/tiled_blue_stained_glass_ctm	all	solo	minecraft:translucent
-blue_terracotta_column_ctm	blue_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/blue_terracotta/ctm/blue_terracotta_column	side	self	
-blue_terracotta_ctm	blue_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/blue_terracotta/ctm/blue_terracotta_ctm	side	self	
+blue_terracotta_column_ctm	blue_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/blue_terracotta/ctm/blue_terracotta_column	side	self	
+blue_terracotta_ctm	blue_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/blue_terracotta/ctm/blue_terracotta_ctm	side	self	
 curled_blue_terracotta_ctm	blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_terracotta/ctm/curled_blue_terracotta	all	solo	
 hexagonical_blue_terracotta_ctm	blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_terracotta/ctm/hexagonical_blue_terracotta	all	solo	
 small_blue_terracotta_tiles_ctm	blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/blue_terracotta/ctm/small_blue_terracotta_tiles	all	solo	
@@ -330,14 +330,14 @@ thick_inlayed_bricks_ctm	bricks	ctm_cube_all_pieces		pieces_full	all=ott:block/b
 tiled_bordered_bricks_ctm	bricks	ctm_cube_all_pieces		pieces_full	all=ott:block/bricks/ctm/tiled_bordered_bricks	all	solo	
 tiled_bricks_column_ctm	bricks	ctm_cube_all_pieces		pieces_full	all=ott:block/bricks/ctm/tiled_bricks_column	all	solo	
 tiny_brick_bordered_bricks_ctm	bricks	ctm_cube_all_pieces		pieces_full	all=ott:block/bricks/ctm/tiny_brick_bordered_bricks	all	solo	
-brown_concrete_ctm	brown_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/brown_concrete/ctm/brown_concrete_ctm	side	self	
+brown_concrete_ctm	brown_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/brown_concrete/ctm/brown_concrete_ctm	side	self	
 brown_concrete_panel_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/brown_concrete_panel	all	solo	
 grill_brown_concrete_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/grill_brown_concrete	all	solo	
 pegged_brown_concrete_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/pegged_brown_concrete	all	solo	
 smooth_brown_concrete_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/smooth_brown_concrete	all	solo	
 striped_brown_concrete_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/striped_brown_concrete	all	solo	
 wired_brown_concrete_ctm	brown_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_concrete/ctm/wired_brown_concrete	all	solo	
-arched_brown_stained_glass_ctm	brown_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/brown_stained_glass/ctm/arched_brown_stained_glass_ctm|top=ott:block/brown_stained_glass/circular_brown_stained_glass	side	self	
+arched_brown_stained_glass_ctm	brown_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/brown_stained_glass/ctm/arched_brown_stained_glass_ctm|top=ott:block/brown_stained_glass/circular_brown_stained_glass	side	self	
 brown_framed_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/brown_framed_glass	all	solo	minecraft:translucent
 brown_stained_clear_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/brown_stained_clear_glass	all	solo	minecraft:translucent
 brown_stained_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/brown_stained_glass	all	solo	minecraft:translucent
@@ -346,8 +346,8 @@ ornate_brown_stained_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft
 raster_brown_stained_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/raster_brown_stained_glass_ctm	all	solo	minecraft:translucent
 small_brown_diamond_stained_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/small_brown_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_brown_stained_glass_ctm	brown_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/tiled_brown_stained_glass_ctm	all	solo	minecraft:translucent
-brown_terracotta_column_ctm	brown_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/brown_terracotta/ctm/brown_terracotta_column	side	self	
-brown_terracotta_ctm	brown_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/brown_terracotta/ctm/brown_terracotta_ctm	side	self	
+brown_terracotta_column_ctm	brown_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/brown_terracotta/ctm/brown_terracotta_column	side	self	
+brown_terracotta_ctm	brown_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/brown_terracotta/ctm/brown_terracotta_ctm	side	self	
 curled_brown_terracotta_ctm	brown_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_terracotta/ctm/curled_brown_terracotta	all	solo	
 hexagonical_brown_terracotta_ctm	brown_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_terracotta/ctm/hexagonical_brown_terracotta	all	solo	
 small_brown_terracotta_tiles_ctm	brown_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/brown_terracotta/ctm/small_brown_terracotta_tiles	all	solo	
@@ -387,14 +387,14 @@ cherry_planks_squares_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott
 cherry_planks_tiles_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/cherry_planks/ctm/cherry_planks_tiles	all	solo	
 cherry_planks_wavy_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/cherry_planks/ctm/cherry_planks_wavy	all	solo	
 cherry_planks_woven_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/cherry_planks/ctm/cherry_planks_woven	all	solo	
-cherry_window_bars_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_bars|top=minecraft:block/cherry_planks	side	self	
-cherry_window_covered_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_covered|top=minecraft:block/cherry_planks	side	self	
-cherry_window_diagonal_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_diagonal|top=minecraft:block/cherry_planks	side	self	
-cherry_window_large_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_large|top=minecraft:block/cherry_planks	side	self	
-cherry_window_panes_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_panes|top=minecraft:block/cherry_planks	side	self	
-cherry_window_rounded_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_rounded|top=minecraft:block/cherry_planks	side	self	
-cherry_window_slim_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_slim|top=minecraft:block/cherry_planks	side	self	
-cherry_window_swirling_ctm	cherry_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/cherry_windows/ctm/cherry_window_swirling|top=minecraft:block/cherry_planks	side	self	
+cherry_window_bars_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_bars|top=minecraft:block/cherry_planks	side	self	
+cherry_window_covered_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_covered|top=minecraft:block/cherry_planks	side	self	
+cherry_window_diagonal_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_diagonal|top=minecraft:block/cherry_planks	side	self	
+cherry_window_large_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_large|top=minecraft:block/cherry_planks	side	self	
+cherry_window_panes_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_panes|top=minecraft:block/cherry_planks	side	self	
+cherry_window_rounded_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_rounded|top=minecraft:block/cherry_planks	side	self	
+cherry_window_slim_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_slim|top=minecraft:block/cherry_planks	side	self	
+cherry_window_swirling_ctm	cherry_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/cherry_windows/ctm/cherry_window_swirling|top=minecraft:block/cherry_planks	side	self	
 cherry_window_tiles_ctm	cherry_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/cherry_windows/ctm/cherry_window_tiles|up=minecraft:block/cherry_planks	side:pieces_full	solo	minecraft:cutout_mipped
 cornered_cherry_planks_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/cherry_planks/ctm/cornered_cherry_planks	all	solo	
 crated_cherry_planks_ctm	cherry_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/cherry_planks/ctm/crated_cherry_planks	all	solo	
@@ -518,14 +518,14 @@ crimson_planks_squares_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=o
 crimson_planks_tiles_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/crimson_planks/ctm/crimson_planks_tiles	all	solo	
 crimson_planks_wavy_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/crimson_planks/ctm/crimson_planks_wavy	all	solo	
 crimson_planks_woven_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/crimson_planks/ctm/crimson_planks_woven	all	solo	
-crimson_window_bars_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_bars|top=minecraft:block/crimson_planks	side	self	
-crimson_window_covered_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_covered|top=minecraft:block/crimson_planks	side	self	
-crimson_window_diagonal_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_diagonal|top=minecraft:block/crimson_planks	side	self	
-crimson_window_large_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_large|top=minecraft:block/crimson_planks	side	self	
-crimson_window_panes_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_panes|top=minecraft:block/crimson_planks	side	self	
-crimson_window_rounded_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_rounded|top=minecraft:block/crimson_planks	side	self	
-crimson_window_slim_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_slim|top=minecraft:block/crimson_planks	side	self	
-crimson_window_swirling_ctm	crimson_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/crimson_windows/ctm/crimson_window_swirling|top=minecraft:block/crimson_planks	side	self	
+crimson_window_bars_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_bars|top=minecraft:block/crimson_planks	side	self	
+crimson_window_covered_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_covered|top=minecraft:block/crimson_planks	side	self	
+crimson_window_diagonal_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_diagonal|top=minecraft:block/crimson_planks	side	self	
+crimson_window_large_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_large|top=minecraft:block/crimson_planks	side	self	
+crimson_window_panes_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_panes|top=minecraft:block/crimson_planks	side	self	
+crimson_window_rounded_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_rounded|top=minecraft:block/crimson_planks	side	self	
+crimson_window_slim_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_slim|top=minecraft:block/crimson_planks	side	self	
+crimson_window_swirling_ctm	crimson_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/crimson_windows/ctm/crimson_window_swirling|top=minecraft:block/crimson_planks	side	self	
 crimson_window_tiles_ctm	crimson_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/crimson_windows/ctm/crimson_window_tiles|up=minecraft:block/crimson_planks	side:pieces_full	solo	minecraft:cutout_mipped
 enclosed_crimson_planks_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/crimson_planks/ctm/enclosed_crimson_planks	all	solo	
 framed_crimson_planks_ctm	crimson_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/crimson_planks/ctm/framed_crimson_planks	all	solo	
@@ -547,14 +547,14 @@ thick_inlayed_crying_obsidian_ctm	crying_obsidian	ctm_cube_all_pieces		pieces_fu
 tiled_bordered_crying_obsidian_ctm	crying_obsidian	ctm_cube_all_pieces		pieces_full	all=ott:block/crying_obsidian/ctm/tiled_bordered_crying_obsidian	all	solo	
 tiled_crying_obsidian_column_ctm	crying_obsidian	ctm_cube_all_pieces		pieces_full	all=ott:block/crying_obsidian/ctm/tiled_crying_obsidian_column	all	solo	
 tiny_brick_bordered_crying_obsidian_ctm	crying_obsidian	ctm_cube_all_pieces		pieces_full	all=ott:block/crying_obsidian/ctm/tiny_brick_bordered_crying_obsidian	all	solo	
-cyan_concrete_ctm	cyan_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/cyan_concrete/ctm/cyan_concrete_ctm	side	self	
+cyan_concrete_ctm	cyan_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/cyan_concrete/ctm/cyan_concrete_ctm	side	self	
 cyan_concrete_panel_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/cyan_concrete_panel	all	solo	
 grill_cyan_concrete_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/grill_cyan_concrete	all	solo	
 pegged_cyan_concrete_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/pegged_cyan_concrete	all	solo	
 smooth_cyan_concrete_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/smooth_cyan_concrete	all	solo	
 striped_cyan_concrete_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/striped_cyan_concrete	all	solo	
 wired_cyan_concrete_ctm	cyan_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_concrete/ctm/wired_cyan_concrete	all	solo	
-arched_cyan_stained_glass_ctm	cyan_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/cyan_stained_glass/ctm/arched_cyan_stained_glass_ctm|top=ott:block/cyan_stained_glass/circular_cyan_stained_glass	side	self	
+arched_cyan_stained_glass_ctm	cyan_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/cyan_stained_glass/ctm/arched_cyan_stained_glass_ctm|top=ott:block/cyan_stained_glass/circular_cyan_stained_glass	side	self	
 cyan_framed_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/cyan_stained_glass/ctm/cyan_framed_glass	all	solo	minecraft:translucent
 cyan_stained_clear_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/cyan_stained_glass/ctm/cyan_stained_clear_glass	all	solo	minecraft:translucent
 cyan_stained_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/cyan_stained_glass/ctm/cyan_stained_glass	all	solo	minecraft:translucent
@@ -564,8 +564,8 @@ raster_cyan_stained_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:t
 small_cyan_diamond_stained_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/cyan_stained_glass/ctm/small_cyan_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_cyan_stained_glass_ctm	cyan_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/cyan_stained_glass/ctm/tiled_cyan_stained_glass_ctm	all	solo	minecraft:translucent
 curled_cyan_terracotta_ctm	cyan_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_terracotta/ctm/curled_cyan_terracotta	all	solo	
-cyan_terracotta_column_ctm	cyan_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/cyan_terracotta/ctm/cyan_terracotta_column	side	self	
-cyan_terracotta_ctm	cyan_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/cyan_terracotta/ctm/cyan_terracotta_ctm	side	self	
+cyan_terracotta_column_ctm	cyan_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/cyan_terracotta/ctm/cyan_terracotta_column	side	self	
+cyan_terracotta_ctm	cyan_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/cyan_terracotta/ctm/cyan_terracotta_ctm	side	self	
 hexagonical_cyan_terracotta_ctm	cyan_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_terracotta/ctm/hexagonical_cyan_terracotta	all	solo	
 small_cyan_terracotta_tiles_ctm	cyan_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/cyan_terracotta/ctm/small_cyan_terracotta_tiles	all	solo	
 cornered_dark_oak_planks_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/cornered_dark_oak_planks	all	solo	
@@ -589,14 +589,14 @@ dark_oak_planks_squares_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all
 dark_oak_planks_tiles_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/dark_oak_planks_tiles	all	solo	
 dark_oak_planks_wavy_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/dark_oak_planks_wavy	all	solo	
 dark_oak_planks_woven_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/dark_oak_planks_woven	all	solo	
-dark_oak_window_bars_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_bars|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_covered_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_covered|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_diagonal_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_diagonal|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_large_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_large|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_panes_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_panes|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_rounded_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_rounded|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_slim_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_slim|top=minecraft:block/dark_oak_planks	side	self	
-dark_oak_window_swirling_ctm	dark_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_swirling|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_bars_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_bars|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_covered_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_covered|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_diagonal_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_diagonal|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_large_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_large|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_panes_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_panes|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_rounded_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_rounded|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_slim_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_slim|top=minecraft:block/dark_oak_planks	side	self	
+dark_oak_window_swirling_ctm	dark_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/dark_oak_windows/ctm/dark_oak_window_swirling|top=minecraft:block/dark_oak_planks	side	self	
 dark_oak_window_tiles_ctm	dark_oak_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/dark_oak_windows/ctm/dark_oak_window_tiles|up=minecraft:block/dark_oak_planks	side:pieces_full	solo	minecraft:cutout_mipped
 enclosed_dark_oak_planks_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/enclosed_dark_oak_planks	all	solo	
 framed_dark_oak_planks_ctm	dark_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/dark_oak_planks/ctm/framed_dark_oak_planks	all	solo	
@@ -785,7 +785,7 @@ thick_inlayed_gilded_blackstone_ctm	gilded_blackstone	ctm_cube_all_pieces		piece
 tiled_bordered_gilded_blackstone_ctm	gilded_blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/gilded_blackstone/ctm/tiled_bordered_gilded_blackstone	all	solo	
 tiled_gilded_blackstone_column_ctm	gilded_blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/gilded_blackstone/ctm/tiled_gilded_blackstone_column	all	solo	
 tiny_brick_bordered_gilded_blackstone_ctm	gilded_blackstone	ctm_cube_all_pieces		pieces_full	all=ott:block/gilded_blackstone/ctm/tiny_brick_bordered_gilded_blackstone	all	solo	
-arched_leaded_glass_ctm	glass	ctm_cube_column_vertical	minecraft:cutout	vertical	side=ott:block/glass/ctm/arched_leaded_glass_ctm|top=ott:block/glass/circular_leaded_stained_glass	side	self	
+arched_leaded_glass_ctm	glass	ctm_cube_column_pieces_vertical	minecraft:cutout	pieces_vertical	side=ott:block/glass/ctm/arched_leaded_glass_ctm|top=ott:block/glass/circular_leaded_stained_glass	side	self	
 chiseled_glass_ctm	glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/glass/ctm/chiseled_glass	all	solo	minecraft:translucent
 clear_glass_ctm	glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/glass/ctm/clear_glass	all	solo	minecraft:translucent
 clear_leaded_glass_ctm	glass	ctm_cube_all_pieces	minecraft:cutout	pieces_full	all=ott:block/glass/ctm/clear_leaded_glass	all	solo	minecraft:cutout
@@ -865,14 +865,14 @@ thick_inlayed_granite_ctm	granite	ctm_cube_all_pieces		pieces_full	all=ott:block
 tiled_bordered_granite_ctm	granite	ctm_cube_all_pieces		pieces_full	all=ott:block/granite/ctm/tiled_bordered_granite	all	solo	
 tiled_granite_column_ctm	granite	ctm_cube_all_pieces		pieces_full	all=ott:block/granite/ctm/tiled_granite_column	all	solo	
 tiny_brick_bordered_granite_ctm	granite	ctm_cube_all_pieces		pieces_full	all=ott:block/granite/ctm/tiny_brick_bordered_granite	all	solo	
-gray_concrete_ctm	gray_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/gray_concrete/ctm/gray_concrete_ctm	side	self	
+gray_concrete_ctm	gray_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/gray_concrete/ctm/gray_concrete_ctm	side	self	
 gray_concrete_panel_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/gray_concrete_panel	all	solo	
 grill_gray_concrete_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/grill_gray_concrete	all	solo	
 pegged_gray_concrete_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/pegged_gray_concrete	all	solo	
 smooth_gray_concrete_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/smooth_gray_concrete	all	solo	
 striped_gray_concrete_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/striped_gray_concrete	all	solo	
 wired_gray_concrete_ctm	gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_concrete/ctm/wired_gray_concrete	all	solo	
-arched_gray_stained_glass_ctm	gray_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/gray_stained_glass/ctm/arched_gray_stained_glass_ctm|top=ott:block/gray_stained_glass/circular_gray_stained_glass	side	self	
+arched_gray_stained_glass_ctm	gray_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/gray_stained_glass/ctm/arched_gray_stained_glass_ctm|top=ott:block/gray_stained_glass/circular_gray_stained_glass	side	self	
 fancy_gray_stained_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/gray_stained_glass/ctm/fancy_gray_stained_glass_ctm	all	solo	minecraft:translucent
 gray_framed_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/gray_stained_glass/ctm/gray_framed_glass	all	solo	minecraft:translucent
 gray_stained_clear_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/gray_stained_glass/ctm/gray_stained_clear_glass	all	solo	minecraft:translucent
@@ -882,18 +882,18 @@ raster_gray_stained_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:t
 small_gray_diamond_stained_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/gray_stained_glass/ctm/small_gray_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_gray_stained_glass_ctm	gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/gray_stained_glass/ctm/tiled_gray_stained_glass_ctm	all	solo	minecraft:translucent
 curled_gray_terracotta_ctm	gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_terracotta/ctm/curled_gray_terracotta	all	solo	
-gray_terracotta_column_ctm	gray_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/gray_terracotta/ctm/gray_terracotta_column	side	self	
-gray_terracotta_ctm	gray_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/gray_terracotta/ctm/gray_terracotta_ctm	side	self	
+gray_terracotta_column_ctm	gray_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/gray_terracotta/ctm/gray_terracotta_column	side	self	
+gray_terracotta_ctm	gray_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/gray_terracotta/ctm/gray_terracotta_ctm	side	self	
 hexagonical_gray_terracotta_ctm	gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_terracotta/ctm/hexagonical_gray_terracotta	all	solo	
 small_gray_terracotta_tiles_ctm	gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/gray_terracotta/ctm/small_gray_terracotta_tiles	all	solo	
-green_concrete_ctm	green_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/green_concrete/ctm/green_concrete_ctm	side	self	
+green_concrete_ctm	green_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/green_concrete/ctm/green_concrete_ctm	side	self	
 green_concrete_panel_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/green_concrete_panel	all	solo	
 grill_green_concrete_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/grill_green_concrete	all	solo	
 pegged_green_concrete_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/pegged_green_concrete	all	solo	
 smooth_green_concrete_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/smooth_green_concrete	all	solo	
 striped_green_concrete_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/striped_green_concrete	all	solo	
 wired_green_concrete_ctm	green_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/green_concrete/ctm/wired_green_concrete	all	solo	
-arched_green_stained_glass_ctm	green_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/green_stained_glass/ctm/arched_green_stained_glass_ctm|top=ott:block/green_stained_glass/circular_green_stained_glass	side	self	
+arched_green_stained_glass_ctm	green_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/green_stained_glass/ctm/arched_green_stained_glass_ctm|top=ott:block/green_stained_glass/circular_green_stained_glass	side	self	
 fancy_green_stained_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/green_stained_glass/ctm/fancy_green_stained_glass_ctm	all	solo	minecraft:translucent
 green_framed_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/green_stained_glass/ctm/green_framed_glass	all	solo	minecraft:translucent
 green_stained_clear_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/green_stained_glass/ctm/green_stained_clear_glass	all	solo	minecraft:translucent
@@ -903,8 +903,8 @@ raster_green_stained_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft
 small_green_diamond_stained_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/green_stained_glass/ctm/small_green_diamond_stained_glass_ctm	all	solo	minecraft:translucent
 tiled_green_stained_glass_ctm	green_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/green_stained_glass/ctm/tiled_green_stained_glass_ctm	all	solo	minecraft:translucent
 curled_green_terracotta_ctm	green_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/green_terracotta/ctm/curled_green_terracotta	all	solo	
-green_terracotta_column_ctm	green_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/green_terracotta/ctm/green_terracotta_column	side	self	
-green_terracotta_ctm	green_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/green_terracotta/ctm/green_terracotta_ctm	side	self	
+green_terracotta_column_ctm	green_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/green_terracotta/ctm/green_terracotta_column	side	self	
+green_terracotta_ctm	green_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/green_terracotta/ctm/green_terracotta_ctm	side	self	
 hexagonical_green_terracotta_ctm	green_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/green_terracotta/ctm/hexagonical_green_terracotta	all	solo	
 small_green_terracotta_tiles_ctm	green_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/green_terracotta/ctm/small_green_terracotta_tiles	all	solo	
 bordered_ice_ctm	ice	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/ice/ctm/bordered_ice	all	solo	
@@ -957,14 +957,14 @@ jungle_planks_squares_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott
 jungle_planks_tiles_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/jungle_planks/ctm/jungle_planks_tiles	all	solo	
 jungle_planks_wavy_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/jungle_planks/ctm/jungle_planks_wavy	all	solo	
 jungle_planks_woven_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/jungle_planks/ctm/jungle_planks_woven	all	solo	
-jungle_window_bars_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_bars|top=minecraft:block/jungle_planks	side	self	
-jungle_window_covered_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_covered|top=minecraft:block/jungle_planks	side	self	
-jungle_window_diagonal_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_diagonal|top=minecraft:block/jungle_planks	side	self	
-jungle_window_large_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_large|top=minecraft:block/jungle_planks	side	self	
-jungle_window_panes_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_panes|top=minecraft:block/jungle_planks	side	self	
-jungle_window_rounded_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_rounded|top=minecraft:block/jungle_planks	side	self	
-jungle_window_slim_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_slim|top=minecraft:block/jungle_planks	side	self	
-jungle_window_swirling_ctm	jungle_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/jungle_windows/ctm/jungle_window_swirling|top=minecraft:block/jungle_planks	side	self	
+jungle_window_bars_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_bars|top=minecraft:block/jungle_planks	side	self	
+jungle_window_covered_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_covered|top=minecraft:block/jungle_planks	side	self	
+jungle_window_diagonal_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_diagonal|top=minecraft:block/jungle_planks	side	self	
+jungle_window_large_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_large|top=minecraft:block/jungle_planks	side	self	
+jungle_window_panes_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_panes|top=minecraft:block/jungle_planks	side	self	
+jungle_window_rounded_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_rounded|top=minecraft:block/jungle_planks	side	self	
+jungle_window_slim_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_slim|top=minecraft:block/jungle_planks	side	self	
+jungle_window_swirling_ctm	jungle_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/jungle_windows/ctm/jungle_window_swirling|top=minecraft:block/jungle_planks	side	self	
 jungle_window_tiles_ctm	jungle_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/jungle_windows/ctm/jungle_window_tiles|up=minecraft:block/jungle_planks	side:pieces_full	solo	minecraft:cutout_mipped
 natural_jungle_planks_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/jungle_planks/ctm/natural_jungle_planks	all	solo	
 pegged_jungle_planks_ctm	jungle_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/jungle_planks/ctm/pegged_jungle_planks	all	solo	
@@ -998,13 +998,13 @@ tiled_bordered_lapis_block_ctm	lapis_block	ctm_cube_all_pieces		pieces_full	all=
 tiled_lapis_block_column_ctm	lapis_block	ctm_cube_all_pieces		pieces_full	all=ott:block/lapis_block/ctm/tiled_lapis_block_column	all	solo	
 tiny_brick_bordered_lapis_block_ctm	lapis_block	ctm_cube_all_pieces		pieces_full	all=ott:block/lapis_block/ctm/tiny_brick_bordered_lapis_block	all	solo	
 grill_light_blue_concrete_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/grill_light_blue_concrete	all	solo	
-light_blue_concrete_ctm	light_blue_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_blue_concrete/ctm/light_blue_concrete_ctm	side	self	
+light_blue_concrete_ctm	light_blue_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_blue_concrete/ctm/light_blue_concrete_ctm	side	self	
 light_blue_concrete_panel_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/light_blue_concrete_panel	all	solo	
 pegged_light_blue_concrete_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/pegged_light_blue_concrete	all	solo	
 smooth_light_blue_concrete_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/smooth_light_blue_concrete	all	solo	
 striped_light_blue_concrete_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/striped_light_blue_concrete	all	solo	
 wired_light_blue_concrete_ctm	light_blue_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_concrete/ctm/wired_light_blue_concrete	all	solo	
-arched_light_blue_stained_glass_ctm	light_blue_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/light_blue_stained_glass/ctm/arched_light_blue_stained_glass_ctm|top=ott:block/light_blue_stained_glass/circular_light_blue_stained_glass	side	self	
+arched_light_blue_stained_glass_ctm	light_blue_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/light_blue_stained_glass/ctm/arched_light_blue_stained_glass_ctm|top=ott:block/light_blue_stained_glass/circular_light_blue_stained_glass	side	self	
 fancy_light_blue_stained_glass_ctm	light_blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_blue_stained_glass/ctm/fancy_light_blue_stained_glass_ctm	all	solo	minecraft:translucent
 light_blue_framed_glass_ctm	light_blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_blue_stained_glass/ctm/light_blue_framed_glass	all	solo	minecraft:translucent
 light_blue_stained_clear_glass_ctm	light_blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_blue_stained_glass/ctm/light_blue_stained_clear_glass	all	solo	minecraft:translucent
@@ -1015,17 +1015,17 @@ small_light_blue_diamond_stained_glass_ctm	light_blue_stained_glass	ctm_cube_all
 tiled_light_blue_stained_glass_ctm	light_blue_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_blue_stained_glass/ctm/tiled_light_blue_stained_glass_ctm	all	solo	minecraft:translucent
 curled_light_blue_terracotta_ctm	light_blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_terracotta/ctm/curled_light_blue_terracotta	all	solo	
 hexagonical_light_blue_terracotta_ctm	light_blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_terracotta/ctm/hexagonical_light_blue_terracotta	all	solo	
-light_blue_terracotta_column_ctm	light_blue_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_blue_terracotta/ctm/light_blue_terracotta_column	side	self	
-light_blue_terracotta_ctm	light_blue_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_blue_terracotta/ctm/light_blue_terracotta_ctm	side	self	
+light_blue_terracotta_column_ctm	light_blue_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_blue_terracotta/ctm/light_blue_terracotta_column	side	self	
+light_blue_terracotta_ctm	light_blue_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_blue_terracotta/ctm/light_blue_terracotta_ctm	side	self	
 small_light_blue_terracotta_tiles_ctm	light_blue_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_blue_terracotta/ctm/small_light_blue_terracotta_tiles	all	solo	
 grill_light_gray_concrete_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/grill_light_gray_concrete	all	solo	
-light_gray_concrete_ctm	light_gray_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_gray_concrete/ctm/light_gray_concrete_ctm	side	self	
+light_gray_concrete_ctm	light_gray_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_gray_concrete/ctm/light_gray_concrete_ctm	side	self	
 light_gray_concrete_panel_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/light_gray_concrete_panel	all	solo	
 pegged_light_gray_concrete_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/pegged_light_gray_concrete	all	solo	
 smooth_light_gray_concrete_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/smooth_light_gray_concrete	all	solo	
 striped_light_gray_concrete_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/striped_light_gray_concrete	all	solo	
 wired_light_gray_concrete_ctm	light_gray_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_concrete/ctm/wired_light_gray_concrete	all	solo	
-arched_light_gray_stained_glass_ctm	light_gray_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/light_gray_stained_glass/ctm/arched_light_gray_stained_glass_ctm|top=ott:block/light_gray_stained_glass/circular_light_gray_stained_glass	side	self	
+arched_light_gray_stained_glass_ctm	light_gray_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/light_gray_stained_glass/ctm/arched_light_gray_stained_glass_ctm|top=ott:block/light_gray_stained_glass/circular_light_gray_stained_glass	side	self	
 fancy_light_gray_stained_glass_ctm	light_gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_gray_stained_glass/ctm/fancy_light_gray_stained_glass_ctm	all	solo	minecraft:translucent
 light_gray_framed_glass_ctm	light_gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_gray_stained_glass/ctm/light_gray_framed_glass	all	solo	minecraft:translucent
 light_gray_stained_clear_glass_ctm	light_gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_gray_stained_glass/ctm/light_gray_stained_clear_glass	all	solo	minecraft:translucent
@@ -1036,17 +1036,17 @@ small_light_gray_diamond_stained_glass_ctm	light_gray_stained_glass	ctm_cube_all
 tiled_light_gray_stained_glass_ctm	light_gray_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/light_gray_stained_glass/ctm/tiled_light_gray_stained_glass_ctm	all	solo	minecraft:translucent
 curled_light_gray_terracotta_ctm	light_gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_terracotta/ctm/curled_light_gray_terracotta	all	solo	
 hexagonical_light_gray_terracotta_ctm	light_gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_terracotta/ctm/hexagonical_light_gray_terracotta	all	solo	
-light_gray_terracotta_column_ctm	light_gray_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_gray_terracotta/ctm/light_gray_terracotta_column	side	self	
-light_gray_terracotta_ctm	light_gray_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/light_gray_terracotta/ctm/light_gray_terracotta_ctm	side	self	
+light_gray_terracotta_column_ctm	light_gray_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_gray_terracotta/ctm/light_gray_terracotta_column	side	self	
+light_gray_terracotta_ctm	light_gray_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/light_gray_terracotta/ctm/light_gray_terracotta_ctm	side	self	
 small_light_gray_terracotta_tiles_ctm	light_gray_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/light_gray_terracotta/ctm/small_light_gray_terracotta_tiles	all	solo	
 grill_lime_concrete_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/grill_lime_concrete	all	solo	
-lime_concrete_ctm	lime_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/lime_concrete/ctm/lime_concrete_ctm	side	self	
+lime_concrete_ctm	lime_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/lime_concrete/ctm/lime_concrete_ctm	side	self	
 lime_concrete_panel_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/lime_concrete_panel	all	solo	
 pegged_lime_concrete_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/pegged_lime_concrete	all	solo	
 smooth_lime_concrete_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/smooth_lime_concrete	all	solo	
 striped_lime_concrete_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/striped_lime_concrete	all	solo	
 wired_lime_concrete_ctm	lime_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_concrete/ctm/wired_lime_concrete	all	solo	
-arched_lime_stained_glass_ctm	lime_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/lime_stained_glass/ctm/arched_lime_stained_glass_ctm|top=ott:block/lime_stained_glass/circular_lime_stained_glass	side	self	
+arched_lime_stained_glass_ctm	lime_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/lime_stained_glass/ctm/arched_lime_stained_glass_ctm|top=ott:block/lime_stained_glass/circular_lime_stained_glass	side	self	
 fancy_lime_stained_glass_ctm	lime_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/lime_stained_glass/ctm/fancy_lime_stained_glass_ctm	all	solo	minecraft:translucent
 lime_framed_glass_ctm	lime_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/lime_stained_glass/ctm/lime_framed_glass	all	solo	minecraft:translucent
 lime_stained_clear_glass_ctm	lime_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/lime_stained_glass/ctm/lime_stained_clear_glass	all	solo	minecraft:translucent
@@ -1057,8 +1057,8 @@ small_lime_diamond_stained_glass_ctm	lime_stained_glass	ctm_cube_all_pieces	mine
 tiled_lime_stained_glass_ctm	lime_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/lime_stained_glass/ctm/tiled_lime_stained_glass_ctm	all	solo	minecraft:translucent
 curled_lime_terracotta_ctm	lime_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_terracotta/ctm/curled_lime_terracotta	all	solo	
 hexagonical_lime_terracotta_ctm	lime_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_terracotta/ctm/hexagonical_lime_terracotta	all	solo	
-lime_terracotta_column_ctm	lime_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/lime_terracotta/ctm/lime_terracotta_column	side	self	
-lime_terracotta_ctm	lime_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/lime_terracotta/ctm/lime_terracotta_ctm	side	self	
+lime_terracotta_column_ctm	lime_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/lime_terracotta/ctm/lime_terracotta_column	side	self	
+lime_terracotta_ctm	lime_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/lime_terracotta/ctm/lime_terracotta_ctm	side	self	
 small_lime_terracotta_tiles_ctm	lime_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/lime_terracotta/ctm/small_lime_terracotta_tiles	all	solo	
 limestone_cut_polished_ctm	limestone	ctm_cube_all_pieces		pieces_full	all=ott:block/limestone/ctm/limestone_cut_polished	all	solo	
 limestone_cut_small_brick_ctm	limestone	ctm_cube_all_pieces		pieces_full	all=ott:block/limestone/ctm/limestone_cut_small_brick	all	solo	
@@ -1079,13 +1079,13 @@ tiled_bordered_lodestone_ctm	lodestone	ctm_cube_all_pieces		pieces_full	all=ott:
 tiled_lodestone_column_ctm	lodestone	ctm_cube_all_pieces		pieces_full	all=ott:block/lodestone/ctm/tiled_lodestone_column	all	solo	
 tiny_brick_bordered_lodestone_ctm	lodestone	ctm_cube_all_pieces		pieces_full	all=ott:block/lodestone/ctm/tiny_brick_bordered_lodestone	all	solo	
 grill_magenta_concrete_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/grill_magenta_concrete	all	solo	
-magenta_concrete_ctm	magenta_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/magenta_concrete/ctm/magenta_concrete_ctm	side	self	
+magenta_concrete_ctm	magenta_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/magenta_concrete/ctm/magenta_concrete_ctm	side	self	
 magenta_concrete_panel_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/magenta_concrete_panel	all	solo	
 pegged_magenta_concrete_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/pegged_magenta_concrete	all	solo	
 smooth_magenta_concrete_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/smooth_magenta_concrete	all	solo	
 striped_magenta_concrete_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/striped_magenta_concrete	all	solo	
 wired_magenta_concrete_ctm	magenta_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_concrete/ctm/wired_magenta_concrete	all	solo	
-arched_magenta_stained_glass_ctm	magenta_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/magenta_stained_glass/ctm/arched_magenta_stained_glass_ctm|top=ott:block/magenta_stained_glass/circular_magenta_stained_glass	side	self	
+arched_magenta_stained_glass_ctm	magenta_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/magenta_stained_glass/ctm/arched_magenta_stained_glass_ctm|top=ott:block/magenta_stained_glass/circular_magenta_stained_glass	side	self	
 fancy_magenta_stained_glass_ctm	magenta_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/magenta_stained_glass/ctm/fancy_magenta_stained_glass_ctm	all	solo	minecraft:translucent
 magenta_framed_glass_ctm	magenta_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/magenta_stained_glass/ctm/magenta_framed_glass	all	solo	minecraft:translucent
 magenta_stained_clear_glass_ctm	magenta_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/magenta_stained_glass/ctm/magenta_stained_clear_glass	all	solo	minecraft:translucent
@@ -1096,8 +1096,8 @@ small_magenta_diamond_stained_glass_ctm	magenta_stained_glass	ctm_cube_all_piece
 tiled_magenta_stained_glass_ctm	magenta_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/magenta_stained_glass/ctm/tiled_magenta_stained_glass_ctm	all	solo	minecraft:translucent
 curled_magenta_terracotta_ctm	magenta_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_terracotta/ctm/curled_magenta_terracotta	all	solo	
 hexagonical_magenta_terracotta_ctm	magenta_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_terracotta/ctm/hexagonical_magenta_terracotta	all	solo	
-magenta_terracotta_column_ctm	magenta_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/magenta_terracotta/ctm/magenta_terracotta_column	side	self	
-magenta_terracotta_ctm	magenta_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/magenta_terracotta/ctm/magenta_terracotta_ctm	side	self	
+magenta_terracotta_column_ctm	magenta_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/magenta_terracotta/ctm/magenta_terracotta_column	side	self	
+magenta_terracotta_ctm	magenta_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/magenta_terracotta/ctm/magenta_terracotta_ctm	side	self	
 small_magenta_terracotta_tiles_ctm	magenta_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/magenta_terracotta/ctm/small_magenta_terracotta_tiles	all	solo	
 bordered_magma_block_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=ott:block/magma_block/ctm/bordered_magma_block	all	solo	
 brick_bordered_magma_block_ctm	magma_block	ctm_cube_all_pieces		pieces_full	all=ott:block/magma_block/ctm/brick_bordered_magma_block	all	solo	
@@ -1137,14 +1137,14 @@ mangrove_planks_squares_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all
 mangrove_planks_tiles_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/mangrove_planks_tiles	all	solo	
 mangrove_planks_wavy_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/mangrove_planks_wavy	all	solo	
 mangrove_planks_woven_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/mangrove_planks_woven	all	solo	
-mangrove_window_bars_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_bars|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_covered_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_covered|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_diagonal_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_diagonal|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_large_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_large|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_panes_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_panes|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_rounded_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_rounded|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_slim_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_slim|top=minecraft:block/mangrove_planks	side	self	
-mangrove_window_swirling_ctm	mangrove_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_swirling|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_bars_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_bars|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_covered_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_covered|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_diagonal_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_diagonal|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_large_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_large|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_panes_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_panes|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_rounded_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_rounded|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_slim_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_slim|top=minecraft:block/mangrove_planks	side	self	
+mangrove_window_swirling_ctm	mangrove_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/mangrove_windows/ctm/mangrove_window_swirling|top=minecraft:block/mangrove_planks	side	self	
 mangrove_window_tiles_ctm	mangrove_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/mangrove_windows/ctm/mangrove_window_tiles|up=minecraft:block/mangrove_planks	side:pieces_full	solo	minecraft:cutout_mipped
 natural_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/natural_mangrove_planks	all	solo	
 pegged_mangrove_planks_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/pegged_mangrove_planks	all	solo	
@@ -1304,14 +1304,14 @@ oak_planks_squares_ctm	oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block
 oak_planks_tiles_ctm	oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/oak_planks/ctm/oak_planks_tiles	all	solo	
 oak_planks_wavy_ctm	oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/oak_planks/ctm/oak_planks_wavy	all	solo	
 oak_planks_woven_ctm	oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/oak_planks/ctm/oak_planks_woven	all	solo	
-oak_window_bars_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_bars|top=minecraft:block/oak_planks	side	self	
-oak_window_covered_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_covered|top=minecraft:block/oak_planks	side	self	
-oak_window_diagonal_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_diagonal|top=minecraft:block/oak_planks	side	self	
-oak_window_large_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_large|top=minecraft:block/oak_planks	side	self	
-oak_window_panes_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_panes|top=minecraft:block/oak_planks	side	self	
-oak_window_rounded_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_rounded|top=minecraft:block/oak_planks	side	self	
-oak_window_slim_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_slim|top=minecraft:block/oak_planks	side	self	
-oak_window_swirling_ctm	oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/oak_windows/ctm/oak_window_swirling|top=minecraft:block/oak_planks	side	self	
+oak_window_bars_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_bars|top=minecraft:block/oak_planks	side	self	
+oak_window_covered_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_covered|top=minecraft:block/oak_planks	side	self	
+oak_window_diagonal_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_diagonal|top=minecraft:block/oak_planks	side	self	
+oak_window_large_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_large|top=minecraft:block/oak_planks	side	self	
+oak_window_panes_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_panes|top=minecraft:block/oak_planks	side	self	
+oak_window_rounded_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_rounded|top=minecraft:block/oak_planks	side	self	
+oak_window_slim_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_slim|top=minecraft:block/oak_planks	side	self	
+oak_window_swirling_ctm	oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/oak_windows/ctm/oak_window_swirling|top=minecraft:block/oak_planks	side	self	
 oak_window_tiles_ctm	oak_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/oak_windows/ctm/oak_window_tiles|up=minecraft:block/oak_planks	side:pieces_full	solo	minecraft:cutout_mipped
 oak_woven_glass_ctm	oak_planks	ctm_cube_all_pieces	minecraft:cutout	pieces_full	all=ott:block/oak_planks/ctm/oak_woven_glass	all	solo	minecraft:cutout
 pegged_oak_planks_ctm	oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/oak_planks/ctm/pegged_oak_planks	all	solo	
@@ -1348,13 +1348,13 @@ tiny_brick_bordered_obsidian_ctm	obsidian	ctm_cube_all_pieces		pieces_full	all=o
 ochrum_cut_polished_ctm	ochrum	ctm_cube_all_pieces		pieces_full	all=ott:block/ochrum/ctm/ochrum_cut_polished	all	solo	
 ochrum_cut_small_brick_ctm	ochrum	ctm_cube_all_pieces		pieces_full	all=ott:block/ochrum/ctm/ochrum_cut_small_brick	all	solo	
 grill_orange_concrete_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/grill_orange_concrete	all	solo	
-orange_concrete_ctm	orange_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/orange_concrete/ctm/orange_concrete_ctm	side	self	
+orange_concrete_ctm	orange_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/orange_concrete/ctm/orange_concrete_ctm	side	self	
 orange_concrete_panel_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/orange_concrete_panel	all	solo	
 pegged_orange_concrete_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/pegged_orange_concrete	all	solo	
 smooth_orange_concrete_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/smooth_orange_concrete	all	solo	
 striped_orange_concrete_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/striped_orange_concrete	all	solo	
 wired_orange_concrete_ctm	orange_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_concrete/ctm/wired_orange_concrete	all	solo	
-arched_orange_stained_glass_ctm	orange_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/orange_stained_glass/ctm/arched_orange_stained_glass_ctm|top=ott:block/orange_stained_glass/circular_orange_stained_glass	side	self	
+arched_orange_stained_glass_ctm	orange_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/orange_stained_glass/ctm/arched_orange_stained_glass_ctm|top=ott:block/orange_stained_glass/circular_orange_stained_glass	side	self	
 fancy_orange_stained_glass_ctm	orange_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/orange_stained_glass/ctm/fancy_orange_stained_glass_ctm	all	solo	minecraft:translucent
 orange_framed_glass_ctm	orange_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/orange_stained_glass/ctm/orange_framed_glass	all	solo	minecraft:translucent
 orange_stained_clear_glass_ctm	orange_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/orange_stained_glass/ctm/orange_stained_clear_glass	all	solo	minecraft:translucent
@@ -1365,8 +1365,8 @@ small_orange_diamond_stained_glass_ctm	orange_stained_glass	ctm_cube_all_pieces	
 tiled_orange_stained_glass_ctm	orange_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/orange_stained_glass/ctm/tiled_orange_stained_glass_ctm	all	solo	minecraft:translucent
 curled_orange_terracotta_ctm	orange_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_terracotta/ctm/curled_orange_terracotta	all	solo	
 hexagonical_orange_terracotta_ctm	orange_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_terracotta/ctm/hexagonical_orange_terracotta	all	solo	
-orange_terracotta_column_ctm	orange_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/orange_terracotta/ctm/orange_terracotta_column	side	self	
-orange_terracotta_ctm	orange_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/orange_terracotta/ctm/orange_terracotta_ctm	side	self	
+orange_terracotta_column_ctm	orange_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/orange_terracotta/ctm/orange_terracotta_column	side	self	
+orange_terracotta_ctm	orange_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/orange_terracotta/ctm/orange_terracotta_ctm	side	self	
 small_orange_terracotta_tiles_ctm	orange_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/orange_terracotta/ctm/small_orange_terracotta_tiles	all	solo	
 oxidized_copper_block_ctm	oxidized_copper	ctm_cube_all_pieces		pieces_full	all=ott:block/oxidized_copper/ctm/oxidized_copper_block	all	solo	
 oxidized_copper_grate_ctm	oxidized_copper	ctm_cube_all_pieces	minecraft:cutout_mipped	pieces_full	all=ott:block/oxidized_copper/ctm/oxidized_copper_grate	all	solo	
@@ -1417,23 +1417,23 @@ pale_oak_planks_squares_ctm	pale_oak_planks	ctm_cube_all_pieces		pieces_full	all
 pale_oak_planks_tiles_ctm	pale_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/pale_oak_planks/ctm/pale_oak_planks_tiles	all	solo	
 pale_oak_planks_wavy_ctm	pale_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/pale_oak_planks/ctm/pale_oak_planks_wavy	all	solo	
 pale_oak_planks_woven_ctm	pale_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/pale_oak_planks/ctm/pale_oak_planks_woven	all	solo	
-pale_oak_window_bars_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_bars|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_covered_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_covered|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_diagonal_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_diagonal|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_large_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_large|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_panes_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_panes|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_rounded_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_rounded|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_slim_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_slim|top=minecraft:block/pale_oak_planks	side	self	
-pale_oak_window_swirling_ctm	pale_oak_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_swirling|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_bars_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_bars|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_covered_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_covered|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_diagonal_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_diagonal|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_large_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_large|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_panes_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_panes|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_rounded_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_rounded|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_slim_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_slim|top=minecraft:block/pale_oak_planks	side	self	
+pale_oak_window_swirling_ctm	pale_oak_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/pale_oak_windows/ctm/pale_oak_window_swirling|top=minecraft:block/pale_oak_planks	side	self	
 pale_oak_window_tiles_ctm	pale_oak_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/pale_oak_windows/ctm/pale_oak_window_tiles|up=minecraft:block/pale_oak_planks	side:pieces_full	solo	minecraft:cutout_mipped
 grill_pink_concrete_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/grill_pink_concrete	all	solo	
 pegged_pink_concrete_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/pegged_pink_concrete	all	solo	
-pink_concrete_ctm	pink_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/pink_concrete/ctm/pink_concrete_ctm	side	self	
+pink_concrete_ctm	pink_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/pink_concrete/ctm/pink_concrete_ctm	side	self	
 pink_concrete_panel_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/pink_concrete_panel	all	solo	
 smooth_pink_concrete_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/smooth_pink_concrete	all	solo	
 striped_pink_concrete_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/striped_pink_concrete	all	solo	
 wired_pink_concrete_ctm	pink_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_concrete/ctm/wired_pink_concrete	all	solo	
-arched_pink_stained_glass_ctm	pink_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/pink_stained_glass/ctm/arched_pink_stained_glass_ctm|top=ott:block/pink_stained_glass/circular_pink_stained_glass	side	self	
+arched_pink_stained_glass_ctm	pink_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/pink_stained_glass/ctm/arched_pink_stained_glass_ctm|top=ott:block/pink_stained_glass/circular_pink_stained_glass	side	self	
 fancy_pink_stained_glass_ctm	pink_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/pink_stained_glass/ctm/fancy_pink_stained_glass_ctm	all	solo	minecraft:translucent
 ornate_pink_stained_glass_ctm	pink_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/pink_stained_glass/ctm/ornate_pink_stained_glass_ctm	all	solo	minecraft:translucent
 pink_framed_glass_ctm	pink_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/pink_stained_glass/ctm/pink_framed_glass	all	solo	minecraft:translucent
@@ -1444,8 +1444,8 @@ small_pink_diamond_stained_glass_ctm	pink_stained_glass	ctm_cube_all_pieces	mine
 tiled_pink_stained_glass_ctm	pink_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/pink_stained_glass/ctm/tiled_pink_stained_glass_ctm	all	solo	minecraft:translucent
 curled_pink_terracotta_ctm	pink_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_terracotta/ctm/curled_pink_terracotta	all	solo	
 hexagonical_pink_terracotta_ctm	pink_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_terracotta/ctm/hexagonical_pink_terracotta	all	solo	
-pink_terracotta_column_ctm	pink_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/pink_terracotta/ctm/pink_terracotta_column	side	self	
-pink_terracotta_ctm	pink_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/pink_terracotta/ctm/pink_terracotta_ctm	side	self	
+pink_terracotta_column_ctm	pink_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/pink_terracotta/ctm/pink_terracotta_column	side	self	
+pink_terracotta_ctm	pink_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/pink_terracotta/ctm/pink_terracotta_ctm	side	self	
 small_pink_terracotta_tiles_ctm	pink_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/pink_terracotta/ctm/small_pink_terracotta_tiles	all	solo	
 bordered_prismarine_ctm	prismarine	ctm_cube_all_pieces		pieces_full	all=ott:block/prismarine/ctm/bordered_prismarine	all	solo	
 brick_bordered_prismarine_ctm	prismarine	ctm_cube_all_pieces		pieces_full	all=ott:block/prismarine/ctm/brick_bordered_prismarine	all	solo	
@@ -1481,12 +1481,12 @@ tiled_prismarine_column_ctm	prismarine	ctm_cube_all_pieces		pieces_full	all=ott:
 tiny_brick_bordered_prismarine_ctm	prismarine	ctm_cube_all_pieces		pieces_full	all=ott:block/prismarine/ctm/tiny_brick_bordered_prismarine	all	solo	
 grill_purple_concrete_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/grill_purple_concrete	all	solo	
 pegged_purple_concrete_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/pegged_purple_concrete	all	solo	
-purple_concrete_ctm	purple_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/purple_concrete/ctm/purple_concrete_ctm	side	self	
+purple_concrete_ctm	purple_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/purple_concrete/ctm/purple_concrete_ctm	side	self	
 purple_concrete_panel_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/purple_concrete_panel	all	solo	
 smooth_purple_concrete_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/smooth_purple_concrete	all	solo	
 striped_purple_concrete_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/striped_purple_concrete	all	solo	
 wired_purple_concrete_ctm	purple_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_concrete/ctm/wired_purple_concrete	all	solo	
-arched_purple_stained_glass_ctm	purple_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/purple_stained_glass/ctm/arched_purple_stained_glass_ctm|top=ott:block/purple_stained_glass/circular_purple_stained_glass	side	self	
+arched_purple_stained_glass_ctm	purple_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/purple_stained_glass/ctm/arched_purple_stained_glass_ctm|top=ott:block/purple_stained_glass/circular_purple_stained_glass	side	self	
 fancy_purple_stained_glass_ctm	purple_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/purple_stained_glass/ctm/fancy_purple_stained_glass_ctm	all	solo	minecraft:translucent
 ornate_purple_stained_glass_ctm	purple_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/purple_stained_glass/ctm/ornate_purple_stained_glass_ctm	all	solo	minecraft:translucent
 purple_framed_glass_ctm	purple_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/purple_stained_glass/ctm/purple_framed_glass	all	solo	minecraft:translucent
@@ -1497,8 +1497,8 @@ small_purple_diamond_stained_glass_ctm	purple_stained_glass	ctm_cube_all_pieces	
 tiled_purple_stained_glass_ctm	purple_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/purple_stained_glass/ctm/tiled_purple_stained_glass_ctm	all	solo	minecraft:translucent
 curled_purple_terracotta_ctm	purple_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_terracotta/ctm/curled_purple_terracotta	all	solo	
 hexagonical_purple_terracotta_ctm	purple_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_terracotta/ctm/hexagonical_purple_terracotta	all	solo	
-purple_terracotta_column_ctm	purple_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/purple_terracotta/ctm/purple_terracotta_column	side	self	
-purple_terracotta_ctm	purple_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/purple_terracotta/ctm/purple_terracotta_ctm	side	self	
+purple_terracotta_column_ctm	purple_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/purple_terracotta/ctm/purple_terracotta_column	side	self	
+purple_terracotta_ctm	purple_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/purple_terracotta/ctm/purple_terracotta_ctm	side	self	
 small_purple_terracotta_tiles_ctm	purple_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/purple_terracotta/ctm/small_purple_terracotta_tiles	all	solo	
 bordered_purpur_block_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/bordered_purpur_block	all	solo	
 brick_bordered_purpur_block_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/brick_bordered_purpur_block	all	solo	
@@ -1510,10 +1510,9 @@ ornate_purpur_block_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:bl
 overlapping_purpur_block_tiles_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/overlapping_purpur_block_tiles	all	solo	
 polished_purpur_block_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/polished_purpur_block	all	solo	
 purpur_brick_pattern_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/purpur_brick_pattern	all	solo	
+purpur_column_ctm	purpur_block	ctm_cube_column_pieces_vertical_full_caps			side=ott:block/purpur_block/ctm/purpur_column_ctm|top=ott:block/purpur_block/ctm/purpur_column_top_ctm	side:pieces_vertical|top:pieces_full	solo	
 purpur_brick_paving_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/purpur_brick_paving	all	solo	
 purpur_bricks_ctm	purpur_block	ctm_cube_all_horizontal		pieces_horizontal	all=ott:block/purpur_block/ctm/purpur_bricks	all	self	
-purpur_column_ctm	purpur_block	ctm_cube_column_vertical		vertical	side=ott:block/purpur_block/ctm/purpur_column_ctm|top=ott:block/purpur_block/ctm/purpur_column_ctm_top	side	self	
-purpur_ctm	purpur_block	ctm_cube_column_vertical		vertical	side=ott:block/purpur_block/ctm/purpur_pillar_ctm|top=minecraft:block/purpur_pillar_top	side	self	
 purpur_diagonal_bricks_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/purpur_diagonal_bricks	all	solo	
 purpur_diagonal_tiles_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/purpur_diagonal_tiles	all	solo	
 purpur_dotted_ctm	purpur_block	ctm_cube_all_pieces		pieces_full	all=ott:block/purpur_block/ctm/purpur_dotted	all	solo	
@@ -1610,7 +1609,7 @@ tiled_raw_iron_block_column_ctm	raw_iron_block	ctm_cube_all_pieces		pieces_full	
 tiny_brick_bordered_raw_iron_block_ctm	raw_iron_block	ctm_cube_all_pieces		pieces_full	all=ott:block/raw_iron_block/ctm/tiny_brick_bordered_raw_iron_block	all	solo	
 grill_red_concrete_ctm	red_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/red_concrete/ctm/grill_red_concrete	all	solo	
 pegged_red_concrete_ctm	red_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/red_concrete/ctm/pegged_red_concrete	all	solo	
-red_concrete_ctm	red_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/red_concrete/ctm/red_concrete_ctm	side	self	
+red_concrete_ctm	red_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/red_concrete/ctm/red_concrete_ctm	side	self	
 red_concrete_panel_ctm	red_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/red_concrete/ctm/red_concrete_panel	all	solo	
 smooth_red_concrete_ctm	red_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/red_concrete/ctm/smooth_red_concrete	all	solo	
 striped_red_concrete_ctm	red_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/red_concrete/ctm/striped_red_concrete	all	solo	
@@ -1665,7 +1664,7 @@ thick_inlayed_red_sandstone_ctm	red_sandstone	ctm_cube_all_pieces		pieces_full	a
 tiled_bordered_red_sandstone_ctm	red_sandstone	ctm_cube_all_pieces		pieces_full	all=ott:block/red_sandstone/ctm/tiled_bordered_red_sandstone	all	solo	
 tiled_red_sandstone_column_ctm	red_sandstone	ctm_cube_all_pieces		pieces_full	all=ott:block/red_sandstone/ctm/tiled_red_sandstone_column	all	solo	
 tiny_brick_bordered_red_sandstone_ctm	red_sandstone	ctm_cube_all_pieces		pieces_full	all=ott:block/red_sandstone/ctm/tiny_brick_bordered_red_sandstone	all	solo	
-arched_red_stained_glass_ctm	red_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/red_stained_glass/ctm/arched_red_stained_glass_ctm|top=ott:block/red_stained_glass/circular_red_stained_glass	side	self	
+arched_red_stained_glass_ctm	red_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/red_stained_glass/ctm/arched_red_stained_glass_ctm|top=ott:block/red_stained_glass/circular_red_stained_glass	side	self	
 fancy_red_stained_glass_ctm	red_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/red_stained_glass/ctm/fancy_red_stained_glass_ctm	all	solo	minecraft:translucent
 ornate_red_stained_glass_ctm	red_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/red_stained_glass/ctm/ornate_red_stained_glass_ctm	all	solo	minecraft:translucent
 raster_red_stained_glass_ctm	red_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/red_stained_glass/ctm/raster_red_stained_glass_ctm	all	solo	minecraft:translucent
@@ -1676,8 +1675,8 @@ small_red_diamond_stained_glass_ctm	red_stained_glass	ctm_cube_all_pieces	minecr
 tiled_red_stained_glass_ctm	red_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/red_stained_glass/ctm/tiled_red_stained_glass_ctm	all	solo	minecraft:translucent
 curled_red_terracotta_ctm	red_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/red_terracotta/ctm/curled_red_terracotta	all	solo	
 hexagonical_red_terracotta_ctm	red_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/red_terracotta/ctm/hexagonical_red_terracotta	all	solo	
-red_terracotta_column_ctm	red_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/red_terracotta/ctm/red_terracotta_column	side	self	
-red_terracotta_ctm	red_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/red_terracotta/ctm/red_terracotta_ctm	side	self	
+red_terracotta_column_ctm	red_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/red_terracotta/ctm/red_terracotta_column	side	self	
+red_terracotta_ctm	red_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/red_terracotta/ctm/red_terracotta_ctm	side	self	
 small_red_terracotta_tiles_ctm	red_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/red_terracotta/ctm/small_red_terracotta_tiles	all	solo	
 bordered_redstone_block_ctm	redstone_block	ctm_cube_all_pieces		pieces_full	all=ott:block/redstone_block/ctm/bordered_redstone_block	all	solo	
 brick_bordered_redstone_block_ctm	redstone_block	ctm_cube_all_pieces		pieces_full	all=ott:block/redstone_block/ctm/brick_bordered_redstone_block	all	solo	
@@ -1812,14 +1811,14 @@ spruce_planks_squares_ctm	spruce_planks	ctm_cube_all_pieces		pieces_full	all=ott
 spruce_planks_tiles_ctm	spruce_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/spruce_planks/ctm/spruce_planks_tiles	all	solo	
 spruce_planks_wavy_ctm	spruce_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/spruce_planks/ctm/spruce_planks_wavy	all	solo	
 spruce_planks_woven_ctm	spruce_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/spruce_planks/ctm/spruce_planks_woven	all	solo	
-spruce_window_bars_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_bars|top=minecraft:block/spruce_planks	side	self	
-spruce_window_covered_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_covered|top=minecraft:block/spruce_planks	side	self	
-spruce_window_diagonal_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_diagonal|top=minecraft:block/spruce_planks	side	self	
-spruce_window_large_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_large|top=minecraft:block/spruce_planks	side	self	
-spruce_window_panes_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_panes|top=minecraft:block/spruce_planks	side	self	
-spruce_window_rounded_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_rounded|top=minecraft:block/spruce_planks	side	self	
-spruce_window_slim_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_slim|top=minecraft:block/spruce_planks	side	self	
-spruce_window_swirling_ctm	spruce_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/spruce_windows/ctm/spruce_window_swirling|top=minecraft:block/spruce_planks	side	self	
+spruce_window_bars_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_bars|top=minecraft:block/spruce_planks	side	self	
+spruce_window_covered_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_covered|top=minecraft:block/spruce_planks	side	self	
+spruce_window_diagonal_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_diagonal|top=minecraft:block/spruce_planks	side	self	
+spruce_window_large_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_large|top=minecraft:block/spruce_planks	side	self	
+spruce_window_panes_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_panes|top=minecraft:block/spruce_planks	side	self	
+spruce_window_rounded_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_rounded|top=minecraft:block/spruce_planks	side	self	
+spruce_window_slim_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_slim|top=minecraft:block/spruce_planks	side	self	
+spruce_window_swirling_ctm	spruce_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/spruce_windows/ctm/spruce_window_swirling|top=minecraft:block/spruce_planks	side	self	
 spruce_window_tiles_ctm	spruce_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/spruce_windows/ctm/spruce_window_tiles|up=minecraft:block/spruce_planks	side:pieces_full	solo	minecraft:cutout_mipped
 whirlwind_spruce_planks_ctm	spruce_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/spruce_planks/ctm/whirlwind_spruce_planks	all	solo	
 stone_big_tiles_ctm	stone	ctm_cube_all_pieces		pieces_full	all=ott:block/stone/ctm/stone_big_tiles	all	solo	
@@ -1846,7 +1845,7 @@ curled_terracotta_ctm	terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/
 hexagonical_terracotta_ctm	terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/terracotta/ctm/hexagonical_terracotta	all	solo	
 small_terracotta_tiles_ctm	terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/terracotta/ctm/small_terracotta_tiles	all	solo	
 terracotta_column_ctm	terracotta	ctm_cube_all_horizontal		pieces_vertical	all=ott:block/terracotta/ctm/terracotta_column	all	self	
-terracotta_ctm	terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/terracotta/ctm/terracotta_ctm	side	self	
+terracotta_ctm	terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/terracotta/ctm/terracotta_ctm	side	self	
 tinted_borderless_glass_black_ctm	tinted	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/black_stained_glass/ctm/tinted_borderless_glass_black	all	solo	minecraft:translucent
 tinted_borderless_glass_blue_ctm	tinted	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/blue_stained_glass/ctm/tinted_borderless_glass_blue	all	solo	minecraft:translucent
 tinted_borderless_glass_brown_ctm	tinted	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/brown_stained_glass/ctm/tinted_borderless_glass_brown	all	solo	minecraft:translucent
@@ -1909,14 +1908,14 @@ warped_planks_squares_ctm	warped_planks	ctm_cube_all_pieces		pieces_full	all=ott
 warped_planks_tiles_ctm	warped_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/warped_planks/ctm/warped_planks_tiles	all	solo	
 warped_planks_wavy_ctm	warped_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/warped_planks/ctm/warped_planks_wavy	all	solo	
 warped_planks_woven_ctm	warped_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/warped_planks/ctm/warped_planks_woven	all	solo	
-warped_window_bars_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_bars|top=minecraft:block/warped_planks	side	self	
-warped_window_covered_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_covered|top=minecraft:block/warped_planks	side	self	
-warped_window_diagonal_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_diagonal|top=minecraft:block/warped_planks	side	self	
-warped_window_large_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_large|top=minecraft:block/warped_planks	side	self	
-warped_window_panes_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_panes|top=minecraft:block/warped_planks	side	self	
-warped_window_rounded_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_rounded|top=minecraft:block/warped_planks	side	self	
-warped_window_slim_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_slim|top=minecraft:block/warped_planks	side	self	
-warped_window_swirling_ctm	warped_planks	ctm_cube_column_vertical	minecraft:cutout_mipped	vertical	side=ott:block/warped_windows/ctm/warped_window_swirling|top=minecraft:block/warped_planks	side	self	
+warped_window_bars_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_bars|top=minecraft:block/warped_planks	side	self	
+warped_window_covered_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_covered|top=minecraft:block/warped_planks	side	self	
+warped_window_diagonal_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_diagonal|top=minecraft:block/warped_planks	side	self	
+warped_window_large_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_large|top=minecraft:block/warped_planks	side	self	
+warped_window_panes_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_panes|top=minecraft:block/warped_planks	side	self	
+warped_window_rounded_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_rounded|top=minecraft:block/warped_planks	side	self	
+warped_window_slim_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_slim|top=minecraft:block/warped_planks	side	self	
+warped_window_swirling_ctm	warped_planks	ctm_cube_column_pieces_vertical	minecraft:cutout_mipped	pieces_vertical	side=ott:block/warped_windows/ctm/warped_window_swirling|top=minecraft:block/warped_planks	side	self	
 warped_window_tiles_ctm	warped_planks	ctm_cube_column_pieces_planks_top	minecraft:cutout_mipped		side=ott:block/warped_windows/ctm/warped_window_tiles|up=minecraft:block/warped_planks	side:pieces_full	solo	minecraft:cutout_mipped
 whirlwind_warped_planks_ctm	warped_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/warped_planks/ctm/whirlwind_warped_planks	all	solo	
 weathered_copper_block_ctm	weathered_copper	ctm_cube_all_pieces		pieces_full	all=ott:block/weathered_copper/ctm/weathered_copper_block	all	solo	
@@ -1925,10 +1924,10 @@ grill_white_concrete_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott
 pegged_white_concrete_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/white_concrete/ctm/pegged_white_concrete	all	solo	
 smooth_white_concrete_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/white_concrete/ctm/smooth_white_concrete	all	solo	
 striped_white_concrete_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/white_concrete/ctm/striped_white_concrete	all	solo	
-white_concrete_ctm	white_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/white_concrete/ctm/white_concrete_ctm	side	self	
+white_concrete_ctm	white_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/white_concrete/ctm/white_concrete_ctm	side	self	
 white_concrete_panel_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/white_concrete/ctm/white_concrete_panel	all	solo	
 wired_white_concrete_ctm	white_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/white_concrete/ctm/wired_white_concrete	all	solo	
-arched_white_stained_glass_ctm	white_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/white_stained_glass/ctm/arched_white_stained_glass_ctm|top=ott:block/white_stained_glass/circular_white_stained_glass	side	self	
+arched_white_stained_glass_ctm	white_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/white_stained_glass/ctm/arched_white_stained_glass_ctm|top=ott:block/white_stained_glass/circular_white_stained_glass	side	self	
 fancy_white_stained_glass_ctm	white_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/white_stained_glass/ctm/fancy_white_stained_glass_ctm	all	solo	minecraft:translucent
 ornate_white_stained_glass_ctm	white_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/white_stained_glass/ctm/ornate_white_stained_glass_ctm	all	solo	minecraft:translucent
 raster_white_stained_glass_ctm	white_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/white_stained_glass/ctm/raster_white_stained_glass_ctm	all	solo	minecraft:translucent
@@ -1940,16 +1939,16 @@ white_stained_glass_ctm	white_stained_glass	ctm_cube_all_pieces	minecraft:transl
 curled_white_terracotta_ctm	white_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/white_terracotta/ctm/curled_white_terracotta	all	solo	
 hexagonical_white_terracotta_ctm	white_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/white_terracotta/ctm/hexagonical_white_terracotta	all	solo	
 small_white_terracotta_tiles_ctm	white_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/white_terracotta/ctm/small_white_terracotta_tiles	all	solo	
-white_terracotta_column_ctm	white_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/white_terracotta/ctm/white_terracotta_column	side	self	
-white_terracotta_ctm	white_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/white_terracotta/ctm/white_terracotta_ctm	side	self	
+white_terracotta_column_ctm	white_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/white_terracotta/ctm/white_terracotta_column	side	self	
+white_terracotta_ctm	white_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/white_terracotta/ctm/white_terracotta_ctm	side	self	
 grill_yellow_concrete_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/grill_yellow_concrete	all	solo	
 pegged_yellow_concrete_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/pegged_yellow_concrete	all	solo	
 smooth_yellow_concrete_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/smooth_yellow_concrete	all	solo	
 striped_yellow_concrete_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/striped_yellow_concrete	all	solo	
 wired_yellow_concrete_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/wired_yellow_concrete	all	solo	
-yellow_concrete_ctm	yellow_concrete	ctm_cube_column_vertical_capped		vertical	side=ott:block/yellow_concrete/ctm/yellow_concrete_ctm	side	self	
+yellow_concrete_ctm	yellow_concrete	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/yellow_concrete/ctm/yellow_concrete_ctm	side	self	
 yellow_concrete_panel_ctm	yellow_concrete	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_concrete/ctm/yellow_concrete_panel	all	solo	
-arched_yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_column_vertical	minecraft:translucent	vertical	side=ott:block/yellow_stained_glass/ctm/arched_yellow_stained_glass_ctm|top=ott:block/yellow_stained_glass/circular_yellow_stained_glass	side	self	
+arched_yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_column_pieces_vertical	minecraft:translucent	pieces_vertical	side=ott:block/yellow_stained_glass/ctm/arched_yellow_stained_glass_ctm|top=ott:block/yellow_stained_glass/circular_yellow_stained_glass	side	self	
 fancy_yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/yellow_stained_glass/ctm/fancy_yellow_stained_glass_ctm	all	solo	minecraft:translucent
 ornate_yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/yellow_stained_glass/ctm/ornate_yellow_stained_glass_ctm	all	solo	minecraft:translucent
 raster_yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/yellow_stained_glass/ctm/raster_yellow_stained_glass_ctm	all	solo	minecraft:translucent
@@ -1961,8 +1960,8 @@ yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_all_pieces	minecraft:tran
 curled_yellow_terracotta_ctm	yellow_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_terracotta/ctm/curled_yellow_terracotta	all	solo	
 hexagonical_yellow_terracotta_ctm	yellow_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_terracotta/ctm/hexagonical_yellow_terracotta	all	solo	
 small_yellow_terracotta_tiles_ctm	yellow_terracotta	ctm_cube_all_pieces		pieces_full	all=ott:block/yellow_terracotta/ctm/small_yellow_terracotta_tiles	all	solo	
-yellow_terracotta_column_ctm	yellow_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/yellow_terracotta/ctm/yellow_terracotta_column	side	self	
-yellow_terracotta_ctm	yellow_terracotta	ctm_cube_column_vertical_capped		vertical	side=ott:block/yellow_terracotta/ctm/yellow_terracotta_ctm	side	self	
+yellow_terracotta_column_ctm	yellow_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/yellow_terracotta/ctm/yellow_terracotta_column	side	self	
+yellow_terracotta_ctm	yellow_terracotta	ctm_cube_column_pieces_vertical_capped		pieces_vertical	side=ott:block/yellow_terracotta/ctm/yellow_terracotta_ctm	side	self	
 air_mosaic_border	air_mosaic	ctm_full_detailed			all=ott:block/air_mosaic/air_mosaic_border	*=same;match:ott:air_mosaic_delicate	self		all=ott:block/air_mosaic/air_mosaic_border_static
 air_mosaic_delicate	air_mosaic	ctm_full_detailed			all=ott:block/air_mosaic/air_mosaic_delicate	*=same;match:ott:air_mosaic_border	self		all=ott:block/air_mosaic/air_mosaic_delicate_static
 air_mosaic_pattern	air_mosaic	ctm_full_detailed			all=ott:block/air_mosaic/air_mosaic_pattern	*=same;match:ott:air_mosaic_geometric	self		all=ott:block/air_mosaic/air_mosaic_pattern_static
@@ -1989,4 +1988,4 @@ earth_mosaic_geometric	earth_mosaic	ctm_full_detailed_overlay	minecraft:cutout_m
 fire_mosaic_geometric	fire_mosaic	ctm_full_detailed_overlay	minecraft:cutout_mipped		all=ott:block/fire_mosaic/fire_mosaic_geometric|overlay=ott:block/fire_mosaic/fire_mosaic_pattern_overlay	all=same|overlay=match:ott:fire_mosaic_pattern	self		all=ott:block/fire_mosaic/fire_mosaic_geometric_static|overlay=ott:block/fire_mosaic/fire_mosaic_pattern_overlay_static
 spirit_mosaic_geometric	spirit_mosaic	ctm_full_detailed_overlay	minecraft:cutout_mipped		all=ott:block/spirit_mosaic/spirit_mosaic_geometric|overlay=ott:block/spirit_mosaic/spirit_mosaic_pattern_overlay	all=same|overlay=match:ott:spirit_mosaic_pattern	self		all=ott:block/spirit_mosaic/spirit_mosaic_geometric_static|overlay=ott:block/spirit_mosaic/spirit_mosaic_pattern_overlay_static
 water_mosaic_geometric	water_mosaic	ctm_full_detailed_overlay	minecraft:cutout_mipped		all=ott:block/water_mosaic/water_mosaic_geometric|overlay=ott:block/water_mosaic/water_mosaic_pattern_overlay	all=same|overlay=match:ott:water_mosaic_pattern	self		all=ott:block/water_mosaic/water_mosaic_geometric_static|overlay=ott:block/water_mosaic/water_mosaic_pattern_overlay_static
-mangrove_planks_whirlwind_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/mangrove_planks_whirlwind
+mangrove_planks_whirlwind_ctm	mangrove_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/mangrove_planks/ctm/mangrove_planks_whirlwind	all	solo	

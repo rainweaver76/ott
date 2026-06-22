@@ -2273,6 +2273,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("packed_ice"), OttBlocks.POLISHED_PACKED_ICE, "polished_packed_ice_ctm_engraving");
         s.one( Blocks.PRISMARINE, OttBlocks.POLISHED_PRISMARINE, "polished_prismarine_ctm_engraving");
         s.tagged( materialTag("purpur_block"), OttBlocks.POLISHED_PURPUR_BLOCK, "polished_purpur_block_ctm_engraving");
+        s.tagged( materialTag("purpur_block"), OttBlocks.PURPUR_COLUMN_CTM, "purpur_column_ctm_engraving");
         s.tagged( materialTag("quartz_block"), OttBlocks.POLISHED_QUARTZ_BLOCK, "polished_quartz_block_ctm_engraving");
         s.tagged( materialTag("raw_copper_block"), OttBlocks.POLISHED_RAW_COPPER_BLOCK, "polished_raw_copper_block_ctm_engraving");
         s.tagged( materialTag("raw_gold_block"), OttBlocks.POLISHED_RAW_GOLD_BLOCK, "polished_raw_gold_block_ctm_engraving");
@@ -2783,8 +2784,6 @@ public final class EngravingEntries {
         // ── Misc CTM/static blocks that slipped past their material group ──
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_TILES_STATIC, "acacia_planks_tiles_engraving");
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_CTM,          "emerald_block_ctm_engraving");
-        s.tagged( materialTag("purpur_block"),  OttBlocks.PURPUR_COLUMN_CTM,          "purpur_column_ctm_engraving");
-
         // ── Decorative leaves: each <variant>_<wood>_leaves engraves from its wood's leaf material group.
         // Registry lookup (skips not-yet-registered) so the pale_oak set auto-joins once registered.
         String[] leafVariants = {"apple", "cherry", "dead", "frosted", "golden", "golden_apple",

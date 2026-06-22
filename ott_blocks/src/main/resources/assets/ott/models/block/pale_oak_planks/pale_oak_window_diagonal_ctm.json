@@ -1,7 +1,7 @@
 {
   "loader": "ott:mosaic",
-  "parent": "ott:block/ctm/ctm_cube_column_vertical",
-  "layout": "vertical",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical",
+  "layout": "pieces_vertical",
   "textures": {
     "side": "ott:block/pale_oak_windows/ctm/pale_oak_window_diagonal",
     "top": "minecraft:block/pale_oak_planks"
