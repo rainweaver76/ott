@@ -121,6 +121,32 @@ public final class EngravingEntries {
         // ── Limestone → variants ──────────────────────────────────────────────────
         s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.MIXED_LIMESTONE_BRICKS,  "mixed_limestone_bricks_engraving");
         s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.LIMESTONE_MASONRY,       "limestone_masonry_engraving");
+        s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.POLISHED_LIMESTONE,      "polished_limestone_ctm_engraving");
+
+        // ── Previously-uncategorized singletons + plain glass (→ their base materials) ──
+        s.tagged( materialTag("lapis_block"), OttBlocks.DELICATE_LAPIS_BLOCK, "delicate_lapis_block_ctm_engraving");
+        s.one( Blocks.SEA_LANTERN, OttBlocks.SEA_LANTERN,                     "sea_lantern_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.FRAMED_GLASS,              "framed_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.GOLDEN_FRAMED_STAINED_GLASS, "golden_framed_stained_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.BORDERLESS_GLASS,          "borderless_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.SCRATCHED_GLASS,           "scratched_glass_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS, "tinted_borderless_glass_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLACK, "tinted_borderless_glass_black_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLUE, "tinted_borderless_glass_blue_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BROWN, "tinted_borderless_glass_brown_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_CYAN, "tinted_borderless_glass_cyan_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GRAY, "tinted_borderless_glass_gray_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GREEN, "tinted_borderless_glass_green_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE, "tinted_borderless_glass_light_blue_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY, "tinted_borderless_glass_light_gray_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIME, "tinted_borderless_glass_lime_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_MAGENTA, "tinted_borderless_glass_magenta_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_ORANGE, "tinted_borderless_glass_orange_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PINK, "tinted_borderless_glass_pink_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PURPLE, "tinted_borderless_glass_purple_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_RED, "tinted_borderless_glass_red_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_WHITE, "tinted_borderless_glass_white_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_YELLOW, "tinted_borderless_glass_yellow_ctm_engraving");
 
         // ── Smooth sandstone → mosaic + decorative ───────────────────────────────
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_BRICKS,          "sandstone_slender_bricks_engraving");
@@ -929,6 +955,7 @@ public final class EngravingEntries {
         // Magma Block
 
         // Mangrove Planks        s.tagged( materialTag("mangrove_planks"), OttBlocks.CORNERED_MANGROVE_PLANKS, "cornered_mangrove_planks_ctm_engraving");
+        s.tagged( materialTag("mangrove_planks"), OttBlocks.CORNERED_MANGROVE_PLANKS, "cornered_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.CRATED_MANGROVE_PLANKS, "crated_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.ENCLOSED_MANGROVE_PLANKS, "enclosed_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.FRAMED_MANGROVE_PLANKS, "framed_mangrove_planks_ctm_engraving");
@@ -2107,6 +2134,25 @@ public final class EngravingEntries {
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_TILES.get(), "oak_planks_tiles_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_WAVY.get(), "oak_planks_wavy_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_WOVEN.get(), "oak_planks_woven_ctm_engraving");
+        // ── pale_oak plank decorative variants (was missing → fell into Uncategorized) ──
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BEAMS.get(), "pale_oak_planks_beams_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BRICK_PATTERN.get(), "pale_oak_planks_brick_pattern_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BRICK_PAVING.get(), "pale_oak_planks_brick_paving_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BRICKS.get(), "pale_oak_planks_bricks_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_CRATE.get(), "pale_oak_planks_crate_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_DIAGONAL_STRIPES.get(), "pale_oak_planks_diagonal_stripes_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_DIAGONAL_TILES.get(), "pale_oak_planks_diagonal_tiles_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_DOTTED.get(), "pale_oak_planks_dotted_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_FLOORING.get(), "pale_oak_planks_flooring_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_LARGE_TILES.get(), "pale_oak_planks_large_tiles_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_PATTERN.get(), "pale_oak_planks_pattern_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_ROTATED_BRICKS.get(), "pale_oak_planks_rotated_bricks_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_SMALL_BRICKS.get(), "pale_oak_planks_small_bricks_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_SMALL_TILES.get(), "pale_oak_planks_small_tiles_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_SQUARES.get(), "pale_oak_planks_squares_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_TILES.get(), "pale_oak_planks_tiles_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_WAVY.get(), "pale_oak_planks_wavy_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_WOVEN.get(), "pale_oak_planks_woven_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_WOVEN_GLASS, "oak_woven_glass_engraving");
         s.one( OttBlocks.OAK_WOVEN_GLASS.get(), OttBlocks.OAK_WOVEN_GLASS_PANE.get(), "oak_woven_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_WOVEN_GLASS_CTM, "oak_woven_glass_ctm_engraving");

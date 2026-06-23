@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "layout": "pieces_pane",
+  "parent": "ott:block/ctm/ctm_pane_noside_compact",
+  "textures": {
+    "pane": "ott:block/red_sandstone/ctm/red_sandstone_framed_glass",
+    "edge": "ott:block/red_sandstone/red_sandstone_framed_glass_edge"
+  },
+  "connections": {
+    "pane": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}

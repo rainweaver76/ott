@@ -194,6 +194,11 @@ public class OttCtmPaneProvider implements DataProvider {
             "ott:block/glass/ctm/framed_glass",
             "ott:block/glass/leaded_glass_pane_edge", "minecraft:translucent", false));
 
+        // red sandstone framed glass — own frame edge (mirrors sandstone/stone/obsidian family)
+        specs.add(new PaneSpec("red_sandstone_framed_glass_ctm_pane",
+            "ott:block/red_sandstone/ctm/red_sandstone_framed_glass",
+            "ott:block/red_sandstone/red_sandstone_framed_glass_edge", "minecraft:translucent", false));
+
         // golden framed stained glass (colourless) — golden frame edge
         specs.add(new PaneSpec("golden_framed_stained_glass_ctm_pane",
             "ott:block/golden_framed_glass/ctm/golden_framed_stained_glass",

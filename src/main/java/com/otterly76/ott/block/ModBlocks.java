@@ -1028,15 +1028,15 @@ public class ModBlocks {
     public static final java.util.List<ChiselStone> CHISEL_CHAOS = java.util.List.of(
             new ChiselStone("andesite",          "andesite",          Blocks.ANDESITE,          "block/andesite/polished_andesite"),
             new ChiselStone("blackstone",        "blackstone",        Blocks.BLACKSTONE,        "block/blackstone/polished_blackstone"),
-            new ChiselStone("deepslate",         "deepslate",         Blocks.DEEPSLATE,         "block/deepslate/ctm/polished_deepslate"),
+            new ChiselStone("deepslate",         "deepslate",         Blocks.DEEPSLATE,         "block/deepslate/polished_deepslate"),
             new ChiselStone("diorite",           "diorite",           Blocks.DIORITE,           "block/diorite/polished_diorite"),
             new ChiselStone("granite",           "granite",           Blocks.GRANITE,           "block/granite/polished_granite"),
-            new ChiselStone("nether_bricks",     "nether_bricks",     Blocks.NETHER_BRICKS,     "block/nether_bricks/ctm/polished_nether_bricks"),
-            new ChiselStone("quartz_block",      "quartz",            Blocks.QUARTZ_BLOCK,      "block/quartz_block/ctm/polished_quartz_block"),
-            new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/ctm/polished_red_nether_bricks"),
-            new ChiselStone("red_sandstone",     "red_sandstone",     Blocks.RED_SANDSTONE,     "block/red_sandstone/ctm/polished_red_sandstone"),
-            new ChiselStone("sandstone",         "sandstone",         Blocks.SANDSTONE,         "block/sandstone/ctm/polished_sandstone"),
-            new ChiselStone("tuff",              "tuff",              Blocks.TUFF,              "block/tuff/ctm/polished_tuff")
+            new ChiselStone("nether_bricks",     "nether_bricks",     Blocks.NETHER_BRICKS,     "block/nether_bricks/polished_nether_bricks"),
+            new ChiselStone("quartz_block",      "quartz",            Blocks.QUARTZ_BLOCK,      "block/quartz_block/polished_quartz_block"),
+            new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/polished_red_nether_bricks"),
+            new ChiselStone("red_sandstone",     "red_sandstone",     Blocks.RED_SANDSTONE,     "block/red_sandstone/polished_red_sandstone"),
+            new ChiselStone("sandstone",         "sandstone",         Blocks.SANDSTONE,         "block/sandstone/polished_sandstone"),
+            new ChiselStone("tuff",              "tuff",              Blocks.TUFF,              "block/tuff/polished_tuff")
     );
     public static final String[] CHISEL_VARIANTS = {"caveat","doom","etch","frame","groan","hieroglyph","nexus","skull","snout","swirl","thing"};
     /** base (empty) + 13 single inlays; redstone is a separate reactive block. */

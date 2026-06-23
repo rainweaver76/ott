@@ -4852,6 +4852,7 @@ red_sandstone_brick_pattern,red_sandstone,cube_all,
 red_sandstone_brick_paving,red_sandstone,cube_all,
 red_sandstone_bricks,red_sandstone,cube_column,
 red_sandstone_diagonal_bricks,red_sandstone,cube_all,
+red_sandstone_framed_glass,red_sandstone,glass,translucent
 red_sandstone_large_tiles,red_sandstone,cube_all,
 red_sandstone_mini_tiles,red_sandstone,cube_all,
 red_sandstone_rotated_bricks,red_sandstone,cube_all,
