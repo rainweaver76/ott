@@ -873,8 +873,15 @@ public enum OttCreativeCategories {
                     emitId.accept(name + "_pane");
                     if (name.contains("_wool")) emitId.accept(name.replace("_wool", "_carpet"));
                 }
-                // Orphan engraving-output panes/carpets whose cube was not iterated
-                for (net.minecraft.world.level.ItemLike x : com.otterly76.ott.engraving.EngravingEntries.tabItems()) emit.accept(x);
+                // Orphan engraving-output panes/carpets whose cube was not iterated.
+                // When the output IS a pane (e.g. framed glass, whose full block is the engraving
+                // INPUT and so never appears in tabItems()), emit the full block first so the pane
+                // pairs with its cube instead of floating alone. `placed` dedups.
+                for (net.minecraft.world.level.ItemLike x : com.otterly76.ott.engraving.EngravingEntries.tabItems()) {
+                    String pn = net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(x.asItem()).getPath();
+                    if (pn.endsWith("_pane")) emitId.accept(pn.substring(0, pn.length() - "_pane".length()));
+                    emit.accept(x);
+                }
                 // Wood windows (grouped cube + pane) — wired separately from the engraving system
                 String[] windowWoods = {"oak", "acacia", "birch", "jungle", "dark_oak", "spruce", "mangrove", "cherry", "bamboo", "crimson", "warped", "pale_oak"};
                 String[] windowStyles = {"bars", "covered", "diagonal", "large", "panes", "rounded", "slim", "swirling", "tiles"};
@@ -1097,13 +1104,33 @@ public enum OttCreativeCategories {
                 output.accept(ModItems.REINFORCED_OBSIDIAN_AXE);
                 output.accept(ModItems.REINFORCED_OBSIDIAN_HOE);
                 output.accept(ModItems.REINFORCED_OBSIDIAN_PAXEL);
+            }),
+
+    /**
+     * Completeness net: emits every registered {@code ott} block not already surfaced by another
+     * category, so no block is ever missing from the OTT tab. Doubles as a visible audit of what
+     * still lacks a curated home. Must be declared last so it can observe everything others emit.
+     */
+    COVERAGE("coverage",
+            () -> Items.CHEST,
+            (params, output) -> {
+                java.util.Set<Item> placed = new java.util.HashSet<>();
+                for (OttCreativeCategories cat : values()) {
+                    if (cat.name().equals("COVERAGE")) continue; // skip self (can't reference the constant in its own initializer)
+                    cat.populateItems(params, (stack, vis) -> placed.add(stack.getItem()));
+                }
+                java.util.function.Consumer<Item> sweep = it -> {
+                    if (it != Items.AIR && placed.add(it)) output.accept(it);
+                };
+                OttBlocks.BLOCKS.getEntries().forEach(h -> sweep.accept(h.get().asItem()));
+                ModBlocks.BLOCKS.getEntries().forEach(h -> sweep.accept(h.get().asItem()));
             });
 
     public static final java.util.List<OttCreativeCategories> DISPLAY_ORDER =
             java.util.List.of(MISC, TOOLS, COLORS, DYES, GRADIENTS, WOOD_SETS, VANPLUS,
                     STONE_CUSTOM, STONE_VANILLA,
                     BACKPORT, COPPER_CHAOS, ENGRAVED, MOSAIC, BLOCKS,
-                    FLORA, FAUNA, FOOD, JARS, CREATURES
+                    FLORA, FAUNA, FOOD, JARS, CREATURES, COVERAGE
             );
 
     @Nullable
