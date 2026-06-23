@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/spawn_egg",  
+  "parent": "minecraft:item/generated",
   "textures": {
-    "egg": "minecolonies:item/drownedpiratecaptainegg"
+    "layer0": "minecolonies:item/drownedpiratecaptainegg"
   }
 }

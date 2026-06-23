@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/spawn_egg",  
+  "parent": "minecraft:item/generated",
   "textures": {
-    "egg": "minecolonies:item/amazonegg"
+    "layer0": "minecolonies:item/amazonegg"
   }
 }
