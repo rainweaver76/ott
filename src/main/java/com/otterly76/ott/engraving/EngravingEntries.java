@@ -377,7 +377,6 @@ public final class EngravingEntries {
             {"ornate_tuff_ctm","tuff"},
             {"quartz_block_chiseled_ctm","quartz_block"},
             {"quartz_block_ctm","quartz_block"},
-            {"red_sandstone_framed_glass_ctm","red_sandstone"},
             {"redstone_block_ctm","redstone_block"},
             {"reinforced_glass_ctm","glass"},
             {"sandstone_framed_glass_ctm","sandstone"},
@@ -526,6 +525,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("lapis_block"), OttBlocks.DELICATE_LAPIS_BLOCK, "delicate_lapis_block_ctm_engraving");
         s.one( Blocks.SEA_LANTERN, OttBlocks.SEA_LANTERN,                     "sea_lantern_ctm_engraving");
         s.tagged( materialTag("glass"), OttBlocks.FRAMED_GLASS,              "framed_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.RED_SANDSTONE_FRAMED_GLASS, "red_sandstone_framed_glass_ctm_engraving");
         s.tagged( materialTag("glass"), OttBlocks.GOLDEN_FRAMED_STAINED_GLASS, "golden_framed_stained_glass_ctm_engraving");
         s.tagged( materialTag("glass"), OttBlocks.BORDERLESS_GLASS,          "borderless_glass_ctm_engraving");
         s.tagged( materialTag("glass"), OttBlocks.SCRATCHED_GLASS,           "scratched_glass_ctm_engraving");
@@ -1375,18 +1375,6 @@ public final class EngravingEntries {
 
         // Oak Glass
         // Oak Glass Panes
-        s.one( OttBlocks.CHISELED_GLASS.get(), OttBlocks.CHISELED_GLASS_CTM_PANE.get(), "chiseled_glass_ctm_pane_engraving");
-        s.one( OttBlocks.CLEAR_GLASS.get(), OttBlocks.CLEAR_GLASS_CTM_PANE.get(), "clear_glass_ctm_pane_engraving");
-        s.one( OttBlocks.DIRTY_GLASS.get(), OttBlocks.DIRTY_GLASS_CTM_PANE.get(), "dirty_glass_ctm_pane_engraving");
-        s.one( OttBlocks.FROSTED_GLASS.get(), OttBlocks.FROSTED_GLASS_CTM_PANE.get(), "frosted_glass_ctm_pane_engraving");
-        s.one( OttBlocks.ICE_GLASS.get(), OttBlocks.ICE_GLASS_CTM_PANE.get(), "ice_glass_ctm_pane_engraving");
-        s.one( OttBlocks.OBSIDIAN_FRAMED_GLASS.get(), OttBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(), "obsidian_framed_glass_ctm_pane_engraving");
-        s.one( OttBlocks.REINFORCED_GLASS.get(), OttBlocks.REINFORCED_GLASS_CTM_PANE.get(), "reinforced_glass_ctm_pane_engraving");
-        s.one( OttBlocks.RED_SANDSTONE_FRAMED_GLASS.get(), OttBlocks.RED_SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "red_sandstone_framed_glass_ctm_pane_engraving");
-        s.one( OttBlocks.SANDSTONE_FRAMED_GLASS.get(), OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "sandstone_framed_glass_ctm_pane_engraving");
-        s.one( OttBlocks.STONE_FRAMED_GLASS.get(), OttBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(), "stone_framed_glass_ctm_pane_engraving");
-        s.one( OttBlocks.TINTED_CLEAR_GLASS.get(), OttBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(), "tinted_clear_glass_ctm_pane_engraving");
-        s.one( OttBlocks.TINTED_GLASS.get(), OttBlocks.TINTED_GLASS_CTM_PANE.get(), "tinted_glass_ctm_pane_engraving");
 
         // Oak Planks
 
@@ -1681,7 +1669,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("andesite"), OttBlocks.ANDESITE_TILES.get(), "andesite_tiles_ctm_engraving");
         s.tagged( materialTag("andesite"), OttBlocks.ANDESITE_WAVY.get(), "andesite_wavy_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.ARCHED_LEADED_GLASS_CTM, "arched_leaded_glass_pillar_engraving");
-        s.one( OttBlocks.ARCHED_LEADED_GLASS_CTM.get(), OttBlocks.ARCHED_LEADED_GLASS_CTM_PANE.get(), "arched_leaded_glass_ctm_pane_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.BAMBOO_PLANKS_BEAMS.get(), "bamboo_planks_beams_ctm_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.BAMBOO_PLANKS_BRICK_PATTERN.get(), "bamboo_planks_brick_pattern_ctm_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.BAMBOO_PLANKS_BRICK_PAVING.get(), "bamboo_planks_brick_paving_ctm_engraving");
@@ -1894,7 +1881,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("yellow_terracotta"), OttBlocks.CIRCULAR_YELLOW_TERRACOTTA, "circular_yellow_terracotta_engraving");
         s.one( Blocks.GLASS, OttBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.CLEAR_LEADED_GLASS_CTM, "clear_leaded_glass_pillar_engraving");
-        s.one( OttBlocks.CLEAR_LEADED_GLASS_CTM.get(), OttBlocks.CLEAR_LEADED_GLASS_CTM_PANE.get(), "clear_leaded_glass_ctm_pane_engraving");
         s.tagged( materialTag("coal_block"), OttBlocks.COAL_BLOCK_CARVED.get(), "coal_block_carved_ctm_engraving");
         s.tagged( materialTag("coal_block"), OttBlocks.COAL_BLOCK_CHISELED.get(), "coal_block_chiseled_ctm_engraving");
         s.tagged( materialTag("coal_block"), OttBlocks.COAL_BLOCK_CIRCLES.get(), "coal_block_circles_ctm_engraving");
@@ -2491,30 +2477,23 @@ public final class EngravingEntries {
         s.tagged( materialTag("netherrack"), OttBlocks.NETHERRACK_SMALL_TILES.get(), "netherrack_small_tiles_ctm_engraving");
         s.tagged( materialTag("netherrack"), OttBlocks.NETHERRACK_STRIPES.get(), "netherrack_stripes_ctm_engraving");
         s.tagged( materialTag("netherrack"), OttBlocks.NETHERRACK_TILES.get(), "netherrack_tiles_ctm_engraving");
-        s.one( OttBlocks.OAK_BARRED_GLASS_CTM.get(), OttBlocks.OAK_BARRED_GLASS_CTM_PANE.get(), "oak_barred_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_BORDERED_GLASS, "oak_bordered_glass_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_BORDERED_GLASS_CTM, "oak_bordered_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_BORDERED_GLASS_CTM.get(), OttBlocks.OAK_BORDERED_GLASS_CTM_PANE.get(), "oak_bordered_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_DIAMOND_BORDERED_GLASS, "oak_diamond_bordered_glass_engraving");
         s.one( OttBlocks.OAK_DIAMOND_BORDERED_GLASS.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE.get(), "oak_diamond_bordered_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM, "oak_diamond_bordered_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_CTM_PANE.get(), "oak_diamond_bordered_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_HORIZONTAL_LINED_GLASS, "oak_horizontal_lined_glass_engraving");
         s.one( OttBlocks.OAK_HORIZONTAL_LINED_GLASS.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE.get(), "oak_horizontal_lined_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM, "oak_horizontal_lined_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_CTM_PANE.get(), "oak_horizontal_lined_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_LARGE_DIAMOND_GLASS, "oak_large_diamond_glass_engraving");
         s.one( OttBlocks.OAK_LARGE_DIAMOND_GLASS.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_PANE.get(), "oak_large_diamond_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_LARGE_DIAMOND_GLASS_CTM, "oak_large_diamond_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_LARGE_DIAMOND_GLASS_CTM.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_CTM_PANE.get(), "oak_large_diamond_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_LINE_BARED_GLASS, "oak_line_bared_glass_engraving");
         s.one( OttBlocks.OAK_LINE_BARED_GLASS.get(), OttBlocks.OAK_LINE_BARED_GLASS_PANE.get(), "oak_line_bared_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_LINE_BARED_GLASS_CTM, "oak_line_bared_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_LINE_BARED_GLASS_CTM.get(), OttBlocks.OAK_LINE_BARED_GLASS_CTM_PANE.get(), "oak_line_bared_glass_ctm_pane_engraving");
         s.one( Blocks.GLASS, OttBlocks.OAK_ORNATE_BARED_GLASS, "oak_ornate_bared_glass_engraving");
         s.one( OttBlocks.OAK_ORNATE_BARED_GLASS.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_PANE.get(), "oak_ornate_bared_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_ORNATE_BARED_GLASS_CTM, "oak_ornate_bared_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_ORNATE_BARED_GLASS_CTM.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_CTM_PANE.get(), "oak_ornate_bared_glass_ctm_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_BEAMS.get(), "oak_planks_beams_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_BRICK_PATTERN.get(), "oak_planks_brick_pattern_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_PLANKS_BRICK_PAVING.get(), "oak_planks_brick_paving_ctm_engraving");
@@ -2556,7 +2535,6 @@ public final class EngravingEntries {
         s.one( Blocks.GLASS, OttBlocks.OAK_WOVEN_GLASS, "oak_woven_glass_engraving");
         s.one( OttBlocks.OAK_WOVEN_GLASS.get(), OttBlocks.OAK_WOVEN_GLASS_PANE.get(), "oak_woven_glass_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.OAK_WOVEN_GLASS_CTM, "oak_woven_glass_ctm_engraving");
-        s.one( OttBlocks.OAK_WOVEN_GLASS_CTM.get(), OttBlocks.OAK_WOVEN_GLASS_CTM_PANE.get(), "oak_woven_glass_ctm_pane_engraving");
         s.tagged( materialTag("obsidian"), OttBlocks.OBSIDIAN_BORDERED.get(), "obsidian_bordered_ctm_engraving");
         s.tagged( materialTag("obsidian"), OttBlocks.OBSIDIAN_BRICK_PATTERN.get(), "obsidian_brick_pattern_ctm_engraving");
         s.tagged( materialTag("obsidian"), OttBlocks.OBSIDIAN_BRICK_PAVING.get(), "obsidian_brick_paving_ctm_engraving");
@@ -2751,7 +2729,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("quartz_block"), OttBlocks.QUARTZ_BLOCK_TILES.get(), "quartz_block_tiles_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS_CTM, "raster_leaded_glass_pillar_engraving");
-        s.one( OttBlocks.RASTER_LEADED_GLASS_CTM.get(), OttBlocks.RASTER_LEADED_GLASS_CTM_PANE.get(), "raster_leaded_glass_ctm_pane_engraving");
         s.one( Blocks.RED_CONCRETE, OttBlocks.RED_CONCRETE_CTM, "red_concrete_pillar_engraving");
         s.tagged( materialTag("red_concrete"), OttBlocks.RED_CONCRETE_PANEL, "red_concrete_panel_ctm_engraving");
         s.tagged( materialTag("red_sandstone"), OttBlocks.RED_SANDSTONE_BRICK_PATTERN.get(), "red_sandstone_brick_pattern_ctm_engraving");
@@ -2835,7 +2812,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("cyan_terracotta"), OttBlocks.SMALL_CYAN_TERRACOTTA_TILES, "small_cyan_terracotta_tiles_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.SMALL_DIAMOND_LEADED_GLASS, "small_diamond_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM, "small_diamond_leaded_glass_pillar_engraving");
-        s.one( OttBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM.get(), OttBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM_PANE.get(), "small_diamond_leaded_glass_ctm_pane_engraving");
         s.tagged( materialTag("gray_terracotta"), OttBlocks.SMALL_GRAY_TERRACOTTA_TILES, "small_gray_terracotta_tiles_ctm_engraving");
         s.tagged( materialTag("green_terracotta"), OttBlocks.SMALL_GREEN_TERRACOTTA_TILES, "small_green_terracotta_tiles_ctm_engraving");
         s.tagged( materialTag("light_blue_terracotta"), OttBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES, "small_light_blue_terracotta_tiles_ctm_engraving");
@@ -2929,7 +2905,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("spruce_planks"), OttBlocks.SPRUCE_PLANKS_WOVEN.get(), "spruce_planks_woven_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.SQUARE_LEADED_GLASS, "square_leaded_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.SQUARE_OAK_GLASS, "square_oak_glass_engraving");
-        s.one( OttBlocks.SQUARE_OAK_GLASS_CTM.get(), OttBlocks.SQUARE_OAK_GLASS_CTM_PANE.get(), "square_oak_glass_ctm_pane_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.SQUARE_OAK_GLASS_CTM, "square_oak_glass_ctm_engraving");
         s.tagged( materialTag("black_terracotta"), OttBlocks.STARRY_BLACK_TERRACOTTA, "starry_black_terracotta_engraving");
         s.tagged( materialTag("blue_terracotta"), OttBlocks.STARRY_BLUE_TERRACOTTA, "starry_blue_terracotta_engraving");
