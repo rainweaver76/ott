@@ -34,6 +34,23 @@ public enum CtmLayout {
     },
 
     /**
+     * 1×4 atlas (16×64 px), top + bottom neighbours only.
+     * Tiles: isolated | bottom-end | centre | top-end.
+     *
+     * <p>Used by the vertical glass/window PANE models (parents {@code ctm_pane_*_vertical}),
+     * whose template UVs sample a centre slice of one of the 4 vertically-stacked tiles. Kept
+     * distinct from {@link #PIECES_VERTICAL} (the 4×1 block-pillar strip) — same neighbour rule,
+     * different atlas orientation.
+     */
+    VERTICAL(1, 4) {
+        @Override public int[] tile(int mask) {
+            // top=bit0, bottom=bit4
+            int idx = (mask & 1) | (((mask >> 4) & 1) << 1);
+            return new int[]{ 0, VERT_Y[idx] };
+        }
+    },
+
+    /**
      * 5×1 strip (80×16 px), Athena-style piece composition. Each block face is split into
      * four 8×8 corner quadrants; each quadrant independently picks one of the 5 type-tiles
      * (solo / full / vertical-edge / horizontal-edge / inner-corner) and samples that tile's
@@ -122,6 +139,11 @@ public enum CtmLayout {
         this.tilesHigh = tilesHigh;
     }
 
+    // ---- VERTICAL lookup ------------------------------------------------------
+    // 2-bit index: bit0=T, bit1=B
+    //                          0  1  2  3   (none, T, B, T+B)
+    private static final int[] VERT_Y = { 0, 3, 1, 2 };
+
     /**
      * Returns {tileX, tileY} for the given 8-bit neighbour mask.
      * Tile [0,0] is the top-left (isolated / no-connections) tile.
@@ -135,6 +157,7 @@ public enum CtmLayout {
         return switch (id.toLowerCase()) {
             case "full", "full_detailed" -> FULL; // "full_detailed" = self-documenting alias for the 12×4 atlas
             case "giant"      -> GIANT;
+            case "vertical"   -> VERTICAL; // legacy 1×4 atlas — still used by ctm_pane_*_vertical models
             case "pieces_full", "pieces" -> PIECES; // "pieces" kept as a hidden alias
             case "pieces_vertical"   -> PIECES_VERTICAL;
             case "pieces_horizontal" -> PIECES_HORIZONTAL;
