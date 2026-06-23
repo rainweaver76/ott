@@ -858,6 +858,24 @@ public class ClientModEvents {
         // Water tinting for water-feature item models
         event.register((stack, tintIndex) -> tintIndex == 0 ? 0x3F76E4 : -1,
                 ModBlocks.STONE_BRICKS_FAUCET.get(), ModBlocks.STONE_BRICKS_WATER_JET.get(), ModBlocks.WATER_SOURCE_TRICKLE.get());
+
+        // MineColonies raider spawn eggs: our ott_core resourcepack replaces the two-tone egg art
+        // with custom flat textures, but MineColonies registers a SpawnEgg color handler that tints
+        // layer0/1 — producing a jarring colour overlay. Re-register a no-tint (-1) handler so the
+        // custom textures render clean. The AFTER-minecolonies dependency guarantees we register last.
+        String[] mcRaiderEggs = {
+                "amazonchiefegg", "amazonegg", "amazonspearmanegg", "barbarcheregg", "barbarianegg",
+                "barbchiefegg", "drownedpiratearcheregg", "drownedpiratecaptainegg", "drownedpirateegg",
+                "mummyarcheregg", "mummyegg", "norsemenarcheregg", "norsemenchiefegg", "pharaoegg",
+                "piratearcheregg", "piratecaptainegg", "pirateegg", "shieldmaidenegg"
+        };
+        for (String egg : mcRaiderEggs) {
+            net.minecraft.world.item.Item item = net.minecraft.core.registries.BuiltInRegistries.ITEM
+                    .get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("minecolonies", egg));
+            if (item != net.minecraft.world.item.Items.AIR) {
+                event.register((stack, tintIndex) -> -1, item);
+            }
+        }
     }
 
     public static void onClientSetup(FMLClientSetupEvent event) {

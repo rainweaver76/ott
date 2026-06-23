@@ -94,3 +94,12 @@ type="optional"
 versionRange="[1.0,)"
 ordering="NONE"
 side="BOTH"
+
+[[dependencies."${mod_id}"]]
+modId="minecolonies"
+type="optional"
+# Optional: OTT integrates with MineColonies (custom dimension, egg textures). AFTER ordering
+# ensures OTT's client color handlers register last so our no-tint egg override wins.
+versionRange="[1.0,)"
+ordering="AFTER"
+side="BOTH"
