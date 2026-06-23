@@ -1382,6 +1382,7 @@ public final class EngravingEntries {
         s.one( OttBlocks.ICE_GLASS.get(), OttBlocks.ICE_GLASS_CTM_PANE.get(), "ice_glass_ctm_pane_engraving");
         s.one( OttBlocks.OBSIDIAN_FRAMED_GLASS.get(), OttBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(), "obsidian_framed_glass_ctm_pane_engraving");
         s.one( OttBlocks.REINFORCED_GLASS.get(), OttBlocks.REINFORCED_GLASS_CTM_PANE.get(), "reinforced_glass_ctm_pane_engraving");
+        s.one( OttBlocks.RED_SANDSTONE_FRAMED_GLASS.get(), OttBlocks.RED_SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "red_sandstone_framed_glass_ctm_pane_engraving");
         s.one( OttBlocks.SANDSTONE_FRAMED_GLASS.get(), OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(), "sandstone_framed_glass_ctm_pane_engraving");
         s.one( OttBlocks.STONE_FRAMED_GLASS.get(), OttBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(), "stone_framed_glass_ctm_pane_engraving");
         s.one( OttBlocks.TINTED_CLEAR_GLASS.get(), OttBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(), "tinted_clear_glass_ctm_pane_engraving");
