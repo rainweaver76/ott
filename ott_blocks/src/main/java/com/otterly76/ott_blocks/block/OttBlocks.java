@@ -955,6 +955,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> PURPLE_FRAMED_GLASS = register("purple_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> PURPLE_STAINED_CLEAR_GLASS = register("purple_stained_clear_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> RED_FRAMED_GLASS = register("red_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
+    public static final DeferredBlock<Block> RED_SANDSTONE_FRAMED_GLASS = register("red_sandstone_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> RED_STAINED_CLEAR_GLASS = register("red_stained_clear_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> SANDSTONE_FRAMED_GLASS = register("sandstone_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<Block> SEA_LANTERN = register("sea_lantern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -5481,6 +5482,8 @@ public class OttBlocks {
                 register("whirlwind_bamboo_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)));
         public static final DeferredBlock<Block> WHIRLWIND_BIRCH_PLANKS =
                 register("whirlwind_birch_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)));
+        public static final DeferredBlock<Block> WHIRLWIND_MANGROVE_PLANKS =
+                register("whirlwind_mangrove_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
         public static final DeferredBlock<Block> WHIRLWIND_OAK_PLANKS =
                 register("whirlwind_oak_planks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
         public static final DeferredBlock<Block> WHITE_CONCRETE_CTM =

@@ -223,9 +223,12 @@ public class OttCtmModelProvider implements DataProvider {
                 if (header) { header = false; continue; }
                 if (line.isEmpty()) continue;
                 String[] p = line.split("\t", -1);
-                if (p.length < 9) throw new IllegalStateException("Bad ctm_blocks.tsv row: " + line);
-                String iso = p.length >= 10 ? p[9] : ""; // optional 10th column (back-compat with 9-col rows)
-                rows.add(new Row(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], iso));
+                // Required columns: name..item (0–7). The trailing item_render (8) and isolated (9)
+                // are optional — a hand-added row that stops at `item` is valid; default them to "".
+                if (p.length < 8) throw new IllegalStateException("Bad ctm_blocks.tsv row: " + line);
+                String itemRender = p.length >= 9  ? p[8] : "";
+                String iso        = p.length >= 10 ? p[9] : "";
+                rows.add(new Row(p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], itemRender, iso));
             }
         } catch (IOException e) {
             throw new IllegalStateException("Failed reading " + MANIFEST, e);

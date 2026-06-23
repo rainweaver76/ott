@@ -2744,6 +2744,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("acacia_planks"), OttBlocks.WHIRLWIND_ACACIA_PLANKS, "whirlwind_acacia_planks_ctm_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.WHIRLWIND_BAMBOO_PLANKS, "whirlwind_bamboo_planks_ctm_engraving");
         s.tagged( materialTag("birch_planks"), OttBlocks.WHIRLWIND_BIRCH_PLANKS, "whirlwind_birch_planks_ctm_engraving");
+        s.tagged( materialTag("mangrove_planks"), OttBlocks.WHIRLWIND_MANGROVE_PLANKS, "whirlwind_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.WHIRLWIND_OAK_PLANKS, "whirlwind_oak_planks_ctm_engraving");
         s.one( Blocks.WHITE_CONCRETE, OttBlocks.WHITE_CONCRETE_CTM, "white_concrete_pillar_engraving");
         s.tagged( materialTag("white_concrete"), OttBlocks.WHITE_CONCRETE_PANEL, "white_concrete_panel_ctm_engraving");
