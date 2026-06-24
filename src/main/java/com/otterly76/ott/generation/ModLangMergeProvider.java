@@ -87,6 +87,13 @@ public class ModLangMergeProvider implements DataProvider {
             });
         });
 
+        // Glass-material door & trapdoor names (title-case each token).
+        java.util.function.Function<String, String> glassTitleCase = n -> Arrays.stream(n.split("_"))
+                .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                .collect(Collectors.joining(" "));
+        OttBlocks.GLASS_DOORS.keySet().forEach(name -> ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
+        OttBlocks.GLASS_TRAPDOORS.keySet().forEach(name -> ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
+
         // Add auto-generated imported cube_all block entries to OTT base
         for (String name : com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.keySet()) {
             String pretty = Arrays.stream(name.split("_"))

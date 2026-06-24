@@ -111,6 +111,15 @@ public class ModItemModelProvider extends ItemModelProvider {
             })
         );
 
+        // Glass-material door items (flat 2D door icon) + trapdoor items (3D block bottom model).
+        OttBlocks.GLASS_DOORS.keySet().forEach(name ->
+            withExistingParent(name, mcLoc("item/door_base"))
+                    .texture("particle", modLoc("block/glass_door/" + name + "_top"))
+                    .texture("bottom",   modLoc("block/glass_door/" + name + "_bottom"))
+                    .texture("top",      modLoc("block/glass_door/" + name + "_top")));
+        OttBlocks.GLASS_TRAPDOORS.keySet().forEach(name ->
+            withExistingParent(name, modLoc("block/glass_trapdoor/" + name + "_bottom")));
+
         ModBlocks.COLOR_SETS.forEach((color, set) -> {
             String colorDir = "block/" + color + "/";
             parentItemToBlockModel(set.concrete().getId().getPath(), colorDir + set.concrete().getId().getPath());

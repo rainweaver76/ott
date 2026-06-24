@@ -56,6 +56,13 @@ public class OttBlocks {
      * All custom trapdoor blocks keyed by full block name.
      */
     public static final Map<String, DeferredBlock<TrapDoorBlock>> WOOD_TRAPDOORS = new LinkedHashMap<>();
+    /**
+     * Full glass-material doors keyed by name ({@code glass_door}, {@code <color>_stained_glass_door}).
+     * Translucent, hand-openable via the {@code glass} BlockSetType.
+     */
+    public static final Map<String, DeferredBlock<DoorBlock>> GLASS_DOORS = new LinkedHashMap<>();
+    /** Full glass-material trapdoors keyed by name ({@code glass_trapdoor}, {@code <color>_stained_glass_trapdoor}). */
+    public static final Map<String, DeferredBlock<TrapDoorBlock>> GLASS_TRAPDOORS = new LinkedHashMap<>();
 
     private static DeferredBlock<DoorBlock> registerDoor(String name, net.minecraft.world.level.block.state.properties.BlockSetType bst, Block template) {
         DeferredBlock<DoorBlock> ret = BLOCKS.register(name, () -> new DoorBlock(bst, BlockBehaviour.Properties.ofFullCopy(template)));
@@ -82,10 +89,11 @@ public class OttBlocks {
         WOOD_DOOR_STYLES.put("bamboo", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled"));
         WOOD_DOOR_STYLES.put("crimson", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "tile_windowed", "tiled", "windowed"));
         WOOD_DOOR_STYLES.put("warped", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "paneled", "paper", "pressed", "screen", "secret", "shack", "sliding", "supported", "tile_windowed", "tiled", "windowed"));
+        WOOD_DOOR_STYLES.put("pale_oak", List.of("barred", "beach", "boarded", "dual_paneled", "fortified", "gated", "glass", "heavy", "modern", "overgrown", "paneled", "pressed", "screen", "secret", "shack", "sliding", "supported", "tiled", "tile_windowed", "windowed"));
 
-        String[] woodDoorNames = {"oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "bamboo", "crimson", "warped"};
-        BlockSetType[] woodBSTs = {BlockSetType.OAK, BlockSetType.SPRUCE, BlockSetType.BIRCH, BlockSetType.JUNGLE, BlockSetType.ACACIA, BlockSetType.DARK_OAK, BlockSetType.MANGROVE, BlockSetType.CHERRY, BlockSetType.BAMBOO, BlockSetType.CRIMSON, BlockSetType.WARPED};
-        Block[] vanillaDoors = {Blocks.OAK_DOOR, Blocks.SPRUCE_DOOR, Blocks.BIRCH_DOOR, Blocks.JUNGLE_DOOR, Blocks.ACACIA_DOOR, Blocks.DARK_OAK_DOOR, Blocks.MANGROVE_DOOR, Blocks.CHERRY_DOOR, Blocks.BAMBOO_DOOR, Blocks.CRIMSON_DOOR, Blocks.WARPED_DOOR};
+        String[] woodDoorNames = {"oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "bamboo", "crimson", "warped", "pale_oak"};
+        BlockSetType[] woodBSTs = {BlockSetType.OAK, BlockSetType.SPRUCE, BlockSetType.BIRCH, BlockSetType.JUNGLE, BlockSetType.ACACIA, BlockSetType.DARK_OAK, BlockSetType.MANGROVE, BlockSetType.CHERRY, BlockSetType.BAMBOO, BlockSetType.CRIMSON, BlockSetType.WARPED, BlockSetTypeVariant.PALE_OAK.getBlockSetType()};
+        Block[] vanillaDoors = {Blocks.OAK_DOOR, Blocks.SPRUCE_DOOR, Blocks.BIRCH_DOOR, Blocks.JUNGLE_DOOR, Blocks.ACACIA_DOOR, Blocks.DARK_OAK_DOOR, Blocks.MANGROVE_DOOR, Blocks.CHERRY_DOOR, Blocks.BAMBOO_DOOR, Blocks.CRIMSON_DOOR, Blocks.WARPED_DOOR, Blocks.OAK_DOOR};
         for (int i = 0; i < woodDoorNames.length; i++) {
             String wood = woodDoorNames[i];
             BlockSetType bst = woodBSTs[i];
@@ -326,6 +334,7 @@ public class OttBlocks {
         EXTRA_DOORS.put("pale_oak_waffle_door", registerDoor("pale_oak_waffle_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_barn_glass_door", registerDoor("pale_oak_barn_glass_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
         EXTRA_DOORS.put("pale_oak_stable_head_door", registerDoor("pale_oak_stable_head_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
+        EXTRA_DOORS.put("pale_oak_whispering_door", registerDoor("pale_oak_whispering_door", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_DOOR));
 
         // Wood trapdoors (all new)
         WOOD_TRAPDOORS.put("oak_bamboo_trapdoor", registerTrapdoor("oak_bamboo_trapdoor", BlockSetType.OAK, Blocks.OAK_TRAPDOOR));
@@ -490,6 +499,41 @@ public class OttBlocks {
         WOOD_TRAPDOORS.put("pale_oak_paper_trapdoor", registerTrapdoor("pale_oak_paper_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
         WOOD_TRAPDOORS.put("pale_oak_swamp_trapdoor", registerTrapdoor("pale_oak_swamp_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
         WOOD_TRAPDOORS.put("pale_oak_tropical_trapdoor", registerTrapdoor("pale_oak_tropical_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_airy_trapdoor", registerTrapdoor("pale_oak_airy_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_barrel_trapdoor", registerTrapdoor("pale_oak_barrel_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_whispering_trapdoor", registerTrapdoor("pale_oak_whispering_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_checkered_trapdoor", registerTrapdoor("pale_oak_checkered_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_classic_windowed_trapdoor", registerTrapdoor("pale_oak_classic_windowed_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_cobweb_trapdoor", registerTrapdoor("pale_oak_cobweb_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_distorted_trapdoor", registerTrapdoor("pale_oak_distorted_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_fancy_trapdoor", registerTrapdoor("pale_oak_fancy_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_golden_barred_trapdoor", registerTrapdoor("pale_oak_golden_barred_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_heavy_trapdoor", registerTrapdoor("pale_oak_heavy_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_iron_barred_trapdoor", registerTrapdoor("pale_oak_iron_barred_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_leafy_trapdoor", registerTrapdoor("pale_oak_leafy_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_meshed_trapdoor", registerTrapdoor("pale_oak_meshed_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_overgrown_trapdoor", registerTrapdoor("pale_oak_overgrown_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_pointless_trapdoor", registerTrapdoor("pale_oak_pointless_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_slotted_trapdoor", registerTrapdoor("pale_oak_slotted_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_solid_trapdoor", registerTrapdoor("pale_oak_solid_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_suspicious_trapdoor", registerTrapdoor("pale_oak_suspicious_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_twisted_trapdoor", registerTrapdoor("pale_oak_twisted_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_vined_trapdoor", registerTrapdoor("pale_oak_vined_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_warted_trapdoor", registerTrapdoor("pale_oak_warted_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_windowed_trapdoor", registerTrapdoor("pale_oak_windowed_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+        WOOD_TRAPDOORS.put("pale_oak_woven_trapdoor", registerTrapdoor("pale_oak_woven_trapdoor", BlockSetTypeVariant.PALE_OAK.getBlockSetType(), Blocks.OAK_TRAPDOOR));
+
+        // Full glass-material doors & trapdoors (plain glass + 16 stained colors), translucent, hand-openable.
+        BlockSetType glassBst = BlockSetTypeVariant.GLASS.getBlockSetType();
+        GLASS_DOORS.put("glass_door", registerDoor("glass_door", glassBst, Blocks.GLASS));
+        GLASS_TRAPDOORS.put("glass_trapdoor", registerTrapdoor("glass_trapdoor", glassBst, Blocks.GLASS));
+        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
+                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
+            Block stained = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                    net.minecraft.resources.ResourceLocation.withDefaultNamespace(c + "_stained_glass"));
+            GLASS_DOORS.put(c + "_stained_glass_door", registerDoor(c + "_stained_glass_door", glassBst, stained));
+            GLASS_TRAPDOORS.put(c + "_stained_glass_trapdoor", registerTrapdoor(c + "_stained_glass_trapdoor", glassBst, stained));
+        }
         // ===== RECOVERED TRAPDOORS =====
         WOOD_TRAPDOORS.put("airy_birch_trapdoor", registerTrapdoor("airy_birch_trapdoor", BlockSetType.BIRCH, Blocks.BIRCH_TRAPDOOR));
         WOOD_TRAPDOORS.put("airy_crimson_trapdoor", registerTrapdoor("airy_crimson_trapdoor", BlockSetType.CRIMSON, Blocks.CRIMSON_TRAPDOOR));

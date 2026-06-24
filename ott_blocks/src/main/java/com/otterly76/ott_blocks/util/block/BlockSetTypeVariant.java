@@ -3,7 +3,9 @@ package com.otterly76.ott_blocks.util.block;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 
 public enum BlockSetTypeVariant {
-    PALE_OAK(BlockSetType.register(new BlockSetType("pale_oak")));
+    PALE_OAK(BlockSetType.register(new BlockSetType("pale_oak"))),
+    /** Glass-material doors/trapdoors — hand-openable (default click sound). */
+    GLASS(BlockSetType.register(new BlockSetType("glass")));
 
     private final BlockSetType blockSetType;
 

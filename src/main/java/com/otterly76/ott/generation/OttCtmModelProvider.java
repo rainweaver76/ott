@@ -218,10 +218,12 @@ public class OttCtmModelProvider implements DataProvider {
         if (stream == null) throw new IllegalStateException("Missing " + MANIFEST + " on classpath");
         try (BufferedReader r = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
             String line;
-            boolean header = true;
             while ((line = r.readLine()) != null) {
-                if (header) { header = false; continue; }
                 if (line.isEmpty()) continue;
+                // Skip the optional header row (first column literally "name"). Tolerating its
+                // absence avoids silently dropping the alphabetically-first data row when an
+                // editor strips the header. No real block is named "name".
+                if (line.startsWith("name\t") || line.equals("name") || line.startsWith("name,")) continue;
                 String[] p = line.split("\t", -1);
                 // Required columns: name..item (0–7). The trailing item_render (8) and isolated (9)
                 // are optional — a hand-added row that stops at `item` is valid; default them to "".

@@ -880,6 +880,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 case "bamboo"   -> Blocks.BAMBOO_DOOR;
                 case "crimson"  -> Blocks.CRIMSON_DOOR;
                 case "warped"   -> Blocks.WARPED_DOOR;
+                case "pale_oak" -> ModBlocks.PALE_OAK_DOOR.get();
                 default -> throw new IllegalStateException("Unknown wood type for door tags: " + wood);
             };
             var woodMaterialTag = this.tag(TagKey.create(Registries.BLOCK,

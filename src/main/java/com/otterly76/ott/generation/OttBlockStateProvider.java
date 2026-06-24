@@ -1713,6 +1713,17 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 registerCutoutDoor(block.get(), bottom, top, "block/" + wood + "_planks/");
             })
         );
+
+        // Glass-material doors & trapdoors — translucent, textures under block/glass_door|glass_trapdoor.
+        OttBlocks.GLASS_DOORS.forEach((name, block) ->
+            registerTranslucentDoor(block.get(),
+                    modLoc("block/glass_door/" + name + "_bottom"),
+                    modLoc("block/glass_door/" + name + "_top"),
+                    "block/glass_door/"));
+        OttBlocks.GLASS_TRAPDOORS.forEach((name, block) ->
+            registerTranslucentTrapdoor(block.get(),
+                    modLoc("block/glass_trapdoor/" + name),
+                    "block/glass_trapdoor/"));
     }
 
     private void beehiveBlock(net.neoforged.neoforge.registries.DeferredBlock<BeehiveBlock> block, String woodType) {

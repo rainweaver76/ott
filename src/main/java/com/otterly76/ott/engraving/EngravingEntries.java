@@ -2940,6 +2940,7 @@ public final class EngravingEntries {
             s.tagged( pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_waffle_door").get(), "pale_oak_waffle_door_engraving");
             s.tagged( pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_barn_glass_door").get(), "pale_oak_barn_glass_door_engraving");
             s.tagged( pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_stable_head_door").get(), "pale_oak_stable_head_door_engraving");
+            s.tagged( pale_oakTag, OttBlocks.EXTRA_DOORS.get("pale_oak_whispering_door").get(), "pale_oak_whispering_door_engraving");
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_bamboo_trapdoor").get(), "pale_oak_bamboo_trapdoor_engraving");
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_barn_trapdoor").get(), "pale_oak_barn_trapdoor_engraving");
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_barred_trapdoor").get(), "pale_oak_barred_trapdoor_engraving");
@@ -2953,7 +2954,40 @@ public final class EngravingEntries {
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_paper_trapdoor").get(), "pale_oak_paper_trapdoor_engraving");
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_swamp_trapdoor").get(), "pale_oak_swamp_trapdoor_engraving");
             s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_tropical_trapdoor").get(), "pale_oak_tropical_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_airy_trapdoor").get(), "pale_oak_airy_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_barrel_trapdoor").get(), "pale_oak_barrel_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_whispering_trapdoor").get(), "pale_oak_whispering_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_checkered_trapdoor").get(), "pale_oak_checkered_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_classic_windowed_trapdoor").get(), "pale_oak_classic_windowed_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_cobweb_trapdoor").get(), "pale_oak_cobweb_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_distorted_trapdoor").get(), "pale_oak_distorted_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_fancy_trapdoor").get(), "pale_oak_fancy_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_golden_barred_trapdoor").get(), "pale_oak_golden_barred_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_heavy_trapdoor").get(), "pale_oak_heavy_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_iron_barred_trapdoor").get(), "pale_oak_iron_barred_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_leafy_trapdoor").get(), "pale_oak_leafy_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_meshed_trapdoor").get(), "pale_oak_meshed_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_overgrown_trapdoor").get(), "pale_oak_overgrown_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_pointless_trapdoor").get(), "pale_oak_pointless_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_slotted_trapdoor").get(), "pale_oak_slotted_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_solid_trapdoor").get(), "pale_oak_solid_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_suspicious_trapdoor").get(), "pale_oak_suspicious_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_twisted_trapdoor").get(), "pale_oak_twisted_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_vined_trapdoor").get(), "pale_oak_vined_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_warted_trapdoor").get(), "pale_oak_warted_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_windowed_trapdoor").get(), "pale_oak_windowed_trapdoor_engraving");
+            s.tagged( pale_oakTag, OttBlocks.WOOD_TRAPDOORS.get("pale_oak_woven_trapdoor").get(), "pale_oak_woven_trapdoor_engraving");
         }
+
+        // Glass-material doors & trapdoors engrave from their base glass group (glass / <color>_stained_glass).
+        OttBlocks.GLASS_DOORS.forEach((name, block) -> {
+            String base = name.equals("glass_door") ? "glass" : name.substring(0, name.length() - "_door".length());
+            s.tagged( materialTag(base), block.get(), name + "_engraving");
+        });
+        OttBlocks.GLASS_TRAPDOORS.forEach((name, block) -> {
+            String base = name.equals("glass_trapdoor") ? "glass" : name.substring(0, name.length() - "_trapdoor".length());
+            s.tagged( materialTag(base), block.get(), name + "_engraving");
+        });
 
         s.tagged( ModTags.ItemTags.BOOKSHELVES, net.minecraft.world.item.Items.BOOKSHELF, "bookshelf_engraving");
 
