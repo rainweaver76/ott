@@ -16,6 +16,7 @@ swap to 3d nether wart item model
 swap to cross item model for coral & coral fans
 swap to 3d model for end crystal
 item models adjust for copper rails
+make ctm version of amethyst framed glass and mossy glass
 
 Add New Blocks:
 =====
