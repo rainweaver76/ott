@@ -2978,19 +2978,19 @@ public final class EngravingEntries {
     private static void enumerateGlass(Sink s) {
         // OTT block name → recipe ID (replaces the removed per-color individual recipes)
         String[][] blockTemplates = {
-            {"arched_{c}_stained_glass_ctm",         "arched_{c}_stained_glass_pillar_engraving"},
+            {"arched_{c}_stained_glass_ctm",          "arched_{c}_stained_glass_pillar_engraving"},
             {"circular_{c}_stained_glass",            "circular_{c}_stained_glass_engraving"},
             {"fancy_{c}_stained_glass_ctm",           "fancy_{c}_stained_glass_pillar_engraving"},
             {"ornate_{c}_stained_glass_ctm",          "ornate_{c}_stained_glass_pillar_engraving"},
             {"raster_{c}_stained_glass_ctm",          "raster_{c}_stained_glass_pillar_engraving"},
-            {"small_{c}_diamond_stained_glass_ctm",       "small_{c}_diamond_stained_glass_ctm_engraving"},
+            {"small_{c}_diamond_stained_glass_ctm",   "small_{c}_diamond_stained_glass_ctm_engraving"},
             {"tiled_{c}_stained_glass_ctm",           "tiled_{c}_stained_glass_pillar_engraving"},
             {"{c}_leaded_stained_glass",              "{c}_leaded_stained_glass_engraving"},
             {"fancy_{c}_stained_glass",               "fancy_{c}_stained_glass_engraving"},
             {"large_diamond_{c}_stained_glass",       "large_diamond_{c}_stained_glass_engraving"},
             {"ornate_{c}_stained_glass",              "ornate_{c}_stained_glass_engraving"},
             {"raster_{c}_stained_glass",              "raster_{c}_stained_glass_engraving"},
-            {"small_{c}_diamond_stained_glass",               "small_{c}_diamond_stained_glass_engraving"},
+            {"small_{c}_diamond_stained_glass",       "small_{c}_diamond_stained_glass_engraving"},
             {"square_{c}_stained_glass",              "square_{c}_stained_glass_engraving"},
             {"tiled_{c}_stained_glass",               "tiled_{c}_stained_glass_engraving"},
             {"vertical_striped_{c}_stained_glass",    "vertical_striped_{c}_stained_glass_engraving"},
@@ -2998,7 +2998,7 @@ public final class EngravingEntries {
         };
         // OTT CTM pane name → recipe ID (replaces removed section 3 of ctmPaneRecipes)
         String[][] paneTemplates = {
-            {"arched_{c}_stained_glass_ctm_pane",               "arched_{c}_stained_glass_ctm_pane_engraving"},
+            {"arched_{c}_stained_glass_ctm_pane",                "arched_{c}_stained_glass_ctm_pane_engraving"},
             {"{c}_framed_glass_ctm_pane",                        "{c}_framed_glass_ctm_pane_engraving"},
             {"{c}_stained_glass_ctm_pane",                       "{c}_stained_glass_ctm_pane_engraving"},
             {"fancy_{c}_stained_glass_ctm_pane",                 "fancy_{c}_stained_glass_ctm_pane_engraving"},
