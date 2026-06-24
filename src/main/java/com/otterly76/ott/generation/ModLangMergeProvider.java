@@ -101,6 +101,16 @@ public class ModLangMergeProvider implements DataProvider {
                     "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
         }
 
+        // Giant-CTM massive bricks for custom stones (Massive <Stone> Bricks).
+        for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",
+                "rose_quartz", "scorchia", "scoria", "veridium"}) {
+            ottBase.addProperty("block.ott.massive_" + m + "_bricks", "Massive " + glassTitleCase.apply(m) + " Bricks");
+        }
+
+        // Decorative chains (<Material> Chain).
+        OttBlocks.CHAINS.keySet().forEach(name ->
+                ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
+
         // Add auto-generated imported cube_all block entries to OTT base
         for (String name : com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.keySet()) {
             String pretty = Arrays.stream(name.split("_"))

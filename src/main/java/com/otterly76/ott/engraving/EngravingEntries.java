@@ -54,6 +54,16 @@ public final class EngravingEntries {
                     net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
             s.tagged( materialTag(c + "_glazed_terracotta"), b, n + "_engraving");
         }
+        // ── massive_<custom_stone>_bricks (giant CTM) → each stone's own material group ──
+        for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",
+                "rose_quartz", "scorchia", "scoria", "veridium"}) {
+            String n = "massive_" + m + "_bricks";
+            net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
+            s.tagged( materialTag(m), b, n + "_engraving");
+        }
+        // ── chains (all materials share one "chain" engraving group) ──
+        OttBlocks.CHAINS.forEach((name, block) -> s.tagged( materialTag("chain"), block.get(), name + "_engraving"));
         // ── acacia_planks ──
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BEAMS.get(), "acacia_planks_beams_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BRICKS.get(), "acacia_planks_bricks_ctm_engraving");

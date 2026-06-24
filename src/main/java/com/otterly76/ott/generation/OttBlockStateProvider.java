@@ -1724,6 +1724,21 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             registerTranslucentTrapdoor(block.get(),
                     modLoc("block/glass_trapdoor/" + name),
                     "block/glass_trapdoor/"));
+
+        // Decorative chains — vanilla chain model (axis x/y/z), cutout. Item model = item/chain.
+        OttBlocks.CHAINS.forEach((name, block) -> {
+            ResourceLocation tex = modLoc("block/chain/" + name);
+            ModelFile model = models().withExistingParent("block/chain/" + name, mcLoc("block/chain"))
+                    .texture("1", tex).texture("particle", tex).renderType("cutout");
+            getVariantBuilder(block.get()).forAllStates(state -> {
+                net.minecraft.core.Direction.Axis axis = state.getValue(net.minecraft.world.level.block.ChainBlock.AXIS);
+                return ConfiguredModel.builder().modelFile(model)
+                        .rotationX(axis == net.minecraft.core.Direction.Axis.Y ? 0 : 90)
+                        .rotationY(axis == net.minecraft.core.Direction.Axis.X ? 90 : 0)
+                        .build();
+            });
+            itemModels().withExistingParent(name, mcLoc("item/chain")).texture("1", tex).texture("particle", tex);
+        });
     }
 
     private void beehiveBlock(net.neoforged.neoforge.registries.DeferredBlock<BeehiveBlock> block, String woodType) {

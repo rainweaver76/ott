@@ -63,6 +63,8 @@ public class OttBlocks {
     public static final Map<String, DeferredBlock<DoorBlock>> GLASS_DOORS = new LinkedHashMap<>();
     /** Full glass-material trapdoors keyed by name ({@code glass_trapdoor}, {@code <color>_stained_glass_trapdoor}). */
     public static final Map<String, DeferredBlock<TrapDoorBlock>> GLASS_TRAPDOORS = new LinkedHashMap<>();
+    /** Decorative chains keyed by name ({@code <material>_chain}) — ChainBlock, shared "chain" engraving group. */
+    public static final Map<String, DeferredBlock<net.minecraft.world.level.block.ChainBlock>> CHAINS = new LinkedHashMap<>();
 
     private static DeferredBlock<DoorBlock> registerDoor(String name, net.minecraft.world.level.block.state.properties.BlockSetType bst, Block template) {
         DeferredBlock<DoorBlock> ret = BLOCKS.register(name, () -> new DoorBlock(bst, BlockBehaviour.Properties.ofFullCopy(template)));
@@ -4560,8 +4562,40 @@ public class OttBlocks {
         registerStyledWoolFamily();        // queue patterned-wool family (solo + ctm wool & carpet)
         registerDecoWoolFamily();          // queue decorative wool family (delicate/ornamented/legacy/llama)
         registerGlazedTerracottaCtm();     // queue connecting glazed terracotta (loop, not <clinit> fields)
+        registerGiantCustomStoneBricks();  // queue massive_<custom_stone>_bricks giant CTM (loop, not <clinit> fields)
+        registerChains();                  // queue decorative chains (loop, not <clinit> fields)
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
+    }
+
+    /**
+     * Decorative chains (ChainBlock, vanilla chain model) — one per material, all in the shared "chain"
+     * engraving group. Loop-registered (not static fields) to stay under the {@code <clinit>} 64KB limit.
+     */
+    private static void registerChains() {
+        for (String m : new String[]{"amethyst", "andesite", "basalt", "blackstone", "bone", "bricks",
+                "cobbled_deepslate", "cobblestone", "crimson", "dark_prismarine", "deepslate_bricks", "diamond",
+                "diorite", "emerald", "end_stone", "gold", "granite", "mossy_cobblestone", "netherite",
+                "normal_nether_bricks", "normal_sandstone", "obsidian", "prismarine", "purpur", "quartz",
+                "red_nether_bricks", "red_sandstone", "smooth_stone", "stone_bricks", "stone", "warped"}) {
+            String name = m + "_chain";
+            DeferredBlock<net.minecraft.world.level.block.ChainBlock> b = BLOCKS.register(name,
+                    () -> new net.minecraft.world.level.block.ChainBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHAIN)));
+            ITEMS.register(name, () -> new net.minecraft.world.item.BlockItem(b.get(), new net.minecraft.world.item.Item.Properties()));
+            CHAINS.put(name, b);
+        }
+    }
+
+    /**
+     * Giant-CTM {@code massive_<stone>_bricks} for the custom stones (asurine/crimsite/…/veridium) — matches the
+     * existing 48 massive bricks (committed mosaic {@code layout:giant} model). Loop-registered (not static
+     * fields) to stay under the {@code <clinit>} 64KB limit; custom stones copy STONE properties.
+     */
+    private static void registerGiantCustomStoneBricks() {
+        for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",
+                "rose_quartz", "scorchia", "scoria", "veridium"}) {
+            register("massive_" + m + "_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+        }
     }
 
     /**

@@ -92,6 +92,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         var pickaxeTag = this.tag(BlockTags.MINEABLE_WITH_PICKAXE);
         var shovelTag = this.tag(BlockTags.MINEABLE_WITH_SHOVEL);
         var axeTag = this.tag(BlockTags.MINEABLE_WITH_AXE);
+
+        // Decorative chains — pickaxe-mineable like vanilla chain.
+        com.otterly76.ott_blocks.block.OttBlocks.CHAINS.values().forEach(b -> pickaxeTag.add(b.get()));
         var hoeTag = this.tag(BlockTags.MINEABLE_WITH_HOE);
         var shearsTag = this.tag(BlockTags.create(ResourceLocation.withDefaultNamespace("mineable/shears")));
         var needsStoneToolTag = this.tag(BlockTags.NEEDS_STONE_TOOL);
