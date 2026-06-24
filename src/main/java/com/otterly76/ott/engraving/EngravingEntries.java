@@ -1124,10 +1124,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("magenta_terracotta"), OttBlocks.SMALL_MAGENTA_TERRACOTTA_TILES, "small_magenta_terracotta_tiles_ctm_engraving");
         s.tagged( materialTag("magenta_terracotta"), OttBlocks.STARRY_MAGENTA_TERRACOTTA, "starry_magenta_terracotta_engraving");
         // ── magma_block ──
-        s.one( Blocks.MAGMA_BLOCK, OttBlocks.CURLY_MAGMA_BLOCK_CTM, "curly_magma_block_pillar_engraving");
-        s.one( Blocks.MAGMA_BLOCK, OttBlocks.FINE_MAGMA_BLOCK_CTM, "fine_magma_block_pillar_engraving");
-        s.one( Blocks.MAGMA_BLOCK, OttBlocks.ORNATE_MAGMA_BLOCK_CTM, "ornate_magma_block_pillar_engraving");
-        s.one( Blocks.MAGMA_BLOCK, OttBlocks.SIMPLE_MAGMA_BLOCK_CTM, "simple_magma_block_pillar_engraving");
+        // (curly/fine/ornate/simple magma_block_ctm engrave via the material/magma_block loop below;
+        //  the old explicit s.one entries here were redundant and clashed with the new *_magma_block_pillar blocks.)
         s.tagged( materialTag("magma_block"), OttBlocks.BORDERED_MAGMA_BLOCK, "bordered_magma_block_ctm_engraving");
         s.tagged( materialTag("magma_block"), OttBlocks.BRICK_BORDERED_MAGMA_BLOCK, "brick_bordered_magma_block_ctm_engraving");
         s.tagged( materialTag("magma_block"), OttBlocks.CUT_MAGMA_BLOCK_COLUMN, "cut_magma_block_column_ctm_engraving");

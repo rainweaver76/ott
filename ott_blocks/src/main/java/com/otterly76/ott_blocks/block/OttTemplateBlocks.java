@@ -216,6 +216,11 @@ public final class OttTemplateBlocks {
         BASE.put("glowstone", Blocks.GLOWSTONE);
         BASE.put("bone_block", Blocks.BONE_BLOCK);
         BASE.put("sea_lantern", Blocks.SEA_LANTERN);
+        // Emissive materials — light level inherits via ofFullCopy (shroomlight/froglights = 15).
+        BASE.put("shroomlight", Blocks.SHROOMLIGHT);
+        BASE.put("ochre_froglight", Blocks.OCHRE_FROGLIGHT);
+        BASE.put("pearlescent_froglight", Blocks.PEARLESCENT_FROGLIGHT);
+        BASE.put("verdant_froglight", Blocks.VERDANT_FROGLIGHT);
         // glass materials (Wave 1c) — registered via the `glass` template (TransparentBlock)
         BASE.put("glass", Blocks.GLASS);
         BASE.put("golden_framed_glass", Blocks.GLASS); // OTT material; copy glass props
