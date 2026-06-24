@@ -264,8 +264,8 @@ public final class OttTemplateBlocks {
                 TEMPLATE_BY_NAME.put(name, template);
                 RENDER_BY_NAME.put(name, render);
 
-                // Every glass block gets a static (non-connecting) pane partner: <glass>_pane.
-                if ("glass".equals(template) && !PANE_SKIP.contains(name)) {
+                // Every glass / glass_column block gets a static (non-connecting) pane partner: <glass>_pane.
+                if (("glass".equals(template) || "glass_column".equals(template)) && !PANE_SKIP.contains(name)) {
                     String paneName = name + "_pane";
                     DeferredBlock<Block> pane = OttBlocks.register(paneName,
                             () -> new IronBarsBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
@@ -285,7 +285,7 @@ public final class OttTemplateBlocks {
     }
 
     private static DeferredBlock<Block> register(String name, String material, String template) {
-        if ("glass".equals(template)) {
+        if ("glass".equals(template) || "glass_column".equals(template)) {
             return OttBlocks.register(name,
                     () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(base(material)).noOcclusion()));
         }

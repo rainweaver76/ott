@@ -49,10 +49,11 @@ public final class EngravingEntries {
         // ── glazed_terracotta (connecting / CTM, all 16 colors) → each color's own material group ──
         for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
                 "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
-            String n = "fancy_" + c + "_glazed_terracotta_ctm";
-            net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
-                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
-            s.tagged( materialTag(c + "_glazed_terracotta"), b, n + "_engraving");
+            for (String n : new String[]{"fancy_" + c + "_glazed_terracotta_ctm", "fancy_" + c + "_glazed_terracotta"}) {
+                net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                        net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
+                s.tagged( materialTag(c + "_glazed_terracotta"), b, n + "_engraving");
+            }
         }
         // ── massive_<custom_stone>_bricks (giant CTM) → each stone's own material group ──
         for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",

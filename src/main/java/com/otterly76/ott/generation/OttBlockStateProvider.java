@@ -761,9 +761,25 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
     }
 
     /**
+     * Pane edge texture for an auto-derived static glass pane: a wood window (material {@code <wood>_planks})
+     * uses its wood's edge {@code block/<wood>_planks/<wood>_glass_pane_edge} when present; otherwise the
+     * connecting pane's {@code _post} edge or the shared leaded fallback (see {@link #ctmPaneEdge}).
+     */
+    private ResourceLocation paneEdge(String material, String parent) {
+        if (material != null && material.endsWith("_planks")) {
+            String wood = material.substring(0, material.length() - "_planks".length());
+            String path = "block/" + material + "/" + wood + "_glass_pane_edge";
+            if (getClass().getClassLoader().getResource("assets/ott/textures/" + path + ".png") != null) {
+                return modLoc(path);
+            }
+        }
+        return ctmPaneEdge(parent);
+    }
+
+    /**
      * Edge texture used by the connecting pane {@code <parent>_ctm_pane} (read from its committed
      * {@code _post} model on the classpath), so the auto-derived static pane matches it. Falls back to
-     * vanilla {@code block/glass_pane_top} for glass families that have no CTM pane.
+     * the shared {@code block/glass/leaded_glass_pane_edge} for glass families that have no CTM pane.
      */
     private ResourceLocation ctmPaneEdge(String parent) {
         String res = "assets/ott/models/block/glass/" + parent + "_ctm_pane_post.json";
@@ -780,7 +796,8 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         } catch (RuntimeException | java.io.IOException ignored) {
             // fall through to default
         }
-        return mcLoc("block/glass_pane_top");
+        // Default to the shared "base set" pane edge (used by ~2400 files), not vanilla glass_pane_top.
+        return modLoc("block/glass/leaded_glass_pane_edge");
     }
 
     public void paneBlockWithRenderType(net.minecraft.world.level.block.@NotNull IronBarsBlock block, @NotNull ResourceLocation side, @NotNull ResourceLocation edge, @NotNull String renderType) {
@@ -1572,6 +1589,11 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                             : (render.contains(":") ? render : "minecraft:" + render);
                     model = models().cubeAll(base, modLoc(base)).renderType(rt);
                 }
+                case "glass_column" -> { // translucent column: side = NAME, end = NAME_top
+                    String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
+                            : (render.contains(":") ? render : "minecraft:" + render);
+                    model = models().cubeColumn(base, modLoc(base), modLoc(base + "_top")).renderType(rt);
+                }
                 default -> // cube_all
                         model = models().cubeAll(base, modLoc(base));
             }
@@ -1589,7 +1611,9 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
                     : (render.contains(":") ? render : "minecraft:" + render);
             ResourceLocation tex = modLoc("block/" + material + "/" + parent);
-            ResourceLocation edge = ctmPaneEdge(parent);
+            // Wood-window panes use their wood's pane edge (block/<wood>_planks/<wood>_glass_pane_edge);
+            // everything else uses the CTM-post edge or the shared leaded edge fallback.
+            ResourceLocation edge = paneEdge(material, parent);
             net.minecraft.world.level.block.IronBarsBlock pane =
                     (net.minecraft.world.level.block.IronBarsBlock) com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.get(paneName).get();
             paneBlockWithRenderType(pane, tex, edge, rt);

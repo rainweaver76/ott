@@ -4630,6 +4630,8 @@ public class OttBlocks {
             Block base = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
                     net.minecraft.resources.ResourceLocation.withDefaultNamespace(c + "_glazed_terracotta"));
             register("fancy_" + c + "_glazed_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
+            // Static (non-connecting) twin the _ctm block's match_block rule connects to (shows the _static tile).
+            register("fancy_" + c + "_glazed_terracotta", () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
         }
     }
 }

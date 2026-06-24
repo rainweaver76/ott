@@ -99,6 +99,8 @@ public class ModLangMergeProvider implements DataProvider {
                 "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
             ottBase.addProperty("block.ott.fancy_" + c + "_glazed_terracotta_ctm",
                     "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
+            ottBase.addProperty("block.ott.fancy_" + c + "_glazed_terracotta",
+                    "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
         }
 
         // Giant-CTM massive bricks for custom stones (Massive <Stone> Bricks).
