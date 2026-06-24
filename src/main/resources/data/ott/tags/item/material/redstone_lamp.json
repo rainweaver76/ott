@@ -1,0 +1,23 @@
+{
+  "values": [
+    "minecraft:redstone_lamp",
+    "ott:edged_redstone_lamp",
+    "ott:edged_white_redstone_lamp",
+    "ott:fancy_redstone_lamp",
+    "ott:fancy_white_redstone_lamp",
+    "ott:hived_redstone_lamp",
+    "ott:hived_white_redstone_lamp",
+    "ott:inlayed_redstone_lamp",
+    "ott:inlayed_white_redstone_lamp",
+    "ott:nice_redstone_lamp",
+    "ott:nice_white_redstone_lamp",
+    "ott:ornate_redstone_lamp",
+    "ott:ornate_white_redstone_lamp",
+    "ott:reinforced_redstone_lamp",
+    "ott:reinforced_white_redstone_lamp",
+    "ott:smooth_redstone_lamp",
+    "ott:smooth_white_redstone_lamp",
+    "ott:thick_inlayed_redstone_lamp",
+    "ott:thick_white_inlayed_redstone_lamp"
+  ]
+}

@@ -111,6 +111,10 @@ public class ModLangMergeProvider implements DataProvider {
         OttBlocks.CHAINS.keySet().forEach(name ->
                 ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
 
+        // Decorative redstone lamps (<Style> Redstone Lamp).
+        OttBlocks.REDSTONE_LAMPS.keySet().forEach(name ->
+                ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
+
         // Add auto-generated imported cube_all block entries to OTT base
         for (String name : com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.keySet()) {
             String pretty = Arrays.stream(name.split("_"))

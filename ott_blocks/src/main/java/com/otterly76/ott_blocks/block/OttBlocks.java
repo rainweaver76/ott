@@ -65,6 +65,8 @@ public class OttBlocks {
     public static final Map<String, DeferredBlock<TrapDoorBlock>> GLASS_TRAPDOORS = new LinkedHashMap<>();
     /** Decorative chains keyed by name ({@code <material>_chain}) — ChainBlock, shared "chain" engraving group. */
     public static final Map<String, DeferredBlock<net.minecraft.world.level.block.ChainBlock>> CHAINS = new LinkedHashMap<>();
+    /** Decorative redstone lamps keyed by name — RedstoneLampBlock, LIT swaps default/on texture (+ light 15 when lit). */
+    public static final Map<String, DeferredBlock<net.minecraft.world.level.block.RedstoneLampBlock>> REDSTONE_LAMPS = new LinkedHashMap<>();
 
     private static DeferredBlock<DoorBlock> registerDoor(String name, net.minecraft.world.level.block.state.properties.BlockSetType bst, Block template) {
         DeferredBlock<DoorBlock> ret = BLOCKS.register(name, () -> new DoorBlock(bst, BlockBehaviour.Properties.ofFullCopy(template)));
@@ -4564,8 +4566,27 @@ public class OttBlocks {
         registerGlazedTerracottaCtm();     // queue connecting glazed terracotta (loop, not <clinit> fields)
         registerGiantCustomStoneBricks();  // queue massive_<custom_stone>_bricks giant CTM (loop, not <clinit> fields)
         registerChains();                  // queue decorative chains (loop, not <clinit> fields)
+        registerRedstoneLamps();           // queue decorative redstone lamps (loop, not <clinit> fields)
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
+    }
+
+    /**
+     * Decorative redstone lamps — RedstoneLampBlock copies REDSTONE_LAMP properties (LIT redstone behavior +
+     * {@code litBlockEmission(15)}). Loop-registered (not static fields) to stay under the {@code <clinit>} limit.
+     */
+    private static void registerRedstoneLamps() {
+        for (String name : new String[]{
+                "edged_redstone_lamp", "edged_white_redstone_lamp", "fancy_redstone_lamp", "fancy_white_redstone_lamp",
+                "hived_redstone_lamp", "hived_white_redstone_lamp", "inlayed_redstone_lamp", "inlayed_white_redstone_lamp",
+                "nice_redstone_lamp", "nice_white_redstone_lamp", "ornate_redstone_lamp", "ornate_white_redstone_lamp",
+                "reinforced_redstone_lamp", "reinforced_white_redstone_lamp", "smooth_redstone_lamp", "smooth_white_redstone_lamp",
+                "thick_inlayed_redstone_lamp", "thick_white_inlayed_redstone_lamp"}) {
+            DeferredBlock<net.minecraft.world.level.block.RedstoneLampBlock> b = BLOCKS.register(name,
+                    () -> new net.minecraft.world.level.block.RedstoneLampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_LAMP)));
+            ITEMS.register(name, () -> new net.minecraft.world.item.BlockItem(b.get(), new net.minecraft.world.item.Item.Properties()));
+            REDSTONE_LAMPS.put(name, b);
+        }
     }
 
     /**

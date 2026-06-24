@@ -1739,6 +1739,17 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             });
             itemModels().withExistingParent(name, mcLoc("item/chain")).texture("1", tex).texture("particle", tex);
         });
+
+        // Decorative redstone lamps — LIT=false shows the default texture, LIT=true the *_on texture (+ light 15).
+        OttBlocks.REDSTONE_LAMPS.forEach((name, block) -> {
+            ModelFile off = models().cubeAll("block/redstone_lamp/" + name, modLoc("block/redstone_lamp/" + name));
+            ModelFile on  = models().cubeAll("block/redstone_lamp/" + name + "_on", modLoc("block/redstone_lamp/" + name + "_on"));
+            getVariantBuilder(block.get()).forAllStates(state ->
+                    ConfiguredModel.builder()
+                            .modelFile(state.getValue(net.minecraft.world.level.block.RedstoneLampBlock.LIT) ? on : off)
+                            .build());
+            itemModels().withExistingParent(name, modLoc("block/redstone_lamp/" + name));
+        });
     }
 
     private void beehiveBlock(net.neoforged.neoforge.registries.DeferredBlock<BeehiveBlock> block, String woodType) {

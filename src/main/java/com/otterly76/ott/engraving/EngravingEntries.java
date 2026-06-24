@@ -64,6 +64,8 @@ public final class EngravingEntries {
         }
         // ── chains (all materials share one "chain" engraving group) ──
         OttBlocks.CHAINS.forEach((name, block) -> s.tagged( materialTag("chain"), block.get(), name + "_engraving"));
+        // ── redstone lamps (all share one "redstone_lamp" engraving group) ──
+        OttBlocks.REDSTONE_LAMPS.forEach((name, block) -> s.tagged( materialTag("redstone_lamp"), block.get(), name + "_engraving"));
         // ── acacia_planks ──
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BEAMS.get(), "acacia_planks_beams_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BRICKS.get(), "acacia_planks_bricks_ctm_engraving");

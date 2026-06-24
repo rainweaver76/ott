@@ -904,6 +904,7 @@ public enum OttCreativeCategories {
                 OttBlocks.GLASS_DOORS.values().forEach(emit);
                 OttBlocks.GLASS_TRAPDOORS.values().forEach(emit);
                 OttBlocks.CHAINS.values().forEach(emit);
+                OttBlocks.REDSTONE_LAMPS.values().forEach(emit);
                 ModBlocks.BOOKSHELVES.values().forEach(emit);
             }),
 
