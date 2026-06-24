@@ -46,6 +46,14 @@ public final class EngravingEntries {
 
     private static void enumerateSolid(Sink s) {
         // ═══════ per-material engravings (alphabetical) ═══════
+        // ── glazed_terracotta (connecting / CTM, all 16 colors) → each color's own material group ──
+        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
+                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
+            String n = "fancy_" + c + "_glazed_terracotta_ctm";
+            net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
+            s.tagged( materialTag(c + "_glazed_terracotta"), b, n + "_engraving");
+        }
         // ── acacia_planks ──
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BEAMS.get(), "acacia_planks_beams_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BRICKS.get(), "acacia_planks_bricks_ctm_engraving");

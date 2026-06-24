@@ -1,0 +1,19 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_full_detailed",
+  "textures": {
+    "all": "ott:block/black_glazed_terracotta/ctm/fancy_black_glazed_terracotta_ctm"
+  },
+  "connections": [
+    {
+      "type": "is_same_block"
+    },
+    {
+      "type": "match_block",
+      "block": "ott:fancy_black_glazed_terracotta"
+    }
+  ],
+  "isolated": {
+    "all": "ott:block/black_glazed_terracotta/ctm/fancy_black_glazed_terracotta_static"
+  }
+}

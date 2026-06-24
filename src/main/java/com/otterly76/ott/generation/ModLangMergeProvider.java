@@ -94,6 +94,13 @@ public class ModLangMergeProvider implements DataProvider {
         OttBlocks.GLASS_DOORS.keySet().forEach(name -> ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
         OttBlocks.GLASS_TRAPDOORS.keySet().forEach(name -> ottBase.addProperty("block.ott." + name, glassTitleCase.apply(name)));
 
+        // Connecting glazed terracotta (Fancy <Color> Glazed Terracotta) — _ctm shares the base name.
+        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
+                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
+            ottBase.addProperty("block.ott.fancy_" + c + "_glazed_terracotta_ctm",
+                    "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
+        }
+
         // Add auto-generated imported cube_all block entries to OTT base
         for (String name : com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.keySet()) {
             String pretty = Arrays.stream(name.split("_"))

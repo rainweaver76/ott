@@ -4559,7 +4559,22 @@ public class OttBlocks {
         registerImportedWoolCarpets();     // queue plain carpets for imported wools (needs BY_NAME populated)
         registerStyledWoolFamily();        // queue patterned-wool family (solo + ctm wool & carpet)
         registerDecoWoolFamily();          // queue decorative wool family (delicate/ornamented/legacy/llama)
+        registerGlazedTerracottaCtm();     // queue connecting glazed terracotta (loop, not <clinit> fields)
         BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
+    }
+
+    /**
+     * Connecting (CTM) glazed terracotta — one per dye color (all 16, {@code ctm_full_detailed}, tsv-driven).
+     * Registered here in a loop rather than as static fields to keep the {@code <clinit>} under the JVM
+     * 64KB method limit. Engraving + CTM datagen reference these by registry name, so no field handles needed.
+     */
+    private static void registerGlazedTerracottaCtm() {
+        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
+                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
+            Block base = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                    net.minecraft.resources.ResourceLocation.withDefaultNamespace(c + "_glazed_terracotta"));
+            register("fancy_" + c + "_glazed_terracotta_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
+        }
     }
 }
