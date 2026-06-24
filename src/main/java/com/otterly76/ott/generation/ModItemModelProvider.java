@@ -112,13 +112,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         );
 
         // Glass-material door items (flat 2D door icon) + trapdoor items (3D block bottom model).
+        // Translucent render type so the inventory icon matches the placed (translucent) block.
         OttBlocks.GLASS_DOORS.keySet().forEach(name ->
             withExistingParent(name, mcLoc("item/door_base"))
                     .texture("particle", modLoc("block/glass_door/" + name + "_top"))
                     .texture("bottom",   modLoc("block/glass_door/" + name + "_bottom"))
-                    .texture("top",      modLoc("block/glass_door/" + name + "_top")));
+                    .texture("top",      modLoc("block/glass_door/" + name + "_top"))
+                    .renderType("minecraft:translucent"));
         OttBlocks.GLASS_TRAPDOORS.keySet().forEach(name ->
-            withExistingParent(name, modLoc("block/glass_trapdoor/" + name + "_bottom")));
+            withExistingParent(name, modLoc("block/glass_trapdoor/" + name + "_bottom"))
+                    .renderType("minecraft:translucent"));
 
         ModBlocks.COLOR_SETS.forEach((color, set) -> {
             String colorDir = "block/" + color + "/";
