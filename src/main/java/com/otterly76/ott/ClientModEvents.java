@@ -117,8 +117,6 @@ public class ClientModEvents {
         // ott:mosaic (CTM) loader now lives in and is registered by the ott_blocks mod.
         event.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "wildflowers"),
                 com.otterly76.ott.client.model.wildflowers.WildflowersModelLoader.INSTANCE);
-        event.register(ResourceLocation.fromNamespaceAndPath(MOD_ID, "overlay"),
-                com.otterly76.ott.client.model.overlay.OverlayModelLoader.INSTANCE);
     }
 
     public static void onRegisterAdditional(ModelEvent.RegisterAdditional event) {
@@ -128,7 +126,6 @@ public class ClientModEvents {
             ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(MOD_ID, "block/bookshelf" + s);
             event.register(ModelResourceLocation.standalone(loc));
         }
-        com.otterly76.ott.client.model.overlay.OverlayModifierReloadListener.INSTANCE.registerModels(event);
     }
 
     public static void onModelBaking(ModelEvent.ModifyBakingResult event) {
@@ -156,9 +153,6 @@ public class ClientModEvents {
                 }
             }
         }
-
-        // 3. Apply terrain overlay modifiers
-        com.otterly76.ott.client.model.overlay.OverlayModifierReloadListener.INSTANCE.applyModifiers(event);
     }
 
     public static void registerGuiLayers(RegisterGuiLayersEvent event) {
@@ -491,24 +485,10 @@ public class ClientModEvents {
     }
 
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
-        // LEAF_LITTER, BUSH, BIG_LILY_PAD, WILDFLOWERS, and TESTBLOCK_0x are registered
-        // AFTER the solidTargetBlocks opalOverlayHandler below so their tint-0 colour wins.
-        // (Registering here would be silently overwritten by that all-blocks registration.)
-
-        // ── Opal overlay color handlers (hoisted so they can be captured in both lambda scopes) ──
+        // ── Opal block color handlers (per type) — animated prismatic shimmer on the base block ──
         // Params: Type, scale (blocks/cycle), saturation, hueMin, hueMax, timeScale
         // Hue reference: 0.00=red  0.08=orange  0.15=yellow  0.33=green
         //                0.50=cyan  0.58=sky  0.67=blue  0.75=violet  0.83=magenta
-        final net.minecraft.client.color.block.BlockColor whiteOpalOverlay = PrismaticColorHandler.create(
-                PrismaticColorHandler.Type.FULL_3D, 24f, 0.65f, 0.45f, 0.70f, 0.0f);
-        final net.minecraft.client.color.block.BlockColor blackOpalOverlay = PrismaticColorHandler.create(
-                PrismaticColorHandler.Type.FULL_3D, 24f, 0.90f, 0.65f, 0.87f, 0.0f);
-        final net.minecraft.client.color.block.BlockColor fireOpalOverlay  = PrismaticColorHandler.create(
-                PrismaticColorHandler.Type.FULL_3D, 24f, 1.00f, 0.00f, 0.12f, 0.0f);
-
-        // ── Opal block color handlers (per type) ─────────────────────────────
-        // Combined handler: returns own prismatic color for tint 0, overlay color for tints 101/102/103.
-        // This ensures opal-on-opal overlays show the source opal's color, not the target's.
         ModBlocks.OPAL_SETS.forEach((name, set) -> {
             net.minecraft.client.color.block.BlockColor ownPrismatic = switch (name) {
                 case "white_opal" -> PrismaticColorHandler.create(
@@ -520,16 +500,7 @@ public class ClientModEvents {
                 default           -> PrismaticColorHandler.create(
                         PrismaticColorHandler.Type.FULL_3D, 24f, 0.80f, 0.00f, 1.00f, 0.0f);
             };
-            net.minecraft.client.color.block.BlockColor combined = (state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                default -> ownPrismatic.getColor(state, level, pos, tint);
-            };
-            event.register(combined,
+            event.register(ownPrismatic,
                     set.base().get(), set.crystalBlock().get(), set.budding().get(),
                     set.cluster().get(), set.largeBud().get(), set.mediumBud().get(), set.smallBud().get(),
                     set.bricks().get(), set.smallBricks().get(), set.polished().get(), set.chiseled().get(),
@@ -537,195 +508,58 @@ public class ClientModEvents {
                     set.glass().get(), set.glassPane().get(), set.tiling().get());
         });
 
-        ModBlocks.COPPER_WATER_CAULDRONS.values().forEach(blockSupplier -> {
-            event.register((state, level, pos, tint) -> tint == 0 && level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1, blockSupplier.get());
-        });
+        ModBlocks.COPPER_WATER_CAULDRONS.values().forEach(blockSupplier ->
+                event.register((state, level, pos, tint) -> tint == 0 && level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1, blockSupplier.get()));
 
-        // STONE_BRICKS_WATER_JET and WATER_SOURCE_TRICKLE contain "water" → excluded from solidTargetBlocks → simple handler is fine here.
-        // WEATHERING_STATION, STONE_BRICKS_POOL, STONE_BRICKS_SMALL_POOL, STONE_BRICKS_FAUCET are registered after solidTargetBlocks below.
+        // Water-feature blocks — biome water colour on tint 0
         event.register((state, level, pos, tint) -> tint == 0 && level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1,
-                ModBlocks.STONE_BRICKS_WATER_JET.get(), ModBlocks.WATER_SOURCE_TRICKLE.get());
-        // ELEVATORS registered after solidTargetBlocks below.
+                ModBlocks.STONE_BRICKS_WATER_JET.get(), ModBlocks.WATER_SOURCE_TRICKLE.get(),
+                ModBlocks.STONE_BRICKS_FAUCET.get(), ModBlocks.STONE_BRICKS_POOL.get(),
+                ModBlocks.STONE_BRICKS_SMALL_POOL.get(), ModBlocks.WEATHERING_STATION.get());
 
-        // Opal overlays: prismatic colors matching each opal type, applied to adjacent geological blocks.
-        // Uses same PrismaticColorHandler params as the opal blocks themselves (scale=24 blocks means
-        // a 1-block position offset from the actual opal is imperceptible).
-        {
-            net.minecraft.client.color.block.BlockColor opalOverlayHandler = (state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                default -> -1;
-            };
-            // Register plain opal overlay handler for all solid target blocks that do NOT have a
-            // vanilla BlockColors handler that ignores the tint index (e.g. grass, leaves, water).
-            // Opal blocks are also excluded to preserve their own prismatic tint-0 handler.
-            net.minecraft.world.level.block.Block[] solidTargetBlocks =
-                    net.minecraft.core.registries.BuiltInRegistries.BLOCK.stream()
-                    .filter(b -> {
-                        String n = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(b).getPath();
-                        // Exclude opal blocks (have their own prismatic handler) and transparent/fluid types
-                        if (n.contains("bark")         || n.contains("crystal_block") ||
-                                n.contains("glass")    || n.contains("hyphae")        ||
-                                n.contains("lava")     || n.contains("log")           ||
-                                n.contains("opal")     || n.contains("plank")         ||
-                                n.contains("stem")     || n.contains("water")         ||
-                                n.contains("wood"))
-                            return false;
-                        // Exclude vanilla blocks whose color handlers don't check tint index —
-                        // these get their own chaining handler below.
-                        // Also exclude redstone_wire: vanilla tints it red based on power level.
-                        return !n.contains("fern")        && !n.equals("grass_block")  &&
-                               !n.contains("large_fern")  && !n.contains("leaves")     &&
-                               !n.contains("lily_pad")    && !n.equals("redstone_wire") &&
-                               !n.contains("short_grass") && !n.contains("sugar_cane") &&
-                               !n.contains("tallgrass")   && !n.contains("vine");
-                        // Include everything else that's a solid/opaque block family
-                    })
-                    .toArray(net.minecraft.world.level.block.Block[]::new);
-            event.register(opalOverlayHandler, solidTargetBlocks);
+        // LEAF_LITTER — biome foliage colour
+        event.register((state, level, pos, tint) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(),
+                ModBlocks.LEAF_LITTER.get());
 
-            // ── Re-register OTT blocks with combined opal-overlay + own-colour handlers ──
-            // These blocks are included in solidTargetBlocks, so the opalOverlayHandler above
-            // would overwrite any earlier registration.  Registering them here (after) wins.
+        // BUSH + BIG_LILY_PAD — biome grass colour
+        event.register((state, level, pos, tint) -> level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor(),
+                ModBlocks.BUSH.get(), ModBlocks.BIG_LILY_PAD.get());
 
-            // LEAF_LITTER — biome foliage colour
-            event.register((state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                default -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor();
-            }, ModBlocks.LEAF_LITTER.get());
+        // WILDFLOWERS — tint 0 = no colour (petals are baked), tint 1+ = biome grass
+        event.register((state, level, pos, tint) -> tint == 0 ? -1
+                        : (level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor()),
+                ModBlocks.WILDFLOWERS.get());
 
-            // BUSH + BIG_LILY_PAD — biome grass colour
-            event.register((state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                default -> level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-            }, ModBlocks.BUSH.get(), ModBlocks.BIG_LILY_PAD.get());
+        // Test prismatic blocks
+        event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.FULL_3D, 32f, 1.0f, 0.0f, 1.0f, 0.0f), ModBlocks.TESTBLOCK_01.get());
+        event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.HORIZONTAL, 16f, 0.5f, 0.5f, 0.7f, 0.0f), ModBlocks.TESTBLOCK_02.get());
+        event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.VERTICAL, 8f, 0.25f, 0.3f, 0.5f, 0.0f), ModBlocks.TESTBLOCK_03.get());
+        event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.FULL_3D, 24f, 0.7f, 0.0f, 1.0f, 0.0f), ModBlocks.TESTBLOCK_10.get());
 
-            // WILDFLOWERS — tint 0 = no colour (petals are baked), tint 1+ = biome grass
-            event.register((state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                case 0 -> -1;
-                default -> level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-            }, ModBlocks.WILDFLOWERS.get());
-
-            // Test prismatic blocks — re-registered to override the generic opalOverlayHandler
-            event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.FULL_3D, 32f, 1.0f, 0.0f, 1.0f, 0.0f), ModBlocks.TESTBLOCK_01.get());
-            event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.HORIZONTAL, 16f, 0.5f, 0.5f, 0.7f, 0.0f), ModBlocks.TESTBLOCK_02.get());
-            event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.VERTICAL, 8f, 0.25f, 0.3f, 0.5f, 0.0f), ModBlocks.TESTBLOCK_03.get());
-            event.register(PrismaticColorHandler.create(PrismaticColorHandler.Type.FULL_3D, 24f, 0.7f, 0.0f, 1.0f, 0.0f), ModBlocks.TESTBLOCK_10.get());
-
-            // Water-feature blocks whose names don't contain "water" — biome water colour
-            {
-                net.minecraft.client.color.block.BlockColor waterTintHandler = (state, level, pos, tint) -> switch (tint) {
-                    case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                            whiteOpalOverlay.getColor(state, level, pos, tint);
-                    case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                            blackOpalOverlay.getColor(state, level, pos, tint);
-                    case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                            fireOpalOverlay.getColor(state, level, pos, tint);
-                    case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                            level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                    default -> level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1;
-                };
-                event.register(waterTintHandler,
-                        ModBlocks.STONE_BRICKS_FAUCET.get(),
-                        ModBlocks.STONE_BRICKS_POOL.get(),
-                        ModBlocks.STONE_BRICKS_SMALL_POOL.get(),
-                        ModBlocks.WEATHERING_STATION.get());
-            }
-
-            // Elevators — camo colour (delegated to the camo block's own handler) or base colour
-            ModBlocks.ELEVATORS.forEach((colorName, block) ->
-                    com.otterly76.ott.color.ModPatterns.ALL_COLORS.stream()
-                            .filter(c -> c.name().equals(colorName))
-                            .findFirst()
-                            .ifPresent(info -> event.register((state, level, pos, tint) -> switch (tint) {
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                                        blackOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT  ->
-                                        fireOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                                default -> {
-                                    if (level != null && pos != null) {
-                                        net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
-                                        if (be instanceof com.otterly76.ott.block.entity.ElevatorBlockEntity elevator) {
-                                            net.minecraft.world.level.block.state.BlockState camo = elevator.getCamoState();
-                                            if (camo != null && !camo.isAir()) {
-                                                yield net.minecraft.client.Minecraft.getInstance().getBlockColors().getColor(camo, level, pos, tint);
-                                            }
-                                        }
+        // Elevators — camo colour (delegated to the camo block's own handler) or base colour
+        ModBlocks.ELEVATORS.forEach((colorName, block) ->
+                com.otterly76.ott.color.ModPatterns.ALL_COLORS.stream()
+                        .filter(c -> c.name().equals(colorName))
+                        .findFirst()
+                        .ifPresent(info -> event.register((state, level, pos, tint) -> {
+                            if (level != null && pos != null) {
+                                net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
+                                if (be instanceof com.otterly76.ott.block.entity.ElevatorBlockEntity elevator) {
+                                    net.minecraft.world.level.block.state.BlockState camo = elevator.getCamoState();
+                                    if (camo != null && !camo.isAir()) {
+                                        return net.minecraft.client.Minecraft.getInstance().getBlockColors().getColor(camo, level, pos, tint);
                                     }
-                                    yield info.color();
                                 }
-                            }, block.get())));
+                            }
+                            return info.color();
+                        }, block.get())));
 
-            // Pattern blocks (dyed_stone, dyed_cobblestone, etc.) use tint 0 for their dye color.
-            // Must be registered AFTER opalOverlayHandler so the dye color wins over -1 for tint 0.
-            ModBlocks.PATTERN_BLOCKS.forEach((pattern, colorMap) -> colorMap.forEach((colorName, block) ->
-                    com.otterly76.ott.color.ModPatterns.ALL_COLORS.stream()
-                            .filter(c -> c.name().equals(colorName))
-                            .findFirst()
-                            .ifPresent(info -> event.register((state, level, pos, tint) -> switch (tint) {
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                                        blackOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT ->
-                                        fireOpalOverlay.getColor(state, level, pos, tint);
-                                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                                default -> info.color();
-                            }, block.get()))));
-
-            // Chaining handler for grass_block and similar foliage blocks whose vanilla handler
-            // returns the biome grass color for ALL tint indices (no tint-index check).
-            // We must preserve that behaviour for tint 0 while intercepting opal tints.
-            event.register((state, level, pos, tint) -> switch (tint) {
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.WHITE_OPAL_OVERLAY_TINT ->
-                        whiteOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.BLACK_OPAL_OVERLAY_TINT ->
-                        blackOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.FIRE_OPAL_OVERLAY_TINT ->
-                        fireOpalOverlay.getColor(state, level, pos, tint);
-                case com.otterly76.ott.client.model.overlay.OverlayBakedModel.GRASS_OVERLAY_TINT ->
-                        level != null && pos != null ? BiomeColors.getAverageGrassColor(level, pos) : GrassColor.getDefaultColor();
-                default -> level != null && pos != null
-                        ? BiomeColors.getAverageGrassColor(level, pos)
-                        : GrassColor.getDefaultColor();
-            },  net.minecraft.world.level.block.Blocks.FERN,
-                net.minecraft.world.level.block.Blocks.GRASS_BLOCK,
-                net.minecraft.world.level.block.Blocks.LARGE_FERN,
-                net.minecraft.world.level.block.Blocks.SHORT_GRASS,
-                net.minecraft.world.level.block.Blocks.TALL_GRASS);
-        }
-
+        // Pattern blocks (dyed_stone, dyed_cobblestone, etc.) — dye colour
+        ModBlocks.PATTERN_BLOCKS.forEach((pattern, colorMap) -> colorMap.forEach((colorName, block) ->
+                com.otterly76.ott.color.ModPatterns.ALL_COLORS.stream()
+                        .filter(c -> c.name().equals(colorName))
+                        .findFirst()
+                        .ifPresent(info -> event.register((state, level, pos, tint) -> info.color(), block.get()))));
     }
 
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {

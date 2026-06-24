@@ -7,7 +7,6 @@ chipped lanterns item models
 chipped pointed dripstone models
 chipped iron bars models
 chipped torch models
-chipped door models
 chipped ladder models
 find better totem of undying
 make prettier pink petals item texture
@@ -48,22 +47,11 @@ Notes:
 
 disable overgrowth and respawning structures for custom dimensions
 
-add overlay for moss carpets
-
 check models and DO for bookshelf variants
 
 add missing framed * concrete ctm
 
 add buttons to starting menu for git, discord, reddit, server host
-
-create prismarine bricks overlay textures and modifiers
-create dark prismarine overlay textures and modifiers
-create coral/dead coral overlay textures and modifiers
-create planks (all) overlay textures and modifiers
-
-create overlay textures and modifiers for DO bricks
-
-add transition textures for custom blocks
 
 pale oak bookshelf
 pale oak damned near everything
@@ -102,8 +90,6 @@ add blocks from Chipped
 - create variants for pale oak log, wood, leaves, etc
 - create variants for resin
 - check for missing textures by type
-
-update newer textures to x32
 
 make additional wood items for starlight and midnight
 - bookshelf, chest, trapped chest, barrel, ladder, chiseled bookshelf

@@ -28,6 +28,37 @@ public final class ModPatterns {
 
     public record ColorInfo(String name, int color) {}
 
+    /**
+     * Canonical pattern list — the single source of truth for which pattern block families exist.
+     * <p>
+     * The pattern textures live in the {@code ott_blocks} module (since "THE BIG SPLIT"), so the
+     * filesystem scan in {@link #findPatterns()} cannot see them from the {@code ott} module's
+     * resources, and a production jar has no filesystem path to scan at all. Relying on the scan
+     * therefore collapsed the list to a single hard-coded fallback in production, leaving 9 of the
+     * 10 pattern families (×33 colors) unregistered. This explicit list guarantees every family is
+     * registered identically in dev and in a packaged jar; the scan below only <em>augments</em> it
+     * when additional textures happen to be present in a dev checkout.
+     */
+    private static final List<String> KNOWN_PATTERNS = List.of(
+            "banded_plastered_stone",
+            "chiseled_plastered_stone",
+            "delicate_plastered_stone",
+            "dyed_cobblestone",
+            "dyed_stone",
+            "flat_roof_tiles",
+            "gilded_plastered_stone",
+            "layered_roof_tiles",
+            "painted_planks",
+            "plastered_stone"
+    );
+
+    /** Subset of {@link #KNOWN_PATTERNS} that ships a paired {@code _mask.png} → registered as pillars. */
+    private static final Set<String> KNOWN_PILLAR_PATTERNS = Set.of(
+            "banded_plastered_stone",
+            "delicate_plastered_stone",
+            "gilded_plastered_stone"
+    );
+
     public static final List<String> PATTERNS = findPatterns();
     /** Patterns that have a paired {@code _mask.png} — registered as {@link net.minecraft.world.level.block.RotatedPillarBlock} with a two-layer tinted model. */
     public static final Set<String> PILLAR_PATTERNS = findPillarPatterns();
@@ -40,7 +71,8 @@ public final class ModPatterns {
     }
 
     private static List<String> findPatterns() {
-        List<String> patterns = new ArrayList<>();
+        // Seed from the canonical list so registration is identical in dev and in a production jar.
+        List<String> patterns = new ArrayList<>(KNOWN_PATTERNS);
         try {
             Path assetsPath = getPatternsPath();
             if (Files.exists(assetsPath) && Files.isDirectory(assetsPath)) {
@@ -50,21 +82,18 @@ public final class ModPatterns {
                                 return name.endsWith(".png") && !name.endsWith("_mask.png");
                             })
                             .map(f -> f.getFileName().toString().replace(".png", ""))
+                            .filter(name -> !patterns.contains(name))
                             .forEach(patterns::add);
                 }
             }
         } catch (Exception ignored) {
         }
-
-        // Fallback for production JAR
-        if (patterns.isEmpty()) {
-            patterns.add("dyed_cobblestone");
-        }
         return patterns;
     }
 
     private static Set<String> findPillarPatterns() {
-        Set<String> pillars = new HashSet<>();
+        // Seed from the canonical pillar list so the production jar registers pillars correctly.
+        Set<String> pillars = new HashSet<>(KNOWN_PILLAR_PATTERNS);
         try {
             Path assetsPath = getPatternsPath();
             if (Files.exists(assetsPath) && Files.isDirectory(assetsPath)) {
