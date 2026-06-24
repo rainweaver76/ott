@@ -1,18 +1,3 @@
-textures need to be moved into their proper named directory
-each new block needs its blockstate, block and item models
-item models should each parent the block model
-each new block needs to be added to the engraving crafting system as a 1:1 exchange for its material type
-each new block needs its language translation key
-each new block needs to be properly registered in ModBlocks and ModItems
-each new block needs to be added to the ott Creative tab for Engraving
-each new block needs its proper minecraft tag for mining (wood=axe, stone=pickaxe, soils=shovel)
-each new block needs to be added to the Domum Ornamentum tags for all_brick_materials, default, shingles_cover, stairs_materials, wall_materials
-
-concrete
-copper
-framed_light_center
-glaced_terracotta
-
 make Engraving its own creative tab, split submenu by material type
 update bookshelf models to use boards textures on up/down faces
 copper (all) ladder item models
@@ -40,16 +25,24 @@ item models adjust for copper rails
 Add New Blocks:
 =====
 Here's the checklist for a CTM block:
+
 1. Texture — drop the PNG in …/textures/block/<material>/ctm/<name>.png. Match the layout's format:
 ◦ pieces_full → 80×16 (5 tiles)
 ◦ pieces_vertical → 64×16 (4 tiles, horizontal)
+
 2. Register the block — one line in OttBlocks.java (this also auto-creates the item, so you don't touch item files):
-public static final DeferredBlock<Block> WHIRLWIND_MANGROVE_PLANKS =
-register("whirlwind_mangrove_planks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
-Glass uses TransparentBlock; just copy a sibling block of the same family.
+   public static final DeferredBlock<Block> WHIRLWIND_MANGROVE_PLANKS =
+   register("whirlwind_mangrove_planks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
+   ◦ Glass uses TransparentBlock; just copy a sibling block of the same family.
+
 3. Add the .tsv row — 8 columns through item are required; item_render is now optional (my parser fix), so a stripped trailing tab won't break it anymore.
-4. (Optional) engraving — one line in EngravingEntries.java if it should be engravable.
-5. Run ./gradlew runData (the root task) to generate the blockstate/model/item, then relaunch the game.
+
+4. Add translation key
+
+5. (Optional) engraving — one line in EngravingEntries.java if it should be engravable.
+
+6. Run ./gradlew runData (the root task) to generate the blockstate/model/item, then relaunch the game.
+
 One rule that saves pain: copy the naming of the existing family exactly. whirlwind_<wood>_planks_ctm, <material>_framed_glass_ctm, etc. An off-pattern name (like the original mangrove_planks_whirlwind_ctm) technically works but breaks tag/engraving/creative-tab grouping.
 
 Notes:
