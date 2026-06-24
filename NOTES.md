@@ -7,13 +7,8 @@ chipped lanterns item models
 chipped pointed dripstone models
 chipped iron bars models
 chipped torch models
-chipped glass pane item models
 chipped door models
 chipped ladder models
-create glass panes item models
-create door item models
-create ladder models
-create bars models
 find better totem of undying
 make prettier pink petals item texture
 make prettier sunflower item texture
