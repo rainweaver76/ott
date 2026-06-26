@@ -102,8 +102,8 @@ public class MinecraftBackportBlockStateProvider extends ModBlockStateProvider {
         models().withExistingParent("pale_oak_button_inventory", mcLoc("block/button_inventory"))
                 .texture("texture", palePlanks);
 
-        registerCutoutDoor(ModBlocks.PALE_OAK_DOOR.get(), mcLoc("block/pale_oak_door_bottom"), mcLoc("block/pale_oak_door_top"));
-        registerCutoutTrapdoor(ModBlocks.PALE_OAK_TRAPDOOR.get(), mcLoc("block/pale_oak_trapdoor"));
+        // Pale oak door/trapdoor use hand-authored 3D models with #extra edge strips (assets/minecraft/{blockstates,models/block}/pale_oak_door*.json),
+        // matching the other base woods. Not datagen-generated here (a generated flat blockstate would duplicate the committed 3D one).
 
         signBlock(
                 ModBlocks.PALE_OAK_SIGN.get(),

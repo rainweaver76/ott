@@ -1594,8 +1594,14 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                             : (render.contains(":") ? render : "minecraft:" + render);
                     model = models().cubeColumn(base, modLoc(base), modLoc(base + "_top")).renderType(rt);
                 }
-                default -> // cube_all
+                default -> { // cube_all — honor optional render hint (e.g. cutout for faux trapdoors / copper grates)
+                    if (render == null || render.isEmpty()) {
                         model = models().cubeAll(base, modLoc(base));
+                    } else {
+                        String rt = render.contains(":") ? render : "minecraft:" + render;
+                        model = models().cubeAll(base, modLoc(base)).renderType(rt);
+                    }
+                }
             }
             simpleBlock(block, model);
             itemModels().withExistingParent(name, model.getLocation());

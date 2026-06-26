@@ -866,11 +866,20 @@ public enum OttCreativeCategories {
                     if (net.minecraft.core.registries.BuiltInRegistries.BLOCK.containsKey(rl))
                         emit.accept(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(rl));
                 };
+                // Custom-color (blush, mimosa, …) glass PANES stay in the COLORS tab, not ENGRAVED.
+                java.util.Set<String> customColors = com.otterly76.ott.color.ModColorSets.ALL.stream()
+                        .map(com.otterly76.ott.color.ModColorSets.ColorSet::name)
+                        .collect(java.util.stream.Collectors.toSet());
+                java.util.function.Predicate<String> isCustomGlassPane = n -> {
+                    if (!n.endsWith("_pane") || !n.contains("glass")) return false;
+                    for (String c : customColors) if (n.startsWith(c + "_") || n.contains("_" + c + "_")) return true;
+                    return false;
+                };
                 for (net.minecraft.world.level.ItemLike cube : com.otterly76.ott.engraving.EngravingEntries.tabItems()) {
                     String name = net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(cube.asItem()).getPath();
                     if (name.endsWith("_pane") || name.contains("_carpet")) continue; // grouped under its cube below
                     emit.accept(cube);
-                    emitId.accept(name + "_pane");
+                    if (!isCustomGlassPane.test(name + "_pane")) emitId.accept(name + "_pane");
                     if (name.contains("_wool")) emitId.accept(name.replace("_wool", "_carpet"));
                 }
                 // Orphan engraving-output panes/carpets whose cube was not iterated.
@@ -879,6 +888,7 @@ public enum OttCreativeCategories {
                 // pairs with its cube instead of floating alone. `placed` dedups.
                 for (net.minecraft.world.level.ItemLike x : com.otterly76.ott.engraving.EngravingEntries.tabItems()) {
                     String pn = net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(x.asItem()).getPath();
+                    if (isCustomGlassPane.test(pn)) continue; // custom-color glass panes belong in COLORS tab
                     if (pn.endsWith("_pane")) emitId.accept(pn.substring(0, pn.length() - "_pane".length()));
                     emit.accept(x);
                 }
@@ -892,7 +902,7 @@ public enum OttCreativeCategories {
                 // Safety: any remaining registered ott pane not yet placed (crafted-only panes with no engraving cube)
                 net.minecraft.core.registries.BuiltInRegistries.BLOCK.entrySet().forEach(e -> {
                     net.minecraft.resources.ResourceLocation rl = e.getKey().location();
-                    if (rl.getNamespace().equals("ott") && rl.getPath().endsWith("_pane")) emit.accept(e.getValue());
+                    if (rl.getNamespace().equals("ott") && rl.getPath().endsWith("_pane") && !isCustomGlassPane.test(rl.getPath())) emit.accept(e.getValue());
                 });
                 // Safety sweeps: collections that may include non-engraving members (dedup via `placed`)
                 OttBlocks.IMPORTED_WOOL_CARPETS.values().forEach(emit);

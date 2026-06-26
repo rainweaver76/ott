@@ -46,27 +46,7 @@ public final class EngravingEntries {
 
     private static void enumerateSolid(Sink s) {
         // ═══════ per-material engravings (alphabetical) ═══════
-        // ── glazed_terracotta (connecting / CTM, all 16 colors) → each color's own material group ──
-        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
-                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
-            for (String n : new String[]{"fancy_" + c + "_glazed_terracotta_ctm", "fancy_" + c + "_glazed_terracotta"}) {
-                net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
-                        net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
-                s.tagged( materialTag(c + "_glazed_terracotta"), b, n + "_engraving");
-            }
-        }
-        // ── massive_<custom_stone>_bricks (giant CTM) → each stone's own material group ──
-        for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",
-                "rose_quartz", "scorchia", "scoria", "veridium"}) {
-            String n = "massive_" + m + "_bricks";
-            net.minecraft.world.level.block.Block b = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
-                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", n));
-            s.tagged( materialTag(m), b, n + "_engraving");
-        }
-        // ── chains (all materials share one "chain" engraving group) ──
-        OttBlocks.CHAINS.forEach((name, block) -> s.tagged( materialTag("chain"), block.get(), name + "_engraving"));
-        // ── redstone lamps (all share one "redstone_lamp" engraving group) ──
-        OttBlocks.REDSTONE_LAMPS.forEach((name, block) -> s.tagged( materialTag("redstone_lamp"), block.get(), name + "_engraving"));
+
         // ── acacia_planks ──
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BEAMS.get(), "acacia_planks_beams_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.ACACIA_PLANKS_BRICKS.get(), "acacia_planks_bricks_ctm_engraving");
@@ -95,6 +75,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("acacia_planks"), OttBlocks.NATURAL_ACACIA_PLANKS, "natural_acacia_planks_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.PEGGED_ACACIA_PLANKS, "pegged_acacia_planks_ctm_engraving");
         s.tagged( materialTag("acacia_planks"), OttBlocks.WHIRLWIND_ACACIA_PLANKS, "whirlwind_acacia_planks_ctm_engraving");
+
         // ── amethyst_block ──
         s.one( Blocks.AMETHYST_BLOCK, OttBlocks.AMETHYST_BLOCK_CTM.get(), "amethyst_block_pillar_engraving");
         s.one( Blocks.AMETHYST_BLOCK, OttBlocks.CURLY_AMETHYST_BLOCK_CTM, "curly_amethyst_block_pillar_engraving");
@@ -120,6 +101,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("amethyst_block"), OttBlocks.TILED_AMETHYST_BLOCK_COLUMN, "tiled_amethyst_block_column_ctm_engraving");
         s.tagged( materialTag("amethyst_block"), OttBlocks.TILED_BORDERED_AMETHYST_BLOCK, "tiled_bordered_amethyst_block_ctm_engraving");
         s.tagged( materialTag("amethyst_block"), OttBlocks.TINY_BRICK_BORDERED_AMETHYST_BLOCK, "tiny_brick_bordered_amethyst_block_ctm_engraving");
+        for (String n : new String[]{"amethyst_block_ctm", "curly_amethyst_block_ctm", "fine_amethyst_block_ctm", "ornate_amethyst_block_ctm", "simple_amethyst_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("amethyst_block"), eb, n + "_engraving"); }
+
         // ── ancient_debris ──
         s.one( Blocks.ANCIENT_DEBRIS, OttBlocks.CURLY_ANCIENT_DEBRIS_CTM, "curly_ancient_debris_pillar_engraving");
         s.one( Blocks.ANCIENT_DEBRIS, OttBlocks.FINE_ANCIENT_DEBRIS_CTM, "fine_ancient_debris_pillar_engraving");
@@ -137,6 +120,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("ancient_debris"), OttBlocks.TILED_ANCIENT_DEBRIS_COLUMN, "tiled_ancient_debris_column_ctm_engraving");
         s.tagged( materialTag("ancient_debris"), OttBlocks.TILED_BORDERED_ANCIENT_DEBRIS, "tiled_bordered_ancient_debris_ctm_engraving");
         s.tagged( materialTag("ancient_debris"), OttBlocks.TINY_BRICK_BORDERED_ANCIENT_DEBRIS, "tiny_brick_bordered_ancient_debris_ctm_engraving");
+        for (String n : new String[]{"curly_ancient_debris_ctm", "fine_ancient_debris_ctm", "ornate_ancient_debris_ctm", "simple_ancient_debris_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("ancient_debris"), eb, n + "_engraving"); }
+
         // ── andesite ──
         s.one( Blocks.ANDESITE, OttBlocks.CURLY_ANDESITE_CTM, "curly_andesite_pillar_engraving");
         s.one( Blocks.ANDESITE, OttBlocks.FINE_ANDESITE_CTM, "fine_andesite_pillar_engraving");
@@ -165,6 +150,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("andesite"), OttBlocks.TILED_ANDESITE_COLUMN, "tiled_andesite_column_ctm_engraving");
         s.tagged( materialTag("andesite"), OttBlocks.TILED_BORDERED_ANDESITE, "tiled_bordered_andesite_ctm_engraving");
         s.tagged( materialTag("andesite"), OttBlocks.TINY_BRICK_BORDERED_ANDESITE, "tiny_brick_bordered_andesite_ctm_engraving");
+        for (String n : new String[]{"curly_andesite_ctm", "fine_andesite_ctm", "ornate_andesite_ctm", "simple_andesite_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("andesite"), eb, n + "_engraving"); }
+
+        // ── asurine ──
+        for (String n : new String[]{"asurine_cut_polished_ctm", "asurine_cut_small_brick_ctm", "massive_asurine_bricks"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("asurine"), eb, n + "_engraving"); }
+
         // ── bamboo_planks ──
         s.tagged( materialTag("bamboo_planks"), OttBlocks.BAMBOO_PLANKS_BEAMS.get(), "bamboo_planks_beams_ctm_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.BAMBOO_PLANKS_BRICKS.get(), "bamboo_planks_bricks_ctm_engraving");
@@ -194,6 +184,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("bamboo_planks"), OttBlocks.POLISHED_BAMBOO_PLANKS, "polished_bamboo_planks_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.TIED_BAMBOO_PLANKS, "tied_bamboo_planks_ctm_engraving");
         s.tagged( materialTag("bamboo_planks"), OttBlocks.WHIRLWIND_BAMBOO_PLANKS, "whirlwind_bamboo_planks_ctm_engraving");
+
         // ── basalt ──
         s.one( Blocks.BASALT, OttBlocks.CURLY_BASALT_CTM, "curly_basalt_pillar_engraving");
         s.one( Blocks.BASALT, OttBlocks.FINE_BASALT_CTM, "fine_basalt_pillar_engraving");
@@ -219,6 +210,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("basalt"), OttBlocks.TILED_BASALT_COLUMN, "tiled_basalt_column_ctm_engraving");
         s.tagged( materialTag("basalt"), OttBlocks.TILED_BORDERED_BASALT, "tiled_bordered_basalt_ctm_engraving");
         s.tagged( materialTag("basalt"), OttBlocks.TINY_BRICK_BORDERED_BASALT, "tiny_brick_bordered_basalt_ctm_engraving");
+        for (String n : new String[]{"curly_basalt_ctm", "fine_basalt_ctm", "ornate_basalt_ctm", "simple_basalt_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("basalt"), eb, n + "_engraving"); }
+
         // ── birch_planks ──
         s.tagged( materialTag("birch_planks"), OttBlocks.BIRCH_PLANKS_BEAMS.get(), "birch_planks_beams_ctm_engraving");
         s.tagged( materialTag("birch_planks"), OttBlocks.BIRCH_PLANKS_BRICKS.get(), "birch_planks_bricks_ctm_engraving");
@@ -247,30 +240,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("birch_planks"), OttBlocks.PEGGED_BIRCH_PLANKS, "pegged_birch_planks_ctm_engraving");
         s.tagged( materialTag("birch_planks"), OttBlocks.POLISHED_BIRCH_PLANKS, "polished_birch_planks_engraving");
         s.tagged( materialTag("birch_planks"), OttBlocks.WHIRLWIND_BIRCH_PLANKS, "whirlwind_birch_planks_ctm_engraving");
-        // ── black_concrete ──
-        s.one( Blocks.BLACK_CONCRETE, OttBlocks.BLACK_CONCRETE_CTM, "black_concrete_pillar_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.BLACK_CONCRETE_PANEL, "black_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.GRILL_BLACK_CONCRETE, "grill_black_concrete_ctm_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.PEGGED_BLACK_CONCRETE, "pegged_black_concrete_ctm_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.SMOOTH_BLACK_CONCRETE, "smooth_black_concrete_ctm_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.STRIPED_BLACK_CONCRETE, "striped_black_concrete_ctm_engraving");
-        s.tagged( materialTag("black_concrete"), OttBlocks.WIRED_BLACK_CONCRETE, "wired_black_concrete_ctm_engraving");
-        // ── black_marble ──
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_BRICKS,       "black_marble_bricks_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR,       "black_marble_pillar_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR_CAP,   "black_marble_pillar_cap_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_SMALL_BRICKS, "black_marble_small_bricks_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_TILES,        "black_marble_tiles_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_POLISHED_MARBLE,     "black_polished_marble_engraving");
-        // ── black_terracotta ──
-        s.one( Blocks.BLACK_TERRACOTTA, OttBlocks.BLACK_TERRACOTTA_CTM, "black_terracotta_pillar_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.BLACK_TERRACOTTA_COLUMN, "black_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.CIRCULAR_BLACK_TERRACOTTA, "circular_black_terracotta_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.CURLED_BLACK_TERRACOTTA, "curled_black_terracotta_ctm_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.HEXAGONICAL_BLACK_TERRACOTTA, "hexagonical_black_terracotta_ctm_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.INSCRIBED_BLACK_TERRACOTTA, "inscribed_black_terracotta_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.SMALL_BLACK_TERRACOTTA_TILES, "small_black_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("black_terracotta"), OttBlocks.STARRY_BLACK_TERRACOTTA, "starry_black_terracotta_engraving");
+
         // ── blackstone ──
         s.one( Blocks.BLACKSTONE, OttBlocks.CURLY_BLACKSTONE_CTM, "curly_blackstone_pillar_engraving");
         s.one( Blocks.BLACKSTONE, OttBlocks.FINE_BLACKSTONE_CTM, "fine_blackstone_pillar_engraving");
@@ -293,14 +263,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("blackstone"), OttBlocks.TILED_BLACKSTONE_COLUMN, "tiled_blackstone_column_ctm_engraving");
         s.tagged( materialTag("blackstone"), OttBlocks.TILED_BORDERED_BLACKSTONE, "tiled_bordered_blackstone_ctm_engraving");
         s.tagged( materialTag("blackstone"), OttBlocks.TINY_BRICK_BORDERED_BLACKSTONE, "tiny_brick_bordered_blackstone_ctm_engraving");
-        // ── blue_concrete ──
-        s.one( Blocks.BLUE_CONCRETE, OttBlocks.BLUE_CONCRETE_CTM, "blue_concrete_pillar_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.BLUE_CONCRETE_PANEL, "blue_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.GRILL_BLUE_CONCRETE, "grill_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.PEGGED_BLUE_CONCRETE, "pegged_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.SMOOTH_BLUE_CONCRETE, "smooth_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.STRIPED_BLUE_CONCRETE, "striped_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("blue_concrete"), OttBlocks.WIRED_BLUE_CONCRETE, "wired_blue_concrete_ctm_engraving");
+        for (String n : new String[]{"curly_blackstone_ctm", "fine_blackstone_ctm", "ornate_blackstone_ctm", "simple_blackstone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("blackstone"), eb, n + "_engraving"); }
+
         // ── blue_ice ──
         s.one( Blocks.BLUE_ICE, OttBlocks.BLUE_ICE_CTM.get(), "blue_ice_pillar_engraving");
         s.one( Blocks.BLUE_ICE, OttBlocks.CURLY_BLUE_ICE_CTM, "curly_blue_ice_pillar_engraving");
@@ -325,22 +289,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("blue_ice"), OttBlocks.TILED_BLUE_ICE_COLUMN, "tiled_blue_ice_column_ctm_engraving");
         s.tagged( materialTag("blue_ice"), OttBlocks.TILED_BORDERED_BLUE_ICE, "tiled_bordered_blue_ice_ctm_engraving");
         s.tagged( materialTag("blue_ice"), OttBlocks.TINY_BRICK_BORDERED_BLUE_ICE, "tiny_brick_bordered_blue_ice_ctm_engraving");
-        // ── blue_marble ──
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_BRICKS,       "blue_marble_bricks_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR,       "blue_marble_pillar_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR_CAP,   "blue_marble_pillar_cap_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_SMALL_BRICKS, "blue_marble_small_bricks_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_TILES,        "blue_marble_tiles_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_POLISHED_MARBLE,     "blue_polished_marble_engraving");
-        // ── blue_terracotta ──
-        s.one( Blocks.BLUE_TERRACOTTA, OttBlocks.BLUE_TERRACOTTA_CTM, "blue_terracotta_pillar_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.BLUE_TERRACOTTA_COLUMN, "blue_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.CIRCULAR_BLUE_TERRACOTTA, "circular_blue_terracotta_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.CURLED_BLUE_TERRACOTTA, "curled_blue_terracotta_ctm_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.HEXAGONICAL_BLUE_TERRACOTTA, "hexagonical_blue_terracotta_ctm_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.INSCRIBED_BLUE_TERRACOTTA, "inscribed_blue_terracotta_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.SMALL_BLUE_TERRACOTTA_TILES, "small_blue_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("blue_terracotta"), OttBlocks.STARRY_BLUE_TERRACOTTA, "starry_blue_terracotta_engraving");
+        for (String n : new String[]{"blue_ice_ctm", "curly_blue_ice_ctm", "fine_blue_ice_ctm", "ornate_blue_ice_ctm", "simple_blue_ice_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("blue_ice"), eb, n + "_engraving"); }
+
         // ── bone_block ──
         s.one( Blocks.BONE_BLOCK, OttBlocks.BONE_BLOCK_BORDERED.get(), "bone_block_bordered_ctm_engraving");
         s.one( Blocks.BONE_BLOCK, OttBlocks.BONE_BLOCK_CHISELED.get(), "bone_block_chiseled_ctm_engraving");
@@ -348,6 +298,8 @@ public final class EngravingEntries {
         s.one( Blocks.BONE_BLOCK, OttBlocks.BONE_BLOCK_DECORATED_BORDERED.get(), "bone_block_decorated_bordered_ctm_engraving");
         s.one( Blocks.BONE_BLOCK, OttBlocks.BONE_BLOCK_INVERTED_TILES.get(), "bone_block_inverted_tiles_ctm_engraving");
         s.one( Blocks.BONE_BLOCK, OttBlocks.BONE_BLOCK_PATTERNED.get(), "bone_block_patterned_ctm_engraving");
+        for (String n : new String[]{"bone_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("bone_block"), eb, n + "_engraving"); }
+
         // ── borderless_bricks ──
         s.tagged( materialTag("borderless_bricks"), OttBlocks.BORDERED_BORDERLESS_BRICKS, "bordered_borderless_bricks_ctm_engraving");
         s.tagged( materialTag("borderless_bricks"), OttBlocks.BRICK_BORDERED_BORDERLESS_BRICKS, "brick_bordered_borderless_bricks_ctm_engraving");
@@ -361,6 +313,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("borderless_bricks"), OttBlocks.TILED_BORDERED_BORDERLESS_BRICKS, "tiled_bordered_borderless_bricks_ctm_engraving");
         s.tagged( materialTag("borderless_bricks"), OttBlocks.TILED_BORDERLESS_BRICKS_COLUMN, "tiled_borderless_bricks_column_ctm_engraving");
         s.tagged( materialTag("borderless_bricks"), OttBlocks.TINY_BRICK_BORDERED_BORDERLESS_BRICKS, "tiny_brick_bordered_borderless_bricks_ctm_engraving");
+        for (String n : new String[]{"curly_borderless_bricks_ctm", "fine_borderless_bricks_ctm", "ornate_borderless_bricks_ctm", "simple_borderless_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("borderless_bricks"), eb, n + "_engraving"); }
+
         // ── bricks ──
         s.one( Blocks.BRICKS, OttBlocks.CURLY_BORDERLESS_BRICKS_CTM, "curly_borderless_bricks_pillar_engraving");
         s.one( Blocks.BRICKS, OttBlocks.CURLY_BRICKS_CTM, "curly_bricks_pillar_engraving");
@@ -382,30 +336,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("bricks"), OttBlocks.TILED_BORDERED_BRICKS, "tiled_bordered_bricks_ctm_engraving");
         s.tagged( materialTag("bricks"), OttBlocks.TILED_BRICKS_COLUMN, "tiled_bricks_column_ctm_engraving");
         s.tagged( materialTag("bricks"), OttBlocks.TINY_BRICK_BORDERED_BRICKS, "tiny_brick_bordered_bricks_ctm_engraving");
-        // ── brown_concrete ──
-        s.one( Blocks.BROWN_CONCRETE, OttBlocks.BROWN_CONCRETE_CTM, "brown_concrete_pillar_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.BROWN_CONCRETE_PANEL, "brown_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.GRILL_BROWN_CONCRETE, "grill_brown_concrete_ctm_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.PEGGED_BROWN_CONCRETE, "pegged_brown_concrete_ctm_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.SMOOTH_BROWN_CONCRETE, "smooth_brown_concrete_ctm_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.STRIPED_BROWN_CONCRETE, "striped_brown_concrete_ctm_engraving");
-        s.tagged( materialTag("brown_concrete"), OttBlocks.WIRED_BROWN_CONCRETE, "wired_brown_concrete_ctm_engraving");
-        // ── brown_marble ──
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_BRICKS,       "brown_marble_bricks_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR,       "brown_marble_pillar_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR_CAP,   "brown_marble_pillar_cap_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_SMALL_BRICKS, "brown_marble_small_bricks_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_TILES,        "brown_marble_tiles_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_POLISHED_MARBLE,     "brown_polished_marble_engraving");
-        // ── brown_terracotta ──
-        s.one( Blocks.BROWN_TERRACOTTA, OttBlocks.BROWN_TERRACOTTA_CTM, "brown_terracotta_pillar_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.BROWN_TERRACOTTA_COLUMN, "brown_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.CIRCULAR_BROWN_TERRACOTTA, "circular_brown_terracotta_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.CURLED_BROWN_TERRACOTTA, "curled_brown_terracotta_ctm_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.HEXAGONICAL_BROWN_TERRACOTTA, "hexagonical_brown_terracotta_ctm_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.INSCRIBED_BROWN_TERRACOTTA, "inscribed_brown_terracotta_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.SMALL_BROWN_TERRACOTTA_TILES, "small_brown_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("brown_terracotta"), OttBlocks.STARRY_BROWN_TERRACOTTA, "starry_brown_terracotta_engraving");
+        for (String n : new String[]{"curly_bricks_ctm", "fine_bricks_ctm", "ornate_bricks_ctm", "simple_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("bricks"), eb, n + "_engraving"); }
+
         // ── calcite ──
         s.one( Blocks.CALCITE, OttBlocks.CURLY_CALCITE_CTM, "curly_calcite_pillar_engraving");
         s.one( Blocks.CALCITE, OttBlocks.FINE_CALCITE_CTM, "fine_calcite_pillar_engraving");
@@ -425,6 +357,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("calcite"), OttBlocks.TILED_BORDERED_CALCITE, "tiled_bordered_calcite_ctm_engraving");
         s.tagged( materialTag("calcite"), OttBlocks.TILED_CALCITE_COLUMN, "tiled_calcite_column_ctm_engraving");
         s.tagged( materialTag("calcite"), OttBlocks.TINY_BRICK_BORDERED_CALCITE, "tiny_brick_bordered_calcite_ctm_engraving");
+        for (String n : new String[]{"curly_calcite_ctm", "fine_calcite_ctm", "ornate_calcite_ctm", "simple_calcite_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("calcite"), eb, n + "_engraving"); }
+
+        // ── chain ──
+        OttBlocks.CHAINS.forEach((name, block) -> s.tagged( materialTag("chain"), block.get(), name + "_engraving"));
+
         // ── cherry_planks ──
         s.tagged( materialTag("cherry_planks"), OttBlocks.CHERRY_PLANKS_BEAMS.get(), "cherry_planks_beams_ctm_engraving");
         s.tagged( materialTag("cherry_planks"), OttBlocks.CHERRY_PLANKS_BRICKS.get(), "cherry_planks_bricks_ctm_engraving");
@@ -452,6 +389,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("cherry_planks"), OttBlocks.NATURAL_CHERRY_PLANKS, "natural_cherry_planks_ctm_engraving");
         s.tagged( materialTag("cherry_planks"), OttBlocks.PEGGED_CHERRY_PLANKS, "pegged_cherry_planks_ctm_engraving");
         s.tagged( materialTag("cherry_planks"), OttBlocks.WHIRLWIND_CHERRY_PLANKS, "whirlwind_cherry_planks_ctm_engraving");
+
         // ── clay ──
         s.one( Blocks.CLAY, OttBlocks.CURLY_CLAY_CTM, "curly_clay_pillar_engraving");
         s.one( Blocks.CLAY, OttBlocks.FINE_CLAY_CTM, "fine_clay_pillar_engraving");
@@ -469,6 +407,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("clay"), OttBlocks.TILED_BORDERED_CLAY, "tiled_bordered_clay_ctm_engraving");
         s.tagged( materialTag("clay"), OttBlocks.TILED_CLAY_COLUMN, "tiled_clay_column_ctm_engraving");
         s.tagged( materialTag("clay"), OttBlocks.TINY_BRICK_BORDERED_CLAY, "tiny_brick_bordered_clay_ctm_engraving");
+        for (String n : new String[]{"curly_clay_ctm", "fine_clay_ctm", "ornate_clay_ctm", "simple_clay_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("clay"), eb, n + "_engraving"); }
+
         // ── coal_block ──
         s.one( Blocks.COAL_BLOCK, OttBlocks.CURLY_COAL_BLOCK_CTM, "curly_coal_block_pillar_engraving");
         s.one( Blocks.COAL_BLOCK, OttBlocks.FINE_COAL_BLOCK_CTM, "fine_coal_block_pillar_engraving");
@@ -495,6 +435,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("coal_block"), OttBlocks.TILED_BORDERED_COAL_BLOCK, "tiled_bordered_coal_block_ctm_engraving");
         s.tagged( materialTag("coal_block"), OttBlocks.TILED_COAL_BLOCK_COLUMN, "tiled_coal_block_column_ctm_engraving");
         s.tagged( materialTag("coal_block"), OttBlocks.TINY_BRICK_BORDERED_COAL_BLOCK, "tiny_brick_bordered_coal_block_ctm_engraving");
+        for (String n : new String[]{"curly_coal_block_ctm", "fine_coal_block_ctm", "ornate_coal_block_ctm", "simple_coal_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("coal_block"), eb, n + "_engraving"); }
+
         // ── cobbled_deepslate ──
         s.one( Blocks.COBBLED_DEEPSLATE, OttBlocks.COBBLED_DEEPSLATE_BEAMS.get(), "cobbled_deepslate_beams_ctm_engraving");
         s.one( Blocks.COBBLED_DEEPSLATE, OttBlocks.COBBLED_DEEPSLATE_BRICKS.get(), "cobbled_deepslate_bricks_ctm_engraving");
@@ -509,6 +451,7 @@ public final class EngravingEntries {
         s.one( Blocks.COBBLED_DEEPSLATE, OttBlocks.COBBLED_DEEPSLATE_STRIPES.get(), "cobbled_deepslate_stripes_ctm_engraving");
         s.one( Blocks.COBBLED_DEEPSLATE, OttBlocks.COBBLED_DEEPSLATE_TILES.get(), "cobbled_deepslate_tiles_ctm_engraving");
         s.one( Blocks.COBBLED_DEEPSLATE, OttBlocks.COBBLED_DEEPSLATE_WORN_STRIPES.get(), "cobbled_deepslate_worn_stripes_ctm_engraving");
+
         // ── cobblestone ──
         s.one( Blocks.COBBLESTONE, OttBlocks.CURLY_COBBLESTONE_CTM, "curly_cobblestone_pillar_engraving");
         s.one( Blocks.COBBLESTONE, OttBlocks.FINE_COBBLESTONE_CTM, "fine_cobblestone_pillar_engraving");
@@ -541,6 +484,152 @@ public final class EngravingEntries {
         s.tagged( materialTag("cobblestone"), OttBlocks.TILED_BORDERED_COBBLESTONE, "tiled_bordered_cobblestone_ctm_engraving");
         s.tagged( materialTag("cobblestone"), OttBlocks.TILED_COBBLESTONE_COLUMN, "tiled_cobblestone_column_ctm_engraving");
         s.tagged( materialTag("cobblestone"), OttBlocks.TINY_BRICK_BORDERED_COBBLESTONE, "tiny_brick_bordered_cobblestone_ctm_engraving");
+        for (String n : new String[]{"curly_cobblestone_ctm", "fine_cobblestone_ctm", "ornate_cobblestone_ctm", "simple_cobblestone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("cobblestone"), eb, n + "_engraving"); }
+
+        // ── white_concrete ──
+        s.tagged( materialTag("white_concrete"), OttBlocks.GRILL_WHITE_CONCRETE, "grill_white_concrete_ctm_engraving");
+        s.tagged( materialTag("white_concrete"), OttBlocks.PEGGED_WHITE_CONCRETE, "pegged_white_concrete_ctm_engraving");
+        s.tagged( materialTag("white_concrete"), OttBlocks.SMOOTH_WHITE_CONCRETE, "smooth_white_concrete_ctm_engraving");
+        s.tagged( materialTag("white_concrete"), OttBlocks.STRIPED_WHITE_CONCRETE, "striped_white_concrete_ctm_engraving");
+        s.tagged( materialTag("white_concrete"), OttBlocks.WHITE_CONCRETE_PANEL, "white_concrete_panel_ctm_engraving");
+        s.one( Blocks.WHITE_CONCRETE, OttBlocks.WHITE_CONCRETE_CTM, "white_concrete_pillar_engraving");
+        s.tagged( materialTag("white_concrete"), OttBlocks.WIRED_WHITE_CONCRETE, "wired_white_concrete_ctm_engraving");
+
+        // ── orange_concrete ──
+        s.tagged( materialTag("orange_concrete"), OttBlocks.GRILL_ORANGE_CONCRETE, "grill_orange_concrete_ctm_engraving");
+        s.tagged( materialTag("orange_concrete"), OttBlocks.ORANGE_CONCRETE_PANEL, "orange_concrete_panel_ctm_engraving");
+        s.one( Blocks.ORANGE_CONCRETE, OttBlocks.ORANGE_CONCRETE_CTM, "orange_concrete_pillar_engraving");
+        s.tagged( materialTag("orange_concrete"), OttBlocks.PEGGED_ORANGE_CONCRETE, "pegged_orange_concrete_ctm_engraving");
+        s.tagged( materialTag("orange_concrete"), OttBlocks.SMOOTH_ORANGE_CONCRETE, "smooth_orange_concrete_ctm_engraving");
+        s.tagged( materialTag("orange_concrete"), OttBlocks.STRIPED_ORANGE_CONCRETE, "striped_orange_concrete_ctm_engraving");
+        s.tagged( materialTag("orange_concrete"), OttBlocks.WIRED_ORANGE_CONCRETE, "wired_orange_concrete_ctm_engraving");
+
+        // ── magenta_concrete ──
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.GRILL_MAGENTA_CONCRETE, "grill_magenta_concrete_ctm_engraving");
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.MAGENTA_CONCRETE_PANEL, "magenta_concrete_panel_ctm_engraving");
+        s.one( Blocks.MAGENTA_CONCRETE, OttBlocks.MAGENTA_CONCRETE_CTM, "magenta_concrete_pillar_engraving");
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.PEGGED_MAGENTA_CONCRETE, "pegged_magenta_concrete_ctm_engraving");
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.SMOOTH_MAGENTA_CONCRETE, "smooth_magenta_concrete_ctm_engraving");
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.STRIPED_MAGENTA_CONCRETE, "striped_magenta_concrete_ctm_engraving");
+        s.tagged( materialTag("magenta_concrete"), OttBlocks.WIRED_MAGENTA_CONCRETE, "wired_magenta_concrete_ctm_engraving");
+
+        // ── light_blue_concrete ──
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.GRILL_LIGHT_BLUE_CONCRETE, "grill_light_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.LIGHT_BLUE_CONCRETE_PANEL, "light_blue_concrete_panel_ctm_engraving");
+        s.one( Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.LIGHT_BLUE_CONCRETE_CTM, "light_blue_concrete_pillar_engraving");
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.PEGGED_LIGHT_BLUE_CONCRETE, "pegged_light_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.SMOOTH_LIGHT_BLUE_CONCRETE, "smooth_light_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.STRIPED_LIGHT_BLUE_CONCRETE, "striped_light_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("light_blue_concrete"), OttBlocks.WIRED_LIGHT_BLUE_CONCRETE, "wired_light_blue_concrete_ctm_engraving");
+
+        // ── yellow_concrete ──
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.GRILL_YELLOW_CONCRETE, "grill_yellow_concrete_ctm_engraving");
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.PEGGED_YELLOW_CONCRETE, "pegged_yellow_concrete_ctm_engraving");
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.SMOOTH_YELLOW_CONCRETE, "smooth_yellow_concrete_ctm_engraving");
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.STRIPED_YELLOW_CONCRETE, "striped_yellow_concrete_ctm_engraving");
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.WIRED_YELLOW_CONCRETE, "wired_yellow_concrete_ctm_engraving");
+        s.tagged( materialTag("yellow_concrete"), OttBlocks.YELLOW_CONCRETE_PANEL, "yellow_concrete_panel_ctm_engraving");
+        s.one( Blocks.YELLOW_CONCRETE, OttBlocks.YELLOW_CONCRETE_CTM, "yellow_concrete_pillar_engraving");
+
+        // ── lime_concrete ──
+        s.tagged( materialTag("lime_concrete"), OttBlocks.GRILL_LIME_CONCRETE, "grill_lime_concrete_ctm_engraving");
+        s.tagged( materialTag("lime_concrete"), OttBlocks.LIME_CONCRETE_PANEL, "lime_concrete_panel_ctm_engraving");
+        s.one( Blocks.LIME_CONCRETE, OttBlocks.LIME_CONCRETE_CTM, "lime_concrete_pillar_engraving");
+        s.tagged( materialTag("lime_concrete"), OttBlocks.PEGGED_LIME_CONCRETE, "pegged_lime_concrete_ctm_engraving");
+        s.tagged( materialTag("lime_concrete"), OttBlocks.SMOOTH_LIME_CONCRETE, "smooth_lime_concrete_ctm_engraving");
+        s.tagged( materialTag("lime_concrete"), OttBlocks.STRIPED_LIME_CONCRETE, "striped_lime_concrete_ctm_engraving");
+        s.tagged( materialTag("lime_concrete"), OttBlocks.WIRED_LIME_CONCRETE, "wired_lime_concrete_ctm_engraving");
+
+        // ── pink_concrete ──
+        s.tagged( materialTag("pink_concrete"), OttBlocks.GRILL_PINK_CONCRETE, "grill_pink_concrete_ctm_engraving");
+        s.tagged( materialTag("pink_concrete"), OttBlocks.PEGGED_PINK_CONCRETE, "pegged_pink_concrete_ctm_engraving");
+        s.tagged( materialTag("pink_concrete"), OttBlocks.PINK_CONCRETE_PANEL, "pink_concrete_panel_ctm_engraving");
+        s.one( Blocks.PINK_CONCRETE, OttBlocks.PINK_CONCRETE_CTM, "pink_concrete_pillar_engraving");
+        s.tagged( materialTag("pink_concrete"), OttBlocks.SMOOTH_PINK_CONCRETE, "smooth_pink_concrete_ctm_engraving");
+        s.tagged( materialTag("pink_concrete"), OttBlocks.STRIPED_PINK_CONCRETE, "striped_pink_concrete_ctm_engraving");
+        s.tagged( materialTag("pink_concrete"), OttBlocks.WIRED_PINK_CONCRETE, "wired_pink_concrete_ctm_engraving");
+
+        // ── gray_concrete ──
+        s.tagged( materialTag("gray_concrete"), OttBlocks.GRAY_CONCRETE_PANEL, "gray_concrete_panel_ctm_engraving");
+        s.one( Blocks.GRAY_CONCRETE, OttBlocks.GRAY_CONCRETE_CTM, "gray_concrete_pillar_engraving");
+        s.tagged( materialTag("gray_concrete"), OttBlocks.GRILL_GRAY_CONCRETE, "grill_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("gray_concrete"), OttBlocks.PEGGED_GRAY_CONCRETE, "pegged_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("gray_concrete"), OttBlocks.SMOOTH_GRAY_CONCRETE, "smooth_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("gray_concrete"), OttBlocks.STRIPED_GRAY_CONCRETE, "striped_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("gray_concrete"), OttBlocks.WIRED_GRAY_CONCRETE, "wired_gray_concrete_ctm_engraving");
+
+        // ── light_gray_concrete ──
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.GRILL_LIGHT_GRAY_CONCRETE, "grill_light_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.LIGHT_GRAY_CONCRETE_PANEL, "light_gray_concrete_panel_ctm_engraving");
+        s.one( Blocks.LIGHT_GRAY_CONCRETE, OttBlocks.LIGHT_GRAY_CONCRETE_CTM, "light_gray_concrete_pillar_engraving");
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.PEGGED_LIGHT_GRAY_CONCRETE, "pegged_light_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.SMOOTH_LIGHT_GRAY_CONCRETE, "smooth_light_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.STRIPED_LIGHT_GRAY_CONCRETE, "striped_light_gray_concrete_ctm_engraving");
+        s.tagged( materialTag("light_gray_concrete"), OttBlocks.WIRED_LIGHT_GRAY_CONCRETE, "wired_light_gray_concrete_ctm_engraving");
+
+        // ── cyan_concrete ──
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.CYAN_CONCRETE_PANEL, "cyan_concrete_panel_ctm_engraving");
+        s.one( Blocks.CYAN_CONCRETE, OttBlocks.CYAN_CONCRETE_CTM, "cyan_concrete_pillar_engraving");
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.GRILL_CYAN_CONCRETE, "grill_cyan_concrete_ctm_engraving");
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.PEGGED_CYAN_CONCRETE, "pegged_cyan_concrete_ctm_engraving");
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.SMOOTH_CYAN_CONCRETE, "smooth_cyan_concrete_ctm_engraving");
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.STRIPED_CYAN_CONCRETE, "striped_cyan_concrete_ctm_engraving");
+        s.tagged( materialTag("cyan_concrete"), OttBlocks.WIRED_CYAN_CONCRETE, "wired_cyan_concrete_ctm_engraving");
+
+        // ── purple_concrete ──
+        s.tagged( materialTag("purple_concrete"), OttBlocks.GRILL_PURPLE_CONCRETE, "grill_purple_concrete_ctm_engraving");
+        s.tagged( materialTag("purple_concrete"), OttBlocks.PEGGED_PURPLE_CONCRETE, "pegged_purple_concrete_ctm_engraving");
+        s.tagged( materialTag("purple_concrete"), OttBlocks.PURPLE_CONCRETE_PANEL, "purple_concrete_panel_ctm_engraving");
+        s.one( Blocks.PURPLE_CONCRETE, OttBlocks.PURPLE_CONCRETE_CTM, "purple_concrete_pillar_engraving");
+        s.tagged( materialTag("purple_concrete"), OttBlocks.SMOOTH_PURPLE_CONCRETE, "smooth_purple_concrete_ctm_engraving");
+        s.tagged( materialTag("purple_concrete"), OttBlocks.STRIPED_PURPLE_CONCRETE, "striped_purple_concrete_ctm_engraving");
+        s.tagged( materialTag("purple_concrete"), OttBlocks.WIRED_PURPLE_CONCRETE, "wired_purple_concrete_ctm_engraving");
+
+        // ── blue_concrete ──
+        s.tagged( materialTag("blue_concrete"), OttBlocks.BLUE_CONCRETE_PANEL, "blue_concrete_panel_ctm_engraving");
+        s.one( Blocks.BLUE_CONCRETE, OttBlocks.BLUE_CONCRETE_CTM, "blue_concrete_pillar_engraving");
+        s.tagged( materialTag("blue_concrete"), OttBlocks.GRILL_BLUE_CONCRETE, "grill_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("blue_concrete"), OttBlocks.PEGGED_BLUE_CONCRETE, "pegged_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("blue_concrete"), OttBlocks.SMOOTH_BLUE_CONCRETE, "smooth_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("blue_concrete"), OttBlocks.STRIPED_BLUE_CONCRETE, "striped_blue_concrete_ctm_engraving");
+        s.tagged( materialTag("blue_concrete"), OttBlocks.WIRED_BLUE_CONCRETE, "wired_blue_concrete_ctm_engraving");
+
+        // ── brown_concrete ──
+        s.tagged( materialTag("brown_concrete"), OttBlocks.BROWN_CONCRETE_PANEL, "brown_concrete_panel_ctm_engraving");
+        s.one( Blocks.BROWN_CONCRETE, OttBlocks.BROWN_CONCRETE_CTM, "brown_concrete_pillar_engraving");
+        s.tagged( materialTag("brown_concrete"), OttBlocks.GRILL_BROWN_CONCRETE, "grill_brown_concrete_ctm_engraving");
+        s.tagged( materialTag("brown_concrete"), OttBlocks.PEGGED_BROWN_CONCRETE, "pegged_brown_concrete_ctm_engraving");
+        s.tagged( materialTag("brown_concrete"), OttBlocks.SMOOTH_BROWN_CONCRETE, "smooth_brown_concrete_ctm_engraving");
+        s.tagged( materialTag("brown_concrete"), OttBlocks.STRIPED_BROWN_CONCRETE, "striped_brown_concrete_ctm_engraving");
+        s.tagged( materialTag("brown_concrete"), OttBlocks.WIRED_BROWN_CONCRETE, "wired_brown_concrete_ctm_engraving");
+
+        // ── green_concrete ──
+        s.tagged( materialTag("green_concrete"), OttBlocks.GREEN_CONCRETE_PANEL, "green_concrete_panel_ctm_engraving");
+        s.one( Blocks.GREEN_CONCRETE, OttBlocks.GREEN_CONCRETE_CTM, "green_concrete_pillar_engraving");
+        s.tagged( materialTag("green_concrete"), OttBlocks.GRILL_GREEN_CONCRETE, "grill_green_concrete_ctm_engraving");
+        s.tagged( materialTag("green_concrete"), OttBlocks.PEGGED_GREEN_CONCRETE, "pegged_green_concrete_ctm_engraving");
+        s.tagged( materialTag("green_concrete"), OttBlocks.SMOOTH_GREEN_CONCRETE, "smooth_green_concrete_ctm_engraving");
+        s.tagged( materialTag("green_concrete"), OttBlocks.STRIPED_GREEN_CONCRETE, "striped_green_concrete_ctm_engraving");
+        s.tagged( materialTag("green_concrete"), OttBlocks.WIRED_GREEN_CONCRETE, "wired_green_concrete_ctm_engraving");
+
+        // ── red_concrete ──
+        s.tagged( materialTag("red_concrete"), OttBlocks.GRILL_RED_CONCRETE, "grill_red_concrete_ctm_engraving");
+        s.tagged( materialTag("red_concrete"), OttBlocks.PEGGED_RED_CONCRETE, "pegged_red_concrete_ctm_engraving");
+        s.tagged( materialTag("red_concrete"), OttBlocks.RED_CONCRETE_PANEL, "red_concrete_panel_ctm_engraving");
+        s.one( Blocks.RED_CONCRETE, OttBlocks.RED_CONCRETE_CTM, "red_concrete_pillar_engraving");
+        s.tagged( materialTag("red_concrete"), OttBlocks.SMOOTH_RED_CONCRETE, "smooth_red_concrete_ctm_engraving");
+        s.tagged( materialTag("red_concrete"), OttBlocks.STRIPED_RED_CONCRETE, "striped_red_concrete_ctm_engraving");
+        s.tagged( materialTag("red_concrete"), OttBlocks.WIRED_RED_CONCRETE, "wired_red_concrete_ctm_engraving");
+
+        // ── black_concrete ──
+        s.tagged( materialTag("black_concrete"), OttBlocks.BLACK_CONCRETE_PANEL, "black_concrete_panel_ctm_engraving");
+        s.one( Blocks.BLACK_CONCRETE, OttBlocks.BLACK_CONCRETE_CTM, "black_concrete_pillar_engraving");
+        s.tagged( materialTag("black_concrete"), OttBlocks.GRILL_BLACK_CONCRETE, "grill_black_concrete_ctm_engraving");
+        s.tagged( materialTag("black_concrete"), OttBlocks.PEGGED_BLACK_CONCRETE, "pegged_black_concrete_ctm_engraving");
+        s.tagged( materialTag("black_concrete"), OttBlocks.SMOOTH_BLACK_CONCRETE, "smooth_black_concrete_ctm_engraving");
+        s.tagged( materialTag("black_concrete"), OttBlocks.STRIPED_BLACK_CONCRETE, "striped_black_concrete_ctm_engraving");
+        s.tagged( materialTag("black_concrete"), OttBlocks.WIRED_BLACK_CONCRETE, "wired_black_concrete_ctm_engraving");
+
         // ── copper_block ──
         s.tagged( materialTag("copper_block"), OttBlocks.COPPER_BLOCK.get(), "copper_block_ctm_engraving");
         s.tagged( materialTag("copper_block"), OttBlocks.COPPER_BLOCK_BARS.get(), "copper_block_bars_ctm_engraving");
@@ -551,8 +640,50 @@ public final class EngravingEntries {
         s.tagged( materialTag("copper_block"), OttBlocks.COPPER_BLOCK_POLISHED.get(), "copper_block_polished_ctm_engraving");
         s.tagged( materialTag("copper_block"), OttBlocks.COPPER_BLOCK_SHAFTS.get(), "copper_block_shafts_ctm_engraving");
         s.tagged( materialTag("copper_block"), OttBlocks.COPPER_BLOCK_SMALL_BRICKS.get(), "copper_block_small_bricks_ctm_engraving");
+
         // ── copper_grate ──
         s.tagged( materialTag("copper_grate"), OttBlocks.COPPER_GRATE.get(), "copper_grate_ctm_engraving");
+
+        // ── exposed_copper ──
+        s.tagged( materialTag("exposed_copper"), OttBlocks.EXPOSED_COPPER_BLOCK.get(), "exposed_copper_block_ctm_engraving");
+
+        // ── exposed_copper_grate ──
+        s.tagged( materialTag("exposed_copper_grate"), OttBlocks.EXPOSED_COPPER_GRATE.get(), "exposed_copper_grate_ctm_engraving");
+
+        // ── weathered_copper ──
+        s.tagged( materialTag("weathered_copper"), OttBlocks.WEATHERED_COPPER_BLOCK.get(), "weathered_copper_block_ctm_engraving");
+
+        // ── weathered_copper_grate ──
+        s.tagged( materialTag("weathered_copper_grate"), OttBlocks.WEATHERED_COPPER_GRATE.get(), "weathered_copper_grate_ctm_engraving");
+
+        // ── oxidized_copper ──
+        s.tagged( materialTag("oxidized_copper"), OttBlocks.OXIDIZED_COPPER_BLOCK.get(), "oxidized_copper_block_ctm_engraving");
+
+        // ── oxidized_copper_grate ──
+        s.tagged( materialTag("oxidized_copper_grate"), OttBlocks.OXIDIZED_COPPER_GRATE.get(), "oxidized_copper_grate_ctm_engraving");
+
+        // ── raw_copper_block ──
+        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.CURLY_RAW_COPPER_BLOCK_CTM, "curly_raw_copper_block_pillar_engraving");
+        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.FINE_RAW_COPPER_BLOCK_CTM, "fine_raw_copper_block_pillar_engraving");
+        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.ORNATE_RAW_COPPER_BLOCK_CTM, "ornate_raw_copper_block_pillar_engraving");
+        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.SIMPLE_RAW_COPPER_BLOCK_CTM, "simple_raw_copper_block_pillar_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.BORDERED_RAW_COPPER_BLOCK, "bordered_raw_copper_block_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.BRICK_BORDERED_RAW_COPPER_BLOCK, "brick_bordered_raw_copper_block_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.CUT_RAW_COPPER_BLOCK_COLUMN, "cut_raw_copper_block_column_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.EDGED_RAW_COPPER_BLOCK_BRICKS, "edged_raw_copper_block_bricks_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.MASSIVE_RAW_COPPER_BLOCK_BRICKS, "massive_raw_copper_block_bricks_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.OVERLAPPING_RAW_COPPER_BLOCK_TILES, "overlapping_raw_copper_block_tiles_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.POLISHED_RAW_COPPER_BLOCK, "polished_raw_copper_block_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.SMOOTH_RAW_COPPER_BLOCK_COLUMN, "smooth_raw_copper_block_column_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.THICK_INLAYED_RAW_COPPER_BLOCK, "thick_inlayed_raw_copper_block_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.TILED_BORDERED_RAW_COPPER_BLOCK, "tiled_bordered_raw_copper_block_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.TILED_RAW_COPPER_BLOCK_COLUMN, "tiled_raw_copper_block_column_ctm_engraving");
+        s.tagged( materialTag("raw_copper_block"), OttBlocks.TINY_BRICK_BORDERED_RAW_COPPER_BLOCK, "tiny_brick_bordered_raw_copper_block_ctm_engraving");
+        for (String n : new String[]{"curly_raw_copper_block_ctm", "fine_raw_copper_block_ctm", "ornate_raw_copper_block_ctm", "simple_raw_copper_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("raw_copper_block"), eb, n + "_engraving"); }
+
+        // ── crimsite ──
+        for (String n : new String[]{"crimsite_cut_polished_ctm", "crimsite_cut_small_brick_ctm", "massive_crimsite_bricks"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("crimsite"), eb, n + "_engraving"); }
+
         // ── crimson_planks ──
         s.tagged( materialTag("crimson_planks"), OttBlocks.CORNERED_CRIMSON_PLANKS, "cornered_crimson_planks_ctm_engraving");
         s.tagged( materialTag("crimson_planks"), OttBlocks.CRATED_CRIMSON_PLANKS, "crated_crimson_planks_ctm_engraving");
@@ -580,6 +711,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("crimson_planks"), OttBlocks.NATURAL_CRIMSON_PLANKS, "natural_crimson_planks_ctm_engraving");
         s.tagged( materialTag("crimson_planks"), OttBlocks.PEGGED_CRIMSON_PLANKS, "pegged_crimson_planks_ctm_engraving");
         s.tagged( materialTag("crimson_planks"), OttBlocks.WHIRLWIND_CRIMSON_PLANKS, "whirlwind_crimson_planks_ctm_engraving");
+
         // ── crying_obsidian ──
         s.one( Blocks.CRYING_OBSIDIAN, OttBlocks.CURLY_CRYING_OBSIDIAN_CTM, "curly_crying_obsidian_pillar_engraving");
         s.one( Blocks.CRYING_OBSIDIAN, OttBlocks.FINE_CRYING_OBSIDIAN_CTM, "fine_crying_obsidian_pillar_engraving");
@@ -597,30 +729,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("crying_obsidian"), OttBlocks.TILED_BORDERED_CRYING_OBSIDIAN, "tiled_bordered_crying_obsidian_ctm_engraving");
         s.tagged( materialTag("crying_obsidian"), OttBlocks.TILED_CRYING_OBSIDIAN_COLUMN, "tiled_crying_obsidian_column_ctm_engraving");
         s.tagged( materialTag("crying_obsidian"), OttBlocks.TINY_BRICK_BORDERED_CRYING_OBSIDIAN, "tiny_brick_bordered_crying_obsidian_ctm_engraving");
-        // ── cyan_concrete ──
-        s.one( Blocks.CYAN_CONCRETE, OttBlocks.CYAN_CONCRETE_CTM, "cyan_concrete_pillar_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.CYAN_CONCRETE_PANEL, "cyan_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.GRILL_CYAN_CONCRETE, "grill_cyan_concrete_ctm_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.PEGGED_CYAN_CONCRETE, "pegged_cyan_concrete_ctm_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.SMOOTH_CYAN_CONCRETE, "smooth_cyan_concrete_ctm_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.STRIPED_CYAN_CONCRETE, "striped_cyan_concrete_ctm_engraving");
-        s.tagged( materialTag("cyan_concrete"), OttBlocks.WIRED_CYAN_CONCRETE, "wired_cyan_concrete_ctm_engraving");
-        // ── cyan_marble ──
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_BRICKS,       "cyan_marble_bricks_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR,       "cyan_marble_pillar_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR_CAP,   "cyan_marble_pillar_cap_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_SMALL_BRICKS, "cyan_marble_small_bricks_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_TILES,        "cyan_marble_tiles_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_POLISHED_MARBLE,     "cyan_polished_marble_engraving");
-        // ── cyan_terracotta ──
-        s.one( Blocks.CYAN_TERRACOTTA, OttBlocks.CYAN_TERRACOTTA_CTM, "cyan_terracotta_pillar_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CIRCULAR_CYAN_TERRACOTTA, "circular_cyan_terracotta_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CURLED_CYAN_TERRACOTTA, "curled_cyan_terracotta_ctm_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CYAN_TERRACOTTA_COLUMN, "cyan_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.HEXAGONICAL_CYAN_TERRACOTTA, "hexagonical_cyan_terracotta_ctm_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.INSCRIBED_CYAN_TERRACOTTA, "inscribed_cyan_terracotta_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.SMALL_CYAN_TERRACOTTA_TILES, "small_cyan_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("cyan_terracotta"), OttBlocks.STARRY_CYAN_TERRACOTTA, "starry_cyan_terracotta_engraving");
+        for (String n : new String[]{"curly_crying_obsidian_ctm", "fine_crying_obsidian_ctm", "ornate_crying_obsidian_ctm", "simple_crying_obsidian_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("crying_obsidian"), eb, n + "_engraving"); }
+
+        // ── dark_limestone ──
+        for (String n : new String[]{"massive_dark_limestone_bricks"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("dark_limestone"), eb, n + "_engraving"); }
+
         // ── dark_oak_planks ──
         s.tagged( materialTag("dark_oak_planks"), OttBlocks.CORNERED_DARK_OAK_PLANKS, "cornered_dark_oak_planks_ctm_engraving");
         s.tagged( materialTag("dark_oak_planks"), OttBlocks.CRATED_DARK_OAK_PLANKS, "crated_dark_oak_planks_ctm_engraving");
@@ -648,6 +761,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("dark_oak_planks"), OttBlocks.NATURAL_DARK_OAK_PLANKS, "natural_dark_oak_planks_ctm_engraving");
         s.tagged( materialTag("dark_oak_planks"), OttBlocks.PEGGED_DARK_OAK_PLANKS, "pegged_dark_oak_planks_ctm_engraving");
         s.tagged( materialTag("dark_oak_planks"), OttBlocks.WHIRLWIND_DARK_OAK_PLANKS, "whirlwind_dark_oak_planks_ctm_engraving");
+
         // ── dark_prismarine ──
         s.one( Blocks.DARK_PRISMARINE, OttBlocks.CURLY_DARK_PRISMARINE_CTM, "curly_dark_prismarine_pillar_engraving");
         s.one( Blocks.DARK_PRISMARINE, OttBlocks.FINE_DARK_PRISMARINE_CTM, "fine_dark_prismarine_pillar_engraving");
@@ -665,6 +779,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("dark_prismarine"), OttBlocks.TILED_BORDERED_DARK_PRISMARINE, "tiled_bordered_dark_prismarine_ctm_engraving");
         s.tagged( materialTag("dark_prismarine"), OttBlocks.TILED_DARK_PRISMARINE_COLUMN, "tiled_dark_prismarine_column_ctm_engraving");
         s.tagged( materialTag("dark_prismarine"), OttBlocks.TINY_BRICK_BORDERED_DARK_PRISMARINE, "tiny_brick_bordered_dark_prismarine_ctm_engraving");
+        for (String n : new String[]{"curly_dark_prismarine_ctm", "dark_prismarine_beams_ctm", "dark_prismarine_brick_paving_ctm", "dark_prismarine_bricks_ctm", "dark_prismarine_dotted_ctm", "dark_prismarine_fabric_ctm", "dark_prismarine_large_tiles_ctm", "dark_prismarine_rotated_bricks_ctm", "dark_prismarine_rows_ctm", "dark_prismarine_squares_ctm", "dark_prismarine_tiles_ctm", "dark_prismarine_wavy_ctm", "dark_prismarine_woven_ctm", "fine_dark_prismarine_ctm", "ornate_dark_prismarine_ctm", "simple_dark_prismarine_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("dark_prismarine"), eb, n + "_engraving"); }
+
         // ── deepslate ──
         s.one( Blocks.DEEPSLATE, OttBlocks.CURLY_DEEPSLATE_CTM, "curly_deepslate_pillar_engraving");
         s.one( Blocks.DEEPSLATE, OttBlocks.FINE_DEEPSLATE_CTM, "fine_deepslate_pillar_engraving");
@@ -684,6 +800,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("deepslate"), OttBlocks.TILED_BORDERED_DEEPSLATE, "tiled_bordered_deepslate_ctm_engraving");
         s.tagged( materialTag("deepslate"), OttBlocks.TILED_DEEPSLATE_COLUMN, "tiled_deepslate_column_ctm_engraving");
         s.tagged( materialTag("deepslate"), OttBlocks.TINY_BRICK_BORDERED_DEEPSLATE, "tiny_brick_bordered_deepslate_ctm_engraving");
+        for (String n : new String[]{"curly_deepslate_ctm", "fine_deepslate_ctm", "ornate_deepslate_ctm", "simple_deepslate_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("deepslate"), eb, n + "_engraving"); }
+
+        // ── diamond_block ──
+        for (String n : new String[]{"diamond_block_chiseled_ctm", "diamond_block_chiseled_cubes_ctm", "diamond_block_connecting_ctm", "diamond_block_ctm", "diamond_block_grid_ctm", "diamond_block_jewel_block_ctm", "diamond_block_polished_ctm", "diamond_block_rhombuses_ctm", "diamond_block_shiny_bordered_ctm", "diamond_block_small_tiles_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("diamond_block"), eb, n + "_engraving"); }
+
         // ── diorite ──
         s.one( Blocks.DIORITE, OttBlocks.CURLY_DIORITE_CTM, "curly_diorite_pillar_engraving");
         s.one( Blocks.DIORITE, OttBlocks.FINE_DIORITE_CTM, "fine_diorite_pillar_engraving");
@@ -713,6 +834,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("diorite"), OttBlocks.TILED_BORDERED_DIORITE, "tiled_bordered_diorite_ctm_engraving");
         s.tagged( materialTag("diorite"), OttBlocks.TILED_DIORITE_COLUMN, "tiled_diorite_column_ctm_engraving");
         s.tagged( materialTag("diorite"), OttBlocks.TINY_BRICK_BORDERED_DIORITE, "tiny_brick_bordered_diorite_ctm_engraving");
+        for (String n : new String[]{"curly_diorite_ctm", "fine_diorite_ctm", "ornate_diorite_ctm", "simple_diorite_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("diorite"), eb, n + "_engraving"); }
+
         // ── dirt ──
         s.one( Blocks.DIRT, OttBlocks.CURLY_DIRT_CTM, "curly_dirt_pillar_engraving");
         s.one( Blocks.DIRT, OttBlocks.FINE_DIRT_CTM, "fine_dirt_pillar_engraving");
@@ -730,6 +853,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("dirt"), OttBlocks.TILED_BORDERED_DIRT, "tiled_bordered_dirt_ctm_engraving");
         s.tagged( materialTag("dirt"), OttBlocks.TILED_DIRT_COLUMN, "tiled_dirt_column_ctm_engraving");
         s.tagged( materialTag("dirt"), OttBlocks.TINY_BRICK_BORDERED_DIRT, "tiny_brick_bordered_dirt_ctm_engraving");
+        for (String n : new String[]{"curly_dirt_ctm", "dirt_blobs_ctm", "dirt_bricks_ctm", "dirt_chunks_ctm", "dirt_clumps_ctm", "dirt_large_tiles_ctm", "dirt_small_bricks_ctm", "dirt_small_tiles_ctm", "dirt_smooth_clumps_ctm", "dirt_soil_ctm", "dirt_squares_ctm", "dirt_tiles_ctm", "dirt_tilled_ctm", "fine_dirt_ctm", "ornate_dirt_ctm", "simple_dirt_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("dirt"), eb, n + "_engraving"); }
+
         // ── dripstone_block ──
         s.one( Blocks.DRIPSTONE_BLOCK, OttBlocks.BORDERED_DRIPSTONE_BLOCK, "bordered_dripstone_block_ctm_engraving");
         s.one( Blocks.DRIPSTONE_BLOCK, OttBlocks.BRICK_BORDERED_DRIPSTONE_BLOCK, "brick_bordered_dripstone_block_ctm_engraving");
@@ -746,6 +871,8 @@ public final class EngravingEntries {
         s.one( Blocks.DRIPSTONE_BLOCK, OttBlocks.TILED_BORDERED_DRIPSTONE_BLOCK, "tiled_bordered_dripstone_block_ctm_engraving");
         s.one( Blocks.DRIPSTONE_BLOCK, OttBlocks.TILED_DRIPSTONE_BLOCK_COLUMN, "tiled_dripstone_block_column_ctm_engraving");
         s.one( Blocks.DRIPSTONE_BLOCK, OttBlocks.TINY_BRICK_BORDERED_DRIPSTONE_BLOCK, "tiny_brick_bordered_dripstone_block_ctm_engraving");
+        for (String n : new String[]{"curly_dripstone_block_ctm", "dripstone_cut_polished_ctm", "dripstone_cut_small_brick_ctm", "fine_dripstone_block_ctm", "ornate_dripstone_block_ctm", "polished_dripstone_ctm", "simple_dripstone_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.one(Blocks.DRIPSTONE_BLOCK, eb, n + "_engraving"); }
+
         // ── emerald_block ──
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_BORDERED_CROSSES.get(), "emerald_block_bordered_crosses_ctm_engraving");
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_BORDERED_PLATING.get(), "emerald_block_bordered_plating_ctm_engraving");
@@ -758,6 +885,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_POLISHED.get(), "emerald_block_polished_ctm_engraving");
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_STRIPED.get(), "emerald_block_striped_ctm_engraving");
         s.tagged( materialTag("emerald_block"), OttBlocks.EMERALD_BLOCK_WAXED.get(), "emerald_block_waxed_ctm_engraving");
+
         // ── end_stone ──
         s.one( Blocks.END_STONE, OttBlocks.CURLY_END_STONE_CTM, "curly_end_stone_pillar_engraving");
         s.one( Blocks.END_STONE, OttBlocks.FINE_END_STONE_CTM, "fine_end_stone_pillar_engraving");
@@ -789,10 +917,17 @@ public final class EngravingEntries {
         s.tagged( materialTag("end_stone"), OttBlocks.TILED_BORDERED_END_STONE, "tiled_bordered_end_stone_ctm_engraving");
         s.tagged( materialTag("end_stone"), OttBlocks.TILED_END_STONE_COLUMN, "tiled_end_stone_column_ctm_engraving");
         s.tagged( materialTag("end_stone"), OttBlocks.TINY_BRICK_BORDERED_END_STONE, "tiny_brick_bordered_end_stone_ctm_engraving");
-        // ── exposed_copper ──
-        s.tagged( materialTag("exposed_copper"), OttBlocks.EXPOSED_COPPER_BLOCK.get(), "exposed_copper_block_ctm_engraving");
-        // ── exposed_copper_grate ──
-        s.tagged( materialTag("exposed_copper_grate"), OttBlocks.EXPOSED_COPPER_GRATE.get(), "exposed_copper_grate_ctm_engraving");
+        for (String n : new String[]{"curly_end_stone_ctm", "fine_end_stone_ctm", "ornate_end_stone_ctm", "simple_end_stone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("end_stone"), eb, n + "_engraving"); }
+
+        // ── ochre_froglight ──
+        s.tagged( materialTag("ochre_froglight"),       OttBlocks.GLASS_OCHRE_FROGLIGHT,       "glass_ochre_froglight_engraving");
+
+        // ── pearlescent_froglight ──
+        s.tagged( materialTag("pearlescent_froglight"), OttBlocks.GLASS_PEARLESCENT_FROGLIGHT, "glass_pearlescent_froglight_engraving");
+
+        // ── verdant_froglight ──
+        s.tagged( materialTag("verdant_froglight"),     OttBlocks.GLASS_VERDANT_FROGLIGHT,     "glass_verdant_froglight_engraving");
+
         // ── gilded_blackstone ──
         s.one( Blocks.GILDED_BLACKSTONE, OttBlocks.CURLY_GILDED_BLACKSTONE_CTM, "curly_gilded_blackstone_pillar_engraving");
         s.one( Blocks.GILDED_BLACKSTONE, OttBlocks.FINE_GILDED_BLACKSTONE_CTM, "fine_gilded_blackstone_pillar_engraving");
@@ -810,12 +945,18 @@ public final class EngravingEntries {
         s.tagged( materialTag("gilded_blackstone"), OttBlocks.TILED_BORDERED_GILDED_BLACKSTONE, "tiled_bordered_gilded_blackstone_ctm_engraving");
         s.tagged( materialTag("gilded_blackstone"), OttBlocks.TILED_GILDED_BLACKSTONE_COLUMN, "tiled_gilded_blackstone_column_ctm_engraving");
         s.tagged( materialTag("gilded_blackstone"), OttBlocks.TINY_BRICK_BORDERED_GILDED_BLACKSTONE, "tiny_brick_bordered_gilded_blackstone_ctm_engraving");
+        for (String n : new String[]{"curly_gilded_blackstone_ctm", "fine_gilded_blackstone_ctm", "ornate_gilded_blackstone_ctm", "simple_gilded_blackstone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("gilded_blackstone"), eb, n + "_engraving"); }
+
         // ── glass ──
         s.one( Blocks.GLASS, OttBlocks.ARCHED_LEADED_GLASS_CTM, "arched_leaded_glass_pillar_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.BORDERLESS_GLASS,          "borderless_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.CIRCULAR_LEADED_STAINED_GLASS, "circular_leaded_stained_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.CLEAR_LEADED_GLASS, "clear_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.CLEAR_LEADED_GLASS_CTM, "clear_leaded_glass_pillar_engraving");
         s.one( Blocks.GLASS, OttBlocks.FANCY_LEADED_GLASS, "fancy_leaded_glass_engraving");
+        s.tagged( materialTag("glass"),               OttBlocks.FANCY_LEADED_GLASS_CTM,     "fancy_leaded_glass_pillar_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.FRAMED_GLASS,              "framed_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.GOLDEN_FRAMED_STAINED_GLASS, "golden_framed_stained_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.LARGE_DIAMOND_LEADED_GLASS, "large_diamond_leaded_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.LEADED_GLASS, "leaded_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.LEADED_WOVEN_GLASS, "leaded_woven_glass_engraving");
@@ -830,17 +971,138 @@ public final class EngravingEntries {
         s.one( Blocks.GLASS, OttBlocks.ORNATE_LEADED_GLASS_CTM, "ornate_leaded_glass_pillar_engraving");
         s.one( Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS, "raster_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.RASTER_LEADED_GLASS_CTM, "raster_leaded_glass_pillar_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.RED_SANDSTONE_FRAMED_GLASS, "red_sandstone_framed_glass_ctm_engraving");
+        s.tagged( materialTag("glass"), OttBlocks.SCRATCHED_GLASS,           "scratched_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.SMALL_DIAMOND_LEADED_GLASS, "small_diamond_leaded_glass_ctm_engraving");
         s.one( Blocks.GLASS, OttBlocks.SMALL_DIAMOND_LEADED_GLASS_CTM, "small_diamond_leaded_glass_pillar_engraving");
         s.one( Blocks.GLASS, OttBlocks.SQUARE_LEADED_GLASS, "square_leaded_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.SQUARE_OAK_GLASS, "square_oak_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.VERTICAL_LEADED_GLASS, "vertical_leaded_glass_engraving");
-        s.tagged( materialTag("glass"),               OttBlocks.FANCY_LEADED_GLASS_CTM,     "fancy_leaded_glass_pillar_engraving");
-        s.tagged( materialTag("glass"), OttBlocks.BORDERLESS_GLASS,          "borderless_glass_ctm_engraving");
-        s.tagged( materialTag("glass"), OttBlocks.FRAMED_GLASS,              "framed_glass_ctm_engraving");
-        s.tagged( materialTag("glass"), OttBlocks.GOLDEN_FRAMED_STAINED_GLASS, "golden_framed_stained_glass_ctm_engraving");
-        s.tagged( materialTag("glass"), OttBlocks.RED_SANDSTONE_FRAMED_GLASS, "red_sandstone_framed_glass_ctm_engraving");
-        s.tagged( materialTag("glass"), OttBlocks.SCRATCHED_GLASS,           "scratched_glass_ctm_engraving");
+        for (String n : new String[]{"arched_leaded_glass_ctm", "chiseled_glass_ctm", "clear_glass_ctm", "dirty_glass_ctm", "fancy_leaded_glass_ctm", "frosted_glass_ctm", "glass_ctm", "reinforced_glass_ctm", "soul_glass_ctm", "tinted_clear_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
+        for (String n : new String[]{"ice_glass_ctm", "obsidian_framed_glass_ctm", "sandstone_framed_glass_ctm", "stone_framed_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
+
+        // ── leaded_glass ──
+        s.one( OttBlocks.LEADED_GLASS.get(), OttBlocks.LEADED_GLASS_PANE.get(), "leaded_glass_pane_engraving");
+
+        // ── tinted_glass ──
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLACK, "tinted_borderless_glass_black_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLUE, "tinted_borderless_glass_blue_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BROWN, "tinted_borderless_glass_brown_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS, "tinted_borderless_glass_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_CYAN, "tinted_borderless_glass_cyan_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GRAY, "tinted_borderless_glass_gray_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GREEN, "tinted_borderless_glass_green_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE, "tinted_borderless_glass_light_blue_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY, "tinted_borderless_glass_light_gray_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIME, "tinted_borderless_glass_lime_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_MAGENTA, "tinted_borderless_glass_magenta_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_ORANGE, "tinted_borderless_glass_orange_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PINK, "tinted_borderless_glass_pink_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PURPLE, "tinted_borderless_glass_purple_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_RED, "tinted_borderless_glass_red_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_WHITE, "tinted_borderless_glass_white_ctm_engraving");
+        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_YELLOW, "tinted_borderless_glass_yellow_ctm_engraving");
+        for (String n : new String[]{"tinted_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("tinted_glass"), eb, n + "_engraving"); }
+
+        // ── white_stained_glass ──
+        for (String n : new String[]{"borderless_glass_white_ctm", "golden_framed_white_stained_glass_ctm", "scratched_glass_white_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("white_stained_glass"), eb, n + "_engraving"); }
+
+        // ── orange_stained_glass ──
+        for (String n : new String[]{"borderless_glass_orange_ctm", "golden_framed_orange_stained_glass_ctm", "scratched_glass_orange_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("orange_stained_glass"), eb, n + "_engraving"); }
+
+        // ── magenta_stained_glass ──
+        for (String n : new String[]{"borderless_glass_magenta_ctm", "golden_framed_magenta_stained_glass_ctm", "scratched_glass_magenta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("magenta_stained_glass"), eb, n + "_engraving"); }
+
+        // ── light_blue_stained_glass ──
+        for (String n : new String[]{"borderless_glass_light_blue_ctm", "golden_framed_light_blue_stained_glass_ctm", "scratched_glass_light_blue_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("light_blue_stained_glass"), eb, n + "_engraving"); }
+
+        // ── yellow_stained_glass ──
+        for (String n : new String[]{"borderless_glass_yellow_ctm", "golden_framed_yellow_stained_glass_ctm", "scratched_glass_yellow_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("yellow_stained_glass"), eb, n + "_engraving"); }
+
+        // ── lime_stained_glass ──
+        for (String n : new String[]{"borderless_glass_lime_ctm", "golden_framed_lime_stained_glass_ctm", "scratched_glass_lime_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("lime_stained_glass"), eb, n + "_engraving"); }
+
+        // ── pink_stained_glass ──
+        for (String n : new String[]{"borderless_glass_pink_ctm", "golden_framed_pink_stained_glass_ctm", "scratched_glass_pink_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("pink_stained_glass"), eb, n + "_engraving"); }
+
+        // ── gray_stained_glass ──
+        for (String n : new String[]{"borderless_glass_gray_ctm", "golden_framed_gray_stained_glass_ctm", "scratched_glass_gray_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("gray_stained_glass"), eb, n + "_engraving"); }
+
+        // ── light_gray_stained_glass ──
+        for (String n : new String[]{"borderless_glass_light_gray_ctm", "golden_framed_light_gray_stained_glass_ctm", "scratched_glass_light_gray_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("light_gray_stained_glass"), eb, n + "_engraving"); }
+
+        // ── cyan_stained_glass ──
+        for (String n : new String[]{"borderless_glass_cyan_ctm", "golden_framed_cyan_stained_glass_ctm", "scratched_glass_cyan_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("cyan_stained_glass"), eb, n + "_engraving"); }
+
+        // ── purple_stained_glass ──
+        for (String n : new String[]{"borderless_glass_purple_ctm", "golden_framed_purple_stained_glass_ctm", "scratched_glass_purple_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("purple_stained_glass"), eb, n + "_engraving"); }
+
+        // ── blue_stained_glass ──
+        for (String n : new String[]{"borderless_glass_blue_ctm", "golden_framed_blue_stained_glass_ctm", "scratched_glass_blue_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("blue_stained_glass"), eb, n + "_engraving"); }
+
+        // ── brown_stained_glass ──
+        for (String n : new String[]{"borderless_glass_brown_ctm", "golden_framed_brown_stained_glass_ctm", "scratched_glass_brown_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("brown_stained_glass"), eb, n + "_engraving"); }
+
+        // ── green_stained_glass ──
+        for (String n : new String[]{"borderless_glass_green_ctm", "golden_framed_green_stained_glass_ctm", "scratched_glass_green_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("green_stained_glass"), eb, n + "_engraving"); }
+
+        // ── red_stained_glass ──
+        for (String n : new String[]{"borderless_glass_red_ctm", "golden_framed_red_stained_glass_ctm", "scratched_glass_red_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("red_stained_glass"), eb, n + "_engraving"); }
+
+        // ── black_stained_glass ──
+        for (String n : new String[]{"borderless_glass_black_ctm", "golden_framed_black_stained_glass_ctm", "scratched_glass_black_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("black_stained_glass"), eb, n + "_engraving"); }
+
+        // ── white_glazed_terracotta ──
+        for (String n : new String[]{"fancy_white_glazed_terracotta", "fancy_white_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("white_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── orange_glazed_terracotta ──
+        for (String n : new String[]{"fancy_orange_glazed_terracotta", "fancy_orange_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("orange_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── magenta_glazed_terracotta ──
+        for (String n : new String[]{"fancy_magenta_glazed_terracotta", "fancy_magenta_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("magenta_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── light_blue_glazed_terracotta ──
+        for (String n : new String[]{"fancy_light_blue_glazed_terracotta", "fancy_light_blue_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("light_blue_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── yellow_glazed_terracotta ──
+        for (String n : new String[]{"fancy_yellow_glazed_terracotta", "fancy_yellow_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("yellow_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── lime_glazed_terracotta ──
+        for (String n : new String[]{"fancy_lime_glazed_terracotta", "fancy_lime_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("lime_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── pink_glazed_terracotta ──
+        for (String n : new String[]{"fancy_pink_glazed_terracotta", "fancy_pink_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("pink_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── gray_glazed_terracotta ──
+        for (String n : new String[]{"fancy_gray_glazed_terracotta", "fancy_gray_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("gray_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── light_gray_glazed_terracotta ──
+        for (String n : new String[]{"fancy_light_gray_glazed_terracotta", "fancy_light_gray_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("light_gray_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── cyan_glazed_terracotta ──
+        for (String n : new String[]{"fancy_cyan_glazed_terracotta", "fancy_cyan_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("cyan_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── purple_glazed_terracotta ──
+        for (String n : new String[]{"fancy_purple_glazed_terracotta", "fancy_purple_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("purple_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── blue_glazed_terracotta ──
+        for (String n : new String[]{"fancy_blue_glazed_terracotta", "fancy_blue_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("blue_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── brown_glazed_terracotta ──
+        for (String n : new String[]{"fancy_brown_glazed_terracotta", "fancy_brown_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("brown_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── green_glazed_terracotta ──
+        for (String n : new String[]{"fancy_green_glazed_terracotta", "fancy_green_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("green_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── red_glazed_terracotta ──
+        for (String n : new String[]{"fancy_red_glazed_terracotta", "fancy_red_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("red_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── black_glazed_terracotta ──
+        for (String n : new String[]{"fancy_black_glazed_terracotta", "fancy_black_glazed_terracotta_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("black_glazed_terracotta"), eb, n + "_engraving"); }
+
+        // ── glowstone ──
+        for (String n : new String[]{"glowstone_brick_pattern_ctm", "glowstone_brick_paving_ctm", "glowstone_bricks_ctm", "glowstone_crushed_ctm", "glowstone_large_tiles_ctm", "glowstone_rotated_bricks_ctm", "glowstone_small_tiles_ctm", "glowstone_smooth_ctm", "glowstone_tiles_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glowstone"), eb, n + "_engraving"); }
+
         // ── gold_block ──
         s.tagged( materialTag("gold_block"), OttBlocks.GOLD_BLOCK.get(), "gold_block_ctm_engraving");
         s.tagged( materialTag("gold_block"), OttBlocks.GOLD_BLOCK_BEAMS.get(), "gold_block_beams_ctm_engraving");
@@ -853,6 +1115,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("gold_block"), OttBlocks.GOLD_BLOCK_SMALL_TILES.get(), "gold_block_small_tiles_ctm_engraving");
         s.tagged( materialTag("gold_block"), OttBlocks.GOLD_BLOCK_STRIPED.get(), "gold_block_striped_ctm_engraving");
         s.tagged( materialTag("gold_block"), OttBlocks.GOLD_BLOCK_TILES.get(), "gold_block_tiles_ctm_engraving");
+
         // ── granite ──
         s.one( Blocks.GRANITE, OttBlocks.CURLY_GRANITE_CTM, "curly_granite_pillar_engraving");
         s.one( Blocks.GRANITE, OttBlocks.FINE_GRANITE_CTM, "fine_granite_pillar_engraving");
@@ -883,54 +1146,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("granite"), OttBlocks.TILED_BORDERED_GRANITE, "tiled_bordered_granite_ctm_engraving");
         s.tagged( materialTag("granite"), OttBlocks.TILED_GRANITE_COLUMN, "tiled_granite_column_ctm_engraving");
         s.tagged( materialTag("granite"), OttBlocks.TINY_BRICK_BORDERED_GRANITE, "tiny_brick_bordered_granite_ctm_engraving");
-        // ── gray_concrete ──
-        s.one( Blocks.GRAY_CONCRETE, OttBlocks.GRAY_CONCRETE_CTM, "gray_concrete_pillar_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.GRAY_CONCRETE_PANEL, "gray_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.GRILL_GRAY_CONCRETE, "grill_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.PEGGED_GRAY_CONCRETE, "pegged_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.SMOOTH_GRAY_CONCRETE, "smooth_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.STRIPED_GRAY_CONCRETE, "striped_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("gray_concrete"), OttBlocks.WIRED_GRAY_CONCRETE, "wired_gray_concrete_ctm_engraving");
-        // ── gray_marble ──
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_BRICKS,       "gray_marble_bricks_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR,       "gray_marble_pillar_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR_CAP,   "gray_marble_pillar_cap_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_SMALL_BRICKS, "gray_marble_small_bricks_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_TILES,        "gray_marble_tiles_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_POLISHED_MARBLE,     "gray_polished_marble_engraving");
-        // ── gray_terracotta ──
-        s.one( Blocks.GRAY_TERRACOTTA, OttBlocks.GRAY_TERRACOTTA_CTM, "gray_terracotta_pillar_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.CIRCULAR_GRAY_TERRACOTTA, "circular_gray_terracotta_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.CURLED_GRAY_TERRACOTTA, "curled_gray_terracotta_ctm_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.GRAY_TERRACOTTA_COLUMN, "gray_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.HEXAGONICAL_GRAY_TERRACOTTA, "hexagonical_gray_terracotta_ctm_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.INSCRIBED_GRAY_TERRACOTTA, "inscribed_gray_terracotta_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.SMALL_GRAY_TERRACOTTA_TILES, "small_gray_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("gray_terracotta"), OttBlocks.STARRY_GRAY_TERRACOTTA, "starry_gray_terracotta_engraving");
-        // ── green_concrete ──
-        s.one( Blocks.GREEN_CONCRETE, OttBlocks.GREEN_CONCRETE_CTM, "green_concrete_pillar_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.GREEN_CONCRETE_PANEL, "green_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.GRILL_GREEN_CONCRETE, "grill_green_concrete_ctm_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.PEGGED_GREEN_CONCRETE, "pegged_green_concrete_ctm_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.SMOOTH_GREEN_CONCRETE, "smooth_green_concrete_ctm_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.STRIPED_GREEN_CONCRETE, "striped_green_concrete_ctm_engraving");
-        s.tagged( materialTag("green_concrete"), OttBlocks.WIRED_GREEN_CONCRETE, "wired_green_concrete_ctm_engraving");
-        // ── green_marble ──
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_BRICKS,       "green_marble_bricks_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR,       "green_marble_pillar_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR_CAP,   "green_marble_pillar_cap_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_SMALL_BRICKS, "green_marble_small_bricks_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_TILES,        "green_marble_tiles_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_POLISHED_MARBLE,     "green_polished_marble_engraving");
-        // ── green_terracotta ──
-        s.one( Blocks.GREEN_TERRACOTTA, OttBlocks.GREEN_TERRACOTTA_CTM, "green_terracotta_pillar_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.CIRCULAR_GREEN_TERRACOTTA, "circular_green_terracotta_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.CURLED_GREEN_TERRACOTTA, "curled_green_terracotta_ctm_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.GREEN_TERRACOTTA_COLUMN, "green_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.HEXAGONICAL_GREEN_TERRACOTTA, "hexagonical_green_terracotta_ctm_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.INSCRIBED_GREEN_TERRACOTTA, "inscribed_green_terracotta_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.SMALL_GREEN_TERRACOTTA_TILES, "small_green_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("green_terracotta"), OttBlocks.STARRY_GREEN_TERRACOTTA, "starry_green_terracotta_engraving");
+        for (String n : new String[]{"curly_granite_ctm", "fine_granite_ctm", "ornate_granite_ctm", "simple_granite_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("granite"), eb, n + "_engraving"); }
+
         // ── ice ──
         s.one( Blocks.ICE, OttBlocks.CURLY_ICE_CTM, "curly_ice_pillar_engraving");
         s.one( Blocks.ICE, OttBlocks.FINE_ICE_CTM, "fine_ice_pillar_engraving");
@@ -948,6 +1165,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("ice"), OttBlocks.TILED_BORDERED_ICE, "tiled_bordered_ice_ctm_engraving");
         s.tagged( materialTag("ice"), OttBlocks.TILED_ICE_COLUMN, "tiled_ice_column_ctm_engraving");
         s.tagged( materialTag("ice"), OttBlocks.TINY_BRICK_BORDERED_ICE, "tiny_brick_bordered_ice_ctm_engraving");
+        for (String n : new String[]{"curly_ice_ctm", "fine_ice_ctm", "ornate_ice_ctm", "simple_ice_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("ice"), eb, n + "_engraving"); }
+
         // ── iron_block ──
         s.tagged( materialTag("iron_block"), OttBlocks.IRON_BLOCK.get(), "iron_block_ctm_engraving");
         s.tagged( materialTag("iron_block"), OttBlocks.IRON_BLOCK_BORDERED.get(), "iron_block_bordered_ctm_engraving");
@@ -961,6 +1180,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("iron_block"), OttBlocks.IRON_BLOCK_POLISHED.get(), "iron_block_polished_ctm_engraving");
         s.tagged( materialTag("iron_block"), OttBlocks.IRON_BLOCK_PROCESSED.get(), "iron_block_processed_ctm_engraving");
         s.tagged( materialTag("iron_block"), OttBlocks.IRON_BLOCK_SMALL_BRICKS.get(), "iron_block_small_bricks_ctm_engraving");
+
         // ── jungle_planks ──
         s.tagged( materialTag("jungle_planks"), OttBlocks.CORNERED_JUNGLE_PLANKS, "cornered_jungle_planks_ctm_engraving");
         s.tagged( materialTag("jungle_planks"), OttBlocks.CRATED_JUNGLE_PLANKS, "crated_jungle_planks_ctm_engraving");
@@ -988,6 +1208,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("jungle_planks"), OttBlocks.NATURAL_JUNGLE_PLANKS, "natural_jungle_planks_ctm_engraving");
         s.tagged( materialTag("jungle_planks"), OttBlocks.PEGGED_JUNGLE_PLANKS, "pegged_jungle_planks_ctm_engraving");
         s.tagged( materialTag("jungle_planks"), OttBlocks.WHIRLWIND_JUNGLE_PLANKS, "whirlwind_jungle_planks_ctm_engraving");
+
         // ── lapis_block ──
         s.one( Blocks.LAPIS_BLOCK, OttBlocks.CURLY_LAPIS_BLOCK_CTM, "curly_lapis_block_pillar_engraving");
         s.one( Blocks.LAPIS_BLOCK, OttBlocks.FINE_LAPIS_BLOCK_CTM, "fine_lapis_block_pillar_engraving");
@@ -1018,83 +1239,13 @@ public final class EngravingEntries {
         s.tagged( materialTag("lapis_block"), OttBlocks.TILED_BORDERED_LAPIS_BLOCK, "tiled_bordered_lapis_block_ctm_engraving");
         s.tagged( materialTag("lapis_block"), OttBlocks.TILED_LAPIS_BLOCK_COLUMN, "tiled_lapis_block_column_ctm_engraving");
         s.tagged( materialTag("lapis_block"), OttBlocks.TINY_BRICK_BORDERED_LAPIS_BLOCK, "tiny_brick_bordered_lapis_block_ctm_engraving");
-        // ── leaded_glass ──
-        s.one( OttBlocks.LEADED_GLASS.get(), OttBlocks.LEADED_GLASS_PANE.get(), "leaded_glass_pane_engraving");
-        // ── light_blue_concrete ──
-        s.one( Blocks.LIGHT_BLUE_CONCRETE, OttBlocks.LIGHT_BLUE_CONCRETE_CTM, "light_blue_concrete_pillar_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.GRILL_LIGHT_BLUE_CONCRETE, "grill_light_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.LIGHT_BLUE_CONCRETE_PANEL, "light_blue_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.PEGGED_LIGHT_BLUE_CONCRETE, "pegged_light_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.SMOOTH_LIGHT_BLUE_CONCRETE, "smooth_light_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.STRIPED_LIGHT_BLUE_CONCRETE, "striped_light_blue_concrete_ctm_engraving");
-        s.tagged( materialTag("light_blue_concrete"), OttBlocks.WIRED_LIGHT_BLUE_CONCRETE, "wired_light_blue_concrete_ctm_engraving");
-        // ── light_blue_marble ──
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_BRICKS,       "light_blue_marble_bricks_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR,       "light_blue_marble_pillar_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP,   "light_blue_marble_pillar_cap_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS, "light_blue_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_TILES,        "light_blue_marble_tiles_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_POLISHED_MARBLE,     "light_blue_polished_marble_engraving");
-        // ── light_blue_terracotta ──
-        s.one( Blocks.LIGHT_BLUE_TERRACOTTA, OttBlocks.LIGHT_BLUE_TERRACOTTA_CTM, "light_blue_terracotta_pillar_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA, "circular_light_blue_terracotta_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.CURLED_LIGHT_BLUE_TERRACOTTA, "curled_light_blue_terracotta_ctm_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.HEXAGONICAL_LIGHT_BLUE_TERRACOTTA, "hexagonical_light_blue_terracotta_ctm_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.INSCRIBED_LIGHT_BLUE_TERRACOTTA, "inscribed_light_blue_terracotta_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.LIGHT_BLUE_TERRACOTTA_COLUMN, "light_blue_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES, "small_light_blue_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.STARRY_LIGHT_BLUE_TERRACOTTA, "starry_light_blue_terracotta_engraving");
-        // ── light_gray_concrete ──
-        s.one( Blocks.LIGHT_GRAY_CONCRETE, OttBlocks.LIGHT_GRAY_CONCRETE_CTM, "light_gray_concrete_pillar_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.GRILL_LIGHT_GRAY_CONCRETE, "grill_light_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.LIGHT_GRAY_CONCRETE_PANEL, "light_gray_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.PEGGED_LIGHT_GRAY_CONCRETE, "pegged_light_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.SMOOTH_LIGHT_GRAY_CONCRETE, "smooth_light_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.STRIPED_LIGHT_GRAY_CONCRETE, "striped_light_gray_concrete_ctm_engraving");
-        s.tagged( materialTag("light_gray_concrete"), OttBlocks.WIRED_LIGHT_GRAY_CONCRETE, "wired_light_gray_concrete_ctm_engraving");
-        // ── light_gray_marble ──
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_BRICKS,       "light_gray_marble_bricks_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR,       "light_gray_marble_pillar_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP,   "light_gray_marble_pillar_cap_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS, "light_gray_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_TILES,        "light_gray_marble_tiles_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_POLISHED_MARBLE,     "light_gray_polished_marble_engraving");
-        // ── light_gray_terracotta ──
-        s.one( Blocks.LIGHT_GRAY_TERRACOTTA, OttBlocks.LIGHT_GRAY_TERRACOTTA_CTM, "light_gray_terracotta_pillar_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA, "circular_light_gray_terracotta_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.CURLED_LIGHT_GRAY_TERRACOTTA, "curled_light_gray_terracotta_ctm_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.HEXAGONICAL_LIGHT_GRAY_TERRACOTTA, "hexagonical_light_gray_terracotta_ctm_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.INSCRIBED_LIGHT_GRAY_TERRACOTTA, "inscribed_light_gray_terracotta_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.LIGHT_GRAY_TERRACOTTA_COLUMN, "light_gray_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.SMALL_LIGHT_GRAY_TERRACOTTA_TILES, "small_light_gray_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.STARRY_LIGHT_GRAY_TERRACOTTA, "starry_light_gray_terracotta_engraving");
-        // ── lime_concrete ──
-        s.one( Blocks.LIME_CONCRETE, OttBlocks.LIME_CONCRETE_CTM, "lime_concrete_pillar_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.GRILL_LIME_CONCRETE, "grill_lime_concrete_ctm_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.LIME_CONCRETE_PANEL, "lime_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.PEGGED_LIME_CONCRETE, "pegged_lime_concrete_ctm_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.SMOOTH_LIME_CONCRETE, "smooth_lime_concrete_ctm_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.STRIPED_LIME_CONCRETE, "striped_lime_concrete_ctm_engraving");
-        s.tagged( materialTag("lime_concrete"), OttBlocks.WIRED_LIME_CONCRETE, "wired_lime_concrete_ctm_engraving");
-        // ── lime_marble ──
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_BRICKS,       "lime_marble_bricks_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR,       "lime_marble_pillar_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR_CAP,   "lime_marble_pillar_cap_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_SMALL_BRICKS, "lime_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_TILES,        "lime_marble_tiles_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_POLISHED_MARBLE,     "lime_polished_marble_engraving");
-        // ── lime_terracotta ──
-        s.one( Blocks.LIME_TERRACOTTA, OttBlocks.LIME_TERRACOTTA_CTM, "lime_terracotta_pillar_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.CIRCULAR_LIME_TERRACOTTA, "circular_lime_terracotta_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.CURLED_LIME_TERRACOTTA, "curled_lime_terracotta_ctm_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.HEXAGONICAL_LIME_TERRACOTTA, "hexagonical_lime_terracotta_ctm_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.INSCRIBED_LIME_TERRACOTTA, "inscribed_lime_terracotta_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.LIME_TERRACOTTA_COLUMN, "lime_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.SMALL_LIME_TERRACOTTA_TILES, "small_lime_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("lime_terracotta"), OttBlocks.STARRY_LIME_TERRACOTTA, "starry_lime_terracotta_engraving");
+        for (String n : new String[]{"curly_lapis_block_ctm", "fine_lapis_block_ctm", "ornate_lapis_block_ctm", "simple_lapis_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("lapis_block"), eb, n + "_engraving"); }
+
         // ── limestone ──
         s.tagged( materialTag("limestone"), OttBlocks.LIMESTONE_CUT_POLISHED.get(), "limestone_cut_polished_ctm_engraving");
         s.tagged( materialTag("limestone"), OttBlocks.LIMESTONE_CUT_SMALL_BRICK.get(), "limestone_cut_small_brick_ctm_engraving");
+        for (String n : new String[]{"massive_limestone_bricks"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("limestone"), eb, n + "_engraving"); }
+
         // ── lodestone ──
         s.one( Blocks.LODESTONE, OttBlocks.CURLY_LODESTONE_CTM, "curly_lodestone_pillar_engraving");
         s.one( Blocks.LODESTONE, OttBlocks.FINE_LODESTONE_CTM, "fine_lodestone_pillar_engraving");
@@ -1112,30 +1263,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("lodestone"), OttBlocks.TILED_BORDERED_LODESTONE, "tiled_bordered_lodestone_ctm_engraving");
         s.tagged( materialTag("lodestone"), OttBlocks.TILED_LODESTONE_COLUMN, "tiled_lodestone_column_ctm_engraving");
         s.tagged( materialTag("lodestone"), OttBlocks.TINY_BRICK_BORDERED_LODESTONE, "tiny_brick_bordered_lodestone_ctm_engraving");
-        // ── magenta_concrete ──
-        s.one( Blocks.MAGENTA_CONCRETE, OttBlocks.MAGENTA_CONCRETE_CTM, "magenta_concrete_pillar_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.GRILL_MAGENTA_CONCRETE, "grill_magenta_concrete_ctm_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.MAGENTA_CONCRETE_PANEL, "magenta_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.PEGGED_MAGENTA_CONCRETE, "pegged_magenta_concrete_ctm_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.SMOOTH_MAGENTA_CONCRETE, "smooth_magenta_concrete_ctm_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.STRIPED_MAGENTA_CONCRETE, "striped_magenta_concrete_ctm_engraving");
-        s.tagged( materialTag("magenta_concrete"), OttBlocks.WIRED_MAGENTA_CONCRETE, "wired_magenta_concrete_ctm_engraving");
-        // ── magenta_marble ──
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_BRICKS,       "magenta_marble_bricks_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR,       "magenta_marble_pillar_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR_CAP,   "magenta_marble_pillar_cap_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "magenta_marble_small_bricks_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_TILES,        "magenta_marble_tiles_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_POLISHED_MARBLE,     "magenta_polished_marble_engraving");
-        // ── magenta_terracotta ──
-        s.one( Blocks.MAGENTA_TERRACOTTA, OttBlocks.MAGENTA_TERRACOTTA_CTM, "magenta_terracotta_pillar_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.CIRCULAR_MAGENTA_TERRACOTTA, "circular_magenta_terracotta_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.CURLED_MAGENTA_TERRACOTTA, "curled_magenta_terracotta_ctm_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.HEXAGONICAL_MAGENTA_TERRACOTTA, "hexagonical_magenta_terracotta_ctm_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.INSCRIBED_MAGENTA_TERRACOTTA, "inscribed_magenta_terracotta_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.MAGENTA_TERRACOTTA_COLUMN, "magenta_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.SMALL_MAGENTA_TERRACOTTA_TILES, "small_magenta_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("magenta_terracotta"), OttBlocks.STARRY_MAGENTA_TERRACOTTA, "starry_magenta_terracotta_engraving");
+        for (String n : new String[]{"curly_lodestone_ctm", "fine_lodestone_ctm", "ornate_lodestone_ctm", "simple_lodestone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("lodestone"), eb, n + "_engraving"); }
+
         // ── magma_block ──
         // (curly/fine/ornate/simple magma_block_ctm engrave via the material/magma_block loop below;
         //  the old explicit s.one entries here were redundant and clashed with the new *_magma_block_pillar blocks.)
@@ -1151,6 +1280,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("magma_block"), OttBlocks.TILED_BORDERED_MAGMA_BLOCK, "tiled_bordered_magma_block_ctm_engraving");
         s.tagged( materialTag("magma_block"), OttBlocks.TILED_MAGMA_BLOCK_COLUMN, "tiled_magma_block_column_ctm_engraving");
         s.tagged( materialTag("magma_block"), OttBlocks.TINY_BRICK_BORDERED_MAGMA_BLOCK, "tiny_brick_bordered_magma_block_ctm_engraving");
+        for (String n : new String[]{"curly_magma_block_ctm", "fine_magma_block_ctm", "ornate_magma_block_ctm", "simple_magma_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("magma_block"), eb, n + "_engraving"); }
+
         // ── mangrove_planks ──
         s.tagged( materialTag("mangrove_planks"), OttBlocks.CORNERED_MANGROVE_PLANKS, "cornered_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.CRATED_MANGROVE_PLANKS, "crated_mangrove_planks_ctm_engraving");
@@ -1178,6 +1309,135 @@ public final class EngravingEntries {
         s.tagged( materialTag("mangrove_planks"), OttBlocks.NATURAL_MANGROVE_PLANKS, "natural_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.PEGGED_MANGROVE_PLANKS, "pegged_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.WHIRLWIND_MANGROVE_PLANKS, "whirlwind_mangrove_planks_ctm_engraving");
+
+        // ── white_marble ──
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_BRICKS,       "white_marble_bricks_engraving");
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_SMALL_BRICKS, "white_marble_small_bricks_engraving");
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_TILES,        "white_marble_tiles_engraving");
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_POLISHED_MARBLE,     "white_polished_marble_engraving");
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR,       "white_marble_pillar_engraving");
+        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR_CAP,   "white_marble_pillar_cap_engraving");
+
+        // ── orange_marble ──
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_BRICKS,       "orange_marble_bricks_engraving");
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_SMALL_BRICKS, "orange_marble_small_bricks_engraving");
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_TILES,        "orange_marble_tiles_engraving");
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_POLISHED_MARBLE,     "orange_polished_marble_engraving");
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR,       "orange_marble_pillar_engraving");
+        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR_CAP,   "orange_marble_pillar_cap_engraving");
+
+        // ── magenta_marble ──
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_BRICKS,       "magenta_marble_bricks_engraving");
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "magenta_marble_small_bricks_engraving");
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_TILES,        "magenta_marble_tiles_engraving");
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_POLISHED_MARBLE,     "magenta_polished_marble_engraving");
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR,       "magenta_marble_pillar_engraving");
+        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR_CAP,   "magenta_marble_pillar_cap_engraving");
+
+        // ── light_blue_marble ──
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_BRICKS,       "light_blue_marble_bricks_engraving");
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS, "light_blue_marble_small_bricks_engraving");
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_TILES,        "light_blue_marble_tiles_engraving");
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_POLISHED_MARBLE,     "light_blue_polished_marble_engraving");
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR,       "light_blue_marble_pillar_engraving");
+        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP,   "light_blue_marble_pillar_cap_engraving");
+
+        // ── yellow_marble ──
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_BRICKS,       "yellow_marble_bricks_engraving");
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_SMALL_BRICKS, "yellow_marble_small_bricks_engraving");
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_TILES,        "yellow_marble_tiles_engraving");
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_POLISHED_MARBLE,     "yellow_polished_marble_engraving");
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR,       "yellow_marble_pillar_engraving");
+        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR_CAP,   "yellow_marble_pillar_cap_engraving");
+
+        // ── lime_marble ──
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_BRICKS,       "lime_marble_bricks_engraving");
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_SMALL_BRICKS, "lime_marble_small_bricks_engraving");
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_TILES,        "lime_marble_tiles_engraving");
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_POLISHED_MARBLE,     "lime_polished_marble_engraving");
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR,       "lime_marble_pillar_engraving");
+        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR_CAP,   "lime_marble_pillar_cap_engraving");
+
+        // ── pink_marble ──
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_BRICKS,       "pink_marble_bricks_engraving");
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_SMALL_BRICKS, "pink_marble_small_bricks_engraving");
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_TILES,        "pink_marble_tiles_engraving");
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_POLISHED_MARBLE,     "pink_polished_marble_engraving");
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR,       "pink_marble_pillar_engraving");
+        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR_CAP,   "pink_marble_pillar_cap_engraving");
+
+        // ── gray_marble ──
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_BRICKS,       "gray_marble_bricks_engraving");
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_SMALL_BRICKS, "gray_marble_small_bricks_engraving");
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_TILES,        "gray_marble_tiles_engraving");
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_POLISHED_MARBLE,     "gray_polished_marble_engraving");
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR,       "gray_marble_pillar_engraving");
+        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR_CAP,   "gray_marble_pillar_cap_engraving");
+
+        // ── light_gray_marble ──
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_BRICKS,       "light_gray_marble_bricks_engraving");
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS, "light_gray_marble_small_bricks_engraving");
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_TILES,        "light_gray_marble_tiles_engraving");
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_POLISHED_MARBLE,     "light_gray_polished_marble_engraving");
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR,       "light_gray_marble_pillar_engraving");
+        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP,   "light_gray_marble_pillar_cap_engraving");
+
+        // ── cyan_marble ──
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_BRICKS,       "cyan_marble_bricks_engraving");
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_SMALL_BRICKS, "cyan_marble_small_bricks_engraving");
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_TILES,        "cyan_marble_tiles_engraving");
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_POLISHED_MARBLE,     "cyan_polished_marble_engraving");
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR,       "cyan_marble_pillar_engraving");
+        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR_CAP,   "cyan_marble_pillar_cap_engraving");
+
+        // ── purple_marble ──
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_BRICKS,       "purple_marble_bricks_engraving");
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_SMALL_BRICKS, "purple_marble_small_bricks_engraving");
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_TILES,        "purple_marble_tiles_engraving");
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_POLISHED_MARBLE,     "purple_polished_marble_engraving");
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR,       "purple_marble_pillar_engraving");
+        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR_CAP,   "purple_marble_pillar_cap_engraving");
+
+        // ── blue_marble ──
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_BRICKS,       "blue_marble_bricks_engraving");
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_SMALL_BRICKS, "blue_marble_small_bricks_engraving");
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_TILES,        "blue_marble_tiles_engraving");
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_POLISHED_MARBLE,     "blue_polished_marble_engraving");
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR,       "blue_marble_pillar_engraving");
+        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR_CAP,   "blue_marble_pillar_cap_engraving");
+
+        // ── brown_marble ──
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_BRICKS,       "brown_marble_bricks_engraving");
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_SMALL_BRICKS, "brown_marble_small_bricks_engraving");
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_TILES,        "brown_marble_tiles_engraving");
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_POLISHED_MARBLE,     "brown_polished_marble_engraving");
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR,       "brown_marble_pillar_engraving");
+        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR_CAP,   "brown_marble_pillar_cap_engraving");
+
+        // ── green_marble ──
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_BRICKS,       "green_marble_bricks_engraving");
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_SMALL_BRICKS, "green_marble_small_bricks_engraving");
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_TILES,        "green_marble_tiles_engraving");
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_POLISHED_MARBLE,     "green_polished_marble_engraving");
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR,       "green_marble_pillar_engraving");
+        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR_CAP,   "green_marble_pillar_cap_engraving");
+
+        // ── red_marble ──
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_BRICKS,       "red_marble_bricks_engraving");
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_SMALL_BRICKS, "red_marble_small_bricks_engraving");
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_TILES,        "red_marble_tiles_engraving");
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_POLISHED_MARBLE,     "red_polished_marble_engraving");
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR,       "red_marble_pillar_engraving");
+        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR_CAP,   "red_marble_pillar_cap_engraving");
+
+        // ── black_marble ──
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_BRICKS,       "black_marble_bricks_engraving");
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_SMALL_BRICKS, "black_marble_small_bricks_engraving");
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_TILES,        "black_marble_tiles_engraving");
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_POLISHED_MARBLE,     "black_polished_marble_engraving");
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR,       "black_marble_pillar_engraving");
+        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR_CAP,   "black_marble_pillar_cap_engraving");
+
         // ── mossy_cobblestone ──
         s.one( Blocks.MOSSY_COBBLESTONE, OttBlocks.CURLY_MOSSY_COBBLESTONE_CTM, "curly_mossy_cobblestone_pillar_engraving");
         s.one( Blocks.MOSSY_COBBLESTONE, OttBlocks.FINE_MOSSY_COBBLESTONE_CTM, "fine_mossy_cobblestone_pillar_engraving");
@@ -1203,6 +1463,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("mossy_cobblestone"), OttBlocks.TILED_BORDERED_MOSSY_COBBLESTONE, "tiled_bordered_mossy_cobblestone_ctm_engraving");
         s.tagged( materialTag("mossy_cobblestone"), OttBlocks.TILED_MOSSY_COBBLESTONE_COLUMN, "tiled_mossy_cobblestone_column_ctm_engraving");
         s.tagged( materialTag("mossy_cobblestone"), OttBlocks.TINY_BRICK_BORDERED_MOSSY_COBBLESTONE, "tiny_brick_bordered_mossy_cobblestone_ctm_engraving");
+        for (String n : new String[]{"curly_mossy_cobblestone_ctm", "fine_mossy_cobblestone_ctm", "ornate_mossy_cobblestone_ctm", "simple_mossy_cobblestone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("mossy_cobblestone"), eb, n + "_engraving"); }
+
         // ── mossy_stone_bricks ──
         s.one( Blocks.MOSSY_STONE_BRICKS, OttBlocks.BORDERED_MOSSY_STONE_BRICKS, "bordered_mossy_stone_bricks_ctm_engraving");
         s.one( Blocks.MOSSY_STONE_BRICKS, OttBlocks.BRICK_BORDERED_MOSSY_STONE_BRICKS, "brick_bordered_mossy_stone_bricks_ctm_engraving");
@@ -1220,6 +1482,8 @@ public final class EngravingEntries {
         s.one( Blocks.MOSSY_STONE_BRICKS, OttBlocks.TILED_BORDERED_MOSSY_STONE_BRICKS, "tiled_bordered_mossy_stone_bricks_ctm_engraving");
         s.one( Blocks.MOSSY_STONE_BRICKS, OttBlocks.TILED_MOSSY_STONE_BRICKS_COLUMN, "tiled_mossy_stone_bricks_column_ctm_engraving");
         s.one( Blocks.MOSSY_STONE_BRICKS, OttBlocks.TINY_BRICK_BORDERED_MOSSY_STONE_BRICKS, "tiny_brick_bordered_mossy_stone_bricks_ctm_engraving");
+        for (String n : new String[]{"curly_mossy_stone_bricks_ctm", "fine_mossy_stone_bricks_ctm", "ornate_mossy_stone_bricks_ctm", "simple_mossy_stone_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("mossy_stone_bricks"), eb, n + "_engraving"); }
+
         // ── mud ──
         s.one( Blocks.MUD, OttBlocks.CARVED_MUD_CTM, "carved_mud_pillar_engraving");
         s.one( Blocks.MUD, OttBlocks.CURLY_MUD_CTM, "curly_mud_pillar_engraving");
@@ -1238,6 +1502,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("mud"), OttBlocks.SCALY_MUD, "scaly_mud_ctm_engraving");
         s.tagged( materialTag("mud"), OttBlocks.TILED_BORDERED_MUD, "tiled_bordered_mud_ctm_engraving");
         s.tagged( materialTag("mud"), OttBlocks.TILED_MUD_COLUMN, "tiled_mud_column_ctm_engraving");
+        for (String n : new String[]{"carved_mud_ctm", "curly_mud_ctm", "fancy_mud_ctm", "fine_mud_ctm", "ornate_mud_ctm", "simple_mud_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("mud"), eb, n + "_engraving"); }
+
         // ── mud_bricks ──
         s.one( Blocks.MUD_BRICKS, OttBlocks.CARVED_MUD_BRICKS_CTM, "carved_mud_bricks_pillar_engraving");
         s.one( Blocks.MUD_BRICKS, OttBlocks.CURLY_MUD_BRICKS_CTM, "curly_mud_bricks_pillar_engraving");
@@ -1255,6 +1521,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("mud_bricks"), OttBlocks.OVERLAPPING_MUD_BRICKS_TILES, "overlapping_mud_bricks_tiles_ctm_engraving");
         s.tagged( materialTag("mud_bricks"), OttBlocks.TILED_BORDERED_MUD_BRICKS, "tiled_bordered_mud_bricks_ctm_engraving");
         s.tagged( materialTag("mud_bricks"), OttBlocks.TILED_MUD_BRICKS_COLUMN, "tiled_mud_bricks_column_ctm_engraving");
+        for (String n : new String[]{"carved_mud_bricks_ctm", "curly_mud_bricks_ctm", "fancy_mud_bricks_ctm", "fine_mud_bricks_ctm", "ornate_mud_bricks_ctm", "simple_mud_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("mud_bricks"), eb, n + "_engraving"); }
+
         // ── nether_bricks ──
         s.one( Blocks.NETHER_BRICKS, OttBlocks.CURLY_NETHER_BRICKS_CTM, "curly_nether_bricks_pillar_engraving");
         s.one( Blocks.NETHER_BRICKS, OttBlocks.FINE_NETHER_BRICKS_CTM, "fine_nether_bricks_pillar_engraving");
@@ -1284,6 +1552,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("nether_bricks"), OttBlocks.TILED_BORDERED_NETHER_BRICKS, "tiled_bordered_nether_bricks_ctm_engraving");
         s.tagged( materialTag("nether_bricks"), OttBlocks.TILED_NETHER_BRICKS_COLUMN, "tiled_nether_bricks_column_ctm_engraving");
         s.tagged( materialTag("nether_bricks"), OttBlocks.TINY_BRICK_BORDERED_NETHER_BRICKS, "tiny_brick_bordered_nether_bricks_ctm_engraving");
+        for (String n : new String[]{"curly_nether_bricks_ctm", "fine_nether_bricks_ctm", "ornate_nether_bricks_ctm", "simple_nether_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("nether_bricks"), eb, n + "_engraving"); }
+
         // ── netherite_block ──
         s.tagged( materialTag("netherite_block"), OttBlocks.NETHERITE_BLOCK_BEAMS.get(), "netherite_block_beams_ctm_engraving");
         s.tagged( materialTag("netherite_block"), OttBlocks.NETHERITE_BLOCK_BRICKS.get(), "netherite_block_bricks_ctm_engraving");
@@ -1294,6 +1564,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("netherite_block"), OttBlocks.NETHERITE_BLOCK_INDENTED.get(), "netherite_block_indented_ctm_engraving");
         s.tagged( materialTag("netherite_block"), OttBlocks.NETHERITE_BLOCK_PATTERNED.get(), "netherite_block_patterned_ctm_engraving");
         s.tagged( materialTag("netherite_block"), OttBlocks.NETHERITE_BLOCK_SMALL_TILES.get(), "netherite_block_small_tiles_ctm_engraving");
+
         // ── netherrack ──
         s.one( Blocks.NETHERRACK, OttBlocks.CURLY_NETHERRACK_CTM, "curly_netherrack_pillar_engraving");
         s.one( Blocks.NETHERRACK, OttBlocks.FINE_NETHERRACK_CTM, "fine_netherrack_pillar_engraving");
@@ -1320,16 +1591,23 @@ public final class EngravingEntries {
         s.tagged( materialTag("netherrack"), OttBlocks.TILED_BORDERED_NETHERRACK, "tiled_bordered_netherrack_ctm_engraving");
         s.tagged( materialTag("netherrack"), OttBlocks.TILED_NETHERRACK_COLUMN, "tiled_netherrack_column_ctm_engraving");
         s.tagged( materialTag("netherrack"), OttBlocks.TINY_BRICK_BORDERED_NETHERRACK, "tiny_brick_bordered_netherrack_ctm_engraving");
+        for (String n : new String[]{"curly_netherrack_ctm", "fine_netherrack_ctm", "ornate_netherrack_ctm", "simple_netherrack_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("netherrack"), eb, n + "_engraving"); }
+
         // ── oak_diamond_bordered_glass ──
         s.one( OttBlocks.OAK_DIAMOND_BORDERED_GLASS.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE.get(), "oak_diamond_bordered_glass_pane_engraving");
+
         // ── oak_horizontal_lined_glass ──
         s.one( OttBlocks.OAK_HORIZONTAL_LINED_GLASS.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE.get(), "oak_horizontal_lined_glass_pane_engraving");
+
         // ── oak_large_diamond_glass ──
         s.one( OttBlocks.OAK_LARGE_DIAMOND_GLASS.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_PANE.get(), "oak_large_diamond_glass_pane_engraving");
+
         // ── oak_line_bared_glass ──
         s.one( OttBlocks.OAK_LINE_BARED_GLASS.get(), OttBlocks.OAK_LINE_BARED_GLASS_PANE.get(), "oak_line_bared_glass_pane_engraving");
+
         // ── oak_ornate_bared_glass ──
         s.one( OttBlocks.OAK_ORNATE_BARED_GLASS.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_PANE.get(), "oak_ornate_bared_glass_pane_engraving");
+
         // ── oak_planks ──
         s.tagged( materialTag("oak_planks"),          OttBlocks.CIRCLE_OAK_GLASS,           "circle_oak_glass_engraving");
         s.tagged( materialTag("oak_planks"),          OttBlocks.OAK_BARRED_GLASS,           "oak_barred_glass_engraving");
@@ -1369,8 +1647,10 @@ public final class EngravingEntries {
         s.tagged( materialTag("oak_planks"), OttBlocks.PEGGED_OAK_PLANKS, "pegged_oak_planks_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.SQUARE_OAK_GLASS_CTM, "square_oak_glass_ctm_engraving");
         s.tagged( materialTag("oak_planks"), OttBlocks.WHIRLWIND_OAK_PLANKS, "whirlwind_oak_planks_ctm_engraving");
+
         // ── oak_woven_glass ──
         s.one( OttBlocks.OAK_WOVEN_GLASS.get(), OttBlocks.OAK_WOVEN_GLASS_PANE.get(), "oak_woven_glass_pane_engraving");
+
         // ── obsidian ──
         s.one( Blocks.OBSIDIAN, OttBlocks.CURLY_OBSIDIAN_CTM, "curly_obsidian_pillar_engraving");
         s.one( Blocks.OBSIDIAN, OttBlocks.FINE_OBSIDIAN_CTM, "fine_obsidian_pillar_engraving");
@@ -1400,36 +1680,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("obsidian"), OttBlocks.TILED_BORDERED_OBSIDIAN, "tiled_bordered_obsidian_ctm_engraving");
         s.tagged( materialTag("obsidian"), OttBlocks.TILED_OBSIDIAN_COLUMN, "tiled_obsidian_column_ctm_engraving");
         s.tagged( materialTag("obsidian"), OttBlocks.TINY_BRICK_BORDERED_OBSIDIAN, "tiny_brick_bordered_obsidian_ctm_engraving");
-        // ── ochre_froglight ──
-        s.tagged( materialTag("ochre_froglight"),       OttBlocks.GLASS_OCHRE_FROGLIGHT,       "glass_ochre_froglight_engraving");
-        // ── orange_concrete ──
-        s.one( Blocks.ORANGE_CONCRETE, OttBlocks.ORANGE_CONCRETE_CTM, "orange_concrete_pillar_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.GRILL_ORANGE_CONCRETE, "grill_orange_concrete_ctm_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.ORANGE_CONCRETE_PANEL, "orange_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.PEGGED_ORANGE_CONCRETE, "pegged_orange_concrete_ctm_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.SMOOTH_ORANGE_CONCRETE, "smooth_orange_concrete_ctm_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.STRIPED_ORANGE_CONCRETE, "striped_orange_concrete_ctm_engraving");
-        s.tagged( materialTag("orange_concrete"), OttBlocks.WIRED_ORANGE_CONCRETE, "wired_orange_concrete_ctm_engraving");
-        // ── orange_marble ──
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_BRICKS,       "orange_marble_bricks_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR,       "orange_marble_pillar_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR_CAP,   "orange_marble_pillar_cap_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_SMALL_BRICKS, "orange_marble_small_bricks_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_TILES,        "orange_marble_tiles_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_POLISHED_MARBLE,     "orange_polished_marble_engraving");
-        // ── orange_terracotta ──
-        s.one( Blocks.ORANGE_TERRACOTTA, OttBlocks.ORANGE_TERRACOTTA_CTM, "orange_terracotta_pillar_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.CIRCULAR_ORANGE_TERRACOTTA, "circular_orange_terracotta_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.CURLED_ORANGE_TERRACOTTA, "curled_orange_terracotta_ctm_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.HEXAGONICAL_ORANGE_TERRACOTTA, "hexagonical_orange_terracotta_ctm_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.INSCRIBED_ORANGE_TERRACOTTA, "inscribed_orange_terracotta_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.ORANGE_TERRACOTTA_COLUMN, "orange_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.SMALL_ORANGE_TERRACOTTA_TILES, "small_orange_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("orange_terracotta"), OttBlocks.STARRY_ORANGE_TERRACOTTA, "starry_orange_terracotta_engraving");
-        // ── oxidized_copper ──
-        s.tagged( materialTag("oxidized_copper"), OttBlocks.OXIDIZED_COPPER_BLOCK.get(), "oxidized_copper_block_ctm_engraving");
-        // ── oxidized_copper_grate ──
-        s.tagged( materialTag("oxidized_copper_grate"), OttBlocks.OXIDIZED_COPPER_GRATE.get(), "oxidized_copper_grate_ctm_engraving");
+        for (String n : new String[]{"curly_obsidian_ctm", "fine_obsidian_ctm", "ornate_obsidian_ctm", "simple_obsidian_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("obsidian"), eb, n + "_engraving"); }
+
+        // ── ochrum ──
+        for (String n : new String[]{"massive_ochrum_bricks", "ochrum_cut_polished_ctm", "ochrum_cut_small_brick_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("ochrum"), eb, n + "_engraving"); }
+
         // ── packed_ice ──
         s.one( Blocks.PACKED_ICE, OttBlocks.CURLY_PACKED_ICE_CTM, "curly_packed_ice_pillar_engraving");
         s.one( Blocks.PACKED_ICE, OttBlocks.FINE_PACKED_ICE_CTM, "fine_packed_ice_pillar_engraving");
@@ -1447,6 +1702,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("packed_ice"), OttBlocks.TILED_BORDERED_PACKED_ICE, "tiled_bordered_packed_ice_ctm_engraving");
         s.tagged( materialTag("packed_ice"), OttBlocks.TILED_PACKED_ICE_COLUMN, "tiled_packed_ice_column_ctm_engraving");
         s.tagged( materialTag("packed_ice"), OttBlocks.TINY_BRICK_BORDERED_PACKED_ICE, "tiny_brick_bordered_packed_ice_ctm_engraving");
+        for (String n : new String[]{"curly_packed_ice_ctm", "fine_packed_ice_ctm", "ornate_packed_ice_ctm", "simple_packed_ice_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("packed_ice"), eb, n + "_engraving"); }
+
         // ── packed_mud ──
         s.one( Blocks.PACKED_MUD, OttBlocks.CARVED_PACKED_MUD_CTM, "carved_packed_mud_pillar_engraving");
         s.one( Blocks.PACKED_MUD, OttBlocks.CURLY_PACKED_MUD_CTM, "curly_packed_mud_pillar_engraving");
@@ -1465,6 +1722,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("packed_mud"), OttBlocks.SCALY_PACKED_MUD, "scaly_packed_mud_ctm_engraving");
         s.tagged( materialTag("packed_mud"), OttBlocks.TILED_BORDERED_PACKED_MUD, "tiled_bordered_packed_mud_ctm_engraving");
         s.tagged( materialTag("packed_mud"), OttBlocks.TILED_PACKED_MUD_COLUMN, "tiled_packed_mud_column_ctm_engraving");
+        for (String n : new String[]{"carved_packed_mud_ctm", "curly_packed_mud_ctm", "fancy_packed_mud_ctm", "fine_packed_mud_ctm", "ornate_packed_mud_ctm", "simple_packed_mud_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("packed_mud"), eb, n + "_engraving"); }
+
         // ── pale_oak_planks ──
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BEAMS.get(), "pale_oak_planks_beams_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_BRICKS.get(), "pale_oak_planks_bricks_ctm_engraving");
@@ -1485,36 +1744,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_TILES.get(), "pale_oak_planks_tiles_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_WAVY.get(), "pale_oak_planks_wavy_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_WOVEN.get(), "pale_oak_planks_woven_ctm_engraving");
-        // ── pearlescent_froglight ──
-        s.tagged( materialTag("pearlescent_froglight"), OttBlocks.GLASS_PEARLESCENT_FROGLIGHT, "glass_pearlescent_froglight_engraving");
-        // ── pink_concrete ──
-        s.one( Blocks.PINK_CONCRETE, OttBlocks.PINK_CONCRETE_CTM, "pink_concrete_pillar_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.GRILL_PINK_CONCRETE, "grill_pink_concrete_ctm_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.PEGGED_PINK_CONCRETE, "pegged_pink_concrete_ctm_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.PINK_CONCRETE_PANEL, "pink_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.SMOOTH_PINK_CONCRETE, "smooth_pink_concrete_ctm_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.STRIPED_PINK_CONCRETE, "striped_pink_concrete_ctm_engraving");
-        s.tagged( materialTag("pink_concrete"), OttBlocks.WIRED_PINK_CONCRETE, "wired_pink_concrete_ctm_engraving");
-        // ── pink_marble ──
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_BRICKS,       "pink_marble_bricks_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR,       "pink_marble_pillar_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR_CAP,   "pink_marble_pillar_cap_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_SMALL_BRICKS, "pink_marble_small_bricks_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_TILES,        "pink_marble_tiles_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_POLISHED_MARBLE,     "pink_polished_marble_engraving");
-        // ── pink_terracotta ──
-        s.one( Blocks.PINK_TERRACOTTA, OttBlocks.PINK_TERRACOTTA_CTM, "pink_terracotta_pillar_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.CIRCULAR_PINK_TERRACOTTA, "circular_pink_terracotta_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.CURLED_PINK_TERRACOTTA, "curled_pink_terracotta_ctm_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.HEXAGONICAL_PINK_TERRACOTTA, "hexagonical_pink_terracotta_ctm_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.INSCRIBED_PINK_TERRACOTTA, "inscribed_pink_terracotta_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.PINK_TERRACOTTA_COLUMN, "pink_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.SMALL_PINK_TERRACOTTA_TILES, "small_pink_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("pink_terracotta"), OttBlocks.STARRY_PINK_TERRACOTTA, "starry_pink_terracotta_engraving");
+
         // ── plain_limestone ──
-        s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.LIMESTONE_MASONRY,       "limestone_masonry_engraving");
         s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.MIXED_LIMESTONE_BRICKS,  "mixed_limestone_bricks_engraving");
         s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.POLISHED_LIMESTONE,      "polished_limestone_ctm_engraving");
+
         // ── prismarine ──
         s.one( Blocks.PRISMARINE, OttBlocks.BORDERED_PRISMARINE, "bordered_prismarine_ctm_engraving");
         s.one( Blocks.PRISMARINE, OttBlocks.BRICK_BORDERED_PRISMARINE, "brick_bordered_prismarine_ctm_engraving");
@@ -1532,30 +1766,8 @@ public final class EngravingEntries {
         s.one( Blocks.PRISMARINE, OttBlocks.TILED_BORDERED_PRISMARINE, "tiled_bordered_prismarine_ctm_engraving");
         s.one( Blocks.PRISMARINE, OttBlocks.TILED_PRISMARINE_COLUMN, "tiled_prismarine_column_ctm_engraving");
         s.one( Blocks.PRISMARINE, OttBlocks.TINY_BRICK_BORDERED_PRISMARINE, "tiny_brick_bordered_prismarine_ctm_engraving");
-        // ── purple_concrete ──
-        s.one( Blocks.PURPLE_CONCRETE, OttBlocks.PURPLE_CONCRETE_CTM, "purple_concrete_pillar_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.GRILL_PURPLE_CONCRETE, "grill_purple_concrete_ctm_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.PEGGED_PURPLE_CONCRETE, "pegged_purple_concrete_ctm_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.PURPLE_CONCRETE_PANEL, "purple_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.SMOOTH_PURPLE_CONCRETE, "smooth_purple_concrete_ctm_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.STRIPED_PURPLE_CONCRETE, "striped_purple_concrete_ctm_engraving");
-        s.tagged( materialTag("purple_concrete"), OttBlocks.WIRED_PURPLE_CONCRETE, "wired_purple_concrete_ctm_engraving");
-        // ── purple_marble ──
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_BRICKS,       "purple_marble_bricks_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR,       "purple_marble_pillar_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR_CAP,   "purple_marble_pillar_cap_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_SMALL_BRICKS, "purple_marble_small_bricks_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_TILES,        "purple_marble_tiles_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_POLISHED_MARBLE,     "purple_polished_marble_engraving");
-        // ── purple_terracotta ──
-        s.one( Blocks.PURPLE_TERRACOTTA, OttBlocks.PURPLE_TERRACOTTA_CTM, "purple_terracotta_pillar_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.CIRCULAR_PURPLE_TERRACOTTA, "circular_purple_terracotta_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.CURLED_PURPLE_TERRACOTTA, "curled_purple_terracotta_ctm_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.HEXAGONICAL_PURPLE_TERRACOTTA, "hexagonical_purple_terracotta_ctm_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.INSCRIBED_PURPLE_TERRACOTTA, "inscribed_purple_terracotta_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.PURPLE_TERRACOTTA_COLUMN, "purple_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.SMALL_PURPLE_TERRACOTTA_TILES, "small_purple_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("purple_terracotta"), OttBlocks.STARRY_PURPLE_TERRACOTTA, "starry_purple_terracotta_engraving");
+        for (String n : new String[]{"curly_prismarine_ctm", "fine_prismarine_ctm", "ornate_prismarine_ctm", "prismarine_bricks_beams_ctm", "prismarine_bricks_brick_pattern_ctm", "prismarine_bricks_brick_paving_ctm", "prismarine_bricks_bricks_ctm", "prismarine_bricks_chiseled_circles_ctm", "prismarine_bricks_chiseled_squares_ctm", "prismarine_bricks_diagonal_bricks_ctm", "prismarine_bricks_diagonal_tiles_ctm", "prismarine_bricks_dotted_ctm", "prismarine_bricks_pillars_ctm", "prismarine_bricks_rotated_bricks_ctm", "prismarine_bricks_rows_ctm", "prismarine_bricks_small_tiles_ctm", "prismarine_bricks_squares_ctm", "prismarine_bricks_tiles_ctm", "prismarine_bricks_wavy_ctm", "prismarine_bricks_woven_ctm", "simple_prismarine_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("prismarine"), eb, n + "_engraving"); }
+
         // ── purpur_block ──
         s.one( Blocks.PURPUR_BLOCK, OttBlocks.CURLY_PURPUR_BLOCK_CTM, "curly_purpur_block_pillar_engraving");
         s.one( Blocks.PURPUR_BLOCK, OttBlocks.FINE_PURPUR_BLOCK_CTM, "fine_purpur_block_pillar_engraving");
@@ -1574,6 +1786,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("purpur_block"), OttBlocks.TILED_BORDERED_PURPUR_BLOCK, "tiled_bordered_purpur_block_ctm_engraving");
         s.tagged( materialTag("purpur_block"), OttBlocks.TILED_PURPUR_BLOCK_COLUMN, "tiled_purpur_block_column_ctm_engraving");
         s.tagged( materialTag("purpur_block"), OttBlocks.TINY_BRICK_BORDERED_PURPUR_BLOCK, "tiny_brick_bordered_purpur_block_ctm_engraving");
+        for (String n : new String[]{"curly_purpur_block_ctm", "fine_purpur_block_ctm", "ornate_purpur_block_ctm", "purpur_brick_pattern_ctm", "purpur_brick_paving_ctm", "purpur_bricks_ctm", "purpur_diagonal_bricks_ctm", "purpur_diagonal_tiles_ctm", "purpur_dotted_ctm", "purpur_fabric_ctm", "purpur_jagged_pattern_ctm", "purpur_large_tiles_ctm", "purpur_organic_pattern_ctm", "purpur_rotated_bricks_ctm", "purpur_slanted_tiles_ctm", "purpur_small_tiles_ctm", "purpur_spiral_pattern_ctm", "purpur_squares_ctm", "purpur_tiles_ctm", "purpur_woven_ctm", "simple_purpur_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("purpur_block"), eb, n + "_engraving"); }
+
         // ── quartz_block ──
         s.one( Blocks.QUARTZ_BLOCK, OttBlocks.CURLY_QUARTZ_BLOCK_CTM, "curly_quartz_block_pillar_engraving");
         s.one( Blocks.QUARTZ_BLOCK, OttBlocks.FINE_QUARTZ_BLOCK_CTM, "fine_quartz_block_pillar_engraving");
@@ -1605,23 +1819,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("quartz_block"), OttBlocks.TILED_BORDERED_QUARTZ_BLOCK, "tiled_bordered_quartz_block_ctm_engraving");
         s.tagged( materialTag("quartz_block"), OttBlocks.TILED_QUARTZ_BLOCK_COLUMN, "tiled_quartz_block_column_ctm_engraving");
         s.tagged( materialTag("quartz_block"), OttBlocks.TINY_BRICK_BORDERED_QUARTZ_BLOCK, "tiny_brick_bordered_quartz_block_ctm_engraving");
-        // ── raw_copper_block ──
-        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.CURLY_RAW_COPPER_BLOCK_CTM, "curly_raw_copper_block_pillar_engraving");
-        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.FINE_RAW_COPPER_BLOCK_CTM, "fine_raw_copper_block_pillar_engraving");
-        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.ORNATE_RAW_COPPER_BLOCK_CTM, "ornate_raw_copper_block_pillar_engraving");
-        s.one( Blocks.RAW_COPPER_BLOCK, OttBlocks.SIMPLE_RAW_COPPER_BLOCK_CTM, "simple_raw_copper_block_pillar_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.BORDERED_RAW_COPPER_BLOCK, "bordered_raw_copper_block_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.BRICK_BORDERED_RAW_COPPER_BLOCK, "brick_bordered_raw_copper_block_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.CUT_RAW_COPPER_BLOCK_COLUMN, "cut_raw_copper_block_column_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.EDGED_RAW_COPPER_BLOCK_BRICKS, "edged_raw_copper_block_bricks_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.MASSIVE_RAW_COPPER_BLOCK_BRICKS, "massive_raw_copper_block_bricks_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.OVERLAPPING_RAW_COPPER_BLOCK_TILES, "overlapping_raw_copper_block_tiles_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.POLISHED_RAW_COPPER_BLOCK, "polished_raw_copper_block_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.SMOOTH_RAW_COPPER_BLOCK_COLUMN, "smooth_raw_copper_block_column_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.THICK_INLAYED_RAW_COPPER_BLOCK, "thick_inlayed_raw_copper_block_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.TILED_BORDERED_RAW_COPPER_BLOCK, "tiled_bordered_raw_copper_block_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.TILED_RAW_COPPER_BLOCK_COLUMN, "tiled_raw_copper_block_column_ctm_engraving");
-        s.tagged( materialTag("raw_copper_block"), OttBlocks.TINY_BRICK_BORDERED_RAW_COPPER_BLOCK, "tiny_brick_bordered_raw_copper_block_ctm_engraving");
+        for (String n : new String[]{"curly_quartz_block_ctm", "fine_quartz_block_ctm", "ornate_quartz_block_ctm", "quartz_block_chiseled_ctm", "quartz_block_ctm", "simple_quartz_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("quartz_block"), eb, n + "_engraving"); }
+
         // ── raw_gold_block ──
         s.one( Blocks.RAW_GOLD_BLOCK, OttBlocks.CURLY_RAW_GOLD_BLOCK_CTM, "curly_raw_gold_block_pillar_engraving");
         s.one( Blocks.RAW_GOLD_BLOCK, OttBlocks.FINE_RAW_GOLD_BLOCK_CTM, "fine_raw_gold_block_pillar_engraving");
@@ -1639,6 +1838,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("raw_gold_block"), OttBlocks.TILED_BORDERED_RAW_GOLD_BLOCK, "tiled_bordered_raw_gold_block_ctm_engraving");
         s.tagged( materialTag("raw_gold_block"), OttBlocks.TILED_RAW_GOLD_BLOCK_COLUMN, "tiled_raw_gold_block_column_ctm_engraving");
         s.tagged( materialTag("raw_gold_block"), OttBlocks.TINY_BRICK_BORDERED_RAW_GOLD_BLOCK, "tiny_brick_bordered_raw_gold_block_ctm_engraving");
+        for (String n : new String[]{"curly_raw_gold_block_ctm", "fine_raw_gold_block_ctm", "ornate_raw_gold_block_ctm", "simple_raw_gold_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("raw_gold_block"), eb, n + "_engraving"); }
+
         // ── raw_iron_block ──
         s.one( Blocks.RAW_IRON_BLOCK, OttBlocks.CURLY_RAW_IRON_BLOCK_CTM, "curly_raw_iron_block_pillar_engraving");
         s.one( Blocks.RAW_IRON_BLOCK, OttBlocks.FINE_RAW_IRON_BLOCK_CTM, "fine_raw_iron_block_pillar_engraving");
@@ -1656,21 +1857,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("raw_iron_block"), OttBlocks.TILED_BORDERED_RAW_IRON_BLOCK, "tiled_bordered_raw_iron_block_ctm_engraving");
         s.tagged( materialTag("raw_iron_block"), OttBlocks.TILED_RAW_IRON_BLOCK_COLUMN, "tiled_raw_iron_block_column_ctm_engraving");
         s.tagged( materialTag("raw_iron_block"), OttBlocks.TINY_BRICK_BORDERED_RAW_IRON_BLOCK, "tiny_brick_bordered_raw_iron_block_ctm_engraving");
-        // ── red_concrete ──
-        s.one( Blocks.RED_CONCRETE, OttBlocks.RED_CONCRETE_CTM, "red_concrete_pillar_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.GRILL_RED_CONCRETE, "grill_red_concrete_ctm_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.PEGGED_RED_CONCRETE, "pegged_red_concrete_ctm_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.RED_CONCRETE_PANEL, "red_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.SMOOTH_RED_CONCRETE, "smooth_red_concrete_ctm_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.STRIPED_RED_CONCRETE, "striped_red_concrete_ctm_engraving");
-        s.tagged( materialTag("red_concrete"), OttBlocks.WIRED_RED_CONCRETE, "wired_red_concrete_ctm_engraving");
-        // ── red_marble ──
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_BRICKS,       "red_marble_bricks_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR,       "red_marble_pillar_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR_CAP,   "red_marble_pillar_cap_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_SMALL_BRICKS, "red_marble_small_bricks_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_TILES,        "red_marble_tiles_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_POLISHED_MARBLE,     "red_polished_marble_engraving");
+        for (String n : new String[]{"curly_raw_iron_block_ctm", "fine_raw_iron_block_ctm", "ornate_raw_iron_block_ctm", "simple_raw_iron_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("raw_iron_block"), eb, n + "_engraving"); }
+
         // ── red_nether_bricks ──
         s.one( Blocks.RED_NETHER_BRICKS, OttBlocks.CURLY_RED_NETHER_BRICKS_CTM, "curly_red_nether_bricks_pillar_engraving");
         s.one( Blocks.RED_NETHER_BRICKS, OttBlocks.FINE_RED_NETHER_BRICKS_CTM, "fine_red_nether_bricks_pillar_engraving");
@@ -1688,6 +1876,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("red_nether_bricks"), OttBlocks.TILED_BORDERED_RED_NETHER_BRICKS, "tiled_bordered_red_nether_bricks_ctm_engraving");
         s.tagged( materialTag("red_nether_bricks"), OttBlocks.TILED_RED_NETHER_BRICKS_COLUMN, "tiled_red_nether_bricks_column_ctm_engraving");
         s.tagged( materialTag("red_nether_bricks"), OttBlocks.TINY_BRICK_BORDERED_RED_NETHER_BRICKS, "tiny_brick_bordered_red_nether_bricks_ctm_engraving");
+        for (String n : new String[]{"curly_red_nether_bricks_ctm", "fine_red_nether_bricks_ctm", "ornate_red_nether_bricks_ctm", "red_nether_bricks_beams_ctm", "red_nether_bricks_brick_pattern_ctm", "red_nether_bricks_brick_paving_ctm", "red_nether_bricks_chiseled_squares_ctm", "red_nether_bricks_diagonal_bricks_ctm", "red_nether_bricks_large_bricks_ctm", "red_nether_bricks_large_tiles_ctm", "red_nether_bricks_rotated_bricks_ctm", "red_nether_bricks_small_tiles_ctm", "red_nether_bricks_smooth_ctm", "red_nether_bricks_squares_ctm", "red_nether_bricks_tiles_ctm", "simple_red_nether_bricks_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("red_nether_bricks"), eb, n + "_engraving"); }
+
         // ── red_sandstone ──
         s.one( Blocks.RED_SANDSTONE, OttBlocks.CURLY_RED_SANDSTONE_CTM, "curly_red_sandstone_pillar_engraving");
         s.one( Blocks.RED_SANDSTONE, OttBlocks.FINE_RED_SANDSTONE_CTM, "fine_red_sandstone_pillar_engraving");
@@ -1712,15 +1902,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("red_sandstone"), OttBlocks.TILED_BORDERED_RED_SANDSTONE, "tiled_bordered_red_sandstone_ctm_engraving");
         s.tagged( materialTag("red_sandstone"), OttBlocks.TILED_RED_SANDSTONE_COLUMN, "tiled_red_sandstone_column_ctm_engraving");
         s.tagged( materialTag("red_sandstone"), OttBlocks.TINY_BRICK_BORDERED_RED_SANDSTONE, "tiny_brick_bordered_red_sandstone_ctm_engraving");
-        // ── red_terracotta ──
-        s.one( Blocks.RED_TERRACOTTA, OttBlocks.RED_TERRACOTTA_CTM, "red_terracotta_pillar_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.CIRCULAR_RED_TERRACOTTA, "circular_red_terracotta_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.CURLED_RED_TERRACOTTA, "curled_red_terracotta_ctm_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.HEXAGONICAL_RED_TERRACOTTA, "hexagonical_red_terracotta_ctm_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.INSCRIBED_RED_TERRACOTTA, "inscribed_red_terracotta_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.RED_TERRACOTTA_COLUMN, "red_terracotta_column_ctm_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.SMALL_RED_TERRACOTTA_TILES, "small_red_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("red_terracotta"), OttBlocks.STARRY_RED_TERRACOTTA, "starry_red_terracotta_engraving");
+        for (String n : new String[]{"curly_red_sandstone_ctm", "cut_red_sandstone_ctm", "fine_red_sandstone_ctm", "ornate_red_sandstone_ctm", "simple_red_sandstone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("red_sandstone"), eb, n + "_engraving"); }
+
         // ── redstone_block ──
         s.one( Blocks.REDSTONE_BLOCK, OttBlocks.CURLY_REDSTONE_BLOCK_CTM, "curly_redstone_block_pillar_engraving");
         s.one( Blocks.REDSTONE_BLOCK, OttBlocks.FINE_REDSTONE_BLOCK_CTM, "fine_redstone_block_pillar_engraving");
@@ -1749,6 +1932,14 @@ public final class EngravingEntries {
         s.tagged( materialTag("redstone_block"), OttBlocks.TILED_BORDERED_REDSTONE_BLOCK, "tiled_bordered_redstone_block_ctm_engraving");
         s.tagged( materialTag("redstone_block"), OttBlocks.TILED_REDSTONE_BLOCK_COLUMN, "tiled_redstone_block_column_ctm_engraving");
         s.tagged( materialTag("redstone_block"), OttBlocks.TINY_BRICK_BORDERED_REDSTONE_BLOCK, "tiny_brick_bordered_redstone_block_ctm_engraving");
+        for (String n : new String[]{"curly_redstone_block_ctm", "fine_redstone_block_ctm", "ornate_redstone_block_ctm", "redstone_block_ctm", "simple_redstone_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("redstone_block"), eb, n + "_engraving"); }
+
+        // ── redstone_lamp ──
+        OttBlocks.REDSTONE_LAMPS.forEach((name, block) -> s.tagged( materialTag("redstone_lamp"), block.get(), name + "_engraving"));
+
+        // ── rose_quartz ──
+        for (String n : new String[]{"massive_rose_quartz_bricks", "rose_quartz_bricks_ctm", "rose_quartz_chiseled_ctm", "rose_quartz_crushed_ctm", "rose_quartz_polished_block_ctm", "rose_quartz_squares_ctm", "rose_quartz_tiles_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("rose_quartz"), eb, n + "_engraving"); }
+
         // ── sandstone ──
         s.one( Blocks.SANDSTONE, OttBlocks.CURLY_SANDSTONE_CTM, "curly_sandstone_pillar_engraving");
         s.one( Blocks.SANDSTONE, OttBlocks.FINE_SANDSTONE_CTM, "fine_sandstone_pillar_engraving");
@@ -1773,41 +1964,53 @@ public final class EngravingEntries {
         s.tagged( materialTag("sandstone"), OttBlocks.TILED_BORDERED_SANDSTONE, "tiled_bordered_sandstone_ctm_engraving");
         s.tagged( materialTag("sandstone"), OttBlocks.TILED_SANDSTONE_COLUMN, "tiled_sandstone_column_ctm_engraving");
         s.tagged( materialTag("sandstone"), OttBlocks.TINY_BRICK_BORDERED_SANDSTONE, "tiny_brick_bordered_sandstone_ctm_engraving");
+        for (String n : new String[]{"curly_sandstone_ctm", "cut_sandstone_ctm", "fine_sandstone_ctm", "ornate_sandstone_ctm", "simple_sandstone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("sandstone"), eb, n + "_engraving"); }
+
+        // ── scorchia ──
+        for (String n : new String[]{"massive_scorchia_bricks", "scorchia_cut_polished_ctm", "scorchia_cut_small_brick_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("scorchia"), eb, n + "_engraving"); }
+
+        // ── scoria ──
+        for (String n : new String[]{"massive_scoria_bricks", "scoria_cut_polished_ctm", "scoria_cut_small_brick_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("scoria"), eb, n + "_engraving"); }
+
         // ── sea_lantern ──
         s.one( Blocks.SEA_LANTERN, OttBlocks.SEA_LANTERN,                     "sea_lantern_ctm_engraving");
+
         // ── smooth_sandstone ──
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_BORDER,                "water_mosaic_border_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_GEOMETRIC,             "water_mosaic_geometric_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_PATTERN,               "water_mosaic_pattern_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_DELICATE,              "water_mosaic_delicate_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_TRADITIONAL,           "water_mosaic_traditional_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_BORDER,                  "air_mosaic_border_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_DELICATE,                "air_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_GEOMETRIC,               "air_mosaic_geometric_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_PATTERN,                 "air_mosaic_pattern_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_DELICATE,                "air_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.AIR_MOSAIC_TRADITIONAL,             "air_mosaic_traditional_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_BORDER,                "earth_mosaic_border_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_DELICATE,              "earth_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_GEOMETRIC,             "earth_mosaic_geometric_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_PATTERN,               "earth_mosaic_pattern_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_DELICATE,              "earth_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.EARTH_MOSAIC_TRADITIONAL,           "earth_mosaic_traditional_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_BORDER,                 "fire_mosaic_border_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_DELICATE,               "fire_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_GEOMETRIC,              "fire_mosaic_geometric_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_PATTERN,                "fire_mosaic_pattern_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_DELICATE,               "fire_mosaic_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.FIRE_MOSAIC_TRADITIONAL,            "fire_mosaic_traditional_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_BORDER,               "spirit_mosaic_border_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_GEOMETRIC,            "spirit_mosaic_geometric_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_PATTERN,              "spirit_mosaic_pattern_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_DELICATE,             "spirit_mosaic_delicate_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_TRADITIONAL,          "spirit_mosaic_traditional_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR,                       "mosaic_floor_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR_DELICATE,              "mosaic_floor_delicate_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.MOSAIC_FLOOR_ROSETTE,               "mosaic_floor_rosette_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.ROMAN_FRESCO_BLACK,                 "roman_fresco_black_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.ROMAN_FRESCO_RED,                   "roman_fresco_red_engraving");
+        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.ROMAN_FRESCO_BLACK,                 "roman_fresco_black_engraving");
+        s.one( OttBlocks.PLAIN_LIMESTONE, OttBlocks.LIMESTONE_MASONRY,       "limestone_masonry_engraving");
+        s.one( Blocks.STONE_BRICKS, OttBlocks.STONE_BRICKS_MASONRY,          "stone_bricks_masonry_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_BRICKS,          "sandstone_slender_bricks_engraving");
         s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,"sandstone_slender_turquoise_pattern_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_BORDER,               "spirit_mosaic_border_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_DELICATE,             "spirit_mosaic_delicate_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_GEOMETRIC,            "spirit_mosaic_geometric_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_PATTERN,              "spirit_mosaic_pattern_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.SPIRIT_MOSAIC_TRADITIONAL,          "spirit_mosaic_traditional_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_BORDER,                "water_mosaic_border_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_DELICATE,              "water_mosaic_delicate_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_GEOMETRIC,             "water_mosaic_geometric_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_PATTERN,               "water_mosaic_pattern_engraving");
-        s.one( Blocks.SMOOTH_SANDSTONE, OttBlocks.WATER_MOSAIC_TRADITIONAL,           "water_mosaic_traditional_engraving");
+
         // ── smooth_stone ──
         s.one( Blocks.SMOOTH_STONE, OttBlocks.CURLY_SMOOTH_STONE_CTM, "curly_smooth_stone_pillar_engraving");
         s.one( Blocks.SMOOTH_STONE, OttBlocks.FINE_SMOOTH_STONE_CTM, "fine_smooth_stone_pillar_engraving");
@@ -1825,6 +2028,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("smooth_stone"), OttBlocks.TILED_BORDERED_SMOOTH_STONE, "tiled_bordered_smooth_stone_ctm_engraving");
         s.tagged( materialTag("smooth_stone"), OttBlocks.TILED_SMOOTH_STONE_COLUMN, "tiled_smooth_stone_column_ctm_engraving");
         s.tagged( materialTag("smooth_stone"), OttBlocks.TINY_BRICK_BORDERED_SMOOTH_STONE, "tiny_brick_bordered_smooth_stone_ctm_engraving");
+        for (String n : new String[]{"curly_smooth_stone_ctm", "fine_smooth_stone_ctm", "ornate_smooth_stone_ctm", "simple_smooth_stone_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("smooth_stone"), eb, n + "_engraving"); }
+
         // ── snow_block ──
         s.one( Blocks.SNOW_BLOCK, OttBlocks.CURLY_SNOW_BLOCK_CTM, "curly_snow_block_pillar_engraving");
         s.one( Blocks.SNOW_BLOCK, OttBlocks.FINE_SNOW_BLOCK_CTM, "fine_snow_block_pillar_engraving");
@@ -1842,6 +2047,8 @@ public final class EngravingEntries {
         s.tagged( materialTag("snow_block"), OttBlocks.TILED_BORDERED_SNOW_BLOCK, "tiled_bordered_snow_block_ctm_engraving");
         s.tagged( materialTag("snow_block"), OttBlocks.TILED_SNOW_BLOCK_COLUMN, "tiled_snow_block_column_ctm_engraving");
         s.tagged( materialTag("snow_block"), OttBlocks.TINY_BRICK_BORDERED_SNOW_BLOCK, "tiny_brick_bordered_snow_block_ctm_engraving");
+        for (String n : new String[]{"curly_snow_block_ctm", "fine_snow_block_ctm", "ornate_snow_block_ctm", "simple_snow_block_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("snow_block"), eb, n + "_engraving"); }
+
         // ── spruce_planks ──
         s.tagged( materialTag("spruce_planks"), OttBlocks.CORNERED_SPRUCE_PLANKS, "cornered_spruce_planks_ctm_engraving");
         s.tagged( materialTag("spruce_planks"), OttBlocks.CRATED_SPRUCE_PLANKS, "crated_spruce_planks_ctm_engraving");
@@ -1869,6 +2076,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("spruce_planks"), OttBlocks.SPRUCE_PLANKS_WAVY.get(), "spruce_planks_wavy_ctm_engraving");
         s.tagged( materialTag("spruce_planks"), OttBlocks.SPRUCE_PLANKS_WOVEN.get(), "spruce_planks_woven_ctm_engraving");
         s.tagged( materialTag("spruce_planks"), OttBlocks.WHIRLWIND_SPRUCE_PLANKS, "whirlwind_spruce_planks_ctm_engraving");
+
         // ── stone ──
         s.one( Blocks.STONE, OttBlocks.CHAOTIC_MEDIUM_STONE_BRICKS,        "chaotic_medium_stone_bricks_engraving");
         s.one( Blocks.STONE, OttBlocks.CHAOTIC_SMALL_STONE_BRICKS,         "chaotic_small_stone_bricks_engraving");
@@ -1928,10 +2136,10 @@ public final class EngravingEntries {
         s.tagged( materialTag("stone"), OttBlocks.STONE_SQUARES.get(), "stone_squares_ctm_engraving");
         s.tagged( materialTag("stone"), OttBlocks.STONE_TILES.get(), "stone_tiles_ctm_engraving");
         s.tagged( materialTag("stone"), OttBlocks.STONE_WAVES.get(), "stone_waves_ctm_engraving");
+
         // ── stone_bricks ──
-        s.one( Blocks.STONE_BRICKS, OttBlocks.STONE_BRICKS_MASONRY,          "stone_bricks_masonry_engraving");
+
         // ── terracotta ──
-        s.one( Blocks.TERRACOTTA, OttBlocks.TERRACOTTA_CTM, "terracotta_pillar_engraving");
         s.tagged( materialTag("terracotta"), OttBlocks.CIRCULAR_TERRACOTTA, "circular_terracotta_engraving");
         s.tagged( materialTag("terracotta"), OttBlocks.CURLED_TERRACOTTA, "curled_terracotta_ctm_engraving");
         s.tagged( materialTag("terracotta"), OttBlocks.HEXAGONICAL_TERRACOTTA, "hexagonical_terracotta_ctm_engraving");
@@ -1939,24 +2147,168 @@ public final class EngravingEntries {
         s.tagged( materialTag("terracotta"), OttBlocks.SMALL_TERRACOTTA_TILES, "small_terracotta_tiles_ctm_engraving");
         s.tagged( materialTag("terracotta"), OttBlocks.STARRY_TERRACOTTA, "starry_terracotta_engraving");
         s.tagged( materialTag("terracotta"), OttBlocks.TERRACOTTA_COLUMN, "terracotta_column_ctm_engraving");
-        // ── tinted_glass ──
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS, "tinted_borderless_glass_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLACK, "tinted_borderless_glass_black_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLUE, "tinted_borderless_glass_blue_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BROWN, "tinted_borderless_glass_brown_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_CYAN, "tinted_borderless_glass_cyan_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GRAY, "tinted_borderless_glass_gray_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_GREEN, "tinted_borderless_glass_green_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE, "tinted_borderless_glass_light_blue_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY, "tinted_borderless_glass_light_gray_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_LIME, "tinted_borderless_glass_lime_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_MAGENTA, "tinted_borderless_glass_magenta_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_ORANGE, "tinted_borderless_glass_orange_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PINK, "tinted_borderless_glass_pink_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_PURPLE, "tinted_borderless_glass_purple_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_RED, "tinted_borderless_glass_red_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_WHITE, "tinted_borderless_glass_white_ctm_engraving");
-        s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_YELLOW, "tinted_borderless_glass_yellow_ctm_engraving");
+        s.one( Blocks.TERRACOTTA, OttBlocks.TERRACOTTA_CTM, "terracotta_pillar_engraving");
+
+        // ── white_terracotta ──
+        s.tagged( materialTag("white_terracotta"), OttBlocks.CIRCULAR_WHITE_TERRACOTTA, "circular_white_terracotta_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.CURLED_WHITE_TERRACOTTA, "curled_white_terracotta_ctm_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.HEXAGONICAL_WHITE_TERRACOTTA, "hexagonical_white_terracotta_ctm_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.INSCRIBED_WHITE_TERRACOTTA, "inscribed_white_terracotta_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.SMALL_WHITE_TERRACOTTA_TILES, "small_white_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.STARRY_WHITE_TERRACOTTA, "starry_white_terracotta_engraving");
+        s.tagged( materialTag("white_terracotta"), OttBlocks.WHITE_TERRACOTTA_COLUMN, "white_terracotta_column_ctm_engraving");
+        s.one( Blocks.WHITE_TERRACOTTA, OttBlocks.WHITE_TERRACOTTA_CTM, "white_terracotta_pillar_engraving");
+
+        // ── orange_terracotta ──
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.CIRCULAR_ORANGE_TERRACOTTA, "circular_orange_terracotta_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.CURLED_ORANGE_TERRACOTTA, "curled_orange_terracotta_ctm_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.HEXAGONICAL_ORANGE_TERRACOTTA, "hexagonical_orange_terracotta_ctm_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.INSCRIBED_ORANGE_TERRACOTTA, "inscribed_orange_terracotta_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.ORANGE_TERRACOTTA_COLUMN, "orange_terracotta_column_ctm_engraving");
+        s.one( Blocks.ORANGE_TERRACOTTA, OttBlocks.ORANGE_TERRACOTTA_CTM, "orange_terracotta_pillar_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.SMALL_ORANGE_TERRACOTTA_TILES, "small_orange_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("orange_terracotta"), OttBlocks.STARRY_ORANGE_TERRACOTTA, "starry_orange_terracotta_engraving");
+
+        // ── magenta_terracotta ──
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.CIRCULAR_MAGENTA_TERRACOTTA, "circular_magenta_terracotta_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.CURLED_MAGENTA_TERRACOTTA, "curled_magenta_terracotta_ctm_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.HEXAGONICAL_MAGENTA_TERRACOTTA, "hexagonical_magenta_terracotta_ctm_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.INSCRIBED_MAGENTA_TERRACOTTA, "inscribed_magenta_terracotta_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.MAGENTA_TERRACOTTA_COLUMN, "magenta_terracotta_column_ctm_engraving");
+        s.one( Blocks.MAGENTA_TERRACOTTA, OttBlocks.MAGENTA_TERRACOTTA_CTM, "magenta_terracotta_pillar_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.SMALL_MAGENTA_TERRACOTTA_TILES, "small_magenta_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("magenta_terracotta"), OttBlocks.STARRY_MAGENTA_TERRACOTTA, "starry_magenta_terracotta_engraving");
+
+        // ── light_blue_terracotta ──
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.CIRCULAR_LIGHT_BLUE_TERRACOTTA, "circular_light_blue_terracotta_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.CURLED_LIGHT_BLUE_TERRACOTTA, "curled_light_blue_terracotta_ctm_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.HEXAGONICAL_LIGHT_BLUE_TERRACOTTA, "hexagonical_light_blue_terracotta_ctm_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.INSCRIBED_LIGHT_BLUE_TERRACOTTA, "inscribed_light_blue_terracotta_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.LIGHT_BLUE_TERRACOTTA_COLUMN, "light_blue_terracotta_column_ctm_engraving");
+        s.one( Blocks.LIGHT_BLUE_TERRACOTTA, OttBlocks.LIGHT_BLUE_TERRACOTTA_CTM, "light_blue_terracotta_pillar_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.SMALL_LIGHT_BLUE_TERRACOTTA_TILES, "small_light_blue_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("light_blue_terracotta"), OttBlocks.STARRY_LIGHT_BLUE_TERRACOTTA, "starry_light_blue_terracotta_engraving");
+
+        // ── yellow_terracotta ──
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.CIRCULAR_YELLOW_TERRACOTTA, "circular_yellow_terracotta_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.CURLED_YELLOW_TERRACOTTA, "curled_yellow_terracotta_ctm_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.HEXAGONICAL_YELLOW_TERRACOTTA, "hexagonical_yellow_terracotta_ctm_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.INSCRIBED_YELLOW_TERRACOTTA, "inscribed_yellow_terracotta_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.SMALL_YELLOW_TERRACOTTA_TILES, "small_yellow_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.STARRY_YELLOW_TERRACOTTA, "starry_yellow_terracotta_engraving");
+        s.tagged( materialTag("yellow_terracotta"), OttBlocks.YELLOW_TERRACOTTA_COLUMN, "yellow_terracotta_column_ctm_engraving");
+        s.one( Blocks.YELLOW_TERRACOTTA, OttBlocks.YELLOW_TERRACOTTA_CTM, "yellow_terracotta_pillar_engraving");
+
+        // ── lime_terracotta ──
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.CIRCULAR_LIME_TERRACOTTA, "circular_lime_terracotta_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.CURLED_LIME_TERRACOTTA, "curled_lime_terracotta_ctm_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.HEXAGONICAL_LIME_TERRACOTTA, "hexagonical_lime_terracotta_ctm_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.INSCRIBED_LIME_TERRACOTTA, "inscribed_lime_terracotta_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.LIME_TERRACOTTA_COLUMN, "lime_terracotta_column_ctm_engraving");
+        s.one( Blocks.LIME_TERRACOTTA, OttBlocks.LIME_TERRACOTTA_CTM, "lime_terracotta_pillar_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.SMALL_LIME_TERRACOTTA_TILES, "small_lime_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("lime_terracotta"), OttBlocks.STARRY_LIME_TERRACOTTA, "starry_lime_terracotta_engraving");
+
+        // ── pink_terracotta ──
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.CIRCULAR_PINK_TERRACOTTA, "circular_pink_terracotta_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.CURLED_PINK_TERRACOTTA, "curled_pink_terracotta_ctm_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.HEXAGONICAL_PINK_TERRACOTTA, "hexagonical_pink_terracotta_ctm_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.INSCRIBED_PINK_TERRACOTTA, "inscribed_pink_terracotta_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.PINK_TERRACOTTA_COLUMN, "pink_terracotta_column_ctm_engraving");
+        s.one( Blocks.PINK_TERRACOTTA, OttBlocks.PINK_TERRACOTTA_CTM, "pink_terracotta_pillar_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.SMALL_PINK_TERRACOTTA_TILES, "small_pink_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("pink_terracotta"), OttBlocks.STARRY_PINK_TERRACOTTA, "starry_pink_terracotta_engraving");
+
+        // ── gray_terracotta ──
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.CIRCULAR_GRAY_TERRACOTTA, "circular_gray_terracotta_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.CURLED_GRAY_TERRACOTTA, "curled_gray_terracotta_ctm_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.GRAY_TERRACOTTA_COLUMN, "gray_terracotta_column_ctm_engraving");
+        s.one( Blocks.GRAY_TERRACOTTA, OttBlocks.GRAY_TERRACOTTA_CTM, "gray_terracotta_pillar_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.HEXAGONICAL_GRAY_TERRACOTTA, "hexagonical_gray_terracotta_ctm_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.INSCRIBED_GRAY_TERRACOTTA, "inscribed_gray_terracotta_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.SMALL_GRAY_TERRACOTTA_TILES, "small_gray_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("gray_terracotta"), OttBlocks.STARRY_GRAY_TERRACOTTA, "starry_gray_terracotta_engraving");
+
+        // ── light_gray_terracotta ──
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.CIRCULAR_LIGHT_GRAY_TERRACOTTA, "circular_light_gray_terracotta_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.CURLED_LIGHT_GRAY_TERRACOTTA, "curled_light_gray_terracotta_ctm_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.HEXAGONICAL_LIGHT_GRAY_TERRACOTTA, "hexagonical_light_gray_terracotta_ctm_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.INSCRIBED_LIGHT_GRAY_TERRACOTTA, "inscribed_light_gray_terracotta_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.LIGHT_GRAY_TERRACOTTA_COLUMN, "light_gray_terracotta_column_ctm_engraving");
+        s.one( Blocks.LIGHT_GRAY_TERRACOTTA, OttBlocks.LIGHT_GRAY_TERRACOTTA_CTM, "light_gray_terracotta_pillar_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.SMALL_LIGHT_GRAY_TERRACOTTA_TILES, "small_light_gray_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("light_gray_terracotta"), OttBlocks.STARRY_LIGHT_GRAY_TERRACOTTA, "starry_light_gray_terracotta_engraving");
+
+        // ── cyan_terracotta ──
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CIRCULAR_CYAN_TERRACOTTA, "circular_cyan_terracotta_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CURLED_CYAN_TERRACOTTA, "curled_cyan_terracotta_ctm_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.CYAN_TERRACOTTA_COLUMN, "cyan_terracotta_column_ctm_engraving");
+        s.one( Blocks.CYAN_TERRACOTTA, OttBlocks.CYAN_TERRACOTTA_CTM, "cyan_terracotta_pillar_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.HEXAGONICAL_CYAN_TERRACOTTA, "hexagonical_cyan_terracotta_ctm_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.INSCRIBED_CYAN_TERRACOTTA, "inscribed_cyan_terracotta_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.SMALL_CYAN_TERRACOTTA_TILES, "small_cyan_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("cyan_terracotta"), OttBlocks.STARRY_CYAN_TERRACOTTA, "starry_cyan_terracotta_engraving");
+
+        // ── purple_terracotta ──
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.CIRCULAR_PURPLE_TERRACOTTA, "circular_purple_terracotta_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.CURLED_PURPLE_TERRACOTTA, "curled_purple_terracotta_ctm_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.HEXAGONICAL_PURPLE_TERRACOTTA, "hexagonical_purple_terracotta_ctm_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.INSCRIBED_PURPLE_TERRACOTTA, "inscribed_purple_terracotta_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.PURPLE_TERRACOTTA_COLUMN, "purple_terracotta_column_ctm_engraving");
+        s.one( Blocks.PURPLE_TERRACOTTA, OttBlocks.PURPLE_TERRACOTTA_CTM, "purple_terracotta_pillar_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.SMALL_PURPLE_TERRACOTTA_TILES, "small_purple_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("purple_terracotta"), OttBlocks.STARRY_PURPLE_TERRACOTTA, "starry_purple_terracotta_engraving");
+
+        // ── blue_terracotta ──
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.BLUE_TERRACOTTA_COLUMN, "blue_terracotta_column_ctm_engraving");
+        s.one( Blocks.BLUE_TERRACOTTA, OttBlocks.BLUE_TERRACOTTA_CTM, "blue_terracotta_pillar_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.CIRCULAR_BLUE_TERRACOTTA, "circular_blue_terracotta_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.CURLED_BLUE_TERRACOTTA, "curled_blue_terracotta_ctm_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.HEXAGONICAL_BLUE_TERRACOTTA, "hexagonical_blue_terracotta_ctm_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.INSCRIBED_BLUE_TERRACOTTA, "inscribed_blue_terracotta_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.SMALL_BLUE_TERRACOTTA_TILES, "small_blue_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("blue_terracotta"), OttBlocks.STARRY_BLUE_TERRACOTTA, "starry_blue_terracotta_engraving");
+
+        // ── brown_terracotta ──
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.BROWN_TERRACOTTA_COLUMN, "brown_terracotta_column_ctm_engraving");
+        s.one( Blocks.BROWN_TERRACOTTA, OttBlocks.BROWN_TERRACOTTA_CTM, "brown_terracotta_pillar_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.CIRCULAR_BROWN_TERRACOTTA, "circular_brown_terracotta_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.CURLED_BROWN_TERRACOTTA, "curled_brown_terracotta_ctm_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.HEXAGONICAL_BROWN_TERRACOTTA, "hexagonical_brown_terracotta_ctm_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.INSCRIBED_BROWN_TERRACOTTA, "inscribed_brown_terracotta_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.SMALL_BROWN_TERRACOTTA_TILES, "small_brown_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("brown_terracotta"), OttBlocks.STARRY_BROWN_TERRACOTTA, "starry_brown_terracotta_engraving");
+
+        // ── green_terracotta ──
+        s.tagged( materialTag("green_terracotta"), OttBlocks.CIRCULAR_GREEN_TERRACOTTA, "circular_green_terracotta_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.CURLED_GREEN_TERRACOTTA, "curled_green_terracotta_ctm_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.GREEN_TERRACOTTA_COLUMN, "green_terracotta_column_ctm_engraving");
+        s.one( Blocks.GREEN_TERRACOTTA, OttBlocks.GREEN_TERRACOTTA_CTM, "green_terracotta_pillar_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.HEXAGONICAL_GREEN_TERRACOTTA, "hexagonical_green_terracotta_ctm_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.INSCRIBED_GREEN_TERRACOTTA, "inscribed_green_terracotta_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.SMALL_GREEN_TERRACOTTA_TILES, "small_green_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("green_terracotta"), OttBlocks.STARRY_GREEN_TERRACOTTA, "starry_green_terracotta_engraving");
+
+        // ── red_terracotta ──
+        s.tagged( materialTag("red_terracotta"), OttBlocks.CIRCULAR_RED_TERRACOTTA, "circular_red_terracotta_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.CURLED_RED_TERRACOTTA, "curled_red_terracotta_ctm_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.HEXAGONICAL_RED_TERRACOTTA, "hexagonical_red_terracotta_ctm_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.INSCRIBED_RED_TERRACOTTA, "inscribed_red_terracotta_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.RED_TERRACOTTA_COLUMN, "red_terracotta_column_ctm_engraving");
+        s.one( Blocks.RED_TERRACOTTA, OttBlocks.RED_TERRACOTTA_CTM, "red_terracotta_pillar_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.SMALL_RED_TERRACOTTA_TILES, "small_red_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("red_terracotta"), OttBlocks.STARRY_RED_TERRACOTTA, "starry_red_terracotta_engraving");
+
+        // ── black_terracotta ──
+        s.tagged( materialTag("black_terracotta"), OttBlocks.BLACK_TERRACOTTA_COLUMN, "black_terracotta_column_ctm_engraving");
+        s.one( Blocks.BLACK_TERRACOTTA, OttBlocks.BLACK_TERRACOTTA_CTM, "black_terracotta_pillar_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.CIRCULAR_BLACK_TERRACOTTA, "circular_black_terracotta_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.CURLED_BLACK_TERRACOTTA, "curled_black_terracotta_ctm_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.HEXAGONICAL_BLACK_TERRACOTTA, "hexagonical_black_terracotta_ctm_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.INSCRIBED_BLACK_TERRACOTTA, "inscribed_black_terracotta_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.SMALL_BLACK_TERRACOTTA_TILES, "small_black_terracotta_tiles_ctm_engraving");
+        s.tagged( materialTag("black_terracotta"), OttBlocks.STARRY_BLACK_TERRACOTTA, "starry_black_terracotta_engraving");
+
         // ── tuff ──
         s.one( Blocks.TUFF, OttBlocks.CURLY_TUFF_CTM, "curly_tuff_pillar_engraving");
         s.one( Blocks.TUFF, OttBlocks.FINE_TUFF_CTM, "fine_tuff_pillar_engraving");
@@ -1976,8 +2328,11 @@ public final class EngravingEntries {
         s.tagged( materialTag("tuff"), OttBlocks.TINY_BRICK_BORDERED_TUFF, "tiny_brick_bordered_tuff_ctm_engraving");
         s.tagged( materialTag("tuff"), OttBlocks.TUFF_CUT_POLISHED.get(), "tuff_cut_polished_ctm_engraving");
         s.tagged( materialTag("tuff"), OttBlocks.TUFF_CUT_SMALL_BRICK.get(), "tuff_cut_small_brick_ctm_engraving");
-        // ── verdant_froglight ──
-        s.tagged( materialTag("verdant_froglight"),     OttBlocks.GLASS_VERDANT_FROGLIGHT,     "glass_verdant_froglight_engraving");
+        for (String n : new String[]{"curly_tuff_ctm", "fine_tuff_ctm", "ornate_tuff_ctm", "simple_tuff_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("tuff"), eb, n + "_engraving"); }
+
+        // ── veridium ──
+        for (String n : new String[]{"massive_veridium_bricks", "veridium_cut_polished_ctm", "veridium_cut_small_brick_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("veridium"), eb, n + "_engraving"); }
+
         // ── warped_planks ──
         s.tagged( materialTag("warped_planks"), OttBlocks.CORNERED_WARPED_PLANKS, "cornered_warped_planks_ctm_engraving");
         s.tagged( materialTag("warped_planks"), OttBlocks.CRATED_WARPED_PLANKS, "crated_warped_planks_ctm_engraving");
@@ -2005,458 +2360,12 @@ public final class EngravingEntries {
         s.tagged( materialTag("warped_planks"), OttBlocks.WARPED_PLANKS_WAVY.get(), "warped_planks_wavy_ctm_engraving");
         s.tagged( materialTag("warped_planks"), OttBlocks.WARPED_PLANKS_WOVEN.get(), "warped_planks_woven_ctm_engraving");
         s.tagged( materialTag("warped_planks"), OttBlocks.WHIRLWIND_WARPED_PLANKS, "whirlwind_warped_planks_ctm_engraving");
-        // ── weathered_copper ──
-        s.tagged( materialTag("weathered_copper"), OttBlocks.WEATHERED_COPPER_BLOCK.get(), "weathered_copper_block_ctm_engraving");
-        // ── weathered_copper_grate ──
-        s.tagged( materialTag("weathered_copper_grate"), OttBlocks.WEATHERED_COPPER_GRATE.get(), "weathered_copper_grate_ctm_engraving");
-        // ── white_concrete ──
-        s.one( Blocks.WHITE_CONCRETE, OttBlocks.WHITE_CONCRETE_CTM, "white_concrete_pillar_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.GRILL_WHITE_CONCRETE, "grill_white_concrete_ctm_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.PEGGED_WHITE_CONCRETE, "pegged_white_concrete_ctm_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.SMOOTH_WHITE_CONCRETE, "smooth_white_concrete_ctm_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.STRIPED_WHITE_CONCRETE, "striped_white_concrete_ctm_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.WHITE_CONCRETE_PANEL, "white_concrete_panel_ctm_engraving");
-        s.tagged( materialTag("white_concrete"), OttBlocks.WIRED_WHITE_CONCRETE, "wired_white_concrete_ctm_engraving");
-        // ── white_marble ──
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_BRICKS,       "white_marble_bricks_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR,       "white_marble_pillar_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR_CAP,   "white_marble_pillar_cap_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_SMALL_BRICKS, "white_marble_small_bricks_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_TILES,        "white_marble_tiles_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_POLISHED_MARBLE,     "white_polished_marble_engraving");
-        // ── white_terracotta ──
-        s.one( Blocks.WHITE_TERRACOTTA, OttBlocks.WHITE_TERRACOTTA_CTM, "white_terracotta_pillar_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.CIRCULAR_WHITE_TERRACOTTA, "circular_white_terracotta_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.CURLED_WHITE_TERRACOTTA, "curled_white_terracotta_ctm_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.HEXAGONICAL_WHITE_TERRACOTTA, "hexagonical_white_terracotta_ctm_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.INSCRIBED_WHITE_TERRACOTTA, "inscribed_white_terracotta_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.SMALL_WHITE_TERRACOTTA_TILES, "small_white_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.STARRY_WHITE_TERRACOTTA, "starry_white_terracotta_engraving");
-        s.tagged( materialTag("white_terracotta"), OttBlocks.WHITE_TERRACOTTA_COLUMN, "white_terracotta_column_ctm_engraving");
-        // ── yellow_concrete ──
-        s.one( Blocks.YELLOW_CONCRETE, OttBlocks.YELLOW_CONCRETE_CTM, "yellow_concrete_pillar_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.GRILL_YELLOW_CONCRETE, "grill_yellow_concrete_ctm_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.PEGGED_YELLOW_CONCRETE, "pegged_yellow_concrete_ctm_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.SMOOTH_YELLOW_CONCRETE, "smooth_yellow_concrete_ctm_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.STRIPED_YELLOW_CONCRETE, "striped_yellow_concrete_ctm_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.WIRED_YELLOW_CONCRETE, "wired_yellow_concrete_ctm_engraving");
-        s.tagged( materialTag("yellow_concrete"), OttBlocks.YELLOW_CONCRETE_PANEL, "yellow_concrete_panel_ctm_engraving");
-        // ── yellow_marble ──
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_BRICKS,       "yellow_marble_bricks_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR,       "yellow_marble_pillar_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR_CAP,   "yellow_marble_pillar_cap_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_SMALL_BRICKS, "yellow_marble_small_bricks_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_TILES,        "yellow_marble_tiles_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_POLISHED_MARBLE,     "yellow_polished_marble_engraving");
-        // ── yellow_terracotta ──
-        s.one( Blocks.YELLOW_TERRACOTTA, OttBlocks.YELLOW_TERRACOTTA_CTM, "yellow_terracotta_pillar_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.CIRCULAR_YELLOW_TERRACOTTA, "circular_yellow_terracotta_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.CURLED_YELLOW_TERRACOTTA, "curled_yellow_terracotta_ctm_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.HEXAGONICAL_YELLOW_TERRACOTTA, "hexagonical_yellow_terracotta_ctm_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.INSCRIBED_YELLOW_TERRACOTTA, "inscribed_yellow_terracotta_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.SMALL_YELLOW_TERRACOTTA_TILES, "small_yellow_terracotta_tiles_ctm_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.STARRY_YELLOW_TERRACOTTA, "starry_yellow_terracotta_engraving");
-        s.tagged( materialTag("yellow_terracotta"), OttBlocks.YELLOW_TERRACOTTA_COLUMN, "yellow_terracotta_column_ctm_engraving");
 
         // ═══════ bulk / data-driven & special (loops, arrays, wood doors, leaves) ═══════
         com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.forEach((name, block) ->
                 s.tagged(
                         materialTag(com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(name)),
                         block, name + "_engraving"));
-
-        String[][] uncategorizedStone = {
-            {"asurine_cut_polished_ctm","asurine"},
-            {"asurine_cut_small_brick_ctm","asurine"},
-            {"crimsite_cut_polished_ctm","crimsite"},
-            {"crimsite_cut_small_brick_ctm","crimsite"},
-            {"curly_dark_prismarine_ctm","dark_prismarine"},
-            {"curly_dirt_ctm","dirt"},
-            {"curly_dripstone_block_ctm","dripstone"},
-            {"curly_prismarine_ctm","prismarine"},
-            {"curly_purpur_block_ctm","purpur_block"},
-            {"curly_red_nether_bricks_ctm","red_nether_bricks"},
-            {"dark_prismarine_beams_ctm","dark_prismarine"},
-            {"dark_prismarine_brick_paving_ctm","dark_prismarine"},
-            {"dark_prismarine_bricks_ctm","dark_prismarine"},
-            {"dark_prismarine_dotted_ctm","dark_prismarine"},
-            {"dark_prismarine_fabric_ctm","dark_prismarine"},
-            {"dark_prismarine_large_tiles_ctm","dark_prismarine"},
-            {"dark_prismarine_rotated_bricks_ctm","dark_prismarine"},
-            {"dark_prismarine_rows_ctm","dark_prismarine"},
-            {"dark_prismarine_squares_ctm","dark_prismarine"},
-            {"dark_prismarine_tiles_ctm","dark_prismarine"},
-            {"dark_prismarine_wavy_ctm","dark_prismarine"},
-            {"dark_prismarine_woven_ctm","dark_prismarine"},
-            {"diamond_block_chiseled_ctm","diamond_block"},
-            {"diamond_block_chiseled_cubes_ctm","diamond_block"},
-            {"diamond_block_connecting_ctm","diamond_block"},
-            {"diamond_block_ctm","diamond_block"},
-            {"diamond_block_grid_ctm","diamond_block"},
-            {"diamond_block_jewel_block_ctm","diamond_block"},
-            {"diamond_block_polished_ctm","diamond_block"},
-            {"diamond_block_rhombuses_ctm","diamond_block"},
-            {"diamond_block_shiny_bordered_ctm","diamond_block"},
-            {"diamond_block_small_tiles_ctm","diamond_block"},
-            {"dirt_blobs_ctm","dirt"},
-            {"dirt_bricks_ctm","dirt"},
-            {"dirt_chunks_ctm","dirt"},
-            {"dirt_clumps_ctm","dirt"},
-            {"dirt_large_tiles_ctm","dirt"},
-            {"dirt_small_bricks_ctm","dirt"},
-            {"dirt_small_tiles_ctm","dirt"},
-            {"dirt_smooth_clumps_ctm","dirt"},
-            {"dirt_soil_ctm","dirt"},
-            {"dirt_squares_ctm","dirt"},
-            {"dirt_tiles_ctm","dirt"},
-            {"dirt_tilled_ctm","dirt"},
-            {"dripstone_cut_polished_ctm","dripstone"},
-            {"dripstone_cut_small_brick_ctm","dripstone"},
-            {"fine_dark_prismarine_ctm","dark_prismarine"},
-            {"fine_dirt_ctm","dirt"},
-            {"fine_dripstone_block_ctm","dripstone"},
-            {"fine_prismarine_ctm","prismarine"},
-            {"fine_purpur_block_ctm","purpur_block"},
-            {"fine_red_nether_bricks_ctm","red_nether_bricks"},
-            {"glowstone_brick_pattern_ctm","glowstone"},
-            {"glowstone_brick_paving_ctm","glowstone"},
-            {"glowstone_bricks_ctm","glowstone"},
-            {"glowstone_crushed_ctm","glowstone"},
-            {"glowstone_large_tiles_ctm","glowstone"},
-            {"glowstone_rotated_bricks_ctm","glowstone"},
-            {"glowstone_small_tiles_ctm","glowstone"},
-            {"glowstone_smooth_ctm","glowstone"},
-            {"glowstone_tiles_ctm","glowstone"},
-            {"ochrum_cut_polished_ctm","ochrum"},
-            {"ochrum_cut_small_brick_ctm","ochrum"},
-            {"ornate_dark_prismarine_ctm","dark_prismarine"},
-            {"ornate_dirt_ctm","dirt"},
-            {"ornate_dripstone_block_ctm","dripstone"},
-            {"ornate_prismarine_ctm","prismarine"},
-            {"ornate_purpur_block_ctm","purpur_block"},
-            {"ornate_red_nether_bricks_ctm","red_nether_bricks"},
-            {"polished_dripstone_ctm","dripstone"},
-            {"prismarine_bricks_beams_ctm","prismarine"},
-            {"prismarine_bricks_brick_pattern_ctm","prismarine"},
-            {"prismarine_bricks_brick_paving_ctm","prismarine"},
-            {"prismarine_bricks_bricks_ctm","prismarine"},
-            {"prismarine_bricks_chiseled_circles_ctm","prismarine"},
-            {"prismarine_bricks_chiseled_squares_ctm","prismarine"},
-            {"prismarine_bricks_diagonal_bricks_ctm","prismarine"},
-            {"prismarine_bricks_diagonal_tiles_ctm","prismarine"},
-            {"prismarine_bricks_dotted_ctm","prismarine"},
-            {"prismarine_bricks_pillars_ctm","prismarine"},
-            {"prismarine_bricks_rotated_bricks_ctm","prismarine"},
-            {"prismarine_bricks_rows_ctm","prismarine"},
-            {"prismarine_bricks_small_tiles_ctm","prismarine"},
-            {"prismarine_bricks_squares_ctm","prismarine"},
-            {"prismarine_bricks_tiles_ctm","prismarine"},
-            {"prismarine_bricks_wavy_ctm","prismarine"},
-            {"prismarine_bricks_woven_ctm","prismarine"},
-            {"purpur_brick_pattern_ctm","purpur_block"},
-            {"purpur_brick_paving_ctm","purpur_block"},
-            {"purpur_bricks_ctm","purpur_block"},
-            {"purpur_diagonal_bricks_ctm","purpur_block"},
-            {"purpur_diagonal_tiles_ctm","purpur_block"},
-            {"purpur_dotted_ctm","purpur_block"},
-            {"purpur_fabric_ctm","purpur_block"},
-            {"purpur_jagged_pattern_ctm","purpur_block"},
-            {"purpur_large_tiles_ctm","purpur_block"},
-            {"purpur_organic_pattern_ctm","purpur_block"},
-            {"purpur_rotated_bricks_ctm","purpur_block"},
-            {"purpur_slanted_tiles_ctm","purpur_block"},
-            {"purpur_small_tiles_ctm","purpur_block"},
-            {"purpur_spiral_pattern_ctm","purpur_block"},
-            {"purpur_squares_ctm","purpur_block"},
-            {"purpur_tiles_ctm","purpur_block"},
-            {"purpur_woven_ctm","purpur_block"},
-            {"red_nether_bricks_beams_ctm","red_nether_bricks"},
-            {"red_nether_bricks_brick_pattern_ctm","red_nether_bricks"},
-            {"red_nether_bricks_brick_paving_ctm","red_nether_bricks"},
-            {"red_nether_bricks_chiseled_squares_ctm","red_nether_bricks"},
-            {"red_nether_bricks_diagonal_bricks_ctm","red_nether_bricks"},
-            {"red_nether_bricks_large_bricks_ctm","red_nether_bricks"},
-            {"red_nether_bricks_large_tiles_ctm","red_nether_bricks"},
-            {"red_nether_bricks_rotated_bricks_ctm","red_nether_bricks"},
-            {"red_nether_bricks_small_tiles_ctm","red_nether_bricks"},
-            {"red_nether_bricks_smooth_ctm","red_nether_bricks"},
-            {"red_nether_bricks_squares_ctm","red_nether_bricks"},
-            {"red_nether_bricks_tiles_ctm","red_nether_bricks"},
-            {"rose_quartz_bricks_ctm","rose_quartz"},
-            {"rose_quartz_chiseled_ctm","rose_quartz"},
-            {"rose_quartz_crushed_ctm","rose_quartz"},
-            {"rose_quartz_polished_block_ctm","rose_quartz"},
-            {"rose_quartz_squares_ctm","rose_quartz"},
-            {"rose_quartz_tiles_ctm","rose_quartz"},
-            {"scorchia_cut_polished_ctm","scorchia"},
-            {"scorchia_cut_small_brick_ctm","scorchia"},
-            {"scoria_cut_polished_ctm","scoria"},
-            {"scoria_cut_small_brick_ctm","scoria"},
-            {"simple_dark_prismarine_ctm","dark_prismarine"},
-            {"simple_dirt_ctm","dirt"},
-            {"simple_dripstone_block_ctm","dripstone"},
-            {"simple_prismarine_ctm","prismarine"},
-            {"simple_purpur_block_ctm","purpur_block"},
-            {"simple_red_nether_bricks_ctm","red_nether_bricks"},
-            {"veridium_cut_polished_ctm","veridium"},
-            {"veridium_cut_small_brick_ctm","veridium"},
-        };
-
-        for (String[] usE : uncategorizedStone) {
-            Block usB = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", usE[0]));
-            if (usB != Blocks.AIR) s.tagged(materialTag(usE[1]), usB, usE[0] + "_engraving");
-        }
-
-        for (String[] csE : new String[][]{ {"cut_sandstone_ctm","sandstone"}, {"cut_red_sandstone_ctm","red_sandstone"} }) {
-            Block csB = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", csE[0]));
-            if (csB != Blocks.AIR) s.tagged(materialTag(csE[1]), csB, csE[0] + "_engraving");
-        }
-
-        String[][] uncategorizedRest = {
-            {"amethyst_block_ctm","amethyst_block"},
-            {"arched_leaded_glass_ctm","glass"},
-            {"blue_ice_ctm","blue_ice"},
-            {"bone_block_ctm","bone_block"},
-            {"borderless_glass_black_ctm","black_stained_glass"},
-            {"borderless_glass_blue_ctm","blue_stained_glass"},
-            {"borderless_glass_brown_ctm","brown_stained_glass"},
-            {"borderless_glass_cyan_ctm","cyan_stained_glass"},
-            {"borderless_glass_gray_ctm","gray_stained_glass"},
-            {"borderless_glass_green_ctm","green_stained_glass"},
-            {"borderless_glass_light_blue_ctm","light_blue_stained_glass"},
-            {"borderless_glass_light_gray_ctm","light_gray_stained_glass"},
-            {"borderless_glass_lime_ctm","lime_stained_glass"},
-            {"borderless_glass_magenta_ctm","magenta_stained_glass"},
-            {"borderless_glass_orange_ctm","orange_stained_glass"},
-            {"borderless_glass_pink_ctm","pink_stained_glass"},
-            {"borderless_glass_purple_ctm","purple_stained_glass"},
-            {"borderless_glass_red_ctm","red_stained_glass"},
-            {"borderless_glass_white_ctm","white_stained_glass"},
-            {"borderless_glass_yellow_ctm","yellow_stained_glass"},
-            {"carved_mud_bricks_ctm","mud_bricks"},
-            {"carved_mud_ctm","mud"},
-            {"carved_packed_mud_ctm","packed_mud"},
-            {"chiseled_glass_ctm","glass"},
-            {"clear_glass_ctm","glass"},
-            {"curly_amethyst_block_ctm","amethyst_block"},
-            {"curly_ancient_debris_ctm","ancient_debris"},
-            {"curly_andesite_ctm","andesite"},
-            {"curly_basalt_ctm","basalt"},
-            {"curly_blackstone_ctm","blackstone"},
-            {"curly_blue_ice_ctm","blue_ice"},
-            {"curly_borderless_bricks_ctm","borderless_bricks"},
-            {"curly_bricks_ctm","bricks"},
-            {"curly_calcite_ctm","calcite"},
-            {"curly_clay_ctm","clay"},
-            {"curly_coal_block_ctm","coal_block"},
-            {"curly_cobblestone_ctm","cobblestone"},
-            {"curly_crying_obsidian_ctm","crying_obsidian"},
-            {"curly_deepslate_ctm","deepslate"},
-            {"curly_diorite_ctm","diorite"},
-            {"curly_end_stone_ctm","end_stone"},
-            {"curly_gilded_blackstone_ctm","gilded_blackstone"},
-            {"curly_granite_ctm","granite"},
-            {"curly_ice_ctm","ice"},
-            {"curly_lapis_block_ctm","lapis_block"},
-            {"curly_lodestone_ctm","lodestone"},
-            {"curly_magma_block_ctm","magma_block"},
-            {"curly_mossy_cobblestone_ctm","mossy_cobblestone"},
-            {"curly_mossy_stone_bricks_ctm","mossy_stone_bricks"},
-            {"curly_mud_bricks_ctm","mud_bricks"},
-            {"curly_mud_ctm","mud"},
-            {"curly_nether_bricks_ctm","nether_bricks"},
-            {"curly_netherrack_ctm","netherrack"},
-            {"curly_obsidian_ctm","obsidian"},
-            {"curly_packed_ice_ctm","packed_ice"},
-            {"curly_packed_mud_ctm","packed_mud"},
-            {"curly_quartz_block_ctm","quartz_block"},
-            {"curly_raw_copper_block_ctm","raw_copper_block"},
-            {"curly_raw_gold_block_ctm","raw_gold_block"},
-            {"curly_raw_iron_block_ctm","raw_iron_block"},
-            {"curly_red_sandstone_ctm","red_sandstone"},
-            {"curly_redstone_block_ctm","redstone_block"},
-            {"curly_sandstone_ctm","sandstone"},
-            {"curly_smooth_stone_ctm","smooth_stone"},
-            {"curly_snow_block_ctm","snow_block"},
-            {"curly_tuff_ctm","tuff"},
-            {"dirty_glass_ctm","glass"},
-            {"fancy_leaded_glass_ctm","glass"},
-            {"fancy_mud_bricks_ctm","mud_bricks"},
-            {"fancy_mud_ctm","mud"},
-            {"fancy_packed_mud_ctm","packed_mud"},
-            {"fine_amethyst_block_ctm","amethyst_block"},
-            {"fine_ancient_debris_ctm","ancient_debris"},
-            {"fine_andesite_ctm","andesite"},
-            {"fine_basalt_ctm","basalt"},
-            {"fine_blackstone_ctm","blackstone"},
-            {"fine_blue_ice_ctm","blue_ice"},
-            {"fine_borderless_bricks_ctm","borderless_bricks"},
-            {"fine_bricks_ctm","bricks"},
-            {"fine_calcite_ctm","calcite"},
-            {"fine_clay_ctm","clay"},
-            {"fine_coal_block_ctm","coal_block"},
-            {"fine_cobblestone_ctm","cobblestone"},
-            {"fine_crying_obsidian_ctm","crying_obsidian"},
-            {"fine_deepslate_ctm","deepslate"},
-            {"fine_diorite_ctm","diorite"},
-            {"fine_end_stone_ctm","end_stone"},
-            {"fine_gilded_blackstone_ctm","gilded_blackstone"},
-            {"fine_granite_ctm","granite"},
-            {"fine_ice_ctm","ice"},
-            {"fine_lapis_block_ctm","lapis_block"},
-            {"fine_lodestone_ctm","lodestone"},
-            {"fine_magma_block_ctm","magma_block"},
-            {"fine_mossy_cobblestone_ctm","mossy_cobblestone"},
-            {"fine_mossy_stone_bricks_ctm","mossy_stone_bricks"},
-            {"fine_mud_bricks_ctm","mud_bricks"},
-            {"fine_mud_ctm","mud"},
-            {"fine_nether_bricks_ctm","nether_bricks"},
-            {"fine_netherrack_ctm","netherrack"},
-            {"fine_obsidian_ctm","obsidian"},
-            {"fine_packed_ice_ctm","packed_ice"},
-            {"fine_packed_mud_ctm","packed_mud"},
-            {"fine_quartz_block_ctm","quartz_block"},
-            {"fine_raw_copper_block_ctm","raw_copper_block"},
-            {"fine_raw_gold_block_ctm","raw_gold_block"},
-            {"fine_raw_iron_block_ctm","raw_iron_block"},
-            {"fine_red_sandstone_ctm","red_sandstone"},
-            {"fine_redstone_block_ctm","redstone_block"},
-            {"fine_sandstone_ctm","sandstone"},
-            {"fine_smooth_stone_ctm","smooth_stone"},
-            {"fine_snow_block_ctm","snow_block"},
-            {"fine_tuff_ctm","tuff"},
-            {"frosted_glass_ctm","glass"},
-            {"glass_ctm","glass"},
-            {"golden_framed_black_stained_glass_ctm","black_stained_glass"},
-            {"golden_framed_blue_stained_glass_ctm","blue_stained_glass"},
-            {"golden_framed_brown_stained_glass_ctm","brown_stained_glass"},
-            {"golden_framed_cyan_stained_glass_ctm","cyan_stained_glass"},
-            {"golden_framed_gray_stained_glass_ctm","gray_stained_glass"},
-            {"golden_framed_green_stained_glass_ctm","green_stained_glass"},
-            {"golden_framed_light_blue_stained_glass_ctm","light_blue_stained_glass"},
-            {"golden_framed_light_gray_stained_glass_ctm","light_gray_stained_glass"},
-            {"golden_framed_lime_stained_glass_ctm","lime_stained_glass"},
-            {"golden_framed_magenta_stained_glass_ctm","magenta_stained_glass"},
-            {"golden_framed_orange_stained_glass_ctm","orange_stained_glass"},
-            {"golden_framed_pink_stained_glass_ctm","pink_stained_glass"},
-            {"golden_framed_purple_stained_glass_ctm","purple_stained_glass"},
-            {"golden_framed_red_stained_glass_ctm","red_stained_glass"},
-            {"golden_framed_white_stained_glass_ctm","white_stained_glass"},
-            {"golden_framed_yellow_stained_glass_ctm","yellow_stained_glass"},
-            {"ice_glass_ctm","ice"},
-            {"obsidian_framed_glass_ctm","obsidian"},
-            {"ornate_amethyst_block_ctm","amethyst_block"},
-            {"ornate_ancient_debris_ctm","ancient_debris"},
-            {"ornate_andesite_ctm","andesite"},
-            {"ornate_basalt_ctm","basalt"},
-            {"ornate_blackstone_ctm","blackstone"},
-            {"ornate_blue_ice_ctm","blue_ice"},
-            {"ornate_borderless_bricks_ctm","borderless_bricks"},
-            {"ornate_bricks_ctm","bricks"},
-            {"ornate_calcite_ctm","calcite"},
-            {"ornate_clay_ctm","clay"},
-            {"ornate_coal_block_ctm","coal_block"},
-            {"ornate_cobblestone_ctm","cobblestone"},
-            {"ornate_crying_obsidian_ctm","crying_obsidian"},
-            {"ornate_deepslate_ctm","deepslate"},
-            {"ornate_diorite_ctm","diorite"},
-            {"ornate_end_stone_ctm","end_stone"},
-            {"ornate_gilded_blackstone_ctm","gilded_blackstone"},
-            {"ornate_granite_ctm","granite"},
-            {"ornate_ice_ctm","ice"},
-            {"ornate_lapis_block_ctm","lapis_block"},
-            {"ornate_lodestone_ctm","lodestone"},
-            {"ornate_magma_block_ctm","magma_block"},
-            {"ornate_mossy_cobblestone_ctm","mossy_cobblestone"},
-            {"ornate_mossy_stone_bricks_ctm","mossy_stone_bricks"},
-            {"ornate_mud_bricks_ctm","mud_bricks"},
-            {"ornate_mud_ctm","mud"},
-            {"ornate_nether_bricks_ctm","nether_bricks"},
-            {"ornate_netherrack_ctm","netherrack"},
-            {"ornate_obsidian_ctm","obsidian"},
-            {"ornate_packed_ice_ctm","packed_ice"},
-            {"ornate_packed_mud_ctm","packed_mud"},
-            {"ornate_quartz_block_ctm","quartz_block"},
-            {"ornate_raw_copper_block_ctm","raw_copper_block"},
-            {"ornate_raw_gold_block_ctm","raw_gold_block"},
-            {"ornate_raw_iron_block_ctm","raw_iron_block"},
-            {"ornate_red_sandstone_ctm","red_sandstone"},
-            {"ornate_redstone_block_ctm","redstone_block"},
-            {"ornate_sandstone_ctm","sandstone"},
-            {"ornate_smooth_stone_ctm","smooth_stone"},
-            {"ornate_snow_block_ctm","snow_block"},
-            {"ornate_tuff_ctm","tuff"},
-            {"quartz_block_chiseled_ctm","quartz_block"},
-            {"quartz_block_ctm","quartz_block"},
-            {"redstone_block_ctm","redstone_block"},
-            {"reinforced_glass_ctm","glass"},
-            {"sandstone_framed_glass_ctm","sandstone"},
-            {"scratched_glass_black_ctm","black_stained_glass"},
-            {"scratched_glass_blue_ctm","blue_stained_glass"},
-            {"scratched_glass_brown_ctm","brown_stained_glass"},
-            {"scratched_glass_cyan_ctm","cyan_stained_glass"},
-            {"scratched_glass_gray_ctm","gray_stained_glass"},
-            {"scratched_glass_green_ctm","green_stained_glass"},
-            {"scratched_glass_light_blue_ctm","light_blue_stained_glass"},
-            {"scratched_glass_light_gray_ctm","light_gray_stained_glass"},
-            {"scratched_glass_lime_ctm","lime_stained_glass"},
-            {"scratched_glass_magenta_ctm","magenta_stained_glass"},
-            {"scratched_glass_orange_ctm","orange_stained_glass"},
-            {"scratched_glass_pink_ctm","pink_stained_glass"},
-            {"scratched_glass_purple_ctm","purple_stained_glass"},
-            {"scratched_glass_red_ctm","red_stained_glass"},
-            {"scratched_glass_white_ctm","white_stained_glass"},
-            {"scratched_glass_yellow_ctm","yellow_stained_glass"},
-            {"simple_amethyst_block_ctm","amethyst_block"},
-            {"simple_ancient_debris_ctm","ancient_debris"},
-            {"simple_andesite_ctm","andesite"},
-            {"simple_basalt_ctm","basalt"},
-            {"simple_blackstone_ctm","blackstone"},
-            {"simple_blue_ice_ctm","blue_ice"},
-            {"simple_borderless_bricks_ctm","borderless_bricks"},
-            {"simple_bricks_ctm","bricks"},
-            {"simple_calcite_ctm","calcite"},
-            {"simple_clay_ctm","clay"},
-            {"simple_coal_block_ctm","coal_block"},
-            {"simple_cobblestone_ctm","cobblestone"},
-            {"simple_crying_obsidian_ctm","crying_obsidian"},
-            {"simple_deepslate_ctm","deepslate"},
-            {"simple_diorite_ctm","diorite"},
-            {"simple_end_stone_ctm","end_stone"},
-            {"simple_gilded_blackstone_ctm","gilded_blackstone"},
-            {"simple_granite_ctm","granite"},
-            {"simple_ice_ctm","ice"},
-            {"simple_lapis_block_ctm","lapis_block"},
-            {"simple_lodestone_ctm","lodestone"},
-            {"simple_magma_block_ctm","magma_block"},
-            {"simple_mossy_cobblestone_ctm","mossy_cobblestone"},
-            {"simple_mossy_stone_bricks_ctm","mossy_stone_bricks"},
-            {"simple_mud_bricks_ctm","mud_bricks"},
-            {"simple_mud_ctm","mud"},
-            {"simple_nether_bricks_ctm","nether_bricks"},
-            {"simple_netherrack_ctm","netherrack"},
-            {"simple_obsidian_ctm","obsidian"},
-            {"simple_packed_ice_ctm","packed_ice"},
-            {"simple_packed_mud_ctm","packed_mud"},
-            {"simple_quartz_block_ctm","quartz_block"},
-            {"simple_raw_copper_block_ctm","raw_copper_block"},
-            {"simple_raw_gold_block_ctm","raw_gold_block"},
-            {"simple_raw_iron_block_ctm","raw_iron_block"},
-            {"simple_red_sandstone_ctm","red_sandstone"},
-            {"simple_redstone_block_ctm","redstone_block"},
-            {"simple_sandstone_ctm","sandstone"},
-            {"simple_smooth_stone_ctm","smooth_stone"},
-            {"simple_snow_block_ctm","snow_block"},
-            {"simple_tuff_ctm","tuff"},
-            {"soul_glass_ctm","glass"},
-            {"stone_framed_glass_ctm","stone"},
-            {"tinted_clear_glass_ctm","glass"},
-            {"tinted_glass_ctm","tinted_glass"},
-        };
-
-        for (String[] rE : uncategorizedRest) {
-            Block rB = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", rE[0]));
-            if (rB != Blocks.AIR) s.tagged(materialTag(rE[1]), rB, rE[0] + "_engraving");
-        }
 
         // Legacy "stone" legends keep their hand-built path; pillars are unified below.
         java.util.stream.Stream.of(
@@ -2486,29 +2395,25 @@ public final class EngravingEntries {
         Block whitePlastered = ModBlocks.PATTERN_BLOCKS.get("plastered_stone").get("white").get();
 
         s.one( whitePlastered,
-                ModBlocks.PATTERN_BLOCKS.get("gilded_plastered_stone").get("white").get(),   "white_gilded_plastered_stone_engraving");
+                ModBlocks.PATTERN_BLOCKS.get("banded_plastered_stone").get("white").get(),   "white_banded_plastered_stone_engraving");
 
         s.one( whitePlastered,
                 ModBlocks.PATTERN_BLOCKS.get("delicate_plastered_stone").get("white").get(), "white_delicate_plastered_stone_engraving");
 
         s.one( whitePlastered,
-                ModBlocks.PATTERN_BLOCKS.get("banded_plastered_stone").get("white").get(),   "white_banded_plastered_stone_engraving");
+                ModBlocks.PATTERN_BLOCKS.get("gilded_plastered_stone").get("white").get(),   "white_gilded_plastered_stone_engraving");
+        // chiseled_plastered_stone_pillar moved to a stonecutter recipe (ModRecipeProvider) — no longer engraved.
 
-        s.one( whitePlastered,
-                OttBlocks.CHISELED_PLASTERED_STONE_PILLAR,                                   "chiseled_plastered_stone_pillar_engraving");
-
-        for (String style : OttBlocks.DECO_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+        // Wool — grouped by color (each color's deco + styled wool kept together); color order = STYLED_CARPET_COLORS (canonical).
+        for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+            for (String style : OttBlocks.DECO_STYLES) {
                 for (String suf : new String[]{"_wool", "_wool_ctm"}) {
                     String wn = style + "_" + color + suf;
                     s.tagged( materialTag(color + "_wool"),
                             OttBlocks.DECO_WOOL.get(wn).get(), wn + "_engraving");
                 }
             }
-        }
-
-        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
+            for (String style : OttBlocks.STYLED_CARPET_STYLES) {
                 for (String suf : new String[]{"_wool", "_wool_ctm"}) {
                     String wn = style + "_" + color + suf;
                     s.tagged( materialTag(color + "_wool"),

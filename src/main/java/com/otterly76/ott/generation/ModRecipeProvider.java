@@ -1809,6 +1809,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_MACHICOLATION.get(),"stone_bricks_machicolation_stonecutting");
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_POOL.get(),         "stone_bricks_pool_stonecutting");
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_SMALL_POOL.get(),   "stone_bricks_small_pool_stonecutting");
+        // --- Chiseled plastered stone pillar: stonecut from white plastered stone (was engraved) ---
+        stonecutOne(exporter, ModBlocks.PATTERN_BLOCKS.get("plastered_stone").get("white").get(), OttBlocks.CHISELED_PLASTERED_STONE_PILLAR.get(), "chiseled_plastered_stone_pillar_stonecutting");
         // --- Limestone stonecutter source ---
         stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_TRADITIONAL.get(), "water_mosaic_traditional_from_limestone_stonecutting");
         stonecutOne(exporter, OttBlocks.PLAIN_LIMESTONE.get(), OttBlocks.WATER_MOSAIC_BORDER.get(),      "water_mosaic_border_from_limestone_stonecutting");
@@ -2366,7 +2368,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter, set.base().get(), set.pillar().get(),     name + "_pillar_from_base");
         stonecutOne(exporter, set.base().get(), set.tiles().get(),      name + "_tiles_from_base");
         stonecutOne(exporter, set.base().get(), set.smallTiles().get(), "small_" + name + "_tiles_from_base");
-        stonecutOne(exporter, set.base().get(), set.tiling().get(),     name + "_tiling_from_base");
         // From polished
         stonecutOne(exporter, set.polished().get(), set.cut().get(),        "cut_" + name + "_from_polished");
         stonecutOne(exporter, set.polished().get(), set.bricks().get(),     name + "_bricks_from_polished");
@@ -2375,24 +2376,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutOne(exporter, set.polished().get(), set.pillar().get(),     name + "_pillar_from_polished");
         stonecutOne(exporter, set.polished().get(), set.tiles().get(),      name + "_tiles_from_polished");
         stonecutOne(exporter, set.polished().get(), set.smallTiles().get(), "small_" + name + "_tiles_from_polished");
-        stonecutOne(exporter, set.polished().get(), set.tiling().get(),     name + "_tiling_from_polished");
         // From cut
         stonecutOne(exporter, set.cut().get(), set.bricks().get(),     name + "_bricks_from_cut");
         stonecutOne(exporter, set.cut().get(), set.smallBricks().get(),"small_" + name + "_bricks_from_cut");
         stonecutOne(exporter, set.cut().get(), set.chiseled().get(),   "chiseled_" + name + "_from_cut");
         stonecutOne(exporter, set.cut().get(), set.tiles().get(),      name + "_tiles_from_cut");
         stonecutOne(exporter, set.cut().get(), set.smallTiles().get(), "small_" + name + "_tiles_from_cut");
-        stonecutOne(exporter, set.cut().get(), set.tiling().get(),     name + "_tiling_from_cut");
         // From bricks
         stonecutOne(exporter, set.bricks().get(), set.smallBricks().get(), "small_" + name + "_bricks_from_bricks");
         stonecutOne(exporter, set.bricks().get(), set.tiles().get(),       name + "_tiles_from_bricks");
         stonecutOne(exporter, set.bricks().get(), set.smallTiles().get(),  "small_" + name + "_tiles_from_bricks");
-        stonecutOne(exporter, set.bricks().get(), set.tiling().get(),      name + "_tiling_from_bricks");
         // From tiles
         stonecutOne(exporter, set.tiles().get(), set.smallTiles().get(), "small_" + name + "_tiles_from_tiles");
-        stonecutOne(exporter, set.tiles().get(), set.tiling().get(),     name + "_tiling_from_tiles");
-        // From small_tiles
-        stonecutOne(exporter, set.smallTiles().get(), set.tiling().get(), name + "_tiling_from_small_tiles");
 
         // crystal → 1 base opal block (smelting + blasting)
         SimpleCookingRecipeBuilder.smelting(
@@ -2410,34 +2405,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_" + name + "_crystal", has(crystal))
                 .save(exporter, getRecipePath("ott", name + "_from_crystal_blasting"));
 
-        // glass: smelt polished → 1 opal glass
+        // glass: smelt base opal → 1 opal glass
         SimpleCookingRecipeBuilder.smelting(
-                        Ingredient.of(set.polished().get()),
+                        Ingredient.of(set.base().get()),
                         RecipeCategory.BUILDING_BLOCKS,
                         set.glass().get(),
                         0.1F, 200)
-                .unlockedBy("has_polished_" + name, has(set.polished().get()))
+                .unlockedBy("has_" + name, has(set.base().get()))
                 .save(exporter, getRecipePath("ott", name + "_glass_from_smelting"));
 
-        // ── Engraving (base block → each decorative variant, like stone → stone variants) ──
-        java.util.List<net.minecraft.world.level.block.Block> decorative = java.util.List.of(
-                set.polished().get(), set.cut().get(), set.bricks().get(), set.smallBricks().get(),
-                set.chiseled().get(), set.pillar().get(), set.tiles().get(), set.smallTiles().get(),
-                set.glass().get(), set.glassPane().get(), set.tiling().get()
-        );
-        for (net.minecraft.world.level.block.Block output : decorative) {
-            String outputPath = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(output).getPath();
-            engraveOne(exporter, set.base().get(), output, name + "_to_" + outputPath);
-        }
-        // ── Engraving (all decorative variants convertible 1:1 between each other) ──
-        for (net.minecraft.world.level.block.Block input : decorative) {
-            String inputPath = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(input).getPath();
-            for (net.minecraft.world.level.block.Block output : decorative) {
-                if (input != output) {
-                    String outputPath = net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(output).getPath();
-                    engraveOne(exporter, input, output, inputPath + "_to_" + outputPath);
-                }
-            }
-        }
+        // tiling: smelt base opal → 1 opal tiling (not stonecut from the processed range)
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(set.base().get()),
+                        RecipeCategory.BUILDING_BLOCKS,
+                        set.tiling().get(),
+                        0.1F, 200)
+                .unlockedBy("has_" + name, has(set.base().get()))
+                .save(exporter, getRecipePath("ott", name + "_tiling_from_smelting"));
+
+        // NOTE: opal decorative variants are obtained via STONECUTTING (cascade above) — no engraving recipes.
     }
 }

@@ -31,6 +31,12 @@ public class MinecraftBackportItemModelProvider extends ItemModelProvider {
             if (path.equals("wildflowers") || path.equals("leaf_litter") || path.equals("dried_ghast") || path.equals("potted_pale_oak_sapling")) {
                 return;
             }
+            // Pale oak door/trapdoor use hand-authored 3D item models (assets/minecraft/models/item/pale_oak_{door,trapdoor}.json,
+            // cloned from spruce: solid geometry + display block). The generic trapdoor handler below would point the item at the
+            // non-existent pale_oak_trapdoor_bottom; skip so the committed models win without a duplicate.
+            if (path.equals("pale_oak_door") || path.equals("pale_oak_trapdoor")) {
+                return;
+            }
             if (path.endsWith("_wall_sign") || path.endsWith("_wall_hanging_sign")) {
                 return;
             }
