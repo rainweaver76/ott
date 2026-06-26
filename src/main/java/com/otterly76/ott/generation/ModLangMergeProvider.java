@@ -172,7 +172,10 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + name, pretty);
         });
 
-        // Chisels Chaos: title-case names for all new chisel pillars + legends (incl. redstone).
+        // Unified chisel set: pretty names for all pillars + legends (incl. redstone). The oxidised
+        // copper inlays read as "Exposed/Weathered/Oxidized Copper" rather than raw coppere/o/w tokens.
+        java.util.Map<String, String> chiselTokenNames = java.util.Map.of(
+                "coppere", "Exposed Copper", "copperw", "Weathered Copper", "coppero", "Oxidized Copper");
         java.util.stream.Stream.of(
                 com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_PILLARS.keySet(),
                 com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_PILLARS_RS.keySet(),
@@ -180,7 +183,7 @@ public class ModLangMergeProvider implements DataProvider {
                 com.otterly76.ott.block.ModBlocks.CHISEL_CHAOS_LEGENDS_RS.keySet()
         ).flatMap(java.util.Collection::stream).forEach(name -> {
             String pretty = Arrays.stream(name.split("_"))
-                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                    .map(s -> chiselTokenNames.getOrDefault(s, s.substring(0, 1).toUpperCase() + s.substring(1)))
                     .collect(Collectors.joining(" "));
             ottBase.addProperty("block.ott." + name, pretty);
         });

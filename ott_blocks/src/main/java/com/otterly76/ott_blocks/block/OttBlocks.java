@@ -3095,6 +3095,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_DOTTED = register("pale_oak_planks_dotted_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_FLOORING = register("pale_oak_planks_flooring_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_LARGE_TILES = register("pale_oak_planks_large_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> PALE_OAK_PLANKS_PANEL = register("pale_oak_planks_panel_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_PATTERN = register("pale_oak_planks_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_ROTATED_BRICKS = register("pale_oak_planks_rotated_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PALE_OAK_PLANKS_SMALL_BRICKS = register("pale_oak_planks_small_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));

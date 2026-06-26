@@ -1682,11 +1682,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         stoneSimplePillar(OttBlocks.SLATED_STONE);
         stoneSimplePillar(OttBlocks.STONE_COLUMN);
         stoneSimplePillar(OttBlocks.STONE_TWISTING_COLUMN);
-        // --- Chisel pillar blocks ---
-        ModBlocks.CHISEL_PILLARS.values().forEach(this::stoneChiselPillar);
-        // --- Reactive redstone pillars (one block, LIT swaps active/inactive) ---
-        ModBlocks.CHISEL_PILLARS_RS.forEach((name, block) ->
-                stoneChiselPillarRedstone(block.get(), name.substring(0, name.length() - "_redstone".length())));
+        // --- Chisel pillars are now data-driven (cube_all) via the unified loop below ---
         // --- Legend blocks (datagen: front per inlay, shared sides, polished caps) ---
         ModBlocks.CHISEL_LEGEND.forEach((name, block) -> {
             String suffix = name.substring("chiseled_stone_legend".length()); // "" or "_<inlay>"
@@ -1695,25 +1691,29 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // --- Reactive redstone legend (one block, LIT swaps front art) ---
         stoneChiselLegendRedstone(ModBlocks.CHISEL_LEGEND_RS.get("chiseled_stone_legend_redstone").get());
 
-        // --- Chisels Chaos: 11 new stone chisel pillar sets ---
+        // --- Chisel pillars: unified data-driven set (cube_all). Stone's legends stay on the
+        //     hand-built path above (cs.legends()==false), so only generate legends for the rest. ---
         for (ModBlocks.ChiselStone cs : ModBlocks.CHISEL_CHAOS) {
             String dir = "block/" + cs.folder() + "/" + cs.folder() + "_chisels/";
             for (String v : ModBlocks.CHISEL_VARIANTS) {
                 for (String inlay : ModBlocks.CHISEL_INLAYS) {
                     String n = "chiseled_" + cs.prefix() + "_" + v + (inlay.isEmpty() ? "" : "_" + inlay);
-                    chiselChaosPillar(ModBlocks.CHISEL_CHAOS_PILLARS.get(n).get(), dir + n, cs.cap());
+                    String override = ModBlocks.CHISEL_TEX_OVERRIDE.get(n);
+                    ResourceLocation tex = override != null ? ResourceLocation.parse(override) : modLoc(dir + n);
+                    chiselChaosPillar(ModBlocks.CHISEL_CHAOS_PILLARS.get(n).get(), dir + n, tex);
                 }
                 String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
                 chiselChaosPillarRedstone(ModBlocks.CHISEL_CHAOS_PILLARS_RS.get(rn).get(),
-                        dir + "chiseled_" + cs.prefix() + "_" + v, cs.cap());
+                        dir + "chiseled_" + cs.prefix() + "_" + v);
             }
-            // legends (one block per inlay + reactive redstone)
-            for (String inlay : ModBlocks.CHISEL_INLAYS) {
-                String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
-                chiselChaosLegend(ModBlocks.CHISEL_CHAOS_LEGENDS.get(ln).get(), cs, inlay);
+            if (cs.legends()) {
+                for (String inlay : ModBlocks.CHISEL_INLAYS) {
+                    String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
+                    chiselChaosLegend(ModBlocks.CHISEL_CHAOS_LEGENDS.get(ln).get(), cs, inlay);
+                }
+                chiselChaosLegendRedstone(
+                        ModBlocks.CHISEL_CHAOS_LEGENDS_RS.get("chiseled_" + cs.prefix() + "_legend_redstone").get(), cs);
             }
-            chiselChaosLegendRedstone(
-                    ModBlocks.CHISEL_CHAOS_LEGENDS_RS.get("chiseled_" + cs.prefix() + "_legend_redstone").get(), cs);
         }
 
         // CTM vertical pillars
@@ -1911,38 +1911,6 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         simpleBlockItem(block.get(), col);
     }
 
-    /** Registers a chisel RotatedPillarBlock: side=stone_chisels/{name}, top/bottom=polished_stone cap. */
-    private void stoneChiselPillar(DeferredBlock<? extends Block> block) {
-        String name = block.getId().getPath();
-        ResourceLocation side = modLoc("block/stone/stone_chisels/" + name);
-        ResourceLocation end  = modLoc("block/stone/polished_stone");
-        ModelFile col  = models().cubeColumn("block/stone/stone_chisels/" + name, side, end);
-        ModelFile colH = models().cubeColumnHorizontal("block/stone/stone_chisels/" + name + "_horizontal", side, end);
-        axisBlock((RotatedPillarBlock) block.get(), col, colH);
-        simpleBlockItem(block.get(), col);
-    }
-
-    /** Reactive redstone stone-chisel pillar: active/inactive cube_column swapped by LIT, polished cap. */
-    private void stoneChiselPillarRedstone(Block block, String texBase) {
-        String dir = "block/stone/stone_chisels/";
-        ResourceLocation end = modLoc("block/stone/polished_stone");
-        ModelFile actV = models().cubeColumn(dir + texBase + "_redstone_active", modLoc(dir + texBase + "_redstone_active"), end);
-        ModelFile actH = models().cubeColumnHorizontal(dir + texBase + "_redstone_active_horizontal", modLoc(dir + texBase + "_redstone_active"), end);
-        ModelFile inaV = models().cubeColumn(dir + texBase + "_redstone_inactive", modLoc(dir + texBase + "_redstone_inactive"), end);
-        ModelFile inaH = models().cubeColumnHorizontal(dir + texBase + "_redstone_inactive_horizontal", modLoc(dir + texBase + "_redstone_inactive"), end);
-        getVariantBuilder(block).forAllStates(state -> {
-            boolean lit = state.getValue(com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock.LIT);
-            net.minecraft.core.Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
-            ModelFile vert = lit ? actV : inaV;
-            ModelFile horiz = lit ? actH : inaH;
-            return switch (axis) {
-                case X -> ConfiguredModel.builder().modelFile(horiz).rotationX(90).rotationY(90).build();
-                case Z -> ConfiguredModel.builder().modelFile(horiz).rotationX(90).build();
-                default -> ConfiguredModel.builder().modelFile(vert).build();
-            };
-        });
-        simpleBlockItem(block, inaV);
-    }
 
     /** Builds a legacy-stone legend cube model: per-inlay front, shared sides, polished up/down caps. */
     private ModelFile stoneLegendModelGen(String modelName, ResourceLocation front) {
@@ -1973,40 +1941,26 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             boolean lit = state.getValue(com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock.LIT);
             net.minecraft.core.Direction facing = state.getValue(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING);
             return ConfiguredModel.builder().modelFile(lit ? active : inactive)
-                    .rotationY((int) facing.toYRot()).build();
+                    .rotationY(((int) facing.toYRot() + 180) % 360).build();
         });
         itemModels().withExistingParent("chiseled_stone_legend_redstone", modLoc(leg + "chiseled_stone_legend_redstone_inactive"));
     }
 
-    /** Chisels Chaos pillar: cube_column, side=chisel texture {@code tex}, top/bottom=polished cap. */
-    private void chiselChaosPillar(Block block, String tex, String cap) {
-        ResourceLocation side = modLoc(tex);
-        ResourceLocation end  = modLoc(cap);
-        ModelFile col  = models().cubeColumn(tex, side, end);
-        ModelFile colH = models().cubeColumnHorizontal(tex + "_horizontal", side, end);
-        axisBlock((RotatedPillarBlock) block, col, colH);
-        simpleBlockItem(block, col);
+    /** Chisel pillar: plain cube_all, all faces = {@code tex} (no caps, no axis). Model lives at
+     *  {@code modelPath}; {@code tex} may point outside the set (e.g. vanilla chiseled stone bricks). */
+    private void chiselChaosPillar(Block block, String modelPath, ResourceLocation tex) {
+        simpleBlockWithItem(block, models().cubeAll(modelPath, tex));
     }
 
-    /** Redstone-reactive chisel pillar: active(redstonea)/inactive(redstonei) models swapped by LIT, axis-rotated. */
-    private void chiselChaosPillarRedstone(Block block, String texBase, String cap) {
-        ResourceLocation end = modLoc(cap);
-        ModelFile actV = models().cubeColumn(texBase + "_redstonea", modLoc(texBase + "_redstonea"), end);
-        ModelFile actH = models().cubeColumnHorizontal(texBase + "_redstonea_horizontal", modLoc(texBase + "_redstonea"), end);
-        ModelFile inaV = models().cubeColumn(texBase + "_redstonei", modLoc(texBase + "_redstonei"), end);
-        ModelFile inaH = models().cubeColumnHorizontal(texBase + "_redstonei_horizontal", modLoc(texBase + "_redstonei"), end);
-        getVariantBuilder(block).forAllStates(state -> {
-            boolean lit = state.getValue(com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock.LIT);
-            net.minecraft.core.Direction.Axis axis = state.getValue(RotatedPillarBlock.AXIS);
-            ModelFile vert = lit ? actV : inaV;
-            ModelFile horiz = lit ? actH : inaH;
-            return switch (axis) {
-                case X -> ConfiguredModel.builder().modelFile(horiz).rotationX(90).rotationY(90).build();
-                case Z -> ConfiguredModel.builder().modelFile(horiz).rotationX(90).build();
-                default -> ConfiguredModel.builder().modelFile(vert).build();
-            };
-        });
-        simpleBlockItem(block, inaV);
+    /** Redstone-reactive chisel cube: active(redstonea)/inactive(redstonei) cube_all swapped by LIT. */
+    private void chiselChaosPillarRedstone(Block block, String texBase) {
+        ModelFile act = models().cubeAll(texBase + "_redstonea", modLoc(texBase + "_redstonea"));
+        ModelFile ina = models().cubeAll(texBase + "_redstonei", modLoc(texBase + "_redstonei"));
+        getVariantBuilder(block).forAllStates(state ->
+                ConfiguredModel.builder()
+                        .modelFile(state.getValue(com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock.LIT) ? act : ina)
+                        .build());
+        simpleBlockItem(block, ina);
     }
 
     // ── Chisel legends (per-face model; missing faces + bottom fall back to polished cap) ──
@@ -2061,7 +2015,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             boolean lit = state.getValue(com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock.LIT);
             net.minecraft.core.Direction facing = state.getValue(net.minecraft.world.level.block.HorizontalDirectionalBlock.FACING);
             return ConfiguredModel.builder().modelFile(lit ? active : inactive)
-                    .rotationY((int) facing.toYRot()).build();
+                    .rotationY(((int) facing.toYRot() + 180) % 360).build();
         });
         itemModels().withExistingParent("chiseled_" + cs.prefix() + "_legend_redstone", modLoc(base + "_redstonei"));
     }

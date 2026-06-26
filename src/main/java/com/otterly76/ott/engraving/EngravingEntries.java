@@ -1476,6 +1476,7 @@ public final class EngravingEntries {
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_DOTTED.get(), "pale_oak_planks_dotted_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_FLOORING.get(), "pale_oak_planks_flooring_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_LARGE_TILES.get(), "pale_oak_planks_large_tiles_ctm_engraving");
+        s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_PANEL.get(), "pale_oak_planks_panel_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_PATTERN.get(), "pale_oak_planks_pattern_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_ROTATED_BRICKS.get(), "pale_oak_planks_rotated_bricks_ctm_engraving");
         s.tagged( materialTag("pale_oak_planks"), OttBlocks.PALE_OAK_PLANKS_SMALL_BRICKS.get(), "pale_oak_planks_small_bricks_ctm_engraving");
@@ -2457,8 +2458,8 @@ public final class EngravingEntries {
             if (rB != Blocks.AIR) s.tagged(materialTag(rE[1]), rB, rE[0] + "_engraving");
         }
 
+        // Legacy "stone" legends keep their hand-built path; pillars are unified below.
         java.util.stream.Stream.of(
-                ModBlocks.CHISEL_PILLARS, ModBlocks.CHISEL_PILLARS_RS,
                 ModBlocks.CHISEL_LEGEND, ModBlocks.CHISEL_LEGEND_RS
         ).forEach(map -> map.forEach((name, block) ->
                 s.one( Blocks.STONE, block, name + "_engraving")));
@@ -2472,12 +2473,14 @@ public final class EngravingEntries {
                 String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
                 s.one( cs.base(), ModBlocks.CHISEL_CHAOS_PILLARS_RS.get(rn), rn + "_engraving");
             }
-            for (String inlay : ModBlocks.CHISEL_INLAYS) {
-                String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
-                s.one( cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS.get(ln), ln + "_engraving");
+            if (cs.legends()) { // stone's legends are engraved via CHISEL_LEGEND above
+                for (String inlay : ModBlocks.CHISEL_INLAYS) {
+                    String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
+                    s.one( cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS.get(ln), ln + "_engraving");
+                }
+                String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
+                s.one( cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS_RS.get(lrn), lrn + "_engraving");
             }
-            String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
-            s.one( cs.base(), ModBlocks.CHISEL_CHAOS_LEGENDS_RS.get(lrn), lrn + "_engraving");
         }
 
         Block whitePlastered = ModBlocks.PATTERN_BLOCKS.get("plastered_stone").get("white").get();

@@ -916,78 +916,9 @@ public class ModBlocks {
 
     private static final Properties ST = Properties.ofFullCopy(Blocks.STONE);
 
-    // --- Chisel pillar blocks (RotatedPillarBlock, end=chiseled_stone, side=stone_chisels/{name}) ---
-    public static final Map<String, DeferredBlock<RotatedPillarBlock>> CHISEL_PILLARS = new java.util.LinkedHashMap<>();
-    private static final java.util.List<String> CHISEL_PILLAR_NAMES = java.util.List.of(
-            "chiseled_stone_bricks_caveat_amethyst", "chiseled_stone_bricks_caveat_copper",
-            "chiseled_stone_bricks_caveat_coppere", "chiseled_stone_bricks_caveat_coppero",
-            "chiseled_stone_bricks_caveat_copperw", "chiseled_stone_bricks_caveat_diamond",
-            "chiseled_stone_bricks_caveat_emerald", "chiseled_stone_bricks_caveat_glowstone",
-            "chiseled_stone_bricks_caveat_gold", "chiseled_stone_bricks_caveat_iron",
-            "chiseled_stone_bricks_caveat_lapis", "chiseled_stone_bricks_caveat_netherite",
-            "chiseled_stone_bricks_caveat_netherite_broken", "chiseled_stone_bricks_caveat_quartz",            "chiseled_stone_bricks_doom", "chiseled_stone_bricks_doom_amethyst",
-            "chiseled_stone_bricks_doom_copper", "chiseled_stone_bricks_doom_coppere",
-            "chiseled_stone_bricks_doom_coppero", "chiseled_stone_bricks_doom_copperw",
-            "chiseled_stone_bricks_doom_diamond", "chiseled_stone_bricks_doom_emerald",
-            "chiseled_stone_bricks_doom_glowstone", "chiseled_stone_bricks_doom_gold",
-            "chiseled_stone_bricks_doom_iron", "chiseled_stone_bricks_doom_lapis",
-            "chiseled_stone_bricks_doom_netherite", "chiseled_stone_bricks_doom_quartz",            "chiseled_stone_bricks_etch", "chiseled_stone_bricks_etch_amethyst",
-            "chiseled_stone_bricks_etch_copper", "chiseled_stone_bricks_etch_coppere",
-            "chiseled_stone_bricks_etch_coppero", "chiseled_stone_bricks_etch_copperw",
-            "chiseled_stone_bricks_etch_diamond", "chiseled_stone_bricks_etch_emerald",
-            "chiseled_stone_bricks_etch_glowstone", "chiseled_stone_bricks_etch_gold",
-            "chiseled_stone_bricks_etch_iron", "chiseled_stone_bricks_etch_lapis",            "chiseled_stone_bricks_etching_netherite", "chiseled_stone_bricks_etching_quartz",
-            "chiseled_stone_bricks_frame", "chiseled_stone_bricks_frame_amethyst",
-            "chiseled_stone_bricks_frame_copper", "chiseled_stone_bricks_frame_coppere",
-            "chiseled_stone_bricks_frame_coppero", "chiseled_stone_bricks_frame_copperw",
-            "chiseled_stone_bricks_frame_diamond", "chiseled_stone_bricks_frame_emerald",
-            "chiseled_stone_bricks_frame_glowstone", "chiseled_stone_bricks_frame_gold",
-            "chiseled_stone_bricks_frame_iron", "chiseled_stone_bricks_frame_lapis",
-            "chiseled_stone_bricks_frame_netherite", "chiseled_stone_bricks_frame_quartz",            "chiseled_stone_bricks_groan", "chiseled_stone_bricks_groan_amethyst",
-            "chiseled_stone_bricks_groan_copper", "chiseled_stone_bricks_groan_coppere",
-            "chiseled_stone_bricks_groan_coppero", "chiseled_stone_bricks_groan_copperw",
-            "chiseled_stone_bricks_groan_diamond", "chiseled_stone_bricks_groan_emerald",
-            "chiseled_stone_bricks_groan_glowstone", "chiseled_stone_bricks_groan_gold",
-            "chiseled_stone_bricks_groan_iron", "chiseled_stone_bricks_groan_lapis",
-            "chiseled_stone_bricks_groan_netherite", "chiseled_stone_bricks_groan_quartz",            "chiseled_stone_bricks_hieroglyph", "chiseled_stone_bricks_hieroglyph_amethyst",
-            "chiseled_stone_bricks_hieroglyph_copper", "chiseled_stone_bricks_hieroglyph_coppere",
-            "chiseled_stone_bricks_hieroglyph_coppero", "chiseled_stone_bricks_hieroglyph_copperw",
-            "chiseled_stone_bricks_hieroglyph_diamond", "chiseled_stone_bricks_hieroglyph_emerald",
-            "chiseled_stone_bricks_hieroglyph_glowstone", "chiseled_stone_bricks_hieroglyph_gold",
-            "chiseled_stone_bricks_hieroglyph_iron", "chiseled_stone_bricks_hieroglyph_lapis",
-            "chiseled_stone_bricks_hieroglyph_netherite", "chiseled_stone_bricks_hieroglyph_quartz",            "chiseled_stone_bricks_nexus", "chiseled_stone_bricks_nexus_amethyst",
-            "chiseled_stone_bricks_nexus_copper", "chiseled_stone_bricks_nexus_coppere",
-            "chiseled_stone_bricks_nexus_coppero", "chiseled_stone_bricks_nexus_copperw",
-            "chiseled_stone_bricks_nexus_diamond", "chiseled_stone_bricks_nexus_emerald",
-            "chiseled_stone_bricks_nexus_glowstone", "chiseled_stone_bricks_nexus_gold",
-            "chiseled_stone_bricks_nexus_iron", "chiseled_stone_bricks_nexus_lapis",
-            "chiseled_stone_bricks_nexus_quartz",            "chiseled_stone_bricks_skull", "chiseled_stone_bricks_skull_amethyst",
-            "chiseled_stone_bricks_skull_copper", "chiseled_stone_bricks_skull_coppere",
-            "chiseled_stone_bricks_skull_coppero", "chiseled_stone_bricks_skull_copperw",
-            "chiseled_stone_bricks_skull_diamond", "chiseled_stone_bricks_skull_emerald",
-            "chiseled_stone_bricks_skull_glowstone", "chiseled_stone_bricks_skull_gold",
-            "chiseled_stone_bricks_skull_iron", "chiseled_stone_bricks_skull_lapis",
-            "chiseled_stone_bricks_skull_netherite", "chiseled_stone_bricks_skull_quartz",            "chiseled_stone_bricks_snout", "chiseled_stone_bricks_snout_amethyst",
-            "chiseled_stone_bricks_snout_copper", "chiseled_stone_bricks_snout_coppere",
-            "chiseled_stone_bricks_snout_coppero", "chiseled_stone_bricks_snout_copperw",
-            "chiseled_stone_bricks_snout_diamond", "chiseled_stone_bricks_snout_emerald",
-            "chiseled_stone_bricks_snout_glowstone", "chiseled_stone_bricks_snout_gold",
-            "chiseled_stone_bricks_snout_iron", "chiseled_stone_bricks_snout_lapis",
-            "chiseled_stone_bricks_snout_netherite", "chiseled_stone_bricks_snout_quartz",            "chiseled_stone_bricks_swirl", "chiseled_stone_bricks_swirl_amethyst",
-            "chiseled_stone_bricks_swirl_copper", "chiseled_stone_bricks_swirl_coppere",
-            "chiseled_stone_bricks_swirl_coppero", "chiseled_stone_bricks_swirl_copperw",
-            "chiseled_stone_bricks_swirl_diamond", "chiseled_stone_bricks_swirl_emerald",
-            "chiseled_stone_bricks_swirl_glowstone", "chiseled_stone_bricks_swirl_gold",
-            "chiseled_stone_bricks_swirl_iron", "chiseled_stone_bricks_swirl_lapis",
-            "chiseled_stone_bricks_swirl_netherite", "chiseled_stone_bricks_swirl_quartz"
-    );
-
-    static {
-        CHISEL_PILLAR_NAMES.forEach(name ->
-                CHISEL_PILLARS.put(name, register(name, () -> new RotatedPillarBlock(ST))));
-    }
-
-    // --- Legend blocks (HorizontalBlock, directional) ---
+    // ─── Chisel legends (HorizontalBlock, per-face directional) ───────────────
+    // Legends are "special" per-face blocks and keep their hand-built model path; only the pillars
+    // are folded into the data-driven set below. Glowstone-inlay legends glow (light 15).
     public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_LEGEND = new java.util.LinkedHashMap<>();
     private static final java.util.List<String> CHISEL_LEGEND_NAMES = java.util.List.of(
             "chiseled_stone_legend", "chiseled_stone_legend_amethyst", "chiseled_stone_legend_copper",
@@ -999,92 +930,99 @@ public class ModBlocks {
 
     static {
         CHISEL_LEGEND_NAMES.forEach(name ->
-                CHISEL_LEGEND.put(name, register(name, () -> new HorizontalBlock(ST))));
+                CHISEL_LEGEND.put(name, register(name, () -> new HorizontalBlock(legendProps(name)))));
     }
 
-    // --- Legacy stone redstone-reactive chisels (one block per variant; LIT glows light-15) ---
-    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock>> CHISEL_PILLARS_RS = new java.util.LinkedHashMap<>();
+    // Reactive redstone legend (one block, LIT swaps front art + glows).
     public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_LEGEND_RS = new java.util.LinkedHashMap<>();
-    private static final String[] STONE_CHISEL_RS_VARIANTS = {
-            "caveat", "doom", "etch", "frame", "groan", "hieroglyph", "nexus", "skull", "snout", "swirl"};
-
     static {
-        for (String v : STONE_CHISEL_RS_VARIANTS) {
-            String n = "chiseled_stone_bricks_" + v + "_redstone";
-            CHISEL_PILLARS_RS.put(n, register(n, () -> new com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock(
-                    Properties.ofFullCopy(Blocks.STONE).lightLevel(s -> s.getValue(
-                            net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0))));
-        }
         CHISEL_LEGEND_RS.put("chiseled_stone_legend_redstone", register("chiseled_stone_legend_redstone",
-                () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(
-                        Properties.ofFullCopy(Blocks.STONE).lightLevel(s -> s.getValue(
-                                net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0))));
+                () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(Blocks.STONE))));
     }
 
-    // ─── Chisels Chaos: 11 additional stone chisel sets (data-driven) ──────────
-    // Each set: 11 variants × (base + 13 inlays) pillars + 11 redstone-reactive pillars,
-    // cube_column with side=chisel texture and top/bottom=polished_<stone> cap.
-    public record ChiselStone(String folder, String prefix, net.minecraft.world.level.block.Block base, String cap) {}
+    // ─── Chisel pillars: one data-driven set across every stone (cube_all, no axis) ─────────────
+    // Each set: 10 variants × (base + 13 inlays) cube_all blocks + 10 redstone-reactive cubes.
+    // Glowstone inlays glow (light 15); redstone cubes glow when LIT. The legacy "stone" set is the
+    // first entry (legends=false — its legends live on the hand-built path above); all other stones
+    // also generate their own legends.
+    public record ChiselStone(String folder, String prefix, net.minecraft.world.level.block.Block base, String cap, boolean legends) {}
     public static final java.util.List<ChiselStone> CHISEL_CHAOS = java.util.List.of(
-            new ChiselStone("andesite",          "andesite",          Blocks.ANDESITE,          "block/andesite/polished_andesite"),
-            new ChiselStone("blackstone",        "blackstone",        Blocks.BLACKSTONE,        "block/blackstone/polished_blackstone"),
-            new ChiselStone("deepslate",         "deepslate",         Blocks.DEEPSLATE,         "block/deepslate/polished_deepslate"),
-            new ChiselStone("diorite",           "diorite",           Blocks.DIORITE,           "block/diorite/polished_diorite"),
-            new ChiselStone("granite",           "granite",           Blocks.GRANITE,           "block/granite/polished_granite"),
-            new ChiselStone("nether_bricks",     "nether_bricks",     Blocks.NETHER_BRICKS,     "block/nether_bricks/polished_nether_bricks"),
-            new ChiselStone("quartz_block",      "quartz",            Blocks.QUARTZ_BLOCK,      "block/quartz_block/polished_quartz_block"),
-            new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/polished_red_nether_bricks"),
-            new ChiselStone("red_sandstone",     "red_sandstone",     Blocks.RED_SANDSTONE,     "block/red_sandstone/polished_red_sandstone"),
-            new ChiselStone("sandstone",         "sandstone",         Blocks.SANDSTONE,         "block/sandstone/polished_sandstone"),
-            new ChiselStone("tuff",              "tuff",              Blocks.TUFF,              "block/tuff/polished_tuff")
+            new ChiselStone("stone",             "stone",             Blocks.STONE,             "block/stone/polished_stone",                         false),
+            new ChiselStone("andesite",          "andesite",          Blocks.ANDESITE,          "block/andesite/polished_andesite",                   true),
+            new ChiselStone("blackstone",        "blackstone",        Blocks.BLACKSTONE,        "block/blackstone/polished_blackstone",               true),
+            new ChiselStone("deepslate",         "deepslate",         Blocks.DEEPSLATE,         "block/deepslate/polished_deepslate",                 true),
+            new ChiselStone("diorite",           "diorite",           Blocks.DIORITE,           "block/diorite/polished_diorite",                     true),
+            new ChiselStone("granite",           "granite",           Blocks.GRANITE,           "block/granite/polished_granite",                     true),
+            new ChiselStone("nether_bricks",     "nether_bricks",     Blocks.NETHER_BRICKS,     "block/nether_bricks/polished_nether_bricks",         true),
+            new ChiselStone("quartz_block",      "quartz",            Blocks.QUARTZ_BLOCK,      "block/quartz_block/polished_quartz_block",           true),
+            new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/polished_red_nether_bricks", true),
+            new ChiselStone("red_sandstone",     "red_sandstone",     Blocks.RED_SANDSTONE,     "block/red_sandstone/polished_red_sandstone",         true),
+            new ChiselStone("sandstone",         "sandstone",         Blocks.SANDSTONE,         "block/sandstone/polished_sandstone",                 true),
+            new ChiselStone("tuff",              "tuff",              Blocks.TUFF,              "block/tuff/polished_tuff",                           true)
     );
-    public static final String[] CHISEL_VARIANTS = {"caveat","doom","etch","frame","groan","hieroglyph","nexus","skull","snout","swirl","thing"};
+    public static final String[] CHISEL_VARIANTS = {"caveat","doom","etch","frame","groan","hieroglyph","nexus","skull","snout","swirl"};
+    /** Pillar texture overrides — cells whose art lives outside the {@code _chisels} folder. Stone's
+     *  caveat base is visually identical to vanilla chiseled stone bricks, so it reuses that texture
+     *  rather than duplicating it. Map: block name → texture ResourceLocation string. */
+    public static final java.util.Map<String, String> CHISEL_TEX_OVERRIDE =
+            java.util.Map.of("chiseled_stone_caveat", "minecraft:block/chiseled_stone_bricks");
     /** base (empty) + 13 single inlays; redstone is a separate reactive block. */
     public static final String[] CHISEL_INLAYS = {"","amethyst","copper","coppere","coppero","copperw","diamond","emerald","glowstone","gold","iron","lapis","netherite","quartz"};
-    public static final Map<String, DeferredBlock<RotatedPillarBlock>> CHISEL_CHAOS_PILLARS = new java.util.LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<Block>> CHISEL_CHAOS_PILLARS = new java.util.LinkedHashMap<>();
     public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock>> CHISEL_CHAOS_PILLARS_RS = new java.util.LinkedHashMap<>();
-    /** Legends: base + 13 inlays (HorizontalBlock) per stone. */
+    /** Legends: base + 13 inlays (HorizontalBlock) per stone (excludes the legacy "stone" set). */
     public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_CHAOS_LEGENDS = new java.util.LinkedHashMap<>();
-    /** Legends: the reactive redstone one per stone. */
+    /** Legends: the reactive redstone one per stone (excludes the legacy "stone" set). */
     public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_CHAOS_LEGENDS_RS = new java.util.LinkedHashMap<>();
-    /** Per-stone display grouping for the creative tab (stone first, then each new stone's pillars+legends). */
+    /** Per-stone display grouping for the creative tab (pillars first, then that stone's legends). */
     public static final Map<String, java.util.List<DeferredBlock<? extends Block>>> CHISEL_GROUP = new java.util.LinkedHashMap<>();
     static {
-        // Legacy stone set first, grouped (pillars + reactive pillars, then legends + reactive legend).
-        java.util.List<DeferredBlock<? extends Block>> stoneGroup = new java.util.ArrayList<>();
-        stoneGroup.addAll(CHISEL_PILLARS.values());
-        stoneGroup.addAll(CHISEL_PILLARS_RS.values());
-        stoneGroup.addAll(CHISEL_LEGEND.values());
-        stoneGroup.addAll(CHISEL_LEGEND_RS.values());
-        CHISEL_GROUP.put("stone", stoneGroup);
-
         for (ChiselStone cs : CHISEL_CHAOS) {
             java.util.List<DeferredBlock<? extends Block>> group = new java.util.ArrayList<>();
             for (String v : CHISEL_VARIANTS) {
                 for (String inlay : CHISEL_INLAYS) {
                     String n = "chiseled_" + cs.prefix() + "_" + v + (inlay.isEmpty() ? "" : "_" + inlay);
-                    DeferredBlock<RotatedPillarBlock> b = register(n, () -> new RotatedPillarBlock(Properties.ofFullCopy(cs.base())));
+                    boolean glow = inlay.equals("glowstone");
+                    DeferredBlock<Block> b = register(n, () -> new Block(glow
+                            ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15)
+                            : Properties.ofFullCopy(cs.base())));
                     CHISEL_CHAOS_PILLARS.put(n, b); group.add(b);
                 }
                 String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
                 DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock> rb = register(rn,
-                        () -> new com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock(Properties.ofFullCopy(cs.base())
-                                .lightLevel(s -> s.getValue(net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0)));
+                        () -> new com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock(litProps(cs.base())));
                 CHISEL_CHAOS_PILLARS_RS.put(rn, rb); group.add(rb);
             }
-            // Legends: one block per inlay (front shows the inlay) + a reactive redstone one.
-            for (String inlay : CHISEL_INLAYS) {
-                String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
-                DeferredBlock<HorizontalBlock> lb = register(ln, () -> new HorizontalBlock(Properties.ofFullCopy(cs.base())));
-                CHISEL_CHAOS_LEGENDS.put(ln, lb); group.add(lb);
+            if (cs.legends()) {
+                for (String inlay : CHISEL_INLAYS) {
+                    String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
+                    boolean glow = inlay.equals("glowstone");
+                    DeferredBlock<HorizontalBlock> lb = register(ln, () -> new HorizontalBlock(glow
+                            ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15)
+                            : Properties.ofFullCopy(cs.base())));
+                    CHISEL_CHAOS_LEGENDS.put(ln, lb); group.add(lb);
+                }
+                String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
+                DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock> lrb = register(lrn,
+                        () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(cs.base())));
+                CHISEL_CHAOS_LEGENDS_RS.put(lrn, lrb); group.add(lrb);
+            } else {
+                // legacy "stone": legends live on the hand-built CHISEL_LEGEND path — append them here.
+                group.addAll(CHISEL_LEGEND.values());
+                group.addAll(CHISEL_LEGEND_RS.values());
             }
-            String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
-            DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock> lrb = register(lrn,
-                    () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(Properties.ofFullCopy(cs.base())
-                            .lightLevel(s -> s.getValue(net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0)));
-            CHISEL_CHAOS_LEGENDS_RS.put(lrn, lrb); group.add(lrb);
             CHISEL_GROUP.put(cs.folder(), group);
         }
+    }
+
+    // --- shared chisel property helpers ---
+    private static Properties legendProps(String name) {
+        return name.endsWith("_glowstone")
+                ? Properties.ofFullCopy(Blocks.STONE).lightLevel(s -> 15) : ST;
+    }
+    private static Properties litProps(net.minecraft.world.level.block.Block base) {
+        return Properties.ofFullCopy(base).lightLevel(s -> s.getValue(
+                net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0);
     }
 
     public static void register(IEventBus eventBus) {
