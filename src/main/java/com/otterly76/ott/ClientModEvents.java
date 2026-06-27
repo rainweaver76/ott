@@ -746,6 +746,12 @@ public class ClientModEvents {
         net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
                 com.otterly76.ott.block.ModBlocks.STONE_BRICKS_WATER_JET.get(),
                 net.minecraft.client.renderer.RenderType.translucent());
+        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
+                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_POOL.get(),
+                net.minecraft.client.renderer.RenderType.translucent());
+        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
+                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_SMALL_POOL.get(),
+                net.minecraft.client.renderer.RenderType.translucent());
     }
 
     @SubscribeEvent
