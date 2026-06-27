@@ -57,57 +57,59 @@ public class ColorSetTextureProvider implements DataProvider {
         // Committed (not src/generated) so OttBlockStateProvider's existingFileHelper finds them during the run;
         // ott_blocks resources are on that path (template/cube_all textures live there and validate fine).
         java.nio.file.Path mainPath = packOutput.getOutputFolder().resolve("../../../ott_blocks/src/main/resources/assets/ott").normalize();
-        
-        for (ModColorSets.ColorSet colorSet : ModColorSets.ALL) {
-            String colorName = colorSet.name();
-            int colorInt = colorSet.color();
+        java.nio.file.Path blockDir = mainPath.resolve("textures/block/color_set");
+        java.nio.file.Path itemDir  = mainPath.resolve("textures/item/color_set");
 
-            // Blocks
-            // DEFAULT: saturationFactor=1.0f, brightnessOffset=0.0f
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_concrete", "concrete", 1.0f, 0.0f);
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "terracotta", "terracotta", 0.4f, 0.0f);
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_wool", "wool", 1.0f, 0.0f);
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_concrete_powder", "concrete_powder", 1.0f, 0.0f);
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_candle", "candle", 1.0f, 0.0f);
-            
-            // Special cases like glass
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_stained_glass", "stained_glass", 1.0f, 0.0f);
-            processBlock(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "white_stained_glass_pane_top", "stained_glass_pane_top", 1.0f, 0.0f);
-            
-            // Entities (saved alongside block textures in the per-color directory)
-            processMaskedEntity(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "bed/white", "bed/color_mask", "bed", 1.0f, 0.0f);
-            processMaskedEntity(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "shulker/shulker_white", "shulker/color_mask", "shulker", 1.0f, 0.0f);
-            processGenericEntity(cache, mainPath.resolve("textures/block/color_set"), colorName, colorInt, "banner_base", "banner", 1.0f, 0.0f);
-
-            // Items
-            processMaskedItem(cache, mainPath.resolve("textures/item/color_set"), colorName, colorInt, "white_dye", "glass_bottle_mask", 1.0f, 0.0f);
+        // CSV-driven: each generated member texture, tinted across its scope's colours.
+        // (color_set_members.csv defines the members + how each texture is sourced.)
+        for (com.otterly76.ott.color.ColorSetMembers.Member m : com.otterly76.ott.color.ColorSetMembers.ALL) {
+            if (!m.isGenerated()) continue; // art / reuse / unconfirmed → not generated here
+            java.nio.file.Path folder = m.isItem() ? itemDir : blockDir;
+            if (m.isAllColors()) {
+                for (ModPatterns.ColorInfo c : ModPatterns.ALL_COLORS)
+                    dispatchTexture(cache, folder, c.name(), c.color(), m.texture());
+            } else {
+                for (ModColorSets.ColorSet c : ModColorSets.ALL)
+                    dispatchTexture(cache, folder, c.name(), c.color(), m.texture());
+            }
         }
 
-        // Vanilla Dyes
-        for (Map.Entry<String, Integer> entry : VANILLA_DYES.entrySet()) {
-            processMaskedItem(cache, mainPath.resolve("textures/item/color_set"), entry.getKey(), entry.getValue(), "white_dye", "glass_bottle_mask", 1.0f, 0.0f);
-        }
-
-        // Seaglass — all colors (vanilla dyes + custom color sets)
-        for (ModPatterns.ColorInfo color : ModPatterns.ALL_COLORS) {
-            processOttBlock(cache, mainPath.resolve("textures/block/color_set"), color.name(), color.color(), "seaglass/white_seaglass",        "seaglass",        1.0f, 0.0f);
-            processOttBlock(cache, mainPath.resolve("textures/block/color_set"), color.name(), color.color(), "seaglass/white_bubbles_seaglass",  "bubbles_seaglass",  1.0f, 0.0f);
-            processOttBlock(cache, mainPath.resolve("textures/block/color_set"), color.name(), color.color(), "seaglass/white_smooth_seaglass",   "smooth_seaglass",   1.0f, 0.0f);
-            processOttBlock(cache, mainPath.resolve("textures/block/color_set"), color.name(), color.color(), "seaglass/white_waves_seaglass",    "waves_seaglass",    1.0f, 0.0f);
-        }
-
-        // Clay tile items — all 32 colors
-        for (ModPatterns.ColorInfo color : ModPatterns.ALL_COLORS) {
-            processOttBlock(cache, mainPath.resolve("textures/item/color_set"), color.name(), color.color(), "base/clay_tile", "clay_tile", 1.0f, 0.0f);
-        }
-
-        // Futon blocks — all 32 colors (masked: only fabric areas tinted)
-        for (ModPatterns.ColorInfo color : ModPatterns.ALL_COLORS) {
-            processMaskedOttBlock(cache, mainPath.resolve("textures/block/color_set"), color.name(), color.color(), "base/futon", "futon/color_mask", "futon");
-        }
+        // Dye items — not a colour-set "member"; generated for custom colours + vanilla dyes.
+        for (ModColorSets.ColorSet c : ModColorSets.ALL)
+            processMaskedItem(cache, itemDir, c.name(), c.color(), "white_dye", "glass_bottle_mask", 1.0f, 0.0f);
+        for (Map.Entry<String, Integer> entry : VANILLA_DYES.entrySet())
+            processMaskedItem(cache, itemDir, entry.getKey(), entry.getValue(), "white_dye", "glass_bottle_mask", 1.0f, 0.0f);
 
         return CompletableFuture.completedFuture(null);
     }
+
+    /** Dispatch a member's {@code texture} spec to the matching tint helper, deriving the target subdir. */
+    private void dispatchTexture(CachedOutput cache, java.nio.file.Path folder, String colorName, int colorInt, String tex) {
+        if (tex.startsWith("tint:")) {
+            String[] sp = tex.substring("tint:".length()).split("@");
+            float sat = sp.length > 1 ? Float.parseFloat(sp[1]) : 1.0f;
+            processBlock(cache, folder, colorName, colorInt, sp[0], stripWhite(basename(sp[0])), sat, 0.0f);
+        } else if (tex.startsWith("tint_ott:")) {
+            String[] sp = tex.substring("tint_ott:".length()).split("@");
+            float sat = sp.length > 1 ? Float.parseFloat(sp[1]) : 1.0f;
+            processOttBlock(cache, folder, colorName, colorInt, sp[0], stripWhite(basename(sp[0])), sat, 0.0f);
+        } else if (tex.startsWith("masked_entity:")) {
+            String[] sm = tex.substring("masked_entity:".length()).split("\\+");
+            String src = sm[0];
+            String target = src.contains("/") ? src.substring(0, src.indexOf('/')) : src;
+            processMaskedEntity(cache, folder, colorName, colorInt, src, sm[1], target, 1.0f, 0.0f);
+        } else if (tex.startsWith("masked_ott:")) {
+            String[] sm = tex.substring("masked_ott:".length()).split("\\+");
+            processMaskedOttBlock(cache, folder, colorName, colorInt, sm[0], sm[1], basename(sm[0]));
+        } else if (tex.startsWith("generic_entity:")) {
+            String src = tex.substring("generic_entity:".length());
+            String target = src.endsWith("_base") ? src.substring(0, src.length() - "_base".length()) : src;
+            processGenericEntity(cache, folder, colorName, colorInt, src, target, 1.0f, 0.0f);
+        }
+    }
+
+    private static String basename(String p) { int i = p.lastIndexOf('/'); return i >= 0 ? p.substring(i + 1) : p; }
+    private static String stripWhite(String s) { return s.startsWith("white_") ? s.substring("white_".length()) : s; }
 
     @SuppressWarnings("SameParameterValue")
     private void processBlock(CachedOutput cache, java.nio.file.Path folder, String colorName, int colorInt, String sourceName, String targetSubdir, float saturationFactor, float brightnessOffset) {
