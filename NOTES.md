@@ -18,30 +18,7 @@ swap to 3d model for end crystal
 item models adjust for copper rails
 make ctm version of amethyst framed glass and mossy glass
 add custom color CTM stained glass variants
-
-
-Add New Blocks:
-=====
-Here's the checklist for a CTM block:
-
-1. Texture — drop the PNG in …/textures/block/<material>/ctm/<name>.png. Match the layout's format:
-◦ pieces_full → 80×16 (5 tiles)
-◦ pieces_vertical → 64×16 (4 tiles, horizontal)
-
-2. Register the block — one line in OttBlocks.java (this also auto-creates the item, so you don't touch item files):
-   public static final DeferredBlock<Block> WHIRLWIND_MANGROVE_PLANKS =
-   register("whirlwind_mangrove_planks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)));
-   ◦ Glass uses TransparentBlock; just copy a sibling block of the same family.
-
-3. Add the .tsv row — 8 columns through item are required; item_render is now optional (my parser fix), so a stripped trailing tab won't break it anymore.
-
-4. Add translation key
-
-5. (Optional) engraving — one line in EngravingEntries.java if it should be engravable.
-
-6. Run ./gradlew runData (the root task) to generate the blockstate/model/item, then relaunch the game.
-
-One rule that saves pain: copy the naming of the existing family exactly. whirlwind_<wood>_planks_ctm, <material>_framed_glass_ctm, etc. An off-pattern name (like the original mangrove_planks_whirlwind_ctm) technically works but breaks tag/engraving/creative-tab grouping.
+add all MCol tags
 
 Notes:
 =====
@@ -51,22 +28,11 @@ Notes:
 
 disable overgrowth and respawning structures for custom dimensions
 
-add overlay for moss carpets
-
 check models and DO for bookshelf variants
 
 add missing framed * concrete ctm
 
 add buttons to starting menu for git, discord, reddit, server host
-
-create prismarine bricks overlay textures and modifiers
-create dark prismarine overlay textures and modifiers
-create coral/dead coral overlay textures and modifiers
-create planks (all) overlay textures and modifiers
-
-create overlay textures and modifiers for DO bricks
-
-add transition textures for custom blocks
 
 pale oak bookshelf
 pale oak damned near everything

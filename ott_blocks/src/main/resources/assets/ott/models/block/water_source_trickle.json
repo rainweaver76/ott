@@ -1,5 +1,5 @@
 {
-    "render_type": "minecraft:translucent",
+    "render_type": "minecraft:cutout",
     "textures": {
         "water": "minecraft:block/water_flow",
         "particle": "minecraft:block/stone_bricks"

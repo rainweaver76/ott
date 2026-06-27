@@ -192,39 +192,59 @@ ott:material/shroomlight needs created/fixed
 ott:material/sea_lantern needs created/fixed
 
 amethyst framed glass pane (both) are uncategorized
+they should be grouped with their full blocks
 
 ALL trapdoors missing material group engraving tags (only tag they have is minecraft:mineable/axe)
+they should get all the same tags as vanilla trapdoors
 
 all pale oak windows missing material group engraving tags
 
 all window panes need removed from engraving recipes (only default 6 blocks -> 16 panes recipe)
 
-currently have 2 sets of each wood type window tiles (block and pane) connecting, but one is a broken dup
-it is showing as cube all without the proper wooden planks texture on top and only has an ott:ctm_blocks tag
-these dups all need to be removed
+wood type window and glass blocks need all tags for BOTH vanilla minecraft planks for their wood type AND glass
+we retain only our ott material group tag for engraving
 
-the wood type bookshelves (acacia, bamboo, birch, cherry, crimson, dark oak, jungle, mangrove, oak, spruce, warped) need to be added to their own material group
-each one of these needs to have a unique shaped recipe created reusing the vanilla bookshelf recipe but substituting the proper wood type
+the ITEM models for the wood type window tiles ctm block are using the side texture and not the wood plank texture as intended
+the static block item models are fine
+
+the wood type bookshelves (acacia, bamboo, birch, cherry, crimson, dark oak, jungle, mangrove, oak, spruce, warped) need to have its own material group created
+each wood type bookshelf needs to be added to their own material group
+each wood type bookshelf needs to have a unique shaped recipe created reusing the vanilla bookshelf recipe but substituting the proper wood type planks for the oak planks
 the vanilla bookshelf recipe should be altered to only accept oak planks
-each wood type bookshelf (acacia, bamboo, birch, cherry, crimson, dark oak, jungle, mangrove, oak, spruce, warped) needs to have its own material group created
-we currently have a list of oak bookshelves that should be added to the oak material group
+we currently have a list of oak bookshelves that should be added to the oak bookshelf material group
 the vanilla bookshelf should also be added to this group
-the others will only have the one bookshelf for now but I will be adding more, as well as creating a pale oak group
+the others will only have the one bookshelf for now but I will be adding more
+we should create a pale oak group which will be empty for now
 
 wood type trapdoors should only accept other trapdoors of their wood type as unput
 they are currently accepting doors
 
-there appear to be two sets now for framed stone glass, framed sandstone glass, framed red sandstone glass, framed obsidian glass
-one set correctly shows as part of the glass material group
-one set incorrectly shows as part of the stone/sandstone/red sandstone/obsidian material group
-this set needs to be removed
+the non-connecting and connecting sets of framed stone glass, framed sandstone glass, framed red sandstone glass, framed obsidian glass are not grouped together 
 
 connecting sea lantern needs to be added to the sea_lantern material group as it is currently only accepting the vanilla sea lantern as input
 I suspect this is part of the s.one tag issues we saw that we should be fixing anyway
 
 we are also missing a LOT of minecraft tags for blocks, doors, trapdoors, glass, etc
 it appears we only have the mineable tags set but missing all others that would be applied
+we need to audit all of the blocks to ensure they have all of the same tags as their vanilla counterparts
 
 chisels sets (nexus, etc) are missing minecraft AND ott tags
 I suspect this is due to their oddball generation
 they should be added to their parent stone material group and tagged as appropriate
+
+all 17 faux trapdoor blocks need all tags for vanilla wood planks
+
+flowing water texture for stone bricks faucet, stone bricks water jet, and water source trickle should be cutout rendering
+
+items are still split up (example: one set of trapdoors (barn, barrel, beach etc) is listed in one group and another (airy, checkered, classic, etc) is listed in another group later
+doors have the same issue
+I suspect this is caused by the weird way we have doors and trapdoors being processed via different loops
+we should unify the process for each
+
+I'd also like to revert our models for both doors and trapdoors to the vanilla models
+I will revisit 3D models at a later date
+we can remove those bespoke blockstates and models
+
+wood type windows and wood type glass should be grouped together by wood types
+
+there is a very odd and clearly not correctly rendered "Circular" block and pane in the Cherry glass group separate from the correctly rendered Circular Cherry Glass

@@ -1,7 +1,7 @@
 {
   "parent": "ott:block/ctm/item_pieces_solo",
   "textures": {
-    "all": "ott:block/dark_oak_windows/ctm/dark_oak_window_tiles"
+    "all": "minecraft:block/dark_oak_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }

@@ -189,7 +189,9 @@ public class OttCtmModelProvider implements DataProvider {
         if ("solo".equals(r.item())) {
             m.addProperty("parent", "ott:block/ctm/item_pieces_solo");
             Map<String, String> tx = parseTextures(r.textures());
-            String prim = tx.getOrDefault("all", tx.get("side"));
+            // Prefer the plank top ('up') over 'side' for the item icon — window tiles (the only
+            // rows using 'up=') should show their wood-plank face, not the window-tile side strip.
+            String prim = tx.getOrDefault("all", tx.getOrDefault("up", tx.get("side")));
             JsonObject textures = new JsonObject();
             textures.addProperty("all", prim);
             m.add("textures", textures);

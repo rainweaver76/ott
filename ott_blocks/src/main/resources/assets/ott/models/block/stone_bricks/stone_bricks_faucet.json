@@ -1,5 +1,5 @@
 {
-	"render_type": "minecraft:translucent",
+	"render_type": "minecraft:cutout",
 "textures": {
 		"0": "ott:block/stone_bricks_masonry/stone_bricks_faucet",
 		"particle": "ott:block/stone_bricks_masonry/stone_bricks_faucet"

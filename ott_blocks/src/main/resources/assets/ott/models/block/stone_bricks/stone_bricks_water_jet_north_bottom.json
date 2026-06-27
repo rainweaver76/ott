@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
 "textures": {
 		"tex": "ott:block/stone_bricks_masonry/stone_bricks_water_jet",
 		"particle": "ott:block/stone_bricks_masonry/stone_bricks_water_jet"

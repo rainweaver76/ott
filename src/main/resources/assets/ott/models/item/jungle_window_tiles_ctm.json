@@ -1,7 +1,7 @@
 {
   "parent": "ott:block/ctm/item_pieces_solo",
   "textures": {
-    "all": "ott:block/jungle_windows/ctm/jungle_window_tiles"
+    "all": "minecraft:block/jungle_planks"
   },
   "render_type": "minecraft:cutout_mipped"
 }
