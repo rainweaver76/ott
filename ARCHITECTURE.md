@@ -242,7 +242,4 @@ we can remove those bespoke blockstates and models
 
 wood type windows and wood type glass should be grouped together by wood types
 
-the ITEM models for the wood type window tiles ctm block are using the side texture and not the wood plank texture as intended
-the static block item models are fine
-
 flowing water texture for stone bricks faucet, stone bricks water jet, and water source trickle should be cutout rendering

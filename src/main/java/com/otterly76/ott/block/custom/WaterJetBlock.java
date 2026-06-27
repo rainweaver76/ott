@@ -12,7 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.DirectionalBlock;
 import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -29,7 +29,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class WaterJetBlock extends HorizontalDirectionalBlock implements SimpleWaterloggedBlock {
+public class WaterJetBlock extends DirectionalBlock implements SimpleWaterloggedBlock {
 
     public static final MapCodec<WaterJetBlock> CODEC = simpleCodec(WaterJetBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -39,6 +39,8 @@ public class WaterJetBlock extends HorizontalDirectionalBlock implements SimpleW
     private static final VoxelShape SHAPE_SOUTH = Block.box(5, 1, 15, 11, 6, 16);
     private static final VoxelShape SHAPE_EAST  = Block.box(15, 1, 5, 16, 6, 11);
     private static final VoxelShape SHAPE_WEST  = Block.box(0, 1, 5, 1, 6, 11);
+    private static final VoxelShape SHAPE_UP    = Block.box(5, 13, 5, 11, 16, 11);
+    private static final VoxelShape SHAPE_DOWN  = Block.box(5, 0, 5, 11, 3, 11);
 
     public WaterJetBlock(BlockBehaviour.@NotNull Properties properties) {
         super(properties);
@@ -49,7 +51,7 @@ public class WaterJetBlock extends HorizontalDirectionalBlock implements SimpleW
     }
 
     @Override
-    public @NotNull MapCodec<? extends HorizontalDirectionalBlock> codec() {
+    public @NotNull MapCodec<WaterJetBlock> codec() {
         return CODEC;
     }
 
@@ -59,6 +61,8 @@ public class WaterJetBlock extends HorizontalDirectionalBlock implements SimpleW
             case SOUTH -> SHAPE_SOUTH;
             case EAST  -> SHAPE_EAST;
             case WEST  -> SHAPE_WEST;
+            case UP    -> SHAPE_UP;
+            case DOWN  -> SHAPE_DOWN;
             default    -> SHAPE_NORTH;
         };
     }
@@ -67,8 +71,12 @@ public class WaterJetBlock extends HorizontalDirectionalBlock implements SimpleW
     @Nullable
     public BlockState getStateForPlacement(@NotNull BlockPlaceContext ctx) {
         FluidState fluid = ctx.getLevel().getFluidState(ctx.getClickedPos());
+        // Vertical click → mount to the clicked surface (floor jet = DOWN model, ceiling jet = UP
+        // model); horizontal click keeps the original look-direction wall placement.
+        Direction clicked = ctx.getClickedFace();
+        Direction facing = clicked.getAxis().isVertical() ? clicked.getOpposite() : ctx.getHorizontalDirection();
         return this.defaultBlockState()
-                .setValue(FACING, ctx.getHorizontalDirection())
+                .setValue(FACING, facing)
                 .setValue(WATERLOGGED, fluid.getType() == Fluids.WATER)
                 .setValue(ACTIVATED, false);
     }
