@@ -2010,3 +2010,5 @@ yellow_stained_glass_ctm	yellow_stained_glass	ctm_cube_all_pieces	minecraft:tran
 yellow_terracotta_column_ctm	yellow_terracotta	ctm_cube_all_horizontal		pieces_vertical	all=ott:block/yellow_terracotta/ctm/yellow_terracotta_column	all	self		
 yellow_terracotta_ctm	yellow_terracotta	ctm_cube_all_horizontal		pieces_vertical	all=ott:block/yellow_terracotta/ctm/yellow_terracotta_ctm	all	self
 pale_oak_planks_panel_ctm	pale_oak_planks	ctm_cube_all_pieces		pieces_full	all=ott:block/pale_oak_planks/ctm/pale_oak_planks_panel	all	solo
+amethyst_framed_glass_ctm	glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/glass/ctm/amethyst_framed_glass	all	solo	minecraft:translucent	
+mossy_leaded_glass_ctm	glass	ctm_cube_all_pieces	minecraft:translucent	pieces_full	all=ott:block/glass/ctm/mossy_leaded_glass	all	solo	minecraft:translucent	

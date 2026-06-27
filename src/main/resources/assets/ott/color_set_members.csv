@@ -1,0 +1,39 @@
+# Defines a color set ONCE. Generator loops colors x members.
+# scope:   custom = the 17 custom colors (color_sets.csv) | all = all vanilla+custom colors (ModPatterns.ALL_COLORS)
+# texture:
+#   tint:<white_base>[@sat]         = tint a vanilla/white base texture by the color's hex (sat = saturation factor, default 1.0)
+#   tint_ott:<ott_path>[@sat]       = tint an ott source texture (path under textures/block or textures/item)
+#   masked_entity:<src>+<mask>      = masked entity-texture tint (bed, shulker)  [block model itself reuses 'concrete']
+#   masked_ott:<src>+<mask>         = masked ott-texture tint (futon)
+#   generic_entity:<src>            = entity-texture tint (banner)
+#   art                             = committed per-color art at textures/block/<type>/<color>.png (NOT generated)
+#   reuse:<type>                    = no own texture; model points at another member's texture
+# block_class (item) = a color item, not a block (texture goes under textures/item/color_set/<color>/)
+name,scope,block_class,base_block,texture,render,lang
+candle,custom,CandleBlock,white_candle,tint:white_candle,cutout,{Color} Candle
+concrete,custom,Block,white_concrete,tint:white_concrete,solid,{Color} Concrete
+concrete_powder,custom,ColoredFallingBlock,white_concrete_powder,tint:white_concrete_powder,solid,{Color} Concrete Powder
+glazed_terracotta,custom,GlazedTerracottaBlock,white_glazed_terracotta,art,solid,{Color} Glazed Terracotta
+shulker_box,custom,ColorSetShulkerBoxBlock,shulker_box,masked_entity:shulker/shulker_white+shulker/color_mask,cutout,{Color} Shulker Box
+stained_glass,custom,StainedGlassBlock,white_stained_glass,tint:white_stained_glass,translucent,{Color} Stained Glass
+stained_glass_pane,custom,StainedGlassPaneBlock,white_stained_glass_pane,tint:white_stained_glass_pane_top,translucent,{Color} Stained Glass Pane
+terracotta,custom,Block,white_terracotta,tint:terracotta@0.4,solid,{Color} Terracotta
+wool,custom,Block,white_wool,tint:white_wool,solid,{Color} Wool
+bed,custom,ColorSetBedBlock,white_bed,masked_entity:bed/white+bed/color_mask,cutout,{Color} Bed
+carpet,custom,CarpetBlock,white_carpet,reuse:wool,cutout,{Color} Carpet
+banner,custom,ColorSetBannerBlock,white_banner,generic_entity:banner_base,cutout,{Color} Banner
+wall_banner,custom,ColorSetWallBannerBlock,white_wall_banner,reuse:banner,cutout,{Color} Wall Banner
+plate,custom,PlateBlock,white_concrete,reuse:concrete,cutout,{Color} Plate
+edge,custom,EdgeBlock,white_concrete,reuse:concrete,cutout,{Color} Edge
+beam,custom,BeamBlock,white_concrete,reuse:concrete,cutout,{Color} Beam
+pergola,custom,PergolaBlock,white_concrete,reuse:concrete,cutout,{Color} Pergola
+geometric_window,custom,GeometricWindowBlock,white_concrete,reuse:concrete,cutout,{Color} Geometric Window
+bannister,custom,BannisterBlock,white_concrete,reuse:concrete,cutout,{Color} Bannister
+support_slab,custom,SupportSlabBlock,white_concrete,reuse:concrete,cutout,{Color} Support Slab
+support_beam,custom,SupportBeamBlock,white_concrete,reuse:concrete,cutout,{Color} Support Beam
+seaglass,all,TransparentBlock,-,tint_ott:seaglass/white_seaglass,translucent,{Color} Seaglass
+bubbles_seaglass,all,TransparentBlock,-,tint_ott:seaglass/white_bubbles_seaglass,translucent,Bubbled {Color} Seaglass
+smooth_seaglass,all,TransparentBlock,-,tint_ott:seaglass/white_smooth_seaglass,translucent,Smooth {Color} Seaglass
+waves_seaglass,all,TransparentBlock,-,tint_ott:seaglass/white_waves_seaglass,translucent,Waved {Color} Seaglass
+futon,all,FutonBlock,-,masked_ott:base/futon+futon/color_mask,cutout,{Color} Futon
+clay_tile,all,(item),-,tint_ott:base/clay_tile,-,{Color} Clay Tile

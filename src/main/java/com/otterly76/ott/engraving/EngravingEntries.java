@@ -979,7 +979,7 @@ public final class EngravingEntries {
         s.one( Blocks.GLASS, OttBlocks.SQUARE_OAK_GLASS, "square_oak_glass_engraving");
         s.one( Blocks.GLASS, OttBlocks.VERTICAL_LEADED_GLASS, "vertical_leaded_glass_engraving");
         for (String n : new String[]{"arched_leaded_glass_ctm", "chiseled_glass_ctm", "clear_glass_ctm", "dirty_glass_ctm", "fancy_leaded_glass_ctm", "frosted_glass_ctm", "glass_ctm", "reinforced_glass_ctm", "soul_glass_ctm", "tinted_clear_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
-        for (String n : new String[]{"ice_glass_ctm", "obsidian_framed_glass_ctm", "sandstone_framed_glass_ctm", "stone_framed_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
+        for (String n : new String[]{"amethyst_framed_glass_ctm", "ice_glass_ctm", "mossy_leaded_glass_ctm", "obsidian_framed_glass_ctm", "sandstone_framed_glass_ctm", "stone_framed_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
 
         // ── leaded_glass ──
         s.one( OttBlocks.LEADED_GLASS.get(), OttBlocks.LEADED_GLASS_PANE.get(), "leaded_glass_pane_engraving");

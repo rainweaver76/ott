@@ -73,9 +73,11 @@ public class ElevatorBlock extends BaseEntityBlock {
         if (level.isClientSide) {
             return ItemInteractionResult.SUCCESS;
         }
-        // Server-side: apply camo if holding a non-elevator block and not sneaking
+        // Server-side: apply camo if holding a non-elevator block and not sneaking.
+        // Reject ALL elevators (any colour), not just this one — an elevator-as-camo recurses in the
+        // block-colour handler and crashes the client (StackOverflow).
         if (!player.isShiftKeyDown() && stack.getItem() instanceof BlockItem blockItem
-                && blockItem.getBlock() != this) {
+                && !(blockItem.getBlock() instanceof ElevatorBlock)) {
             BlockEntity be = level.getBlockEntity(pos);
             if (be instanceof ElevatorBlockEntity elevator) {
                 elevator.setCamo(blockItem.getBlock().defaultBlockState());

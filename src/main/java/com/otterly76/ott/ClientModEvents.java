@@ -546,7 +546,11 @@ public class ClientModEvents {
                                 net.minecraft.world.level.block.entity.BlockEntity be = level.getBlockEntity(pos);
                                 if (be instanceof com.otterly76.ott.block.entity.ElevatorBlockEntity elevator) {
                                     net.minecraft.world.level.block.state.BlockState camo = elevator.getCamoState();
-                                    if (camo != null && !camo.isAir()) {
+                                    // Guard against a camo that is itself an elevator — delegating to its colour
+                                    // handler would re-enter this one and recurse forever (StackOverflow on render).
+                                    // Also defends worlds that already saved a bad elevator-as-camo state.
+                                    if (camo != null && !camo.isAir()
+                                            && !(camo.getBlock() instanceof com.otterly76.ott.block.custom.ElevatorBlock)) {
                                         return net.minecraft.client.Minecraft.getInstance().getBlockColors().getColor(camo, level, pos, tint);
                                     }
                                 }

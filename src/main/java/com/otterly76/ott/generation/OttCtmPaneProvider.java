@@ -199,6 +199,14 @@ public class OttCtmPaneProvider implements DataProvider {
             "ott:block/red_sandstone/ctm/red_sandstone_framed_glass",
             "ott:block/red_sandstone/red_sandstone_framed_glass_edge", "minecraft:translucent", false));
 
+        // amethyst framed glass + mossy leaded glass — fancy glass in the glass material group; shared leaded edge
+        specs.add(new PaneSpec("amethyst_framed_glass_ctm_pane",
+            "ott:block/glass/ctm/amethyst_framed_glass",
+            "ott:block/glass/leaded_glass_pane_edge", "minecraft:translucent", false));
+        specs.add(new PaneSpec("mossy_leaded_glass_ctm_pane",
+            "ott:block/glass/ctm/mossy_leaded_glass",
+            "ott:block/glass/leaded_glass_pane_edge", "minecraft:translucent", false));
+
         // golden framed stained glass (colourless) — golden frame edge
         specs.add(new PaneSpec("golden_framed_stained_glass_ctm_pane",
             "ott:block/golden_framed_glass/ctm/golden_framed_stained_glass",
