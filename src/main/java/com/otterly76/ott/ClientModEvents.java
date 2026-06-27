@@ -722,6 +722,30 @@ public class ClientModEvents {
         Minecraft.getInstance().toast = new BetterToastComponent();
         BetterToastComponent.handleToastReloc();
         BetterToastComponent.handleBlockedClasses();
+        event.enqueueWork(ClientModEvents::registerBlockRenderLayers);
+    }
+
+    /**
+     * Pins the multipart water-feature blocks to the translucent chunk layer. These blockstates
+     * combine an opaque stone fixture model with a translucent water-stream sub-model; NeoForge
+     * honours a model's own {@code render_type} for single-variant blocks (e.g. {@code
+     * water_source_trickle} renders translucent correctly) but a multipart block draws all of its
+     * quads on the block's single chunk layer — defaulting to solid, which paints the water
+     * texture's transparent background as opaque. Forcing the layer here makes the water blend;
+     * the fully-opaque stone parts render identically on the translucent layer.
+     *
+     * <p>{@code setRenderLayer} is deprecated in favour of a model's own {@code render_type}, but
+     * that hint cannot drive a <em>multipart</em> block's chunk layer — this is the supported way
+     * to pin one, so the deprecation is suppressed deliberately.
+     */
+    @SuppressWarnings("deprecation")
+    private static void registerBlockRenderLayers() {
+        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
+                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_FAUCET.get(),
+                net.minecraft.client.renderer.RenderType.translucent());
+        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
+                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_WATER_JET.get(),
+                net.minecraft.client.renderer.RenderType.translucent());
     }
 
     @SubscribeEvent

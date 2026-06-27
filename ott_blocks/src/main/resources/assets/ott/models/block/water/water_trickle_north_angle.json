@@ -1,21 +1,22 @@
 {
-	"render_type": "minecraft:translucent",
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
+	"render_type": "minecraft:translucent",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "block/water_flow",
+		"1": "ott:block/water_flow_fade",
 		"particle": "ott:block/transparent"
 	},
 	"elements": [
 		{
-			"from": [6.01, 10, -0.5],
-			"to": [9.99, 13, 5],
-			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 13, 5]},
+			"from": [6.01, 13, -0.5],
+			"to": [9.99, 16, 5],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 16, 5]},
 			"faces": {
-				"north": {"uv": [0, 5, 4, 8], "texture": "#1", "tintindex": 0},
-				"east": {"uv": [0, 5.5, 3, 0], "rotation": 90, "texture": "#1", "tintindex": 0},
-				"west": {"uv": [0, 0, 3, 5.5], "rotation": 90, "texture": "#1", "tintindex": 0},
-				"up": {"uv": [0, 0.5, 4, 6], "texture": "#1", "tintindex": 0}
+				"north": {"uv": [0, 2.5, 4, 5.5], "texture": "#1", "tintindex": 0},
+				"east": {"uv": [0, 0, 3, 5.5], "rotation": 90, "texture": "#1", "tintindex": 0},
+				"west": {"uv": [0, 5.5, 3, 0], "rotation": 90, "texture": "#1", "tintindex": 0},
+				"up": {"uv": [0, 0, 4, 5.5], "texture": "#1", "tintindex": 0}
 			}
 		}
 	]

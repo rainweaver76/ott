@@ -1,7 +1,3 @@
 {
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "minecraft:block/mangrove_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
+  "parent": "ott:block/mangrove_windows/mangrove_window_tiles"
 }

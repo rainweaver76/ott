@@ -204,9 +204,6 @@ all window panes need removed from engraving recipes (only default 6 blocks -> 1
 wood type window and glass blocks need all tags for BOTH vanilla minecraft planks for their wood type AND glass
 we retain only our ott material group tag for engraving
 
-the ITEM models for the wood type window tiles ctm block are using the side texture and not the wood plank texture as intended
-the static block item models are fine
-
 the wood type bookshelves (acacia, bamboo, birch, cherry, crimson, dark oak, jungle, mangrove, oak, spruce, warped) need to have its own material group created
 each wood type bookshelf needs to be added to their own material group
 each wood type bookshelf needs to have a unique shaped recipe created reusing the vanilla bookshelf recipe but substituting the proper wood type planks for the oak planks
@@ -234,8 +231,6 @@ they should be added to their parent stone material group and tagged as appropri
 
 all 17 faux trapdoor blocks need all tags for vanilla wood planks
 
-flowing water texture for stone bricks faucet, stone bricks water jet, and water source trickle should be cutout rendering
-
 items are still split up (example: one set of trapdoors (barn, barrel, beach etc) is listed in one group and another (airy, checkered, classic, etc) is listed in another group later
 doors have the same issue
 I suspect this is caused by the weird way we have doors and trapdoors being processed via different loops
@@ -247,4 +242,7 @@ we can remove those bespoke blockstates and models
 
 wood type windows and wood type glass should be grouped together by wood types
 
-there is a very odd and clearly not correctly rendered "Circular" block and pane in the Cherry glass group separate from the correctly rendered Circular Cherry Glass
+the ITEM models for the wood type window tiles ctm block are using the side texture and not the wood plank texture as intended
+the static block item models are fine
+
+flowing water texture for stone bricks faucet, stone bricks water jet, and water source trickle should be cutout rendering

@@ -1,7 +1,3 @@
 {
-  "parent": "ott:block/ctm/item_pieces_solo",
-  "textures": {
-    "all": "minecraft:block/cherry_planks"
-  },
-  "render_type": "minecraft:cutout_mipped"
+  "parent": "ott:block/cherry_windows/cherry_window_tiles"
 }

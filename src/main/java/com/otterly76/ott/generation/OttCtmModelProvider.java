@@ -189,13 +189,18 @@ public class OttCtmModelProvider implements DataProvider {
         if ("solo".equals(r.item())) {
             m.addProperty("parent", "ott:block/ctm/item_pieces_solo");
             Map<String, String> tx = parseTextures(r.textures());
-            // Prefer the plank top ('up') over 'side' for the item icon — window tiles (the only
-            // rows using 'up=') should show their wood-plank face, not the window-tile side strip.
-            String prim = tx.getOrDefault("all", tx.getOrDefault("up", tx.get("side")));
+            String prim = tx.getOrDefault("all", tx.get("side"));
             JsonObject textures = new JsonObject();
             textures.addProperty("all", prim);
             m.add("textures", textures);
             if (!r.itemRender().isEmpty()) m.addProperty("render_type", r.itemRender());
+        } else if ("static".equals(r.item())) {
+            // Mirror the static (non-CTM) sibling block: wood planks on top/bottom, a single
+            // window tile on the four sides. Parenting to the CTM block model would smoosh the
+            // whole connecting atlas onto each 16×16 face (the in-world UVs are remapped by the
+            // mosaic loader, which the item render doesn't run). The static block model lives one
+            // directory up from the atlas — same path with the "/ctm/" segment removed.
+            m.addProperty("parent", parseTextures(r.textures()).get("side").replace("/ctm/", "/"));
         } else {
             m.addProperty("parent", "ott:block/" + r.material() + "/" + r.name());
         }
