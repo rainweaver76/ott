@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"render_type": "minecraft:translucent",
 	"textures": {
-		"1": "block/water_flow",
+		"1": "ott:block/water_flow_fade",
 		"particle": "ott:block/transparent"
 	},
 	"elements": [

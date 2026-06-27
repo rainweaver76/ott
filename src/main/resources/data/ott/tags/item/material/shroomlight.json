@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:shroomlight",
+    "ott:broken_shroomlight",
+    "ott:cracked_shroomlight",
+    "ott:double_inlayed_shroomlight",
+    "ott:edged_shroomlight_lantern",
+    "ott:fancy_shroomlight_lantern",
+    "ott:framed_shroomlight_lantern",
+    "ott:hived_shroomlight",
+    "ott:inlayed_shroomlight",
+    "ott:ornate_shroomlight_lantern",
+    "ott:polished_shroomlight",
+    "ott:reinforced_shroomlight",
+    "ott:shimmering_shroomlight",
+    "ott:shroomlight_lantern",
+    "ott:shroomlight_lodestone_side",
+    "ott:smooth_shroomlight",
+    "ott:thick_inlayed_shroomlight",
+    "ott:tiled_shroomlight_pillar"
+  ]
+}

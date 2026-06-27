@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sea_lantern",
+    "ott:broken_sea_lantern",
+    "ott:bulbed_sea_lantern",
+    "ott:cracked_sea_lantern",
+    "ott:double_inlayed_sea_lantern",
+    "ott:fancy_sea_lantern",
+    "ott:framed_sea_lantern",
+    "ott:hived_sea_lantern",
+    "ott:inlayed_sea_lantern",
+    "ott:ornate_sea_lantern",
+    "ott:polished_sea_lantern",
+    "ott:reinforced_sea_lantern",
+    "ott:sea_lantern",
+    "ott:sea_lantern_ctm",
+    "ott:sea_lantern_lodestone",
+    "ott:sea_lodestone_side",
+    "ott:shimmering_sea_lantern",
+    "ott:smooth_sea_lantern",
+    "ott:special_sea_lantern",
+    "ott:thick_inlayed_sea_lantern",
+    "ott:tiled_sea_lantern_pillar"
+  ]
+}
