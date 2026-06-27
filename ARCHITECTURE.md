@@ -240,6 +240,4 @@ I'd also like to revert our models for both doors and trapdoors to the vanilla m
 I will revisit 3D models at a later date
 we can remove those bespoke blockstates and models
 
-wood type windows and wood type glass should be grouped together by wood types
-
-flowing water texture for stone bricks faucet, stone bricks water jet, and water source trickle should be cutout rendering
+wood type windows and wood type glass should be grouped together by wood type
