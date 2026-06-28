@@ -133,7 +133,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         this.engraveRecipes(noAdv);
         this.ctmPaneRecipes(noAdv);
         this.templateGlassPaneRecipes(noAdv);
-        this.recoveredWindowRecipes(noAdv);
         this.allPaneCrafting(noAdv);   // fill 6→16 crafting for every remaining pane (runs last)
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GLASS_JAR.get())
@@ -2202,8 +2201,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     // ── CTM Pane recipes (new batch) ──────────────────────────────────────────
     private void ctmPaneRecipes(RecipeOutput exporter) {
         // 1. Plain glass CTM panes (engraved from vanilla glass)
-        engraveOne(exporter, Blocks.GLASS, OttBlocks.SCRATCHED_GLASS_CTM_PANE,         "scratched_glass_ctm_pane_engraving");
-        engraveOne(exporter, Blocks.GLASS, OttBlocks.BORDERLESS_GLASS_CTM_PANE,        "borderless_glass_ctm_pane_engraving");
         paneFrom6(exporter, OttBlocks.SCRATCHED_GLASS,       OttBlocks.SCRATCHED_GLASS_CTM_PANE,        "scratched_glass_ctm_pane_from_block");
         paneFrom6(exporter, OttBlocks.BORDERLESS_GLASS,      OttBlocks.BORDERLESS_GLASS_CTM_PANE,       "borderless_glass_ctm_pane_from_block");
 
@@ -2213,17 +2210,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         paneFrom6(exporter, OttBlocks.ORNATE_LEADED_GLASS,         OttBlocks.ORNATE_LEADED_GLASS_CTM_PANE,         "ornate_leaded_glass_ctm_pane_from_block");
 
         // 2. Tinted borderless CTM pane (engraved from vanilla tinted glass)
-        engraveOne(exporter, Blocks.TINTED_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_engraving");
         paneFrom6(exporter, OttBlocks.TINTED_BORDERLESS_GLASS, OttBlocks.TINTED_BORDERLESS_GLASS_CTM_PANE, "tinted_borderless_glass_ctm_pane_from_block");
 
         // 3. Per-color stained glass CTM panes are now handled inside stainedGlassGroupRecipes().
         // 3.5 Tinted-coloured CTM panes (separate from stained glass group — base is tinted glass)
+        // Tinted-coloured CTM panes: obtained via paneFrom6 (crafting only, no engraving)
         for (DyeColor color : DyeColor.values()) {
             String c = color.getName();
             String paneName = "tinted_borderless_glass_" + c + "_ctm_pane";
             Block pane = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));
-            if (pane != Blocks.AIR) {
-                engraveOne(exporter, Blocks.TINTED_GLASS, pane, paneName + "_engraving");
+            Block ctmBlock = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott",
+                    "tinted_borderless_glass_" + c + "_ctm"));
+            if (pane != Blocks.AIR && ctmBlock != Blocks.AIR) {
+                paneFrom6(exporter, ctmBlock, pane, paneName + "_from_block");
             }
         }
 
@@ -2238,37 +2237,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     wood + "_window_" + style + "_ctm_pane");
             }
         }
-
-    }
-
-    private void recoveredWindowRecipes(RecipeOutput exporter) {
-        String[] styles = {"bars", "covered", "diagonal", "large", "panes", "rounded", "slim", "swirling", "tiles"};
-        String[] woods  = {"acacia", "birch", "crimson", "dark_oak", "jungle", "mangrove", "oak", "spruce", "warped"};
-        String[] suffixes = {"", "_pane", "_ctm_pane"};
-        for (String wood : woods) {
-            Block planks = BuiltInRegistries.BLOCK.get(ResourceLocation.withDefaultNamespace(wood + "_planks"));
-            if (planks == Blocks.AIR) continue;
-            for (String style : styles) {
-                for (String suf : suffixes) {
-                    String id = wood + "_window_" + style + suf;
-                    Block out = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", id));
-                    if (out == Blocks.AIR) continue;
-                    // _ctm_pane: skip if the _ctm full block exists — ctmPaneRecipes() owns that recipe id (avoid duplicate).
-                    if (suf.equals("_ctm_pane")) {
-                        Block ctm = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", wood + "_window_" + style + "_ctm"));
-                        if (ctm != Blocks.AIR) continue;
-                    }
-                    engraveOne(exporter, planks, out, id + "_engraving");
-                }
-            }
-        }
     }
 
     private void engravePaneFromBlock(RecipeOutput exporter, ItemLike material, String blockOttName, String paneName) {
         Block block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", blockOttName));
         Block pane  = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));
         if (block == Blocks.AIR || pane == Blocks.AIR) return;
-        engraveOne(exporter, material, pane, paneName + "_engraving");
         paneFrom6(exporter, block, pane, paneName + "_from_block");
     }
 
@@ -2276,7 +2250,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private void engravePaneSelfBlock(RecipeOutput exporter, ItemLike material, String paneName) {
         Block pane = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", paneName));
         if (pane == Blocks.AIR) return;
-        engraveOne(exporter, material, pane, paneName + "_engraving");
         paneFrom6(exporter, material, pane, paneName + "_from_block");
     }
 
@@ -2286,7 +2259,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             Block pane = com.otterly76.ott_blocks.block.OttTemplateBlocks.GLASS_PANES.get(paneName).get();
             Block glass = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(parent).get();
             paneFrom6(exporter, glass, pane, paneName + "_from_block");
-            engraveOne(exporter, glass, pane, paneName + "_engraving");
         });
     }
 

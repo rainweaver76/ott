@@ -982,7 +982,6 @@ public final class EngravingEntries {
         for (String n : new String[]{"amethyst_framed_glass_ctm", "ice_glass_ctm", "mossy_leaded_glass_ctm", "obsidian_framed_glass_ctm", "sandstone_framed_glass_ctm", "stone_framed_glass_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("glass"), eb, n + "_engraving"); }
 
         // ── leaded_glass ──
-        s.one( OttBlocks.LEADED_GLASS.get(), OttBlocks.LEADED_GLASS_PANE.get(), "leaded_glass_pane_engraving");
 
         // ── tinted_glass ──
         s.tagged( materialTag("tinted_glass"), OttBlocks.TINTED_BORDERLESS_GLASS_BLACK, "tinted_borderless_glass_black_ctm_engraving");
@@ -1310,133 +1309,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("mangrove_planks"), OttBlocks.PEGGED_MANGROVE_PLANKS, "pegged_mangrove_planks_ctm_engraving");
         s.tagged( materialTag("mangrove_planks"), OttBlocks.WHIRLWIND_MANGROVE_PLANKS, "whirlwind_mangrove_planks_ctm_engraving");
 
-        // ── white_marble ──
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_BRICKS,       "white_marble_bricks_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_SMALL_BRICKS, "white_marble_small_bricks_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_TILES,        "white_marble_tiles_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_POLISHED_MARBLE,     "white_polished_marble_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR,       "white_marble_pillar_engraving");
-        s.one( OttBlocks.WHITE_MARBLE, OttBlocks.WHITE_MARBLE_PILLAR_CAP,   "white_marble_pillar_cap_engraving");
-
-        // ── orange_marble ──
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_BRICKS,       "orange_marble_bricks_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_SMALL_BRICKS, "orange_marble_small_bricks_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_TILES,        "orange_marble_tiles_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_POLISHED_MARBLE,     "orange_polished_marble_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR,       "orange_marble_pillar_engraving");
-        s.one( OttBlocks.ORANGE_MARBLE, OttBlocks.ORANGE_MARBLE_PILLAR_CAP,   "orange_marble_pillar_cap_engraving");
-
-        // ── magenta_marble ──
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_BRICKS,       "magenta_marble_bricks_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "magenta_marble_small_bricks_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_TILES,        "magenta_marble_tiles_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_POLISHED_MARBLE,     "magenta_polished_marble_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR,       "magenta_marble_pillar_engraving");
-        s.one( OttBlocks.MAGENTA_MARBLE, OttBlocks.MAGENTA_MARBLE_PILLAR_CAP,   "magenta_marble_pillar_cap_engraving");
-
-        // ── light_blue_marble ──
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_BRICKS,       "light_blue_marble_bricks_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_SMALL_BRICKS, "light_blue_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_TILES,        "light_blue_marble_tiles_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_POLISHED_MARBLE,     "light_blue_polished_marble_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR,       "light_blue_marble_pillar_engraving");
-        s.one( OttBlocks.LIGHT_BLUE_MARBLE, OttBlocks.LIGHT_BLUE_MARBLE_PILLAR_CAP,   "light_blue_marble_pillar_cap_engraving");
-
-        // ── yellow_marble ──
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_BRICKS,       "yellow_marble_bricks_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_SMALL_BRICKS, "yellow_marble_small_bricks_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_TILES,        "yellow_marble_tiles_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_POLISHED_MARBLE,     "yellow_polished_marble_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR,       "yellow_marble_pillar_engraving");
-        s.one( OttBlocks.YELLOW_MARBLE, OttBlocks.YELLOW_MARBLE_PILLAR_CAP,   "yellow_marble_pillar_cap_engraving");
-
-        // ── lime_marble ──
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_BRICKS,       "lime_marble_bricks_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_SMALL_BRICKS, "lime_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_TILES,        "lime_marble_tiles_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_POLISHED_MARBLE,     "lime_polished_marble_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR,       "lime_marble_pillar_engraving");
-        s.one( OttBlocks.LIME_MARBLE, OttBlocks.LIME_MARBLE_PILLAR_CAP,   "lime_marble_pillar_cap_engraving");
-
-        // ── pink_marble ──
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_BRICKS,       "pink_marble_bricks_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_SMALL_BRICKS, "pink_marble_small_bricks_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_TILES,        "pink_marble_tiles_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_POLISHED_MARBLE,     "pink_polished_marble_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR,       "pink_marble_pillar_engraving");
-        s.one( OttBlocks.PINK_MARBLE, OttBlocks.PINK_MARBLE_PILLAR_CAP,   "pink_marble_pillar_cap_engraving");
-
-        // ── gray_marble ──
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_BRICKS,       "gray_marble_bricks_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_SMALL_BRICKS, "gray_marble_small_bricks_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_TILES,        "gray_marble_tiles_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_POLISHED_MARBLE,     "gray_polished_marble_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR,       "gray_marble_pillar_engraving");
-        s.one( OttBlocks.GRAY_MARBLE, OttBlocks.GRAY_MARBLE_PILLAR_CAP,   "gray_marble_pillar_cap_engraving");
-
-        // ── light_gray_marble ──
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_BRICKS,       "light_gray_marble_bricks_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_SMALL_BRICKS, "light_gray_marble_small_bricks_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_TILES,        "light_gray_marble_tiles_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_POLISHED_MARBLE,     "light_gray_polished_marble_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR,       "light_gray_marble_pillar_engraving");
-        s.one( OttBlocks.LIGHT_GRAY_MARBLE, OttBlocks.LIGHT_GRAY_MARBLE_PILLAR_CAP,   "light_gray_marble_pillar_cap_engraving");
-
-        // ── cyan_marble ──
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_BRICKS,       "cyan_marble_bricks_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_SMALL_BRICKS, "cyan_marble_small_bricks_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_TILES,        "cyan_marble_tiles_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_POLISHED_MARBLE,     "cyan_polished_marble_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR,       "cyan_marble_pillar_engraving");
-        s.one( OttBlocks.CYAN_MARBLE, OttBlocks.CYAN_MARBLE_PILLAR_CAP,   "cyan_marble_pillar_cap_engraving");
-
-        // ── purple_marble ──
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_BRICKS,       "purple_marble_bricks_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_SMALL_BRICKS, "purple_marble_small_bricks_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_TILES,        "purple_marble_tiles_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_POLISHED_MARBLE,     "purple_polished_marble_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR,       "purple_marble_pillar_engraving");
-        s.one( OttBlocks.PURPLE_MARBLE, OttBlocks.PURPLE_MARBLE_PILLAR_CAP,   "purple_marble_pillar_cap_engraving");
-
-        // ── blue_marble ──
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_BRICKS,       "blue_marble_bricks_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_SMALL_BRICKS, "blue_marble_small_bricks_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_TILES,        "blue_marble_tiles_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_POLISHED_MARBLE,     "blue_polished_marble_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR,       "blue_marble_pillar_engraving");
-        s.one( OttBlocks.BLUE_MARBLE, OttBlocks.BLUE_MARBLE_PILLAR_CAP,   "blue_marble_pillar_cap_engraving");
-
-        // ── brown_marble ──
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_BRICKS,       "brown_marble_bricks_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_SMALL_BRICKS, "brown_marble_small_bricks_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_TILES,        "brown_marble_tiles_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_POLISHED_MARBLE,     "brown_polished_marble_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR,       "brown_marble_pillar_engraving");
-        s.one( OttBlocks.BROWN_MARBLE, OttBlocks.BROWN_MARBLE_PILLAR_CAP,   "brown_marble_pillar_cap_engraving");
-
-        // ── green_marble ──
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_BRICKS,       "green_marble_bricks_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_SMALL_BRICKS, "green_marble_small_bricks_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_TILES,        "green_marble_tiles_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_POLISHED_MARBLE,     "green_polished_marble_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR,       "green_marble_pillar_engraving");
-        s.one( OttBlocks.GREEN_MARBLE, OttBlocks.GREEN_MARBLE_PILLAR_CAP,   "green_marble_pillar_cap_engraving");
-
-        // ── red_marble ──
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_BRICKS,       "red_marble_bricks_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_SMALL_BRICKS, "red_marble_small_bricks_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_TILES,        "red_marble_tiles_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_POLISHED_MARBLE,     "red_polished_marble_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR,       "red_marble_pillar_engraving");
-        s.one( OttBlocks.RED_MARBLE, OttBlocks.RED_MARBLE_PILLAR_CAP,   "red_marble_pillar_cap_engraving");
-
-        // ── black_marble ──
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_BRICKS,       "black_marble_bricks_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_SMALL_BRICKS, "black_marble_small_bricks_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_TILES,        "black_marble_tiles_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_POLISHED_MARBLE,     "black_polished_marble_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR,       "black_marble_pillar_engraving");
-        s.one( OttBlocks.BLACK_MARBLE, OttBlocks.BLACK_MARBLE_PILLAR_CAP,   "black_marble_pillar_cap_engraving");
 
         // ── mossy_cobblestone ──
         s.tagged( materialTag("mossy_cobblestone"), OttBlocks.CURLY_MOSSY_COBBLESTONE_CTM, "curly_mossy_cobblestone_pillar_engraving");
@@ -1594,19 +1466,14 @@ public final class EngravingEntries {
         for (String n : new String[]{"curly_netherrack_ctm", "fine_netherrack_ctm", "ornate_netherrack_ctm", "simple_netherrack_ctm"}) { Block eb = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath("ott", n)); if (eb != Blocks.AIR) s.tagged(materialTag("netherrack"), eb, n + "_engraving"); }
 
         // ── oak_diamond_bordered_glass ──
-        s.one( OttBlocks.OAK_DIAMOND_BORDERED_GLASS.get(), OttBlocks.OAK_DIAMOND_BORDERED_GLASS_PANE.get(), "oak_diamond_bordered_glass_pane_engraving");
 
         // ── oak_horizontal_lined_glass ──
-        s.one( OttBlocks.OAK_HORIZONTAL_LINED_GLASS.get(), OttBlocks.OAK_HORIZONTAL_LINED_GLASS_PANE.get(), "oak_horizontal_lined_glass_pane_engraving");
 
         // ── oak_large_diamond_glass ──
-        s.one( OttBlocks.OAK_LARGE_DIAMOND_GLASS.get(), OttBlocks.OAK_LARGE_DIAMOND_GLASS_PANE.get(), "oak_large_diamond_glass_pane_engraving");
 
         // ── oak_line_bared_glass ──
-        s.one( OttBlocks.OAK_LINE_BARED_GLASS.get(), OttBlocks.OAK_LINE_BARED_GLASS_PANE.get(), "oak_line_bared_glass_pane_engraving");
 
         // ── oak_ornate_bared_glass ──
-        s.one( OttBlocks.OAK_ORNATE_BARED_GLASS.get(), OttBlocks.OAK_ORNATE_BARED_GLASS_PANE.get(), "oak_ornate_bared_glass_pane_engraving");
 
         // ── oak_planks ──
         s.tagged( materialTag("oak_planks"),          OttBlocks.CIRCLE_OAK_GLASS,           "circle_oak_glass_engraving");
@@ -1649,7 +1516,6 @@ public final class EngravingEntries {
         s.tagged( materialTag("oak_planks"), OttBlocks.WHIRLWIND_OAK_PLANKS, "whirlwind_oak_planks_ctm_engraving");
 
         // ── oak_woven_glass ──
-        s.one( OttBlocks.OAK_WOVEN_GLASS.get(), OttBlocks.OAK_WOVEN_GLASS_PANE.get(), "oak_woven_glass_pane_engraving");
 
         // ── obsidian ──
         s.tagged( materialTag("obsidian"), OttBlocks.CURLY_OBSIDIAN_CTM, "curly_obsidian_pillar_engraving");
