@@ -1066,11 +1066,6 @@ public enum OttCreativeCategories {
 
                 output.accept(ModBlocks.STONE_BRICKS_ARROWSLIT);
                 output.accept(ModBlocks.STONE_BRICKS_MACHICOLATION);
-                output.accept(ModBlocks.STONE_BRICKS_FAUCET);
-                output.accept(ModBlocks.STONE_BRICKS_POOL);
-                output.accept(ModBlocks.STONE_BRICKS_SMALL_POOL);
-                output.accept(ModBlocks.STONE_BRICKS_WATER_JET);
-                output.accept(ModBlocks.WATER_SOURCE_TRICKLE);
 
                 output.accept(ModItems.WILDFIRE_CROWN);
                 output.accept(ModItems.WILDFIRE_CROWN_FRAGMENT);
