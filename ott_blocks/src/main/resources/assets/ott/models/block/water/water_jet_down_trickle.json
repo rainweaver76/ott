@@ -1,6 +1,4 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Throttled by Otterly76",
 	"render_type": "minecraft:translucent",
 	"textures": {
 		"1": "ott:block/water_jet/water_jet_down",

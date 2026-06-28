@@ -1,10 +1,8 @@
 {
-	"format_version": "1.9.0",
-	"credit": "Made with Blockbench",
 	"render_type": "minecraft:translucent",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "ott:block/water_flow_fade",
+		"1": "block/water_flow",
 		"particle": "ott:block/transparent"
 	},
 	"elements": [

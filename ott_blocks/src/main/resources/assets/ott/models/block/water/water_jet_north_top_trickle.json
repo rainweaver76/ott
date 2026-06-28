@@ -1,6 +1,6 @@
 {
 	"render_type": "minecraft:translucent",
-"textures": {
+	"textures": {
 		"6": "ott:block/water_jet/water_jet_north_top",
 		"particle": "ott:block/transparent"
 	},

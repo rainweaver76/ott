@@ -37,10 +37,10 @@ public class PoolBlock extends Block {
     public static final BooleanProperty EAST   = BlockStateProperties.EAST;
     public static final BooleanProperty SOUTH  = BlockStateProperties.SOUTH;
     public static final BooleanProperty WEST   = BlockStateProperties.WEST;
-    public static final BooleanProperty PILLAR = BooleanProperty.create("pillar");
-    public static final IntegerProperty LEVEL  = IntegerProperty.create("level", 0, 8);
+    public static final BooleanProperty PILLAR = BooleanProperty.create("has_pillar");
+    public static final IntegerProperty LEVEL  = IntegerProperty.create("level", 0, 16);
 
-    public static final int MAX_LEVEL = 8;
+    public static final int MAX_LEVEL = 16;
 
     protected static final VoxelShape FLOOR      = Block.box( 0, 0,  0, 16,  2, 16);
     protected static final VoxelShape WALL_NORTH = Block.box( 0, 2,  0, 16, 16,  2);
