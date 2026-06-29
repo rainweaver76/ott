@@ -219,7 +219,7 @@ public enum OttCreativeCategories {
             }),
 
     COLORS("colors",
-            () -> ModBlocks.COLOR_SETS.get("amethyst").wool().get().asItem(),
+            () -> ModBlocks.COLOR_SETS.get("lavender").wool().get().asItem(),
             (params, output) -> {
                 // ── OTT custom color groups (palette order) ──────────────────
                 ModBlocks.COLOR_SETS.forEach((name, set) -> {
@@ -871,7 +871,7 @@ public enum OttCreativeCategories {
                         .map(com.otterly76.ott.color.ModColorSets.ColorSet::name)
                         .collect(java.util.stream.Collectors.toSet());
                 java.util.function.Predicate<String> isCustomGlassPane = n -> {
-                    if (!n.endsWith("_pane") || !n.contains("glass")) return false;
+                    if (!n.endsWith("_pane") || !n.contains("stained_glass")) return false;
                     for (String c : customColors) if (n.startsWith(c + "_") || n.contains("_" + c + "_")) return true;
                     return false;
                 };

@@ -1,6 +1,5 @@
 package com.otterly76.ott;
 
-import com.otterly76.ott.block.custom.PoolBlock;
 import com.otterly76.ott.command.HomeCommand;
 import com.otterly76.ott.config.OttConfig;
 import com.otterly76.ott.handler.ItemInteractionHandler;
@@ -74,9 +73,6 @@ public class ServerGameEvents {
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
         Level level = (Level) event.getLevel();
         BlockPos pos = event.getPos();
-
-        // Pool blocks manage their own water — don't trigger flooding when they're broken
-        if (level.getBlockState(pos).getBlock() instanceof PoolBlock) return;
 
         // Check horizontal neighbors for water to trigger flooding
         for (Direction direction : Direction.Plane.HORIZONTAL) {

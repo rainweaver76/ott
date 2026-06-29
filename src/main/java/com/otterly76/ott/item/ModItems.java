@@ -484,11 +484,6 @@ public class ModItems {
 
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_ARROWSLIT = registerBlockItem("stone_bricks_arrowslit", ModBlocks.STONE_BRICKS_ARROWSLIT);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MACHICOLATION = registerBlockItem("stone_bricks_machicolation", ModBlocks.STONE_BRICKS_MACHICOLATION);
-    public static final DeferredHolder<Item, BlockItem> WATER_SOURCE_TRICKLE = registerBlockItem("water_source_trickle", ModBlocks.WATER_SOURCE_TRICKLE);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_FAUCET = registerBlockItem("stone_bricks_faucet", ModBlocks.STONE_BRICKS_FAUCET);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_POOL = registerBlockItem("stone_bricks_pool", ModBlocks.STONE_BRICKS_POOL);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_SMALL_POOL = registerBlockItem("stone_bricks_small_pool", ModBlocks.STONE_BRICKS_SMALL_POOL);
-    public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_WATER_JET = registerBlockItem("stone_bricks_water_jet", ModBlocks.STONE_BRICKS_WATER_JET);
 
     public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_EDGE = registerBlockItem("limestone_masonry_edge", ModBlocks.LIMESTONE_MASONRY_EDGE);
     public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_PLATE = registerBlockItem("limestone_masonry_plate", ModBlocks.LIMESTONE_MASONRY_PLATE);

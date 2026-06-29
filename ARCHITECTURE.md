@@ -187,13 +187,6 @@ Otter Notes:
 leave marble in custom stone, stonecutter recipes
 remove from engraving system
 
-ott:material/dripstone_block needs created/fixed
-ott:material/shroomlight needs created/fixed
-ott:material/sea_lantern needs created/fixed
-
-amethyst framed glass pane (both) are uncategorized
-they should be grouped with their full blocks
-
 ALL trapdoors missing material group engraving tags (only tag they have is minecraft:mineable/axe)
 they should get all the same tags as vanilla trapdoors
 

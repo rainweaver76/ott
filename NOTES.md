@@ -16,7 +16,6 @@ swap to 3d nether wart item model
 swap to cross item model for coral & coral fans
 swap to 3d model for end crystal
 item models adjust for copper rails
-make ctm version of amethyst framed glass and mossy glass
 add custom color CTM stained glass variants
 add all MCol tags
 
@@ -59,20 +58,13 @@ add nautilus owner follow logic
 add hanging/wall models for all lanterns
 starlight lamp recipe
 
-chipped ladder models
-chipped lantern models
-
-add blocks from Chipped
-- adapt existing textures to CTM
-- create additional patterns
+create additional patterns
   - stone bordered gravel
   - sandstone bordered sand
   - salt blocks
 - create variants for pale oak log, wood, leaves, etc
 - create variants for resin
 - check for missing textures by type
-
-update newer textures to x32
 
 make additional wood items for starlight and midnight
 - bookshelf, chest, trapped chest, barrel, ladder, chiseled bookshelf

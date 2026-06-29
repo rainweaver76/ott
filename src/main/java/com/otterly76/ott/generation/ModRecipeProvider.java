@@ -749,36 +749,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(exporter, getRecipePath("ott", name + "_painted_planks_from_dyeing"));
         }
 
-
-        // --- Stone bricks faucet: S/W/S (vertical center column) → 1 ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.STONE_BRICKS_FAUCET.get())
-                .define('S', Items.STONE_BRICKS)
-                .define('W', Items.WATER_BUCKET)
-                .pattern("S")
-                .pattern("W")
-                .pattern("S")
-                .unlockedBy("has_stone_bricks", has(Items.STONE_BRICKS))
-                .save(exporter, getRecipePath("ott", "stone_bricks_faucet"));
-
-        // --- Stone bricks water jet: S/W/W (vertical center column) → 1 ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.STONE_BRICKS_WATER_JET.get())
-                .define('S', Items.STONE_BRICKS)
-                .define('W', Items.WATER_BUCKET)
-                .pattern("S")
-                .pattern("W")
-                .pattern("W")
-                .unlockedBy("has_stone_bricks", has(Items.STONE_BRICKS))
-                .save(exporter, getRecipePath("ott", "stone_bricks_water_jet"));
-
-        // --- Water source trickle: W/W/W (vertical center column) → 1 ---
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WATER_SOURCE_TRICKLE.get())
-                .define('W', Items.WATER_BUCKET)
-                .pattern("W")
-                .pattern("W")
-                .pattern("W")
-                .unlockedBy("has_water_bucket", has(Items.WATER_BUCKET))
-                .save(exporter, getRecipePath("ott", "water_source_trickle"));
-
         // --- Weathering station: C_C/C_C/ICI (5 copper + 2 iron) → 1 ---
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WEATHERING_STATION.get())
                 .define('C', Items.COPPER_INGOT)
@@ -1806,8 +1776,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         // --- Stone bricks functional blocks from stone bricks ---
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_ARROWSLIT.get(),   "stone_bricks_arrowslit_stonecutting");
         stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_MACHICOLATION.get(),"stone_bricks_machicolation_stonecutting");
-        stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_POOL.get(),         "stone_bricks_pool_stonecutting");
-        stonecutOne(exporter, Blocks.STONE_BRICKS, ModBlocks.STONE_BRICKS_SMALL_POOL.get(),   "stone_bricks_small_pool_stonecutting");
         // --- Chiseled plastered stone pillar: stonecut from white plastered stone (was engraved) ---
         stonecutOne(exporter, ModBlocks.PATTERN_BLOCKS.get("plastered_stone").get("white").get(), OttBlocks.CHISELED_PLASTERED_STONE_PILLAR.get(), "chiseled_plastered_stone_pillar_stonecutting");
         // --- Limestone stonecutter source ---

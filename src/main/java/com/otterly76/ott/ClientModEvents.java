@@ -511,12 +511,6 @@ public class ClientModEvents {
         ModBlocks.COPPER_WATER_CAULDRONS.values().forEach(blockSupplier ->
                 event.register((state, level, pos, tint) -> tint == 0 && level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1, blockSupplier.get()));
 
-        // Water-feature blocks — biome water colour on tint 0
-        event.register((state, level, pos, tint) -> tint == 0 && level != null && pos != null ? BiomeColors.getAverageWaterColor(level, pos) : -1,
-                ModBlocks.STONE_BRICKS_WATER_JET.get(), ModBlocks.WATER_SOURCE_TRICKLE.get(),
-                ModBlocks.STONE_BRICKS_FAUCET.get(), ModBlocks.STONE_BRICKS_POOL.get(),
-                ModBlocks.STONE_BRICKS_SMALL_POOL.get(), ModBlocks.WEATHERING_STATION.get());
-
         // LEAF_LITTER — biome foliage colour
         event.register((state, level, pos, tint) -> level != null && pos != null ? BiomeColors.getAverageFoliageColor(level, pos) : FoliageColor.getDefaultColor(),
                 ModBlocks.LEAF_LITTER.get());
@@ -694,10 +688,6 @@ public class ClientModEvents {
                 ModItems.OTTER_SPAWN_EGG.get(), ModItems.RED_PANDA_SPAWN_EGG.get(), ModItems.SEA_BUNNY_SPAWN_EGG.get(),
                 ModItems.WATER_BUFFALO_SPAWN_EGG.get());
 
-        // Water tinting for water-feature item models
-        event.register((stack, tintIndex) -> tintIndex == 0 ? 0x3F76E4 : -1,
-                ModBlocks.STONE_BRICKS_FAUCET.get(), ModBlocks.STONE_BRICKS_WATER_JET.get(), ModBlocks.WATER_SOURCE_TRICKLE.get());
-
         // MineColonies raider spawn eggs: our ott_core resourcepack replaces the two-tone egg art
         // with custom flat textures, but MineColonies registers a SpawnEgg color handler that tints
         // layer0/1 — producing a jarring colour overlay. Re-register a no-tint (-1) handler so the
@@ -725,33 +715,7 @@ public class ClientModEvents {
         event.enqueueWork(ClientModEvents::registerBlockRenderLayers);
     }
 
-    /**
-     * Pins the multipart water-feature blocks to the translucent chunk layer. These blockstates
-     * combine an opaque stone fixture model with a translucent water-stream sub-model; NeoForge
-     * honours a model's own {@code render_type} for single-variant blocks (e.g. {@code
-     * water_source_trickle} renders translucent correctly) but a multipart block draws all of its
-     * quads on the block's single chunk layer — defaulting to solid, which paints the water
-     * texture's transparent background as opaque. Forcing the layer here makes the water blend;
-     * the fully-opaque stone parts render identically on the translucent layer.
-     *
-     * <p>{@code setRenderLayer} is deprecated in favour of a model's own {@code render_type}, but
-     * that hint cannot drive a <em>multipart</em> block's chunk layer — this is the supported way
-     * to pin one, so the deprecation is suppressed deliberately.
-     */
-    @SuppressWarnings("deprecation")
     private static void registerBlockRenderLayers() {
-        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
-                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_FAUCET.get(),
-                net.minecraft.client.renderer.RenderType.translucent());
-        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
-                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_WATER_JET.get(),
-                net.minecraft.client.renderer.RenderType.translucent());
-        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
-                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_POOL.get(),
-                net.minecraft.client.renderer.RenderType.translucent());
-        net.minecraft.client.renderer.ItemBlockRenderTypes.setRenderLayer(
-                com.otterly76.ott.block.ModBlocks.STONE_BRICKS_SMALL_POOL.get(),
-                net.minecraft.client.renderer.RenderType.translucent());
     }
 
     @SubscribeEvent

@@ -3714,7 +3714,6 @@ public class OttBlocks {
     public static final DeferredBlock<Block> STONE_CRUSHED = register("stone_crushed_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> STONE_DENT = register("stone_dent", () -> new Block(ST));
     public static final DeferredBlock<Block> STONE_FRAMED_GLASS = register("stone_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
-    // Fancy glass added the same way as the framed stone/sandstone/obsidian family (CTM block + CTM pane; static twins + static panes come from block_templates.csv).
     public static final DeferredBlock<Block> AMETHYST_FRAMED_GLASS_CTM = register("amethyst_framed_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
     public static final DeferredBlock<CtmPaneBlock> AMETHYST_FRAMED_GLASS_CTM_PANE = register("amethyst_framed_glass_ctm_pane", () -> new CtmPaneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS_PANE).noOcclusion()));
     public static final DeferredBlock<Block> MOSSY_LEADED_GLASS_CTM = register("mossy_leaded_glass_ctm", () -> new TransparentBlock(Properties.ofFullCopy(Blocks.GLASS)));
