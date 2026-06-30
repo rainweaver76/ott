@@ -23,7 +23,7 @@ public final class EngravingTabLists {
     private static final Logger LOGGER = LoggerFactory.getLogger(EngravingTabLists.class);
 
     private static final String[] CATEGORIES = {
-            "stone", "gem", "copper", "concrete", "terracotta", "wool", "glass", "wood", "other", "chisels"
+            "stone", "wood", "concrete", "terracotta", "wool", "glass", "gem", "copper", "chisels", "other"
     };
 
     private static volatile List<ItemLike> cached;
