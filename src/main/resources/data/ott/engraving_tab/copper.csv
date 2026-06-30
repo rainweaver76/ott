@@ -1,0 +1,21 @@
+﻿# OTT Engraving Tab — COPPER CSV
+# One block ID per line (ott: namespace). Lines starting with # are comments.
+# Order here = order in the creative tab. Edit freely to reorder.
+# 16 entries
+
+copper_block_ctm
+copper_block_bars_ctm
+copper_block_circles_ctm
+copper_block_gears_ctm
+copper_block_lines_ctm
+copper_block_pattern_ctm
+copper_block_polished_ctm
+copper_block_shafts_ctm
+copper_block_small_bricks_ctm
+copper_grate_ctm
+exposed_copper_block_ctm
+exposed_copper_grate_ctm
+weathered_copper_block_ctm
+weathered_copper_grate_ctm
+oxidized_copper_block_ctm
+oxidized_copper_grate_ctm

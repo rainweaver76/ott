@@ -1,0 +1,54 @@
+﻿# OTT Engraving Tab — OTHER CSV
+# One block ID per line (ott: namespace). Lines starting with # are comments.
+# Order here = order in the creative tab. Edit freely to reorder.
+# 49 entries
+
+amethyst_chain
+andesite_chain
+basalt_chain
+blackstone_chain
+bone_chain
+bricks_chain
+cobbled_deepslate_chain
+cobblestone_chain
+crimson_chain
+dark_prismarine_chain
+deepslate_bricks_chain
+diamond_chain
+diorite_chain
+emerald_chain
+end_stone_chain
+gold_chain
+granite_chain
+mossy_cobblestone_chain
+netherite_chain
+normal_nether_bricks_chain
+normal_sandstone_chain
+obsidian_chain
+prismarine_chain
+purpur_chain
+quartz_chain
+red_nether_bricks_chain
+red_sandstone_chain
+smooth_stone_chain
+stone_bricks_chain
+stone_chain
+warped_chain
+edged_redstone_lamp
+edged_white_redstone_lamp
+fancy_redstone_lamp
+fancy_white_redstone_lamp
+hived_redstone_lamp
+hived_white_redstone_lamp
+inlayed_redstone_lamp
+inlayed_white_redstone_lamp
+nice_redstone_lamp
+nice_white_redstone_lamp
+ornate_redstone_lamp
+ornate_white_redstone_lamp
+reinforced_redstone_lamp
+reinforced_white_redstone_lamp
+smooth_redstone_lamp
+smooth_white_redstone_lamp
+thick_inlayed_redstone_lamp
+thick_white_inlayed_redstone_lamp
