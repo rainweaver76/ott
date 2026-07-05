@@ -961,14 +961,14 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         // ── Beehive ───────────────────────────────────────────────────────────
         ModelFile beehiveNormal = models().getBuilder("block/beehive/" + setName + "_beehive")
                 .parent(new ModelFile.UncheckedModelFile(mcLoc("block/orientable_with_bottom")))
-                .texture("bottom",   modLoc("block/beehive/" + setName + "_beehive_end"))
-                .texture("front",    modLoc("block/beehive/" + setName + "_beehive_front"))
-                .texture("particle", modLoc("block/beehive/" + setName + "_beehive_side"))
-                .texture("side",     modLoc("block/beehive/" + setName + "_beehive_side"))
-                .texture("top",      modLoc("block/beehive/" + setName + "_beehive_end"));
+                .texture("bottom",   modLoc("block/" + setName + "_beehive/" + setName + "_beehive_end"))
+                .texture("front",    modLoc("block/" + setName + "_beehive/" + setName + "_beehive_front"))
+                .texture("particle", modLoc("block/" + setName + "_beehive/" + setName + "_beehive_side"))
+                .texture("side",     modLoc("block/" + setName + "_beehive/" + setName + "_beehive_side"))
+                .texture("top",      modLoc("block/" + setName + "_beehive/" + setName + "_beehive_end"));
         ModelFile beehiveHoney = models().getBuilder("block/beehive/" + setName + "_beehive_honey")
                 .parent(new ModelFile.UncheckedModelFile(modLoc("block/beehive/" + setName + "_beehive")))
-                .texture("front", modLoc("block/beehive/" + setName + "_beehive_front_honey"));
+                .texture("front", modLoc("block/" + setName + "_beehive/" + setName + "_beehive_front_honey"));
 
         var beehiveVsb = getVariantBuilder(set.beehive().get());
         for (Direction facing : new Direction[]{Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST}) {
