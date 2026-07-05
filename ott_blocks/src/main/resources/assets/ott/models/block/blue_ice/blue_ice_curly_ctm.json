@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
+  "textures": {
+    "all": "ott:block/blue_ice/ctm/blue_ice_curly_ctm"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

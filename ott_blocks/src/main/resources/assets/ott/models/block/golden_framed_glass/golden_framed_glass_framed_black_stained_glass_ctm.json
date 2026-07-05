@@ -1,0 +1,16 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
+  "textures": {
+    "all": "ott:block/golden_framed_glass_framed_black_stained_glass_stained_glass/ctm/golden_framed_glass_framed_black_stained_glass"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:translucent"
+}

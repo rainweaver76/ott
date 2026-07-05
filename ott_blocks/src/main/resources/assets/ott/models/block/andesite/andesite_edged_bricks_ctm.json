@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
+  "textures": {
+    "all": "ott:block/andesite/ctm/andesite_edged_bricks"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

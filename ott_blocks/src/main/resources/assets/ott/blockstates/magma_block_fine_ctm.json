@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/magma_block/magma_block_fine_ctm"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/calcite/calcite_overlapping_tiles_ctm"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all_pieces",
+  "layout": "pieces_full",
+  "textures": {
+    "all": "ott:block/orange_wool/ctm/orange_wool_llama"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

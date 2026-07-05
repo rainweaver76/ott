@@ -97,10 +97,10 @@ public class OttCtmModelProvider implements DataProvider {
     }
 
     private static boolean isWoolOrCarpet(String path) {
-        return com.otterly76.ott_blocks.block.OttBlocks.DECO_WOOL.containsKey(path)
-                || com.otterly76.ott_blocks.block.OttBlocks.STYLED_WOOL.containsKey(path)
-                || com.otterly76.ott_blocks.block.OttBlocks.DECO_CARPET.containsKey(path)
-                || com.otterly76.ott_blocks.block.OttBlocks.STYLED_CARPET.containsKey(path);
+        // Carpets (template=carpet/carpet_ctm) use flat models, not CTM — skip them.
+        // CTM wools (template=cube_all_ctm) ARE handled by this provider normally.
+        String template = com.otterly76.ott_blocks.block.OttTemplateBlocks.TEMPLATE_BY_NAME.get(path);
+        return "carpet".equals(template) || "carpet_ctm".equals(template);
     }
 
     // ── JSON builders (mirror of the verified Python generator) ─────────────────

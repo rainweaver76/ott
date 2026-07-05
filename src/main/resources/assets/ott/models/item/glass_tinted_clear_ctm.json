@@ -1,0 +1,7 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/glass/ctm/glass_tinted_clear"
+  },
+  "render_type": "minecraft:translucent"
+}

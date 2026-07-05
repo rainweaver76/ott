@@ -608,24 +608,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 // CTM vertical pillars
         );
 
-        // Patterned-wool family: every wool full-cube (solo + ctm) is a DO material; connecting
-        // (_ctm) wool + carpet also get the CTM_BLOCKS tooltip. Carpets auto-tag to FLOOR_TILES.
-        for (var e : OttBlocks.STYLED_WOOL.entrySet()) {
-            this.tag(doDefaultKey).add(e.getValue().get());
-            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
-        }
-        for (var e : OttBlocks.STYLED_CARPET.entrySet())
-            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
-
-        // Decorative wool family. Every wool full-cube (solo + ctm) is a DO material; connecting
-        // (_ctm) wool + carpet also go in CTM_BLOCKS (tooltip). Carpets auto-tag to FLOOR_TILES
-        // via the CarpetBlock case in the registry loop above.
-        for (var e : OttBlocks.DECO_WOOL.entrySet()) {
-            this.tag(doDefaultKey).add(e.getValue().get());
-            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
-        }
-        for (var e : OttBlocks.DECO_CARPET.entrySet())
-            if (e.getKey().endsWith("_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(e.getValue().get());
+        // Wool and carpet blocks — all registered via OttTemplateBlocks.BY_NAME now.
+        // Wool cubes (cube_all template) → DO material; CTM wools (_ctm suffix) → CTM_BLOCKS.
+        // Carpets (carpet/carpet_ctm template) → tagged via the CarpetBlock loop above.
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.TEMPLATE_BY_NAME.forEach((name, template) -> {
+            var db = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(name);
+            if (db == null) return;
+            if ("cube_all".equals(template) && name.endsWith("_wool")) {
+                this.tag(doDefaultKey).add(db.get());
+                if (name.endsWith("_wool_ctm")) this.tag(ModTags.Blocks.CTM_BLOCKS).add(db.get());
+            }
+            if ("carpet_ctm".equals(template)) this.tag(ModTags.Blocks.CTM_BLOCKS).add(db.get());
+        });
 
         // Stone CTM connecting blocks
 
@@ -870,32 +864,23 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         axeTag.add(ModBlocks.ACACIA_BEEHIVE.get(), ModBlocks.BAMBOO_BEEHIVE.get(), ModBlocks.BIRCH_BEEHIVE.get(), ModBlocks.CHERRY_BEEHIVE.get(), ModBlocks.CRIMSON_BEEHIVE.get());
         axeTag.add(ModBlocks.DARK_OAK_BEEHIVE.get(), ModBlocks.JUNGLE_BEEHIVE.get(), ModBlocks.MANGROVE_BEEHIVE.get(), ModBlocks.PALE_OAK_BEEHIVE.get(), ModBlocks.SPRUCE_BEEHIVE.get(), ModBlocks.WARPED_BEEHIVE.get());
 
-        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
-            Block vanillaWoodDoor = switch (wood) {
-                case "oak"      -> Blocks.OAK_DOOR;
-                case "spruce"   -> Blocks.SPRUCE_DOOR;
-                case "birch"    -> Blocks.BIRCH_DOOR;
-                case "jungle"   -> Blocks.JUNGLE_DOOR;
-                case "acacia"   -> Blocks.ACACIA_DOOR;
-                case "dark_oak" -> Blocks.DARK_OAK_DOOR;
-                case "mangrove" -> Blocks.MANGROVE_DOOR;
-                case "cherry"   -> Blocks.CHERRY_DOOR;
-                case "bamboo"   -> Blocks.BAMBOO_DOOR;
-                case "crimson"  -> Blocks.CRIMSON_DOOR;
-                case "warped"   -> Blocks.WARPED_DOOR;
-                case "pale_oak" -> ModBlocks.PALE_OAK_DOOR.get();
-                default -> throw new IllegalStateException("Unknown wood type for door tags: " + wood);
-            };
-            var woodMaterialTag = this.tag(TagKey.create(Registries.BLOCK,
-                    ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood)));
-            woodMaterialTag.add(vanillaWoodDoor);
-            styleMap.values().forEach(db -> {
-                Block door = db.get();
-                this.tag(BlockTags.DOORS).add(door);
-                this.tag(BlockTags.WOODEN_DOORS).add(door);
-                axeTag.add(door);
-                woodMaterialTag.add(door);
-            });
+        OttBlocks.WOOD_DOORS.forEach((name, db) -> {
+            String wood = OttBlocks.WOOD_DOOR_WOOD.get(name);
+            Block door = db.get();
+            this.tag(BlockTags.DOORS).add(door);
+            this.tag(BlockTags.WOODEN_DOORS).add(door);
+            axeTag.add(door);
+            this.tag(TagKey.create(Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood))).add(door);
+        });
+        OttBlocks.WOOD_TRAPDOORS.forEach((name, db) -> {
+            String wood = OttBlocks.WOOD_TRAPDOOR_WOOD.get(name);
+            Block trap = db.get();
+            this.tag(BlockTags.TRAPDOORS).add(trap);
+            this.tag(BlockTags.WOODEN_TRAPDOORS).add(trap);
+            axeTag.add(trap);
+            this.tag(TagKey.create(Registries.BLOCK,
+                    ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood))).add(trap);
         });
 
         shearsTag.add(ModBlocks.PALE_OAK_LEAVES.value(), ModBlocks.PALE_HANGING_MOSS.value(), ModBlocks.PALE_MOSS_BLOCK.value(), ModBlocks.PALE_MOSS_CARPET.value(), ModBlocks.CLOSED_EYEBLOSSOM.value(), ModBlocks.OPEN_EYEBLOSSOM.value());

@@ -1,0 +1,19 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_planks_top",
+  "textures": {
+    "side": "ott:block/crimson_windows/ctm/crimson_planks_window_tiles",
+    "up": "minecraft:block/crimson_planks"
+  },
+  "connections": {
+    "side": {
+      "layout": "pieces_full",
+      "rules": [
+        {
+          "type": "is_same_block"
+        }
+      ]
+    }
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

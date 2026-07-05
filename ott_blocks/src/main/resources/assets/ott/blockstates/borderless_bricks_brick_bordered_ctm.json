@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/borderless_bricks/borderless_bricks_brick_bordered_ctm"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/mangrove_door/mangrove_cottage_door_lower",
-    "particle": "ott:block/mangrove_door/mangrove_cottage_door_upper",
-    "top": "ott:block/mangrove_door/mangrove_cottage_door_upper"
-  }
-}

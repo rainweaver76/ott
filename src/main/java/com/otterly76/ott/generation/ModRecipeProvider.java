@@ -658,49 +658,22 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_cobbled_limestone", has(OttBlocks.COBBLED_LIMESTONE.get()))
                 .save(exporter, getRecipePath("ott", "limestone_from_cobbled_limestone_smelting"));
 
-        // --- Decorative wool family carpets (delicate/ornamented/legacy/llama × 16 × {solo, ctm}):
-        //     standard 2 wool → 3 carpet (solo carpet ← solo wool, ctm carpet ← ctm wool) ---
-        for (String style : OttBlocks.DECO_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
-                for (String suf : new String[]{"", "_ctm"}) {
-                    String carpet = style + "_" + color + "_carpet" + suf;
-                    String wool = style + "_" + color + "_wool" + suf;
-                    ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, OttBlocks.DECO_CARPET.get(carpet).get(), 3)
-                            .define('W', OttBlocks.DECO_WOOL.get(wool).get())
-                            .pattern("WW")
-                            .unlockedBy("has_" + wool, has(OttBlocks.DECO_WOOL.get(wool).get()))
-                            .save(exporter, getRecipePath("ott", carpet));
-                }
-            }
-        }
-
-        // --- Patterned-wool family carpets (cornered/crafted/harsh_quilted/rectangle × 16 × {solo, ctm}):
-        //     standard 2 wool → 3 carpet (solo carpet ← solo wool, ctm carpet ← ctm wool) ---
-        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
-                for (String suf : new String[]{"", "_ctm"}) {
-                    String carpetName = style + "_" + color + "_carpet" + suf;
-                    String woolName = style + "_" + color + "_wool" + suf;
-                    Block wool = OttBlocks.STYLED_WOOL.get(woolName).get();
-                    ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, OttBlocks.STYLED_CARPET.get(carpetName).get(), 3)
-                            .define('W', wool)
-                            .pattern("WW")
-                            .unlockedBy("has_" + woolName, has(wool))
-                            .save(exporter, getRecipePath("ott", carpetName));
-                }
-            }
-        }
-
-        // --- Plain carpets for imported wool variants (barky/…/woved × 16): 2 wool → 3 carpet ---
-        com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.forEach((woolName, woolBlock) -> {
-            if (!woolName.endsWith("_wool")) return;
-            String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
-            Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
-            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, carpet, 3)
-                    .define('W', woolBlock.get())
+        // --- All wool carpets: 2 wool → 3 carpet (all families unified via block_templates.csv) ---
+        // For every wool block in the template system, register a carpet recipe from the matching carpet block.
+        com.otterly76.ott_blocks.block.OttTemplateBlocks.TEMPLATE_BY_NAME.forEach((name, template) -> {
+            if (!"carpet".equals(template) && !"carpet_ctm".equals(template)) return;
+            // Derive the wool name: {name} ends with _carpet or _carpet_ctm
+            String woolSuffix = template.equals("carpet_ctm") ? "_carpet_ctm" : "_carpet";
+            String woolName = name.substring(0, name.length() - woolSuffix.length())
+                    + (template.equals("carpet_ctm") ? "_ctm" : "");
+            var carpetDb = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(name);
+            var woolDb   = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(woolName);
+            if (carpetDb == null || woolDb == null) return;
+            ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, carpetDb.get(), 3)
+                    .define('W', woolDb.get())
                     .pattern("WW")
-                    .unlockedBy("has_" + woolName, has(woolBlock.get()))
-                    .save(exporter, getRecipePath("ott", carpetName));
+                    .unlockedBy("has_" + woolName, has(woolDb.get()))
+                    .save(exporter, getRecipePath("ott", name));
         });
 
         // --- Glazed terracotta smelting (16 custom colors) ---

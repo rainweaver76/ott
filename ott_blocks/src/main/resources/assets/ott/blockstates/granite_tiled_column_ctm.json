@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/granite/granite_tiled_column_ctm"
+    }
+  }
+}

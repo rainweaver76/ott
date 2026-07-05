@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/jungle_door/jungle_swamp_door_lower",
-    "particle": "ott:block/jungle_door/jungle_swamp_door_upper",
-    "top": "ott:block/jungle_door/jungle_swamp_door_upper"
-  }
-}

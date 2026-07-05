@@ -2,6 +2,7 @@ package com.otterly76.ott_blocks.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.CryingObsidianBlock;
 import net.minecraft.world.level.block.IronBarsBlock;
 import net.minecraft.world.level.block.TransparentBlock;
@@ -49,6 +50,28 @@ public final class OttTemplateBlocks {
 
     /** Glass blocks whose {@code _pane} partner is already registered elsewhere (don't auto-derive). */
     private static final java.util.Set<String> PANE_SKIP = java.util.Set.of("glass"); // glass_pane pre-exists
+
+
+    /** wool material -> matching vanilla carpet (for carpet/carpet_ctm template properties). */
+    private static final Map<String, Block> CARPET_BASE = new HashMap<>();
+    static {
+        CARPET_BASE.put("white_wool",      Blocks.WHITE_CARPET);
+        CARPET_BASE.put("orange_wool",     Blocks.ORANGE_CARPET);
+        CARPET_BASE.put("magenta_wool",    Blocks.MAGENTA_CARPET);
+        CARPET_BASE.put("light_blue_wool", Blocks.LIGHT_BLUE_CARPET);
+        CARPET_BASE.put("yellow_wool",     Blocks.YELLOW_CARPET);
+        CARPET_BASE.put("lime_wool",       Blocks.LIME_CARPET);
+        CARPET_BASE.put("pink_wool",       Blocks.PINK_CARPET);
+        CARPET_BASE.put("gray_wool",       Blocks.GRAY_CARPET);
+        CARPET_BASE.put("light_gray_wool", Blocks.LIGHT_GRAY_CARPET);
+        CARPET_BASE.put("cyan_wool",       Blocks.CYAN_CARPET);
+        CARPET_BASE.put("purple_wool",     Blocks.PURPLE_CARPET);
+        CARPET_BASE.put("blue_wool",       Blocks.BLUE_CARPET);
+        CARPET_BASE.put("brown_wool",      Blocks.BROWN_CARPET);
+        CARPET_BASE.put("green_wool",      Blocks.GREEN_CARPET);
+        CARPET_BASE.put("red_wool",        Blocks.RED_CARPET);
+        CARPET_BASE.put("black_wool",      Blocks.BLACK_CARPET);
+    }
 
     /** material folder -> vanilla base block whose properties are copied. */
     private static final Map<String, Block> BASE = new HashMap<>();
@@ -272,6 +295,22 @@ public final class OttTemplateBlocks {
                     GLASS_PANES.put(paneName, pane);
                     PANE_PARENT.put(paneName, name);
                 }
+
+                // Static wool blocks get a connecting _ctm counterpart if a CTM texture exists for them.
+                // The texture check is the single source of truth — no hardcoded category lists needed.
+                if ("cube_all".equals(template) && material.endsWith("_wool")) {
+                    String ctmTexPath = "assets/ott/textures/block/" + material + "/ctm/" + name + ".png";
+                    if (OttTemplateBlocks.class.getClassLoader().getResource(ctmTexPath) != null) {
+                        String ctmName = name + "_ctm";
+                        final Block woolBase = base(material);
+                        DeferredBlock<Block> ctmBlock = OttBlocks.register(ctmName,
+                                () -> new Block(BlockBehaviour.Properties.ofFullCopy(woolBase)));
+                        BY_NAME.put(ctmName, ctmBlock);
+                        MATERIAL_BY_NAME.put(ctmName, material);
+                        TEMPLATE_BY_NAME.put(ctmName, "cube_all_ctm");
+                        RENDER_BY_NAME.put(ctmName, "");
+                    }
+                }
             }
         } catch (Exception e) {
             throw new IllegalStateException("Failed to load block_templates.csv", e);
@@ -288,6 +327,11 @@ public final class OttTemplateBlocks {
         if ("glass".equals(template) || "glass_column".equals(template)) {
             return OttBlocks.register(name,
                     () -> new TransparentBlock(BlockBehaviour.Properties.ofFullCopy(base(material)).noOcclusion()));
+        }
+        if ("carpet".equals(template) || "carpet_ctm".equals(template)) {
+            Block cb = CARPET_BASE.getOrDefault(material, Blocks.WHITE_CARPET);
+            return OttBlocks.register(name,
+                    () -> new CarpetBlock(BlockBehaviour.Properties.ofFullCopy(cb)));
         }
         // cube_all, cube_column, and anything else: plain Block (crying_obsidian gets its drip-particle class)
         if ("crying_obsidian".equals(material)) {

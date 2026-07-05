@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/crying_obsidian/ctm/crying_obsidian_bordered"
+  }
+}

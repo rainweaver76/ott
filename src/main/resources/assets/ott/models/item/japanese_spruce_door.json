@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/spruce_door/japanese_spruce_lower",
-    "particle": "ott:block/spruce_door/japanese_spruce_upper",
-    "top": "ott:block/spruce_door/japanese_spruce_upper"
-  }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/end_stone/ctm/end_stone_tiny_brick_bordered"
+  }
+}

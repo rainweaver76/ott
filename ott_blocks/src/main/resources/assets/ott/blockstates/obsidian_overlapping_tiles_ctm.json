@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ott:block/obsidian/obsidian_overlapping_tiles_ctm"
+    }
+  }
+}

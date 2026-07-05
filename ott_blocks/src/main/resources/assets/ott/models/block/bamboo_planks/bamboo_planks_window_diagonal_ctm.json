@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical",
+  "layout": "pieces_vertical",
+  "textures": {
+    "side": "ott:block/bamboo_windows/ctm/bamboo_planks_window_diagonal",
+    "top": "minecraft:block/bamboo_planks"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

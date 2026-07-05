@@ -557,8 +557,7 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> CURVED_RAKED_GRAVEL = registerBlockItem("curved_raked_gravel", ModBlocks.CURVED_RAKED_GRAVEL);
     public static final DeferredHolder<Item, BlockItem> STRAIGHT_RAKED_GRAVEL = registerBlockItem("straight_raked_gravel", ModBlocks.STRAIGHT_RAKED_GRAVEL);
 
-    // Delicate/ornamented carpet items now auto-registered with their blocks in OttBlocks
-    // (DECO_CARPET via OttBlocks.register → ITEMS.registerSimpleBlockItem).
+    // All wool and carpet items are auto-registered via OttTemplateBlocks (block_templates.csv).
 
     public static final DeferredHolder<Item, BlockItem> OAK_PERGOLA = registerBlockItem("oak_pergola", ModBlocks.OAK_PERGOLA);
     public static final DeferredHolder<Item, BlockItem> OAK_BEAM = registerBlockItem("oak_beam", ModBlocks.OAK_BEAM);

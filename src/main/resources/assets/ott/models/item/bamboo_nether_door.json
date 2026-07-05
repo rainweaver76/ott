@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/bamboo_door/bamboo_nether_door_lower",
-    "particle": "ott:block/bamboo_door/bamboo_nether_door_upper",
-    "top": "ott:block/bamboo_door/bamboo_nether_door_upper"
-  }
-}

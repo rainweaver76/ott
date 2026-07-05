@@ -74,7 +74,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         this.copy(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/stained_glass")), ottStainedGlassKey);
         this.copy(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/terracotta")), ottTerracottaKey);
 
-        OttBlocks.WOOD_DOORS.keySet().forEach(wood ->
+        OttBlocks.WOOD_DOOR_WOOD.values().stream().distinct().forEach(wood ->
             this.copy(
                 TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood)),
                 TagKey.create(Registries.ITEM,  ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "material/" + wood)))

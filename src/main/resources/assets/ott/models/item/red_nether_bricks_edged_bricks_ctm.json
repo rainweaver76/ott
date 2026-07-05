@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/red_nether_bricks/ctm/red_nether_bricks_edged_bricks"
+  }
+}

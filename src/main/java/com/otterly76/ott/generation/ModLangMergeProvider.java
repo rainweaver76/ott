@@ -74,18 +74,14 @@ public class ModLangMergeProvider implements DataProvider {
             addStoneSetEntries(ottBase, v.name());
         }
 
-        // Add wood door variant entries
-        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) -> {
-            String woodCap = Arrays.stream(wood.split("_"))
-                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                    .collect(Collectors.joining(" "));
-            styleMap.keySet().forEach(style -> {
-                String styleCap = Arrays.stream(style.split("_"))
-                        .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                        .collect(Collectors.joining(" "));
-                ottBase.addProperty("block.ott." + style + "_" + wood + "_door", styleCap + " " + woodCap + " Door");
-            });
-        });
+        // Add wood door and trapdoor variant entries (name is the block ID, title-cased for display)
+        java.util.function.Function<String, String> titleCase = name -> Arrays.stream(name.split("_"))
+                .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
+                .collect(Collectors.joining(" "));
+        OttBlocks.WOOD_DOORS.forEach((name, block) ->
+                ottBase.addProperty("block.ott." + name, titleCase.apply(name)));
+        OttBlocks.WOOD_TRAPDOORS.forEach((name, block) ->
+                ottBase.addProperty("block.ott." + name, titleCase.apply(name)));
 
         // Glass-material door & trapdoor names (title-case each token).
         java.util.function.Function<String, String> glassTitleCase = n -> Arrays.stream(n.split("_"))
@@ -97,9 +93,9 @@ public class ModLangMergeProvider implements DataProvider {
         // Connecting glazed terracotta (Fancy <Color> Glazed Terracotta) — _ctm shares the base name.
         for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
                 "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
-            ottBase.addProperty("block.ott.fancy_" + c + "_glazed_terracotta_ctm",
+            ottBase.addProperty("block.ott." + c + "_glazed_terracotta_fancy_ctm",
                     "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
-            ottBase.addProperty("block.ott.fancy_" + c + "_glazed_terracotta",
+            ottBase.addProperty("block.ott." + c + "_glazed_terracotta_fancy",
                     "Fancy " + glassTitleCase.apply(c) + " Glazed Terracotta");
         }
 
@@ -138,39 +134,7 @@ public class ModLangMergeProvider implements DataProvider {
             ottBase.addProperty("block.ott." + paneName, parentName + " Pane");
         });
 
-        // Plain carpets for imported wool variants (barky/…/woved × 16 colors)
-        for (String name : com.otterly76.ott_blocks.block.OttBlocks.IMPORTED_WOOL_CARPETS.keySet()) {
-            String pretty = Arrays.stream(name.split("_"))
-                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                    .collect(Collectors.joining(" "));
-            ottBase.addProperty("block.ott." + name, pretty);
-        }
-
-        // Decorative wool family (delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm}).
-        // Connecting (_ctm) variants share the base name; the "Connecting" hint comes from the CTM_BLOCKS tooltip.
-        java.util.stream.Stream.concat(
-                com.otterly76.ott_blocks.block.OttBlocks.DECO_WOOL.keySet().stream(),
-                com.otterly76.ott_blocks.block.OttBlocks.DECO_CARPET.keySet().stream()
-        ).forEach(name -> {
-            String core = name.endsWith("_ctm") ? name.substring(0, name.length() - "_ctm".length()) : name;
-            String pretty = Arrays.stream(core.split("_"))
-                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                    .collect(Collectors.joining(" "));
-            ottBase.addProperty("block.ott." + name, pretty);
-        });
-
-        // Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm}).
-        // Connecting (_ctm) variants share the base name; the "Connecting" hint comes from the CTM_BLOCKS tooltip.
-        java.util.stream.Stream.concat(
-                com.otterly76.ott_blocks.block.OttBlocks.STYLED_WOOL.keySet().stream(),
-                com.otterly76.ott_blocks.block.OttBlocks.STYLED_CARPET.keySet().stream()
-        ).forEach(name -> {
-            String core = name.endsWith("_ctm") ? name.substring(0, name.length() - "_ctm".length()) : name;
-            String pretty = Arrays.stream(core.split("_"))
-                    .map(s -> s.substring(0, 1).toUpperCase() + s.substring(1))
-                    .collect(Collectors.joining(" "));
-            ottBase.addProperty("block.ott." + name, pretty);
-        });
+        // Wool and carpet lang entries are now covered by the OttTemplateBlocks.BY_NAME loop above.
 
         // Unified chisel set: pretty names for all pillars + legends (incl. redstone). The oxidised
         // copper inlays read as "Exposed/Weathered/Oxidized Copper" rather than raw coppere/o/w tokens.

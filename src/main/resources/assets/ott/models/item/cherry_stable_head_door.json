@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/cherry_door/cherry_stable_head_door_lower",
-    "particle": "ott:block/cherry_door/cherry_stable_door_upper",
-    "top": "ott:block/cherry_door/cherry_stable_door_upper"
-  }
-}

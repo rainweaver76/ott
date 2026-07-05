@@ -54,7 +54,7 @@ public final class EngravingTabLists {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))) {
             String line;
             while ((line = br.readLine()) != null) {
-                line = line.strip();
+                line = line.strip().replace("﻿", ""); // strip UTF-8 BOM if spreadsheet editor added it
                 if (line.isEmpty() || line.startsWith("#")) continue;
                 ResourceLocation rl = ResourceLocation.fromNamespaceAndPath("ott", line);
                 var block = BuiltInRegistries.BLOCK.get(rl);

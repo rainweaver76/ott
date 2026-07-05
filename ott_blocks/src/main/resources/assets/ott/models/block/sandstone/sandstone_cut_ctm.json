@@ -1,0 +1,17 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_column_pieces_vertical_capped",
+  "layout": "pieces_vertical",
+  "textures": {
+    "bottom": "minecraft:block/sandstone_bottom",
+    "side": "ott:block/sandstone/ctm/sandstone_cut",
+    "top": "minecraft:block/sandstone_top"
+  },
+  "connections": {
+    "side": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

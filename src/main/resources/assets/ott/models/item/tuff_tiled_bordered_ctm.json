@@ -1,0 +1,6 @@
+{
+  "parent": "ott:block/ctm/item_pieces_solo",
+  "textures": {
+    "all": "ott:block/tuff/ctm/tuff_tiled_bordered"
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:item/door_base",
-  "textures": {
-    "bottom": "ott:block/acacia_door/acacia_swamp_door_lower",
-    "particle": "ott:block/acacia_door/acacia_swamp_door_upper",
-    "top": "ott:block/acacia_door/acacia_swamp_door_upper"
-  }
-}

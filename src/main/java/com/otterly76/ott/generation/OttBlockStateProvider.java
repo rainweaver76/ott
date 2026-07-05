@@ -591,54 +591,6 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                 .renderType(mcLoc(renderType)));
     }
 
-    /**
-     * Decorative wool family (delicate/ornamented/legacy/llama × 16 colors × 4 variants).
-     * Blockstate → the hand-authored model; item always shows the 16×16 static (wool→cube, carpet→flat carpet),
-     * never the 80×16 strip (no smoosh).
-     */
-    private void decoWoolFamily() {
-        for (String style : OttBlocks.DECO_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
-                String base = style + "_" + color;
-                ResourceLocation staticTex = modLoc("block/" + style + "_carpet/" + style + "_" + color + "_carpet_static");
-                for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
-                    simpleBlock(OttBlocks.DECO_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + wn)));
-                    itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
-                            .texture("all", staticTex).renderType("minecraft:cutout_mipped");
-                }
-                for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
-                    simpleBlock(OttBlocks.DECO_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + cn)));
-                    itemModels().withExistingParent(cn, mcLoc("block/carpet"))
-                            .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
-                }
-            }
-        }
-    }
-
-    /**
-     * Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × 4 variants).
-     * Blockstate → hand-authored model; item shows the 16×16 static (wool→cube, carpet→flat carpet),
-     * never the 80×16 strip. Static path: block/&lt;color&gt;_wool/&lt;style&gt;_&lt;color&gt;_wool_static.
-     */
-    private void styledWoolFamily() {
-        for (String style : OttBlocks.STYLED_CARPET_STYLES) {
-            for (String color : OttBlocks.STYLED_CARPET_COLORS) {
-                String base = style + "_" + color;
-                ResourceLocation staticTex = modLoc("block/" + color + "_wool/" + base + "_wool_static");
-                for (String wn : new String[]{base + "_wool", base + "_wool_ctm"}) {
-                    simpleBlock(OttBlocks.STYLED_WOOL.get(wn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + wn)));
-                    itemModels().withExistingParent(wn, mcLoc("block/cube_all"))
-                            .texture("all", staticTex).renderType("minecraft:cutout_mipped");
-                }
-                for (String cn : new String[]{base + "_carpet", base + "_carpet_ctm"}) {
-                    simpleBlock(OttBlocks.STYLED_CARPET.get(cn).get(), models().getExistingFile(modLoc("block/" + color + "_wool/" + cn)));
-                    itemModels().withExistingParent(cn, mcLoc("block/carpet"))
-                            .texture("wool", staticTex).renderType("minecraft:cutout_mipped");
-                }
-            }
-        }
-    }
-
     private void colorSetCarpet(Block block, String color, String dir) {
         ResourceLocation texture = modLoc("block/color_set/" + color + "/" + "wool");
         simpleBlock(block, models().withExistingParent(dir + blockPath(block), mcLoc("block/carpet"))
@@ -1555,27 +1507,12 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
 
         // ── Roman fresco: black/red migrated to ctm_blocks.tsv (OttCtmModelProvider) ──
 
-        // ── Decorative wool family: delicate/ornamented/legacy/llama × 16 × {wool, wool_ctm, carpet, carpet_ctm} ──
-        decoWoolFamily();
-
-        // ── Patterned-wool family (cornered/crafted/harsh_quilted/rectangle × 16 × {wool, wool_ctm, carpet, carpet_ctm}) ──
-        styledWoolFamily();
-
-        // ── Plain carpets for imported 16×16 wool variants (barky/…/woved × 16) ──
-        com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.forEach((woolName, material) -> {
-            if (!woolName.endsWith("_wool")) return;
-            String carpetName = woolName.substring(0, woolName.length() - "_wool".length()) + "_carpet";
-            Block carpet = OttBlocks.IMPORTED_WOOL_CARPETS.get(carpetName).get();
-            ModelFile model = models().withExistingParent("block/" + material + "/" + carpetName, mcLoc("block/carpet"))
-                    .texture("wool", modLoc("block/" + material + "/" + woolName));
-            simpleBlock(carpet, model);
-            itemModels().withExistingParent(carpetName, model.getLocation());
-        });
-
         // ── Template-driven blocks (from block_templates.csv) ──
+        // All wool (cube_all) and carpet (carpet/carpet_ctm) blocks are now handled here.
         // Source of truth = the CSV. Blockstate + model + item are ALL generated here, dispatched
         // by template; only the textures are committed. See OttTemplateBlocks.
         com.otterly76.ott_blocks.block.OttTemplateBlocks.TEMPLATE_BY_NAME.forEach((name, template) -> {
+            if ("cube_all_ctm".equals(template)) return; // CTM wool — model handled by OttCtmModelProvider
             String material = com.otterly76.ott_blocks.block.OttTemplateBlocks.MATERIAL_BY_NAME.get(name);
             String render = com.otterly76.ott_blocks.block.OttTemplateBlocks.RENDER_BY_NAME.get(name);
             net.minecraft.world.level.block.Block block = com.otterly76.ott_blocks.block.OttTemplateBlocks.BY_NAME.get(name).get();
@@ -1593,6 +1530,16 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                     String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
                             : (render.contains(":") ? render : "minecraft:" + render);
                     model = models().cubeColumn(base, modLoc(base), modLoc(base + "_top")).renderType(rt);
+                }
+                case "carpet", "carpet_ctm" -> {
+                    // Carpet: strip _carpet or _carpet_ctm suffix to find the matching wool texture.
+                    // carpet_ctm uses same isolated tile as static carpet (CTM atlas would look wrong flat).
+                    String woolSuffix = template.equals("carpet_ctm") ? "_carpet_ctm" : "_carpet";
+                    String woolName = name.substring(0, name.length() - woolSuffix.length());
+                    ResourceLocation woolTex = modLoc("block/" + material + "/" + woolName);
+                    model = models().withExistingParent(base, mcLoc("block/carpet"))
+                            .texture("wool", woolTex)
+                            .renderType("minecraft:cutout_mipped");
                 }
                 default -> { // cube_all — honor optional render hint (e.g. cutout for faux trapdoors / copper grates)
                     if (render == null || render.isEmpty()) {
@@ -1736,13 +1683,19 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
         beehiveBlock(ModBlocks.SPRUCE_BEEHIVE,    "spruce");
         beehiveBlock(ModBlocks.WARPED_BEEHIVE,    "warped");
 
-        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
-            styleMap.forEach((style, block) -> {
-                ResourceLocation bottom = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_bottom");
-                ResourceLocation top    = modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top");
-                registerCutoutDoor(block.get(), bottom, top, "block/" + wood + "_planks/");
-            })
-        );
+        OttBlocks.WOOD_DOORS.forEach((name, block) -> {
+            String wood      = OttBlocks.WOOD_DOOR_WOOD.get(name);
+            String topKey    = OttBlocks.WOOD_DOOR_TOP.getOrDefault(name, name + "_top");
+            String bottomKey = OttBlocks.WOOD_DOOR_BOTTOM.getOrDefault(name, name + "_bottom");
+            ResourceLocation top    = modLoc("block/" + wood + "_door/" + topKey);
+            ResourceLocation bottom = modLoc("block/" + wood + "_door/" + bottomKey);
+            registerCutoutDoor(block.get(), bottom, top, "block/" + wood + "_planks/");
+        });
+        OttBlocks.WOOD_TRAPDOORS.forEach((name, block) -> {
+            String wood = OttBlocks.WOOD_TRAPDOOR_WOOD.get(name);
+            ResourceLocation tex = modLoc("block/" + wood + "_trapdoor/" + name);
+            registerCutoutTrapdoor(block.get(), tex, "block/" + wood + "_planks/");
+        });
 
         // Glass-material doors & trapdoors — translucent, textures under block/glass_door|glass_trapdoor.
         OttBlocks.GLASS_DOORS.forEach((name, block) ->
@@ -1780,6 +1733,7 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
                             .build());
             itemModels().withExistingParent(name, modLoc("block/redstone_lamp/" + name));
         });
+
     }
 
     private void beehiveBlock(net.neoforged.neoforge.registries.DeferredBlock<BeehiveBlock> block, String woodType) {

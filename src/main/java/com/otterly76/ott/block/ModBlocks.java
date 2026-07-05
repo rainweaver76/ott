@@ -869,8 +869,7 @@ public class ModBlocks {
     public static final DeferredBlock<RakedGravelBlock> CURVED_RAKED_GRAVEL = register("curved_raked_gravel", () -> new RakedGravelBlock(true, Properties.ofFullCopy(Blocks.GRAVEL)));
     public static final DeferredBlock<RakedGravelBlock> STRAIGHT_RAKED_GRAVEL = register("straight_raked_gravel", () -> new RakedGravelBlock(false, Properties.ofFullCopy(Blocks.GRAVEL)));
 
-    // Delicate/ornamented carpets moved to the unified decorative-wool family in
-    // OttBlocks.DECO_CARPET (4 styles × 16 colors × {solo, _ctm}). See OttBlocks.registerDecoWoolFamily().
+    // All wool and carpet blocks are registered via block_templates.csv (OttTemplateBlocks).
 
     public static final DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> OAK_PERGOLA = register("oak_pergola",
             () -> new com.otterly76.ott.block.custom.PergolaBlock(

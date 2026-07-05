@@ -101,15 +101,23 @@ public class ModItemModelProvider extends ItemModelProvider {
             parentItemToBlockModel(set.supportSlab().getId().getPath(), "block/" + setName + "/" + set.supportSlab().getId().getPath());
         });
 
-        OttBlocks.WOOD_DOORS.forEach((wood, styleMap) ->
-            styleMap.keySet().forEach(style -> {
-                String itemName = style + "_" + wood + "_door";
-                withExistingParent(itemName, mcLoc("item/door_base"))
-                        .texture("particle", modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top"))
-                        .texture("bottom",   modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_bottom"))
-                        .texture("top",      modLoc("block/" + wood + "_door/" + style + "_" + wood + "_door_top"));
-            })
-        );
+        OttBlocks.WOOD_DOORS.forEach((name, block) -> {
+            String wood      = OttBlocks.WOOD_DOOR_WOOD.get(name);
+            String topKey    = OttBlocks.WOOD_DOOR_TOP.getOrDefault(name, name + "_top");
+            String bottomKey = OttBlocks.WOOD_DOOR_BOTTOM.getOrDefault(name, name + "_bottom");
+            withExistingParent(name, mcLoc("item/door_base"))
+                    .texture("particle", modLoc("block/" + wood + "_door/" + topKey))
+                    .texture("top",      modLoc("block/" + wood + "_door/" + topKey))
+                    .texture("bottom",   modLoc("block/" + wood + "_door/" + bottomKey));
+        });
+
+        // Wood trapdoor items — generate directly from texture (block models aren't available yet at item model time).
+        OttBlocks.WOOD_TRAPDOORS.forEach((name, block) -> {
+            String wood = OttBlocks.WOOD_TRAPDOOR_WOOD.get(name);
+            withExistingParent(name, mcLoc("block/template_trapdoor_bottom"))
+                    .texture("texture", modLoc("block/" + wood + "_trapdoor/" + name))
+                    .renderType("cutout");
+        });
 
         // Glass-material door items (flat 2D door icon) + trapdoor items (3D block bottom model).
         // Translucent render type so the inventory icon matches the placed (translucent) block.
