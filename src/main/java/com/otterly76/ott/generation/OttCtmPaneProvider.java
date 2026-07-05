@@ -123,12 +123,9 @@ public class OttCtmPaneProvider implements DataProvider {
 
             // golden framed — edge texture lives in golden_framed_glass/ctm/
             // light_blue texture filename has no "_stained_glass" suffix
-            String goldenFile = c.equals("light_blue")
-                    ? "golden_framed_light_blue"
-                    : "golden_framed_" + c + "_stained_glass";
             specs.add(new PaneSpec("golden_framed_" + c + "_stained_glass_ctm_pane",
-                "ott:block/golden_framed_glass/ctm/" + goldenFile,
-                "ott:block/golden_framed_glass/golden_framed_glass_edge",
+                "ott:block/" + c + "_stained_glass/ctm/" + c + "_stained_glass_golden_framed",
+                "ott:block/glass/golden_framed_glass_edge",
                 "minecraft:translucent", false));
 
             // ornate
@@ -209,8 +206,8 @@ public class OttCtmPaneProvider implements DataProvider {
 
         // golden framed stained glass (colourless) — golden frame edge
         specs.add(new PaneSpec("golden_framed_stained_glass_ctm_pane",
-            "ott:block/golden_framed_glass/ctm/golden_framed_stained_glass",
-            "ott:block/golden_framed_glass/golden_framed_glass_edge", "minecraft:translucent", false));
+            "ott:block/glass/ctm/glass_golden_framed",
+            "ott:block/glass/golden_framed_glass_edge", "minecraft:translucent", false));
 
         // ornate leaded glass (colourless) — leaded frame edge, cutout like its parent block
         specs.add(new PaneSpec("ornate_leaded_glass_ctm_pane",

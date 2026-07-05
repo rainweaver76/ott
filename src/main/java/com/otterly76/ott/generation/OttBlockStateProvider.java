@@ -1697,16 +1697,20 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             registerCutoutTrapdoor(block.get(), tex, "block/" + wood + "_planks/");
         });
 
-        // Glass-material doors & trapdoors — translucent, textures under block/glass_door|glass_trapdoor.
-        OttBlocks.GLASS_DOORS.forEach((name, block) ->
+        // Glass-material doors & trapdoors — textures now live in their material directories.
+        OttBlocks.GLASS_DOORS.forEach((name, block) -> {
+            String mat = name.substring(0, name.length() - "_door".length()); // glass or {color}_stained_glass
             registerTranslucentDoor(block.get(),
-                    modLoc("block/glass_door/" + name + "_bottom"),
-                    modLoc("block/glass_door/" + name + "_top"),
-                    "block/glass_door/"));
-        OttBlocks.GLASS_TRAPDOORS.forEach((name, block) ->
+                    modLoc("block/" + mat + "/" + name + "_bottom"),
+                    modLoc("block/" + mat + "/" + name + "_top"),
+                    "block/" + mat + "/");
+        });
+        OttBlocks.GLASS_TRAPDOORS.forEach((name, block) -> {
+            String mat = name.substring(0, name.length() - "_trapdoor".length());
             registerTranslucentTrapdoor(block.get(),
-                    modLoc("block/glass_trapdoor/" + name),
-                    "block/glass_trapdoor/"));
+                    modLoc("block/" + mat + "/" + name),
+                    "block/" + mat + "/");
+        });
 
         // Decorative chains — vanilla chain model (axis x/y/z), cutout. Item model = item/chain.
         OttBlocks.CHAINS.forEach((name, block) -> {
