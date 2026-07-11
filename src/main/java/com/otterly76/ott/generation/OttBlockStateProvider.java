@@ -1519,8 +1519,12 @@ public class OttBlockStateProvider extends ModBlockStateProvider {
             String base = "block/" + material + "/" + name;
             ModelFile model;
             switch (template) {
-                case "cube_column" -> // side = NAME, end = NAME_top (tile-2 / tile-0 extracted)
-                        model = models().cubeColumn(base, modLoc(base), modLoc(base + "_top"));
+                case "cube_column" -> { // side = NAME, end = NAME_top if it exists, else same as side
+                    ResourceLocation topTex = efh.exists(modLoc(base + "_top"),
+                            net.minecraft.server.packs.PackType.CLIENT_RESOURCES, ".png", "textures")
+                            ? modLoc(base + "_top") : modLoc(base);
+                    model = models().cubeColumn(base, modLoc(base), topTex);
+                }
                 case "glass" -> {
                     String rt = (render == null || render.isEmpty()) ? "minecraft:translucent"
                             : (render.contains(":") ? render : "minecraft:" + render);
