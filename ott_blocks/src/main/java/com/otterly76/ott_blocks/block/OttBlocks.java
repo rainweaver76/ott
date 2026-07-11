@@ -127,6 +127,22 @@ public class OttBlocks {
         };
     }
 
+    /** Reads a single-column CSV (header row = "name") from the classpath and calls action for each entry. */
+    private static void readCsv(String path, java.util.function.Consumer<String> action) {
+        var stream = OttBlocks.class.getClassLoader().getResourceAsStream(path);
+        if (stream == null) throw new IllegalStateException("Missing " + path + " on classpath");
+        try (var r = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
+            r.readLine(); // skip header
+            String line;
+            while ((line = r.readLine()) != null) {
+                line = line.strip();
+                if (!line.isEmpty() && !line.startsWith("#")) action.accept(line);
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Failed to load " + path, e);
+        }
+    }
+
     private static void loadWoodDoors() {
         var stream = OttBlocks.class.getClassLoader().getResourceAsStream("assets/ott/wood_doors.csv");
         if (stream == null) throw new IllegalStateException("Missing assets/ott/wood_doors.csv on classpath");
@@ -245,7 +261,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_AMETHYST_BLOCK_COLUMN = register("cut_amethyst_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> EDGED_AMETHYST_BLOCK_BRICKS = register("edged_amethyst_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> FINE_AMETHYST_BLOCK_CTM = register("fine_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_AMETHYST_BLOCK_BRICKS = register("massive_amethyst_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_AMETHYST_BLOCK_BRICKS = register("amethyst_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_AMETHYST_BLOCK_CTM = register("ornate_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_AMETHYST_BLOCK_TILES = register("overlapping_amethyst_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_AMETHYST_BLOCK = register("polished_amethyst_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.AMETHYST_BLOCK)));
@@ -263,7 +279,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_ANCIENT_DEBRIS_COLUMN = register("cut_ancient_debris_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> EDGED_ANCIENT_DEBRIS_BRICKS = register("edged_ancient_debris_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> FINE_ANCIENT_DEBRIS_CTM = register("fine_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
-    public static final DeferredBlock<Block> MASSIVE_ANCIENT_DEBRIS_BRICKS = register("massive_ancient_debris_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
+    public static final DeferredBlock<Block> MASSIVE_ANCIENT_DEBRIS_BRICKS = register("ancient_debris_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> ORNATE_ANCIENT_DEBRIS_CTM = register("ornate_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> OVERLAPPING_ANCIENT_DEBRIS_TILES = register("overlapping_ancient_debris_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
     public static final DeferredBlock<Block> POLISHED_ANCIENT_DEBRIS = register("polished_ancient_debris_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS)));
@@ -293,7 +309,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_ANDESITE_COLUMN = register("cut_andesite_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> EDGED_ANDESITE_BRICKS = register("edged_andesite_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> FINE_ANDESITE_CTM = register("fine_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
-    public static final DeferredBlock<Block> MASSIVE_ANDESITE_BRICKS = register("massive_andesite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
+    public static final DeferredBlock<Block> MASSIVE_ANDESITE_BRICKS = register("andesite_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> ORNATE_ANDESITE_CTM = register("ornate_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> OVERLAPPING_ANDESITE_TILES = register("overlapping_andesite_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
     public static final DeferredBlock<Block> SIMPLE_ANDESITE_CTM = register("simple_andesite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ANDESITE)));
@@ -352,7 +368,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_BASALT_COLUMN = register("cut_basalt_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> EDGED_BASALT_BRICKS = register("edged_basalt_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> FINE_BASALT_CTM = register("fine_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
-    public static final DeferredBlock<Block> MASSIVE_BASALT_BRICKS = register("massive_basalt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
+    public static final DeferredBlock<Block> MASSIVE_BASALT_BRICKS = register("basalt_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> ORNATE_BASALT_CTM = register("ornate_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> OVERLAPPING_BASALT_TILES = register("overlapping_basalt_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
     public static final DeferredBlock<Block> POLISHED_BASALT = register("polished_basalt_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BASALT)));
@@ -489,7 +505,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_BLACKSTONE_COLUMN = register("cut_blackstone_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> EDGED_BLACKSTONE_BRICKS = register("edged_blackstone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> FINE_BLACKSTONE_CTM = register("fine_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
-    public static final DeferredBlock<Block> MASSIVE_BLACKSTONE_BRICKS = register("massive_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
+    public static final DeferredBlock<Block> MASSIVE_BLACKSTONE_BRICKS = register("blackstone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> ORNATE_BLACKSTONE_CTM = register("ornate_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_BLACKSTONE_TILES = register("overlapping_blackstone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
     public static final DeferredBlock<Block> SIMPLE_BLACKSTONE_CTM = register("simple_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLACKSTONE)));
@@ -522,7 +538,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_BLUE_ICE_COLUMN = register("cut_blue_ice_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> EDGED_BLUE_ICE_BRICKS = register("edged_blue_ice_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> FINE_BLUE_ICE_CTM = register("fine_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
-    public static final DeferredBlock<Block> MASSIVE_BLUE_ICE_BRICKS = register("massive_blue_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
+    public static final DeferredBlock<Block> MASSIVE_BLUE_ICE_BRICKS = register("blue_ice_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> ORNATE_BLUE_ICE_CTM = register("ornate_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> OVERLAPPING_BLUE_ICE_TILES = register("overlapping_blue_ice_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
     public static final DeferredBlock<Block> POLISHED_BLUE_ICE = register("polished_blue_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BLUE_ICE)));
@@ -610,7 +626,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_BORDERLESS_BRICKS_COLUMN = register("cut_borderless_bricks_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> EDGED_BORDERLESS_BRICKS_BRICKS = register("edged_borderless_bricks_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> FINE_BORDERLESS_BRICKS_CTM = register("fine_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_BORDERLESS_BRICKS_BRICKS = register("massive_borderless_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_BORDERLESS_BRICKS_BRICKS = register("borderless_bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> ORNATE_BORDERLESS_BRICKS_CTM = register("ornate_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_BORDERLESS_BRICKS_TILES = register("overlapping_borderless_bricks_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> POLISHED_BORDERLESS_BRICKS = register("polished_borderless_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
@@ -634,11 +650,11 @@ public class OttBlocks {
     public static final DeferredBlock<Block> EDGED_ICE_BRICKS = register("edged_ice_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
     public static final DeferredBlock<Block> EDGED_TUFF_BRICKS = register("edged_tuff_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> FINE_BRICKS_CTM = register("fine_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_BRICKS_BRICKS = register("massive_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_CLAY_BRICKS = register("massive_clay_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
-    public static final DeferredBlock<Block> MASSIVE_DIRT_BRICKS = register("massive_dirt_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
-    public static final DeferredBlock<Block> MASSIVE_ICE_BRICKS = register("massive_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
-    public static final DeferredBlock<Block> MASSIVE_TUFF_BRICKS = register("massive_tuff_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
+    public static final DeferredBlock<Block> MASSIVE_BRICKS_BRICKS = register("bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_CLAY_BRICKS = register("clay_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY)));
+    public static final DeferredBlock<Block> MASSIVE_DIRT_BRICKS = register("dirt_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT)));
+    public static final DeferredBlock<Block> MASSIVE_ICE_BRICKS = register("ice_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.ICE)));
+    public static final DeferredBlock<Block> MASSIVE_TUFF_BRICKS = register("tuff_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.TUFF)));
     public static final DeferredBlock<Block> ORNATE_BRICKS_CTM = register("ornate_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_BRICKS_TILES = register("overlapping_bricks_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
     public static final DeferredBlock<Block> POLISHED_BRICKS = register("polished_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS)));
@@ -732,7 +748,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_CALCITE_COLUMN = register("cut_calcite_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> EDGED_CALCITE_BRICKS = register("edged_calcite_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> FINE_CALCITE_CTM = register("fine_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
-    public static final DeferredBlock<Block> MASSIVE_CALCITE_BRICKS = register("massive_calcite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
+    public static final DeferredBlock<Block> MASSIVE_CALCITE_BRICKS = register("calcite_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> ORNATE_CALCITE_CTM = register("ornate_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> OVERLAPPING_CALCITE_TILES = register("overlapping_calcite_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
     public static final DeferredBlock<Block> POLISHED_CALCITE = register("polished_calcite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CALCITE)));
@@ -803,7 +819,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_COAL_BLOCK_COLUMN = register("cut_coal_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> EDGED_COAL_BLOCK_BRICKS = register("edged_coal_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> FINE_COAL_BLOCK_CTM = register("fine_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_COAL_BLOCK_BRICKS = register("massive_coal_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_COAL_BLOCK_BRICKS = register("coal_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_COAL_BLOCK_CTM = register("ornate_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_COAL_BLOCK_TILES = register("overlapping_coal_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_COAL_BLOCK = register("polished_coal_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COAL_BLOCK)));
@@ -851,7 +867,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_COBBLESTONE_COLUMN = register("cut_cobblestone_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> EDGED_COBBLESTONE_BRICKS = register("edged_cobblestone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> FINE_COBBLESTONE_CTM = register("fine_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
-    public static final DeferredBlock<Block> MASSIVE_COBBLESTONE_BRICKS = register("massive_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+    public static final DeferredBlock<Block> MASSIVE_COBBLESTONE_BRICKS = register("cobblestone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> ORNATE_COBBLESTONE_CTM = register("ornate_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_COBBLESTONE_TILES = register("overlapping_cobblestone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
     public static final DeferredBlock<Block> POLISHED_COBBLESTONE = register("polished_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
@@ -915,7 +931,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_CRYING_OBSIDIAN_COLUMN = register("cut_crying_obsidian_column_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> EDGED_CRYING_OBSIDIAN_BRICKS = register("edged_crying_obsidian_bricks_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> FINE_CRYING_OBSIDIAN_CTM = register("fine_crying_obsidian_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
-    public static final DeferredBlock<Block> MASSIVE_CRYING_OBSIDIAN_BRICKS = register("massive_crying_obsidian_bricks", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
+    public static final DeferredBlock<Block> MASSIVE_CRYING_OBSIDIAN_BRICKS = register("crying_obsidian_massive_bricks_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> ORNATE_CRYING_OBSIDIAN_CTM = register("ornate_crying_obsidian_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> OVERLAPPING_CRYING_OBSIDIAN_TILES = register("overlapping_crying_obsidian_tiles_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
     public static final DeferredBlock<Block> POLISHED_CRYING_OBSIDIAN = register("polished_crying_obsidian_ctm", () -> new CryingObsidianBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRYING_OBSIDIAN)));
@@ -1073,7 +1089,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_CUT_SMALL_BRICK = register("deepslate_cut_small_brick_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EDGED_DEEPSLATE_BRICKS = register("edged_deepslate_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> FINE_DEEPSLATE_CTM = register("fine_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
-    public static final DeferredBlock<Block> MASSIVE_DEEPSLATE_BRICKS = register("massive_deepslate_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
+    public static final DeferredBlock<Block> MASSIVE_DEEPSLATE_BRICKS = register("deepslate_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> ORNATE_DEEPSLATE_CTM = register("ornate_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> OVERLAPPING_DEEPSLATE_TILES = register("overlapping_deepslate_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
     public static final DeferredBlock<Block> POLISHED_DEEPSLATE = register("polished_deepslate_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE)));
@@ -1126,7 +1142,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> DIORITE_WAVY = register("diorite_wavy_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EDGED_DIORITE_BRICKS = register("edged_diorite_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> FINE_DIORITE_CTM = register("fine_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
-    public static final DeferredBlock<Block> MASSIVE_DIORITE_BRICKS = register("massive_diorite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
+    public static final DeferredBlock<Block> MASSIVE_DIORITE_BRICKS = register("diorite_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> ORNATE_DIORITE_CTM = register("ornate_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> OVERLAPPING_DIORITE_TILES = register("overlapping_diorite_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
     public static final DeferredBlock<Block> SIMPLE_DIORITE_CTM = register("simple_diorite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIORITE)));
@@ -1174,7 +1190,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_DRIPSTONE_BLOCK_COLUMN = register("cut_dripstone_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> EDGED_DRIPSTONE_BLOCK_BRICKS = register("edged_dripstone_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> FINE_DRIPSTONE_BLOCK_CTM = register("fine_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_DRIPSTONE_BLOCK_BRICKS = register("massive_dripstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_DRIPSTONE_BLOCK_BRICKS = register("dripstone_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_DRIPSTONE_BLOCK_CTM = register("ornate_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_DRIPSTONE_BLOCK_TILES = register("overlapping_dripstone_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
     public static final DeferredBlock<Block> SIMPLE_DRIPSTONE_BLOCK_CTM = register("simple_dripstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DRIPSTONE_BLOCK)));
@@ -1229,7 +1245,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> EDGED_END_STONE_BRICKS = register("edged_end_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
     public static final DeferredBlock<Block> END_STONE_DIAGONAL_BRICKS = register("end_stone_diagonal_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> END_STONE_ROTATED_BRICKS = register("end_stone_rotated_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> MASSIVE_END_STONE_BRICKS = register("massive_end_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
+    public static final DeferredBlock<Block> MASSIVE_END_STONE_BRICKS = register("end_stone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.END_STONE)));
 
     // ───── exposed_copper ─────
     public static final DeferredBlock<Block> EXPOSED_COPPER_BLOCK = register("exposed_copper_block_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -1244,7 +1260,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_GILDED_BLACKSTONE_COLUMN = register("cut_gilded_blackstone_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> EDGED_GILDED_BLACKSTONE_BRICKS = register("edged_gilded_blackstone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> FINE_GILDED_BLACKSTONE_CTM = register("fine_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
-    public static final DeferredBlock<Block> MASSIVE_GILDED_BLACKSTONE_BRICKS = register("massive_gilded_blackstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
+    public static final DeferredBlock<Block> MASSIVE_GILDED_BLACKSTONE_BRICKS = register("gilded_blackstone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> ORNATE_GILDED_BLACKSTONE_CTM = register("ornate_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_GILDED_BLACKSTONE_TILES = register("overlapping_gilded_blackstone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
     public static final DeferredBlock<Block> POLISHED_GILDED_BLACKSTONE = register("polished_gilded_blackstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GILDED_BLACKSTONE)));
@@ -1504,7 +1520,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> GRANITE_SQUARES = register("granite_squares_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GRANITE_TILES = register("granite_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> GRANITE_WAVY = register("granite_wavy_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> MASSIVE_GRANITE_BRICKS = register("massive_granite_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
+    public static final DeferredBlock<Block> MASSIVE_GRANITE_BRICKS = register("granite_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> ORNATE_GRANITE_CTM = register("ornate_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> OVERLAPPING_GRANITE_TILES = register("overlapping_granite_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
     public static final DeferredBlock<Block> SIMPLE_GRANITE_CTM = register("simple_granite_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.GRANITE)));
@@ -1747,7 +1763,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> LAPIS_BLOCK_SMALL_TILES = register("lapis_block_small_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_STRIPES = register("lapis_block_stripes_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> LAPIS_BLOCK_TILES = register("lapis_block_tiles_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<Block> MASSIVE_LAPIS_BLOCK_BRICKS = register("massive_lapis_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_LAPIS_BLOCK_BRICKS = register("lapis_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_LAPIS_BLOCK_CTM = register("ornate_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_LAPIS_BLOCK_TILES = register("overlapping_lapis_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_LAPIS_BLOCK = register("polished_lapis_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LAPIS_BLOCK)));
@@ -1989,7 +2005,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_LODESTONE_COLUMN = register("cut_lodestone_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> EDGED_LODESTONE_BRICKS = register("edged_lodestone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> FINE_LODESTONE_CTM = register("fine_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
-    public static final DeferredBlock<Block> MASSIVE_LODESTONE_BRICKS = register("massive_lodestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
+    public static final DeferredBlock<Block> MASSIVE_LODESTONE_BRICKS = register("lodestone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> ORNATE_LODESTONE_CTM = register("ornate_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_LODESTONE_TILES = register("overlapping_lodestone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
     public static final DeferredBlock<Block> POLISHED_LODESTONE = register("polished_lodestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.LODESTONE)));
@@ -2079,7 +2095,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_MAGMA_BLOCK_COLUMN = register("cut_magma_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> EDGED_MAGMA_BLOCK_BRICKS = register("edged_magma_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> FINE_MAGMA_BLOCK_CTM = register("fine_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_MAGMA_BLOCK_BRICKS = register("massive_magma_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_MAGMA_BLOCK_BRICKS = register("magma_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_MAGMA_BLOCK_CTM = register("ornate_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_MAGMA_BLOCK_TILES = register("overlapping_magma_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_MAGMA_BLOCK = register("polished_magma_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MAGMA_BLOCK)));
@@ -2125,7 +2141,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_MOSSY_COBBLESTONE_COLUMN = register("cut_mossy_cobblestone_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> EDGED_MOSSY_COBBLESTONE_BRICKS = register("edged_mossy_cobblestone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> FINE_MOSSY_COBBLESTONE_CTM = register("fine_mossy_cobblestone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
-    public static final DeferredBlock<Block> MASSIVE_MOSSY_COBBLESTONE_BRICKS = register("massive_mossy_cobblestone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
+    public static final DeferredBlock<Block> MASSIVE_MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_COBBLESTONE)));
     public static final DeferredBlock<Block> MOSSY_COBBLESTONE_BEAMS = register("mossy_cobblestone_beams_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> MOSSY_COBBLESTONE_DENTED = register("mossy_cobblestone_dented_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> MOSSY_COBBLESTONE_INVERTED_DENTED = register("mossy_cobblestone_inverted_dented_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -2151,7 +2167,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_MOSSY_STONE_BRICKS_COLUMN = register("cut_mossy_stone_bricks_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> EDGED_MOSSY_STONE_BRICKS_BRICKS = register("edged_mossy_stone_bricks_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> FINE_MOSSY_STONE_BRICKS_CTM = register("fine_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_MOSSY_STONE_BRICKS_BRICKS = register("massive_mossy_stone_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_MOSSY_STONE_BRICKS_BRICKS = register("mossy_stone_bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> ORNATE_MOSSY_STONE_BRICKS_CTM = register("ornate_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_MOSSY_STONE_BRICKS_TILES = register("overlapping_mossy_stone_bricks_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
     public static final DeferredBlock<Block> POLISHED_MOSSY_STONE_BRICKS = register("polished_mossy_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSSY_STONE_BRICKS)));
@@ -2192,9 +2208,9 @@ public class OttBlocks {
     public static final DeferredBlock<Block> HARD_MUD_BRICKS = register("hard_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> LARGE_MUD_BRICKS_SIGIL = register("large_mud_bricks_sigil", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> LOREFUL_MUD_BRICKS = register("loreful_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS = register("massive_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
-    public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS_BRICKS = register("massive_mud_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_PACKED_MUD_BRICKS = register("massive_packed_mud_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
+    public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS = register("mud_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD)));
+    public static final DeferredBlock<Block> MASSIVE_MUD_BRICKS_BRICKS = register("mud_bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_PACKED_MUD_BRICKS = register("packed_mud_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_MUD)));
     public static final DeferredBlock<Block> ORNATE_MUD_BRICKS_CTM = register("ornate_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_MUD_BRICKS_TILES = register("overlapping_mud_bricks_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
     public static final DeferredBlock<Block> SIMPLE_MUD_BRICKS_CTM = register("simple_mud_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MUD_BRICKS)));
@@ -2208,7 +2224,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_NETHER_BRICKS_COLUMN = register("cut_nether_bricks_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> EDGED_NETHER_BRICKS_BRICKS = register("edged_nether_bricks_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> FINE_NETHER_BRICKS_CTM = register("fine_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_NETHER_BRICKS_BRICKS = register("massive_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_NETHER_BRICKS_BRICKS = register("nether_bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_BRICKS)));
     public static final DeferredBlock<Block> NETHER_BRICKS_BEAMS = register("nether_bricks_beams_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHER_BRICKS_BRICK_PATTERN = register("nether_bricks_brick_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHER_BRICKS_BRICK_PAVING = register("nether_bricks_brick_paving_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -2249,7 +2265,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_NETHERRACK_COLUMN = register("cut_netherrack_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> EDGED_NETHERRACK_BRICKS = register("edged_netherrack_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> FINE_NETHERRACK_CTM = register("fine_netherrack_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
-    public static final DeferredBlock<Block> MASSIVE_NETHERRACK_BRICKS = register("massive_netherrack_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
+    public static final DeferredBlock<Block> MASSIVE_NETHERRACK_BRICKS = register("netherrack_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHERRACK)));
     public static final DeferredBlock<Block> NETHERRACK_BEAMS = register("netherrack_beams_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERRACK_BRICK_PATTERN = register("netherrack_brick_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NETHERRACK_BRICK_PAVING = register("netherrack_brick_paving_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -2317,7 +2333,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_OBSIDIAN_COLUMN = register("cut_obsidian_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> EDGED_OBSIDIAN_BRICKS = register("edged_obsidian_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> FINE_OBSIDIAN_CTM = register("fine_obsidian_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
-    public static final DeferredBlock<Block> MASSIVE_OBSIDIAN_BRICKS = register("massive_obsidian_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
+    public static final DeferredBlock<Block> MASSIVE_OBSIDIAN_BRICKS = register("obsidian_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN)));
     public static final DeferredBlock<Block> OBSIDIAN_BORDERED = register("obsidian_bordered_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> OBSIDIAN_BRICK_PATTERN = register("obsidian_brick_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> OBSIDIAN_BRICK_PAVING = register("obsidian_brick_paving_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -2434,7 +2450,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_PACKED_ICE_COLUMN = register("cut_packed_ice_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> EDGED_PACKED_ICE_BRICKS = register("edged_packed_ice_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> FINE_PACKED_ICE_CTM = register("fine_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
-    public static final DeferredBlock<Block> MASSIVE_PACKED_ICE_BRICKS = register("massive_packed_ice_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
+    public static final DeferredBlock<Block> MASSIVE_PACKED_ICE_BRICKS = register("packed_ice_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> ORNATE_PACKED_ICE_CTM = register("ornate_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> OVERLAPPING_PACKED_ICE_TILES = register("overlapping_packed_ice_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> POLISHED_PACKED_ICE = register("polished_packed_ice_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PACKED_ICE)));
@@ -2593,8 +2609,8 @@ public class OttBlocks {
     public static final DeferredBlock<Block> DARK_PRISMARINE_ROTATED_BRICKS = register("dark_prismarine_rotated_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EDGED_DARK_PRISMARINE_BRICKS = register("edged_dark_prismarine_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
     public static final DeferredBlock<Block> EDGED_PRISMARINE_BRICKS = register("edged_prismarine_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
-    public static final DeferredBlock<Block> MASSIVE_DARK_PRISMARINE_BRICKS = register("massive_dark_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
-    public static final DeferredBlock<Block> MASSIVE_PRISMARINE_BRICKS = register("massive_prismarine_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
+    public static final DeferredBlock<Block> MASSIVE_DARK_PRISMARINE_BRICKS = register("dark_prismarine_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE)));
+    public static final DeferredBlock<Block> MASSIVE_PRISMARINE_BRICKS = register("prismarine_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE)));
     public static final DeferredBlock<Block> PRISMARINE_BRICKS_BEAMS = register("prismarine_bricks_beams_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PRISMARINE_BRICKS_BRICK_PATTERN = register("prismarine_bricks_brick_pattern_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> PRISMARINE_BRICKS_BRICK_PAVING = register("prismarine_bricks_brick_paving_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -2692,7 +2708,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_PURPUR_BLOCK_COLUMN = register("cut_purpur_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> EDGED_PURPUR_BLOCK_BRICKS = register("edged_purpur_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> FINE_PURPUR_BLOCK_CTM = register("fine_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_PURPUR_BLOCK_BRICKS = register("massive_purpur_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_PURPUR_BLOCK_BRICKS = register("purpur_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_PURPUR_BLOCK_CTM = register("ornate_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_PURPUR_BLOCK_TILES = register("overlapping_purpur_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_PURPUR_BLOCK = register("polished_purpur_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)));
@@ -2710,7 +2726,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_QUARTZ_BLOCK_COLUMN = register("cut_quartz_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> EDGED_QUARTZ_BLOCK_BRICKS = register("edged_quartz_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> FINE_QUARTZ_BLOCK_CTM = register("fine_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_QUARTZ_BLOCK_BRICKS = register("massive_quartz_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_QUARTZ_BLOCK_BRICKS = register("quartz_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_QUARTZ_BLOCK_CTM = register("ornate_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_QUARTZ_BLOCK_TILES = register("overlapping_quartz_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_QUARTZ_BLOCK = register("polished_quartz_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.QUARTZ_BLOCK)));
@@ -2743,7 +2759,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_RAW_COPPER_BLOCK_COLUMN = register("cut_raw_copper_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_COPPER_BLOCK_BRICKS = register("edged_raw_copper_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> FINE_RAW_COPPER_BLOCK_CTM = register("fine_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_RAW_COPPER_BLOCK_BRICKS = register("massive_raw_copper_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_RAW_COPPER_BLOCK_BRICKS = register("raw_copper_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_RAW_COPPER_BLOCK_CTM = register("ornate_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_COPPER_BLOCK_TILES = register("overlapping_raw_copper_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_COPPER_BLOCK = register("polished_raw_copper_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_COPPER_BLOCK)));
@@ -2761,7 +2777,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_RAW_GOLD_BLOCK_COLUMN = register("cut_raw_gold_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_GOLD_BLOCK_BRICKS = register("edged_raw_gold_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> FINE_RAW_GOLD_BLOCK_CTM = register("fine_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_RAW_GOLD_BLOCK_BRICKS = register("massive_raw_gold_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_RAW_GOLD_BLOCK_BRICKS = register("raw_gold_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_RAW_GOLD_BLOCK_CTM = register("ornate_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_GOLD_BLOCK_TILES = register("overlapping_raw_gold_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_GOLD_BLOCK = register("polished_raw_gold_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_GOLD_BLOCK)));
@@ -2779,7 +2795,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_RAW_IRON_BLOCK_COLUMN = register("cut_raw_iron_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> EDGED_RAW_IRON_BLOCK_BRICKS = register("edged_raw_iron_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> FINE_RAW_IRON_BLOCK_CTM = register("fine_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_RAW_IRON_BLOCK_BRICKS = register("massive_raw_iron_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_RAW_IRON_BLOCK_BRICKS = register("raw_iron_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_RAW_IRON_BLOCK_CTM = register("ornate_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_RAW_IRON_BLOCK_TILES = register("overlapping_raw_iron_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_RAW_IRON_BLOCK = register("polished_raw_iron_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RAW_IRON_BLOCK)));
@@ -2815,7 +2831,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_RED_NETHER_BRICKS_COLUMN = register("cut_red_nether_bricks_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> EDGED_RED_NETHER_BRICKS_BRICKS = register("edged_red_nether_bricks_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> FINE_RED_NETHER_BRICKS_CTM = register("fine_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
-    public static final DeferredBlock<Block> MASSIVE_RED_NETHER_BRICKS_BRICKS = register("massive_red_nether_bricks_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
+    public static final DeferredBlock<Block> MASSIVE_RED_NETHER_BRICKS_BRICKS = register("red_nether_bricks_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> ORNATE_RED_NETHER_BRICKS_CTM = register("ornate_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> OVERLAPPING_RED_NETHER_BRICKS_TILES = register("overlapping_red_nether_bricks_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
     public static final DeferredBlock<Block> POLISHED_RED_NETHER_BRICKS = register("polished_red_nether_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_NETHER_BRICKS)));
@@ -2846,7 +2862,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_RED_SANDSTONE = register("cut_red_sandstone_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EDGED_RED_SANDSTONE_BRICKS = register("edged_red_sandstone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> FINE_RED_SANDSTONE_CTM = register("fine_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
-    public static final DeferredBlock<Block> MASSIVE_RED_SANDSTONE_BRICKS = register("massive_red_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
+    public static final DeferredBlock<Block> MASSIVE_RED_SANDSTONE_BRICKS = register("red_sandstone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> ORNATE_RED_SANDSTONE_CTM = register("ornate_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_RED_SANDSTONE_TILES = register("overlapping_red_sandstone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
     public static final DeferredBlock<Block> POLISHED_RED_SANDSTONE = register("polished_red_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.RED_SANDSTONE)));
@@ -2925,7 +2941,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_REDSTONE_BLOCK_COLUMN = register("cut_redstone_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> EDGED_REDSTONE_BLOCK_BRICKS = register("edged_redstone_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> FINE_REDSTONE_BLOCK_CTM = register("fine_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_REDSTONE_BLOCK_BRICKS = register("massive_redstone_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_REDSTONE_BLOCK_BRICKS = register("redstone_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_REDSTONE_BLOCK_CTM = register("ornate_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_REDSTONE_BLOCK_TILES = register("overlapping_redstone_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_REDSTONE_BLOCK = register("polished_redstone_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_BLOCK)));
@@ -2962,7 +2978,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_SANDSTONE = register("cut_sandstone_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> EDGED_SANDSTONE_BRICKS = register("edged_sandstone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> FINE_SANDSTONE_CTM = register("fine_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
-    public static final DeferredBlock<Block> MASSIVE_SANDSTONE_BRICKS = register("massive_sandstone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
+    public static final DeferredBlock<Block> MASSIVE_SANDSTONE_BRICKS = register("sandstone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> ORNATE_SANDSTONE_CTM = register("ornate_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> OVERLAPPING_SANDSTONE_TILES = register("overlapping_sandstone_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
     public static final DeferredBlock<Block> POLISHED_SANDSTONE = register("polished_sandstone_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE)));
@@ -3025,7 +3041,7 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CUT_SNOW_BLOCK_COLUMN = register("cut_snow_block_column_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> EDGED_SNOW_BLOCK_BRICKS = register("edged_snow_block_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> FINE_SNOW_BLOCK_CTM = register("fine_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
-    public static final DeferredBlock<Block> MASSIVE_SNOW_BLOCK_BRICKS = register("massive_snow_block_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
+    public static final DeferredBlock<Block> MASSIVE_SNOW_BLOCK_BRICKS = register("snow_block_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> ORNATE_SNOW_BLOCK_CTM = register("ornate_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> OVERLAPPING_SNOW_BLOCK_TILES = register("overlapping_snow_block_tiles_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
     public static final DeferredBlock<Block> POLISHED_SNOW_BLOCK = register("polished_snow_block_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SNOW_BLOCK)));
@@ -3130,8 +3146,8 @@ public class OttBlocks {
     public static final DeferredBlock<Block> CHAOTIC_STONE_BRICKS = register("chaotic_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> EDGED_SMOOTH_STONE_BRICKS = register("edged_smooth_stone_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
     public static final DeferredBlock<Block> ENCASED_STONE_BRICKS = register("encased_stone_bricks", () -> new Block(ST));
-    public static final DeferredBlock<Block> MASSIVE_SMOOTH_STONE_BRICKS = register("massive_smooth_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
-    public static final DeferredBlock<Block> MASSIVE_STONE_BRICKS = register("massive_stone_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+    public static final DeferredBlock<Block> MASSIVE_SMOOTH_STONE_BRICKS = register("smooth_stone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SMOOTH_STONE)));
+    public static final DeferredBlock<Block> MASSIVE_STONE_BRICKS = register("stone_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> NOTCHED_STONE_BRICKS = register("notched_stone_bricks", () -> new Block(ST));
     public static final DeferredBlock<Block> STONE_BRICKS_MASONRY = register("stone_bricks_masonry", () -> new Block(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
     public static final DeferredBlock<Block> STONE_CHISELED_BRICKS = register("stone_chiseled_bricks_ctm", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -3900,17 +3916,12 @@ public class OttBlocks {
      * {@code litBlockEmission(15)}). Loop-registered (not static fields) to stay under the {@code <clinit>} limit.
      */
     private static void registerRedstoneLamps() {
-        for (String name : new String[]{
-                "edged_redstone_lamp", "edged_white_redstone_lamp", "fancy_redstone_lamp", "fancy_white_redstone_lamp",
-                "hived_redstone_lamp", "hived_white_redstone_lamp", "inlayed_redstone_lamp", "inlayed_white_redstone_lamp",
-                "nice_redstone_lamp", "nice_white_redstone_lamp", "ornate_redstone_lamp", "ornate_white_redstone_lamp",
-                "reinforced_redstone_lamp", "reinforced_white_redstone_lamp", "smooth_redstone_lamp", "smooth_white_redstone_lamp",
-                "thick_inlayed_redstone_lamp", "thick_white_inlayed_redstone_lamp"}) {
+        readCsv("assets/ott/redstone_lamps.csv", name -> {
             DeferredBlock<net.minecraft.world.level.block.RedstoneLampBlock> b = BLOCKS.register(name,
                     () -> new net.minecraft.world.level.block.RedstoneLampBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_LAMP)));
             ITEMS.register(name, () -> new net.minecraft.world.item.BlockItem(b.get(), new net.minecraft.world.item.Item.Properties()));
             REDSTONE_LAMPS.put(name, b);
-        }
+        });
     }
 
     /**
@@ -3918,17 +3929,12 @@ public class OttBlocks {
      * engraving group. Loop-registered (not static fields) to stay under the {@code <clinit>} 64KB limit.
      */
     private static void registerChains() {
-        for (String m : new String[]{"amethyst", "andesite", "basalt", "blackstone", "bone", "bricks",
-                "cobbled_deepslate", "cobblestone", "crimson", "dark_prismarine", "deepslate_bricks", "diamond",
-                "diorite", "emerald", "end_stone", "gold", "granite", "mossy_cobblestone", "netherite",
-                "normal_nether_bricks", "normal_sandstone", "obsidian", "prismarine", "purpur", "quartz",
-                "red_nether_bricks", "red_sandstone", "smooth_stone", "stone_bricks", "stone", "warped"}) {
-            String name = m + "_chain";
+        readCsv("assets/ott/chains.csv", name -> {
             DeferredBlock<net.minecraft.world.level.block.ChainBlock> b = BLOCKS.register(name,
                     () -> new net.minecraft.world.level.block.ChainBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHAIN)));
             ITEMS.register(name, () -> new net.minecraft.world.item.BlockItem(b.get(), new net.minecraft.world.item.Item.Properties()));
             CHAINS.put(name, b);
-        }
+        });
     }
 
     /**
@@ -3937,9 +3943,10 @@ public class OttBlocks {
      * fields) to stay under the {@code <clinit>} 64KB limit; custom stones copy STONE properties.
      */
     private static void registerGiantCustomStoneBricks() {
-        for (String m : new String[]{"asurine", "crimsite", "dark_limestone", "limestone", "ochrum",
-                "rose_quartz", "scorchia", "scoria", "veridium"}) {
-            register("massive_" + m + "_bricks", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
+        // Registered via ctm_blocks.tsv (ctm_cube_all_giant template). Block names end in _ctm to match TSV convention.
+        for (String m : new String[]{"asurine","crimsite","dark_limestone","limestone","ochrum",
+                "rose_quartz","scorchia","scoria","veridium"}) {
+            register(m + "_massive_bricks_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)));
         }
     }
 
@@ -3949,12 +3956,24 @@ public class OttBlocks {
      * 64KB method limit. Engraving + CTM datagen reference these by registry name, so no field handles needed.
      */
     private static void registerGlazedTerracottaCtm() {
-        for (String c : new String[]{"black", "blue", "brown", "cyan", "gray", "green", "light_blue", "light_gray",
-                "lime", "magenta", "orange", "pink", "purple", "red", "white", "yellow"}) {
-            Block base = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
-                    net.minecraft.resources.ResourceLocation.withDefaultNamespace(c + "_glazed_terracotta"));
-            register(c + "_glazed_terracotta_fancy_ctm", () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
-            // Static twin registered via block_templates.csv (OttTemplateBlocks).
+        // Read directly from ctm_blocks.tsv — entries with name ending in _glazed_terracotta_fancy_ctm.
+        var stream = OttBlocks.class.getClassLoader().getResourceAsStream("assets/ott/ctm_blocks.tsv");
+        if (stream == null) throw new IllegalStateException("Missing ctm_blocks.tsv");
+        try (var r = new BufferedReader(new InputStreamReader(stream, StandardCharsets.UTF_8))) {
+            r.readLine(); // skip header
+            String line;
+            while ((line = r.readLine()) != null) {
+                if (!line.contains("_glazed_terracotta_fancy_ctm")) continue;
+                String name = line.split("\t", 2)[0].strip();
+                if (!name.endsWith("_glazed_terracotta_fancy_ctm")) continue;
+                String color = name.replace("_glazed_terracotta_fancy_ctm", "");
+                Block base = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                        net.minecraft.resources.ResourceLocation.withDefaultNamespace(color + "_glazed_terracotta"));
+                register(name, () -> new Block(BlockBehaviour.Properties.ofFullCopy(base)));
+                // Static twin registered via block_templates.csv (OttTemplateBlocks).
+            }
+        } catch (IOException e) {
+            throw new IllegalStateException("Failed to read ctm_blocks.tsv for glazed terracotta", e);
         }
     }
 }
