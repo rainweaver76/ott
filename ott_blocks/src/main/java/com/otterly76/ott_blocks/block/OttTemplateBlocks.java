@@ -169,7 +169,8 @@ public final class OttTemplateBlocks {
         BASE.put("nether_wart_block", Blocks.NETHER_WART_BLOCK);
         BASE.put("netherite_block", Blocks.NETHERITE_BLOCK);
         BASE.put("netherrack", Blocks.NETHERRACK);
-        BASE.put("oak_planks", Blocks.OAK_PLANKS);
+        BASE.put("oak_planks",      Blocks.OAK_PLANKS);
+        BASE.put("pale_oak_planks", Blocks.OAK_PLANKS); // backport; minecraft:pale_oak_planks registered by mod, copy oak props
         BASE.put("obsidian", Blocks.OBSIDIAN);
         BASE.put("ochrum", Blocks.STONE);
         BASE.put("orange_concrete", Blocks.ORANGE_CONCRETE);
@@ -229,7 +230,6 @@ public final class OttTemplateBlocks {
         BASE.put("yellow_terracotta", Blocks.YELLOW_TERRACOTTA);
         BASE.put("yellow_wool", Blocks.YELLOW_WOOL);
         // static-twin materials (Wave 1b)
-        BASE.put("pale_oak_planks", Blocks.OAK_PLANKS); // pale oak is backported (no vanilla 1.21.1 const); copy oak planks props
         BASE.put("cobbled_deepslate", Blocks.COBBLED_DEEPSLATE);
         BASE.put("diamond", Blocks.DIAMOND_BLOCK);
         BASE.put("copper_block", Blocks.COPPER_BLOCK);
@@ -263,6 +263,7 @@ public final class OttTemplateBlocks {
         BASE.put("green_stained_glass", Blocks.GREEN_STAINED_GLASS);
         BASE.put("red_stained_glass", Blocks.RED_STAINED_GLASS);
         BASE.put("black_stained_glass", Blocks.BLACK_STAINED_GLASS);
+
     }
 
     private OttTemplateBlocks() {}
@@ -319,8 +320,15 @@ public final class OttTemplateBlocks {
 
     private static Block base(String material) {
         Block b = BASE.get(material);
-        if (b == null) throw new IllegalStateException("No base block for material: " + material);
-        return b;
+        if (b != null) return b;
+        // Fallback: registry lookup for backported or OTT-registered materials
+        Block vanilla = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                net.minecraft.resources.ResourceLocation.withDefaultNamespace(material));
+        if (vanilla != Blocks.AIR) return vanilla;
+        Block ott = net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(
+                net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", material));
+        if (ott != Blocks.AIR) return ott;
+        throw new IllegalStateException("No base block for material: " + material);
     }
 
     private static DeferredBlock<Block> register(String name, String material, String template) {
