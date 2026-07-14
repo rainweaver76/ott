@@ -328,11 +328,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", "logs"))).addTag(BlockTags.LOGS);
 
         // --- 5. STATIC & INDIVIDUAL ADDITIONS ---
-        pickaxeTag.add(OttBlocks.MIXED_LIMESTONE_BRICKS.value()); this.tag(doDefaultKey).add(OttBlocks.MIXED_LIMESTONE_BRICKS.value());
-        // PILOT: static pieces twin — DO-craftable to test tile-0 UV vs atlas smoosh
-        pickaxeTag.add(OttBlocks.ACACIA_PLANKS_TILES_STATIC.value()); this.tag(doDefaultKey).add(OttBlocks.ACACIA_PLANKS_TILES_STATIC.value());
-        pickaxeTag.add(OttBlocks.PLAIN_LIMESTONE.value());
-        needsStoneToolTag.add(OttBlocks.PLAIN_LIMESTONE.value());
         ModBlocks.SEAGLASS.forEach(d -> {
             this.tag(BlockTags.IMPERMEABLE).add(d.value());
             pickaxeTag.add(d.value());
@@ -352,11 +347,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         });
         ModBlocks.TESTBLOCK.forEach(d -> this.tag(doDefaultKey).add(d.value()));
         this.tag(doDefaultKey).add(OttBlocks.PINK_SALT_BLOCK.get(), OttBlocks.POLISHED_PINK_SALT_BLOCK.get());
-        this.tag(doDefaultKey).add(OttBlocks.WATER_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(OttBlocks.EARTH_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(OttBlocks.FIRE_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(OttBlocks.SPIRIT_MOSAIC_TRADITIONAL.get());
-        this.tag(doDefaultKey).add(OttBlocks.AIR_MOSAIC_TRADITIONAL.get());
+        this.tag(doDefaultKey).add(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_traditional")));
+        this.tag(doDefaultKey).add(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_traditional")));
+        this.tag(doDefaultKey).add(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_traditional")));
+        this.tag(doDefaultKey).add(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_traditional")));
+        this.tag(doDefaultKey).add(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_traditional")));
         ModBlocks.PARTICLE_HEDGES.values().forEach(h -> this.tag(doDefaultKey).add(h.value()));
         ModBlocks.PATTERN_BLOCKS.values().forEach(colorMap -> colorMap.values().forEach(d -> this.tag(doDefaultKey).add(d.value())));
         ModBlocks.FUTONS.values().forEach(d -> {
@@ -365,8 +360,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         });
 
         this.tag(doDefaultKey).add(
-                OttBlocks.PLAIN_LIMESTONE.get(),
-                OttBlocks.COBBLED_LIMESTONE.get(),
                 OttBlocks.REFINED_GLOWSTONE.get(),
                 OttBlocks.WHEAT_THATCH.get(),
                 OttBlocks.BAMBOO_THATCH.get(),
@@ -385,36 +378,33 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.WHITE_POLISHED_MARBLE.get(),
                 OttBlocks.WHITE_MARBLE_PILLAR.get(),
                 OttBlocks.WHITE_MARBLE_PILLAR_CAP.get(),
-                OttBlocks.SANDSTONE_SLENDER_BRICKS.get(),
-                OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN.get(),
-                OttBlocks.STONE_BRICKS_MASONRY.get(),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "stone_bricks_masonry")),
                 // (delicate/ornamented wool DO-materials now added via the deco-family loop below)
-                OttBlocks.WATER_MOSAIC_BORDER.get(),
-                OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.WATER_MOSAIC_PATTERN.get(),
-                OttBlocks.WATER_MOSAIC_DELICATE.get(),
-                OttBlocks.EARTH_MOSAIC_BORDER.get(),
-                OttBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.EARTH_MOSAIC_PATTERN.get(),
-                OttBlocks.EARTH_MOSAIC_DELICATE.get(),
-                OttBlocks.FIRE_MOSAIC_BORDER.get(),
-                OttBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.FIRE_MOSAIC_PATTERN.get(),
-                OttBlocks.FIRE_MOSAIC_DELICATE.get(),
-                OttBlocks.SPIRIT_MOSAIC_BORDER.get(),
-                OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.SPIRIT_MOSAIC_PATTERN.get(),
-                OttBlocks.SPIRIT_MOSAIC_DELICATE.get(),
-                OttBlocks.AIR_MOSAIC_BORDER.get(),
-                OttBlocks.AIR_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.AIR_MOSAIC_PATTERN.get(),
-                OttBlocks.AIR_MOSAIC_DELICATE.get(),
-                OttBlocks.MOSAIC_FLOOR.get(),
-                OttBlocks.MOSAIC_FLOOR_DELICATE.get(),
-                OttBlocks.MOSAIC_FLOOR_ROSETTE.get(),
-                OttBlocks.ROMAN_FRESCO_RED.get(),
-                OttBlocks.ROMAN_FRESCO_BLACK.get(),
-                OttBlocks.LIMESTONE_MASONRY.get()
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor_rosette")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "roman_fresco_red")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "roman_fresco_black"))
         );
 
         // Stone variant blocks (plain cube_all + pillar only — CTM blocks excluded from DO)
@@ -422,131 +412,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 OttBlocks.CHISELED_PLASTERED_STONE_PILLAR.get()
         );
 
-        // ── Batch CTM blocks ─────────────────────────────────────────────
-        this.tag(ModTags.Blocks.CTM_BLOCKS).add(
-                OttBlocks.CORNERED_CHERRY_PLANKS.get(),
-                OttBlocks.CRATED_CHERRY_PLANKS.get(),
-                OttBlocks.ENCLOSED_CHERRY_PLANKS.get(),
-                OttBlocks.FRAMED_CHERRY_PLANKS.get(),
-                OttBlocks.NATURAL_CHERRY_PLANKS.get(),
-                OttBlocks.PEGGED_CHERRY_PLANKS.get(),
-                OttBlocks.WHIRLWIND_CHERRY_PLANKS.get(),
-                OttBlocks.CORNERED_CRIMSON_PLANKS.get(),
-                OttBlocks.CRATED_CRIMSON_PLANKS.get(),
-                OttBlocks.ENCLOSED_CRIMSON_PLANKS.get(),
-                OttBlocks.FRAMED_CRIMSON_PLANKS.get(),
-                OttBlocks.NATURAL_CRIMSON_PLANKS.get(),
-                OttBlocks.PEGGED_CRIMSON_PLANKS.get(),
-                OttBlocks.WHIRLWIND_CRIMSON_PLANKS.get(),
-                OttBlocks.CORNERED_DARK_OAK_PLANKS.get(),
-                OttBlocks.CRATED_DARK_OAK_PLANKS.get(),
-                OttBlocks.ENCLOSED_DARK_OAK_PLANKS.get(),
-                OttBlocks.FRAMED_DARK_OAK_PLANKS.get(),
-                OttBlocks.NATURAL_DARK_OAK_PLANKS.get(),
-                OttBlocks.PEGGED_DARK_OAK_PLANKS.get(),
-                OttBlocks.WHIRLWIND_DARK_OAK_PLANKS.get(),
-                OttBlocks.CORNERED_JUNGLE_PLANKS.get(),
-                OttBlocks.CRATED_JUNGLE_PLANKS.get(),
-                OttBlocks.ENCLOSED_JUNGLE_PLANKS.get(),
-                OttBlocks.FRAMED_JUNGLE_PLANKS.get(),
-                OttBlocks.NATURAL_JUNGLE_PLANKS.get(),
-                OttBlocks.PEGGED_JUNGLE_PLANKS.get(),
-                OttBlocks.WHIRLWIND_JUNGLE_PLANKS.get(),
-                OttBlocks.ORNATE_LEADED_GLASS_CTM.get(),
-                OttBlocks.FANCY_LIGHT_BLUE_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_LIGHT_BLUE_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_LIGHT_BLUE_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_LIGHT_BLUE_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_LIGHT_BLUE_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_LIGHT_GRAY_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_LIGHT_GRAY_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_LIGHT_GRAY_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_LIGHT_GRAY_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_LIGHT_GRAY_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_LIME_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_LIME_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_LIME_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_LIME_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_LIME_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_MAGENTA_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_MAGENTA_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_MAGENTA_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_MAGENTA_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_MAGENTA_STAINED_GLASS_CTM.get(),
-                OttBlocks.CORNERED_MANGROVE_PLANKS.get(),
-                OttBlocks.CRATED_MANGROVE_PLANKS.get(),
-                OttBlocks.ENCLOSED_MANGROVE_PLANKS.get(),
-                OttBlocks.FRAMED_MANGROVE_PLANKS.get(),
-                OttBlocks.NATURAL_MANGROVE_PLANKS.get(),
-                OttBlocks.PEGGED_MANGROVE_PLANKS.get(),
-                OttBlocks.FANCY_ORANGE_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_ORANGE_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_ORANGE_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_ORANGE_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_ORANGE_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_PINK_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_PINK_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_PINK_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_PINK_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_PINK_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_PURPLE_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_PURPLE_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_PURPLE_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_PURPLE_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_PURPLE_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_RED_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_RED_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_RED_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_RED_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_RED_STAINED_GLASS_CTM.get(),
-                OttBlocks.CORNERED_SPRUCE_PLANKS.get(),
-                OttBlocks.CRATED_SPRUCE_PLANKS.get(),
-                OttBlocks.ENCLOSED_SPRUCE_PLANKS.get(),
-                OttBlocks.FRAMED_SPRUCE_PLANKS.get(),
-                OttBlocks.NATURAL_SPRUCE_PLANKS.get(),
-                OttBlocks.PEGGED_SPRUCE_PLANKS.get(),
-                OttBlocks.WHIRLWIND_SPRUCE_PLANKS.get(),
-                OttBlocks.CORNERED_WARPED_PLANKS.get(),
-                OttBlocks.CRATED_WARPED_PLANKS.get(),
-                OttBlocks.ENCLOSED_WARPED_PLANKS.get(),
-                OttBlocks.FRAMED_WARPED_PLANKS.get(),
-                OttBlocks.NATURAL_WARPED_PLANKS.get(),
-                OttBlocks.PEGGED_WARPED_PLANKS.get(),
-                OttBlocks.WHIRLWIND_WARPED_PLANKS.get(),
-                OttBlocks.FANCY_WHITE_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_WHITE_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_WHITE_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_WHITE_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_WHITE_STAINED_GLASS_CTM.get(),
-                OttBlocks.FANCY_YELLOW_STAINED_GLASS_CTM.get(),
-                OttBlocks.ORNATE_YELLOW_STAINED_GLASS_CTM.get(),
-                OttBlocks.RASTER_YELLOW_STAINED_GLASS_CTM.get(),
-                OttBlocks.SMALL_YELLOW_DIAMOND_STAINED_GLASS_CTM.get(),
-                OttBlocks.TILED_YELLOW_STAINED_GLASS_CTM.get()
-        );
-
-        // New stone variant blocks — DO default
-        this.tag(doDefaultKey).add(
-                OttBlocks.CHAOTIC_STONE_BRICKS.get(), OttBlocks.CHAOTIC_MEDIUM_STONE_BRICKS.get(),
-                OttBlocks.CHAOTIC_SMALL_STONE_BRICKS.get(), OttBlocks.DIAMOND_STONE_PAVERS.get(),
-                OttBlocks.ENCASED_STONE_BRICKS.get(), OttBlocks.FRENCH_STONE.get(),
-                OttBlocks.LARGE_ORNATE_STONE.get(), OttBlocks.LARGE_STONE_TILE.get(),
-                OttBlocks.MESSY_STONE_TILES.get(), OttBlocks.MOSAIC_STONE.get(),
-                OttBlocks.NOTCHED_STONE_BRICKS.get(), OttBlocks.ORNATE_STONE.get(),
-                OttBlocks.POISON_STONE.get(), OttBlocks.POLISHED_CUT_STONE.get(),
-                OttBlocks.POLISHED_STONE_TILES.get(), OttBlocks.PRISM_STONE.get(),
-                OttBlocks.SLANTED_STONE.get(), OttBlocks.STONE_ARRAY.get(),
-                OttBlocks.STONE_BRAID.get(), OttBlocks.STONE_DENT.get(),
-                OttBlocks.STONE_JELLYBEAN.get(), OttBlocks.STONE_LAYERS.get(),
-                OttBlocks.STONE_PANEL.get(), OttBlocks.STONE_ROAD.get(),
-                OttBlocks.STONE_ZAG.get(), OttBlocks.SUNKEN_STONE.get(),
-                OttBlocks.TRIPLE_STONE_BRICKS.get(), OttBlocks.WEATHERED_STONE_BRICKS.get(),
-                OttBlocks.WEATHERED_TILED_STONE.get(), OttBlocks.WEAVER_STONE.get(),
-                 OttBlocks.CUT_STONE.get(),
-                OttBlocks.ROUGH_CUT_STONE.get(),
-                OttBlocks.SHEARED_STONE_PILLAR.get(), OttBlocks.SLATED_STONE.get(),
-                OttBlocks.STONE_COLUMN.get(), OttBlocks.STONE_TWISTING_COLUMN.get()
-        );
+        // ── Batch CTM blocks: now handled by loop over CTM_BLOCKS below ──────
         // Legacy "stone" legends (hand-built path) — pickaxe-mineable + DO material.
         java.util.stream.Stream.of(
                 ModBlocks.CHISEL_LEGEND.values(), ModBlocks.CHISEL_LEGEND_RS.values()
@@ -574,35 +440,34 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         // CTM / Connecting blocks — drives the "Connecting" tooltip in TooltipHandler
         this.tag(ModTags.Blocks.CTM_BLOCKS).add(
                 // Elemental mosaics
-                OttBlocks.WATER_MOSAIC_BORDER.get(),
-                OttBlocks.WATER_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.WATER_MOSAIC_PATTERN.get(),
-                OttBlocks.WATER_MOSAIC_DELICATE.get(),
-                OttBlocks.EARTH_MOSAIC_BORDER.get(),
-                OttBlocks.EARTH_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.EARTH_MOSAIC_PATTERN.get(),
-                OttBlocks.EARTH_MOSAIC_DELICATE.get(),
-                OttBlocks.FIRE_MOSAIC_BORDER.get(),
-                OttBlocks.FIRE_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.FIRE_MOSAIC_PATTERN.get(),
-                OttBlocks.FIRE_MOSAIC_DELICATE.get(),
-                OttBlocks.AIR_MOSAIC_BORDER.get(),
-                OttBlocks.AIR_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.AIR_MOSAIC_PATTERN.get(),
-                OttBlocks.AIR_MOSAIC_DELICATE.get(),
-                OttBlocks.SPIRIT_MOSAIC_BORDER.get(),
-                OttBlocks.SPIRIT_MOSAIC_GEOMETRIC.get(),
-                OttBlocks.SPIRIT_MOSAIC_PATTERN.get(),
-                OttBlocks.SPIRIT_MOSAIC_DELICATE.get(),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "earth_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "fire_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "air_mosaic_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_border")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_geometric")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_pattern")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "spirit_mosaic_delicate")),
                 // Mosaic floor
-                OttBlocks.MOSAIC_FLOOR.get(),
-                OttBlocks.MOSAIC_FLOOR_DELICATE.get(),
-                OttBlocks.MOSAIC_FLOOR_ROSETTE.get(),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor_delicate")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "mosaic_floor_rosette")),
                 // Decorative stone
-                OttBlocks.ROMAN_FRESCO_RED.get(),
-                OttBlocks.ROMAN_FRESCO_BLACK.get(),
-                OttBlocks.LIMESTONE_MASONRY.get(),
-                OttBlocks.STONE_BRICKS_MASONRY.get()
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "roman_fresco_red")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "roman_fresco_black")),
+                net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "stone_bricks_masonry"))
                 // CTM polished/vanilla variants
                 // (delicate/ornamented wool & carpet now handled by the deco-family loop below)
                 // CTM vertical pillars
@@ -621,190 +486,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
             if ("carpet_ctm".equals(template)) this.tag(ModTags.Blocks.CTM_BLOCKS).add(db.get());
         });
 
-        // Stone CTM connecting blocks
-
-        // ── New CTM connecting blocks (batch additions) ─────────────────────
-// ── Batch CTM blocks (new additions) ───────────────────────────────
-        this.tag(ModTags.Blocks.CTM_BLOCKS).add(
-        OttBlocks.GOLDEN_FRAMED_LIGHT_BLUE_STAINED_GLASS.get()
-        );
-        this.tag(ModTags.Blocks.CTM_BLOCKS).add(
-        OttBlocks.BAMBOO_WINDOW_BARS_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_COVERED_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_DIAGONAL_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_LARGE_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_PANES_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_ROUNDED_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_SLIM_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_SWIRLING_CTM.get(),
-        OttBlocks.BAMBOO_WINDOW_TILES_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_BARS_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_COVERED_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_DIAGONAL_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_LARGE_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_PANES_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_ROUNDED_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_SLIM_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_SWIRLING_CTM.get(),
-        OttBlocks.CHERRY_WINDOW_TILES_CTM.get(),
-        OttBlocks.BLACK_FRAMED_GLASS.get(),
-        OttBlocks.BLACK_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.BLACK_STAINED_GLASS.get(),
-        OttBlocks.BLUE_FRAMED_GLASS.get(),
-        OttBlocks.BLUE_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.BLUE_STAINED_GLASS.get(),
-        OttBlocks.BORDERLESS_GLASS.get(),
-        OttBlocks.BORDERLESS_GLASS_BLACK.get(),
-        OttBlocks.BORDERLESS_GLASS_BLUE.get(),
-        OttBlocks.BORDERLESS_GLASS_BROWN.get(),
-        OttBlocks.BORDERLESS_GLASS_CYAN.get(),
-        OttBlocks.BORDERLESS_GLASS_GRAY.get(),
-        OttBlocks.BORDERLESS_GLASS_GREEN.get(),
-        OttBlocks.BORDERLESS_GLASS_LIGHT_BLUE.get(),
-        OttBlocks.BORDERLESS_GLASS_LIGHT_GRAY.get(),
-        OttBlocks.BORDERLESS_GLASS_LIME.get(),
-        OttBlocks.BORDERLESS_GLASS_MAGENTA.get(),
-        OttBlocks.BORDERLESS_GLASS_ORANGE.get(),
-        OttBlocks.BORDERLESS_GLASS_PINK.get(),
-        OttBlocks.BORDERLESS_GLASS_PURPLE.get(),
-        OttBlocks.BORDERLESS_GLASS_RED.get(),
-        OttBlocks.BORDERLESS_GLASS_WHITE.get(),
-        OttBlocks.BORDERLESS_GLASS_YELLOW.get(),
-        OttBlocks.BROWN_FRAMED_GLASS.get(),
-        OttBlocks.BROWN_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.BROWN_STAINED_GLASS.get(),
-        OttBlocks.CHISELED_GLASS.get(),
-        OttBlocks.CLEAR_GLASS.get(),
-        OttBlocks.COPPER_BLOCK.get(),
-        OttBlocks.COPPER_GRATE.get(),
-        OttBlocks.CYAN_FRAMED_GLASS.get(),
-        OttBlocks.CYAN_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.CYAN_STAINED_GLASS.get(),
-        OttBlocks.DIRTY_GLASS.get(),
-        OttBlocks.EXPOSED_COPPER_BLOCK.get(),
-        OttBlocks.EXPOSED_COPPER_GRATE.get(),
-        OttBlocks.FRAMED_GLASS.get(),
-        OttBlocks.FROSTED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_BLACK_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_BLUE_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_BROWN_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_CYAN_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_GRAY_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_GREEN_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_LIGHT_GRAY_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_LIME_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_MAGENTA_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_ORANGE_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_PINK_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_PURPLE_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_RED_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_WHITE_STAINED_GLASS.get(),
-        OttBlocks.GOLDEN_FRAMED_YELLOW_STAINED_GLASS.get(),
-        OttBlocks.GRAY_FRAMED_GLASS.get(),
-        OttBlocks.GRAY_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.GRAY_STAINED_GLASS.get(),
-        OttBlocks.GREEN_FRAMED_GLASS.get(),
-        OttBlocks.GREEN_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.GREEN_STAINED_GLASS.get(),
-        OttBlocks.ICE_GLASS.get(),
-        OttBlocks.LIGHT_BLUE_FRAMED_GLASS.get(),
-        OttBlocks.LIGHT_BLUE_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.LIGHT_BLUE_STAINED_GLASS.get(),
-        OttBlocks.LIGHT_GRAY_FRAMED_GLASS.get(),
-        OttBlocks.LIGHT_GRAY_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.LIGHT_GRAY_STAINED_GLASS.get(),
-        OttBlocks.LIME_FRAMED_GLASS.get(),
-        OttBlocks.LIME_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.LIME_STAINED_GLASS.get(),
-        OttBlocks.MAGENTA_FRAMED_GLASS.get(),
-        OttBlocks.MAGENTA_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.MAGENTA_STAINED_GLASS.get(),
-        OttBlocks.OBSIDIAN_FRAMED_GLASS.get(),
-        OttBlocks.ORANGE_FRAMED_GLASS.get(),
-        OttBlocks.ORANGE_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.ORANGE_STAINED_GLASS.get(),
-        OttBlocks.OXIDIZED_COPPER_BLOCK.get(),
-        OttBlocks.OXIDIZED_COPPER_GRATE.get(),
-        OttBlocks.PALE_OAK_PLANKS_BEAMS.get(),
-        OttBlocks.PALE_OAK_PLANKS_BRICKS.get(),
-        OttBlocks.PALE_OAK_PLANKS_BRICK_PATTERN.get(),
-        OttBlocks.PALE_OAK_PLANKS_BRICK_PAVING.get(),
-        OttBlocks.PALE_OAK_PLANKS_CRATE.get(),
-        OttBlocks.PALE_OAK_PLANKS_DIAGONAL_STRIPES.get(),
-        OttBlocks.PALE_OAK_PLANKS_DIAGONAL_TILES.get(),
-        OttBlocks.PALE_OAK_PLANKS_DOTTED.get(),
-        OttBlocks.PALE_OAK_PLANKS_FLOORING.get(),
-        OttBlocks.PALE_OAK_PLANKS_LARGE_TILES.get(),
-        OttBlocks.PALE_OAK_PLANKS_PATTERN.get(),
-        OttBlocks.PALE_OAK_PLANKS_ROTATED_BRICKS.get(),
-        OttBlocks.PALE_OAK_PLANKS_SMALL_BRICKS.get(),
-        OttBlocks.PALE_OAK_PLANKS_SMALL_TILES.get(),
-        OttBlocks.PALE_OAK_PLANKS_SQUARES.get(),
-        OttBlocks.PALE_OAK_PLANKS_TILES.get(),
-        OttBlocks.PALE_OAK_PLANKS_WAVY.get(),
-        OttBlocks.PALE_OAK_PLANKS_WOVEN.get(),
-        OttBlocks.PINK_FRAMED_GLASS.get(),
-        OttBlocks.PINK_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.PINK_STAINED_GLASS.get(),
-        OttBlocks.POLISHED_LIMESTONE.get(),
-        OttBlocks.PURPLE_FRAMED_GLASS.get(),
-        OttBlocks.PURPLE_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.PURPLE_STAINED_GLASS.get(),
-        OttBlocks.RED_FRAMED_GLASS.get(),
-        OttBlocks.RED_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.RED_STAINED_GLASS.get(),
-        OttBlocks.REINFORCED_GLASS.get(),
-        OttBlocks.SANDSTONE_FRAMED_GLASS.get(),
-        OttBlocks.SCRATCHED_GLASS.get(),
-        OttBlocks.SCRATCHED_GLASS_BLACK.get(),
-        OttBlocks.SCRATCHED_GLASS_BLUE.get(),
-        OttBlocks.SCRATCHED_GLASS_BROWN.get(),
-        OttBlocks.SCRATCHED_GLASS_CYAN.get(),
-        OttBlocks.SCRATCHED_GLASS_GRAY.get(),
-        OttBlocks.SCRATCHED_GLASS_GREEN.get(),
-        OttBlocks.SCRATCHED_GLASS_LIGHT_BLUE.get(),
-        OttBlocks.SCRATCHED_GLASS_LIGHT_GRAY.get(),
-        OttBlocks.SCRATCHED_GLASS_LIME.get(),
-        OttBlocks.SCRATCHED_GLASS_MAGENTA.get(),
-        OttBlocks.SCRATCHED_GLASS_ORANGE.get(),
-        OttBlocks.SCRATCHED_GLASS_PINK.get(),
-        OttBlocks.SCRATCHED_GLASS_PURPLE.get(),
-        OttBlocks.SCRATCHED_GLASS_RED.get(),
-        OttBlocks.SCRATCHED_GLASS_WHITE.get(),
-        OttBlocks.SCRATCHED_GLASS_YELLOW.get(),
-        OttBlocks.SEA_LANTERN.get(),
-        OttBlocks.STONE_FRAMED_GLASS.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_BLACK.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_BLUE.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_BROWN.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_CYAN.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_GRAY.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_GREEN.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_BLUE.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_LIGHT_GRAY.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_LIME.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_MAGENTA.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_ORANGE.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_PINK.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_PURPLE.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_RED.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_WHITE.get(),
-        OttBlocks.TINTED_BORDERLESS_GLASS_YELLOW.get(),
-        OttBlocks.TINTED_CLEAR_GLASS.get(),
-        OttBlocks.TINTED_GLASS.get(),
-        OttBlocks.WEATHERED_COPPER_BLOCK.get(),
-        OttBlocks.WEATHERED_COPPER_GRATE.get(),
-        OttBlocks.WHITE_FRAMED_GLASS.get(),
-        OttBlocks.WHITE_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.WHITE_STAINED_GLASS.get(),
-        OttBlocks.YELLOW_FRAMED_GLASS.get(),
-        OttBlocks.YELLOW_STAINED_CLEAR_GLASS.get(),
-        OttBlocks.YELLOW_STAINED_GLASS.get()
-        );
-
-
+        // Stone CTM connecting blocks — now handled by loop over CTM_BLOCKS below
 
         var ottHedges = this.tag(ottHedgesKey);
         ottHedges.add(ModBlocks.THORNY_HEDGE.value());
@@ -821,27 +503,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         hoeTag.add(ModBlocks.PALE_OAK_LEAVES.value());
         pickaxeTag.add(ModBlocks.RESIN_BRICKS.value(), ModBlocks.CHISELED_RESIN_BRICKS.value(), ModBlocks.RESIN_BRICK_SLAB.value(), ModBlocks.RESIN_BLOCK.value(), ModBlocks.RESIN_BRICK_STAIRS.value(), ModBlocks.RESIN_BRICK_WALL.value());
         pickaxeTag.add(OttBlocks.PINK_SALT_BLOCK.value(), ModBlocks.PINK_SALT_LAMP.value());
-        pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
-                OttBlocks.SOUL_GLASS_CTM.get(), OttBlocks.SOUL_GLASS_CTM_PANE.get());
-        this.tag(ModTags.Blocks.CTM_BLOCKS).add(
-                OttBlocks.CHISELED_GLASS_CTM_PANE.get(),
-                OttBlocks.CLEAR_GLASS_CTM_PANE.get(),
-                OttBlocks.DIRTY_GLASS_CTM_PANE.get(),
-                OttBlocks.FROSTED_GLASS_CTM_PANE.get(),
-                OttBlocks.ICE_GLASS_CTM_PANE.get(),
-                OttBlocks.OBSIDIAN_FRAMED_GLASS_CTM_PANE.get(),
-                OttBlocks.REINFORCED_GLASS_CTM_PANE.get(),
-                OttBlocks.SANDSTONE_FRAMED_GLASS_CTM_PANE.get(),
-                OttBlocks.STONE_FRAMED_GLASS_CTM_PANE.get(),
-                OttBlocks.TINTED_CLEAR_GLASS_CTM_PANE.get(),
-                OttBlocks.TINTED_GLASS_CTM_PANE.get(),
-                OttBlocks.SOUL_GLASS_CTM_PANE.get()
-        );
-        mcStainedGlass.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_CTM.get());
-        this.tag(TagKey.create(Registries.BLOCK, ResourceLocation.withDefaultNamespace("stained_glass_panes"))).add(
-                OttBlocks.SOUL_GLASS_PANE.get(), OttBlocks.SOUL_GLASS_CTM_PANE.get());
-        this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get(),
-                OttBlocks.SOUL_GLASS_CTM.get());
+        pickaxeTag.add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get());
+        this.tag(ModTags.Blocks.CTM_BLOCKS).add(OttBlocks.SOUL_GLASS.get());
+        this.tag(BlockTags.IMPERMEABLE).add(OttBlocks.SOUL_GLASS.get(), OttBlocks.SOUL_GLASS_PANE.get());
         this.tag(doDefaultKey).add(OttBlocks.SOUL_GLASS.get());
 
         // Opal sets — pickaxe mineable + DO default for all 18 blocks × 3 types
