@@ -208,8 +208,6 @@ public class ModStoneVariants {
     // ── Group 8: OTT Custom Stone ────────────────────────────────────────────────
 
     public static final List<StoneVariant> CUSTOM = List.of(
-            of("limestone",                         OttBlocks.PLAIN_LIMESTONE,                        "ott:block/limestone/limestone"),
-            of("cobbled_limestone",                 OttBlocks.COBBLED_LIMESTONE,                      "ott:block/limestone/cobbled_limestone"),
             of("refined_glowstone",                 OttBlocks.REFINED_GLOWSTONE,                      "ott:block/glowstone/refined_glowstone"),
             of("roofing_slates",                    OttBlocks.ROOFING_SLATES,                         "ott:block/misc/roofing_slates"),
             of("black_marble",                      OttBlocks.BLACK_MARBLE,                           "ott:block/black_marble/black_marble"),
@@ -306,18 +304,18 @@ public class ModStoneVariants {
             of("magenta_marble_small_bricks", OttBlocks.MAGENTA_MARBLE_SMALL_BRICKS, "ott:block/magenta_marble/magenta_marble_small_bricks"),
             of("magenta_marble_tiles", OttBlocks.MAGENTA_MARBLE_TILES, "ott:block/magenta_marble/magenta_marble_tiles"),
             of("magenta_polished_marble", OttBlocks.MAGENTA_POLISHED_MARBLE, "ott:block/magenta_marble/magenta_polished_marble"),
-            of("sandstone_slender_bricks",          OttBlocks.SANDSTONE_SLENDER_BRICKS,               "ott:block/sandstone/sandstone_slender_bricks"),
-            of("sandstone_slender_turquoise_pattern", OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN,  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
+            of("sandstone_slender_bricks",          () -> net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","sandstone_slender_bricks")),               "ott:block/sandstone/sandstone_slender_bricks"),
+            of("sandstone_slender_turquoise_pattern", () -> net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","sandstone_slender_turquoise_pattern")),  "ott:block/sandstone/sandstone_slender_turquoise_pattern")
     );
 
     // ── Group 9: Traditional Mosaic ──────────────────────────────────────────────
 
     public static final List<StoneVariant> MOSAIC_TRADITIONAL = List.of(
-            of("water_mosaic_traditional",   OttBlocks.WATER_MOSAIC_TRADITIONAL,  "ott:block/water_mosaic/water_mosaic_traditional"),
-            of("earth_mosaic_traditional",   OttBlocks.EARTH_MOSAIC_TRADITIONAL,  "ott:block/earth_mosaic/earth_mosaic_traditional"),
-            of("fire_mosaic_traditional",    OttBlocks.FIRE_MOSAIC_TRADITIONAL,   "ott:block/fire_mosaic/fire_mosaic_traditional"),
-            of("spirit_mosaic_traditional",  OttBlocks.SPIRIT_MOSAIC_TRADITIONAL, "ott:block/spirit_mosaic/spirit_mosaic_traditional"),
-            of("air_mosaic_traditional",     OttBlocks.AIR_MOSAIC_TRADITIONAL,    "ott:block/air_mosaic/air_mosaic_traditional")
+            of("water_mosaic_traditional",   OttBlocks.CTM_BLOCKS.get("water_mosaic_traditional"),  "ott:block/water_mosaic/water_mosaic_traditional"),
+            of("earth_mosaic_traditional",   OttBlocks.CTM_BLOCKS.get("earth_mosaic_traditional"),  "ott:block/earth_mosaic/earth_mosaic_traditional"),
+            of("fire_mosaic_traditional",    OttBlocks.CTM_BLOCKS.get("fire_mosaic_traditional"),   "ott:block/fire_mosaic/fire_mosaic_traditional"),
+            of("spirit_mosaic_traditional",  OttBlocks.CTM_BLOCKS.get("spirit_mosaic_traditional"), "ott:block/spirit_mosaic/spirit_mosaic_traditional"),
+            of("air_mosaic_traditional",     OttBlocks.CTM_BLOCKS.get("air_mosaic_traditional"),    "ott:block/air_mosaic/air_mosaic_traditional")
     );
 
     // ── Combined list ───────────────────────────────────────────────────────────
@@ -332,7 +330,6 @@ public class ModStoneVariants {
 
     public static final List<StoneGroup> GROUPS = List.of(
             new StoneGroup("stone_vanilla",             "stone",                    CLASSIC),
-            new StoneGroup("stone_custom",              "limestone",                CUSTOM),
             new StoneGroup("stone_mosaic_traditional",  "water_mosaic_traditional", MOSAIC_TRADITIONAL)
     );
 
