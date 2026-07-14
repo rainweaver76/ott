@@ -793,9 +793,9 @@ public class ModBlocks {
     // -------------------------------------------------------------------------
     // --- DoTB Phase 2: Limestone ---
     // -------------------------------------------------------------------------
-    public static final DeferredBlock<EdgeBlock> LIMESTONE_MASONRY_EDGE = register("limestone_masonry_edge",
+    public static final DeferredBlock<EdgeBlock> SMOOTH_SANDSTONE_MASONRY_EDGE = register("smooth_sandstone_masonry_edge",
             () -> new EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
-    public static final DeferredBlock<PlateBlock> LIMESTONE_MASONRY_PLATE = register("limestone_masonry_plate",
+    public static final DeferredBlock<PlateBlock> SMOOTH_SANDSTONE_MASONRY_PLATE = register("smooth_sandstone_masonry_plate",
             () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
 
     // -------------------------------------------------------------------------
