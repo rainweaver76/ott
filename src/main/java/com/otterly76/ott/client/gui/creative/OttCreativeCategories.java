@@ -514,28 +514,28 @@ public enum OttCreativeCategories {
      }),
 
     MOSAIC("mosaic",
-            () -> OttBlocks.WATER_MOSAIC_TRADITIONAL.get().asItem(),
+            () -> net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "water_mosaic_traditional")).asItem(),
             (params, output) -> {
-                output.accept(OttBlocks.WATER_MOSAIC_BORDER);
-                output.accept(OttBlocks.WATER_MOSAIC_GEOMETRIC);
-                output.accept(OttBlocks.WATER_MOSAIC_PATTERN);
-                output.accept(OttBlocks.WATER_MOSAIC_DELICATE);
-                output.accept(OttBlocks.EARTH_MOSAIC_BORDER);
-                output.accept(OttBlocks.EARTH_MOSAIC_GEOMETRIC);
-                output.accept(OttBlocks.EARTH_MOSAIC_PATTERN);
-                output.accept(OttBlocks.EARTH_MOSAIC_DELICATE);
-                output.accept(OttBlocks.FIRE_MOSAIC_BORDER);
-                output.accept(OttBlocks.FIRE_MOSAIC_GEOMETRIC);
-                output.accept(OttBlocks.FIRE_MOSAIC_PATTERN);
-                output.accept(OttBlocks.FIRE_MOSAIC_DELICATE);
-                output.accept(OttBlocks.SPIRIT_MOSAIC_BORDER);
-                output.accept(OttBlocks.SPIRIT_MOSAIC_GEOMETRIC);
-                output.accept(OttBlocks.SPIRIT_MOSAIC_PATTERN);
-                output.accept(OttBlocks.SPIRIT_MOSAIC_DELICATE);
-                output.accept(OttBlocks.AIR_MOSAIC_BORDER);
-                output.accept(OttBlocks.AIR_MOSAIC_GEOMETRIC);
-                output.accept(OttBlocks.AIR_MOSAIC_PATTERN);
-                output.accept(OttBlocks.AIR_MOSAIC_DELICATE);
+                output.accept(OttBlocks.CTM_BLOCKS.get("water_mosaic_border"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("water_mosaic_geometric"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("water_mosaic_pattern"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("water_mosaic_delicate"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("earth_mosaic_border"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("earth_mosaic_geometric"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("earth_mosaic_pattern"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("earth_mosaic_delicate"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("fire_mosaic_border"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("fire_mosaic_geometric"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("fire_mosaic_pattern"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("fire_mosaic_delicate"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("spirit_mosaic_border"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("spirit_mosaic_geometric"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("spirit_mosaic_pattern"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("spirit_mosaic_delicate"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("air_mosaic_border"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("air_mosaic_geometric"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("air_mosaic_pattern"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("air_mosaic_delicate"));
 
                 // Mosaic traditional base blocks + stone-set shapes
                 java.util.function.BiConsumer<net.neoforged.neoforge.registries.DeferredBlock<?>, String> mosaicEmit =
@@ -552,23 +552,22 @@ public enum OttCreativeCategories {
                     output.accept(set.supportSlab());
                     output.accept(set.supportBeam());
                 };
-                mosaicEmit.accept(OttBlocks.WATER_MOSAIC_TRADITIONAL,  "water_mosaic_traditional");
-                mosaicEmit.accept(OttBlocks.EARTH_MOSAIC_TRADITIONAL,  "earth_mosaic_traditional");
-                mosaicEmit.accept(OttBlocks.FIRE_MOSAIC_TRADITIONAL,   "fire_mosaic_traditional");
-                mosaicEmit.accept(OttBlocks.SPIRIT_MOSAIC_TRADITIONAL, "spirit_mosaic_traditional");
-                mosaicEmit.accept(OttBlocks.AIR_MOSAIC_TRADITIONAL,    "air_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.CTM_BLOCKS.get("water_mosaic_traditional"),  "water_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.CTM_BLOCKS.get("earth_mosaic_traditional"),  "earth_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.CTM_BLOCKS.get("fire_mosaic_traditional"),   "fire_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.CTM_BLOCKS.get("spirit_mosaic_traditional"), "spirit_mosaic_traditional");
+                mosaicEmit.accept(OttBlocks.CTM_BLOCKS.get("air_mosaic_traditional"),    "air_mosaic_traditional");
 
-                output.accept(OttBlocks.MOSAIC_FLOOR);
-                output.accept(OttBlocks.MOSAIC_FLOOR_DELICATE);
-                output.accept(OttBlocks.MOSAIC_FLOOR_ROSETTE);
-                output.accept(OttBlocks.ROMAN_FRESCO_RED);
-                output.accept(OttBlocks.ROMAN_FRESCO_BLACK);
+                output.accept(OttBlocks.CTM_BLOCKS.get("mosaic_floor"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("mosaic_floor_delicate"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("mosaic_floor_rosette"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("roman_fresco_red"));
+                output.accept(OttBlocks.CTM_BLOCKS.get("roman_fresco_black"));
 
-                output.accept(OttBlocks.LIMESTONE_MASONRY);
-                output.accept(ModBlocks.LIMESTONE_MASONRY_EDGE);
-                output.accept(ModBlocks.LIMESTONE_MASONRY_PLATE);
+                output.accept(ModBlocks.SMOOTH_SANDSTONE_MASONRY_EDGE);
+                output.accept(ModBlocks.SMOOTH_SANDSTONE_MASONRY_PLATE);
 
-                output.accept(OttBlocks.STONE_BRICKS_MASONRY);
+                output.accept(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott", "stone_bricks_masonry")));
                 output.accept(ModBlocks.STONE_BRICKS_MASONRY_EDGE);
                 output.accept(ModBlocks.STONE_BRICKS_MASONRY_PLATE);
                 // (Decorative wool family moved to the ENGRAVED tab — they're engraving-system blocks.)
@@ -604,7 +603,7 @@ public enum OttCreativeCategories {
             }),
 
     STONE_CUSTOM("stone_custom",
-            () -> OttBlocks.PLAIN_LIMESTONE.get().asItem(),
+            () -> OttBlocks.REFINED_GLOWSTONE.get().asItem(),
             (params, output) -> {
                 // Helper: emit base block then its 8 stone-set shapes
                 java.util.function.Consumer<String> emit = name -> {
@@ -620,8 +619,6 @@ public enum OttCreativeCategories {
                     output.accept(set.supportBeam());
                 };
 
-                output.accept(OttBlocks.PLAIN_LIMESTONE);      emit.accept("limestone");
-                output.accept(OttBlocks.COBBLED_LIMESTONE);    emit.accept("cobbled_limestone");
                 output.accept(OttBlocks.REFINED_GLOWSTONE);    emit.accept("refined_glowstone");
                 output.accept(OttBlocks.ROOFING_SLATES);       emit.accept("roofing_slates");
 
@@ -802,14 +799,13 @@ public enum OttCreativeCategories {
                 output.accept(ModBlocks.MAGENTA_MARBLE_FANCY_FENCE);
                 output.accept(ModBlocks.MAGENTA_MARBLE_DIAMOND_PAVERS);
 
-                output.accept(OttBlocks.SANDSTONE_SLENDER_BRICKS);          emit.accept("sandstone_slender_bricks");
-                output.accept(OttBlocks.SANDSTONE_SLENDER_TURQUOISE_PATTERN); emit.accept("sandstone_slender_turquoise_pattern");
+                output.accept(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","sandstone_slender_bricks")));          emit.accept("sandstone_slender_bricks");
+                output.accept(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","sandstone_slender_turquoise_pattern"))); emit.accept("sandstone_slender_turquoise_pattern");
             }),
 
     BLOCKS("blocks",
-            () -> OttBlocks.MIXED_LIMESTONE_BRICKS.get().asItem(),
+            () -> OttBlocks.PINK_SALT_BLOCK.get().asItem(),
             (params, output) -> {
-                output.accept(OttBlocks.MIXED_LIMESTONE_BRICKS);
                 ModBlocks.SEAGLASS.forEach(output::accept);  // ethereal seaglass only
                 ModBlocks.TESTBLOCK.forEach(output::accept);
 
@@ -826,8 +822,7 @@ public enum OttCreativeCategories {
 
                 output.accept(OttBlocks.SOUL_GLASS);
                 output.accept(OttBlocks.SOUL_GLASS_PANE);
-                output.accept(OttBlocks.SOUL_GLASS_CTM);
-                output.accept(OttBlocks.SOUL_GLASS_CTM_PANE);
+                output.accept(net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","soul_glass_ctm_pane")));
 
                 // Opal crystal sets — raw + decorative blocks grouped per type; loose buds/crystals are in MISC
                 ModBlocks.OPAL_SETS.values().forEach(set -> {
@@ -851,7 +846,7 @@ public enum OttCreativeCategories {
             }),
 
     ENGRAVED("engraved",
-            () -> OttBlocks.CHAOTIC_STONE_BRICKS.get().asItem(),
+            () -> net.minecraft.core.registries.BuiltInRegistries.BLOCK.get(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ott","stone_chaotic_bricks")).asItem(),
             (params, output) -> {
                 // ── Engraving tab — driven entirely by data/ott/engraving_tab/*.csv.
                 // Edit those files to reorder or add/remove blocks. No auto-population.
