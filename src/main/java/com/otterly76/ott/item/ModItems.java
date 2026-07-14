@@ -485,8 +485,8 @@ public class ModItems {
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_ARROWSLIT = registerBlockItem("stone_bricks_arrowslit", ModBlocks.STONE_BRICKS_ARROWSLIT);
     public static final DeferredHolder<Item, BlockItem> STONE_BRICKS_MACHICOLATION = registerBlockItem("stone_bricks_machicolation", ModBlocks.STONE_BRICKS_MACHICOLATION);
 
-    public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_EDGE = registerBlockItem("limestone_masonry_edge", ModBlocks.LIMESTONE_MASONRY_EDGE);
-    public static final DeferredHolder<Item, BlockItem> LIMESTONE_MASONRY_PLATE = registerBlockItem("limestone_masonry_plate", ModBlocks.LIMESTONE_MASONRY_PLATE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_SANDSTONE_MASONRY_EDGE = registerBlockItem("smooth_sandstone_masonry_edge", ModBlocks.SMOOTH_SANDSTONE_MASONRY_EDGE);
+    public static final DeferredHolder<Item, BlockItem> SMOOTH_SANDSTONE_MASONRY_PLATE = registerBlockItem("smooth_sandstone_masonry_plate", ModBlocks.SMOOTH_SANDSTONE_MASONRY_PLATE);
 
     public static final DeferredHolder<Item, BlockItem> BLACK_MARBLE_FLOOR_TILE   = registerBlockItem("black_marble_floor_tile",   ModBlocks.BLACK_MARBLE_FLOOR_TILE);
     public static final DeferredHolder<Item, BlockItem> WHITE_MARBLE_FLOOR_TILE   = registerBlockItem("white_marble_floor_tile",   ModBlocks.WHITE_MARBLE_FLOOR_TILE);
