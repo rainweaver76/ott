@@ -81,6 +81,24 @@
     "ott:unamused_dripstone_block",
     "ott:vertical_cut_dripstone_block",
     "ott:vertical_disordered_dripstone_block_bricks",
-    "ott:weathered_dripstone_block"
+    "ott:weathered_dripstone_block",
+    "ott:dripstone_block_bordered_ctm",
+    "ott:dripstone_block_brick_bordered_ctm",
+    "ott:dripstone_block_curly_ctm",
+    "ott:dripstone_block_cut_column_ctm",
+    "ott:dripstone_block_cut_polished_ctm",
+    "ott:dripstone_block_cut_small_brick_ctm",
+    "ott:dripstone_block_edged_bricks_ctm",
+    "ott:dripstone_block_fine_ctm",
+    "ott:dripstone_block_ornate_ctm",
+    "ott:dripstone_block_overlapping_tiles_ctm",
+    "ott:dripstone_block_polished_ctm",
+    "ott:dripstone_block_simple_ctm",
+    "ott:dripstone_block_smooth_column_ctm",
+    "ott:dripstone_block_thick_inlayed_ctm",
+    "ott:dripstone_block_tiled_bordered_ctm",
+    "ott:dripstone_block_tiled_column_ctm",
+    "ott:dripstone_block_tiny_brick_bordered_ctm",
+    "ott:dripstone_block_massive_bricks_ctm"
   ]
 }

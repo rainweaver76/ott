@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": {"model": "ott:block/stone/stone_rough_cut", "x": 90, "y": 90},
+    "axis=y": {"model": "ott:block/stone/stone_rough_cut"},
+    "axis=z": {"model": "ott:block/stone/stone_rough_cut", "x": 90}
+  }
+}

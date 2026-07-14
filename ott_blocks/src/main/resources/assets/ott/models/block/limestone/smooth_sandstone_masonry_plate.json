@@ -1,0 +1,8 @@
+{
+	"parent": "ott:block/plate",
+	"textures": {
+		"side": "ott:block/smooth_sandstone_masonry/smooth_sandstone_masonry",
+		"top": "ott:block/smooth_sandstone_masonry/smooth_sandstone_masonry",
+		"frieze": "ott:block/smooth_sandstone_masonry/smooth_sandstone_masonry"
+	}
+}

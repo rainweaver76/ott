@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/template_glass_pane_side_alt",
-  "textures": {
-    "pane": "ott:block/orange_stained_glass/square_orange_stained_glass",
-    "edge": "ott:block/glass/leaded_glass_pane_edge"
-  },
-  "render_type": "minecraft:translucent"
-}

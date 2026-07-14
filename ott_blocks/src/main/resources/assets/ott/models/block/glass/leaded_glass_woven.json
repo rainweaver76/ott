@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ott:block/glass/leaded_glass_woven"
+  },
+  "render_type": "minecraft:cutout"
+}

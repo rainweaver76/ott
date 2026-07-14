@@ -1,8 +1,8 @@
 {
   "parent": "ott:item/glass_pane_ctm_compact",
   "textures": {
-    "front": "ott:block/golden_framed_glass/ctm/golden_framed_brown_stained_glass",
-    "side": "ott:block/golden_framed_glass/golden_framed_glass_edge"
+    "front": "ott:block/brown_stained_glass/ctm/brown_stained_glass_golden_framed",
+    "side": "ott:block/glass/golden_framed_glass_edge"
   },
   "render_type": "minecraft:translucent"
 }

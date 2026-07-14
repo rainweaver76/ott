@@ -25,6 +25,10 @@ Notes:
 ☺
 ♥
 
+add rotten flesh to compostables for player and MCol
+
+fix issue with smooth movement and better days imp
+
 disable overgrowth and respawning structures for custom dimensions
 
 check models and DO for bookshelf variants
@@ -622,6 +626,18 @@ HUE Cheat Sheet:
 | 0.75 | Violet |
 | 0.83 | Magenta |
 | 0.92 | Hot pink |
+
+OttBlocks → ModBlocks migration (custom blocks that don't belong in engraving system):
+=====
+Move the following from OttBlocks (ott_blocks module) to ModBlocks (ott module):
+- soul_glass + soul_glass_pane (custom properties, crafting recipe)
+- refined_glowstone (glowstone-based, crafting recipe)
+- bamboo_thatch, wheat_thatch (grass sounds, crafting recipe)
+- pink_salt_block, polished_pink_salt_block (sand sounds, custom properties, crafting recipe)
+- black_marble, white_marble + all 16 color marbles (worldgen/dyeable base blocks — NOT engraving inputs)
+  Note: marble decorative variants (bricks, pillar, pillar_cap, small_bricks, tiles, polished) STAY in OttBlocks as engraving outputs
+- roofing_slates — once raw_slate worldgen block is built, move roofing_slates to ModBlocks and add raw_slate
+Each move requires: ModBlocks registration, ModItems entry, OttBlockStateProvider entry, creative tab, recipes.
 
 Testing Hitlist:
 =====

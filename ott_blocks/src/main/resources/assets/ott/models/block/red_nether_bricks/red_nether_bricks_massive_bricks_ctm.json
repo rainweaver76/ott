@@ -1,0 +1,15 @@
+{
+  "loader": "ott:mosaic",
+  "parent": "ott:block/ctm/ctm_cube_all_giant",
+  "layout": "giant",
+  "textures": {
+    "all": "ott:block/red_nether_bricks/ctm/red_nether_bricks_massive_bricks"
+  },
+  "connections": {
+    "all": [
+      {
+        "type": "is_same_block"
+      }
+    ]
+  }
+}

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/oak_planks/circle_oak_glass"
-  },
-  "render_type": "minecraft:cutout"
-}

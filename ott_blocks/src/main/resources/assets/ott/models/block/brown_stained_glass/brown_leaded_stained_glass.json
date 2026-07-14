@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "ott:block/brown_stained_glass/brown_leaded_stained_glass"
-  },
-  "render_type": "minecraft:translucent"
-}

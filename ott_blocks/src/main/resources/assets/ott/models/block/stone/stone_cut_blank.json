@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "ott:block/stone/stone_cut_blank",
+    "end":  "ott:block/stone/cut_stone_top"
+  }
+}
