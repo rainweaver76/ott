@@ -134,29 +134,19 @@ public class ModBlocks {
     public static final DeferredBlock<SaplingBlock> PALE_OAK_SAPLING = registerBackportedBlock("pale_oak_sapling", () -> new SaplingBlock(new TreeGrower("pale_oak", Optional.of(net.minecraft.resources.ResourceKey.create(net.minecraft.core.registries.Registries.CONFIGURED_FEATURE, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(MOD_ID, "pale_oak_bonemeal"))), Optional.empty(), Optional.empty()), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).mapColor(MapColor.COLOR_LIGHT_GRAY).noCollission().randomTicks().instabreak().sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)), false);
     public static final DeferredBlock<FlowerPotBlock> POTTED_PALE_OAK_SAPLING = registerBackportedBlock("potted_pale_oak_sapling", () -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, PALE_OAK_SAPLING, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_OAK_SAPLING).noOcclusion()), false);
 
-    public static final DeferredBlock<Block> PROTECTIVE_LANTERN = BLOCKS.register("protective_lantern",
-            () -> new ProtectiveLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
+    public static final DeferredBlock<Block> PROTECTIVE_LANTERN = BLOCKS.register("protective_lantern", () -> new ProtectiveLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
 
-    public static final DeferredBlock<Block> WATER_LANTERN = BLOCKS.register("water_lantern",
-            () -> new FluidLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN), FluidLanternBlock.Type.WATER));
+    public static final DeferredBlock<Block> WATER_LANTERN = BLOCKS.register("water_lantern", () -> new FluidLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN), FluidLanternBlock.Type.WATER));
 
-    public static final DeferredBlock<Block> LAVA_LANTERN = BLOCKS.register("lava_lantern",
-            () -> new FluidLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN), FluidLanternBlock.Type.LAVA));
+    public static final DeferredBlock<Block> LAVA_LANTERN = BLOCKS.register("lava_lantern", () -> new FluidLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN), FluidLanternBlock.Type.LAVA));
 
-    public static final DeferredBlock<BigLilyPadBlock> BIG_LILY_PAD = BLOCKS.register("big_lily_pad",
-            () -> new BigLilyPadBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LILY_PAD).noOcclusion()));
+    public static final DeferredBlock<BigLilyPadBlock> BIG_LILY_PAD = BLOCKS.register("big_lily_pad", () -> new BigLilyPadBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LILY_PAD).noOcclusion()));
 
-    public static final DeferredBlock<Block> SMITE_LANTERN = BLOCKS.register("smite_lantern",
-            () -> new SmiteLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
+    public static final DeferredBlock<Block> SMITE_LANTERN = BLOCKS.register("smite_lantern", () -> new SmiteLanternBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.LANTERN)));
 
-    /**
-     * Your original "real hedge" block (damage/bonemeal/etc). Keep separate.
-     */
-    public static final DeferredBlock<ThornyHedgeBlock> THORNY_HEDGE =
-            BLOCKS.register("thorny_hedge", () -> new ThornyHedgeBlock(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<ThornyHedgeBlock> THORNY_HEDGE = BLOCKS.register("thorny_hedge", () -> new ThornyHedgeBlock(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.WOOD).noOcclusion()));
 
-    public static final DeferredBlock<Block> THORNY_HEDGE_SPROUTS =
-            BLOCKS.register("thorny_hedge_sprouts", () -> new ThornyHedgeSprouts(Block.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final DeferredBlock<Block> THORNY_HEDGE_SPROUTS = BLOCKS.register("thorny_hedge_sprouts", () -> new ThornyHedgeSprouts(Block.Properties.ofFullCopy(Blocks.WHEAT)));
 
     public static final Map<String, DeferredBlock<Block>> PARTICLE_HEDGES = new LinkedHashMap<>();
     public static final Map<String, DeferredBlock<Block>> CREEPING_HEDGES = new LinkedHashMap<>();
@@ -272,8 +262,7 @@ public class ModBlocks {
 
     private static void registerDynamicBlocks() {
         for (Butterfly.Variant variant : Butterfly.Variant.values()) {
-            BUTTERFLY_JARS.put(variant, BLOCKS.register("butterfly_jar_" + variant.getName(),
-                    () -> new com.otterly76.ott.block.custom.ButterflyJarBlock(variant, BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion())));
+            BUTTERFLY_JARS.put(variant, BLOCKS.register("butterfly_jar_" + variant.getName(), () -> new com.otterly76.ott.block.custom.ButterflyJarBlock(variant, BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion())));
         }
 
         MINECRAFT_ITEMS.register("copper_torch", () -> new net.minecraft.world.item.StandingAndWallBlockItem(COPPER_TORCH.get(), COPPER_WALL_TORCH.get(), new net.minecraft.world.item.Item.Properties(), net.minecraft.core.Direction.DOWN));
@@ -292,24 +281,7 @@ public class ModBlocks {
             SHELVES.add(registerBackportedBlock(wood + "_shelf", () -> new com.otterly76.ott.block.shelf.ShelfBlock(BlockBehaviour.Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion())));
         }
 
-        // Bookshelves — RotatedPillarBlock, OTT namespace, side = bookshelf texture, end = wood planks
-        for (String name : List.of(
-                "acacia_bookshelf", "ancient_cubed_oak_bookshelf", "ancient_oak_bookshelf",
-                "ancient_oak_large_bookshelf", "ancient_vertical_oak_bookshelf", "bamboo_bookshelf",
-                "birch_bookshelf", "botanical_oak_bookshelf", "botanical_oak_cubed_bookshelf",
-                "botanical_oak_large_bookshelf", "cherry_bookshelf", "crimson_bookshelf",
-                "cubed_oak_bookshelf", "cubed_oak_empty_bookshelf", "cubed_oak_spaced_bookshelf",
-                "cubed_oak_webbed_bookshelf", "curvy_bookshelf", "dark_oak_bookshelf",
-                "dusty_bookshelf", "full_bookshelf", "historical_oak_bookshelf",
-                "historical_oak_large_bookshelf", "jungle_bookshelf", "mangrove_bookshelf",
-                "mixed_cubed_oak_bookshelf", "mixed_oak_bookshelf", "mixed_oak_large_bookshelf",
-                "oak_bookshelf", "oak_empty_bookshelf", "oak_large_bookshelf",
-                "oak_lighted_bookshelf", "oak_lighted_large_bookshelf", "oak_spaced_bookshelf",
-                "oak_spaced_large_bookshelf", "oak_webbed_bookshelf", "oak_webbed_large_bookshelf",
-                "spruce_bookshelf", "vertical_botanical_oak_bookshelf", "vertical_mixed_oak_bookshelf",
-                "vertical_oak_bookshelf", "vertical_oak_lighted_bookshelf", "vertical_oak_webbed_bookshelf",
-                "warped_bookshelf"
-        )) {
+        for (String name : List.of("acacia_bookshelf", "ancient_cubed_oak_bookshelf", "ancient_oak_bookshelf", "ancient_oak_large_bookshelf", "ancient_vertical_oak_bookshelf", "bamboo_bookshelf", "birch_bookshelf", "botanical_oak_bookshelf", "botanical_oak_cubed_bookshelf", "botanical_oak_large_bookshelf", "cherry_bookshelf", "crimson_bookshelf", "cubed_oak_bookshelf", "cubed_oak_empty_bookshelf", "cubed_oak_spaced_bookshelf", "cubed_oak_webbed_bookshelf", "curvy_bookshelf", "dark_oak_bookshelf", "dusty_bookshelf", "full_bookshelf", "historical_oak_bookshelf", "historical_oak_large_bookshelf", "jungle_bookshelf", "mangrove_bookshelf", "mixed_cubed_oak_bookshelf", "mixed_oak_bookshelf", "mixed_oak_large_bookshelf", "oak_bookshelf", "oak_empty_bookshelf", "oak_large_bookshelf", "oak_lighted_bookshelf", "oak_lighted_large_bookshelf", "oak_spaced_bookshelf", "oak_spaced_large_bookshelf", "oak_webbed_bookshelf", "oak_webbed_large_bookshelf", "spruce_bookshelf", "vertical_botanical_oak_bookshelf", "vertical_mixed_oak_bookshelf", "vertical_oak_bookshelf", "vertical_oak_lighted_bookshelf", "vertical_oak_webbed_bookshelf", "warped_bookshelf")) {
             BOOKSHELVES.put(name, registerBookshelf(name));
         }
 
@@ -326,8 +298,6 @@ public class ModBlocks {
             COPPER_PRESSURE_PLATES.put(stateName, registerBackportedBlock(stateName + "copper_pressure_plate", () -> new com.otterly76.ott.block.custom.CopperPressurePlateBlock(state, net.minecraft.world.level.block.state.properties.BlockSetType.COPPER, BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.COPPER))));
             COPPER_PRESSURE_PLATES.put("waxed_" + stateName, registerBackportedBlock("waxed_" + stateName + "copper_pressure_plate", () -> new com.otterly76.ott.block.custom.CopperPressurePlateBlock(state, net.minecraft.world.level.block.state.properties.BlockSetType.COPPER, BlockBehaviour.Properties.of().strength(0.5f).sound(SoundType.COPPER))));
 
-            // In 1.21.1, all 8 variants of copper doors and trapdoors are vanilla.
-            // We use vanilla instances from the Blocks class to avoid duplicate registration issues and NPEs during baking.
             switch (stateName) {
                 case "" -> {
                     COPPER_DOORS.put("", () -> Blocks.COPPER_DOOR);
@@ -384,8 +354,6 @@ public class ModBlocks {
             COPPER_CAULDRONS.put(stateName, registerBackportedBlock(stateName + "copper_cauldron", () -> new com.otterly76.ott.block.custom.WeatheringCopperCauldronBlock(state, com.otterly76.ott.handler.CauldronInteractionHandler.COPPER_EMPTY, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.COPPER).noOcclusion().pushReaction(PushReaction.BLOCK))));
             COPPER_CAULDRONS.put("waxed_" + stateName, registerBackportedBlock("waxed_" + stateName + "copper_cauldron", () -> new com.otterly76.ott.block.custom.WeatheringCopperCauldronBlock(state, com.otterly76.ott.handler.CauldronInteractionHandler.COPPER_EMPTY, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.COPPER).noOcclusion().pushReaction(PushReaction.BLOCK))));
 
-            // Filled Cauldrons
-            // Note: Interaction maps are set to COPPER_EMPTY/WATER/etc.
             COPPER_WATER_CAULDRONS.put(stateName, registerBackportedBlock(stateName + "copper_water_cauldron", () -> new com.otterly76.ott.block.custom.WeatheringCopperLayeredCauldronBlock(state, Biome.Precipitation.RAIN, com.otterly76.ott.handler.CauldronInteractionHandler.COPPER_WATER, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER_CAULDRON).mapColor(MapColor.COLOR_ORANGE).sound(SoundType.COPPER).pushReaction(PushReaction.BLOCK)), false));
             COPPER_WATER_CAULDRONS.put("waxed_" + stateName, registerBackportedBlock("waxed_" + stateName + "copper_water_cauldron", () -> new com.otterly76.ott.block.custom.WeatheringCopperLayeredCauldronBlock(state, Biome.Precipitation.RAIN, com.otterly76.ott.handler.CauldronInteractionHandler.COPPER_WATER, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER_CAULDRON).mapColor(MapColor.COLOR_ORANGE).sound(SoundType.COPPER).pushReaction(PushReaction.BLOCK)), false));
 
@@ -421,62 +389,32 @@ public class ModBlocks {
         registerGradientBlocks(Blocks.WHITE_STAINED_GLASS, GradientStainedGlassBlock::new, ALL_STAINED_GLASS_BLOCKS::add);
         registerGradientBlocks(Blocks.WHITE_CONCRETE_POWDER, GradientConcretePowderBlock::new, ALL_CONCRETE_POWDER_BLOCKS::add);
 
-        // Register all ott wood sets
         ModWoodSets.ALL.forEach(set -> WOOD_SETS.put(set.name(), com.otterly76.ott.block.wood.WoodSetBlockRegistrar.registerOttWoodSet(set.name())));
 
-        // Register vanilla wood structural blocks
-        // Oak already has dedicated static block fields; wrap them rather than re-registering.
-        VANILLA_STRUCTURAL_SETS.put("oak", new WoodStructuralBlocks(
-                OAK_PERGOLA, OAK_BEAM, OAK_PLANKS_PLATE, OAK_PLANKS_EDGE,
-                OAK_BANNISTER, OAK_SUPPORT_SLAB, OAK_SUPPORT_BEAM, OAK_GEOMETRIC_WINDOW));
-        for (String name : List.of("spruce", "birch", "jungle", "acacia", "dark_oak",
-                "mangrove", "cherry", "bamboo", "crimson", "warped", "pale_oak")) {
+        VANILLA_STRUCTURAL_SETS.put("oak", new WoodStructuralBlocks(OAK_PERGOLA, OAK_BEAM, OAK_PLANKS_PLATE, OAK_PLANKS_EDGE, OAK_BANNISTER, OAK_SUPPORT_SLAB, OAK_SUPPORT_BEAM, OAK_GEOMETRIC_WINDOW));
+        for (String name : List.of("spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "bamboo", "crimson", "warped", "pale_oak")) {
             VANILLA_STRUCTURAL_SETS.put(name, com.otterly76.ott.block.wood.WoodSetBlockRegistrar.registerVanillaStructural(name));
         }
 
-        // Register all ott color sets
         com.otterly76.ott.color.ModColorSets.ALL.forEach(set -> COLOR_SETS.put(set.name(), com.otterly76.ott.block.color.ColorSetBlockRegistrar.registerOttColorSet(set.name())));
 
-        // Register all stone shape sets
-        com.otterly76.ott.block.stone.ModStoneVariants.ALL.forEach(v ->
-                STONE_SETS.put(v.name(), com.otterly76.ott.block.stone.StoneSetBlockRegistrar.registerStoneSet(v)));
+        com.otterly76.ott.block.stone.ModStoneVariants.ALL.forEach(v -> STONE_SETS.put(v.name(), com.otterly76.ott.block.stone.StoneSetBlockRegistrar.registerStoneSet(v)));
 
-        // Register seaglass for all colors (vanilla dyes + custom color sets)
         for (com.otterly76.ott.color.ModPatterns.ColorInfo color : com.otterly76.ott.color.ModPatterns.ALL_COLORS) {
             final String c = color.name();
-            SEAGLASS_SETS.put(c, new SeaglassColorBlocks(
-                    register(c + "_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())),
-                    register(c + "_bubbles_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())),
-                    register(c + "_smooth_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())),
-                    register(c + "_waves_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion()))
-            ));
+            SEAGLASS_SETS.put(c, new SeaglassColorBlocks(register(c + "_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())), register(c + "_bubbles_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())), register(c + "_smooth_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion())), register(c + "_waves_seaglass", () -> new Block(Properties.of().strength(4.0f).requiresCorrectToolForDrops().sound(SoundType.GLASS).noOcclusion()))));
         }
 
-        // Register opal sets
         for (String opalName : List.of("white_opal", "black_opal", "fire_opal")) {
             OPAL_SETS.put(opalName, registerOpalSet(opalName));
         }
 
         registerPatternBlocks();
 
-        // Register all particle hedges
         ModHedgeVariants.ALL.forEach(variant -> {
-            PARTICLE_HEDGES.put(variant.name(), BLOCKS.register(
-                    variant.name() + "_hedge",
-                    () -> new ParticleHedgeBlock(
-                            Properties.of().strength(1.0f).sound(SoundType.GRASS).noOcclusion(),
-                            variant.leafParticle()
-                    )
-            ));
+            PARTICLE_HEDGES.put(variant.name(), BLOCKS.register(variant.name() + "_hedge", () -> new ParticleHedgeBlock(Properties.of().strength(1.0f).sound(SoundType.GRASS).noOcclusion(), variant.leafParticle())));
 
-            CREEPING_HEDGES.put(variant.name(), BLOCKS.register(
-                    variant.name() + "_creeping_hedge",
-                    () -> new ParticleCreepingHedgeBlock(
-                            Properties.of().strength(1.0f).sound(SoundType.GRASS).noOcclusion(),
-                            variant.leafParticle(),
-                            variant.creepOverlayTexture()
-                    )
-            ));
+            CREEPING_HEDGES.put(variant.name(), BLOCKS.register(variant.name() + "_creeping_hedge", () -> new ParticleCreepingHedgeBlock(Properties.of().strength(1.0f).sound(SoundType.GRASS).noOcclusion(), variant.leafParticle(), variant.creepOverlayTexture())));
         });
 
         registerElevators();
@@ -487,10 +425,7 @@ public class ModBlocks {
         for (com.otterly76.ott.color.ModPatterns.ColorInfo color : com.otterly76.ott.color.ModPatterns.ALL_COLORS) {
             final String colorName = color.name();
             final net.minecraft.world.item.DyeColor dyeColor = toDyeColor(colorName);
-            FUTONS.put(colorName, BLOCKS.register(
-                    colorName + "_futon",
-                    () -> new FutonBlock(dyeColor, Properties.of().strength(0.5f).sound(SoundType.WOOL).noOcclusion())
-            ));
+            FUTONS.put(colorName, BLOCKS.register(colorName + "_futon", () -> new FutonBlock(dyeColor, Properties.of().strength(0.5f).sound(SoundType.WOOL).noOcclusion())));
         }
     }
 
@@ -504,13 +439,7 @@ public class ModBlocks {
     private static void registerElevators() {
         for (ModPatterns.ColorInfo color : ModPatterns.ALL_COLORS) {
             final String colorName = color.name();
-            ELEVATORS.put(colorName, BLOCKS.register(
-                    colorName + "_elevator",
-                    () -> new ElevatorBlock(colorName,
-                            BlockBehaviour.Properties.of()
-                                    .strength(0.8f)
-                                    .sound(SoundType.WOOL))
-            ));
+            ELEVATORS.put(colorName, BLOCKS.register(colorName + "_elevator", () -> new ElevatorBlock(colorName, BlockBehaviour.Properties.of().strength(0.8f).sound(SoundType.WOOL))));
         }
     }
 
@@ -520,21 +449,15 @@ public class ModBlocks {
             Map<String, DeferredBlock<Block>> colorMap = new LinkedHashMap<>();
             for (com.otterly76.ott.color.ModPatterns.ColorInfo color : com.otterly76.ott.color.ModPatterns.ALL_COLORS) {
                 String base = color.name() + "_" + pattern;
-                colorMap.put(color.name(), isPillar
-                        ? registerAsPillar(base)
-                        : register(base, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE))));
+                colorMap.put(color.name(), isPillar ? registerAsPillar(base) : register(base, () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE))));
             }
             PATTERN_BLOCKS.put(pattern, colorMap);
         }
     }
 
-    /**
-     * Registers a {@link RotatedPillarBlock} and stores it in the {@code DeferredBlock<Block>} map via an unchecked cast (safe: RotatedPillarBlock extends Block).
-     */
     @SuppressWarnings("unchecked")
     private static DeferredBlock<Block> registerAsPillar(String name) {
-        DeferredBlock<?> holder = BLOCKS.register(name,
-                () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
+        DeferredBlock<?> holder = BLOCKS.register(name, () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE)));
         return (DeferredBlock<Block>) holder;
     }
 
@@ -549,9 +472,7 @@ public class ModBlocks {
                     // This will naturally create both "red_blue_..." and "blue_red_..."
                     final String fullName = String.format("%s_%s_%s", color1.getName(), color2.getName(), blockBaseName);
 
-                    DeferredBlock<? extends IGradientBlock> gradientBlock = BLOCKS.register(fullName, () ->
-                            builder.create(BlockBehaviour.Properties.ofFullCopy(block), color1, color2, color -> "%s_%s".formatted(color.getName(), blockBaseName))
-                    );
+                    DeferredBlock<? extends IGradientBlock> gradientBlock = BLOCKS.register(fullName, () -> builder.create(BlockBehaviour.Properties.ofFullCopy(block), color1, color2, color -> "%s_%s".formatted(color.getName(), blockBaseName)));
 
                     adder.accept(gradientBlock);
                     ALL_GRADIENT_BLOCKS.add(gradientBlock);
@@ -584,485 +505,149 @@ public class ModBlocks {
         return ALL_CONCRETE_POWDER_BLOCKS;
     }
 
-    /**
-     * ott wood sets (ott namespace). Key = set name (e.g. "starlight").
-     */
     public static final Map<String, WoodSetBlocks> WOOD_SETS = new LinkedHashMap<>();
 
-    /**
-     * ott color sets (ott namespace). Key = color name (e.g. "aquamarine").
-     */
     public static final Map<String, ColorSetBlocks> COLOR_SETS = new LinkedHashMap<>();
 
-    /**
-     * Stone-type shape sets (ott namespace). Key = variant name (e.g. "stone", "granite").
-     */
     public static final Map<String, StoneSetBlocks> STONE_SETS = new LinkedHashMap<>();
 
-    /**
-     * Seaglass color sets (ott namespace). Key = color name, covers all vanilla dyes + custom color sets.
-     */
     public static final Map<String, SeaglassColorBlocks> SEAGLASS_SETS = new LinkedHashMap<>();
 
-    /**
-     * Opal crystal sets (ott namespace). Keys: "white_opal", "black_opal", "fire_opal".
-     */
     public static final Map<String, OpalSet> OPAL_SETS = new LinkedHashMap<>();
 
-    /**
-     * ott pattern blocks (ott namespace). Key1 = pattern name, Key2 = color name.
-     */
     public static final Map<String, Map<String, DeferredBlock<Block>>> PATTERN_BLOCKS = new LinkedHashMap<>();
 
-    public record ColorSetBlocks(
-            DeferredBlock<CandleBlock> candle,
-            DeferredBlock<Block> concrete,
-            DeferredBlock<ColoredFallingBlock> concretePowder,
-            DeferredBlock<GlazedTerracottaBlock> glazedTerracotta,
-            DeferredBlock<ShulkerBoxBlock> shulkerBox,
-            DeferredBlock<StainedGlassBlock> stainedGlass,
-            DeferredBlock<StainedGlassPaneBlock> stainedGlassPane,
-            DeferredBlock<Block> terracotta,
-            DeferredBlock<Block> wool,
-            DeferredBlock<BedBlock> bed,
-            DeferredBlock<CarpetBlock> carpet,
-            DeferredBlock<BannerBlock> banner,
-            DeferredBlock<WallBannerBlock> wallBanner,
-            DeferredBlock<PlateBlock> plate,
-            DeferredBlock<EdgeBlock> edge,
-            DeferredBlock<BeamBlock> beam,
-            DeferredBlock<PergolaBlock> pergola,
-            DeferredBlock<Block> geometricWindow,
-            DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam
-    ) {
+    public record ColorSetBlocks(DeferredBlock<CandleBlock> candle, DeferredBlock<Block> concrete,
+                                 DeferredBlock<ColoredFallingBlock> concretePowder,
+                                 DeferredBlock<GlazedTerracottaBlock> glazedTerracotta,
+                                 DeferredBlock<ShulkerBoxBlock> shulkerBox,
+                                 DeferredBlock<StainedGlassBlock> stainedGlass,
+                                 DeferredBlock<StainedGlassPaneBlock> stainedGlassPane, DeferredBlock<Block> terracotta,
+                                 DeferredBlock<Block> wool, DeferredBlock<BedBlock> bed,
+                                 DeferredBlock<CarpetBlock> carpet, DeferredBlock<BannerBlock> banner,
+                                 DeferredBlock<WallBannerBlock> wallBanner, DeferredBlock<PlateBlock> plate,
+                                 DeferredBlock<EdgeBlock> edge, DeferredBlock<BeamBlock> beam,
+                                 DeferredBlock<PergolaBlock> pergola, DeferredBlock<Block> geometricWindow,
+                                 DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
+                                 DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
+                                 DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam) {
     }
 
-    public record StoneSetBlocks(
-            DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> plate,
-            DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> edge,
-            DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
-            DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
-            DeferredBlock<com.otterly76.ott.block.custom.GeometricWindowBlock> geometricWindow,
-            DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam
-    ) {
+    public record StoneSetBlocks(DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> plate,
+                                 DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> edge,
+                                 DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
+                                 DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
+                                 DeferredBlock<com.otterly76.ott.block.custom.GeometricWindowBlock> geometricWindow,
+                                 DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
+                                 DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
+                                 DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam) {
     }
 
-    public record SeaglassColorBlocks(
-            DeferredBlock<Block> seaglass,
-            DeferredBlock<Block> bubblesSeaglass,
-            DeferredBlock<Block> smoothSeaglass,
-            DeferredBlock<Block> wavesSeaglass
-    ) {
+    public record SeaglassColorBlocks(DeferredBlock<Block> seaglass, DeferredBlock<Block> bubblesSeaglass,
+                                      DeferredBlock<Block> smoothSeaglass, DeferredBlock<Block> wavesSeaglass) {
     }
 
-    public record OpalSet(
-            DeferredBlock<Block> base,
-            DeferredBlock<Block> crystalBlock,
-            DeferredBlock<Block> budding,
-            DeferredBlock<AmethystClusterBlock> cluster,
-            DeferredBlock<AmethystClusterBlock> largeBud,
-            DeferredBlock<AmethystClusterBlock> mediumBud,
-            DeferredBlock<AmethystClusterBlock> smallBud,
-            DeferredBlock<Block> bricks,
-            DeferredBlock<Block> smallBricks,
-            DeferredBlock<Block> polished,
-            DeferredBlock<Block> chiseled,
-            DeferredBlock<RotatedPillarBlock> pillar,
-            DeferredBlock<Block> cut,
-            DeferredBlock<Block> tiles,
-            DeferredBlock<Block> smallTiles,
-            DeferredBlock<Block> glass,
-            DeferredBlock<IronBarsBlock> glassPane,
-            DeferredBlock<GlazedTerracottaBlock> tiling
-    ) {
+    public record OpalSet(DeferredBlock<Block> base, DeferredBlock<Block> crystalBlock, DeferredBlock<Block> budding,
+                          DeferredBlock<AmethystClusterBlock> cluster, DeferredBlock<AmethystClusterBlock> largeBud,
+                          DeferredBlock<AmethystClusterBlock> mediumBud, DeferredBlock<AmethystClusterBlock> smallBud,
+                          DeferredBlock<Block> bricks, DeferredBlock<Block> smallBricks, DeferredBlock<Block> polished,
+                          DeferredBlock<Block> chiseled, DeferredBlock<RotatedPillarBlock> pillar,
+                          DeferredBlock<Block> cut, DeferredBlock<Block> tiles, DeferredBlock<Block> smallTiles,
+                          DeferredBlock<Block> glass, DeferredBlock<IronBarsBlock> glassPane,
+                          DeferredBlock<GlazedTerracottaBlock> tiling) {
     }
 
-    public record WoodSetBlocks(
-            DeferredBlock<RotatedPillarBlock> log,
-            DeferredBlock<RotatedPillarBlock> wood,
-            DeferredBlock<RotatedPillarBlock> strippedLog,
-            DeferredBlock<RotatedPillarBlock> strippedWood,
-            DeferredBlock<Block> planks,
-            DeferredBlock<StairBlock> stairs,
-            DeferredBlock<SlabBlock> slab,
-            DeferredBlock<FenceBlock> fence,
-            DeferredBlock<FenceGateBlock> fenceGate,
-            DeferredBlock<DoorBlock> door,
-            DeferredBlock<TrapDoorBlock> trapdoor,
-            DeferredBlock<ButtonBlock> button,
-            DeferredBlock<PressurePlateBlock> pressurePlate,
-            DeferredBlock<LeavesBlock> leaves,
-            DeferredBlock<SaplingBlock> sapling,
-            DeferredBlock<FlowerPotBlock> pottedSapling,
-            DeferredBlock<StandingSignBlock> sign,
-            DeferredBlock<WallSignBlock> wallSign,
-            DeferredBlock<CeilingHangingSignBlock> hangingSign,
-            DeferredBlock<WallHangingSignBlock> wallHangingSign,
-            DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
-            DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
-            DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> planksPlate,
-            DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> planksEdge,
-            DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam,
-            DeferredBlock<Block> geometricWindow,
-            DeferredBlock<BeehiveBlock> beehive,
-            DeferredBlock<com.otterly76.ott.block.shelf.ShelfBlock> shelf
-    ) {
+    public record WoodSetBlocks(DeferredBlock<RotatedPillarBlock> log, DeferredBlock<RotatedPillarBlock> wood,
+                                DeferredBlock<RotatedPillarBlock> strippedLog,
+                                DeferredBlock<RotatedPillarBlock> strippedWood, DeferredBlock<Block> planks,
+                                DeferredBlock<StairBlock> stairs, DeferredBlock<SlabBlock> slab,
+                                DeferredBlock<FenceBlock> fence, DeferredBlock<FenceGateBlock> fenceGate,
+                                DeferredBlock<DoorBlock> door, DeferredBlock<TrapDoorBlock> trapdoor,
+                                DeferredBlock<ButtonBlock> button, DeferredBlock<PressurePlateBlock> pressurePlate,
+                                DeferredBlock<LeavesBlock> leaves, DeferredBlock<SaplingBlock> sapling,
+                                DeferredBlock<FlowerPotBlock> pottedSapling, DeferredBlock<StandingSignBlock> sign,
+                                DeferredBlock<WallSignBlock> wallSign,
+                                DeferredBlock<CeilingHangingSignBlock> hangingSign,
+                                DeferredBlock<WallHangingSignBlock> wallHangingSign,
+                                DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
+                                DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
+                                DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> planksPlate,
+                                DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> planksEdge,
+                                DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
+                                DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
+                                DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam,
+                                DeferredBlock<Block> geometricWindow, DeferredBlock<BeehiveBlock> beehive,
+                                DeferredBlock<com.otterly76.ott.block.shelf.ShelfBlock> shelf) {
     }
 
-    /**
-     * Vanilla wood structural blocks (ott namespace). Key = vanilla set name (e.g. "oak").
-     */
     public static final Map<String, WoodStructuralBlocks> VANILLA_STRUCTURAL_SETS = new LinkedHashMap<>();
 
-    public record WoodStructuralBlocks(
-            DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
-            DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
-            DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> planksPlate,
-            DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> planksEdge,
-            DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
-            DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam,
-            DeferredBlock<Block> geometricWindow
-    ) {
+    public record WoodStructuralBlocks(DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> pergola,
+                                       DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> beam,
+                                       DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> planksPlate,
+                                       DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> planksEdge,
+                                       DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> bannister,
+                                       DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> supportSlab,
+                                       DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> supportBeam,
+                                       DeferredBlock<Block> geometricWindow) {
     }
 
-    public static final DeferredBlock<Block> GLASS_JAR = BLOCKS.register("glass_jar",
-            () -> new com.otterly76.ott.block.custom.GlassJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> GLASS_JAR = BLOCKS.register("glass_jar", () -> new com.otterly76.ott.block.custom.GlassJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
 
-    public static final DeferredBlock<Block> FIREFLY_IN_A_JAR = BLOCKS.register("firefly_in_a_jar",
-            () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 7)));
-
-    public static final DeferredBlock<Block> FIREFLIES_IN_A_JAR = BLOCKS.register("fireflies_in_a_jar",
-            () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 11)));
-
-    public static final DeferredBlock<Block> FIREFLY_JAR = BLOCKS.register("firefly_jar",
-            () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 15)));
+    public static final DeferredBlock<Block> FIREFLY_IN_A_JAR = BLOCKS.register("firefly_in_a_jar", () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 7)));
+    public static final DeferredBlock<Block> FIREFLIES_IN_A_JAR = BLOCKS.register("fireflies_in_a_jar", () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 11)));
+    public static final DeferredBlock<Block> FIREFLY_JAR = BLOCKS.register("firefly_jar", () -> new com.otterly76.ott.block.custom.FireflyJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion().lightLevel((state) -> 15)));
 
     public static final Map<Butterfly.Variant, DeferredBlock<Block>> BUTTERFLY_JARS = new HashMap<>();
-    public static final DeferredBlock<Block> CATERPILLAR_JAR = BLOCKS.register("caterpillar_jar",
-            () -> new com.otterly76.ott.block.custom.CaterpillarJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
+    public static final DeferredBlock<Block> CATERPILLAR_JAR = BLOCKS.register("caterpillar_jar", () -> new com.otterly76.ott.block.custom.CaterpillarJarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE).strength(0.3F).sound(SoundType.GLASS).noOcclusion()));
 
-    // --- Ecologics ---
-    public static final DeferredBlock<CoconutBlock> COCONUT = BLOCKS.register("coconut",
-            () -> new CoconutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<CoconutBlock> COCONUT = BLOCKS.register("coconut", () -> new CoconutBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.0F).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<CrabEggBlock> CRAB_EGG = BLOCKS.register("crab_egg", () -> new CrabEggBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.METAL).noOcclusion().randomTicks()));
 
-    // --- Friends and Foes ---
-    public static final DeferredBlock<CrabEggBlock> CRAB_EGG = BLOCKS.register("crab_egg",
-            () -> new CrabEggBlock(BlockBehaviour.Properties.of().mapColor(MapColor.SAND).strength(0.5F).sound(SoundType.METAL).noOcclusion().randomTicks()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> WATER_MOSAIC_RECESS = register("water_mosaic_recess", () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(), Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> SPIRIT_MOSAIC_RECESS = register("spirit_mosaic_recess", () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(), Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> AIR_MOSAIC_RECESS = register("air_mosaic_recess", () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(), Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> EARTH_MOSAIC_RECESS = register("earth_mosaic_recess", () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(), Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> FIRE_MOSAIC_RECESS = register("fire_mosaic_recess", () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(), Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.ArrowslitBlock> STONE_BRICKS_ARROWSLIT = register("stone_bricks_arrowslit", () -> new com.otterly76.ott.block.custom.ArrowslitBlock(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.MachincolationBlock> STONE_BRICKS_MACHICOLATION = register("stone_bricks_machicolation", () -> new com.otterly76.ott.block.custom.MachincolationBlock(Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
+    public static final DeferredBlock<EdgeBlock> SMOOTH_SANDSTONE_MASONRY_EDGE = register("smooth_sandstone_masonry_edge", () -> new EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+    public static final DeferredBlock<PlateBlock> SMOOTH_SANDSTONE_MASONRY_PLATE = register("smooth_sandstone_masonry_plate", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+    public static final DeferredBlock<PlateBlock> SANDSTONE_CRENELATION = register("sandstone_crenelation", () -> new PlateBlock(Properties.ofFullCopy(Blocks.CUT_SANDSTONE)));
 
-    // -------------------------------------------------------------------------
-    // --- Mosaic / Fresco decorative blocks ---
-    // -------------------------------------------------------------------------
-    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> WATER_MOSAIC_RECESS = register("water_mosaic_recess",
-            () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(
-                    net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(),
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> SPIRIT_MOSAIC_RECESS = register("spirit_mosaic_recess",
-            () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(
-                    net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(),
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> AIR_MOSAIC_RECESS = register("air_mosaic_recess",
-            () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(
-                    net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(),
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> EARTH_MOSAIC_RECESS = register("earth_mosaic_recess",
-            () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(
-                    net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(),
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.WaterMosaicRecessBlock> FIRE_MOSAIC_RECESS = register("fire_mosaic_recess",
-            () -> new com.otterly76.ott.block.custom.WaterMosaicRecessBlock(
-                    net.minecraft.world.level.block.Blocks.STONE_BRICKS.defaultBlockState(),
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-
-    // -------------------------------------------------------------------------
-    // --- Stone brick functional blocks ---
-    // -------------------------------------------------------------------------
-    public static final DeferredBlock<com.otterly76.ott.block.custom.ArrowslitBlock> STONE_BRICKS_ARROWSLIT = register("stone_bricks_arrowslit",
-            () -> new com.otterly76.ott.block.custom.ArrowslitBlock(
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.MachincolationBlock> STONE_BRICKS_MACHICOLATION = register("stone_bricks_machicolation",
-            () -> new com.otterly76.ott.block.custom.MachincolationBlock(
-                    Properties.of().strength(1.5f).requiresCorrectToolForDrops().sound(SoundType.STONE).noOcclusion()));
-
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Limestone ---
-    // -------------------------------------------------------------------------
-    public static final DeferredBlock<EdgeBlock> SMOOTH_SANDSTONE_MASONRY_EDGE = register("smooth_sandstone_masonry_edge",
-            () -> new EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
-    public static final DeferredBlock<PlateBlock> SMOOTH_SANDSTONE_MASONRY_PLATE = register("smooth_sandstone_masonry_plate",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
-
-    // -------------------------------------------------------------------------
-    // --- DoTB Phase 2: Marble (Roman) ---
-    // -------------------------------------------------------------------------
     public static final DeferredBlock<TileBlock> BLACK_MARBLE_FLOOR_TILE = register("black_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<TileBlock> WHITE_MARBLE_FLOOR_TILE = register("white_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
-    public static final DeferredBlock<PlateBlock> WHITE_MARBLE_FANCY_FENCE = register("white_marble_fancy_fence",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    public static final DeferredBlock<PlateBlock> BLACK_MARBLE_FANCY_FENCE = register("black_marble_fancy_fence",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-
-    // ── Blue Marble ──
+    public static final DeferredBlock<PlateBlock> WHITE_MARBLE_FANCY_FENCE = register("white_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
+    public static final DeferredBlock<PlateBlock> BLACK_MARBLE_FANCY_FENCE = register("black_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
     public static final DeferredBlock<TileBlock> BLUE_MARBLE_FLOOR_TILE = register("blue_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> BLUE_MARBLE_FANCY_FENCE = register("blue_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Cyan Marble ──
     public static final DeferredBlock<TileBlock> CYAN_MARBLE_FLOOR_TILE = register("cyan_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> CYAN_MARBLE_FANCY_FENCE = register("cyan_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Green Marble ──
     public static final DeferredBlock<TileBlock> GREEN_MARBLE_FLOOR_TILE = register("green_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> GREEN_MARBLE_FANCY_FENCE = register("green_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Lime Marble ──
     public static final DeferredBlock<TileBlock> LIME_MARBLE_FLOOR_TILE = register("lime_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> LIME_MARBLE_FANCY_FENCE = register("lime_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Orange Marble ──
     public static final DeferredBlock<TileBlock> ORANGE_MARBLE_FLOOR_TILE = register("orange_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> ORANGE_MARBLE_FANCY_FENCE = register("orange_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Pink Marble ──
     public static final DeferredBlock<TileBlock> PINK_MARBLE_FLOOR_TILE = register("pink_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> PINK_MARBLE_FANCY_FENCE = register("pink_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Purple Marble ──
     public static final DeferredBlock<TileBlock> PURPLE_MARBLE_FLOOR_TILE = register("purple_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> PURPLE_MARBLE_FANCY_FENCE = register("purple_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Red Marble ──
     public static final DeferredBlock<TileBlock> RED_MARBLE_FLOOR_TILE = register("red_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> RED_MARBLE_FANCY_FENCE = register("red_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Yellow Marble ──
     public static final DeferredBlock<TileBlock> YELLOW_MARBLE_FLOOR_TILE = register("yellow_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> YELLOW_MARBLE_FANCY_FENCE = register("yellow_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Light Gray Marble ──
     public static final DeferredBlock<TileBlock> LIGHT_GRAY_MARBLE_FLOOR_TILE = register("light_gray_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> LIGHT_GRAY_MARBLE_FANCY_FENCE = register("light_gray_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Gray Marble ──
     public static final DeferredBlock<TileBlock> GRAY_MARBLE_FLOOR_TILE = register("gray_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> GRAY_MARBLE_FANCY_FENCE = register("gray_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Brown Marble ──
     public static final DeferredBlock<TileBlock> BROWN_MARBLE_FLOOR_TILE = register("brown_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> BROWN_MARBLE_FANCY_FENCE = register("brown_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Light Blue Marble ──
     public static final DeferredBlock<TileBlock> LIGHT_BLUE_MARBLE_FLOOR_TILE = register("light_blue_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> LIGHT_BLUE_MARBLE_FANCY_FENCE = register("light_blue_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Magenta Marble ──
     public static final DeferredBlock<TileBlock> MAGENTA_MARBLE_FLOOR_TILE = register("magenta_marble_floor_tile", () -> new TileBlock(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<PlateBlock> MAGENTA_MARBLE_FANCY_FENCE = register("magenta_marble_fancy_fence", () -> new PlateBlock(Properties.ofFullCopy(Blocks.STONE).strength(3.0f, 5.0f).noOcclusion()));
-    // ── Diamond Pavers (10 new colors) ──
 
-    public static final DeferredBlock<PlateBlock> SANDSTONE_CRENELATION = register("sandstone_crenelation",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.CUT_SANDSTONE)));
-
-    public static final DeferredBlock<EdgeBlock> WHEAT_THATCH_EDGE = register("wheat_thatch_edge",
-            () -> new EdgeBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<PlateBlock> WHEAT_THATCH_PLATE = register("wheat_thatch_plate",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<EdgeBlock> BAMBOO_THATCH_EDGE = register("bamboo_thatch_edge",
-            () -> new EdgeBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
-    public static final DeferredBlock<PlateBlock> BAMBOO_THATCH_PLATE = register("bamboo_thatch_plate",
-            () -> new PlateBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
-
-    public static final DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> STONE_BRICKS_MASONRY_EDGE = register("stone_bricks_masonry_edge", () -> new com.otterly76.ott.block.custom.EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> STONE_BRICKS_MASONRY_PLATE = register("stone_bricks_masonry_plate", () -> new com.otterly76.ott.block.custom.PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
-    public static final DeferredBlock<RakedGravelBlock> CURVED_RAKED_GRAVEL = register("curved_raked_gravel", () -> new RakedGravelBlock(true, Properties.ofFullCopy(Blocks.GRAVEL)));
-    public static final DeferredBlock<RakedGravelBlock> STRAIGHT_RAKED_GRAVEL = register("straight_raked_gravel", () -> new RakedGravelBlock(false, Properties.ofFullCopy(Blocks.GRAVEL)));
-
-    // All wool and carpet blocks are registered via block_templates.csv (OttTemplateBlocks).
-
-    public static final DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> OAK_PERGOLA = register("oak_pergola",
-            () -> new com.otterly76.ott.block.custom.PergolaBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> OAK_BEAM = register("oak_beam",
-            () -> new com.otterly76.ott.block.custom.BeamBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> OAK_PLANKS_PLATE = register("oak_planks_plate",
-            () -> new com.otterly76.ott.block.custom.PlateBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> OAK_PLANKS_EDGE = register("oak_planks_edge",
-            () -> new com.otterly76.ott.block.custom.EdgeBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> OAK_BANNISTER = register("oak_bannister",
-            () -> new com.otterly76.ott.block.custom.BannisterBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> OAK_SUPPORT_SLAB = register("oak_support_slab",
-            () -> new com.otterly76.ott.block.custom.SupportSlabBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> OAK_SUPPORT_BEAM = register("oak_support_beam",
-            () -> new com.otterly76.ott.block.custom.SupportBeamBlock(
-                    Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<Block> OAK_GEOMETRIC_WINDOW = register("oak_geometric_window",
-            () -> new com.otterly76.ott.block.custom.GeometricWindowBlock(Properties.of().strength(1.5f).sound(SoundType.WOOD).noOcclusion()));
-    public static final DeferredBlock<PlacedLanternBlock> STONE_LANTERN = register("stone_lantern", () -> new PlacedLanternBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().lightLevel(s -> 15)));
-    public static final DeferredBlock<LitPlacedLanternBlock> IRON_FANCY_LANTERN = register("iron_fancy_lantern", () -> new LitPlacedLanternBlock(Properties.of().strength(3.5f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion().lightLevel(s -> s.getValue(LitPlacedLanternBlock.LIT) ? 15 : 0)));
-    public static final DeferredBlock<StarlightLampBlock> STARLIGHT_LAMP = register("starlight_lamp", () -> new StarlightLampBlock(Properties.of().strength(0.5F).sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 15)));
-
-    private static final Properties ST = Properties.ofFullCopy(Blocks.STONE);
-
-    // ─── Chisel legends (HorizontalBlock, per-face directional) ───────────────
-    // Legends are "special" per-face blocks and keep their hand-built model path; only the pillars
-    // are folded into the data-driven set below. Glowstone-inlay legends glow (light 15).
-    public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_LEGEND = new java.util.LinkedHashMap<>();
-    private static final java.util.List<String> CHISEL_LEGEND_NAMES = java.util.List.of(
-            "chiseled_stone_legend", "chiseled_stone_legend_amethyst", "chiseled_stone_legend_copper",
-            "chiseled_stone_legend_coppere", "chiseled_stone_legend_coppero", "chiseled_stone_legend_copperw",
-            "chiseled_stone_legend_diamond", "chiseled_stone_legend_emerald", "chiseled_stone_legend_glowstone",
-            "chiseled_stone_legend_gold", "chiseled_stone_legend_iron", "chiseled_stone_legend_lapis",
-            "chiseled_stone_legend_netherite", "chiseled_stone_legend_quartz"
-    );
-
-    static {
-        CHISEL_LEGEND_NAMES.forEach(name ->
-                CHISEL_LEGEND.put(name, register(name, () -> new HorizontalBlock(legendProps(name)))));
-    }
-
-    // Reactive redstone legend (one block, LIT swaps front art + glows).
-    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_LEGEND_RS = new java.util.LinkedHashMap<>();
-    static {
-        CHISEL_LEGEND_RS.put("chiseled_stone_legend_redstone", register("chiseled_stone_legend_redstone",
-                () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(Blocks.STONE))));
-    }
-
-    // ─── Chisel pillars: one data-driven set across every stone (cube_all, no axis) ─────────────
-    // Each set: 10 variants × (base + 13 inlays) cube_all blocks + 10 redstone-reactive cubes.
-    // Glowstone inlays glow (light 15); redstone cubes glow when LIT. The legacy "stone" set is the
-    // first entry (legends=false — its legends live on the hand-built path above); all other stones
-    // also generate their own legends.
-    public record ChiselStone(String folder, String prefix, net.minecraft.world.level.block.Block base, String cap, boolean legends) {}
-    public static final java.util.List<ChiselStone> CHISEL_CHAOS = java.util.List.of(
-            new ChiselStone("stone",             "stone",             Blocks.STONE,             "block/stone/polished_stone",                         false),
-            new ChiselStone("andesite",          "andesite",          Blocks.ANDESITE,          "block/andesite/polished_andesite",                   true),
-            new ChiselStone("blackstone",        "blackstone",        Blocks.BLACKSTONE,        "block/blackstone/polished_blackstone",               true),
-            new ChiselStone("deepslate",         "deepslate",         Blocks.DEEPSLATE,         "block/deepslate/polished_deepslate",                 true),
-            new ChiselStone("diorite",           "diorite",           Blocks.DIORITE,           "block/diorite/polished_diorite",                     true),
-            new ChiselStone("granite",           "granite",           Blocks.GRANITE,           "block/granite/polished_granite",                     true),
-            new ChiselStone("nether_bricks",     "nether_bricks",     Blocks.NETHER_BRICKS,     "block/nether_bricks/polished_nether_bricks",         true),
-            new ChiselStone("quartz_block",      "quartz",            Blocks.QUARTZ_BLOCK,      "block/quartz_block/polished_quartz_block",           true),
-            new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/polished_red_nether_bricks", true),
-            new ChiselStone("red_sandstone",     "red_sandstone",     Blocks.RED_SANDSTONE,     "block/red_sandstone/polished_red_sandstone",         true),
-            new ChiselStone("sandstone",         "sandstone",         Blocks.SANDSTONE,         "block/sandstone/polished_sandstone",                 true),
-            new ChiselStone("tuff",              "tuff",              Blocks.TUFF,              "block/tuff/polished_tuff",                           true)
-    );
-    public static final String[] CHISEL_VARIANTS = {"caveat","doom","etch","frame","groan","hieroglyph","nexus","skull","snout","swirl"};
-    /** Pillar texture overrides — cells whose art lives outside the {@code _chisels} folder. Stone's
-     *  caveat base is visually identical to vanilla chiseled stone bricks, so it reuses that texture
-     *  rather than duplicating it. Map: block name → texture ResourceLocation string. */
-    public static final java.util.Map<String, String> CHISEL_TEX_OVERRIDE =
-            java.util.Map.of("chiseled_stone_caveat", "minecraft:block/chiseled_stone_bricks");
-    /** base (empty) + 13 single inlays; redstone is a separate reactive block. */
-    public static final String[] CHISEL_INLAYS = {"","amethyst","copper","coppere","coppero","copperw","diamond","emerald","glowstone","gold","iron","lapis","netherite","quartz"};
-    public static final Map<String, DeferredBlock<Block>> CHISEL_CHAOS_PILLARS = new java.util.LinkedHashMap<>();
-    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock>> CHISEL_CHAOS_PILLARS_RS = new java.util.LinkedHashMap<>();
-    /** Legends: base + 13 inlays (HorizontalBlock) per stone (excludes the legacy "stone" set). */
-    public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_CHAOS_LEGENDS = new java.util.LinkedHashMap<>();
-    /** Legends: the reactive redstone one per stone (excludes the legacy "stone" set). */
-    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_CHAOS_LEGENDS_RS = new java.util.LinkedHashMap<>();
-    /** Per-stone display grouping for the creative tab (pillars first, then that stone's legends). */
-    public static final Map<String, java.util.List<DeferredBlock<? extends Block>>> CHISEL_GROUP = new java.util.LinkedHashMap<>();
-    static {
-        for (ChiselStone cs : CHISEL_CHAOS) {
-            java.util.List<DeferredBlock<? extends Block>> group = new java.util.ArrayList<>();
-            for (String v : CHISEL_VARIANTS) {
-                for (String inlay : CHISEL_INLAYS) {
-                    String n = "chiseled_" + cs.prefix() + "_" + v + (inlay.isEmpty() ? "" : "_" + inlay);
-                    boolean glow = inlay.equals("glowstone");
-                    DeferredBlock<Block> b = register(n, () -> new Block(glow
-                            ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15)
-                            : Properties.ofFullCopy(cs.base())));
-                    CHISEL_CHAOS_PILLARS.put(n, b); group.add(b);
-                }
-                String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
-                DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock> rb = register(rn,
-                        () -> new com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock(litProps(cs.base())));
-                CHISEL_CHAOS_PILLARS_RS.put(rn, rb); group.add(rb);
-            }
-            if (cs.legends()) {
-                for (String inlay : CHISEL_INLAYS) {
-                    String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
-                    boolean glow = inlay.equals("glowstone");
-                    DeferredBlock<HorizontalBlock> lb = register(ln, () -> new HorizontalBlock(glow
-                            ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15)
-                            : Properties.ofFullCopy(cs.base())));
-                    CHISEL_CHAOS_LEGENDS.put(ln, lb); group.add(lb);
-                }
-                String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
-                DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock> lrb = register(lrn,
-                        () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(cs.base())));
-                CHISEL_CHAOS_LEGENDS_RS.put(lrn, lrb); group.add(lrb);
-            } else {
-                // legacy "stone": legends live on the hand-built CHISEL_LEGEND path — append them here.
-                group.addAll(CHISEL_LEGEND.values());
-                group.addAll(CHISEL_LEGEND_RS.values());
-            }
-            CHISEL_GROUP.put(cs.folder(), group);
-        }
-    }
-
-    // --- shared chisel property helpers ---
-    private static Properties legendProps(String name) {
-        return name.endsWith("_glowstone")
-                ? Properties.ofFullCopy(Blocks.STONE).lightLevel(s -> 15) : ST;
-    }
-    private static Properties litProps(net.minecraft.world.level.block.Block base) {
-        return Properties.ofFullCopy(base).lightLevel(s -> s.getValue(
-                net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0);
-    }
-
-    public static void register(IEventBus eventBus) {
-        registerDynamicBlocks();
-        BLOCKS.register(eventBus);
-        MINECRAFT_BLOCKS.register(eventBus);
-        MINECRAFT_ITEMS.register(eventBus);
-        OTT_ITEMS.register(eventBus);
-    }
-
-    private static OpalSet registerOpalSet(String name) {
-        Properties solid = Properties.of().strength(1.5F).sound(SoundType.AMETHYST).lightLevel(s -> 7).requiresCorrectToolForDrops();
-        Properties glass = Properties.of().strength(1.5F).sound(SoundType.AMETHYST).lightLevel(s -> 7).requiresCorrectToolForDrops().noOcclusion();
-        Properties cluster = Properties.of().strength(1.5F).sound(SoundType.AMETHYST_CLUSTER).lightLevel(s -> 7).requiresCorrectToolForDrops().noOcclusion();
-        return new OpalSet(
-                register(name, () -> new Block(solid)),
-                register(name + "_crystal_block", () -> new Block(solid)),
-                register("budding_" + name, () -> new BuddingAmethystBlock(solid)),
-                register(name + "_cluster", () -> new AmethystClusterBlock(7, 3, cluster)),
-                register("large_" + name + "_bud", () -> new AmethystClusterBlock(5, 3, cluster)),
-                register("medium_" + name + "_bud", () -> new AmethystClusterBlock(4, 3, cluster)),
-                register("small_" + name + "_bud", () -> new AmethystClusterBlock(3, 4, cluster)),
-                register(name + "_bricks", () -> new Block(solid)),
-                register("small_" + name + "_bricks", () -> new Block(solid)),
-                register("polished_" + name, () -> new Block(solid)),
-                register("chiseled_" + name, () -> new Block(solid)),
-                register(name + "_pillar", () -> new RotatedPillarBlock(solid)),
-                register("cut_" + name, () -> new Block(solid)),
-                register(name + "_tiles", () -> new Block(solid)),
-                register("small_" + name + "_tiles", () -> new Block(solid)),
-                register(name + "_glass", () -> new Block(glass)),
-                register(name + "_glass_pane", () -> new IronBarsBlock(glass)),
-                register(name + "_tiling", () -> new GlazedTerracottaBlock(solid))
-        );
-    }
-
-    @FunctionalInterface
-    private interface GradientBlockBuilder<T extends Block & IGradientBlock> {
-        T create(Properties properties, DyeColor firstColor, DyeColor secondColor, Function<DyeColor, String> textureNameMapper);
-    }
-
-    // ===== RECOVERED WINDOW BLOCKS =====
-
-    // ===== RECOVERED GRANITE =====
-
-    // ===== RECOVERED WAVE1 =====
-
-    // ===== RECOVERED WAVE2 =====
-
-    // ===== RECOVERED WAVE3 =====
-
-    // ===== RECOVERED WAVE4 =====
-
-    // ===== RECOVERED PURPUR_CTM =====
-
-    // ===== Reverted stonecutter-only diamond pavers (kept in ott) =====
     public static final DeferredBlock<Block> BLACK_MARBLE_DIAMOND_PAVERS = register("black_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> WHITE_MARBLE_DIAMOND_PAVERS = register("white_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> BLUE_MARBLE_DIAMOND_PAVERS = register("blue_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
@@ -1080,4 +665,117 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LIGHT_BLUE_MARBLE_DIAMOND_PAVERS = register("light_blue_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
     public static final DeferredBlock<Block> MAGENTA_MARBLE_DIAMOND_PAVERS = register("magenta_marble_diamond_pavers", () -> new Block(Properties.ofFullCopy(Blocks.STONE)));
 
+    public static final DeferredBlock<EdgeBlock> WHEAT_THATCH_EDGE = register("wheat_thatch_edge", () -> new EdgeBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+    public static final DeferredBlock<PlateBlock> WHEAT_THATCH_PLATE = register("wheat_thatch_plate", () -> new PlateBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+    public static final DeferredBlock<EdgeBlock> BAMBOO_THATCH_EDGE = register("bamboo_thatch_edge", () -> new EdgeBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+    public static final DeferredBlock<PlateBlock> BAMBOO_THATCH_PLATE = register("bamboo_thatch_plate", () -> new PlateBlock(Properties.ofFullCopy(Blocks.GRASS_BLOCK).mapColor(MapColor.COLOR_YELLOW).strength(1.0f).sound(SoundType.GRASS)));
+
+    public static final DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> STONE_BRICKS_MASONRY_EDGE = register("stone_bricks_masonry_edge", () -> new com.otterly76.ott.block.custom.EdgeBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> STONE_BRICKS_MASONRY_PLATE = register("stone_bricks_masonry_plate", () -> new com.otterly76.ott.block.custom.PlateBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS)));
+    public static final DeferredBlock<RakedGravelBlock> CURVED_RAKED_GRAVEL = register("curved_raked_gravel", () -> new RakedGravelBlock(true, Properties.ofFullCopy(Blocks.GRAVEL)));
+    public static final DeferredBlock<RakedGravelBlock> STRAIGHT_RAKED_GRAVEL = register("straight_raked_gravel", () -> new RakedGravelBlock(false, Properties.ofFullCopy(Blocks.GRAVEL)));
+
+    public static final DeferredBlock<com.otterly76.ott.block.custom.PergolaBlock> OAK_PERGOLA = register("oak_pergola", () -> new com.otterly76.ott.block.custom.PergolaBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.BeamBlock> OAK_BEAM = register("oak_beam", () -> new com.otterly76.ott.block.custom.BeamBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.PlateBlock> OAK_PLANKS_PLATE = register("oak_planks_plate", () -> new com.otterly76.ott.block.custom.PlateBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.EdgeBlock> OAK_PLANKS_EDGE = register("oak_planks_edge", () -> new com.otterly76.ott.block.custom.EdgeBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.BannisterBlock> OAK_BANNISTER = register("oak_bannister", () -> new com.otterly76.ott.block.custom.BannisterBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.SupportSlabBlock> OAK_SUPPORT_SLAB = register("oak_support_slab", () -> new com.otterly76.ott.block.custom.SupportSlabBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<com.otterly76.ott.block.custom.SupportBeamBlock> OAK_SUPPORT_BEAM = register("oak_support_beam", () -> new com.otterly76.ott.block.custom.SupportBeamBlock(Properties.of().strength(2.0f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<Block> OAK_GEOMETRIC_WINDOW = register("oak_geometric_window", () -> new com.otterly76.ott.block.custom.GeometricWindowBlock(Properties.of().strength(1.5f).sound(SoundType.WOOD).noOcclusion()));
+    public static final DeferredBlock<PlacedLanternBlock> STONE_LANTERN = register("stone_lantern", () -> new PlacedLanternBlock(Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().lightLevel(s -> 15)));
+    public static final DeferredBlock<LitPlacedLanternBlock> IRON_FANCY_LANTERN = register("iron_fancy_lantern", () -> new LitPlacedLanternBlock(Properties.of().strength(3.5f).sound(SoundType.METAL).requiresCorrectToolForDrops().noOcclusion().lightLevel(s -> s.getValue(LitPlacedLanternBlock.LIT) ? 15 : 0)));
+    public static final DeferredBlock<StarlightLampBlock> STARLIGHT_LAMP = register("starlight_lamp", () -> new StarlightLampBlock(Properties.of().strength(0.5F).sound(SoundType.GLASS).noOcclusion().lightLevel(s -> 15)));
+
+    private static final Properties ST = Properties.ofFullCopy(Blocks.STONE);
+
+    public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_LEGEND = new java.util.LinkedHashMap<>();
+    private static final java.util.List<String> CHISEL_LEGEND_NAMES = java.util.List.of("chiseled_stone_legend", "chiseled_stone_legend_amethyst", "chiseled_stone_legend_copper", "chiseled_stone_legend_coppere", "chiseled_stone_legend_coppero", "chiseled_stone_legend_copperw", "chiseled_stone_legend_diamond", "chiseled_stone_legend_emerald", "chiseled_stone_legend_glowstone", "chiseled_stone_legend_gold", "chiseled_stone_legend_iron", "chiseled_stone_legend_lapis", "chiseled_stone_legend_netherite", "chiseled_stone_legend_quartz");
+
+    static {
+        CHISEL_LEGEND_NAMES.forEach(name -> CHISEL_LEGEND.put(name, register(name, () -> new HorizontalBlock(legendProps(name)))));
+    }
+
+    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_LEGEND_RS = new java.util.LinkedHashMap<>();
+
+    static {
+        CHISEL_LEGEND_RS.put("chiseled_stone_legend_redstone", register("chiseled_stone_legend_redstone", () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(Blocks.STONE))));
+    }
+
+    public record ChiselStone(String folder, String prefix, net.minecraft.world.level.block.Block base, String cap, boolean legends) {
+    }
+
+    public static final java.util.List<ChiselStone> CHISEL_CHAOS = java.util.List.of(new ChiselStone("stone", "stone", Blocks.STONE, "block/stone/polished_stone", false), new ChiselStone("andesite", "andesite", Blocks.ANDESITE, "block/andesite/polished_andesite", true), new ChiselStone("blackstone", "blackstone", Blocks.BLACKSTONE, "block/blackstone/polished_blackstone", true), new ChiselStone("deepslate", "deepslate", Blocks.DEEPSLATE, "block/deepslate/polished_deepslate", true), new ChiselStone("diorite", "diorite", Blocks.DIORITE, "block/diorite/polished_diorite", true), new ChiselStone("granite", "granite", Blocks.GRANITE, "block/granite/polished_granite", true), new ChiselStone("nether_bricks", "nether_bricks", Blocks.NETHER_BRICKS, "block/nether_bricks/polished_nether_bricks", true), new ChiselStone("quartz_block", "quartz", Blocks.QUARTZ_BLOCK, "block/quartz_block/polished_quartz_block", true), new ChiselStone("red_nether_bricks", "red_nether_bricks", Blocks.RED_NETHER_BRICKS, "block/red_nether_bricks/polished_red_nether_bricks", true), new ChiselStone("red_sandstone", "red_sandstone", Blocks.RED_SANDSTONE, "block/red_sandstone/polished_red_sandstone", true), new ChiselStone("sandstone", "sandstone", Blocks.SANDSTONE, "block/sandstone/polished_sandstone", true), new ChiselStone("tuff", "tuff", Blocks.TUFF, "block/tuff/polished_tuff", true));
+    public static final String[] CHISEL_VARIANTS = {"caveat", "doom", "etch", "frame", "groan", "hieroglyph", "nexus", "skull", "snout", "swirl"};
+    public static final java.util.Map<String, String> CHISEL_TEX_OVERRIDE = java.util.Map.of("chiseled_stone_caveat", "minecraft:block/chiseled_stone_bricks");
+    public static final String[] CHISEL_INLAYS = {"", "amethyst", "copper", "coppere", "coppero", "copperw", "diamond", "emerald", "glowstone", "gold", "iron", "lapis", "netherite", "quartz"};
+    public static final Map<String, DeferredBlock<Block>> CHISEL_CHAOS_PILLARS = new java.util.LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock>> CHISEL_CHAOS_PILLARS_RS = new java.util.LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<HorizontalBlock>> CHISEL_CHAOS_LEGENDS = new java.util.LinkedHashMap<>();
+    public static final Map<String, DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock>> CHISEL_CHAOS_LEGENDS_RS = new java.util.LinkedHashMap<>();
+    public static final Map<String, java.util.List<DeferredBlock<? extends Block>>> CHISEL_GROUP = new java.util.LinkedHashMap<>();
+
+    static {
+        for (ChiselStone cs : CHISEL_CHAOS) {
+            java.util.List<DeferredBlock<? extends Block>> group = new java.util.ArrayList<>();
+            for (String v : CHISEL_VARIANTS) {
+                for (String inlay : CHISEL_INLAYS) {
+                    String n = "chiseled_" + cs.prefix() + "_" + v + (inlay.isEmpty() ? "" : "_" + inlay);
+                    boolean glow = inlay.equals("glowstone");
+                    DeferredBlock<Block> b = register(n, () -> new Block(glow ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15) : Properties.ofFullCopy(cs.base())));
+                    CHISEL_CHAOS_PILLARS.put(n, b);
+                    group.add(b);
+                }
+                String rn = "chiseled_" + cs.prefix() + "_" + v + "_redstone";
+                DeferredBlock<com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock> rb = register(rn, () -> new com.otterly76.ott.block.custom.ChiselPillarRedstoneBlock(litProps(cs.base())));
+                CHISEL_CHAOS_PILLARS_RS.put(rn, rb);
+                group.add(rb);
+            }
+            if (cs.legends()) {
+                for (String inlay : CHISEL_INLAYS) {
+                    String ln = "chiseled_" + cs.prefix() + "_legend" + (inlay.isEmpty() ? "" : "_" + inlay);
+                    boolean glow = inlay.equals("glowstone");
+                    DeferredBlock<HorizontalBlock> lb = register(ln, () -> new HorizontalBlock(glow ? Properties.ofFullCopy(cs.base()).lightLevel(s -> 15) : Properties.ofFullCopy(cs.base())));
+                    CHISEL_CHAOS_LEGENDS.put(ln, lb);
+                    group.add(lb);
+                }
+                String lrn = "chiseled_" + cs.prefix() + "_legend_redstone";
+                DeferredBlock<com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock> lrb = register(lrn, () -> new com.otterly76.ott.block.custom.ChiselLegendRedstoneBlock(litProps(cs.base())));
+                CHISEL_CHAOS_LEGENDS_RS.put(lrn, lrb);
+                group.add(lrb);
+            } else {
+                group.addAll(CHISEL_LEGEND.values());
+                group.addAll(CHISEL_LEGEND_RS.values());
+            }
+            CHISEL_GROUP.put(cs.folder(), group);
+        }
+    }
+
+    private static Properties legendProps(String name) {
+        return name.endsWith("_glowstone") ? Properties.ofFullCopy(Blocks.STONE).lightLevel(s -> 15) : ST;
+    }
+
+    private static Properties litProps(net.minecraft.world.level.block.Block base) {
+        return Properties.ofFullCopy(base).lightLevel(s -> s.getValue(net.minecraft.world.level.block.state.properties.BlockStateProperties.LIT) ? 15 : 0);
+    }
+
+    public static void register(IEventBus eventBus) {
+        registerDynamicBlocks();
+        BLOCKS.register(eventBus);
+        MINECRAFT_BLOCKS.register(eventBus);
+        MINECRAFT_ITEMS.register(eventBus);
+        OTT_ITEMS.register(eventBus);
+    }
+
+    private static OpalSet registerOpalSet(String name) {
+        Properties solid = Properties.of().strength(1.5F).sound(SoundType.AMETHYST).lightLevel(s -> 7).requiresCorrectToolForDrops();
+        Properties glass = Properties.of().strength(1.5F).sound(SoundType.AMETHYST).lightLevel(s -> 7).requiresCorrectToolForDrops().noOcclusion();
+        Properties cluster = Properties.of().strength(1.5F).sound(SoundType.AMETHYST_CLUSTER).lightLevel(s -> 7).requiresCorrectToolForDrops().noOcclusion();
+        return new OpalSet(register(name, () -> new Block(solid)), register(name + "_crystal_block", () -> new Block(solid)), register("budding_" + name, () -> new BuddingAmethystBlock(solid)), register(name + "_cluster", () -> new AmethystClusterBlock(7, 3, cluster)), register("large_" + name + "_bud", () -> new AmethystClusterBlock(5, 3, cluster)), register("medium_" + name + "_bud", () -> new AmethystClusterBlock(4, 3, cluster)), register("small_" + name + "_bud", () -> new AmethystClusterBlock(3, 4, cluster)), register(name + "_bricks", () -> new Block(solid)), register("small_" + name + "_bricks", () -> new Block(solid)), register("polished_" + name, () -> new Block(solid)), register("chiseled_" + name, () -> new Block(solid)), register(name + "_pillar", () -> new RotatedPillarBlock(solid)), register("cut_" + name, () -> new Block(solid)), register(name + "_tiles", () -> new Block(solid)), register("small_" + name + "_tiles", () -> new Block(solid)), register(name + "_glass", () -> new Block(glass)), register(name + "_glass_pane", () -> new IronBarsBlock(glass)), register(name + "_tiling", () -> new GlazedTerracottaBlock(solid)));
+    }
+
+    @FunctionalInterface
+    private interface GradientBlockBuilder<T extends Block & IGradientBlock> {
+        T create(Properties properties, DyeColor firstColor, DyeColor secondColor, Function<DyeColor, String> textureNameMapper);
+    }
 }
